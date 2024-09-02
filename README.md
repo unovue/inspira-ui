@@ -1,49 +1,29 @@
-# shadcn-docs-nuxt Minimal Starter
+<h1 align="center">Inspira UI</h1>
+<p align="center">
+    Vue port of Aceternity UI
+</p>
+<div align="center">
+  <a href="https://github.com/rahulv-official/inspira-ui/stargazers"><img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/rahulv-official/inspira-ui"></a>
 
-Starter template for [shadcn-docs-nuxt](https://github.com/ZTL-UwU/shadcn-docs-nuxt).
+  <a href="https://github.com/rahulv-official/inspira-ui/blob/main/LICENSE.md"><img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>  
+</div>
 
-## Setup
+<br />
+<br />
 
-Make sure to install the dependencies:
+[Inspira UI](https://inspira-ui.com) is an unofficial community-led Vue port of [Aceternity UI](https://ui.aceternity.com).
 
-```bash
-# yarn
-yarn install
+Inspira UI provides accessible and customizable components that you can copy and paste into your Vue or Nuxt apps.
 
-# npm
-npm install
+Inspira UI is free and open-source.
 
-# pnpm
-pnpm install
+## Documentation
 
-# bun
-bun install
-```
+You can [view the documentation here](https://inspira-ui.com).
 
-## Development Server
+## Credits
 
-Start the development server on http://localhost:3000
+- [Aceternity UI](https://ui.aceternity.com/): The component library for React from which Inspira UI is ported.
+- [shadcn-vue](https://www.shadcn-vue.com/): For the vue port of shadcn-ui & some docs component source.
+- [shadcn-docs-nuxt](https://github.com/ZTL-UwU/shadcn-docs-nuxt): For the beautiful nuxt documentation site.
 
-```bash
-npm run dev
-```
-
-## Production
-
-[![Deploy to NuxtHub](https://hub.nuxt.com/button.svg)](https://hub.nuxt.com/new?repo=ZTL-UwU/shadcn-docs-nuxt-starter)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FZTL-UwU%2Fshadcn-docs-nuxt-starter)
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https%3A%2F%2Fgithub.com%2FZTL-UwU%2Fshadcn-docs-nuxt-starter)
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
