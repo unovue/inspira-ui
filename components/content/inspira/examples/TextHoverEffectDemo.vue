@@ -7,5 +7,5 @@
 </template>
 
 <script setup lang="ts">
-import { TextHover } from "~/components/inspira/text-hover-effect/";
+import { TextHover } from "~/components/content/inspira/ui/text-hover-effect/";
 </script>

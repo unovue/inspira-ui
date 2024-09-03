@@ -17,7 +17,12 @@
         >
           Hover over this card to unleash the power of CSS perspective
         </CardItem>
-        <CardItem :translateZ="100" class="w-full mt-4">
+        <CardItem
+          :translateZ="100"
+          :rotate-x="20"
+          :rotate-z="-10"
+          class="w-full mt-4"
+        >
           <img
             src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             height="1000"
@@ -29,6 +34,7 @@
         <div class="flex justify-between items-center mt-20">
           <CardItem
             :translateZ="20"
+            :translate-x="-40"
             as="a"
             href="https://rahulv.dev"
             target="__blank"
@@ -38,6 +44,7 @@
           </CardItem>
           <CardItem
             :translateZ="20"
+            :translate-x="40"
             as="button"
             class="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
           >
@@ -54,5 +61,5 @@ import {
   CardContainer,
   CardBody,
   CardItem,
-} from "~/components/inspira/card-3d";
+} from "~/components/content/inspira/ui/card-3d";
 </script>
