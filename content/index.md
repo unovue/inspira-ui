@@ -6,16 +6,16 @@ navigation: false
 ::hero
 ---
 announcement:
-  title: 'Release v0.0.1'
+  title: 'Initial Release'
   icon: 'lucide:party-popper'
-  to: https://github.com/ZTL-UwU/shadcn-docs-nuxt/releases
+  to: https://github.com/rahulv-official/inspira-ui
   target: _blank
 actions:
   - name: Get Started
     to: /getting-started
   - name: GitHub
     variant: outline
-    to: https://github.com/ZTL-UwU/shadcn-docs-nuxt
+    to: https://github.com/rahulv-official/inspira-ui
     leftIcon: 'lucide:github'
 ---
 
