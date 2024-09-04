@@ -38,7 +38,13 @@ export default defineAppConfig({
       credits: "Copyright © 2024",
       links: [
         {
+          to: "https://rahulv.dev",
+          title: "Maintained by rahulv.dev",
+          target: "_blank",
+        },
+        {
           icon: "lucide:github",
+          title: "Github",
           to: "https://github.com/rahulv-official/inspira-ui",
           target: "_blank",
         },

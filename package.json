@@ -1,6 +1,6 @@
 {
   "name": "inspira-ui",
-  "private": true,
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "build": "nuxt build",
@@ -12,6 +12,7 @@
   "dependencies": {
     "nuxt": "^3.13.0",
     "shadcn-docs-nuxt": "^0.5.2",
+    "shiki": "^1.16.1",
     "vue": "^3.4.38",
     "vue-router": "^4.4.3"
   },
