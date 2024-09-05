@@ -15,6 +15,47 @@ export default {
         "2xl": "1400px",
       },
     },
+    screens: {
+      "max-xl": { max: "1279px" },
+      // => @media (max-width: 1279px) { ... }
+
+      "max-lg": { max: "1023px" },
+      // => @media (max-width: 1023px) { ... }
+
+      "max-md": { max: "767px" },
+      // => @media (max-width: 767px) { ... }
+
+      "max-sm": { max: "639px" },
+      // => @media (max-width: 639px) { ... }
+
+      "min-xl": { min: "1280px" },
+      // => @media (min-width: 1280px) { ... }
+
+      "min-lg": { min: "1024px" },
+      // => @media (min-width: 1024px) { ... }
+
+      "min-md": { min: "768px" },
+      // => @media (min-width: 768px) { ... }
+
+      "min-sm": { min: "640px" },
+      // => @media (min-width: 640px) { ... },
+      xl: { min: "1280px" },
+      // => @media (min-width: 1280px) { ... }
+
+      lg: { min: "1024px" },
+      // => @media (min-width: 1024px) { ... }
+
+      md: { min: "768px" },
+      // => @media (min-width: 768px) { ... }
+
+      sm: { min: "640px" },
+      // => @media (min-width: 640px) { ... }
+    },
+    fontFamily: {
+      heading: ["Manrope"],
+      sans: ["Manrope"],
+      mono: ["monospace"],
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
