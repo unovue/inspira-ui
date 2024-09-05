@@ -1,12 +1,14 @@
 <template>
-  <Suspense>
-    <template #default>
-      <component :is="componentName" />
-    </template>
-    <template #fallback>
-      <Spinner />
-    </template>
-  </Suspense>
+  <ClientOnly>
+    <Suspense>
+      <template #default>
+        <component :is="componentName" />
+      </template>
+      <template #fallback>
+        <Spinner />
+      </template>
+    </Suspense>
+  </ClientOnly>
 </template>
 
 <script setup lang="ts">
