@@ -1,6 +1,6 @@
 <template>
   <div
-    :class="['py-20 flex items-center justify-center', containerClass]"
+    :class="['p-2 flex items-center justify-center', containerClass]"
     style="perspective: 1000px"
   >
     <div
