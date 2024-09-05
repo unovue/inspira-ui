@@ -1,18 +1,20 @@
 <template>
-  <CodeGroup>
-    <div :label="label || componentName" icon="lucide:laptop-minimal">
-      <component v-if="componentPath" :is="componentName" />
-      <Spinner v-else />
-    </div>
-    <div
-      label="Code"
-      icon="lucide:square-terminal"
-      class="flex overflow-x-auto text-xs"
-      :code="rawString"
-    >
-      <span v-html="codeHtml"></span>
-    </div>
-  </CodeGroup>
+  <ClientOnly>
+    <CodeGroup>
+      <div :label="label || componentName" icon="lucide:laptop-minimal">
+        <component v-if="componentPath" :is="componentName" />
+        <Spinner v-else />
+      </div>
+      <div
+        label="Code"
+        icon="lucide:square-terminal"
+        class="flex overflow-x-auto text-xs"
+        :code="rawString"
+      >
+        <span v-html="codeHtml"></span>
+      </div>
+    </CodeGroup>
+  </ClientOnly>
 </template>
 
 <script lang="ts" setup>
