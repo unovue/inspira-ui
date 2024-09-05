@@ -17,7 +17,56 @@ export default defineAppConfig({
         light: "/logo.svg",
         dark: "/logo-dark.svg",
       },
-      nav: [],
+      nav: [
+        {
+          title: "Docs",
+          links: [
+            {
+              title: "Getting Started",
+              to: "/getting-started/introduction",
+              description: "Introduction to Inspira UI and its core concepts.",
+            },
+            {
+              title: "Installation",
+              to: "/getting-started/installation",
+              description:
+                "Follow the step-by-step guide to install Inspira UI in your project.",
+            },
+            {
+              title: "Components",
+              to: "/components/all",
+              description: "Explore all available components and their usage.",
+              target: "_self",
+            },
+          ],
+        },
+        {
+          title: "Credits",
+          links: [
+            {
+              title: "Aceternity UI",
+              to: "https://ui.aceternity.com/",
+              description:
+                "For providing the inspiration and permission to adapt the original designs.",
+              target: "_blank",
+            },
+            {
+              title: "shadcn-vue",
+              to: "https://www.shadcn-vue.com/",
+              description:
+                "For the Vue port of shadcn-ui and contributions to some components",
+              target: "_blank",
+            },
+            {
+              title: "shadcn-docs-nuxt",
+              to: "https://github.com/ZTL-UwU/shadcn-docs-nuxt",
+              description:
+                "For the beautifully crafted Nuxt documentation site.",
+              target: "_blank",
+            },
+          ],
+        },
+      ],
       links: [
         {
           icon: "lucide:github",
