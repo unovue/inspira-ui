@@ -6,8 +6,8 @@ navigation: false
 ::hero
 ---
 announcement:
-  title: 'Initial Release'
-  icon: 'lucide:party-popper'
+  title: 'Launching Inspira UI '
+  icon: 'lucide:rocket'
   to: https://github.com/rahulv-official/inspira-ui
   target: _blank
 actions:
@@ -30,11 +30,9 @@ Vue port of [Aceternity UI](https://ui.aceternity.com)
   ## Check out some examples
 ::
 
-::div{ class="border rounded-lg shadow-md flex flex-col items-center justify-center gap-4"}
-  ::div
-    ::CardDemo
+::div{ class="border rounded-lg shadow-md flex lg:flex-row flex-col items-center justify-center flex-wrap p-4"}
+  ::ComponentViewer{componentName="CardDemo2"}
   ::
-  ::div
-    ::TextHoverEffectDemo
+  ::ComponentViewer{componentName="TextHoverEffectDemo"}
   ::
 ::
