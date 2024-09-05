@@ -1,7 +1,9 @@
 <template>
   <ClientOnly>
-    <div className="h-[24rem] flex items-center justify-center">
-      <TextHover text="INSPIRA" />
+    <div
+      className="h-auto flex min-md:flex-1 max-lg:w-full items-center justify-center"
+    >
+      <TextHover class="w-[90%]" text="INSPIRA" />
     </div>
   </ClientOnly>
 </template>
