@@ -4,7 +4,7 @@
       <div :label="label || componentName" icon="lucide:laptop-minimal">
         <ComponentViewer :component-name="componentName" />
       </div>
-      <CodeViewer v-bind="$props" label="Code" />
+      <CodeViewerTab v-bind="$props" label="Code" />
     </CodeGroup>
   </ClientOnly>
 </template>

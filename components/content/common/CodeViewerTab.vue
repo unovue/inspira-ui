@@ -1,16 +1,19 @@
 <template>
-  <ProsePre
-    :class="cn('overflow-auto max-h-[32rem]', $props.class)"
+  <div
+    :icon="icon"
+    :class="cn('relative flex max-h-[32rem]', $props.class)"
     :code="rawString"
-    v-bind="props"
   >
-    <span class="text-sm" v-html="codeHtml"></span>
-  </ProsePre>
+    <CodeCopy class="absolute top-0 right-0" :code="rawString" />
+    <div class="overflow-auto">
+      <span class="text-sm" v-html="codeHtml"></span>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount } from "vue";
-import { codeToHtml, type BuiltinLanguage } from "shiki";
+import { codeToHtml } from "shiki";
 import { MagicString } from "vue/compiler-sfc";
 import { cn } from "~/lib/utils";
 
@@ -21,23 +24,11 @@ const props = defineProps({
   componentName: String,
   id: String,
   type: String,
-  class: String,
-  language: {
-    type: String as PropType<BuiltinLanguage>,
-    default: null,
-  },
-  filename: {
+  icon: {
     type: String,
-    default: null,
+    default: "lucide:square-terminal",
   },
-  inGroup: {
-    type: Boolean,
-    default: false,
-  },
-  highlights: {
-    type: Array as () => number[],
-    default: () => [],
-  },
+  class: String,
 });
 
 // Create a map of all possible components using import.meta.glob
