@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@nuxt/image':
+        specifier: ^1.8.0
+        version: 1.8.0(ioredis@5.4.1)(magicast@0.3.5)(rollup@4.21.2)
       nuxt:
         specifier: ^3.13.0
         version: 3.13.0(@parcel/watcher@2.4.1)(@types/node@22.5.3)(ioredis@5.4.1)(magicast@0.3.5)(rollup@4.21.2)(terser@5.31.6)(typescript@5.5.4)(vite@5.4.3(@types/node@22.5.3)(terser@5.31.6))

@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@nuxt/image": "^1.8.0",
     "nuxt": "^3.13.0",
     "shadcn-docs-nuxt": "^0.5.2",
     "shiki": "^1.16.1",
