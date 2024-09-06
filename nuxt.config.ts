@@ -11,5 +11,5 @@ export default defineNuxtConfig({
 
   extends: ["shadcn-docs-nuxt"],
   compatibilityDate: "2024-07-06",
-  modules: ["@nuxt/image"],
+  modules: ["@nuxt/image", "nuxt-gtag"],
 });

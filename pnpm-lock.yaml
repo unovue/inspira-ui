@@ -14,6 +14,9 @@ importers:
       nuxt:
         specifier: ^3.13.0
         version: 3.13.0(@parcel/watcher@2.4.1)(@types/node@22.5.3)(ioredis@5.4.1)(magicast@0.3.5)(rollup@4.21.2)(terser@5.31.6)(typescript@5.5.4)(vite@5.4.3(@types/node@22.5.3)(terser@5.31.6))
+      nuxt-gtag:
+        specifier: ^3.0.1
+        version: 3.0.1(magicast@0.3.5)(rollup@4.21.2)
       shadcn-docs-nuxt:
         specifier: ^0.5.2
         version: 0.5.2(@parcel/watcher@2.4.1)(@types/node@22.5.3)(ioredis@5.4.1)(magicast@0.3.5)(rollup@4.21.2)(tailwindcss@3.4.10)(terser@5.31.6)(vite@5.4.3(@types/node@22.5.3)(terser@5.31.6))
@@ -2905,6 +2908,9 @@ packages:
     resolution: {integrity: sha512-rhUfFCtIH8IxhfibVd26uGrC0ojUijGoU3bAhPQHrkl7mFlK+g+XeIttdsI8YAC7s/wPishrTpE9z1UssHY6eA==}
     engines: {node: ^16.10.0 || >=18.0.0}
     hasBin: true
+
+  nuxt-gtag@3.0.1:
+    resolution: {integrity: sha512-dfDeL8JwvwdCddlSBXqofEVdoONVZ5yqztqoiUs+4fEL+QfAAHtK+3MaLyEVO4keZuiyVQs6XPUJyR7afTVXNg==}
 
   nuxt@3.13.0:
     resolution: {integrity: sha512-NZlPGlMav18KXWiOmTguQtH5lcrwooPniWXM3Ca4c9spsMRu3wyWLlN8wiI/cK+lEu3rQyKCGSA75nFVK4Ew3w==}
@@ -7653,6 +7659,17 @@ snapshots:
   nuxi@3.13.1:
     optionalDependencies:
       fsevents: 2.3.3
+
+  nuxt-gtag@3.0.1(magicast@0.3.5)(rollup@4.21.2):
+    dependencies:
+      '@nuxt/kit': 3.13.0(magicast@0.3.5)(rollup@4.21.2)
+      defu: 6.1.4
+      pathe: 1.1.2
+      ufo: 1.5.4
+    transitivePeerDependencies:
+      - magicast
+      - rollup
+      - supports-color
 
   nuxt@3.13.0(@parcel/watcher@2.4.1)(@types/node@22.5.3)(ioredis@5.4.1)(magicast@0.3.5)(rollup@4.21.2)(terser@5.31.6)(typescript@5.5.4)(vite@5.4.3(@types/node@22.5.3)(terser@5.31.6)):
     dependencies:
