@@ -17,6 +17,8 @@
     "vue-router": "^4.4.3"
   },
   "devDependencies": {
+    "@iconify-json/vscode-icons": "^1.2.0",
+    "@inspira-ui/plugins": "0.0.1",
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.5.2"
   }

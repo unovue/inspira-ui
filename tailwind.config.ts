@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
-import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
+import { setupInspiraUI } from "@inspira-ui/plugins";
 
 export default {
   darkMode: "selector",
@@ -125,17 +125,5 @@ export default {
     },
   },
 
-  plugins: [animate, addVariablesForColors],
+  plugins: [animate, setupInspiraUI],
 } satisfies Config;
-
-// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
-function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
-
-  addBase({
-    ":root": newVars,
-  });
-}

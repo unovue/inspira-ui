@@ -1,1 +1,1 @@
-export { default as TextHover } from "./TextHoverEffect.vue";
+export { default as TextHoverEffect } from "./TextHoverEffect.vue";
