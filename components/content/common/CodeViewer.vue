@@ -1,20 +1,18 @@
 <template>
   <div
     :icon="icon"
-    :class="
-      cn(
-        'flex overflow-x-auto text-sm leading-4 overflow-y-auto max-h-[32rem]',
-        $props.class
-      )
-    "
+    :class="cn('relative flex max-h-[32rem]', $props.class)"
     :code="rawString"
   >
-    <span v-html="codeHtml"></span>
+    <CodeCopy class="absolute top-0 right-0" :code="rawString" />
+    <div class="overflow-auto">
+      <span class="text-sm" v-html="codeHtml"></span>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import { codeToHtml } from "shiki";
 import { MagicString } from "vue/compiler-sfc";
 import { cn } from "~/lib/utils";
@@ -50,7 +48,29 @@ const componentPath = computed(
 // Load and process the component code on mount
 onMounted(() => {
   loadAndProcessComponentCode();
+  observeDarkModeToggle();
 });
+
+// Clean up the observer on component unmount
+onBeforeUnmount(() => {
+  if (observer) observer.disconnect();
+});
+
+let observer: MutationObserver | null = null;
+
+// Function to observe dark mode toggle
+function observeDarkModeToggle() {
+  observer = new MutationObserver(() => {
+    convertCodeToHtml(rawString.value).then((html) => {
+      codeHtml.value = html;
+    });
+  });
+
+  observer.observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ["class"],
+  });
+}
 
 // Function to load and process the component code
 async function loadAndProcessComponentCode() {
@@ -75,11 +95,25 @@ async function fetchComponentCode() {
 
 // Convert the raw code to HTML with syntax highlighting
 async function convertCodeToHtml(code: string) {
-  const html = await codeToHtml(code, { lang: "vue", theme: "dark-plus" });
-  return html.replace(
-    "background-color:#1E1E1E;",
-    "background-color: transparent; padding: 0.5rem;"
-  );
+  const isDarkMode = document.documentElement.classList.contains("dark");
+  const theme = isDarkMode ? "github-dark" : "github-light";
+
+  const html = await codeToHtml(code, {
+    lang: "vue",
+    theme: theme,
+    colorReplacements: {
+      "github-dark": {
+        "#24292e": "transparent",
+      },
+      "github-light": {
+        "#fff": "transparent",
+      },
+    },
+  });
+
+  return html.replace("shiki", "shiki py-2 leading-[0.25rem]");
+
+  // return html;
 }
 
 // Update import paths in the raw code using MagicString
