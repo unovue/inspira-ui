@@ -1,7 +1,12 @@
 <template>
   <div
-    icon="lucide:square-terminal"
-    class="flex overflow-x-auto text-xs"
+    :icon="icon"
+    :class="
+      cn(
+        'flex overflow-x-auto text-sm leading-4 overflow-y-auto max-h-[32rem]',
+        $props.class
+      )
+    "
     :code="rawString"
   >
     <span v-html="codeHtml"></span>
@@ -12,6 +17,7 @@
 import { ref, computed, onMounted } from "vue";
 import { codeToHtml } from "shiki";
 import { MagicString } from "vue/compiler-sfc";
+import { cn } from "~/lib/utils";
 
 const rawString = ref("");
 const codeHtml = ref("");
@@ -20,6 +26,11 @@ const props = defineProps({
   componentName: String,
   id: String,
   type: String,
+  icon: {
+    type: String,
+    default: "lucide:square-terminal",
+  },
+  class: String,
 });
 
 // Create a map of all possible components using import.meta.glob
@@ -44,8 +55,8 @@ onMounted(() => {
 // Function to load and process the component code
 async function loadAndProcessComponentCode() {
   try {
-    const code = await fetchComponentCode();
-    rawString.value = updateImportPaths(code);
+    const componentCode = await fetchComponentCode();
+    rawString.value = updateImportPaths(componentCode);
     codeHtml.value = await convertCodeToHtml(rawString.value);
   } catch (error) {
     console.error("Error loading component code:", error);

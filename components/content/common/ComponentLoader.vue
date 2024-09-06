@@ -18,6 +18,7 @@ defineProps({
   id: String,
   type: String,
   label: String,
+  class: String,
   icon: {
     type: String,
     default: "lucide:square-terminal",
