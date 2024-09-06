@@ -6,10 +6,9 @@ navigation: false
 ::hero
 ---
 announcement:
-  title: 'Launching Inspira UI '
+  title: 'Introducing Inspira UI '
   icon: 'lucide:rocket'
-  to: https://github.com/rahulv-official/inspira-ui
-  target: _blank
+  to: /getting-started/introduction
 actions:
   - name: Get Started
     to: /getting-started
