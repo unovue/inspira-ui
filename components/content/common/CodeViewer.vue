@@ -86,6 +86,7 @@ async function convertCodeToHtml(code: string) {
 function updateImportPaths(code: string) {
   const magicString = new MagicString(code);
   magicString.replaceAll("~/components/content/inspira/", "@/components/");
+  magicString.replaceAll("~/composables/", "@/composables/");
   return magicString.toString();
 }
 </script>

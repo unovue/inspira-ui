@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import { useMouseState } from "~~/composables/useMouseState";
+import { useMouseState } from "~/composables/useMouseState";
 import { provide, ref } from "vue";
 
 const props = defineProps({
