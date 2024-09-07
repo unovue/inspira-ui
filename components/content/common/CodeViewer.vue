@@ -57,36 +57,24 @@ const componentPath = computed(
 // Load and process the component code on mount
 onMounted(() => {
   loadAndProcessComponentCode();
-  observeDarkModeToggle();
 });
 
-// Clean up the observer on component unmount
-onBeforeUnmount(() => {
-  if (observer) observer.disconnect();
+watchEffect(async () => {
+  codeHtml.value = await convertCodeToHtml(
+    rawString.value,
+    useColorMode().value
+  );
 });
-
-let observer: MutationObserver | null = null;
-
-// Function to observe dark mode toggle
-function observeDarkModeToggle() {
-  observer = new MutationObserver(() => {
-    convertCodeToHtml(rawString.value).then((html) => {
-      codeHtml.value = html;
-    });
-  });
-
-  observer.observe(document.documentElement, {
-    attributes: true,
-    attributeFilter: ["class"],
-  });
-}
 
 // Function to load and process the component code
 async function loadAndProcessComponentCode() {
   try {
     const componentCode = await fetchComponentCode();
     rawString.value = updateImportPaths(componentCode);
-    codeHtml.value = await convertCodeToHtml(rawString.value);
+    codeHtml.value = await convertCodeToHtml(
+      rawString.value,
+      useColorMode().value
+    );
   } catch (error) {
     console.error("Error loading component code:", error);
   }
@@ -103,8 +91,8 @@ async function fetchComponentCode() {
 }
 
 // Convert the raw code to HTML with syntax highlighting
-async function convertCodeToHtml(code: string) {
-  const isDarkMode = document.documentElement.classList.contains("dark");
+async function convertCodeToHtml(code: string, colorMode: string) {
+  const isDarkMode = colorMode == "dark";
   const theme = isDarkMode ? "github-dark" : "github-light";
 
   const html = await codeToHtml(code, {
