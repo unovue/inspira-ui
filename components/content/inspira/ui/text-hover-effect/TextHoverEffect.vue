@@ -89,10 +89,7 @@
 import { ref, reactive, computed } from "vue";
 
 const props = defineProps<{
-  text: {
-    type: String;
-    required: true;
-  };
+  text: String;
   duration?: number;
   automatic?: boolean;
 }>();
