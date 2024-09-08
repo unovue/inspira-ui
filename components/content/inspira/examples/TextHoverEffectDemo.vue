@@ -8,6 +8,4 @@
   </ClientOnly>
 </template>
 
-<script setup lang="ts">
-import { TextHoverEffect } from "~/components/content/inspira/ui/text-hover-effect";
-</script>
+<script setup lang="ts"></script>
