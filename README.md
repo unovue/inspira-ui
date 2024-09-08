@@ -31,7 +31,7 @@ Inspira UI was created to fill a gap in the Vue community by providing a set of 
 
 - **Free and Open Source**: Completely [open source](https://github.com/rahulv-official/inspira-ui) under the MIT license.
 - **Highly Configurable**: Tailor components to your specific design needs. Check out our [configuration guide](/api/configuration).
-- **Diverse Component Range**: A broad selection of [components](/getting-started/writing/components) to help you build anything you imagine.
+- **Diverse Component Range**: A broad selection of [components](/components/all) to help you build anything you imagine.
 - **Mobile Optimized**: Designed to look great on all devices.
 - **Nuxt Compatibility**: Fully compatible with [Nuxt](https://nuxt.com).
 
@@ -42,6 +42,7 @@ For full documentation and usage examples, visit [**Inspira UI Documentation**](
 ## 🙏 Acknowledgments
 
 A special thanks to:
+
 - [Aceternity UI](https://ui.aceternity.com) for providing the inspiration and permission to adapt the original designs.
 - [shadcn-vue](https://www.shadcn-vue.com) for the Vue port of shadcn-ui and contributions to some components.
 - [shadcn-docs-nuxt](https://github.com/ZTL-UwU/shadcn-docs-nuxt) for the beautifully crafted Nuxt documentation site.
