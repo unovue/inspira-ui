@@ -16,11 +16,7 @@ import { ref, computed, onMounted, onBeforeUnmount } from "vue";
 import { codeToHtml } from "shiki";
 import { MagicString } from "vue/compiler-sfc";
 import { cn } from "~/lib/utils";
-
-onBeforeMount(async () => {
-  // @ts-ignore
-  await loadWasm(import("shiki/onig.wasm"))
-})
+import "shiki/onig.wasm?init";
 
 const rawString = ref("");
 const codeHtml = ref("");
