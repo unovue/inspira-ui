@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.8.0",
+    "@vueuse/core": "^11.0.3",
+    "@vueuse/motion": "^2.2.5",
     "nuxt": "^3.13.0",
     "nuxt-gtag": "^3.0.1",
     "shadcn-docs-nuxt": "^0.5.2",
