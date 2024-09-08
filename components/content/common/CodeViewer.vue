@@ -9,11 +9,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted, onBeforeUnmount } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { codeToHtml, loadWasm, type BuiltinLanguage } from "shiki";
 import { MagicString } from "vue/compiler-sfc";
 import { cn } from "~/lib/utils";
-import "shiki/onig.wasm?init";
+import wasm from "shiki/onig.wasm?init";
+
+onBeforeMount(async () => await loadWasm(wasm));
 
 const rawString = ref("");
 const codeHtml = ref("");
