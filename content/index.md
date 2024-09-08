@@ -29,18 +29,5 @@ Vue port of [Aceternity UI](https://ui.aceternity.com)
   ## Check out some examples
 ::
 
-::div{ class="flex lg:flex-row flex-col items-center justify-center flex-wrap p-4 gap-4"}
-
-  ::DotBackground{class="py-8 px-4 border rounded-lg flex flex-col gap-4 h-fit "}
-
-    ### [3D Card Hover Effect ](/components/3d-card)
-    ::ComponentViewer{componentName="CardDemo2"}
-    ::
-  ::
-  
-  ::DotBackground{class="py-8 px-4 border rounded-lg flex flex-col gap-4"}
-    ### [Text Hover Effect](/components/text-hover-effect)
-    ::ComponentViewer{componentName="TextHoverEffectDemo"}
-    ::
-  ::
+::HomePageExamples
 ::

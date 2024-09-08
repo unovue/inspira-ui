@@ -1,7 +1,7 @@
 export default defineAppConfig({
   shadcnDocs: {
     site: {
-      name: "inspira-ui",
+      name: "Inspira UI",
       description: "Build beautiful websites using Vue.",
     },
     theme: {
@@ -77,7 +77,7 @@ export default defineAppConfig({
     },
     aside: {
       useLevel: true,
-      collapse: false,
+      collapse: true,
     },
     main: {
       breadCrumb: true,
@@ -119,7 +119,7 @@ export default defineAppConfig({
     },
     search: {
       enable: true,
-      inAside: false,
+      inAside: true,
     },
   },
 });
