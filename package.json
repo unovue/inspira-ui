@@ -15,6 +15,7 @@
     "@vueuse/motion": "^2.2.5",
     "nuxt": "^3.13.0",
     "nuxt-gtag": "^3.0.1",
+    "nuxt-security": "2.0.0-rc.9",
     "shadcn-docs-nuxt": "^0.5.2",
     "shiki": "^1.16.1",
     "vue": "^3.4.38",
