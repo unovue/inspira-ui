@@ -13,11 +13,10 @@
     "@nuxt/image": "^1.8.0",
     "@vueuse/core": "^11.0.3",
     "@vueuse/motion": "^2.2.5",
+    "highlight.js": "^11.10.0",
     "nuxt": "^3.13.0",
     "nuxt-gtag": "^3.0.1",
-    "nuxt-security": "2.0.0-rc.9",
     "shadcn-docs-nuxt": "^0.5.2",
-    "shiki": "^1.16.1",
     "vue": "^3.4.38",
     "vue-router": "^4.4.3"
   },
@@ -25,8 +24,6 @@
     "@iconify-json/vscode-icons": "^1.2.0",
     "@inspira-ui/plugins": "0.0.1",
     "clsx": "^2.1.1",
-    "tailwind-merge": "^2.5.2",
-    "vite-plugin-top-level-await": "^1.4.4",
-    "vite-plugin-wasm": "^3.3.0"
+    "tailwind-merge": "^2.5.2"
   }
 }

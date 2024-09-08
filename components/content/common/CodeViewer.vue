@@ -1,6 +1,6 @@
 <template>
   <ProsePre
-    :class="cn('overflow-auto max-h-[32rem]', $props.class)"
+    :class="cn('overflow-auto max-h-[32rem] px-5', $props.class)"
     :code="rawString"
     v-bind="props"
   >
@@ -10,12 +10,10 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
-import { codeToHtml, loadWasm, type BuiltinLanguage } from "shiki";
 import { MagicString } from "vue/compiler-sfc";
 import { cn } from "~/lib/utils";
-import wasm from "shiki/onig.wasm?init";
-
-onBeforeMount(async () => await loadWasm(wasm));
+import hljs from "highlight.js";
+import "~/assets/css/code-theme.css";
 
 const rawString = ref("");
 const codeHtml = ref("");
@@ -26,7 +24,7 @@ const props = defineProps({
   type: String,
   class: String,
   language: {
-    type: String as PropType<BuiltinLanguage>,
+    type: String as any,
     default: null,
   },
   filename: {
@@ -62,22 +60,12 @@ onMounted(() => {
   loadAndProcessComponentCode();
 });
 
-watchEffect(async () => {
-  codeHtml.value = await convertCodeToHtml(
-    rawString.value,
-    useColorMode().value
-  );
-});
-
 // Function to load and process the component code
 async function loadAndProcessComponentCode() {
   try {
     const componentCode = await fetchComponentCode();
     rawString.value = updateImportPaths(componentCode);
-    codeHtml.value = await convertCodeToHtml(
-      rawString.value,
-      useColorMode().value
-    );
+    codeHtml.value = hljs.highlightAuto(rawString.value, ["ts", "html", "css"]).value;
   } catch (error) {
     console.error("Error loading component code:", error);
   }
@@ -91,29 +79,6 @@ async function fetchComponentCode() {
 
   const mod = await loadRawComponent();
   return (mod as any).trim();
-}
-
-// Convert the raw code to HTML with syntax highlighting
-async function convertCodeToHtml(code: string, colorMode: string) {
-  const isDarkMode = colorMode == "dark";
-  const theme = isDarkMode ? "github-dark" : "github-light";
-
-  const html = await codeToHtml(code, {
-    lang: "vue",
-    theme: theme,
-    colorReplacements: {
-      "github-dark": {
-        "#24292e": "transparent",
-      },
-      "github-light": {
-        "#fff": "transparent",
-      },
-    },
-  });
-
-  return html.replace("shiki", "shiki py-2 leading-[0.4rem]");
-
-  // return html;
 }
 
 // Update import paths in the raw code using MagicString
