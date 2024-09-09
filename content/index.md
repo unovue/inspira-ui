@@ -21,12 +21,15 @@ actions:
 #title
 Build beautiful websites :br  using Vue
 
+
 #description
 Vue port of [Aceternity UI](https://ui.aceternity.com)
 ::
 
 ::div{ class="border-none flex items-center justify-center p-4" }
-  ## Check out some examples
+  ::BlurReveal{delay="0" duration="1"}
+    ## Check out some examples 🤘🏻
+  ::
 ::
 
 ::HomePageExamples
