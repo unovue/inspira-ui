@@ -66,11 +66,33 @@ export default defineAppConfig({
             },
           ],
         },
+        {
+          title: "Community",
+          links: [
+            {
+              title: "GitHub",
+              to: "https://github.com/rahulv-official/inspira-ui",
+              description: "Source code for Inspira UI.",
+              target: "_blank",
+            },
+            {
+              title: "Discord",
+              to: "https://discord.gg/Xbh5DwJRc9",
+              description: "Connect with community on Discord",
+              target: "_blank",
+            },
+          ],
+        },
       ],
       links: [
         {
           icon: "lucide:github",
           to: "https://github.com/rahulv-official/inspira-ui",
+          target: "_blank",
+        },
+        {
+          icon: "lucide:bot",
+          to: "https://discord.gg/Xbh5DwJRc9",
           target: "_blank",
         },
       ],
@@ -87,6 +109,7 @@ export default defineAppConfig({
       credits: "Copyright © 2024",
       links: [
         {
+          icon: "lucide:globe",
           to: "https://rahulv.dev",
           title: "Maintained by rahulv.dev",
           target: "_blank",
