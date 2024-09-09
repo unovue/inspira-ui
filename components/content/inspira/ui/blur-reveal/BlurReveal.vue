@@ -21,10 +21,8 @@
 </template>
 
 <script setup>
-import { ref, onMounted, useSlots } from "vue";
-import { useIntersectionObserver } from "@vueuse/core";
+import { useIntersectionObserver } from '@vueuse/core';
 
-// Define props using defineProps
 const props = defineProps({
   duration: {
     type: Number,
@@ -49,49 +47,44 @@ const props = defineProps({
   class: String,
 });
 
-// Refs
 const container = ref(null);
-const children = ref([]);
-const slots = useSlots();
 const childElements = ref([]);
+const slots = useSlots();
+const children = ref([]);
 
-// Initialize revealed state
+// Compute revealed states for each child based on intersection
 const isRevealed = ref([]);
 
-// Methods to handle style and class dynamically
 const getChildStyle = (index) => ({
   "--duration": `${props.duration}s`,
   "--blur": `${props.blur}`,
   "--y-offset": props.yOffset,
-  "transition-delay": `${index * props.delay}s`,
+  "transition-delay": `${index * props.delay}s`
 });
 
 const childClass = (index) => ({
   'opacity-100 blur-none translate-y-0': isRevealed.value[index],
-  [`opacity-0 blur-[${props.blur}] translate-y-[${props.yOffset}]`]: !isRevealed.value[index],
+  [`opacity-0 blur-[${props.blur}] translate-y-[${props.yOffset}]`]: !isRevealed.value[index]
 });
 
-// Observer callback
-const observeChild = (entry) => {
-  if (entry.isIntersecting) {
-    const index = Array.from(container.value.children).indexOf(entry.target);
-    isRevealed.value[index] = true;
-    entry.target.style.transform = "translateY(0)"; // Remove y offset on reveal
-    entry.target.style.filter = "blur(0)"; // Remove blur on reveal
-    entry.target.style.opacity = 1; // Set opacity to 100%
-  }
-};
-
-// Use Intersection Observer from VueUse
-useIntersectionObserver(childElements, observeChild, {
+useIntersectionObserver(childElements, (entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const index = Array.from(container.value.children).indexOf(entry.target);
+      isRevealed.value[index] = true;
+    }
+  });
+}, {
   rootMargin: props.inViewMargin,
-  threshold: 0.1,
+  threshold: 0.1
 });
 
-// Setup children on mount
 onMounted(() => {
-  children.value = slots.default ? slots.default() : [];
-  isRevealed.value = Array(children.value.length).fill(false);
+  // This will reactively capture all content provided in the default slot
+  watchEffect(() => {
+    children.value = slots.default ? slots.default() : [];
+    isRevealed.value = Array(children.value.length).fill(false);
+  });
 });
 
 // Before and Enter functions for transition effects

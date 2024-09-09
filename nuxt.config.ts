@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   
-  modules: ["@nuxt/image", "nuxt-gtag"],
+  modules: ["@nuxt/image", "nuxt-gtag", "@vueuse/motion/nuxt"],
 
   components: [
     {
