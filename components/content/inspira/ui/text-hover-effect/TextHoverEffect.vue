@@ -50,8 +50,8 @@
       y="50%"
       text-anchor="middle"
       dominant-baseline="middle"
-      stroke-width="0.3"
-      :style="{ opacity: hovered ? 0.7 : 0 }"
+      :stroke-width="strokeWidth"
+      :style="{ opacity: hovered ? opacity : 0 }"
       class="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-7xl"
     >
       {{ text }}
@@ -63,7 +63,7 @@
       y="50%"
       text-anchor="middle"
       dominant-baseline="middle"
-      stroke-width="0.3"
+      :stroke-width="strokeWidth"
       :style="strokeStyle"
       class="font-[helvetica] font-bold fill-transparent text-7xl stroke-neutral-200 dark:stroke-neutral-800"
     >
@@ -76,7 +76,7 @@
       text-anchor="middle"
       dominant-baseline="middle"
       stroke="url(#textGradient)"
-      stroke-width="0.3"
+      :stroke-width="strokeWidth"
       mask="url(#textMask)"
       class="font-[helvetica] font-bold fill-transparent text-7xl"
     >
@@ -87,12 +87,26 @@
 
 <script setup lang="ts">
 import { ref, reactive, computed } from "vue";
+import { cn } from "~/lib/utils";
 
-const props = defineProps<{
-  text: String;
-  duration?: number;
-  automatic?: boolean;
-}>();
+const props = defineProps({
+  strokeWidth: {
+    type: Number,
+    default: 0.75,
+  },
+  text: {
+    type: String,
+    required: true,
+  },
+  duration: {
+    type: Number,
+    default: 200,
+  },
+  opacity: {
+    type: Number,
+    default: 0.75,
+  },
+});
 
 const svgRef = ref<SVGSVGElement | null>(null);
 const cursor = reactive({ x: 0, y: 0 });
