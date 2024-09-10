@@ -1,28 +1,19 @@
 <template>
   <div ref="container" :class="class">
-    <TransitionGroup
-      tag="div"
-      name="fade-blur"
-      @before-enter="beforeEnter"
-      @enter="enter"
+    <div
+      v-for="(child, index) in children"
+      :key="index"
+      v-motion
+      ref="childElements"
+      :initial="getInitial()"
+      :enter="getEnter(index)"
     >
-      <div
-        v-for="(child, index) in children"
-        :key="index"
-        :style="getChildStyle(index)"
-        :class="childClass(index)"
-        :data-blur-index="index"
-        ref="childElements"
-      >
-        <component :is="child" />
-      </div>
-    </TransitionGroup>
+      <component :is="child" />
+    </div>
   </div>
 </template>
 
-<script setup>
-import { useIntersectionObserver } from '@vueuse/core';
-
+<script setup lang="ts">
 const props = defineProps({
   duration: {
     type: Number,
@@ -34,15 +25,11 @@ const props = defineProps({
   },
   blur: {
     type: String,
-    default: "10px",
-  },
-  inViewMargin: {
-    type: String,
-    default: "0px",
+    default: "20px",
   },
   yOffset: {
-    type: String,
-    default: "20px", // Default offset for animation
+    type: Number,
+    default: 20, // Default offset for animation
   },
   class: String,
 });
@@ -50,73 +37,38 @@ const props = defineProps({
 const container = ref(null);
 const childElements = ref([]);
 const slots = useSlots();
-const children = ref([]);
-
-// Compute revealed states for each child based on intersection
-const isRevealed = ref([]);
-
-const getChildStyle = (index) => ({
-  "--duration": `${props.duration}s`,
-  "--blur": `${props.blur}`,
-  "--y-offset": props.yOffset,
-  "transition-delay": `${index * props.delay}s`
-});
-
-const childClass = (index) => ({
-  'opacity-100 blur-none translate-y-0': isRevealed.value[index],
-  [`opacity-0 blur-[${props.blur}] translate-y-[${props.yOffset}]`]: !isRevealed.value[index]
-});
-
-useIntersectionObserver(childElements, (entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const index = Array.from(container.value.children).indexOf(entry.target);
-      isRevealed.value[index] = true;
-    }
-  });
-}, {
-  rootMargin: props.inViewMargin,
-  threshold: 0.1
-});
+const children = ref<any>([]);
 
 onMounted(() => {
   // This will reactively capture all content provided in the default slot
   watchEffect(() => {
     children.value = slots.default ? slots.default() : [];
-    isRevealed.value = Array(children.value.length).fill(false);
   });
 });
 
-// Before and Enter functions for transition effects
-const beforeEnter = (el) => {
-  el.style.transition = `opacity ${props.duration}s ease-in-out, filter ${props.duration}s ease-in-out, transform ${props.duration}s ease-in-out`;
-  el.style.opacity = 0;
-  el.style.filter = `blur(${props.blur})`;
-  el.style.transform = `translateY(${props.yOffset})`;
-};
+function getInitial() {
+  return {
+    opacity: 0,
+    filter: `blur(${props.blur})`,
+    y: props.yOffset,
+    transition: {
+      duration: 0,
+      easing: "easeInOut",
+      delay: 0,
+    },
+  };
+}
 
-const enter = (el, done) => {
-  const index = parseInt(el.getAttribute("data-blur-index"));
-  const delay = (index + 1) * props.delay * 1000;
-
-  setTimeout(() => {
-    el.style.opacity = 1;
-    el.style.filter = "blur(0)";
-    el.style.transform = "translateY(0)";
-    done();
-  }, delay);
-};
+function getEnter(index: number) {
+  return {
+    opacity: 1,
+    filter: `blur(0px)`,
+    y: 0,
+    transition: {
+      duration: props.duration * 1000,
+      easing: "easeInOut",
+      delay: props.delay * index * 1000,
+    },
+  };
+}
 </script>
-
-<style scoped>
-.fade-blur-enter-active,
-.fade-blur-leave-active {
-  transition: opacity var(--duration) ease-in-out, filter var(--duration) ease-in-out, transform var(--duration) ease-in-out;
-}
-.fade-blur-enter-from,
-.fade-blur-leave-to {
-  opacity: 0;
-  filter: blur(var(--blur));
-  transform: translateY(var(--y-offset));
-}
-</style>
