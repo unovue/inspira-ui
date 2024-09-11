@@ -1,7 +1,9 @@
 ---
-title: Home
-navigation: false
+title: Build beautiful websites using Vue & Nuxt
+description: "An open-source library for Vue and Nuxt with beautiful, customizable components built using shadcn-vue, @vueuse/motion, and TailwindCSS. Explore and contribute today!."
+navigation: true
 ---
+
 
 ::hero
 ---
@@ -23,13 +25,7 @@ Build beautiful websites :br  using Vue
 
 
 #description
-Vue port of [Aceternity UI](https://ui.aceternity.com)
-::
-
-::div{ class="border-none flex items-center justify-center p-4" }
-  ::BlurReveal{delay="0" duration="1"}
-    ## Check out some examples 🤘🏻
-  ::
+Open-Source UI Library for Vue and Nuxt! 🚀
 ::
 
 ::HomePageExamples
