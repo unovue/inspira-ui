@@ -20,7 +20,7 @@
         >
           3D Card Hover Effect
         </h3>
-        <ComponentViewer component-name="CardDemo2"></ComponentViewer>
+        <CardDemo2 />
       </DotBackground>
       <DotBackground
         class="py-8 px-4 border rounded-lg flex flex-col gap-4 h-fit"
@@ -30,7 +30,7 @@
         >
           Text Hover Effect
         </h3>
-        <ComponentViewer component-name="TextHoverEffectDemo"></ComponentViewer>
+        <TextHoverEffectDemo />
       </DotBackground>
     </div>
   </ClientOnly>
