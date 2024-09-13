@@ -14,14 +14,14 @@
     "@vueuse/core": "^11.0.3",
     "@vueuse/motion": "^2.2.5",
     "highlight.js": "^11.10.0",
-    "nuxt": "^3.13.0",
+    "nuxt": "^3.13.1",
     "nuxt-gtag": "^3.0.1",
-    "shadcn-docs-nuxt": "^0.5.2",
-    "vue": "^3.4.38",
-    "vue-router": "^4.4.3"
+    "shadcn-docs-nuxt": "^0.5.4",
+    "vue": "^3.5.4",
+    "vue-router": "^4.4.4"
   },
   "devDependencies": {
-    "@iconify-json/vscode-icons": "^1.2.0",
+    "@iconify-json/vscode-icons": "^1.2.1",
     "@inspira-ui/plugins": "0.0.1",
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.5.2"
