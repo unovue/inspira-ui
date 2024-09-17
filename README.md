@@ -2,7 +2,7 @@
   Inspira UI
 </h1>
 <p align="center">
-  <b>Vue Port of Aceternity UI</b><br>
+  <b>Build beautiful websites using Vue & Nuxt.</b><br>
   A curated collection of beautifully designed, reusable components for Vue.
 </p>
 
