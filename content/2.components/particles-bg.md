@@ -25,3 +25,4 @@ You can copy and paste the following code to create these components:
 ## Credits
 
 - Credits to [Magic UI](https://magicui.design/docs/components/particles) for this fantastic component.
+- Credit to [Prodromos Pantos](https://github.com/prpanto) for porting the original component to Vue & Nuxt.
