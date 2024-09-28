@@ -12,8 +12,8 @@ announcement:
   icon: 'lucide:rocket'
   to: /getting-started/introduction
 actions:
-  - name: Get Started
-    to: /getting-started
+  - name: All Components
+    to: /components/all
   - name: GitHub
     variant: outline
     to: https://github.com/rahulv-official/inspira-ui
@@ -21,7 +21,7 @@ actions:
 ---
 
 #title
-Build beautiful websites :br  using Vue
+Build beautiful websites :br  using Vue & Nuxt
 
 
 #description
