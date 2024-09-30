@@ -8,7 +8,7 @@ navigation: false
 ::hero
 ---
 announcement:
-  title: 'Introducing Inspira UI '
+  title: 'Introducing Inspira UI'
   icon: 'lucide:rocket'
   to: /getting-started/introduction
 actions:
@@ -16,7 +16,7 @@ actions:
     to: /components/all
   - name: GitHub
     variant: outline
-    to: https://github.com/rahulv-official/inspira-ui
+    to: https://github.com/radix-vue/inspira-ui
     leftIcon: 'lucide:github'
 ---
 

@@ -1,17 +1,10 @@
-<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2_2)">
-<g clip-path="url(#clip1_2_2)">
-<path d="M252 172L172 252" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M236 84L84 236" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-</g>
-<rect x="8" y="8" width="284" height="284" rx="22" stroke="white" stroke-width="16"/>
-</g>
-<defs>
-<clipPath id="clip0_2_2">
-<rect width="300" height="300" fill="white"/>
-</clipPath>
-<clipPath id="clip1_2_2">
-<rect width="256" height="256" fill="white" transform="translate(44 44)"/>
-</clipPath>
-</defs>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+	<title>Logo Dark</title>
+	<style>
+		.s0 { fill: #FFFFFF } 
+	</style>
+	<g id="Logo">
+		<path id="U" class="s0" aria-label="U"  d="m127.4 240.2c57.3 0 94.7-28.5 94.7-81.6v-127.7h-51.5v122.9c0 28.8-15.4 42.6-43.2 42.6-27.8 0-43.2-13.8-43.2-42.6v-122.9h-51.5v127.7c0 53.1 37.4 81.6 94.7 81.6z"/>
+		<path id="I" class="s0" aria-label="I"  d="m101.2 221h51.6v-206.1h-51.6z"/>
+	</g>
 </svg>
