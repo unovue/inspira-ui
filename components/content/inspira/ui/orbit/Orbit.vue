@@ -13,11 +13,11 @@
       '--duration': duration,
       '--radius': radius,
       '--delay': -delay,
+      '--direction': reverse ? 'reverse' : 'normal',
     }"
     :class="
       cn(
         'absolute flex size-full transform-gpu animate-orbit items-center justify-center rounded-full border bg-black/10 dark:bg-white/10',
-        { '[animation-direction:reverse]': reverse },
         $props.class
       )
     "
@@ -31,7 +31,7 @@ import { cn } from "~/lib/utils";
 
 const props = defineProps({
   class: String,
-  reverse: Boolean,
+  reverse: { type: Boolean, default: false },
   duration: { type: Number, default: 20 },
   delay: { type: Number, default: 10 },
   radius: { type: Number, default: 50 },
@@ -53,5 +53,6 @@ const props = defineProps({
 .animate-orbit {
   animation: orbit calc(var(--duration) * 1s) linear infinite;
   animation-delay: calc(var(--delay) * 1s);
+  animation-direction: var(--direction);
 }
 </style>
