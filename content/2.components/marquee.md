@@ -20,7 +20,13 @@ description: A customizable scrolling component that loops its content horizonta
 
 You can copy and paste the following code to create this component:
 
-::CodeViewer{filename="Marquee.vue" language="vue" componentName="Marquee" type="ui" id="marquee"}
+::code-group
+
+::CodeViewerTab{filename="Marquee.vue" language="vue" componentName="Marquee" type="ui" id="marquee"}
+::
+::CodeViewerTab{filename="ReviewCard.vue" language="vue" componentName="ReviewCard" type="examples" id="marquee"}
+::
+
 ::
 
 ## Features
