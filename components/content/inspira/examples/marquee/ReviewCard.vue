@@ -5,9 +5,9 @@
     <div class="flex flex-row items-center gap-2">
       <NuxtImg :src="img" class="rounded-full" width="32" height="32" alt="" />
       <div class="flex flex-col">
-        <figcaption class="text-sm font-medium dark:text-white">
+        <span class="text-sm font-medium dark:text-white">
           {{ name }}
-        </figcaption>
+        </span>
         <p class="text-xs font-medium dark:text-white/40">{{ username }}</p>
       </div>
     </div>
