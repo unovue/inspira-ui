@@ -22,9 +22,9 @@ You can copy and paste the following code to create this component:
 
 ::code-group
 
-::CodeViewerTab{filename="Marquee.vue" language="vue" componentName="Marquee" type="ui" id="marquee"}
+::CodeViewerTab{label="Marquee.vue" language="vue" componentName="Marquee" type="ui" id="marquee"}
 ::
-::CodeViewerTab{filename="ReviewCard.vue" language="vue" componentName="ReviewCard" type="examples" id="marquee"}
+::CodeViewerTab{label="ReviewCard.vue" language="vue" componentName="ReviewCard" type="examples" id="marquee"}
 ::
 
 ::
