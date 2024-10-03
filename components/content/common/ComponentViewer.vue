@@ -5,7 +5,9 @@
         <component :is="componentName" />
       </template>
       <template #fallback>
-        <Spinner />
+        <div class="p-4">
+          <Spinner class="mx-auto" />
+        </div>
       </template>
     </Suspense>
   </ClientOnly>

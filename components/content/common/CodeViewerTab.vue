@@ -5,7 +5,7 @@
     :code="rawString"
   >
     <CodeCopy class="absolute top-0 right-0" :code="rawString" />
-    <code class="overflow-auto px-2 leading-4">
+    <code class="overflow-auto px-2 leading-4 min-w-full">
       <pre class="text-sm" v-html="codeHtml"></pre>
     </code>
   </div>
