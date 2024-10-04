@@ -1,3 +1,8 @@
+<p align="center">
+  <a href="https://github.com/unovue/inspira-ui">
+    <img src="https://inspira-ui.com/logo.svg" alt="Logo" width="150" />
+  </a>
+</p>
 <h1 align="center">
   Inspira UI
 </h1>
