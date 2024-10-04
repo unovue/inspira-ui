@@ -3,6 +3,7 @@ export default defineAppConfig({
     site: {
       name: "Inspira UI",
       description: "Build beautiful websites using Vue & Nuxt.",
+      ogImage: "/logo-dark.svg",
     },
     theme: {
       customizable: true,
@@ -10,7 +11,7 @@ export default defineAppConfig({
       radius: 0.75,
     },
     header: {
-      title: "inspira ui",
+      title: "Inspira UI",
       showTitle: true,
       darkModeToggle: true,
       logo: {
@@ -48,6 +49,12 @@ export default defineAppConfig({
               to: "https://ui.aceternity.com/",
               description:
                 "For providing the inspiration and permission to adapt the original designs.",
+              target: "_blank",
+            },
+            {
+              title: "Magic UI",
+              to: "https://magicui.design/",
+              description: "For providing the inspiration for designs.",
               target: "_blank",
             },
             {
