@@ -7,10 +7,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/radix-vue/inspira-ui/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/radix-vue/inspira-ui?style=social">
+  <a href="https://github.com/unovue/inspira-ui/stargazers">
+    <img alt="GitHub stars" src="https://img.shields.io/github/stars/unovue/inspira-ui?style=social">
   </a>
-  <a href="https://github.com/radix-vue/inspira-ui/blob/main/LICENSE.md">
+  <a href="https://github.com/unovue/inspira-ui/blob/main/LICENSE.md">
     <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
   </a>  
 </p>
@@ -29,7 +29,7 @@ Inspira UI was created to fill a gap in the Vue community by providing a set of 
 
 ## 🎯 Key Features
 
-- **Free and Open Source**: Completely [open source](https://github.com/radix-vue/inspira-ui) under the MIT license.
+- **Free and Open Source**: Completely [open source](https://github.com/unovue/inspira-ui) under the MIT license.
 - **Highly Configurable**: Tailor components to your specific design needs. Check out our [configuration guide](/api/configuration).
 - **Diverse Component Range**: A broad selection of [components](/components/all), inspired by Aceternity UI, Magic UI, and custom contributions, to help you build anything you imagine.
 - **Mobile Optimized**: Designed to look great on all devices.
@@ -50,10 +50,10 @@ A special thanks to:
 
 ##  Author
 
-Hi, I'm [Rahul Vashishtha](https://rahulv.dev). I started Inspira UI to bring a similar experience to the Vue ecosystem, inspired by Aceternity UI, Magic UI, and community contributions. I'm continuously working on it to make it better. Feel free to check out my work on [GitHub](https://github.com/rahul-vashishtha) and join me on this journey [here](https://github.com/radix-vue/inspira-ui)!
+Hi, I'm [Rahul Vashishtha](https://rahulv.dev). I started Inspira UI to bring a similar experience to the Vue ecosystem, inspired by Aceternity UI, Magic UI, and community contributions. I'm continuously working on it to make it better. Feel free to check out my work on [GitHub](https://github.com/rahul-vashishtha) and join me on this journey [here](https://github.com/unovue/inspira-ui)!
 
 ## 🌟 Contribute
 
-We welcome contributions! If you want to suggest features, report bugs, or help improve the project, feel free to open an issue or submit a pull request on [GitHub](https://github.com/radix-vue/inspira-ui).
+We welcome contributions! If you want to suggest features, report bugs, or help improve the project, feel free to open an issue or submit a pull request on [GitHub](https://github.com/unovue/inspira-ui).
 
 You can also follow this [Contribution Guide](https://inspira-ui.com/getting-started/contribution).

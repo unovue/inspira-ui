@@ -16,7 +16,7 @@ actions:
     to: /components/all
   - name: GitHub
     variant: outline
-    to: https://github.com/radix-vue/inspira-ui
+    to: https://github.com/unovue/inspira-ui
     leftIcon: 'lucide:github'
 ---
 

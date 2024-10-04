@@ -78,7 +78,7 @@ export default defineAppConfig({
           links: [
             {
               title: "GitHub",
-              to: "https://github.com/radix-vue/inspira-ui",
+              to: "https://github.com/unovue/inspira-ui",
               description: "Source code for Inspira UI.",
               target: "_blank",
             },
@@ -90,7 +90,7 @@ export default defineAppConfig({
             },
             {
               title: "Forum",
-              to: "https://github.com/orgs/radix-vue/discussions",
+              to: "https://github.com/unovue/inspira-ui/discussions",
               target: "_blank",
               description: "Join the forum",
             },
@@ -100,7 +100,7 @@ export default defineAppConfig({
       links: [
         {
           icon: "lucide:github",
-          to: "https://github.com/radix-vue/inspira-ui",
+          to: "https://github.com/unovue/inspira-ui",
           target: "_blank",
         },
         {
@@ -130,7 +130,7 @@ export default defineAppConfig({
         {
           icon: "lucide:github",
           title: "Github",
-          to: "https://github.com/radix-vue/inspira-ui",
+          to: "https://github.com/unovue/inspira-ui",
           target: "_blank",
         },
       ],
@@ -142,13 +142,13 @@ export default defineAppConfig({
         {
           title: "Star on GitHub",
           icon: "lucide:star",
-          to: "https://github.com/radix-vue/inspira-ui",
+          to: "https://github.com/unovue/inspira-ui",
           target: "_blank",
         },
         {
           title: "Create Issues",
           icon: "lucide:circle-dot",
-          to: "https://github.com/radix-vue/inspira-ui/issues",
+          to: "https://github.com/unovue/inspira-ui/issues",
           target: "_blank",
         },
         {
@@ -160,7 +160,7 @@ export default defineAppConfig({
         {
           title: "Forum",
           icon: "lucide:newspaper",
-          to: "https://github.com/orgs/radix-vue/discussions",
+          to: "https://github.com/unovue/inspira-ui/discussions",
           target: "_blank",
         },
       ],
