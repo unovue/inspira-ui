@@ -17,6 +17,8 @@
       :data-init-direction="initDirection"
       :data-fade-position="fadePosition"
       :data-fade-direction="fadeDirection"
+      :data-noise="noise"
+      :data-responsive-width="responsiveWidth"
     />
   </span>
 </template>
@@ -58,6 +60,8 @@ type ParticleImageProps = {
     | "random"
     | "none";
   fadeDirection?: "random" | "top" | "left" | "bottom" | "right" | "none";
+  noise?: number;
+  responsiveWidth?: boolean;
 };
 
 defineProps<ParticleImageProps>();
