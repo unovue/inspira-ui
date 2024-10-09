@@ -30,10 +30,14 @@ const props = defineProps({
     default: "lucide:square-terminal",
   },
   class: String,
+  extension: {
+    type: String,
+    default: "vue",
+  },
 });
 
 // Create a map of all possible components using import.meta.glob
-const rawComponents = import.meta.glob("../inspira/**/*.vue", {
+const rawComponents = import.meta.glob("../inspira/**/*.{vue,ts,js,d.ts}", {
   query: "?raw",
   import: "default",
 });
@@ -43,7 +47,7 @@ const componentPath = computed(
   () =>
     `../inspira/${props.type}/${props.id ? props.id + "/" : ""}${
       props.componentName
-    }.vue`
+    }.${props.extension}`
 );
 
 // Load and process the component code on mount
@@ -56,7 +60,13 @@ async function loadAndProcessComponentCode() {
   try {
     const componentCode = await fetchComponentCode();
     rawString.value = updateImportPaths(componentCode);
-    codeHtml.value = hljs.highlightAuto(rawString.value, ["ts", "html", "css"]).value;
+    codeHtml.value = hljs.highlightAuto(rawString.value, [
+      "ts",
+      "html",
+      "css",
+      "js",
+      "d.ts",
+    ]).value;
   } catch (error) {
     console.error("Error loading component code:", error);
   }
