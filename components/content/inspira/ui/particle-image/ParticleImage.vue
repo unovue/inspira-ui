@@ -1,26 +1,24 @@
 <template>
-  <span>
-    <img
-      ref="imageParticleRef"
-      :src="imageSrc"
-      :class="cn('hidden w-32 h-32', $props.class)"
-      :data-particle-gap="particleGap"
-      :data-width="canvasWidth"
-      :data-height="canvasHeight"
-      :data-gravity="gravity"
-      :data-particle-size="particleSize"
-      :data-mouse-force="mouseForce"
-      :data-renderer="renderer"
-      :data-color="color"
-      :data-color-arr="colorArr"
-      :data-init-position="initPosition"
-      :data-init-direction="initDirection"
-      :data-fade-position="fadePosition"
-      :data-fade-direction="fadeDirection"
-      :data-noise="noise"
-      :data-responsive-width="responsiveWidth"
-    />
-  </span>
+  <img
+    ref="imageParticleRef"
+    :src="imageSrc"
+    :class="cn('hidden w-32 h-32', $props.class)"
+    :data-particle-gap="particleGap"
+    :data-width="canvasWidth"
+    :data-height="canvasHeight"
+    :data-gravity="gravity"
+    :data-particle-size="particleSize"
+    :data-mouse-force="mouseForce"
+    :data-renderer="renderer"
+    :data-color="color"
+    :data-color-arr="colorArr"
+    :data-init-position="initPosition"
+    :data-init-direction="initDirection"
+    :data-fade-position="fadePosition"
+    :data-fade-direction="fadeDirection"
+    :data-noise="noise"
+    :data-responsive-width="responsiveWidth"
+  />
 </template>
 
 <script lang="ts" setup>
