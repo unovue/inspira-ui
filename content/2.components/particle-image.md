@@ -47,3 +47,4 @@ You can copy and paste the following code to create these components:
 ## Credits
 
 - Credits to [Nuxt Labs](https://nuxtlabs.com) for this inspiration.
+- Credits to [NextParticles](https://nextparticle.nextco.de) for the base of the animation library.
