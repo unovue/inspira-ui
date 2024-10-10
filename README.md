@@ -62,3 +62,8 @@ Hi, I'm [Rahul Vashishtha](https://rahulv.dev). I started Inspira UI to bring a 
 We welcome contributions! If you want to suggest features, report bugs, or help improve the project, feel free to open an issue or submit a pull request on [GitHub](https://github.com/unovue/inspira-ui).
 
 You can also follow this [Contribution Guide](https://inspira-ui.com/getting-started/contribution).
+
+## Sponsorship
+You can also support the development of the project by sponsoring the developer. 
+
+Support and sponsor the maintainer here: [Support Inspira UI](https://github.com/sponsors/rahul-vashishtha)

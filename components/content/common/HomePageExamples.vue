@@ -1,6 +1,13 @@
 <template>
   <ClientOnly>
-    <div class="flex items-center justify-center">
+    <div class="flex flex-col items-center justify-center">
+      <div class="mb-8">
+        <a href="https://github.com/sponsors/rahul-vashishtha" target="_blank">
+          <UiButton variant="secondary" class="gap-2 text-base py-6">
+            Become a Sponsor <span class="text-red-500">♥️</span>
+          </UiButton>
+        </a>
+      </div>
       <BlurReveal :delay="0" :duration="1">
         <h3
           class="text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-300 py-8 text-center"
