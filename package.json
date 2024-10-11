@@ -15,7 +15,6 @@
     "@vueuse/motion": "^2.2.5",
     "highlight.js": "^11.10.0",
     "nuxt": "^3.13.2",
-    "nuxt-clarity-analytics": "^0.0.9",
     "nuxt-gtag": "^3.0.1",
     "shadcn-docs-nuxt": "^0.5.7",
     "vue": "^3.5.11",

@@ -1,13 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  
-  modules: [
-    "@nuxt/image",
-    "nuxt-gtag",
-    "@vueuse/motion/nuxt",
-    "nuxt-clarity-analytics",
-  ],
+  plugins: [{ src: "~/plugins/clarity.js", mode: "client" }],
+
+  modules: ["@nuxt/image", "nuxt-gtag", "@vueuse/motion/nuxt"],
 
   components: [
     {
