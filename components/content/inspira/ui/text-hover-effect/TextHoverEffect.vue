@@ -8,6 +8,9 @@
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
     @mousemove="handleMouseMove"
+    @touchstart="handleTouchStart"
+    @touchmove="handleTouchMove"
+    @touchend="handleTouchEnd"
     class="select-none"
   >
     <defs>
@@ -139,6 +142,22 @@ const handleMouseLeave = () => (hovered.value = false);
 const handleMouseMove = (e: MouseEvent) => {
   cursor.x = e.clientX;
   cursor.y = e.clientY;
+};
+
+// Touch support
+const handleTouchStart = (e: TouchEvent) => {
+  hovered.value = true;
+  handleTouchMove(e); // Update the position on touch start
+};
+
+const handleTouchMove = (e: TouchEvent) => {
+  const touch = e.touches[0];
+  cursor.x = touch.clientX;
+  cursor.y = touch.clientY;
+};
+
+const handleTouchEnd = () => {
+  hovered.value = false;
 };
 </script>
 
