@@ -12,6 +12,12 @@ export default defineNuxtConfig({
     },
   ],
 
+  runtimeConfig: {
+    public: {
+      NUXT_CLARITY_ID: process.env.NUXT_CLARITY_ID,
+    },
+  },
+
   extends: ["shadcn-docs-nuxt"],
   compatibilityDate: "2024-07-06",
 });
