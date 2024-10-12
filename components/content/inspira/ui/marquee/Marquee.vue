@@ -1,22 +1,28 @@
 <template>
   <div
-    :class="[
-      'group flex overflow-hidden p-2 [--duration:40s] [--gap:1rem] [gap:var(--gap)]',
-      vertical ? 'flex-col' : 'flex-row',
-      $props.class,
-    ]"
+    :class="
+      cn(
+        'group flex overflow-hidden p-2 [--duration:40s] [--gap:1rem] [gap:var(--gap)]',
+        vertical ? 'flex-col' : 'flex-row',
+        $props.class
+      )
+    "
   >
     <div
       v-for="index in repeat"
       :key="index"
-      :class="[
-        'flex shrink-0 justify-around [gap:var(--gap)]',
-        vertical
-          ? 'animate-marquee-vertical flex-col'
-          : 'animate-marquee flex-row',
-        pauseOnHover ? 'group-hover:[animation-play-state:paused]' : '',
-        reverse ? '[animation-direction:reverse]' : '',
-      ]"
+      :class="
+        cn(
+          'flex shrink-0 justify-around [gap:var(--gap)]',
+          vertical
+            ? 'animate-marquee-vertical flex-col'
+            : 'animate-marquee flex-row',
+          pauseOnHover ? 'group-hover:[animation-play-state:paused]' : ''
+        )
+      "
+      :style="{
+        animationDirection: reverse ? 'reverse' : 'normal',
+      }"
     >
       <slot />
     </div>
@@ -24,6 +30,8 @@
 </template>
 
 <script lang="ts" setup>
+import { cn } from "~/lib/utils";
+
 const props = withDefaults(
   defineProps<{
     class?: string;
@@ -43,6 +51,7 @@ const props = withDefaults(
 <style scoped>
 .animate-marquee {
   animation: marquee var(--duration) linear infinite;
+  animation-direction: reverse;
 }
 
 .animate-marquee-vertical {
