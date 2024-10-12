@@ -66,7 +66,7 @@ function getInitial(idx: number) {
         scale: 0,
         opacity: 0,
       }
-    : null; // Only animate the newly added item
+    : undefined; // Only animate the newly added item
 }
 
 // Get enter animation (only the latest item animates in)
