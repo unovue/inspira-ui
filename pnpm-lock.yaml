@@ -17,6 +17,9 @@ importers:
       '@vueuse/motion':
         specifier: ^2.2.6
         version: 2.2.6(magicast@0.3.5)(rollup@4.24.0)(vue@3.5.12(typescript@5.6.3))
+      cobe:
+        specifier: ^0.6.3
+        version: 0.6.3
       highlight.js:
         specifier: ^11.10.0
         version: 11.10.0
@@ -35,6 +38,9 @@ importers:
       vue-router:
         specifier: ^4.4.5
         version: 4.4.5(vue@3.5.12(typescript@5.6.3))
+      vue-use-spring:
+        specifier: ^0.3.3
+        version: 0.3.3(vue@3.5.12(typescript@5.6.3))
     devDependencies:
       '@iconify-json/vscode-icons':
         specifier: ^1.2.2
@@ -1702,6 +1708,9 @@ packages:
     resolution: {integrity: sha512-QVb0dM5HvG+uaxitm8wONl7jltx8dqhfU33DcqtOZcLSVIKSDDLDi7+0LbAKiyI8hD9u42m2YxXSkMGWThaecQ==}
     engines: {iojs: '>= 1.0.0', node: '>= 0.12.0'}
 
+  cobe@0.6.3:
+    resolution: {integrity: sha512-WHr7X4o1ym94GZ96h7b1pNemZJacbOzd02dZtnVwuC4oWBaLg96PBmp2rIS1SAhUDhhC/QyS9WEqkpZIs/ZBTg==}
+
   color-convert@1.9.3:
     resolution: {integrity: sha512-QfAUtd+vFdAtFQcC8CCyYt1fYWxSqAiK2cSD6zDB8N3cpsEBAvRxp9zOGg6G/SHHJYAT88/az/IuDGALsNVbGg==}
 
@@ -3303,6 +3312,9 @@ packages:
   perfect-debounce@1.0.0:
     resolution: {integrity: sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==}
 
+  phenomenon@1.6.0:
+    resolution: {integrity: sha512-7h9/fjPD3qNlgggzm88cY58l9sudZ6Ey+UmZsizfhtawO6E3srZQXywaNm2lBwT72TbpHYRPy7ytIHeBUD/G0A==}
+
   picocolors@1.1.0:
     resolution: {integrity: sha512-TQ92mBOW0l3LeMeyLV6mzy/kWr8lkd/hp3mTg7wYK7zJhuBStmGMBG0BdeDZS/dZx1IukaX6Bk11zcln25o1Aw==}
 
@@ -4419,6 +4431,15 @@ packages:
     resolution: {integrity: sha512-4fKZygS8cH1yCyuabAXGUAsyi1b2/o/OKgu/RUb+znIYOxPRxdkytJEx+0wGcpBE1pX6vUgh5jwWOKRGvuA/7Q==}
     peerDependencies:
       vue: ^3.2.0
+
+  vue-use-spring@0.3.3:
+    resolution: {integrity: sha512-738mdx7XwDHrmP22T5SqKltKTRfvjHS0D/4p9XEuxgUE/gYDC/PqlxUTnRtG3i05oT1cwwU1e9ZNLsxDbJJVvw==}
+    peerDependencies:
+      '@vue/composition-api': ^1.4.0
+      vue: ^2.6.12 || ^3.0.0
+    peerDependenciesMeta:
+      '@vue/composition-api':
+        optional: true
 
   vue@3.5.12:
     resolution: {integrity: sha512-CLVZtXtn2ItBIi/zHZ0Sg1Xkb7+PU32bJJ8Bmy7ts3jxXTcbfsEfBivFYYWz1Hur+lalqGAh65Coin0r+HRUfg==}
@@ -6495,6 +6516,10 @@ snapshots:
   cluster-key-slot@1.1.2: {}
 
   co@4.6.0: {}
+
+  cobe@0.6.3:
+    dependencies:
+      phenomenon: 1.6.0
 
   color-convert@1.9.3:
     dependencies:
@@ -8609,6 +8634,8 @@ snapshots:
 
   perfect-debounce@1.0.0: {}
 
+  phenomenon@1.6.0: {}
+
   picocolors@1.1.0: {}
 
   picomatch@2.3.1: {}
@@ -9995,6 +10022,11 @@ snapshots:
     dependencies:
       '@vue/devtools-api': 6.6.4
       vue: 3.5.12(typescript@5.6.3)
+
+  vue-use-spring@0.3.3(vue@3.5.12(typescript@5.6.3)):
+    dependencies:
+      vue: 3.5.12(typescript@5.6.3)
+      vue-demi: 0.14.10(vue@3.5.12(typescript@5.6.3))
 
   vue@3.5.12(typescript@5.6.3):
     dependencies:
