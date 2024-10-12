@@ -66,7 +66,7 @@ function getInitial(idx: number) {
         scale: 0,
         opacity: 0,
       }
-    : null; // Only animate the newly added item
+    : undefined; // Only animate the newly added item
 }
 
 // Get enter animation (only the latest item animates in)
@@ -75,14 +75,14 @@ function getEnter(idx: number) {
     ? {
         scale: 1,
         opacity: 1,
-        originY: 0,
+        y: 0,
         transition: {
           type: "spring",
-          stiffness: 350,
+          stiffness: 250,
           damping: 40,
         },
       }
-    : null; // Only animate the newly added item
+    : undefined; // Only animate the newly added item
 }
 
 // Get leave animation (same for all)
@@ -90,6 +90,7 @@ function getLeave() {
   return {
     scale: 0,
     opacity: 0,
+    y: 0,
     transition: {
       type: "spring",
       stiffness: 350,
@@ -103,6 +104,6 @@ function getLeave() {
 <style scoped>
 /* This class is added by transition-group when items move */
 .move {
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-out;
 }
 </style>
