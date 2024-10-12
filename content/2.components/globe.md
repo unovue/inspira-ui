@@ -6,6 +6,30 @@ description: An interactive rotating globe component.
 ::ComponentLoader{label="Preview" componentName="GlobeDemo" type="examples" id="globe"}
 ::
 
+::alert
+**Note:** This component requires `cobe` and `vue-use-spring` as a dependency. Please install these using following commands.
+
+    ::code-group
+
+    ```bash [npm]
+    npm install cobe vue-use-spring
+    ```
+
+    ```bash [pnpm]
+    pnpm install cobe vue-use-spring
+    ```
+
+    ```bash [bun]
+    bun add cobe vue-use-spring
+    ```
+
+    ```bash [yarn]
+    yarn add cobe vue-use-spring
+    ```
+    ::
+
+::
+
 ## API
 
 | Prop Name   | Type          | Default | Description                                                                                                 |
