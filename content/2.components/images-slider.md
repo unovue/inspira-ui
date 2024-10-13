@@ -26,7 +26,8 @@ description: A full page slider with images that can be navigated with the keybo
 
 You can copy and paste the following code to create this component:
 
-CodeViewer{label="ImagesSlider.vue" language="vue" componentName="ImagesSlider" type="ui" id="images-slider"}
+::CodeViewer{label="ImagesSlider.vue" language="vue" componentName="ImagesSlider" type="ui" id="images-slider"}
+::
 
 ## Features
 
@@ -37,5 +38,5 @@ CodeViewer{label="ImagesSlider.vue" language="vue" componentName="ImagesSlider" 
 
 ## Credits
 
-- Component by [Craig Riley](https://github.com/craigrileyuk)
+- Component by [Craig Riley](https://github.com/craigrileyuk) for porting this component.
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/images-slider) for inspiring this component.
