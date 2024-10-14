@@ -10,6 +10,7 @@
     </div>
     <FeatureSection />
     <HomePageExamples />
+    <Testimonials />
   </div>
 </template>
 
