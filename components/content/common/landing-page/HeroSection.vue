@@ -10,10 +10,12 @@
       :staticity="10"
       refresh
     />
-    <Globe
-      class="z-[-2] max-w-[1000px]"
-      :config="{ mapBrightness: 2, width: 1000, height: 1000 }"
-    />
+    <ClientOnly>
+      <Globe
+        class="z-[-2] max-w-[1000px]"
+        :config="{ mapBrightness: 2, width: 1000, height: 1000 }"
+      />
+    </ClientOnly>
     <span
       class="fixed top-0 h-screen w-full z-[-1] dark:bg-black bg-white dark:opacity-50 opacity-10"
     ></span>
