@@ -26,7 +26,7 @@ import { useSpring } from "vue-use-spring";
 
 type GlobeProps = {
   class?: string;
-  config?: COBEOptions;
+  config?: Partial<COBEOptions>;
   mass?: number;
   tension?: number;
   friction?: number;
