@@ -104,6 +104,11 @@ export default defineAppConfig({
           target: "_blank",
         },
         {
+          icon: "lucide:x",
+          to: "https://x.com/rahulv_dev",
+          target: "_blank",
+        },
+        {
           icon: "lucide:bot",
           to: "https://discord.gg/Xbh5DwJRc9",
           target: "_blank",
