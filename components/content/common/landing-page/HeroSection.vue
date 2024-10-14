@@ -17,7 +17,7 @@
       />
     </ClientOnly>
     <span
-      class="fixed top-0 h-screen w-full z-[-1] dark:bg-black bg-white dark:opacity-50 opacity-10"
+      class="fixed top-0 h-screen w-full z-[-1] dark:bg-black bg-white dark:opacity-50 opacity-40"
     ></span>
     <NuxtLink
       to="/getting-started/installation"
