@@ -6,7 +6,7 @@
     }"
     :class="
       cn(
-        'relative z-0 h-44 w-60 shrink-0 rounded-xl border border-neutral-700 bg-neutral-800',
+        'relative z-0 h-44 w-60 shrink-0 rounded-xl border border-background/75 bg-background',
         $props.class
       )
     "
