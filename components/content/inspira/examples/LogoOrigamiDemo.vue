@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex h-72 flex-col items-center justify-center gap-12 bg-neutral-950 px-4 py-24 md:flex-row"
+    class="flex h-72 flex-col items-center justify-center gap-12 bg-background px-4 py-24 md:flex-row"
   >
     <LogoOrigami>
       <LogoOrigamiItem class="bg-orange-300 text-neutral-900">
