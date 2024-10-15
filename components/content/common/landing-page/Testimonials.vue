@@ -32,7 +32,7 @@
       <!-- Tilted Marquees -->
       <div class="absolute inset-0 overflow-hidden">
         <Marquee
-          :style="{ transform: 'translateY(-5rem) rotate(-16deg)' }"
+          :style="{ transform: 'translateY(-11.5rem) rotate(-16deg)' }"
           class="marquee"
           :pauseOnHover="false"
         >
@@ -47,7 +47,7 @@
         </Marquee>
 
         <Marquee
-          :style="{ transform: 'translateY(4rem) rotate(-16deg)' }"
+          :style="{ transform: 'translateY(1rem) rotate(-16deg)' }"
           reverse
           class="marquee"
           :pauseOnHover="false"
@@ -63,7 +63,7 @@
         </Marquee>
 
         <Marquee
-          :style="{ transform: 'translateY(13rem) rotate(-16deg)' }"
+          :style="{ transform: 'translateY(13.5rem) rotate(-16deg)' }"
           class="marquee"
           :pauseOnHover="false"
         >
@@ -78,7 +78,7 @@
         </Marquee>
 
         <Marquee
-          :style="{ transform: 'translateY(22rem) rotate(-16deg)' }"
+          :style="{ transform: 'translateY(26rem) rotate(-16deg)' }"
           reverse
           class="marquee"
           :pauseOnHover="false"
@@ -108,40 +108,46 @@ const isDark = computed(() => useColorMode().value == "dark");
 // Reviews data
 const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
+    name: "kiri",
+    username: "@kiruba_selvi6",
+    body: "Oooohhh wowww...!!",
+    img: "https://inspira-ui.com/images/x-logo.svg",
   },
   {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
+    name: "Sébastien Chopin",
+    username: "@Atinux",
+    body: "You ship 🚢",
+    img: "https://inspira-ui.com/images/x-logo.svg",
   },
   {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
+    name: "Mattia Guariglia",
+    username: "@matt_guariglia",
+    body: "Omg 🥰",
+    img: "https://inspira-ui.com/images/x-logo.svg",
   },
   {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
+    name: "Nelson🐐",
+    username: "@Mathiasokafor3",
+    body: "Thank you so much for all you do for the Vue/nuxt eco system.",
+    img: "https://inspira-ui.com/images/x-logo.svg",
   },
   {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
+    name: "Premdas Vm",
+    username: "@premdasvm",
+    body: "Man, this is soo good! I've been jealous of React because their eco-system had Magic UI and other ones like this. Inspira UI is 🔥🙌🏼",
+    img: "https://inspira-ui.com/images/x-logo.svg",
   },
   {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
+    name: "Pierre",
+    username: "@PierreHenryBap",
+    body: "It looks really awesome! Just noticed it a couple of days ago and I can’t wait to try it out.",
+    img: "https://inspira-ui.com/images/x-logo.svg",
+  },
+  {
+    name: "Waldemar Enns",
+    username: "@WaldemarEnns",
+    body: "Awesome! ⭐️ed it immediately",
+    img: "https://inspira-ui.com/images/x-logo.svg",
   },
 ];
 
