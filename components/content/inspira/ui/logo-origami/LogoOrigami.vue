@@ -106,7 +106,7 @@
     <!-- Center divider line -->
     <hr
       style="transform: translateZ(1px)"
-      class="absolute left-0 right-0 top-1/2 z-[999999999] -translate-y-1/2 border-t-2 border-neutral-800"
+      class="absolute left-4 right-[15px] top-1/2 z-[999999999] -translate-y-1/2 border-t-2 border-neutral-800"
     />
   </div>
 </template>
