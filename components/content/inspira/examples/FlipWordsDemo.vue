@@ -3,14 +3,16 @@
     <div
       className="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400"
     >
-      Build
+      Vuejs: The
       <FlipWords
-        :words="['Hello World', 'Nuxt 3', 'Vue.js']"
+        :words="['Progressive', 'Approachable', 'Performant', 'Versatile']"
         :duration="3000"
-        className="text-2xl font-bold"
+        class="text-4xl !text-primary"
       />
-      <br />
-      websites with Aceternity UI
+      <div>
+        JavaScript Framework for building <br />
+       Modern Web Apps
+      </div>
     </div>
   </div>
 </template>

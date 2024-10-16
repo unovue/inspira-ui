@@ -1,141 +1,159 @@
 <script setup lang="ts">
-import { ref, onMounted, watch } from 'vue'
-
 interface Props {
-  words: string[]
-  duration?: number
-  class?: string
+  words: string[];
+  duration?: number;
+  class?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  duration: 3000
-})
+  duration: 3000,
+  class: "",
+});
 
-const currentWord = ref(props.words[0])
-const isAnimating = ref(false)
+const currentWord = ref(props.words[0]);
+const isVisible = ref(true);
+const timeoutId = ref<number | null>(null);
 
 const startAnimation = () => {
-  const currentIndex = props.words.indexOf(currentWord.value)
-  const nextWord = props.words[currentIndex + 1] || props.words[0]
-  currentWord.value = nextWord
-  isAnimating.value = true
-}
+  isVisible.value = false;
 
-watch(isAnimating, (newValue) => {
-  if (!newValue) {
-    setTimeout(() => {
-      startAnimation()
-    }, props.duration)
-  }
-})
+  setTimeout(() => {
+    const currentIndex = props.words.indexOf(currentWord.value);
+    const nextWord = props.words[currentIndex + 1] || props.words[0];
+    currentWord.value = nextWord;
+    isVisible.value = true;
+  }, 600);
+};
+
+const splitWords = computed(() => {
+  return currentWord.value.split(" ").map((word) => ({
+    word,
+    letters: word.split(""),
+  }));
+});
+
+const startTimeout = () => {
+  timeoutId.value = window.setTimeout(() => {
+    startAnimation();
+  }, props.duration);
+};
 
 onMounted(() => {
-  if (!isAnimating.value) {
-    setTimeout(() => {
-      startAnimation()
-    }, props.duration)
-  }
-})
+  startTimeout();
+});
 
-// Utility function to merge classes (simplified version of cn)
-const mergeClasses = (...classes: (string | undefined)[]) => {
-  return classes.filter(Boolean).join(' ')
-}
+onBeforeUnmount(() => {
+  if (timeoutId.value) {
+    clearTimeout(timeoutId.value);
+  }
+});
+
+watch(isVisible, (newValue) => {
+  if (newValue) {
+    startTimeout();
+  }
+});
 </script>
 
 <template>
-  <TransitionGroup
-    name="flip-words"
-    tag="div"
-    @after-leave="isAnimating = false"
-  >
-    <div
-      :key="currentWord"
-      :class="mergeClasses(
-        'z-10 inline-block relative text-left text-neutral-900 dark:text-neutral-100 px-2',
-        props.class
-      )"
+  <div class="relative inline-block px-2">
+    <Transition
+      @after-enter="$emit('animationComplete')"
+      @after-leave="$emit('animationComplete')"
     >
-      <TransitionGroup
-        name="word"
-        tag="span"
-        class="inline-block whitespace-nowrap"
+      <div
+        v-show="isVisible"
+        :class="[
+          'relative inline-block text-left text-neutral-900 dark:text-neutral-100 z-10',
+          props.class,
+        ]"
       >
-        <template v-for="(word, wordIndex) in currentWord.split(' ')" :key="word + wordIndex">
-          <TransitionGroup
-            :name="'letter-' + wordIndex"
-            tag="span"
-            class="inline-block"
+        <template
+          v-for="(wordObj, wordIndex) in splitWords"
+          :key="wordObj.word + wordIndex"
+        >
+          <span
+            class="inline-block whitespace-nowrap opacity-0"
+            :style="{
+              animation: `fadeInWord 0.3s ease forwards`,
+              animationDelay: `${wordIndex * 0.3}s`,
+            }"
           >
             <span
-              v-for="(letter, letterIndex) in word.split('')"
-              :key="word + letterIndex"
-              class="inline-block"
+              v-for="(letter, letterIndex) in wordObj.letters"
+              :key="wordObj.word + letterIndex"
+              class="inline-block opacity-0"
               :style="{
-                transition: `all 0.2s ease-out ${wordIndex * 0.3 + letterIndex * 0.05}s`,
+                animation: `fadeInLetter 0.2s ease forwards`,
+                animationDelay: `${wordIndex * 0.3 + letterIndex * 0.05}s`,
               }"
             >
               {{ letter }}
             </span>
-          </TransitionGroup>
-          <span class="inline-block">&nbsp;</span>
+            <span class="inline-block">&nbsp;</span>
+          </span>
         </template>
-      </TransitionGroup>
-    </div>
-  </TransitionGroup>
+      </div>
+    </Transition>
+  </div>
 </template>
 
-<style scoped>
-.flip-words-enter-active,
-.flip-words-leave-active {
-  transition: all 0.5s ease;
+<style>
+@keyframes fadeInWord {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }
 
-.flip-words-enter-from {
-  opacity: 0;
-  transform: translateY(10px);
+@keyframes fadeInLetter {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
 }
 
-.flip-words-leave-to {
-  opacity: 0;
-  transform: translateY(-40px) translateX(40px) scale(2);
-  filter: blur(8px);
-  position: absolute;
+.v-enter-active {
+  animation: enterWord 0.6s ease-in-out forwards;
 }
 
-.word-enter-active,
-.word-leave-active {
-  transition: all 0.3s ease;
+.v-leave-active {
+  animation: leaveWord 0.6s ease-in-out forwards;
 }
 
-.word-enter-from {
-  opacity: 0;
-  transform: translateY(10px);
-  filter: blur(8px);
+@keyframes enterWord {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.word-leave-to {
-  opacity: 0;
-  filter: blur(8px);
-}
-
-[class^="letter-"] {
-  display: inline-block;
-}
-
-[class^="letter-"]-enter-active,
-[class^="letter-"]-leave-active {
-  transition: all 0.2s ease;
-}
-
-[class^="letter-"]-enter-from {
-  opacity: 0;
-  transform: translateY(10px);
-  filter: blur(8px);
-}
-
-[class^="letter-"]-leave-to {
-  opacity: 0;
-  filter: blur(8px);
+@keyframes leaveWord {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    filter: blur(8px);
+  }
 }
 </style>
