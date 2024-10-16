@@ -3,15 +3,15 @@ import { ref, computed } from "vue";
 
 interface Props {
   imageUrl: string;
-  childrenClassName?: string;
-  imageClassName?: string;
-  className?: string;
+  childrenClass?: string;
+  imageClass?: string;
+  class?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  childrenClassName: undefined,
-  imageClassName: undefined,
-  className: undefined,
+  childrenClass: undefined,
+  imageClass: undefined,
+  class: undefined,
 });
 
 const divRef = ref<HTMLDivElement | null>(null);
@@ -58,21 +58,21 @@ const cn = (...classes: (string | undefined)[]) =>
 const containerClass = computed(() =>
   cn(
     "group/card relative h-60 w-60 overflow-hidden rounded-lg bg-transparent md:h-96 md:w-96",
-    props.className
+    props.class
   )
 );
 
 const imageClass = computed(() =>
   cn(
     "h-full w-full scale-150 object-cover transition-transform duration-300",
-    props.imageClassName
+    props.imageClass
   )
 );
 
 const childrenClass = computed(() =>
   cn(
     "absolute bottom-4 left-4 z-40 text-white transition-opacity duration-300",
-    props.childrenClassName
+    props.childrenClass
   )
 );
 
