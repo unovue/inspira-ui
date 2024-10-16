@@ -1,5 +1,5 @@
 ---
-title: Flip Word
+title: Flip Words
 description: A component that flips through a list of words.
 ---
 
