@@ -52,7 +52,7 @@ export default {
       // => @media (min-width: 640px) { ... }
     },
     fontFamily: {
-      heading: ["Manrope"],
+      heading: ["Bricolage Grotesque", "Manrope"],
       sans: ["Manrope"],
       mono: ["monospace"],
     },
