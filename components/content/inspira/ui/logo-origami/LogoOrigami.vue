@@ -35,7 +35,7 @@
       <component :is="children[activeIndex % children.length]" />
     </div>
 
-    <TransitionGroup mode="'out-in'">
+    <TransitionGroup>
       <!-- Upper part of the flip -->
       <div
         :key="activeIndex"
