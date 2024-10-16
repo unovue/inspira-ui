@@ -18,6 +18,7 @@
     "nuxt": "^3.13.2",
     "nuxt-gtag": "^3.0.1",
     "shadcn-docs-nuxt": "^0.6.2",
+    "three": "^0.169.0",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5",
     "vue-use-spring": "^0.3.3"
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@iconify-json/vscode-icons": "^1.2.2",
     "@inspira-ui/plugins": "0.0.1",
+    "@types/three": "^0.169.0",
     "clsx": "^2.1.1",
     "tailwind-merge": "^2.5.4"
   }
