@@ -23,4 +23,6 @@ You can copy and paste the following code to create these components:
 
 ## Credits
 
+- Credits to [M Atif](https://github.com/atif0075) for porting this component.
+
 - Ported from [Aceternity UI's Text Generate Effect](https://ui.aceternity.com/components/text-generate-effect).
