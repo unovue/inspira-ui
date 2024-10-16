@@ -9,9 +9,9 @@ description: A cool text effect that fades in text on page load, one by one.
 ## API
 
 | Prop Name  | Type      | Default  | Description                                               |
-| ---------- | --------- | -------- | --------------------------------------------------------- | --- |
+| ---------- | --------- | -------- | --------------------------------------------------------- |
 | `words`    | `string`  | Required | The text to be displayed with the generating effect.      |
-| `duration` | `number`  | `0.7`    | The duration of the text generation animation in seconds. |     |
+| `duration` | `number`  | `0.7`    | The duration of the text generation animation in seconds. |
 | `filter`   | `boolean` | `true`   | The blur of the text.                                     |
 
 ## Component Code
