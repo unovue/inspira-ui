@@ -6,13 +6,6 @@ description: Mousemove effect to reveal text content at the bottom of the card.
 ::ComponentLoader{label="Preview" componentName="TextRevealDemo" type="examples"}  
 ::
 
-::alert{type="info"}
-**Note:** This component uses `@vueuse/motion` npm package as a dependency.
-
-See the [installation guide](https://motion.vueuse.org/getting-started/introduction) for more information on how to install the package.
-
-::
-
 ## API
 
 | Prop Name        | Type     | Description                                             |
