@@ -8,15 +8,17 @@ description: Mousemove effect to reveal text content at the bottom of the card.
 
 ## API
 
-| Prop Name        | Type     | Description                                             |
-| ---------------- | -------- | ------------------------------------------------------- |
-| title            | `String` | Title of the card.                                      |
-| description      | `String` | Description of the card.                                |
-| text             | `String` | Text to be revealed.                                    |
-| revealText       | `String` | Text to be revealed when hovered over the card.         |
-| class            | `String` | Additional classes to be added to the card.             |
-| titleClass       | `String` | Additional classes to be added to the card title.       |
-| descriptionClass | `String` | Additional classes to be added to the card description. |
+| Prop Name  | Type     | Description                                                      |
+| ---------- | -------- | ---------------------------------------------------------------- |
+| class      | `String` | Additional classes to be added to the card.                      |
+| starsCount | `Number` | Control the number of stars that are generated                   |
+| starsClass | `String` | Additional classes to be added to the stars floating on content. |
+
+| Slot Name  | Description                                             |
+| ---------- | ------------------------------------------------------- |
+| header     | `String`                                                |
+| text       | Display default text when the card is not hovered over. |
+| revealText | Text to be revealed when hovered over the card.         |
 
 ## Component Code
 
