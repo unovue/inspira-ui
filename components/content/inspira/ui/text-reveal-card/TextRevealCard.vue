@@ -12,16 +12,7 @@
       props.class,
     ]"
   >
-    <h2 v-if="title" :class="['text-white text-lg mb-2', props.titleClass]">
-      {{ title }}
-    </h2>
-    <p
-      v-if="description"
-      :class="['text-[#a9a9a9] text-sm', props.descriptionClass]"
-    >
-      {{ description }}
-    </p>
-
+    <slot name="header" />
     <div class="h-40 relative flex items-center overflow-hidden">
       <div
         :style="{
@@ -32,14 +23,7 @@
         }"
         class="absolute bg-[#1d1c20] z-20 will-change-transform"
       >
-        <p
-          :style="{
-            textShadow: '4px 4px 15px rgba(0,0,0,0.5)',
-          }"
-          class="text-sm sm:text-3xl md:text-[3rem] py-4 sm:py-6 md:py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
-        >
-          {{ revealText }}
-        </p>
+        <slot name="text" />
       </div>
 
       <div
@@ -55,27 +39,24 @@
       <div
         class="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]"
       >
-        <p
-          class="text-sm sm:text-3xl md:text-[3rem] py-4 sm:py-6 md:py-10 font-bold bg-clip-text text-transparent bg-[#323238]"
-        >
-          {{ text }}
-        </p>
-        <TextRevealStars />
+        <slot name="revealText" />
+
+        <TextRevealStars :starsCount :starsClass />
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{
-  text: string;
-  revealText: string;
+interface Props {
   class?: string;
-  title?: string;
-  description?: string;
-  titleClass?: string;
-  descriptionClass?: string;
-}>();
+  starsCount?: number;
+  starsClass?: string;
+}
+const props = withDefaults(defineProps<Props>(), {
+  class: "",
+  starsCount: 130,
+});
 
 const cardRef = ref<HTMLElement | null>(null);
 const widthPercentage = ref(0);
