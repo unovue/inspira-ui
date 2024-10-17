@@ -4,7 +4,7 @@
             <span
                 v-for="(letter, i) in displayText"
                 :key="i"
-                :class="[letter === ' ' ? 'w-3' : '', className]"
+                :class="cn(letter === ' ' ? 'w-3' : '', $props.class)"
                 class="font-mono inline-block"
                 v-motion
                 :initial="{ opacity: 0, y: -10 }"
@@ -18,6 +18,10 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed, watch } from 'vue';
+import { useIntervalFn } from '@vueuse/core';
+import { cn } from '~/lib/utils';
+
 const props = defineProps({
     text: {
         type: String,
@@ -27,7 +31,7 @@ const props = defineProps({
         type: Number,
         default: 800,
     },
-    className: {
+    class: {
         type: String,
         default: '',
     },
