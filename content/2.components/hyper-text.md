@@ -8,12 +8,12 @@ description: A hyper changing text animation as you hover..
 
 ## API
 
-| Prop Name       | Type      | Default  | Description                                       |
-| --------------- | --------- | -------- | ------------------------------------------------- |
-| `class`         | `string`  | `""`     | Additional CSS classes to apply to the component. |
-| `text`          | `string`  | Required | Text to animate                                   |
-| `duration`      | `number`  | `80`    | The duration for which the animation runs.        |
-| `animateOnLoad` | `boolean` | `true`   | Play animation on load                            |
+| Prop Name       | Type      | Default  | Description                                                    |
+| --------------- | --------- | -------- | -------------------------------------------------------------- |
+| `class`         | `string`  | `""`     | Additional CSS classes to apply to the component.              |
+| `text`          | `string`  | Required | Text to animate                                                |
+| `duration`      | `number`  | `800`    | The total duration (in milliseconds) for the entire animation. |
+| `animateOnLoad` | `boolean` | `true`   | Play animation on load                                         |
 
 ## Component Code
 
@@ -25,3 +25,4 @@ You can copy and paste the following code to create this component:
 ## Credits
 
 -   Inspired by [Magic UI's Hyper Text](https://magicui.design/docs/components/hyper-text) component.
+-   Credits to [Prem](https://github.com/premdasvm) for porting this component.
