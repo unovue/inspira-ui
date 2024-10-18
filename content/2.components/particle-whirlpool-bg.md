@@ -1,5 +1,5 @@
 ---
-title: Whirlpool Particle Background
+title: Particle Whirlpool Background
 description: An animated background with swirling particles.
 ---
 
