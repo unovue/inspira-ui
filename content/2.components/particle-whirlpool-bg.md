@@ -1,0 +1,47 @@
+---
+title: Whirlpool Particle Background
+description: An animated background with swirling particles.
+---
+
+::ComponentLoader{label="Preview" componentName="ParticleWhirlpoolBgDemo" type="examples" id="backgrounds"}
+::
+
+## Examples
+
+Without blur and overlay
+
+::ComponentLoader{label="Preview" componentName="ParticleWhirlpoolBgDemo2" type="examples" id="backgrounds"}
+::
+
+## API
+
+| Prop Name       | Type     | Default | Description                                                     |
+| --------------- | -------- | ------- | --------------------------------------------------------------- |
+| `class`         | `string` | `""`    | Additional CSS classes for custom styling.                      |
+| `blur`          | `number` | `0`     | Amount of blur to apply to the background, specified in pixels. |
+| `particleCount` | `number` | `2000`  | Number of particles in the whirlpool animation.                 |
+
+## Component Code
+
+You can copy and paste the following code to create this component:
+
+::CodeViewer{filename="ParticleWhirlpoolBg.vue" language="vue" componentName="ParticleWhirlpoolBg" type="ui" id="bg-particle-whirlpool"}
+::
+
+## Features
+
+- **Interactive Whirlpool Animation**: Renders a captivating whirlpool effect with particles that respond to mouse and touch interactions.
+
+- **Customizable Particle Count**: Adjust the `particleCount` prop to control the number of particles in the animation.
+
+- **Dynamic Blur Effect**: Use the `blur` prop to apply a blur effect over the background, enhancing the visual depth.
+
+- **Slot Support**: Overlay additional content on top of the animation using the default slot.
+
+- **Responsive Design**: The component adjusts to fit the width and height of its parent container, ensuring compatibility across different screen sizes.
+
+## Credits
+
+- Built with the [Three.js](https://threejs.org/) library for 3D rendering and animations.
+
+- Inspired by [TroisJs](https://troisjs.github.io/examples/demos/3.html)
