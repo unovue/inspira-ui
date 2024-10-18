@@ -13,6 +13,36 @@ Without blur and overlay
 ::ComponentLoader{label="Preview" componentName="ParticleWhirlpoolBgDemo2" type="examples" id="backgrounds"}
 ::
 
+::alert{type="info"}
+**Note:** This component uses Three.js & requires `three` & `postprocessing` npm package as a dependency.
+
+Please install Three.js using following commands.
+
+    ::code-group
+
+    ```bash [npm]
+    npm install three postprocessing
+    npm install -D @types/three
+    ```
+
+    ```bash [pnpm]
+    pnpm install three postprocessing
+    pnpm install -D @types/three
+    ```
+
+    ```bash [bun]
+    bun add three postprocessing
+    bun add -d @types/three
+    ```
+
+    ```bash [yarn]
+    yarn add three postprocessing
+    yarn add --dev @types/three
+    ```
+    ::
+
+::
+
 ## API
 
 | Prop Name       | Type     | Default | Description                                                     |
