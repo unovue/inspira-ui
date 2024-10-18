@@ -7,7 +7,9 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check"
   },
   "dependencies": {
     "@nuxt/image": "^1.8.1",
@@ -31,6 +33,7 @@
     "@types/canvas-confetti": "^1.6.4",
     "@types/three": "^0.169.0",
     "clsx": "^2.1.1",
+    "prettier": "^3.3.3",
     "tailwind-merge": "^2.5.4"
   }
 }
