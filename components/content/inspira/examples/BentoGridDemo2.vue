@@ -2,7 +2,7 @@
   <BentoGrid
     class="lg:grid-rows-3 grid w-full auto-rows-[22rem] grid-cols-3 gap-4"
   >
-    <BentoCard
+    <BentoGridCard
       v-for="(feature, index) in features"
       :key="index"
       v-bind="feature"
@@ -11,12 +11,12 @@
       <template #background>
         <img class="absolute -right-20 -top-20 opacity-60" />
       </template>
-    </BentoCard>
+    </BentoGridCard>
   </BentoGrid>
 </template>
 
 <script lang="ts" setup>
-import BentoCard from "../ui/bento-grid/BentoCard.vue";
+import BentoGridCard from "../ui/bento-grid/BentoGridCard.vue";
 
 const features = [
   {

@@ -3,7 +3,7 @@
     :class="
       cn(
         'grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-3 gap-4 max-w-7xl mx-auto ',
-        $props.class
+        props.class
       )
     "
   >
@@ -12,9 +12,9 @@
 </template>
 
 <script lang="ts" setup>
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 
-defineProps({
-  class: String,
-});
+const props = defineProps<{
+	class: string;
+}>();
 </script>
