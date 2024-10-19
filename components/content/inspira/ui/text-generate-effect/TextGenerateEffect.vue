@@ -20,20 +20,16 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  words: {
-    type: String,
-    required: true,
-  },
-  filter: {
-    type: Boolean,
-    default: true,
-  },
-  duration: {
-    type: Number,
-    default: 0.7,
-  },
-});
+import { computed, onMounted, ref } from 'vue';
+
+const props = withDefaults(
+	defineProps<{
+		words: string;
+		filter?: boolean;
+		duration?: number;
+	}>(),
+	{ duration: 0.7, filter: true },
+);
 
 const scope = ref(null);
 const wordsArray = computed(() => props.words.split(" "));
