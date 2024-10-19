@@ -51,7 +51,7 @@ import { cn } from "@/lib/utils";
 const props = defineProps<{
 	name: string;
 	class: string;
-	icon: string;
+	icon?: string;
 	description: string;
 	href: string;
 	cta: string;
