@@ -36,7 +36,7 @@ Inspira UI was created to fill a gap in the Vue community by providing a set of 
 
 - **Free and Open Source**: Completely [open source](https://github.com/unovue/inspira-ui) under the MIT license.
 - **Highly Configurable**: Tailor components to your specific design needs. Check out our [configuration guide](/api/configuration).
-- **Diverse Component Range**: A broad selection of [components](/components/all), inspired by Aceternity UI, Magic UI, and custom contributions, to help you build anything you imagine.
+- **Diverse Component Range**: A broad selection of [components](/components), inspired by Aceternity UI, Magic UI, and custom contributions, to help you build anything you imagine.
 - **Mobile Optimized**: Designed to look great on all devices.
 - **Nuxt Compatibility**: Fully compatible with [Nuxt](https://nuxt.com).
 

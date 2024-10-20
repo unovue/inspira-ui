@@ -1,7 +1,7 @@
 ---
 title: Component Index
 description: List of all the components provided by Inspira UI.
-icon: "lucide:list"
+navigation: false
 ---
 
 ## All components

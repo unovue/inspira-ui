@@ -70,7 +70,7 @@ Understanding the project structure is crucial for effective contribution:
 - **Documentation**:
   - Documentation files are located in the `content/2.components/` directory.
   - After adding a component, write its documentation in this directory.
-  - Update the `0.all.md` file in `content/2.components/` to include your new component in the navigation.
+  - Update the `index.md` file in `content/2.components/` to include your new component in the navigation.
 
 ## Style Guidelines
 
@@ -133,7 +133,7 @@ Proper documentation is crucial for users to understand and effectively use the 
 
 3. **Update Navigation**
 
-   - Add an entry for your new component in the `0.all.md` file located in `content/2.components/` to include it in the documentation navigation.
+   - Add an entry for your new component in the `index.md` file located in `content/2.components/` to include it in the documentation navigation.
 
 4. **Ensure Compatibility**
 
@@ -359,7 +359,7 @@ In this example, the `id` used in `ComponentLoader` and all `CodeViewerTab` comp
 - **IDs**: In `CodeViewer`, `CodeViewerTab`, and `ComponentLoader`, the `id` parameter should be set to the **folder name** where the component is stored in `components/content/inspira/ui/<component-folder-name>/` and `components/content/inspira/examples/<component-folder-name>/`. This helps in correctly linking the code and examples in the documentation.
 - **Demo Components**: For each component, create a corresponding `Demo` component used in the `ComponentLoader` for previews, and place it in `components/content/inspira/examples/<component-folder-name>/`.
 - **Localization**: If your component supports multiple languages, include details in the documentation.
-- **Updating Navigation**: Remember to add your component to the `0.all.md` file in `content/2.components/` to include it in the documentation navigation.
+- **Updating Navigation**: Remember to add your component to the `index.md` file in `content/2.components/` to include it in the documentation navigation.
 
 ## License
 

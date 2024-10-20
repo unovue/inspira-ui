@@ -40,7 +40,7 @@
     </span>
 
     <div class="flex w-full items-center justify-center space-x-4 py-4 md:pb-10 mt-4">
-      <NuxtLink to="/components/all">
+      <NuxtLink to="/components">
         <UiButton> All Components </UiButton>
       </NuxtLink>
       <NuxtLink to="https://github.com/unovue/inspira-ui" target="_blank">

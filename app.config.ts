@@ -34,7 +34,7 @@ export default defineAppConfig({
             },
             {
               title: "Components",
-              to: "/components/all",
+              to: "/components",
               description: "Explore all available components and their usage.",
               target: "_self",
             },
