@@ -7,7 +7,7 @@
       $props.class,
     ]"
   >
-    <div class="relative z-10">
+    <div :class="cn('relative z-10', props.slotClass)">
       <slot></slot>
     </div>
     <div
@@ -22,12 +22,14 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
+import { cn } from "~/lib/utils";
 
 const props = defineProps({
   gradientSize: { type: Number, default: 200 },
   gradientColor: { type: String, default: "#262626" },
   gradientOpacity: { type: Number, default: 0.8 },
   class: { type: String, default: "" },
+  slotClass: String,
 });
 
 const mouseX = ref(-props.gradientSize * 10);
