@@ -17,7 +17,7 @@ description: A cool grid layout with different child component.
 | `icon`        | Component to show as icon.        |
 | `header`      | Component to show as header.      |
 
-#### `BentoCard`
+#### `BentoGridCard`
 
 | Slot Name    | Description                      |
 | ------------ | -------------------------------- |
@@ -48,7 +48,7 @@ You can copy and paste the following code to create these components:
 ::CodeViewerTab{label="BentoGridItem.vue" language="vue" componentName="BentoGridItem" type="ui" id="bento-grid"}
 ::
 
-::CodeViewerTab{label="BentoCard.vue" language="vue" componentName="BentoCard" type="ui" id="bento-grid"}
+::CodeViewerTab{label="BentoGridCard.vue" language="vue" componentName="BentoGridCard" type="ui" id="bento-grid"}
 ::
 ::
 
