@@ -12,10 +12,7 @@
         <img :src="currentImage" :class="props.imageClass" />
       </div>
     </Transition>
-    <div
-      v-if="hideOverlay !== true"
-      :class="cn('absolute inset-0', props.overlayClass)"
-    >
+    <div v-if="hideOverlay !== true" :class="cn('absolute inset-0', props.overlayClass)">
       <Transition
         appear
         enter-active-class="transition-all duration-300 delay-300 ease-in-out"
@@ -106,7 +103,7 @@ const loadImages = () => {
         image.src = imageSrc;
         image.onload = () => resolve(imageSrc);
         image.onerror = () => reject(imageSrc);
-      })
+      }),
   );
   Promise.all(promises)
     .then((resolvedImages) => {
@@ -159,7 +156,7 @@ onKeyStroke(
   },
   {
     target: sliderRef,
-  }
+  },
 );
 
 const { direction: swipingDirection, isSwiping } = useSwipe(sliderRef, {

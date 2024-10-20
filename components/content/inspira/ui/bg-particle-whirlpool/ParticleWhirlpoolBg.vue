@@ -1,8 +1,5 @@
 <template>
-  <div
-    ref="whirlpoolCanvasContainerRef"
-    :class="cn('relative w-full h-full', $props.class)"
-  >
+  <div ref="whirlpoolCanvasContainerRef" :class="cn('relative w-full h-full', $props.class)">
     <canvas ref="whirlpoolCanvasRef" class="w-full h-full"></canvas>
     <div
       :style="{
@@ -155,12 +152,7 @@ function setupScene() {
   effectComposer.setSize(width, height);
   effectComposer.addPass(new RenderPass(scene, camera));
 
-  const unrealBloomPass = new UnrealBloomPass(
-    new Vector2(width, height),
-    1,
-    0,
-    0
-  );
+  const unrealBloomPass = new UnrealBloomPass(new Vector2(width, height), 1, 0, 0);
 
   effectComposer.addPass(unrealBloomPass);
 }
@@ -194,8 +186,7 @@ function animate() {
   light.position.copy(target);
 
   for (let i = 0; i < props.particleCount; i++) {
-    const { position, scale, scaleZ, velocity, attraction, vLimit } =
-      instances[i];
+    const { position, scale, scaleZ, velocity, attraction, vLimit } = instances[i];
 
     dummyV.copy(target).sub(position).normalize().multiplyScalar(attraction);
 
@@ -218,14 +209,8 @@ onMounted(() => {
   init();
   animate();
 
-  whirlpoolCanvasContainerRef.value?.addEventListener(
-    "mousemove",
-    onPointerMove
-  );
-  whirlpoolCanvasContainerRef.value?.addEventListener(
-    "touchmove",
-    onPointerMove
-  );
+  whirlpoolCanvasContainerRef.value?.addEventListener("mousemove", onPointerMove);
+  whirlpoolCanvasContainerRef.value?.addEventListener("touchmove", onPointerMove);
   window.addEventListener("resize", onWindowResize);
 });
 
@@ -268,8 +253,7 @@ function onPointerMove(event: MouseEvent | TouchEvent) {
 }
 
 function onWindowResize() {
-  if (!whirlpoolCanvasRef.value || !renderer || !camera || !effectComposer)
-    return;
+  if (!whirlpoolCanvasRef.value || !renderer || !camera || !effectComposer) return;
 
   const width = whirlpoolCanvasContainerRef.value!.clientWidth;
   const height = whirlpoolCanvasContainerRef.value!.clientHeight;

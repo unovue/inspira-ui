@@ -18,12 +18,8 @@
       <div
         class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4 mt-20"
       >
-        <h3 class="text-4xl sm:text-5xl font-bold mb-2">
-          What are you waiting for?
-        </h3>
-        <p class="text-base sm:text-lg m-4">
-          Get started and start building awesome UI 😄
-        </p>
+        <h3 class="text-4xl sm:text-5xl font-bold mb-2">What are you waiting for?</h3>
+        <p class="text-base sm:text-lg m-4">Get started and start building awesome UI 😄</p>
         <NuxtLink to="getting-started/installation">
           <UiButton variant="default"> Get Started → </UiButton>
         </NuxtLink>

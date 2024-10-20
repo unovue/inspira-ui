@@ -7,12 +7,7 @@
       :initial="generatePosition()"
       :enter="generateEnterAnimation()"
       :duration="randomDuration"
-      :class="
-        cn(
-          'inline-block absolute w-0.5 h-0.5 bg-white rounded-full z-[1]',
-          starsClass
-        )
-      "
+      :class="cn('inline-block absolute w-0.5 h-0.5 bg-white rounded-full z-[1]', starsClass)"
     />
   </div>
 </template>

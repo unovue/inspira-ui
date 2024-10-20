@@ -13,9 +13,7 @@ type ConfettiButtonProps = {
 };
 
 const props = defineProps<ConfettiButtonProps>();
-const confettiContext = inject<{ fire: (opts?: ConfettiOptions) => void }>(
-  "ConfettiContext"
-);
+const confettiContext = inject<{ fire: (opts?: ConfettiOptions) => void }>("ConfettiContext");
 
 // Handle click event
 const handleClick = (event: MouseEvent) => {

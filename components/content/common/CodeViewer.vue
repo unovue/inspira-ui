@@ -49,10 +49,7 @@ const rawComponents = import.meta.glob("../inspira/**/*.vue", {
 
 // Compute the component path based on props
 const componentPath = computed(
-  () =>
-    `../inspira/${props.type}/${props.id ? props.id + "/" : ""}${
-      props.componentName
-    }.vue`
+  () => `../inspira/${props.type}/${props.id ? props.id + "/" : ""}${props.componentName}.vue`,
 );
 
 // Load and process the component code on mount

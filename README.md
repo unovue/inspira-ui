@@ -53,7 +53,7 @@ A special thanks to:
 - [shadcn-vue](https://www.shadcn-vue.com) for the Vue port of shadcn-ui and contributions to some components.
 - [shadcn-docs-nuxt](https://github.com/ZTL-UwU/shadcn-docs-nuxt) for the beautifully crafted Nuxt documentation site.
 
-##  Author
+## Author
 
 Hi, I'm [Rahul Vashishtha](https://rahulv.dev). I started Inspira UI to bring a similar experience to the Vue ecosystem, inspired by Aceternity UI, Magic UI, and community contributions. I'm continuously working on it to make it better. Feel free to check out my work on [GitHub](https://github.com/rahul-vashishtha) and join me on this journey [here](https://github.com/unovue/inspira-ui)!
 
@@ -64,6 +64,7 @@ We welcome contributions! If you want to suggest features, report bugs, or help 
 You can also follow this [Contribution Guide](https://inspira-ui.com/getting-started/contribution).
 
 ## Sponsorship
-You can also support the development of the project by sponsoring the developer. 
+
+You can also support the development of the project by sponsoring the developer.
 
 Support and sponsor the maintainer here: [Support Inspira UI](https://github.com/sponsors/rahul-vashishtha)

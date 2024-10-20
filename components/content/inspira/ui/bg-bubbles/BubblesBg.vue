@@ -41,8 +41,7 @@ let camera: PerspectiveCamera;
 let clock: Clock;
 const spheres: Mesh[] = [];
 
-const rgb = (r: number, g: number, b: number) =>
-  new Color(r / 255, g / 255, b / 255);
+const rgb = (r: number, g: number, b: number) => new Color(r / 255, g / 255, b / 255);
 
 const BG_COLOR_BOTTOM_BLUISH = rgb(170, 215, 217);
 const BG_COLOR_TOP_BLUISH = rgb(57, 167, 255);
@@ -64,9 +63,7 @@ const rand = seededRandom(RAND_SEED);
 const randRange = (n = 1) => rand() * n;
 const { PI, cos, sin } = Math;
 const PI2 = PI * 2;
-const sizes = new Array(SPHERE_COUNT)
-  .fill(0)
-  .map(() => randRange(1) * Math.pow(randRange(), 3));
+const sizes = new Array(SPHERE_COUNT).fill(0).map(() => randRange(1) * Math.pow(randRange(), 3));
 const orbitRadii = new Array(SPHERE_COUNT)
   .fill(0)
   .map(() => MathUtils.lerp(ORBIT_MIN, ORBIT_MAX, randRange()));
@@ -83,7 +80,7 @@ const sphereMaterial = getGradientMaterial(
   SPHERE_COLOR_BOTTOM_BLUISH,
   SPHERE_COLOR_TOP_BLUISH,
   SPHERE_COLOR_BOTTOM_ORANGISH,
-  SPHERE_COLOR_TOP_ORANGISH
+  SPHERE_COLOR_TOP_ORANGISH,
 );
 
 const bgGeometry = new SphereGeometry();
@@ -92,7 +89,7 @@ const bgMaterial = getGradientMaterial(
   BG_COLOR_BOTTOM_BLUISH,
   BG_COLOR_TOP_BLUISH,
   BG_COLOR_BOTTOM_ORANGISH,
-  BG_COLOR_TOP_ORANGISH
+  BG_COLOR_TOP_ORANGISH,
 );
 bgMaterial.uniforms.uTemperatureVariancePeriod.value = new Vector3(0, 0, 0.1);
 
@@ -112,7 +109,7 @@ function getGradientMaterial(
   colorBottomWarm: Color,
   colorTopWarm: Color,
   colorBottomCool: Color,
-  colorTopCool: Color
+  colorTopCool: Color,
 ) {
   return new ShaderMaterial({
     uniforms: {
@@ -208,15 +205,14 @@ function createScene() {
   // Calculate the scale to ensure the background covers the full canvas
   const distance = camera.position.z; // Distance from the camera
   const aspect = camera.aspect;
-  const frustumHeight =
-    2 * distance * Math.tan(MathUtils.degToRad(camera.fov) / 2);
+  const frustumHeight = 2 * distance * Math.tan(MathUtils.degToRad(camera.fov) / 2);
   const frustumWidth = frustumHeight * aspect;
 
   // Scale the background geometry to match the camera's frustum size
   bgMesh.scale.set(
     frustumWidth / bgGeometry.parameters.radius,
     frustumHeight / bgGeometry.parameters.radius,
-    1
+    1,
   );
 
   scene.add(bgMesh); // Add the backgrou
@@ -281,19 +277,18 @@ function updateRendererSize() {
 
   // Recalculate background mesh scale
   const distance = camera.position.z;
-  const frustumHeight =
-    2 * distance * Math.tan(MathUtils.degToRad(camera.fov) / 2);
+  const frustumHeight = 2 * distance * Math.tan(MathUtils.degToRad(camera.fov) / 2);
   const frustumWidth = frustumHeight * camera.aspect;
 
   // Get the background mesh and update its scale
   const bgMesh = scene.children.find(
-    (obj) => obj instanceof Mesh && obj.geometry === bgGeometry
+    (obj) => obj instanceof Mesh && obj.geometry === bgGeometry,
   ) as Mesh;
   if (bgMesh) {
     bgMesh.scale.set(
       frustumWidth / bgGeometry.parameters.radius,
       frustumHeight / bgGeometry.parameters.radius,
-      1
+      1,
     );
   }
 }

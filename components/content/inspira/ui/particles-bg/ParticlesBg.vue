@@ -149,9 +149,7 @@ function drawCircle(circle: Circle, update = false) {
     context.value.translate(translateX, translateY);
     context.value.beginPath();
     context.value.arc(x, y, size, 0, 2 * Math.PI);
-    context.value.fillStyle = `rgba(${color.value
-      .split(" ")
-      .join(", ")}, ${alpha})`;
+    context.value.fillStyle = `rgba(${color.value.split(" ").join(", ")}, ${alpha})`;
     context.value.fill();
     context.value.setTransform(pixelRatio.value, 0, 0, pixelRatio.value, 0, 0);
 
@@ -181,10 +179,9 @@ function remapValue(
   start1: number,
   end1: number,
   start2: number,
-  end2: number
+  end2: number,
 ): number {
-  const remapped =
-    ((value - start1) * (end2 - start2)) / (end1 - start1) + start2;
+  const remapped = ((value - start1) * (end2 - start2)) / (end1 - start1) + start2;
   return remapped > 0 ? remapped : 0;
 }
 
@@ -200,9 +197,7 @@ function animate() {
     ];
 
     const closestEdge = edge.reduce((a, b) => Math.min(a, b));
-    const remapClosestEdge = parseFloat(
-      remapValue(closestEdge, 0, 20, 0, 1).toFixed(2)
-    );
+    const remapClosestEdge = parseFloat(remapValue(closestEdge, 0, 20, 0, 1).toFixed(2));
 
     if (remapClosestEdge > 1) {
       circle.alpha += 0.02;
@@ -214,11 +209,9 @@ function animate() {
     circle.x += circle.dx;
     circle.y += circle.dy;
     circle.translateX +=
-      (mouse.x / (props.staticity / circle.magnetism) - circle.translateX) /
-      props.ease;
+      (mouse.x / (props.staticity / circle.magnetism) - circle.translateX) / props.ease;
     circle.translateY +=
-      (mouse.y / (props.staticity / circle.magnetism) - circle.translateY) /
-      props.ease;
+      (mouse.y / (props.staticity / circle.magnetism) - circle.translateY) / props.ease;
 
     // circle gets out of the canvas
     if (
@@ -243,7 +236,7 @@ function animate() {
           translateY: circle.translateY,
           alpha: circle.alpha,
         },
-        true
+        true,
       );
     }
   });

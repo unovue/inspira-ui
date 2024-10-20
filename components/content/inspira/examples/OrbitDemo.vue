@@ -9,20 +9,10 @@
     </span>
 
     <!-- Inner Circles -->
-    <Orbit
-      class="size-[30px] border-none bg-transparent"
-      :duration="20"
-      :delay="20"
-      :radius="80"
-    >
+    <Orbit class="size-[30px] border-none bg-transparent" :duration="20" :delay="20" :radius="80">
       <WhatsAppIcon />
     </Orbit>
-    <Orbit
-      class="size-[30px] border-none bg-transparent"
-      :duration="20"
-      :delay="10"
-      :radius="80"
-    >
+    <Orbit class="size-[30px] border-none bg-transparent" :duration="20" :delay="10" :radius="80">
       <NotionIcon />
     </Orbit>
 

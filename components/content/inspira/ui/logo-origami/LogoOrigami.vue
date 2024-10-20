@@ -7,7 +7,7 @@
     :class="
       cn(
         'relative z-0 h-44 w-60 shrink-0 rounded-xl border border-background/75 bg-background',
-        $props.class
+        $props.class,
       )
     "
   >

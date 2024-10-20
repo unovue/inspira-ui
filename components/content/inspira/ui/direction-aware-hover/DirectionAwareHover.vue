@@ -52,28 +52,24 @@ const getDirection = (ev: MouseEvent, obj: HTMLElement) => {
   return d;
 };
 
-const cn = (...classes: (string | undefined)[]) =>
-  classes.filter(Boolean).join(" ");
+const cn = (...classes: (string | undefined)[]) => classes.filter(Boolean).join(" ");
 
 const containerClass = computed(() =>
   cn(
     "group/card relative h-60 w-60 overflow-hidden rounded-lg bg-transparent md:h-96 md:w-96",
-    props.class
-  )
+    props.class,
+  ),
 );
 
 const imageClass = computed(() =>
-  cn(
-    "h-full w-full scale-150 object-cover transition-transform duration-300",
-    props.imageClass
-  )
+  cn("h-full w-full scale-150 object-cover transition-transform duration-300", props.imageClass),
 );
 
 const childrenClass = computed(() =>
   cn(
     "absolute bottom-4 left-4 z-40 text-white transition-opacity duration-300",
-    props.childrenClass
-  )
+    props.childrenClass,
+  ),
 );
 
 const overlayClass = computed(
@@ -82,13 +78,13 @@ const overlayClass = computed(
       direction.value === "top"
         ? "-translate-y-full"
         : direction.value === "bottom"
-        ? "translate-y-full"
-        : direction.value === "left"
-        ? "-translate-x-full"
-        : direction.value === "right"
-        ? "translate-x-full"
-        : ""
-    }`
+          ? "translate-y-full"
+          : direction.value === "left"
+            ? "-translate-x-full"
+            : direction.value === "right"
+              ? "translate-x-full"
+              : ""
+    }`,
 );
 
 const imageContainerClass = computed(() => ({
@@ -114,13 +110,7 @@ const imageContainerClass = computed(() => ({
         class="relative h-full w-full bg-gray-50 dark:bg-black transition-transform duration-300"
         :class="imageContainerClass"
       >
-        <img
-          :src="imageUrl"
-          alt="image"
-          :class="imageClass"
-          width="1000"
-          height="1000"
-        />
+        <img :src="imageUrl" alt="image" :class="imageClass" width="1000" height="1000" />
       </div>
       <transition name="fade">
         <div v-show="direction !== null" :class="childrenClass">

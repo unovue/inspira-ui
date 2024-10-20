@@ -8,10 +8,10 @@ description: A component that displays a meteor shower animation with customizab
 
 ## API
 
-| Prop Name | Type     | Default | Description                                                            |
-| --------- | -------- | ------- | ---------------------------------------------------------------------- |
-| `count`   | `number` | `20`    | The number of meteors to display in the animation.                     |
-| `class`   | `string` | `""`    | Additional CSS classes to apply to the meteors for customization.      |
+| Prop Name | Type     | Default | Description                                                       |
+| --------- | -------- | ------- | ----------------------------------------------------------------- |
+| `count`   | `number` | `20`    | The number of meteors to display in the animation.                |
+| `class`   | `string` | `""`    | Additional CSS classes to apply to the meteors for customization. |
 
 ## Component Code
 

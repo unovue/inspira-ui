@@ -5,7 +5,7 @@
       cn(
         'supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10 mx-auto mt-8 flex h-[58px] w-max rounded-2xl border p-2 backdrop-blur-md transition-all gap-4',
         $props.class,
-        dockClass
+        dockClass,
       )
     "
     @mousemove="onMouseMove"

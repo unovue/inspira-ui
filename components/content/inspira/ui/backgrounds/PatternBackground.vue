@@ -4,7 +4,7 @@
       cn(
         `h-[36rem] w-full dark:bg-black bg-white relative flex items-center justify-center overflow-clip`,
         ` ${animate ? 'move-' + direction : ''} `,
-        $props.class
+        $props.class,
       )
     "
   >

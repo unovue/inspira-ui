@@ -4,25 +4,25 @@ description: "An open-source library for Vue and Nuxt with beautiful, customizab
 navigation: false
 ---
 
+## ::hero
 
-::hero
----
 announcement:
-  title: 'Introducing Inspira UI'
-  icon: 'lucide:rocket'
-  to: /getting-started/introduction
+title: 'Introducing Inspira UI'
+icon: 'lucide:rocket'
+to: /getting-started/introduction
 actions:
-  - name: All Components
-    to: /components/all
-  - name: GitHub
-    variant: outline
-    to: https://github.com/unovue/inspira-ui
-    leftIcon: 'lucide:github'
+
+- name: All Components
+  to: /components/all
+- name: GitHub
+  variant: outline
+  to: https://github.com/unovue/inspira-ui
+  leftIcon: 'lucide:github'
+
 ---
 
 #title
-Build beautiful websites :br  using Vue & Nuxt
-
+Build beautiful websites :br using Vue & Nuxt
 
 #description
 Open-Source UI Library for Vue and Nuxt! 🚀

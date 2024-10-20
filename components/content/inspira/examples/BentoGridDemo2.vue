@@ -1,7 +1,5 @@
 <template>
-  <BentoGrid
-    class="lg:grid-rows-3 grid w-full auto-rows-[22rem] grid-cols-3 gap-4"
-  >
+  <BentoGrid class="lg:grid-rows-3 grid w-full auto-rows-[22rem] grid-cols-3 gap-4">
     <BentoGridCard
       v-for="(feature, index) in features"
       :key="index"
@@ -49,8 +47,7 @@ const features = [
   },
   {
     name: "Notifications",
-    description:
-      "Get notified when someone shares a file or mentions you in a comment.",
+    description: "Get notified when someone shares a file or mentions you in a comment.",
     href: "/",
     cta: "Learn more",
     class: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",

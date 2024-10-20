@@ -1,12 +1,5 @@
 <template>
-  <div
-    :class="
-      cn(
-        'absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]',
-        $props.class
-      )
-    "
-  >
+  <div :class="cn('absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]', $props.class)">
     <canvas
       ref="globeCanvasRef"
       class="size-full opacity-0 transition-opacity duration-1000 ease-in-out [contain:layout_paint_size]"
@@ -85,13 +78,12 @@ const spring = useSpring(
     tension: props.tension,
     friction: props.friction,
     precision: props.precision,
-  }
+  },
 );
 
 function updatePointerInteraction(clientX: number | null) {
   if (clientX !== null) {
-    pointerInteracting.value =
-      clientX - (pointerInteractionMovement.value ?? clientX);
+    pointerInteracting.value = clientX - (pointerInteractionMovement.value ?? clientX);
   } else {
     pointerInteracting.value = null;
   }

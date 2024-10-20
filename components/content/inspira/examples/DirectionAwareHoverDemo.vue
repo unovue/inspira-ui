@@ -30,9 +30,7 @@
       >
         <h2 class="text-xl font-semibold">Culinary Delights</h2>
         <p class="mt-2">Savor exquisite flavors</p>
-        <button class="mt-4 bg-white text-black px-4 py-2 rounded">
-          View Recipe
-        </button>
+        <button class="mt-4 bg-white text-black px-4 py-2 rounded">View Recipe</button>
       </DirectionAwareHover>
     </div>
   </div>

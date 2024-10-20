@@ -32,16 +32,12 @@
           </h1>
 
           <p class="font-normal text-base text-slate-500 mb-4 relative z-50">
-            I don&apos;t know what to write so I&apos;ll just paste something
-            cool here. One more sentence because lorem ipsum is just
-            unacceptable. Won&apos;t ChatGPT the shit out of this.
+            I don&apos;t know what to write so I&apos;ll just paste something cool here. One more
+            sentence because lorem ipsum is just unacceptable. Won&apos;t ChatGPT the shit out of
+            this.
           </p>
 
-          <button
-            class="border px-4 py-1 rounded-lg border-gray-500 text-gray-300"
-          >
-            Explore
-          </button>
+          <button class="border px-4 py-1 rounded-lg border-gray-500 text-gray-300">Explore</button>
           <Meteors />
         </div>
       </div>

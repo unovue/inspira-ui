@@ -1,10 +1,5 @@
 <template>
-  <svg
-    width="100"
-    height="100"
-    viewBox="0 0 48 48"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="100" height="100" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
     <radialGradient
       id="8O3wK6b5ASW2Wn6hRCB5xa_YFbzdUk7Q3F8_gr1"
       cx="11.087"

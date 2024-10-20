@@ -8,10 +8,10 @@ description: A glare effect on text.
 
 ## API
 
-| Prop Name      | Type                 | Default | Description                                                |
-| -------------- | -------------------- | ------- | ---------------------------------------------------------- |
-| `duration`     | `number`             | `10`    | Duration of the animation in seconds.                  |
-| `radiantWidth`  | `number`             | `100`     | Width of the radiant animation.                                       |
+| Prop Name      | Type     | Default | Description                           |
+| -------------- | -------- | ------- | ------------------------------------- |
+| `duration`     | `number` | `10`    | Duration of the animation in seconds. |
+| `radiantWidth` | `number` | `100`   | Width of the radiant animation.       |
 
 ## Component Code
 

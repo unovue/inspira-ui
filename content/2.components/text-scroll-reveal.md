@@ -8,10 +8,10 @@ description: A component that reveals text word by word as you scroll, with cust
 
 ## API
 
-| Prop Name | Type     | Default | Description                                                        |
-| --------- | -------- | ------- | ------------------------------------------------------------------ |
-| `text`    | `string` | N/A     | The text content to display and reveal word by word during scroll. |
-| `class`   | `string` | `""`    | Additional CSS classes to apply to the component for customization.|
+| Prop Name | Type     | Default | Description                                                         |
+| --------- | -------- | ------- | ------------------------------------------------------------------- |
+| `text`    | `string` | N/A     | The text content to display and reveal word by word during scroll.  |
+| `class`   | `string` | `""`    | Additional CSS classes to apply to the component for customization. |
 
 ## Component Code
 

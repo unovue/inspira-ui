@@ -30,8 +30,7 @@ export default defineAppConfig({
             {
               title: "Installation",
               to: "/getting-started/installation",
-              description:
-                "Follow the step-by-step guide to install Inspira UI in your project.",
+              description: "Follow the step-by-step guide to install Inspira UI in your project.",
             },
             {
               title: "Components",
@@ -60,15 +59,13 @@ export default defineAppConfig({
             {
               title: "shadcn-vue",
               to: "https://www.shadcn-vue.com/",
-              description:
-                "For the Vue port of shadcn-ui and contributions to some components",
+              description: "For the Vue port of shadcn-ui and contributions to some components",
               target: "_blank",
             },
             {
               title: "shadcn-docs-nuxt",
               to: "https://github.com/ZTL-UwU/shadcn-docs-nuxt",
-              description:
-                "For the beautifully crafted Nuxt documentation site.",
+              description: "For the beautifully crafted Nuxt documentation site.",
               target: "_blank",
             },
           ],

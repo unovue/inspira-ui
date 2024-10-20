@@ -8,7 +8,6 @@ description: A container scrolling effect that transforms the content inside bas
 
 ## API
 
-
 ::steps
 
 ### `ContainerScroll`
@@ -17,11 +16,11 @@ The `ContainerScroll` component creates a 3D scroll effect. As the user scrolls,
 
 #### Props
 
-| Prop Name  | Type   | Default | Description                                                                 |
-| ---------- | ------ | ------- | --------------------------------------------------------------------------- |
-| `rotate`   | Number | `0`     | Controls the rotation of the inner content based on the scroll progress.     |
-| `scale`    | Number | `1`     | Controls the scaling transformation applied to the content during the scroll.|
-| `translateY`| Number| `0`     | Controls the vertical translation of the title during the scroll.            |
+| Prop Name    | Type   | Default | Description                                                                   |
+| ------------ | ------ | ------- | ----------------------------------------------------------------------------- |
+| `rotate`     | Number | `0`     | Controls the rotation of the inner content based on the scroll progress.      |
+| `scale`      | Number | `1`     | Controls the scaling transformation applied to the content during the scroll. |
+| `translateY` | Number | `0`     | Controls the vertical translation of the title during the scroll.             |
 
 #### Usage
 
@@ -42,9 +41,9 @@ The `ContainerScrollTitle` component handles the title's transformation as the u
 
 #### Props
 
-| Prop Name   | Type   | Default | Description                                        |
-| ----------- | ------ | ------- | -------------------------------------------------- |
-| `translate` | Number | `0`     | Controls the vertical translation of the title.    |
+| Prop Name   | Type   | Default | Description                                     |
+| ----------- | ------ | ------- | ----------------------------------------------- |
+| `translate` | Number | `0`     | Controls the vertical translation of the title. |
 
 #### Usage
 
@@ -60,10 +59,10 @@ The `ContainerScrollCard` component applies scale and rotation effects to the ca
 
 #### Props
 
-| Prop Name  | Type   | Default | Description                                         |
-| ---------- | ------ | ------- | --------------------------------------------------- |
-| `rotate`   | Number | `0`     | Controls the rotation effect of the card.           |
-| `scale`    | Number | `1`     | Controls the scaling effect applied to the card.    |
+| Prop Name | Type   | Default | Description                                      |
+| --------- | ------ | ------- | ------------------------------------------------ |
+| `rotate`  | Number | `0`     | Controls the rotation effect of the card.        |
+| `scale`   | Number | `1`     | Controls the scaling effect applied to the card. |
 
 #### Usage
 
@@ -104,6 +103,7 @@ You can copy and paste the following code to create these components:
 
     ::CodeViewerTab{label="ContainerScrollCard.vue" language="vue" componentName="ContainerScrollCard" type="ui" id="container-scroll"}
     ::
+
 ::
 
 ## Features
@@ -115,4 +115,3 @@ You can copy and paste the following code to create these components:
 ## Credits
 
 - Inspired by [Aceternity UI Container Scroll Animation](https://ui.aceternity.com/components/container-scroll-animation).
-

@@ -24,5 +24,5 @@ You can copy and paste the following code to create this component:
 
 ## Credits
 
--   Inspired by [Magic UI's Hyper Text](https://magicui.design/docs/components/hyper-text) component.
--   Credits to [Prem](https://github.com/premdasvm) for porting this component.
+- Inspired by [Magic UI's Hyper Text](https://magicui.design/docs/components/hyper-text) component.
+- Credits to [Prem](https://github.com/premdasvm) for porting this component.
