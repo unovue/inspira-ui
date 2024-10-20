@@ -15,14 +15,15 @@
 </template>
 
 <script setup lang="ts">
-const { page } = useContent();
 const config = useConfig();
 
 useSeoMeta({
-  title: `${page.value?.title ?? "404"} - ${config.value.site.name}`,
-  ogTitle: page.value?.title,
-  description: page.value?.description,
-  ogDescription: page.value?.description,
+  title: `Home - ${config.value.site.name}`,
+  ogTitle: `Home - ${config.value.site.name}`,
+  description:
+    "Open Source components to build stunning animated interfaces effortlessly using Vue & Nuxt.",
+  ogDescription:
+    "Open Source components to build stunning animated interfaces effortlessly using Vue & Nuxt.",
   ogImage: config.value.site.ogImage,
   twitterCard: "summary_large_image",
 });
