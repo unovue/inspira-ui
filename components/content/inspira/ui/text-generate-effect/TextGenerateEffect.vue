@@ -1,22 +1,15 @@
 <template>
-  <div class="font-bold">
-    <div class="mt-4">
-      <div
-        class="dark:text-white text-black text-2xl leading-snug tracking-wide"
-      >
-        <div ref="scope">
-          <span
-            v-for="(word, idx) in wordsArray"
-            :key="word + idx"
-            class="dark:text-white text-black inline-block"
-            :style="spanStyle"
-          >
-            {{ word }}&nbsp;
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div class="leading-snug tracking-wide">
+		<div ref="scope">
+			<span
+				v-for="(word, idx) in wordsArray"
+				:key="word + idx"
+				class="inline-block"
+				:style="spanStyle">
+				{{ word }}&nbsp;
+			</span>
+		</div>
+	</div>
 </template>
 
 <script setup lang="ts">
