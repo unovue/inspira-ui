@@ -13,15 +13,15 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue';
+import { computed, onMounted, ref } from "vue";
 
 const props = withDefaults(
-	defineProps<{
-		words: string;
-		filter?: boolean;
-		duration?: number;
-	}>(),
-	{ duration: 0.7, filter: true },
+  defineProps<{
+    words: string;
+    filter?: boolean;
+    duration?: number;
+  }>(),
+  { duration: 0.7, filter: true },
 );
 
 const scope = ref(null);

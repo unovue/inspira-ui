@@ -4,7 +4,7 @@
       cn(
         'group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden whitespace-nowrap border border-white/10 px-6 py-3 text-white [background:var(--bg)] [border-radius:var(--radius)] dark:text-black',
         'transform-gpu transition-transform duration-300 ease-in-out active:translate-y-px',
-        $props.class
+        $props.class,
       )
     "
     :style="{
@@ -16,14 +16,7 @@
       '--bg': background,
     }"
   >
-    <div
-      :class="
-        cn(
-          '-z-30 blur-[2px]',
-          'absolute inset-0 overflow-visible [container-type:size]'
-        )
-      "
-    >
+    <div :class="cn('-z-30 blur-[2px]', 'absolute inset-0 overflow-visible [container-type:size]')">
       <div
         class="absolute inset-0 h-[100cqh] animate-shimmer-btn-shimmer-slide [aspect-ratio:1] [border-radius:0] [mask:none]"
       >
@@ -48,7 +41,7 @@
           'group-hover:shadow-[inset_0_-6px_10px_#ffffff3f]',
 
           // on click
-          'group-active:shadow-[inset_0_-10px_10px_#ffffff3f]'
+          'group-active:shadow-[inset_0_-10px_10px_#ffffff3f]',
         )
       "
     />
@@ -105,8 +98,7 @@ withDefaults(defineProps<ShimmerButtonProps>(), {
 }
 
 .animate-shimmer-btn-shimmer-slide {
-  animation: shimmer-btn-shimmer-slide var(--speed) ease-in-out infinite
-    alternate;
+  animation: shimmer-btn-shimmer-slide var(--speed) ease-in-out infinite alternate;
 }
 
 .animate-shimmer-btn-spin-around {

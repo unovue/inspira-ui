@@ -57,10 +57,7 @@ watch(isVisible, (newValue) => {
 
 <template>
   <div class="relative inline-block px-2">
-    <Transition
-      @after-enter="$emit('animationComplete')"
-      @after-leave="$emit('animationComplete')"
-    >
+    <Transition @after-enter="$emit('animationComplete')" @after-leave="$emit('animationComplete')">
       <div
         v-show="isVisible"
         :class="[
@@ -68,10 +65,7 @@ watch(isVisible, (newValue) => {
           props.class,
         ]"
       >
-        <template
-          v-for="(wordObj, wordIndex) in splitWords"
-          :key="wordObj.word + wordIndex"
-        >
+        <template v-for="(wordObj, wordIndex) in splitWords" :key="wordObj.word + wordIndex">
           <span
             class="inline-block whitespace-nowrap opacity-0"
             :style="{

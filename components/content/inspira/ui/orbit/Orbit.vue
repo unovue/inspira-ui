@@ -18,7 +18,7 @@
     :class="
       cn(
         'absolute flex size-full transform-gpu animate-orbit items-center justify-center rounded-full border bg-black/10 dark:bg-white/10',
-        $props.class
+        $props.class,
       )
     "
   >
@@ -45,8 +45,7 @@ const props = defineProps({
     transform: rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translateY(calc(var(--radius) * 1px))
-      rotate(-360deg);
+    transform: rotate(360deg) translateY(calc(var(--radius) * 1px)) rotate(-360deg);
   }
 }
 

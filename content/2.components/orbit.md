@@ -8,13 +8,13 @@ description: A component that animates content in a circular orbit, with customi
 
 ## API
 
-| Prop Name  | Type     | Default | Description                                                                         |
-| ---------- | -------- | ------- | ----------------------------------------------------------------------------------- |
-| `reverse`  | `boolean`| `false` | Reverses the orbit direction if `true`.                                             |
-| `duration` | `number` | `20`    | The duration of the orbit animation in seconds.                                     |
-| `delay`    | `number` | `10`    | Delay in seconds before the animation starts.                                       |
-| `radius`   | `number` | `50`    | Radius of the orbit path in pixels.                                                 |
-| `path`     | `boolean`| `true`  | Displays a circle path for the orbit if `true`.                                     |
+| Prop Name  | Type      | Default | Description                                     |
+| ---------- | --------- | ------- | ----------------------------------------------- |
+| `reverse`  | `boolean` | `false` | Reverses the orbit direction if `true`.         |
+| `duration` | `number`  | `20`    | The duration of the orbit animation in seconds. |
+| `delay`    | `number`  | `10`    | Delay in seconds before the animation starts.   |
+| `radius`   | `number`  | `50`    | Radius of the orbit path in pixels.             |
+| `path`     | `boolean` | `true`  | Displays a circle path for the orbit if `true`. |
 
 ## Component Code
 
@@ -26,7 +26,6 @@ You can copy and paste the following code to create this component:
 ## Features
 
 - **Circular Orbit Animation**: The component animates its content in a smooth circular orbit around the center point.
-  
 - **Customizable Animation**: The orbit’s duration, delay, and radius are fully adjustable, providing flexibility in animation behavior.
 
 - **Optional Orbit Path**: An optional visual representation of the orbit path can be toggled using the `path` prop.

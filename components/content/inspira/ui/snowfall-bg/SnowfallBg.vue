@@ -92,8 +92,7 @@ function createSnowflakes() {
 function createSnowflake(): Snowflake {
   const x = Math.random() * canvasSize.w;
   const y = Math.random() * canvasSize.h;
-  const size =
-    Math.random() * (props.maxRadius! - props.minRadius!) + props.minRadius!; // Random size between min and max radius
+  const size = Math.random() * (props.maxRadius! - props.minRadius!) + props.minRadius!; // Random size between min and max radius
   const alpha = Math.random() * 0.5 + 0.5; // Opacity between 0.5 and 1
   const dx = (Math.random() - 0.5) * 0.5; // Slight horizontal drift
   const dy = Math.random() * 0.25 + props.speed; // Falling speed
@@ -106,9 +105,7 @@ function drawSnowflake(snowflake: Snowflake) {
     const { x, y, size, alpha } = snowflake;
     context.value.beginPath();
     context.value.arc(x, y, size, 0, Math.PI * 2);
-    context.value.fillStyle = `rgba(${color.value
-      .split(" ")
-      .join(", ")}, ${alpha})`;
+    context.value.fillStyle = `rgba(${color.value.split(" ").join(", ")}, ${alpha})`;
     context.value.fill();
   }
 }

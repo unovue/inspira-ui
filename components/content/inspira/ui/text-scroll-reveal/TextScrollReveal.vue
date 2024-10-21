@@ -1,8 +1,5 @@
 <template>
-  <div
-    ref="textScrollRevealRef"
-    :class="cn('relative z-0 h-[200vh]', $props.class)"
-  >
+  <div ref="textScrollRevealRef" :class="cn('relative z-0 h-[200vh]', $props.class)">
     <div
       class="sticky top-0 mx-auto flex h-[50%] max-w-4xl items-center bg-transparent px-[1rem] py-[5rem]"
     >

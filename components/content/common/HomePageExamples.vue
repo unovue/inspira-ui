@@ -7,9 +7,7 @@
   <div
     class="flex max-w-7xl w-full lg:flex-row flex-col items-center justify-center flex-wrap p-4 gap-4"
   >
-    <DotBackground
-      class="py-8 px-4 border rounded-lg flex flex-col gap-4 h-fit"
-    >
+    <DotBackground class="py-8 px-4 border rounded-lg flex flex-col gap-4 h-fit">
       <h3
         class="text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8"
       >
@@ -28,9 +26,7 @@
       <TextHoverEffectDemo />
     </DotBackground>
 
-    <DotBackground
-      class="py-8 px-4 border rounded-lg flex flex-col gap-4 h-fit"
-    >
+    <DotBackground class="py-8 px-4 border rounded-lg flex flex-col gap-4 h-fit">
       <h3
         class="text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8"
       >

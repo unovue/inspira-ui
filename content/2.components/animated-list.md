@@ -17,11 +17,12 @@ description: A sequentially animated list that introduces each item with a timed
 You can copy and paste the following code to create this component:
 
 ::CodeGroup
-    ::CodeViewerTab{label="AnimatedList.vue" language="vue" componentName="AnimatedList" type="ui" id="animated-list"}
-    ::
-    
+::CodeViewerTab{label="AnimatedList.vue" language="vue" componentName="AnimatedList" type="ui" id="animated-list"}
+::
+
     ::CodeViewerTab{label="Notification.vue" language="vue" componentName="Notification" type="ui" id="notification"}
     ::
+
 ::
 
 ## Features

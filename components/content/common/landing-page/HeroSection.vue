@@ -35,17 +35,12 @@
       Build beautiful websites using Vue & Nuxt
     </h1>
 
-    <span
-      class="text-center text-lg text-gray-600 dark:text-gray-200 sm:text-xl mt-4"
-    >
-      Open Source components to build stunning animated interfaces effortlessly
-      using Vue & Nuxt.
+    <span class="text-center text-lg text-gray-600 dark:text-gray-200 sm:text-xl mt-4">
+      Open Source components to build stunning animated interfaces effortlessly using Vue & Nuxt.
     </span>
 
-    <div
-      class="flex w-full items-center justify-center space-x-4 py-4 md:pb-10 mt-4"
-    >
-      <NuxtLink to="/components/all">
+    <div class="flex w-full items-center justify-center space-x-4 py-4 md:pb-10 mt-4">
+      <NuxtLink to="/components">
         <UiButton> All Components </UiButton>
       </NuxtLink>
       <NuxtLink to="https://github.com/unovue/inspira-ui" target="_blank">

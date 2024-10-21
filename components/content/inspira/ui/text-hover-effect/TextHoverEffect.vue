@@ -14,13 +14,7 @@
     class="select-none"
   >
     <defs>
-      <linearGradient
-        id="textGradient"
-        gradientUnits="userSpaceOnUse"
-        cx="50%"
-        cy="50%"
-        r="25%"
-      >
+      <linearGradient id="textGradient" gradientUnits="userSpaceOnUse" cx="50%" cy="50%" r="25%">
         <stop offset="0%" stop-color="var(--yellow-500)" v-if="hovered" />
         <stop offset="25%" stop-color="var(--red-500)" v-if="hovered" />
         <stop offset="50%" stop-color="var(--blue-500)" v-if="hovered" />
@@ -133,8 +127,7 @@ const maskPosition = computed(() => {
 const strokeStyle = computed(() => ({
   strokeDashoffset: hovered.value ? "0" : "1000",
   strokeDasharray: "1000",
-  transition:
-    "stroke-dashoffset 4s ease-in-out, stroke-dasharray 4s ease-in-out",
+  transition: "stroke-dashoffset 4s ease-in-out, stroke-dasharray 4s ease-in-out",
 }));
 
 const handleMouseEnter = () => (hovered.value = true);

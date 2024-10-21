@@ -40,8 +40,7 @@ const items = [
   },
   {
     title: "The Power of Communication",
-    description:
-      "Understand the impact of effective communication in our lives.",
+    description: "Understand the impact of effective communication in our lives.",
   },
   {
     title: "The Pursuit of Knowledge",

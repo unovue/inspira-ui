@@ -25,23 +25,9 @@ interface InspiraImageParticleOptions {
   threeDimensional?: boolean | string;
   lifeCycle?: boolean | string;
   layerDistance?: number;
-  initPosition?:
-    | "random"
-    | "top"
-    | "left"
-    | "bottom"
-    | "right"
-    | "misplaced"
-    | "none";
+  initPosition?: "random" | "top" | "left" | "bottom" | "right" | "misplaced" | "none";
   initDirection?: "random" | "top" | "left" | "bottom" | "right" | "none";
-  fadePosition?:
-    | "explode"
-    | "top"
-    | "left"
-    | "bottom"
-    | "right"
-    | "random"
-    | "none";
+  fadePosition?: "explode" | "top" | "left" | "bottom" | "right" | "random" | "none";
   fadeDirection?: "random" | "top" | "left" | "bottom" | "right" | "none";
   noise?: number;
   disableInteraction?: boolean;
@@ -54,10 +40,7 @@ interface InspiraImageParticleOptions {
   imageUrl?: string;
   wrapperElement?: HTMLElement;
   canvas?: HTMLCanvasElement;
-  context?:
-    | CanvasRenderingContext2D
-    | WebGL2RenderingContext
-    | WebGLRenderingContext;
+  context?: CanvasRenderingContext2D | WebGL2RenderingContext | WebGLRenderingContext;
   renderer?: "default" | "webgl";
   addTimestamp?: boolean;
   responsiveWidth?: boolean;

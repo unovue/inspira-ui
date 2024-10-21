@@ -42,9 +42,7 @@ const scrollYProgress = computed(() => {
   return 1 - Math.max(0, bottom.value - scrollY.value) / height.value;
 });
 
-const scaleDimensions = computed(() =>
-  isMobile.value ? [0.7, 0.9] : [1.05, 1]
-);
+const scaleDimensions = computed(() => (isMobile.value ? [0.7, 0.9] : [1.05, 1]));
 
 const rotate = computed(() => 20 * (1 - scrollYProgress.value));
 const scale = computed(() => {

@@ -18,9 +18,9 @@ Small grid background with animation
 
 ## API
 
-| Prop Name  | Type                                                                                     | Default | Description                                       |
-| ---------- | ---------------------------------------------------------------------------------------- | ------- | ------------------------------------------------- |
-| `animate`  | `boolean`                                                                                | false   | Set `true` if you want to animate the background. |
+| Prop Name   | Type                                                                                     | Default | Description                                       |
+| ----------- | ---------------------------------------------------------------------------------------- | ------- | ------------------------------------------------- |
+| `animate`   | `boolean`                                                                                | false   | Set `true` if you want to animate the background. |
 | `direction` | `top \| bottom \| left \| right \| top-left \| top-right \| bottom-left \| bottom-right` | `top`   | Direction of the animation movement.              |
 
 ### Utility Classes

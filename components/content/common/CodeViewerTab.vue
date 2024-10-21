@@ -1,9 +1,5 @@
 <template>
-  <div
-    :icon="icon"
-    :class="cn('relative flex max-h-[32rem]', $props.class)"
-    :code="rawString"
-  >
+  <div :icon="icon" :class="cn('relative flex max-h-[32rem]', $props.class)" :code="rawString">
     <CodeCopy class="absolute top-0 right-0" :code="rawString" />
     <code class="overflow-auto px-2 leading-4 min-w-full">
       <pre class="text-sm" v-html="codeHtml"></pre>
@@ -47,7 +43,7 @@ const componentPath = computed(
   () =>
     `../inspira/${props.type}/${props.id ? props.id + "/" : ""}${
       props.componentName
-    }.${props.extension}`
+    }.${props.extension}`,
 );
 
 // Load and process the component code on mount
@@ -60,13 +56,7 @@ async function loadAndProcessComponentCode() {
   try {
     const componentCode = await fetchComponentCode();
     rawString.value = updateImportPaths(componentCode);
-    codeHtml.value = hljs.highlightAuto(rawString.value, [
-      "ts",
-      "html",
-      "css",
-      "js",
-      "d.ts",
-    ]).value;
+    codeHtml.value = hljs.highlightAuto(rawString.value, ["ts", "html", "css", "js", "d.ts"]).value;
   } catch (error) {
     console.error("Error loading component code:", error);
   }

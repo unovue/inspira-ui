@@ -10,20 +10,18 @@
       <div
         class="absolute top-8 left-1/2 transform -translate-x-1/2 z-20 mt-4 bg-white bg-opacity-30 backdrop-filter border backdrop-blur-md rounded-3xl p-3"
       >
-        <NuxtImg v-if="isDark" src="/logo-dark.svg" />
-        <NuxtImg v-else src="/logo.svg" />
+        <ClientOnly>
+          <NuxtImg v-if="isDark" src="/logo-dark.svg" />
+          <NuxtImg v-else src="/logo.svg" />
+        </ClientOnly>
       </div>
 
       <!-- Center Text -->
       <div
         class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4 mt-20"
       >
-        <h3 class="text-4xl sm:text-5xl font-bold mb-2">
-          What are you waiting for?
-        </h3>
-        <p class="text-base sm:text-lg m-4">
-          Get started and start building awesome UI 😄
-        </p>
+        <h3 class="text-4xl sm:text-5xl font-bold mb-2">What are you waiting for?</h3>
+        <p class="text-base sm:text-lg m-4">Get started and start building awesome UI 😄</p>
         <NuxtLink to="getting-started/installation">
           <UiButton variant="default"> Get Started → </UiButton>
         </NuxtLink>

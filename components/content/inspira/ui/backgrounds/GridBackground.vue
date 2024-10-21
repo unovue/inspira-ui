@@ -1,8 +1,5 @@
 <template>
-  <PatternBackground
-    v-bind="$props"
-    class="dark:bg-grid-white/[0.2] bg-grid-black/[0.2]"
-  >
+  <PatternBackground v-bind="$props" class="dark:bg-grid-white/[0.2] bg-grid-black/[0.2]">
     <slot />
   </PatternBackground>
 </template>

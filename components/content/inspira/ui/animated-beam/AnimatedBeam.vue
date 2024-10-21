@@ -4,12 +4,7 @@
     :width="svgDimensions.width"
     :height="svgDimensions.height"
     xmlns="http://www.w3.org/2000/svg"
-    :class="
-      cn(
-        'pointer-events-none absolute left-0 top-0 transform-gpu stroke-2',
-        $props.class
-      )
-    "
+    :class="cn('pointer-events-none absolute left-0 top-0 transform-gpu stroke-2', $props.class)"
     :viewBox="`0 0 ${svgDimensions.width} ${svgDimensions.height}`"
   >
     <path
@@ -27,14 +22,7 @@
       stroke-linecap="round"
     />
     <defs>
-      <linearGradient
-        :id="id"
-        gradientUnits="userSpaceOnUse"
-        x1="0%"
-        x2="0%"
-        y1="0%"
-        y2="0%"
-      >
+      <linearGradient :id="id" gradientUnits="userSpaceOnUse" x1="0%" x2="0%" y1="0%" y2="0%">
         <stop :stop-color="gradientStartColor" stop-opacity="0" />
         <stop :stop-color="gradientStartColor" />
         <stop offset="32.5%" :stop-color="gradientStopColor" />
@@ -137,31 +125,13 @@ function updatePath() {
     const svgHeight = containerRect.height;
     svgDimensions.value = { width: svgWidth, height: svgHeight };
 
-    const startX =
-      rectA.left -
-      containerRect.left +
-      rectA.width / 2 +
-      (props.startXOffset ?? 0);
-    const startY =
-      rectA.top -
-      containerRect.top +
-      rectA.height / 2 +
-      (props.startYOffset ?? 0);
-    const endX =
-      rectB.left -
-      containerRect.left +
-      rectB.width / 2 +
-      (props.endXOffset ?? 0);
-    const endY =
-      rectB.top -
-      containerRect.top +
-      rectB.height / 2 +
-      (props.endYOffset ?? 0);
+    const startX = rectA.left - containerRect.left + rectA.width / 2 + (props.startXOffset ?? 0);
+    const startY = rectA.top - containerRect.top + rectA.height / 2 + (props.startYOffset ?? 0);
+    const endX = rectB.left - containerRect.left + rectB.width / 2 + (props.endXOffset ?? 0);
+    const endY = rectB.top - containerRect.top + rectB.height / 2 + (props.endYOffset ?? 0);
 
     const controlY = startY - (props.curvature ?? 0);
-    const d = `M ${startX},${startY} Q ${
-      (startX + endX) / 2
-    },${controlY} ${endX},${endY}`;
+    const d = `M ${startX},${startY} Q ${(startX + endX) / 2},${controlY} ${endX},${endY}`;
     pathD.value = d;
   }
 }
