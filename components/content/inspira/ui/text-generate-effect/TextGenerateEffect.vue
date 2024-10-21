@@ -1,5 +1,5 @@
 <template>
-	<div :class="cn("leading-snug tracking-wide", props.class)">
+	<div :class="cn('leading-snug tracking-wide', props.class)">
 		<div ref="scope">
 			<span
 				v-for="(word, idx) in wordsArray"
