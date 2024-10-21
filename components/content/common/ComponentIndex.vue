@@ -5,18 +5,18 @@
         <ClientOnly>
           <CardSpotlight
             v-for="(item, index) in list"
-            class="max-w-[32rem] relative border-zinc-200 dark:bg-zinc-900/50 border dark:border-zinc-800 p-6 max-h-14 h-screen overflow-hidden rounded-2xl flex-row justify-between items-center gap-4"
+            class="max-w-[32rem] relative border-zinc-200 dark:bg-zinc-900/50 border dark:border-zinc-800 p-6 max-h-14 h-screen overflow-hidden rounded-2xl flex-row justify-between items-center gap-4 cursor-pointer"
             :gradientColor="gradientColor"
             slot-class="w-full"
           >
-            <div class="flex flex-row w-full items-center justify-center">
-              <div class="text-right mr-2">{{ index + 1 }}.</div>
-              <div class="font-heading">{{ item.title }}</div>
-              <span class="flex flex-1"></span>
-              <NuxtLink :to="item._path" class="hover:underline underline-offset-2">
-                View →
-              </NuxtLink>
-            </div>
+            <NuxtLink :to="item._path">
+              <div class="flex flex-row w-full items-center justify-center">
+                <div class="text-right mr-2">{{ index + 1 }}.</div>
+                <div class="font-heading">{{ item.title }}</div>
+                <span class="flex flex-1"></span>
+                <span> View → </span>
+              </div>
+            </NuxtLink>
           </CardSpotlight>
         </ClientOnly>
       </template>
