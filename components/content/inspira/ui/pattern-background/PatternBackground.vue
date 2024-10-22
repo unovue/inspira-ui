@@ -3,7 +3,7 @@
     :class="
       cn(
         patternBackgroundVariants({ variant, size, mask }),
-        ` ${animate ? 'move-' + direction : ''} `,
+        ` ${animate ? 'move move-' + direction : ''} `,
         props.class,
       )
     "
@@ -29,6 +29,8 @@ const props = withDefaults(defineProps<Props>(), {
   size: undefined,
   mask: undefined,
 });
+
+const cssDirection = computed(() => `to-${props.direction}`)
 </script>
 
 <style scoped>
@@ -97,28 +99,34 @@ const props = withDefaults(defineProps<Props>(), {
   }
 }
 
+.move  {
+  animation-duration: v-bind(speed);
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
 .move-top {
-  animation: to-top v-bind(speed) linear infinite;
+  animation-name: to-top;
 }
 .move-bottom {
-  animation: to-bottom v-bind(speed) linear infinite;
+  animation-name: to-bottom;
 }
 .move-right {
-  animation: to-right v-bind(speed) linear infinite;
+  animation-name: to-right;
 }
 .move-left {
-  animation: to-left v-bind(speed) linear infinite;
+  animation-name: to-left;
 }
 .move-top-right {
-  animation: to-top-right v-bind(speed) linear infinite;
+  animation-name: to-top-right;
 }
 .move-top-left {
-  animation: to-top-left v-bind(speed) linear infinite;
+  animation-name: to-top-left;
 }
 .move-bottom-right {
-  animation: to-bottom-right v-bind(speed) linear infinite;
+  animation-name: to-bottom-right;
 }
 .move-bottom-left {
-  animation: to-bottom-left v-bind(speed) linear infinite;
+  animation-name: to-bottom-left;
 }
 </style>
