@@ -20,6 +20,9 @@ importers:
       canvas-confetti:
         specifier: ^1.9.3
         version: 1.9.3
+      class-variance-authority:
+        specifier: ^0.7.0
+        version: 0.7.0
       cobe:
         specifier: ^0.6.3
         version: 0.6.3
