@@ -3,17 +3,22 @@ title: Pattern Backgrounds
 description: Simple animated pattern backgrounds to make your sections stand out.
 ---
 
-::ComponentLoader{label="Preview" componentName="DotBackgroundDemo" type="examples" id="backgrounds"}
+Grid background with dot
+::ComponentLoader{label="Preview" componentName="PatternBackgroundDotDemo" type="examples" id="pattern-background"}
+::
+
+Grid background with big dot
+::ComponentLoader{label="Preview" componentName="PatternBackgroundBigDotDemo" type="examples" id="pattern-background"}
 ::
 
 ## Examples
 
 Grid background without animation
-::ComponentLoader{label="Preview" componentName="GridBackgroundDemo" type="examples" id="backgrounds"}
+::ComponentLoader{label="Preview" componentName="PatternBackgroundGridDemo" type="examples" id="pattern-background"}
 ::
 
 Small grid background with animation
-::ComponentLoader{label="Preview" componentName="GridSmallBackgroundDemo" type="examples" id="backgrounds"}
+::ComponentLoader{label="Preview" componentName="PatternBackgroundGridSmallDemo" type="examples" id="pattern-background"}
 ::
 
 ## API
@@ -23,7 +28,7 @@ Small grid background with animation
 | `animate`   | `boolean`                                                                                | false   | Set `true` if you want to animate the background. |
 | `direction` | `top \| bottom \| left \| right \| top-left \| top-right \| bottom-left \| bottom-right` | `top`   | Direction of the animation movement.              |
 
-### Utility Classes
+### Utility Types
 
 - **Dot Pattern:** `dark:bg-dot-white/[0.2] bg-dot-black/[0.2]`
 
@@ -40,12 +45,5 @@ You can copy and paste the following code to create these components:
 ::CodeViewerTab{label="PatternBackground.vue" language="vue" componentName="PatternBackground" type="ui" id="backgrounds"}
 ::
 
-::CodeViewerTab{filename="DotBackground.vue" language="vue" componentName="DotBackground" type="ui" id="backgrounds"}
-::
-
-::CodeViewerTab{filename="GridBackground.vue" language="vue" componentName="GridBackground" type="ui" id="backgrounds"}
-::
-
-::CodeViewerTab{filename="GridSmallBackground.vue" language="vue" componentName="GridSmallBackground" type="ui" id="backgrounds"}
-::
-::
+#::CodeViewerTab{filename="index.ts" language="typescript" componentName="index" type="ui" id="backgrounds"}
+#::
