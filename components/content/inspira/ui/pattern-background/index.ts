@@ -22,7 +22,7 @@ export interface BaseProps {
   direction?: PatternBackgroundDirection;
   variant?: PatternBackgroundVariants["variant"];
   size?: PatternBackgroundVariants["size"];
-  mask?: PatternBackgroundVariants["mask"];
+  mask?: PatternBackgroundMaskVariants["mask"];
   speed?: ObjectValues<typeof PATTERN_BACKGROUND_SPEED>;
 }
 
@@ -32,11 +32,6 @@ export const PATTERN_BACKGROUND_VARIANT = {
   Grid: "grid",
   Dot: "dot",
   BigDot: "big-dot",
-} as const;
-
-export const PATTERN_BACKGROUND_MASK = {
-  Ellipse: "ellipse",
-  EllipseTop: "ellipse-top",
 } as const;
 
 export const PATTERN_BACKGROUND_SPEED = {
@@ -61,18 +56,32 @@ export const patternBackgroundVariants = cva("relative overflow-clip", {
       md: "bg-[size:24px_24px]",
       lg: "bg-[size:32px_32px]",
     },
-    mask: {
-      [PATTERN_BACKGROUND_MASK.Ellipse]:
-        "[mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)]",
-      [PATTERN_BACKGROUND_MASK.EllipseTop]:
-        "[mask-image:radial-gradient(ellipse_at_top,black,transparent_80%)]",
-    },
   },
   defaultVariants: {
     variant: "grid",
     size: "md",
-    mask: "ellipse",
   },
 });
 
 export type PatternBackgroundVariants = VariantProps<typeof patternBackgroundVariants>;
+
+export const PATTERN_BACKGROUND_MASK = {
+  Ellipse: "ellipse",
+  EllipseTop: "ellipse-top",
+} as const;
+
+export const patternBackgroundMaskVariants = cva('bg-background', {
+  variants: {
+    mask: {
+      [PATTERN_BACKGROUND_MASK.Ellipse]:
+        "[mask-image:radial-gradient(ellipse_at_center,transparent,black_80%)]",
+      [PATTERN_BACKGROUND_MASK.EllipseTop]:
+        "[mask-image:radial-gradient(ellipse_at_top,transparent,black_80%)]",
+    },
+  },
+  defaultVariants: {
+    mask: "ellipse",
+  },
+});
+
+export type PatternBackgroundMaskVariants = VariantProps<typeof patternBackgroundMaskVariants>;

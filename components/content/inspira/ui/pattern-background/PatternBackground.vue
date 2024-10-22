@@ -2,12 +2,20 @@
   <div
     :class="
       cn(
-        patternBackgroundVariants({ variant, size, mask }),
+        patternBackgroundVariants({ variant, size }),
         ` ${animate ? 'move move-' + direction : ''} `,
         props.class,
       )
     "
   >
+    <div
+      :class="
+        cn(
+          'absolute pointer-events-none inset-0 flex items-center justify-center',
+          patternBackgroundMaskVariants({ mask }),
+        )
+      "
+    ></div>
     <slot />
   </div>
 </template>
@@ -19,6 +27,7 @@ import {
   PATTERN_BACKGROUND_DIRECTION,
   PATTERN_BACKGROUND_SPEED,
   PATTERN_BACKGROUND_VARIANT,
+  patternBackgroundMaskVariants,
   patternBackgroundVariants,
 } from ".";
 
@@ -29,8 +38,6 @@ const props = withDefaults(defineProps<Props>(), {
   size: undefined,
   mask: undefined,
 });
-
-const cssDirection = computed(() => `to-${props.direction}`)
 </script>
 
 <style scoped>
@@ -99,7 +106,7 @@ const cssDirection = computed(() => `to-${props.direction}`)
   }
 }
 
-.move  {
+.move {
   animation-duration: v-bind(speed);
   animation-timing-function: linear;
   animation-iteration-count: infinite;
