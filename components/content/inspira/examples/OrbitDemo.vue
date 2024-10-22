@@ -9,28 +9,38 @@
     </span>
 
     <!-- Inner Circles -->
-    <Orbit class="size-[30px] border-none bg-transparent" :duration="20" :delay="20" :radius="80">
+    <Orbit
+      class="size-[30px] border-none bg-transparent items-center justify-center"
+      :duration="20"
+      :delay="20"
+      :radius="80"
+    >
       <WhatsAppIcon />
     </Orbit>
-    <Orbit class="size-[30px] border-none bg-transparent" :duration="20" :delay="10" :radius="80">
+    <Orbit
+      class="size-[30px] border-none bg-transparent items-center justify-center"
+      :duration="20"
+      :delay="10"
+      :radius="80"
+    >
       <NotionIcon />
     </Orbit>
 
     <!-- Outer Circles (reverse) -->
     <Orbit
-      class="size-[50px] border-none bg-transparent"
+      class="size-[50px] border-none bg-transparent items-center justify-center"
       :radius="190"
       :duration="20"
-      :reverse="true"
+      reverse
     >
       <GoogleDriveIcon />
     </Orbit>
     <Orbit
-      class="size-[50px] border-none bg-transparent"
+      class="size-[50px] border-none bg-transparent items-center justify-center"
       :radius="190"
       :duration="20"
       :delay="200"
-      :reverse="true"
+      reverse
     >
       <GitHubIcon />
     </Orbit>
