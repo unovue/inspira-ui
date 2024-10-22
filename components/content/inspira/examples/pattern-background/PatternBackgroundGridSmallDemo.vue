@@ -4,7 +4,7 @@ import PatternBackground from '../../ui/pattern-background/PatternBackground.vue
 </script>
 
 <template>
-  <PatternBackground :animate="true" :direction="PATTERN_BACKGROUND_DIRECTION.TopRight" :variant="PATTERN_BACKGROUND_VARIANT.Grid" class="h-[36rem] w-full flex items-center justify-center" size="xs" :speed="PATTERN_BACKGROUND_SPEED.Slow">
+  <PatternBackground :animate="true" :direction="PATTERN_BACKGROUND_DIRECTION.Right" :variant="PATTERN_BACKGROUND_VARIANT.Grid" class="h-[36rem] w-full flex items-center justify-center" size="xs" :speed="PATTERN_BACKGROUND_SPEED.Slow">
     <p
       className="text-4xl sm:text-5xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8"
     >
