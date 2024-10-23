@@ -23,13 +23,13 @@ description: A cool grid layout with different child component.
 | ------------ | -------------------------------- |
 | `background` | Component to show in background. |
 
-| Props Name    | Type     | Description                          |
-| ------------- | -------- | ------------------------------------ |
-| `name`        | `string` | Name or title to show on card.       |
-| `icon`        | `string` | Icon component to show on card.      |
-| `description` | `string` | Description content to show on card. |
-| `href`        | `string` | Link to the url for CTA.             |
-| `cta`         | `string` | Text to show on CTA.                 |
+| Props Name    | Type      | Description                          |
+| ------------- | --------- | ------------------------------------ |
+| `name`        | `string`  | Name or title to show on card.       |
+| `icon`        | `?string` | Icon component to show on card.      |
+| `description` | `string`  | Description content to show on card. |
+| `href`        | `string`  | Link to the url for CTA.             |
+| `cta`         | `string`  | Text to show on CTA.                 |
 
 ## Examples
 
