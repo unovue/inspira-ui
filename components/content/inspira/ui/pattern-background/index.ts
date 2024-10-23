@@ -35,9 +35,9 @@ export const PATTERN_BACKGROUND_VARIANT = {
 } as const;
 
 export const PATTERN_BACKGROUND_SPEED = {
-  Default: "10s",
-  Slow: "25s",
-  Fast: "5s",
+  Default: 10000,
+  Slow: 25000,
+  Fast: 5000,
 } as const;
 
 export const patternBackgroundVariants = cva("relative overflow-clip", {

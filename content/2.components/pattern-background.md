@@ -23,16 +23,16 @@ Small grid background with animation
 
 ## API
 
-| Prop Name   | Type                                                                                     | Default   | Description                                                                                                                                                 |
-| ----------- | ---------------------------------------------------------------------------------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `animate`   | `boolean`                                                                                | false     | Set `true` if you want to animate the background.                                                                                                           |
-| `direction` | `top \| bottom \| left \| right \| top-left \| top-right \| bottom-left \| bottom-right` | `top`     | Direction of the animation movement. Use can use the variable `PATTERN_BACKGROUND_DIRECTION.<direction>`                                                    |
-| `direction` | `grid \| dot`                                                                            | `grid`    | Type of pattern. Use can use the variable `PATTERN_BACKGROUND_VARIANT.<variant>`                                                                            |
-| `size`      | `xs \| sm \| md \| lg`                                                                   | `md`      | Size of the background pattern.                                                                                                                             |
-| `mask`      | `ellipse \| ellipse-top`                                                                 | `ellipse` | Add a mask over the background pattern. Use can use the variable `PATTERN_BACKGROUND_MASK.<mask>`                                                           |
-| `speed`     | string                                                                                   | `10s`     | Duration of the animation, the bigger it is, the slower the animation. (`20s` slower than `5s`) Use can use the variable `PATTERN_BACKGROUND_SPEED.<speed>` |
+| Prop Name   | Type                                                                                                   | Default   | Description                                                                                                                                                         |
+| ----------- | ------------------------------------------------------------------------------------------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `animate`   | `boolean`                                                                                              | `false`   | Set `true` if you want to animate the background.                                                                                                                   |
+| `direction` | `top` \| `bottom` \| `left` \| `right` \| `top-left` \| `top-right` \| `bottom-left` \| `bottom-right` | `top`     | Direction of the animation movement. You can use the const `PATTERN_BACKGROUND_DIRECTION.<key>`                                                                     |
+| `direction` | `grid` \| `dot`                                                                                        | `grid`    | Type of pattern. You can use the const `PATTERN_BACKGROUND_VARIANT.<key>`                                                                                           |
+| `size`      | `xs` \| `sm` \| `md` \| `lg`                                                                           | `md`      | Size of the background pattern.                                                                                                                                     |
+| `mask`      | `ellipse` \| `ellipse-top`                                                                             | `ellipse` | Add a mask over the background pattern. You can use the const `PATTERN_BACKGROUND_MASK.<key>`                                                                       |
+| `speed`     | `number`                                                                                               | `10000`   | Duration of the animation in `ms`, the bigger it is, the slower the animation. (`20000` slower than `5000`). You can use the const `PATTERN_BACKGROUND_SPEED.<key>` |
 
-### Custom variants
+### Custom variants, values and constants
 
 You can customize your needs directly within the `index.ts` file. See code below.
 
