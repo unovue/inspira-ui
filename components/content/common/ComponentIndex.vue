@@ -12,7 +12,14 @@
             <NuxtLink :to="item._path">
               <div class="flex flex-row w-full items-center justify-center">
                 <div class="text-right mr-2">{{ index + 1 }}.</div>
-                <div class="font-heading">{{ item.title }}</div>
+                <div class="font-heading mr-2">{{ item.title }}</div>
+                <Badge
+                  v-for="badge in item.navBadges"
+                  :key="`${badge}_${item.title}_${index}`"
+                  :type="badge.type"
+                >
+                  {{ badge.value }}
+                </Badge>
                 <span class="flex flex-1"></span>
                 <span> View → </span>
               </div>
