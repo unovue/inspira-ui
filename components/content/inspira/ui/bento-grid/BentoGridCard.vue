@@ -56,7 +56,7 @@ interface Props {
   description: string;
   href: string;
   cta: string;
-};
+}
 
 const props = defineProps<Props>();
 </script>

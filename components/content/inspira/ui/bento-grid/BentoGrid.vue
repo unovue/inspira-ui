@@ -17,7 +17,7 @@ import type { HTMLAttributes } from "vue";
 
 interface Props {
   class?: HTMLAttributes["class"];
-};
+}
 
 const props = defineProps<Props>();
 </script>
