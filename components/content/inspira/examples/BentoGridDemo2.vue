@@ -6,8 +6,11 @@
       v-bind="feature"
       :class="feature.class"
     >
-      <template #background>
-        <img class="absolute -right-20 -top-20 opacity-60" />
+      <template #background v-if="feature.image">
+        <div
+          class="absolute top-0 right-0 size-full opacity-40 bg-center group-hover:opacity-20 transition duration-150 ease-in-out"
+          :style="`background-image: url('${feature.image}')`"
+        ></div>
       </template>
     </BentoGridCard>
   </BentoGrid>
@@ -21,6 +24,8 @@ const features = [
     name: "Save your files",
     description: "We automatically save your files as you type.",
     href: "/",
+    image:
+      "https://images.pexels.com/photos/2762083/pexels-photo-2762083.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     cta: "Learn more",
     class: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
   },
@@ -28,6 +33,8 @@ const features = [
     name: "Full text search",
     description: "Search through all your files in one place.",
     href: "/",
+    image:
+      "https://images.pexels.com/photos/1309766/pexels-photo-1309766.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     cta: "Learn more",
     class: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
   },
@@ -49,6 +56,8 @@ const features = [
     name: "Notifications",
     description: "Get notified when someone shares a file or mentions you in a comment.",
     href: "/",
+    image:
+      "https://images.pexels.com/photos/1682821/pexels-photo-1682821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     cta: "Learn more",
     class: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
   },

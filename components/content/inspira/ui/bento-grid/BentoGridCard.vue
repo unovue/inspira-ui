@@ -47,13 +47,16 @@
 
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
+import type { HTMLAttributes } from "vue";
 
-const props = defineProps<{
+interface Props {
   name: string;
-  class: string;
+  class?: HTMLAttributes["class"];
   icon?: string;
   description: string;
   href: string;
   cta: string;
-}>();
+}
+
+const props = defineProps<Props>();
 </script>
