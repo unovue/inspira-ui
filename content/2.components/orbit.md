@@ -1,6 +1,9 @@
 ---
 title: Orbit
 description: A component that animates content in a circular orbit, with customizable duration, delay, and radius. It also offers an optional orbit path display.
+navBadges:
+  - value: Updated
+    type: info
 ---
 
 ::ComponentLoader{label="Preview" componentName="OrbitDemo" type="examples"}  
@@ -8,19 +11,26 @@ description: A component that animates content in a circular orbit, with customi
 
 ## API
 
-| Prop Name  | Type      | Default | Description                                     |
-| ---------- | --------- | ------- | ----------------------------------------------- |
-| `reverse`  | `boolean` | `false` | Reverses the orbit direction if `true`.         |
-| `duration` | `number`  | `20`    | The duration of the orbit animation in seconds. |
-| `delay`    | `number`  | `10`    | Delay in seconds before the animation starts.   |
-| `radius`   | `number`  | `50`    | Radius of the orbit path in pixels.             |
-| `path`     | `boolean` | `true`  | Displays a circle path for the orbit if `true`. |
+| Prop Name   | Type                                                        | Default  | Description                                                                |
+| ----------- | ----------------------------------------------------------- | -------- | -------------------------------------------------------------------------- |
+| `direction` | `normal` \| `reverse` \| `alternate` \| `alternate-reverse` | `normal` | The direction of the orbit. You can use the constant ORBIT_DIRECTION.<key> |
+| `duration`  | `?number`                                                   | `20`     | The duration of the orbit animation in seconds.                            |
+| `delay`     | `?number`                                                   | `10`     | Delay in seconds before the animation starts.                              |
+| `radius`    | `?number`                                                   | `50`     | Radius of the orbit path in pixels.                                        |
+| `path`      | `?boolean`                                                  | `false`  | Displays a circle path for the orbit if `true`.                            |
 
 ## Component Code
 
 You can copy and paste the following code to create this component:
 
-::CodeViewer{filename="Orbit.vue" language="vue" componentName="Orbit" type="ui" id="orbit"}
+::code-group
+
+::CodeViewerTab{filename="Orbit.vue" language="vue" componentName="Orbit" type="ui" id="orbit"}
+::
+
+::CodeViewerTab{filename="index.ts" language="typescript" componentName="index" type="ui" id="orbit" extension="ts"}
+::
+
 ::
 
 ## Features
@@ -30,10 +40,11 @@ You can copy and paste the following code to create this component:
 
 - **Optional Orbit Path**: An optional visual representation of the orbit path can be toggled using the `path` prop.
 
-- **Reversibility**: The orbit direction can be reversed by setting the `reverse` prop to `true`.
+- **Reversibility**: The orbit direction can be `reverse` or `alternate` by setting the `direction` prop.
 
 - **Responsive and Efficient**: The component handles different container sizes and uses Vue’s reactivity to ensure efficient animation.
 
 ## Credits
 
 - Inspired by [Magic UI](https://magicui.design/docs/components/orbiting-circles).
+- Credits to [Nathan De Pachtere](https://nathandepachtere.com/) for updating this component.

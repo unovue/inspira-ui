@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import MessengerIcon from '../../common/icons/MessengerIcon.vue';
+import { ORBIT_DIRECTION } from '../ui/orbit';
+</script>
+
 <template>
   <div
     class="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
@@ -14,6 +19,7 @@
       :duration="20"
       :delay="20"
       :radius="80"
+      :direction="ORBIT_DIRECTION.Reverse"
     >
       <WhatsAppIcon />
     </Orbit>
@@ -22,6 +28,8 @@
       :duration="20"
       :delay="10"
       :radius="80"
+      path
+      :direction="ORBIT_DIRECTION.Reverse"
     >
       <NotionIcon />
     </Orbit>
@@ -31,7 +39,7 @@
       class="size-[50px] border-none bg-transparent items-center justify-center"
       :radius="190"
       :duration="20"
-      reverse
+      path
     >
       <GoogleDriveIcon />
     </Orbit>
@@ -40,9 +48,16 @@
       :radius="190"
       :duration="20"
       :delay="200"
-      reverse
+      :direction="ORBIT_DIRECTION.Reverse"
     >
       <GitHubIcon />
+    </Orbit>
+    <Orbit
+      class="size-[30px] border-none bg-transparent items-center justify-center"
+      :radius="140"
+      :delay="4"
+    >
+      <MessengerIcon />
     </Orbit>
   </div>
 </template>

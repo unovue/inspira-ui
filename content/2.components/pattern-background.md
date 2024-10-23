@@ -58,4 +58,4 @@ You can copy and paste the following code to create these components (put them u
 - Inspired by [Magic UI's Dot Pattern](https://magicui.design/docs/components/dot-pattern) component.
 - Inspired by [Magic UI's Grid Pattern](https://magicui.design/docs/components/grid-pattern) component.
 - Inspired by [Magic UI's Animated Grid Pattern](https://magicui.design/docs/components/animated-grid-pattern) component.
-- Credits to [Nathan De Pachtere](https://github.com/nathan-de-pachtere) for porting this component.
+- Credits to [Nathan De Pachtere](https://nathandepachtere.com/) for porting this component.
