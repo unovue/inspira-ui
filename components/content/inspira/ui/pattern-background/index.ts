@@ -70,7 +70,7 @@ export const PATTERN_BACKGROUND_MASK = {
   EllipseTop: "ellipse-top",
 } as const;
 
-export const patternBackgroundMaskVariants = cva('bg-background', {
+export const patternBackgroundMaskVariants = cva("bg-background", {
   variants: {
     mask: {
       [PATTERN_BACKGROUND_MASK.Ellipse]:

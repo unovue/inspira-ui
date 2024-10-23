@@ -11,21 +11,19 @@ navBadges:
 
 ## API
 
-| Prop Name  | Type     | Default  | Description                                          |
-| ---------- | -------- | -------- | ---------------------------------------------------- |
+| Prop Name  | Type     | Default     | Description                                          |
+| ---------- | -------- | ----------- | ---------------------------------------------------- |
 | `color`    | `string` | `"#5046e6"` | Background color of the reveal box.                  |
-| `duration` | `number` | `0.5`    | Duration of the reveal animation in seconds.         |
-| `delay`    | `number` | `0.25`   | Delay before the reveal animation starts in seconds. |
-| `class`    | `string` | `""`     | Additional CSS classes for custom styling.           |
+| `duration` | `number` | `0.5`       | Duration of the reveal animation in seconds.         |
+| `delay`    | `number` | `0.25`      | Delay before the reveal animation starts in seconds. |
+| `class`    | `string` | `""`        | Additional CSS classes for custom styling.           |
 
 ## Component Code
 
 You can copy and paste the following code to create this component:
 
-
 ::CodeViewer{filename="BoxReveal.vue" language="vue" componentName="BoxReveal" type="ui" id="box-reveal"}
 ::
-
 
 ## Features
 
