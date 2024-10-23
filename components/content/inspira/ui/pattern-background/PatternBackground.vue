@@ -39,7 +39,7 @@ const props = withDefaults(defineProps<Props>(), {
   mask: undefined,
 });
 
-const durationFormSpeed = computed(() => `${props.speed}ms`)
+const durationFormSpeed = computed(() => `${props.speed}ms`);
 </script>
 
 <style scoped>
