@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import MessengerIcon from '../../common/icons/MessengerIcon.vue';
 import { ORBIT_DIRECTION } from '../ui/orbit';
 </script>
 

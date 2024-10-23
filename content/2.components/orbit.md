@@ -9,6 +9,13 @@ navBadges:
 ::ComponentLoader{label="Preview" componentName="OrbitDemo" type="examples"}  
 ::
 
+## Examples
+
+Synchronized orbit
+
+::ComponentLoader{label="Preview" componentName="OrbitDemoSynchronized" type="examples"}  
+::
+
 ## API
 
 | Prop Name   | Type                                                        | Default  | Description                                                                |
