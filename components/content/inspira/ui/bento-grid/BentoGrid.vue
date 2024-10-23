@@ -15,8 +15,8 @@
 import { cn } from "@/lib/utils";
 import type { HTMLAttributes } from "vue";
 
-type Props = {
-  class: HTMLAttributes["class"];
+interface Props {
+  class?: HTMLAttributes["class"];
 };
 
 const props = defineProps<Props>();

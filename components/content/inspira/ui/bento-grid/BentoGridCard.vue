@@ -49,9 +49,9 @@
 import { cn } from "@/lib/utils";
 import type { HTMLAttributes } from "vue";
 
-type Props = {
+interface Props {
   name: string;
-  class: HTMLAttributes["class"];
+  class?: HTMLAttributes["class"];
   icon?: string;
   description: string;
   href: string;
