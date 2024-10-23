@@ -38,6 +38,8 @@ const props = withDefaults(defineProps<Props>(), {
   size: undefined,
   mask: undefined,
 });
+
+const durationFormSpeed = computed(() => `${props.speed}ms`)
 </script>
 
 <style scoped>
@@ -107,7 +109,7 @@ const props = withDefaults(defineProps<Props>(), {
 }
 
 .move {
-  animation-duration: v-bind(speed);
+  animation-duration: v-bind(durationFormSpeed);
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
