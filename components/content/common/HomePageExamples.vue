@@ -7,16 +7,28 @@
   <div
     class="flex max-w-7xl w-full lg:flex-row flex-col items-center justify-center flex-wrap p-4 gap-4"
   >
-    <DotBackground class="py-8 px-4 border rounded-lg flex flex-col gap-4 h-fit">
+    <PatternBackground
+      :animate="true"
+      :direction="PATTERN_BACKGROUND_DIRECTION.TopRight"
+      :variant="PATTERN_BACKGROUND_VARIANT.Dot"
+      class="w-full items-center py-8 px-4 border rounded-lg flex flex-col gap-4 h-fit"
+      :speed="PATTERN_BACKGROUND_SPEED.Slow"
+    >
       <h3
         class="text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8"
       >
         3D Card Hover Effect
       </h3>
       <CardDemo2 />
-    </DotBackground>
+    </PatternBackground>
 
-    <DotBackground class="py-8 px-4 border rounded-lg flex flex-col h-fit">
+    <PatternBackground
+      :animate="true"
+      :direction="PATTERN_BACKGROUND_DIRECTION.TopRight"
+      :variant="PATTERN_BACKGROUND_VARIANT.Dot"
+      class="w-full items-center py-8 px-4 border rounded-lg flex flex-col gap-4 h-fit"
+      :speed="PATTERN_BACKGROUND_SPEED.Slow"
+    >
       <h3
         class="text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8"
       >
@@ -24,15 +36,29 @@
       </h3>
       <p>Hover below to reveal text</p>
       <TextHoverEffectDemo />
-    </DotBackground>
+    </PatternBackground>
 
-    <DotBackground class="py-8 px-4 border rounded-lg flex flex-col gap-4 h-fit">
+    <PatternBackground
+      :animate="true"
+      :direction="PATTERN_BACKGROUND_DIRECTION.TopRight"
+      :variant="PATTERN_BACKGROUND_VARIANT.Dot"
+      class="w-full items-center py-8 px-4 border rounded-lg flex flex-col gap-4 h-fit"
+      :speed="PATTERN_BACKGROUND_SPEED.Slow"
+    >
       <h3
         class="text-3xl font-bold relative z-20 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500 py-8"
       >
         Radiant Text
       </h3>
       <RadiantTextDemo />
-    </DotBackground>
+    </PatternBackground>
   </div>
 </template>
+
+<script lang="ts" setup>
+import {
+  PATTERN_BACKGROUND_DIRECTION,
+  PATTERN_BACKGROUND_SPEED,
+  PATTERN_BACKGROUND_VARIANT,
+} from "../inspira/ui/pattern-background";
+</script>

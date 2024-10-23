@@ -4,7 +4,6 @@ import {
   PATTERN_BACKGROUND_SPEED,
   PATTERN_BACKGROUND_VARIANT,
 } from "../../ui/pattern-background";
-import PatternBackground from "../../ui/pattern-background/PatternBackground.vue";
 </script>
 
 <template>

@@ -1,6 +1,9 @@
 ---
 title: Pattern Background
 description: Simple animated pattern background to make your sections stand out.
+navBadges:
+  - value: Updated
+    type: info
 ---
 
 Grid background with dot
