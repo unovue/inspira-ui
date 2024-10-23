@@ -53,11 +53,11 @@ import { ORBIT_DIRECTION } from '../ui/orbit';
       <GitHubIcon />
     </Orbit>
     <Orbit
-      class="size-[30px] border-none bg-transparent items-center justify-center"
+      class="text-4xl border-none bg-transparent items-center justify-center"
       :radius="140"
       :delay="4"
     >
-      <MessengerIcon />
+    🌕
     </Orbit>
   </div>
 </template>
