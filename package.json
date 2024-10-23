@@ -25,7 +25,8 @@
     "three": "^0.169.0",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5",
-    "vue-use-spring": "^0.3.3"
+    "vue-use-spring": "^0.3.3",
+    "class-variance-authority": "^0.7.0"
   },
   "devDependencies": {
     "@iconify-json/vscode-icons": "^1.2.2",

@@ -39,17 +39,22 @@ const props = defineProps({
     type: Array as () => number[],
     default: () => [],
   },
+  extension: {
+    type: String,
+    default: "vue",
+  },
 });
 
 // Create a map of all possible components using import.meta.glob
-const rawComponents = import.meta.glob("../inspira/**/*.vue", {
+const rawComponents = import.meta.glob(`../inspira/**/*.{vue,ts,js,d.ts}`, {
   query: "?raw",
   import: "default",
 });
 
 // Compute the component path based on props
 const componentPath = computed(
-  () => `../inspira/${props.type}/${props.id ? props.id + "/" : ""}${props.componentName}.vue`,
+  () =>
+    `../inspira/${props.type}/${props.id ? props.id + "/" : ""}${props.componentName}.${props.extension}`,
 );
 
 // Load and process the component code on mount
