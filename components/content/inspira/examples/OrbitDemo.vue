@@ -1,16 +1,12 @@
 <script setup lang="ts">
-import { ORBIT_DIRECTION } from '../ui/orbit';
+import { ORBIT_DIRECTION } from "../ui/orbit";
 </script>
 
 <template>
   <div
     class="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
   >
-    <span
-      class="pointer-events-none text-center text-8xl font-semibold leading-none"
-    >
-      🌍
-    </span>
+    <span class="pointer-events-none text-center text-8xl font-semibold leading-none"> 🌍 </span>
 
     <!-- Inner Circles -->
     <Orbit
@@ -56,7 +52,7 @@ import { ORBIT_DIRECTION } from '../ui/orbit';
       :radius="140"
       :delay="4"
     >
-    🌕
+      🌕
     </Orbit>
   </div>
 </template>
