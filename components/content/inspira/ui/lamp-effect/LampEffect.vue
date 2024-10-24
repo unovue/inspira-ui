@@ -10,13 +10,10 @@
     <div class="relative flex w-full flex-1 scale-y-125 items-center justify-center isolate z-0">
       <!-- Conic Gradient -->
       <div
-        v-motion
-        :initial="conicGradientInitial"
-        :visible="conicGradientAnimate"
         :style="{
           backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
         }"
-        class="absolute inset-auto right-1/2 h-56 overflow-visible w-[30rem] bg-gradient-conic from-cyan-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]"
+        class="animate-conic-gradient absolute inset-auto right-1/2 h-56 overflow-visible w-[15rem] bg-gradient-conic from-cyan-500 via-transparent to-transparent text-white [--conic-position:from_70deg_at_center_top]"
       >
         <div
           class="absolute w-[100%] left-0 bg-slate-950 h-40 bottom-0 z-20 [mask-image:linear-gradient(to_top,white,transparent)]"
@@ -27,12 +24,10 @@
       </div>
 
       <div
-        :initial="conicGradientInitial"
-        :visible="conicGradientAnimate"
         :style="{
           backgroundImage: `conic-gradient(var(--conic-position), var(--tw-gradient-stops))`,
         }"
-        class="absolute inset-auto left-1/2 h-56 w-[30rem] bg-gradient-conic from-transparent via-transparent to-cyan-500 text-white [--conic-position:from_290deg_at_center_top]"
+        class="animate-conic-gradient absolute inset-auto left-1/2 h-56 w-[15rem] bg-gradient-conic from-transparent via-transparent to-cyan-500 text-white [--conic-position:from_290deg_at_center_top]"
       >
         <div
           class="absolute w-40 h-[100%] right-0 bg-slate-950 bottom-0 z-20 [mask-image:linear-gradient(to_left,white,transparent)]"
@@ -56,18 +51,12 @@
 
       <!-- Spotlight -->
       <div
-        v-motion
-        :initial="spotLightInitial"
-        :visible="spotLightAnimate"
-        class="absolute inset-auto z-30 h-36 w-64 -translate-y-[6rem] rounded-full bg-cyan-400 blur-2xl"
+        class="animate-spotlight absolute inset-auto z-30 h-36 w-32 -translate-y-[6rem] rounded-full bg-cyan-400 blur-2xl"
       ></div>
 
       <!-- Glowing Line -->
       <div
-        v-motion
-        :initial="glowingLineInitial"
-        :visible="glowingLineAnimate"
-        class="absolute inset-auto z-50 h-0.5 w-[30rem] -translate-y-[7rem] bg-red-400"
+        class="animate-glowing-line absolute inset-auto z-50 h-0.5 w-[15rem] -translate-y-[7rem] bg-cyan-400"
       ></div>
 
       <div class="absolute inset-auto z-40 h-44 w-full -translate-y-[12.5rem] bg-slate-950"></div>
@@ -80,7 +69,6 @@
 </template>
 
 <script lang="ts" setup>
-import type { Variant } from "@vueuse/motion";
 import type { HTMLAttributes } from "vue";
 import { cn } from "~/lib/utils";
 
@@ -95,36 +83,58 @@ const props = withDefaults(defineProps<LampEffectProps>(), {
   duration: 0.8,
 });
 
-const conicGradientInitial: Variant = { opacity: 0.5, width: "15rem" };
-
-const conicGradientAnimate: Variant = {
-  opacity: 1,
-  width: "30rem",
-  transition: {
-    delay: props.delay * 1000,
-    duration: props.duration * 1000,
-    ease: "easeInOut",
-  },
-};
-
-const spotLightInitial: Variant = { width: "8rem" };
-const spotLightAnimate: Variant = {
-  width: "16rem",
-  transition: {
-    delay: props.delay * 1000,
-    duration: props.duration * 1000,
-    ease: "easeInOut",
-  },
-};
-
-const glowingLineInitial: Variant = { width: "15rem" };
-const glowingLineAnimate: Variant = {
-  translate: "none",
-  width: "30rem",
-  transition: {
-    delay: props.delay * 1000,
-    duration: props.duration * 1000,
-    ease: "easeInOut",
-  },
-};
+const durationInSeconds = computed(() => `${props.duration}s`);
+const delayInSeconds = computed(() => `${props.delay}s`);
 </script>
+
+<style scoped>
+/* Spotlight Animation */
+.animate-spotlight {
+  animation: spotlight-anim ease-in-out v-bind(durationInSeconds) forwards;
+  animation-delay: v-bind(delayInSeconds);
+}
+
+/* Glowing Line Animation */
+.animate-glowing-line {
+  animation: glowing-line-anim ease-in-out v-bind(durationInSeconds) forwards;
+  animation-delay: v-bind(delayInSeconds);
+}
+
+/* Conic Gradient Animation */
+.animate-conic-gradient {
+  animation: conic-gradient-anim ease-in-out v-bind(durationInSeconds) forwards;
+  animation-delay: v-bind(delayInSeconds);
+}
+
+/* Keyframes for Spotlight */
+@keyframes spotlight-anim {
+  from {
+    width: 8rem;
+  }
+  to {
+    width: 16rem;
+  }
+}
+
+/* Keyframes for Glowing Line */
+@keyframes glowing-line-anim {
+  from {
+    width: 15rem;
+  }
+  to {
+    width: 30rem;
+  }
+}
+
+/* Keyframes for Conic Gradient */
+@keyframes conic-gradient-anim {
+  from {
+    opacity: 0.5;
+    width: 15rem;
+  }
+  to {
+    opacity: 1;
+    width: 30rem;
+  }
+}
+</style>
