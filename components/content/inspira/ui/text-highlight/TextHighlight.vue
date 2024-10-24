@@ -49,6 +49,6 @@ span {
   background-position: left center;
   animation:
     background-expand v-bind(durationMs) ease-in-out v-bind(delayMs) forwards,
-    textColor v-bind(durationMs) ease-in-out v-bind(delayMs) forwards;
+    text-color-change v-bind(durationMs) ease-in-out v-bind(delayMs) forwards;
 }
 </style>
