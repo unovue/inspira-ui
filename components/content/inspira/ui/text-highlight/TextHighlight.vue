@@ -1,20 +1,27 @@
 <template>
-  <span
-    :class="cn('relative inline-block pb-1 px-2 rounded-lg', props.class)"
-    >{{ text }}</span
-  >
+  <span :class="cn('inline-block px-1 pb-1', props.class)"><slot /></span>
 </template>
 
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue';
-import { cn } from '@/lib/utils';
+import type { HTMLAttributes } from "vue";
+import { cn } from "@/lib/utils";
 
 interface Props {
-  text: string;
-  class: HTMLAttributes['class'];
+  delay?: number;
+  duration?: number;
+  class?: HTMLAttributes["class"];
+  textEndColor?: string;
 }
 
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  delay: 0,
+  duration: 2000,
+  class: undefined,
+  endColor: "inherit",
+});
+
+const delayMs = computed(() => `${props.delay}ms`);
+const durationMs = computed(() => `${props.duration}ms`);
 </script>
 
 <style scoped>
@@ -27,10 +34,21 @@ const props = defineProps<Props>();
   }
 }
 
+@keyframes textColor {
+  0% {
+    color: inherit;
+  }
+  100% {
+    color: v-bind(textEndColor);
+  }
+}
+
 span {
   background-size: 0% 100%;
   background-repeat: no-repeat;
   background-position: left center;
-  animation: backgroundExpand ease-in-out 2s forwards;
+  animation:
+    backgroundExpand v-bind(durationMs) ease-in-out v-bind(delayMs) forwards,
+    textColor v-bind(durationMs) ease-in-out v-bind(delayMs) forwards;
 }
 </style>
