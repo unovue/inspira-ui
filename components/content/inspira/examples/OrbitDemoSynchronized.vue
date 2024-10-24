@@ -14,9 +14,10 @@ function switchDirection() {
 </script>
 
 <template>
-  <div class="flex flex-row items-centers justify-center p-4 w-full">
+  <div class="flex flex-row items-center justify-between py-4 w-full">
+    <p> {{ `Current direction : ${ORBIT_DIRECTION.Clockwise === direction ? "Clockwise": "CounterClockwise"}`  }}</p>
     <UiButton @click="switchDirection">{{
-      ORBIT_DIRECTION.Clockwise === direction ? "Reverse" : "Normal"
+      `Switch to : ${ORBIT_DIRECTION.Clockwise === direction ? "CounterClockwise" : "Clockwise"}`
     }}</UiButton>
   </div>
   <div

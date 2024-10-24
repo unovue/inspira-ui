@@ -1,8 +1,8 @@
 import type { ObjectValues } from "@/lib/utils";
 
 export const ORBIT_DIRECTION = {
-  Clockwise: "reverse",
-  CounterClockwise: "normal",
+  Clockwise: "normal",
+  CounterClockwise: "reverse",
 } as const;
 
 export type OrbitDirection = ObjectValues<typeof ORBIT_DIRECTION>;
