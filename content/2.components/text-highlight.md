@@ -6,29 +6,29 @@ navBadges:
     type: lime
 ---
 
-::ComponentLoader{label="Preview" componentName="TextHighlightDemo" type="examples"}
+::ComponentLoader{label="Preview" componentName="TextHighlightDemo" type="examples" id="text-highlight"}
 ::
 
 ## Examples
 
 With 3s delay
 
-::ComponentLoader{label="Preview" componentName="TextHighlightDemoDelayed" type="examples"}
+::ComponentLoader{label="Preview" componentName="TextHighlightDemoDelayed" type="examples" id="text-highlight"}
 ::
 
 Rounded text background
 
-::ComponentLoader{label="Preview" componentName="TextHighlightDemoRounded" type="examples"}
+::ComponentLoader{label="Preview" componentName="TextHighlightDemoRounded" type="examples" id="text-highlight"}
 ::
 
 Color from CSS variables: use the paintbrush icon in the top right corner to change the color.
 
-::ComponentLoader{label="Preview" componentName="TextHighlightDemoColorsFromCssVariable" type="examples"}
+::ComponentLoader{label="Preview" componentName="TextHighlightDemoColorsFromCssVariable" type="examples" id="text-highlight"}
 ::
 
 With text color change.
 
-::ComponentLoader{label="Preview" componentName="TextHighlightDemoTextColorChange" type="examples"}
+::ComponentLoader{label="Preview" componentName="TextHighlightDemoTextColorChange" type="examples" id="text-highlight"}
 ::
 
 ## API
