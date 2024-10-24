@@ -25,7 +25,7 @@ const durationMs = computed(() => `${props.duration}ms`);
 </script>
 
 <style scoped>
-@keyframes backgroundExpand {
+@keyframes background-expand {
   0% {
     background-size: 0% 100%;
   }
@@ -48,7 +48,7 @@ span {
   background-repeat: no-repeat;
   background-position: left center;
   animation:
-    backgroundExpand v-bind(durationMs) ease-in-out v-bind(delayMs) forwards,
+    background-expand v-bind(durationMs) ease-in-out v-bind(delayMs) forwards,
     textColor v-bind(durationMs) ease-in-out v-bind(delayMs) forwards;
 }
 </style>
