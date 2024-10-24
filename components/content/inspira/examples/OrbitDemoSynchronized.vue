@@ -1,22 +1,22 @@
 <script setup lang="ts">
 import { ORBIT_DIRECTION, type OrbitDirection } from "../ui/orbit";
 
-const direction = ref<OrbitDirection>(ORBIT_DIRECTION.Normal);
+const direction = ref<OrbitDirection>(ORBIT_DIRECTION.Clockwise);
 
 function switchDirection() {
-  if (ORBIT_DIRECTION.Normal === direction.value) {
-    direction.value = ORBIT_DIRECTION.Reverse;
+  if (ORBIT_DIRECTION.Clockwise === direction.value) {
+    direction.value = ORBIT_DIRECTION.CounterClockwise;
     return;
   }
 
-  direction.value = ORBIT_DIRECTION.Normal;
+  direction.value = ORBIT_DIRECTION.Clockwise;
 }
 </script>
 
 <template>
   <div class="flex flex-row items-centers justify-center p-4 w-full">
     <UiButton @click="switchDirection">{{
-      ORBIT_DIRECTION.Normal === direction ? "Reverse" : "Normal"
+      ORBIT_DIRECTION.Clockwise === direction ? "Reverse" : "Normal"
     }}</UiButton>
   </div>
   <div

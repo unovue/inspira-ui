@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 import { ORBIT_DIRECTION, type Props } from ".";
 
 const props = withDefaults(defineProps<Props>(), {
-  direction: () => ORBIT_DIRECTION.Normal,
+  direction: () => ORBIT_DIRECTION.Clockwise,
   duration: 20,
   delay: 10,
   radius: 50,

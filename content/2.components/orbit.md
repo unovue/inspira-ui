@@ -18,13 +18,13 @@ Synchronized orbit
 
 ## API
 
-| Prop Name   | Type                                                        | Default  | Description                                                                |
-| ----------- | ----------------------------------------------------------- | -------- | -------------------------------------------------------------------------- |
-| `direction` | `normal` \| `reverse` \| `alternate` \| `alternate-reverse` | `normal` | The direction of the orbit. You can use the constant ORBIT_DIRECTION.<key> |
-| `duration`  | `?number`                                                   | `20`     | The duration of the orbit animation in seconds.                            |
-| `delay`     | `?number`                                                   | `10`     | Delay in seconds before the animation starts.                              |
-| `radius`    | `?number`                                                   | `50`     | Radius of the orbit path in pixels.                                        |
-| `path`      | `?boolean`                                                  | `false`  | Displays a circle path for the orbit if `true`.                            |
+| Prop Name   | Type                  | Default  | Description                                                           |
+| ----------- | --------------------- | -------- | --------------------------------------------------------------------- |
+| `direction` | `normal` \| `reverse` | `normal` | The direction of the orbit. You can use the constant ORBIT_DIRECTION. |
+| `duration`  | `?number`             | `20`     | The duration of the orbit animation in seconds.                       |
+| `delay`     | `?number`             | `10`     | Delay in seconds before the animation starts.                         |
+| `radius`    | `?number`             | `50`     | Radius of the orbit path in pixels.                                   |
+| `path`      | `?boolean`            | `false`  | Displays a circle path for the orbit if `true`.                       |
 
 ## Component Code
 
@@ -47,7 +47,7 @@ You can copy and paste the following code to create this component:
 
 - **Optional Orbit Path**: An optional visual representation of the orbit path can be toggled using the `path` prop.
 
-- **Reversibility**: The orbit direction can be `reverse` or `alternate` by setting the `direction` prop.
+- **Reversibility**: The orbit direction can be `reverse` by setting the `direction` prop.
 
 - **Responsive and Efficient**: The component handles different container sizes and uses Vue’s reactivity to ensure efficient animation.
 

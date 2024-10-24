@@ -14,7 +14,7 @@ import { ORBIT_DIRECTION } from "../ui/orbit";
       :duration="20"
       :delay="20"
       :radius="80"
-      :direction="ORBIT_DIRECTION.Reverse"
+      :direction="ORBIT_DIRECTION.CounterClockwise"
     >
       <WhatsAppIcon />
     </Orbit>
@@ -24,7 +24,7 @@ import { ORBIT_DIRECTION } from "../ui/orbit";
       :delay="10"
       :radius="80"
       path
-      :direction="ORBIT_DIRECTION.Reverse"
+      :direction="ORBIT_DIRECTION.CounterClockwise"
     >
       <NotionIcon />
     </Orbit>
@@ -43,7 +43,7 @@ import { ORBIT_DIRECTION } from "../ui/orbit";
       :radius="190"
       :duration="20"
       :delay="200"
-      :direction="ORBIT_DIRECTION.Reverse"
+      :direction="ORBIT_DIRECTION.CounterClockwise"
     >
       <GitHubIcon />
     </Orbit>
