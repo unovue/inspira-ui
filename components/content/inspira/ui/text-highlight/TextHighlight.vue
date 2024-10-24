@@ -34,7 +34,7 @@ const durationMs = computed(() => `${props.duration}ms`);
   }
 }
 
-@keyframes textColor {
+@keyframes text-color-change {
   0% {
     color: inherit;
   }
