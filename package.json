@@ -16,17 +16,17 @@
     "@vueuse/core": "^11.1.0",
     "@vueuse/motion": "^2.2.6",
     "canvas-confetti": "^1.9.3",
+    "class-variance-authority": "^0.7.0",
     "cobe": "^0.6.3",
     "highlight.js": "^11.10.0",
     "nuxt": "^3.13.2",
     "nuxt-gtag": "^3.0.1",
     "postprocessing": "^6.36.3",
-    "shadcn-docs-nuxt": "^0.6.5",
+    "shadcn-docs-nuxt": "^0.7.0",
     "three": "^0.169.0",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5",
-    "vue-use-spring": "^0.3.3",
-    "class-variance-authority": "^0.7.0"
+    "vue-use-spring": "^0.3.3"
   },
   "devDependencies": {
     "@iconify-json/vscode-icons": "^1.2.2",
