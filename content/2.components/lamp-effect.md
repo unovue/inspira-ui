@@ -1,9 +1,6 @@
 ---
 title: Lamp Effect
 description: A captivating lamp lighting effect with conic gradients, spotlights, and glowing lines for an immersive visual experience.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="LampEffectDemo" type="examples"}
