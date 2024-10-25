@@ -2,7 +2,7 @@
   <button
     :class="
       cn(
-        'relative flex items-center justify-center min-w-28 min-h-12 overflow-hidden before:absolute before:-inset-[200%] animate-rainbow rainbow-btn',
+        'relative flex items-center justify-center min-w-28 min-h-10 overflow-hidden before:absolute before:-inset-[200%] animate-rainbow rainbow-btn',
         props.class,
       )
     "
@@ -66,8 +66,6 @@ const blurPx = computed(() => `${props.blur}px`);
 }
 
 .btn-content {
-  min-height: inherit;
-  min-width: inherit;
   border-radius: v-bind(borderRadiusInPx);
   background-color: v-bind(bgColor);
   z-index: 0;
