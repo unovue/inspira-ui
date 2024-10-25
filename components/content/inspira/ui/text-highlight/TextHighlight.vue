@@ -16,7 +16,6 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   delay: 0,
   duration: 2000,
-  class: undefined,
   endColor: "inherit",
 });
 

@@ -46,7 +46,7 @@ You can copy and paste the following code to create this component:
 ::CodeViewer{filename="TextHighlight.vue" language="vue" componentName="TextHighlight" type="ui" id="text-highlight"}
 ::
 
-## CREDITS
+## Credits
 
 - Inspired by [Aceternity UI](https://ui.aceternity.com/components/hero-highlight)
 - Credits to [Nathan De Pachtere](https://nathandepachtere.com) for porting this component.
