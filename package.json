@@ -24,6 +24,7 @@
     "postprocessing": "^6.36.3",
     "shadcn-docs-nuxt": "^0.7.0",
     "three": "^0.169.0",
+    "three-globe": "^2.33.0",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5",
     "vue-use-spring": "^0.3.3"
