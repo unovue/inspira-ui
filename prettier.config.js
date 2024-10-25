@@ -6,4 +6,5 @@ export default {
   useTabs: true,
   trailingComma: 'all',
   arrowParens: 'always',
+  vueIndentScriptAndStyle: false,
 }
