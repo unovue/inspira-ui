@@ -11,11 +11,11 @@ navBadges:
 
 ## API
 
-| Prop Name  | Type     | Default  | Description                                          |
-| ---------- | -------- | -------- | ---------------------------------------------------- |
-| `delay`    | `number` | `0.5`    | Delay before the animation starts, in seconds.       |
-| `duration` | `number` | `0.8`    | Duration of the animation, in seconds.               |
-| `class`    | `string` | `""`     | Additional CSS classes for custom styling.           |
+| Prop Name  | Type     | Default | Description                                    |
+| ---------- | -------- | ------- | ---------------------------------------------- |
+| `delay`    | `number` | `0.5`   | Delay before the animation starts, in seconds. |
+| `duration` | `number` | `0.8`   | Duration of the animation, in seconds.         |
+| `class`    | `string` | `""`    | Additional CSS classes for custom styling.     |
 
 ## Component Code
 
