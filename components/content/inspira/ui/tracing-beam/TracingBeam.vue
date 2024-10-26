@@ -1,5 +1,8 @@
 <template>
-  <div ref="tracingBeamRef" :class="cn('relative w-full max-w-4xl mx-auto h-full', $props.class)">
+  <div
+    ref="tracingBeamRef"
+    :class="cn('relative w-full max-w-4xl mx-auto h-full', $props.class)"
+  >
     <div class="absolute -left-4 md:-left-12 top-3">
       <div
         :style="{
@@ -44,10 +47,20 @@
             :y1="spring.y1"
             :y2="spring.y2"
           >
-            <stop stop-color="#18CCFC" stop-opacity="0"></stop>
+            <stop
+              stop-color="#18CCFC"
+              stop-opacity="0"
+            ></stop>
             <stop stop-color="#18CCFC"></stop>
-            <stop offset="0.325" stop-color="#6344F5"></stop>
-            <stop offset="1" stop-color="#AE48FF" stop-opacity="0"></stop>
+            <stop
+              offset="0.325"
+              stop-color="#6344F5"
+            ></stop>
+            <stop
+              offset="1"
+              stop-color="#AE48FF"
+              stop-opacity="0"
+            ></stop>
           </linearGradient>
         </defs>
       </svg>

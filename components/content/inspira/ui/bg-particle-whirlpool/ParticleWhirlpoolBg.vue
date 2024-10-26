@@ -1,6 +1,12 @@
 <template>
-  <div ref="whirlpoolCanvasContainerRef" :class="cn('relative w-full h-full', $props.class)">
-    <canvas ref="whirlpoolCanvasRef" class="w-full h-full"></canvas>
+  <div
+    ref="whirlpoolCanvasContainerRef"
+    :class="cn('relative w-full h-full', $props.class)"
+  >
+    <canvas
+      ref="whirlpoolCanvasRef"
+      class="w-full h-full"
+    ></canvas>
     <div
       :style="{
         '--bubbles-blur': `${blur}px`,

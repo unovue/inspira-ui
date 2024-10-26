@@ -1,5 +1,8 @@
 <template>
-  <canvas ref="starsCanvas" :class="cn('absolute inset-0 w-full h-full', $props.class)"></canvas>
+  <canvas
+    ref="starsCanvas"
+    :class="cn('absolute inset-0 w-full h-full', $props.class)"
+  ></canvas>
 </template>
 
 <script setup lang="ts">

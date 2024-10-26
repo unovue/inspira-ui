@@ -8,7 +8,12 @@
       >
         Border Beam
       </span>
-      <BorderBeam :size="250" :duration="12" :delay="9" :border-width="2" />
+      <BorderBeam
+        :size="250"
+        :duration="12"
+        :delay="9"
+        :border-width="2"
+      />
     </div>
   </ClientOnly>
 </template>

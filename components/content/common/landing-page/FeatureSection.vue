@@ -9,7 +9,11 @@
           class="max-w-96 relative shadow-xl backdrop-blur-md border-zinc-200 dark:bg-zinc-900/50 border dark:border-zinc-800 px-6 py-8 max-h-64 h-screen overflow-hidden rounded-2xl flex flex-col justify-start items-start"
           :gradientColor="isDark ? '#262626' : '#E9E9E9'"
         >
-          <SmartIcon :name="feature.icon || 'lucide:rocket'" class="mb-2" :size="22" />
+          <SmartIcon
+            :name="feature.icon || 'lucide:rocket'"
+            class="mb-2"
+            :size="22"
+          />
           <h3 class="font-bold text-xl dark:text-white mb-4 relative z-50">
             {{ feature.title }}
           </h3>

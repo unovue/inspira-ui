@@ -1,5 +1,8 @@
 <template>
-  <svg :class="cn('animate-spin h-5 w-5', $props.class)" viewBox="0 0 24 24">
+  <svg
+    :class="cn('animate-spin h-5 w-5', $props.class)"
+    viewBox="0 0 24 24"
+  >
     <circle
       class="opacity-25"
       cx="12"

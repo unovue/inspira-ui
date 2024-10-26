@@ -41,7 +41,10 @@
       >
         <slot name="revealText" />
 
-        <TextRevealStars :starsCount :starsClass />
+        <TextRevealStars
+          :starsCount
+          :starsClass
+        />
       </div>
     </div>
   </div>

@@ -65,7 +65,14 @@
     ></path>
     <defs>
       <clipPath id="roundedCorners">
-        <rect x="21.25" y="19.25" width="389.5" height="843.5" rx="55.75" ry="55.75"></rect>
+        <rect
+          x="21.25"
+          y="19.25"
+          width="389.5"
+          height="843.5"
+          rx="55.75"
+          ry="55.75"
+        ></rect>
       </clipPath>
     </defs>
   </svg>

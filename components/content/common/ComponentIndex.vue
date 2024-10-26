@@ -1,6 +1,9 @@
 <template>
   <div class="flex flex-col w-full gap-4 flex-wrap py-8">
-    <ContentList path="components" :query="query">
+    <ContentList
+      path="components"
+      :query="query"
+    >
       <template #default="{ list }">
         <ClientOnly>
           <CardSpotlight

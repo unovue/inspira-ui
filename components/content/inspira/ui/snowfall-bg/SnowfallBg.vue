@@ -1,5 +1,9 @@
 <template>
-  <div ref="canvasContainerRef" :class="$props.class" aria-hidden="true">
+  <div
+    ref="canvasContainerRef"
+    :class="$props.class"
+    aria-hidden="true"
+  >
     <canvas ref="canvasRef"></canvas>
   </div>
 </template>

@@ -22,11 +22,28 @@
       stroke-linecap="round"
     />
     <defs>
-      <linearGradient :id="id" gradientUnits="userSpaceOnUse" x1="0%" x2="0%" y1="0%" y2="0%">
-        <stop :stop-color="gradientStartColor" stop-opacity="0" />
+      <linearGradient
+        :id="id"
+        gradientUnits="userSpaceOnUse"
+        x1="0%"
+        x2="0%"
+        y1="0%"
+        y2="0%"
+      >
+        <stop
+          :stop-color="gradientStartColor"
+          stop-opacity="0"
+        />
         <stop :stop-color="gradientStartColor" />
-        <stop offset="32.5%" :stop-color="gradientStopColor" />
-        <stop offset="100%" :stop-color="gradientStopColor" stop-opacity="0" />
+        <stop
+          offset="32.5%"
+          :stop-color="gradientStopColor"
+        />
+        <stop
+          offset="100%"
+          :stop-color="gradientStopColor"
+          stop-opacity="0"
+        />
         <animate
           attributeName="x1"
           :values="x1"

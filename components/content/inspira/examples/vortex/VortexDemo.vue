@@ -12,7 +12,12 @@
         you&apos;ll have a scar.
       </p>
       <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
-        <UiButton variant="outline" class="bg-blue-600 hover:bg-blue-600"> Order now </UiButton>
+        <UiButton
+          variant="outline"
+          class="bg-blue-600 hover:bg-blue-600"
+        >
+          Order now
+        </UiButton>
         <UiButton>Watch trailer</UiButton>
       </div>
     </Vortex>

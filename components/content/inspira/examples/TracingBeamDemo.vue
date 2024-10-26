@@ -2,7 +2,11 @@
   <div class="w-full items-center justify-center px-8">
     <TracingBeam class="px-6">
       <div class="max-w-2xl mx-auto antialiased pt-4 relative">
-        <div v-for="(item, index) in dummyContent" :key="`content-${index}`" class="mb-10">
+        <div
+          v-for="(item, index) in dummyContent"
+          :key="`content-${index}`"
+          class="mb-10"
+        >
           <Badge class="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
             {{ item.badge }}
           </Badge>
@@ -19,7 +23,10 @@
               class="rounded-lg mb-10 object-cover"
             />
             <div>
-              <p v-for="(paragraph, idx) in item.description" :key="`desc-${idx}`">
+              <p
+                v-for="(paragraph, idx) in item.description"
+                :key="`desc-${idx}`"
+              >
                 {{ paragraph }}
               </p>
             </div>

@@ -4,7 +4,10 @@
     :code="rawString"
     v-bind="props"
   >
-    <span class="text-sm" v-html="codeHtml"></span>
+    <span
+      class="text-sm"
+      v-html="codeHtml"
+    ></span>
   </ProsePre>
 </template>
 

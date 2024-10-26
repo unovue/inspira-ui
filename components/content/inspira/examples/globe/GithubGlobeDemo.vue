@@ -1,7 +1,11 @@
 <template>
   <ClientOnly>
     <div class="flex flex-col w-full items-center justify-center">
-      <GithubGlobe :globe-config="globeConfig" :data="sampleArcs" class="h-[32rem]" />
+      <GithubGlobe
+        :globe-config="globeConfig"
+        :data="sampleArcs"
+        class="h-[32rem]"
+      />
     </div>
   </ClientOnly>
 </template>
