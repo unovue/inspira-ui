@@ -1,10 +1,9 @@
 <template>
-  <div class="relative inline-block">
+  <div :class="cn('relative inline-block', props.class)">
     <!-- Trigger -->
     <NuxtLink
       :to="url"
-      :class="cn(props.class)"
-      class="text-black dark:text-white"
+      :class="cn('text-black dark:text-white', props.linkClass)"
       @mousemove="handleMouseMove"
       @mouseenter="showPreview"
       @mouseleave="hidePreview"
@@ -47,6 +46,7 @@ import { cn } from "~/lib/utils";
 
 interface BaseProps {
   class?: string;
+  linkClass?: string;
   width?: number;
   height?: number;
 }

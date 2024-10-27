@@ -13,7 +13,8 @@ navBadges:
 
 | Prop Name  | Type      | Default | Description                                                                                 |
 | ---------- | --------- | ------- | ------------------------------------------------------------------------------------------- |
-| `class`    | `string`  | `""`    | Custom class applied to the main link element.                                              |
+| `class`    | `string`  | `""`    | Custom class applied to the main element.                                              |
+| `linkClass`    | `string`  | `""`    | Custom class applied to the link element.                                              |
 | `width`    | `number`  | `200`   | Width of the preview image.                                                                 |
 | `height`   | `number`  | `125`   | Height of the preview image.                                                                |
 | `isStatic` | `boolean` | `false` | Determines if the preview image is static or a URL preview (set to `true` for static mode). |
