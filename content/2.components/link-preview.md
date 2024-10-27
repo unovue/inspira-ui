@@ -1,6 +1,9 @@
 ---
 title: Link Preview
 description: Dynamic link previews for your anchor tags
+navBadges:
+  - value: New
+    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="LinkPreviewDemo" type="examples"}  
