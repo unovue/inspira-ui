@@ -1,5 +1,5 @@
 <template>
-  <canvas ref="githubGlobeRef" class="w-96 h-96"></canvas>
+  <canvas ref="githubGlobeRef" :class="cn('w-96 h-96', props.class)"></canvas>
 </template>
 
 <script lang="ts" setup>
@@ -17,6 +17,7 @@ import {
   WebGLRenderer,
 } from "three";
 import contries from "./globe.json";
+import { cn } from "~/lib/utils";
 
 type Position = {
   order: number;
@@ -65,6 +66,7 @@ type GlobeConfig = {
 interface Props {
   globeConfig?: GlobeConfig;
   data?: Position[];
+  class?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -103,12 +105,6 @@ let controls: OrbitControls;
 
 let globe: ThreeGlobe;
 
-let halfX: number;
-let halfY: number;
-
-let mouseX: number;
-let mouseY: number;
-
 onMounted(() => {
   setupScene();
   initGlobe();
@@ -120,6 +116,9 @@ onMounted(() => {
   window.addEventListener("resize", onWindowResize, false);
 
   watch(globeData, () => {
+    console.log("watch", globe);
+    console.log("watch", globeData.value);
+
     if (!globe || !globeData.value) return;
 
     numberOfRings = genRandomNumbers(0, props.data.length, Math.floor((props.data.length * 4) / 5));
@@ -149,25 +148,23 @@ function setupScene() {
   camera.position.setY(0);
   camera.position.setZ(400);
 
-  const ambientLight = new AmbientLight(0xbbb, 0.3);
+  const ambientLight = new AmbientLight(defaultGlobeConfig.ambientLight || "#ffffff", 0.6);
   scene.add(ambientLight);
 
-  const dLight1 = new DirectionalLight(0xfff, 0.8);
-  dLight1.position.set(-800, 2000, 400);
+  const dLight1 = new DirectionalLight(defaultGlobeConfig.directionalLeftLight || "#ffffff", 1);
+  dLight1.position.set(-400, 100, 400);
   camera.add(dLight1);
 
-  const dLight2 = new DirectionalLight(0x7982f6, 1);
+  const dLight2 = new DirectionalLight(defaultGlobeConfig.directionalTopLight || "#ffffff", 1);
   dLight2.position.set(-200, 500, 200);
   camera.add(dLight2);
 
-  const pLight = new PointLight(0x8566cc, 0.5);
+  const pLight = new PointLight(defaultGlobeConfig.pointLight || "#ffffff", 0.8);
   pLight.position.set(-200, 500, 200);
   camera.add(pLight);
 
   camera.updateProjectionMatrix();
   scene.add(camera);
-
-  scene.fog = new Fog(0x535ef3, 400, 2000);
 
   controls = new OrbitControls(camera, renderer.domElement);
   controls.enableZoom = false;
@@ -176,9 +173,9 @@ function setupScene() {
   controls.dampingFactor = 0.01;
   controls.minDistance = 200;
   controls.maxDistance = 500;
-  controls.rotateSpeed = 0.8;
+  controls.rotateSpeed = defaultGlobeConfig.autoRotateSpeed || 0.8;
   controls.zoomSpeed = 1;
-  controls.autoRotate = false;
+  controls.autoRotate = defaultGlobeConfig.autoRotate || false;
 
   controls.minPolarAngle = Math.PI / 3.5;
   controls.maxPolarAngle = Math.PI - Math.PI / 3;
@@ -186,6 +183,8 @@ function setupScene() {
 
 function initGlobe() {
   buildData();
+
+  console.log(globeData.value);
 
   globe = new ThreeGlobe({
     waitForGlobeReady: true,
@@ -209,10 +208,10 @@ function initGlobe() {
     shininess: number;
   };
 
-  globeMaterial.color = new Color(0x3a228a);
-  globeMaterial.emissive = new Color(0x220038);
-  globeMaterial.emissiveIntensity = 0.1;
-  globeMaterial.shininess = 0.9;
+  globeMaterial.color = new Color(defaultGlobeConfig.globeColor!);
+  globeMaterial.emissive = new Color(defaultGlobeConfig.emissive!);
+  globeMaterial.emissiveIntensity = defaultGlobeConfig.emissiveIntensity || 0.1;
+  globeMaterial.shininess = defaultGlobeConfig.shininess || 0.9;
 
   scene.add(globe);
 }
@@ -229,13 +228,13 @@ function onWindowResize() {
   camera.updateProjectionMatrix();
 
   renderer.setSize(width, height);
-
-  halfX = width / 1.5;
-  halfY = height / 1.5;
 }
 
 function startAnimation() {
-  if (!globe || globeData.value!) return;
+  if (!globe || !globeData.value!) return;
+
+  console.log("startAnimation", globe);
+  console.log("startAnimation", globeData);
 
   globe
     .arcsData(props.data)
@@ -245,7 +244,7 @@ function startAnimation() {
     .arcEndLng((d: any) => d.endLng * 1)
     .arcColor((e: any) => e.color)
     .arcAltitude((e: any) => e.arcAlt * 1)
-    .arcStroke((e: any) => [0.32, 0.28, 0.3][Math.round(Math.random() * 2)])
+    .arcStroke((e: any) => [0.32, 0.28, 0.3][Math.round(Math.random() * 4)])
     .arcDashLength(defaultGlobeConfig.arcLength!)
     .arcDashInitialGap((e: any) => e.order * 1)
     .arcDashGap(15)
@@ -267,14 +266,6 @@ function startAnimation() {
 }
 
 function animate() {
-  const x =
-    camera.position.x + Math.abs(mouseX) <= halfX / 2
-      ? (mouseX / 2 - camera.position.x) * 0.005
-      : 0;
-  camera.position.setX(x);
-  camera.lookAt(scene.position);
-  controls.update();
-
   globe.rotation.y += 0.01; // Rotate globe
 
   renderer.render(scene, camera);
