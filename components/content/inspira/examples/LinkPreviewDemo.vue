@@ -7,23 +7,15 @@
       are a great way to build modern websites.
     </p>
     <p class="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto">
-      Visit my
-      <LinkPreview url="https://github.com/atif0075" :width="400" :height="200">
+      Visit
+      <LinkPreview url="https://inspira-ui.com" :width="400" :height="200">
         <span
           class="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
         >
-          Github
+          Inspira UI
         </span>
       </LinkPreview>
-      to see my
-      <LinkPreview
-        :height="200"
-        image-src="https://avatars.githubusercontent.com/u/64689549?v=4"
-        :is-static="true"
-      >
-        <span  class="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"> Static Image, </span>
-      </LinkPreview>
-      that will not change.
+      for more cool components
     </p>
   </div>
 </template>
