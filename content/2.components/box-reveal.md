@@ -1,9 +1,6 @@
 ---
 title: Box Reveal
 description: An animated box reveal effect with customizable colors, duration, and delay.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="BoxRevealDemo" type="examples"}
