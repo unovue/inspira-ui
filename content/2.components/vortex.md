@@ -64,6 +64,10 @@ You can copy and paste the following code to create these components:
 ::CodeViewer{filename="Vortex.vue" language="vue" componentName="Vortex" type="ui" id="vortex"}  
 ::
 
+## Features
+
+- **Slot Support**: Easily add any content inside the component using the default slot.
+
 ## Credits
 
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/bento-grid).
