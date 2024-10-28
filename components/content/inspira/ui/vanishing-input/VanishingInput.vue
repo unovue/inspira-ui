@@ -266,14 +266,4 @@ onBeforeUnmount(() => {
   document.removeEventListener("visibilitychange", handleVisibilityChange);
 });
 </script>
-
-<style scoped>
-.placeholder-enter-active,
-.placeholder-leave-active {
-  transition: all 0.3s linear;
-}
-.text-transparent {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-</style>
+ 
