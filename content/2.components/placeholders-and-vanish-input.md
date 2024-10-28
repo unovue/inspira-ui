@@ -17,10 +17,10 @@ navBadges:
 
 This component listens to the following events emitted by the `VanishingInput` component:
 
-| Event Name | Parameters | Description                                               |
-| ---------- | ---------- | --------------------------------------------------------- |
-| `change`   | `Event`    | Triggered when the input value changes.                   |
-| `submit`   | `string`   | Triggered when the input is submitted. |
+| Event Name | Parameters | Description                             |
+| ---------- | ---------- | --------------------------------------- |
+| `change`   | `Event`    | Triggered when the input value changes. |
+| `submit`   | `string`   | Triggered when the input is submitted.  |
 
 ## Component Code
 
@@ -33,4 +33,4 @@ You can copy and paste the following code to create these components:
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
 
-- Ported from [Aceternity UI's Text Reveal Card](https://ui.aceternity.com/components/text-reveal-card).
+- Ported from [Aceternity UI's Placeholders And Vanish Input](https://ui.aceternity.com/components/placeholders-and-vanish-input).
