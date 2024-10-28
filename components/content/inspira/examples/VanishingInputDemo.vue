@@ -22,12 +22,13 @@ const placeholders = [
 ];
 const text = ref("");
 
+
 const handleChange = (event: Event) => {
   const target = event.target as HTMLInputElement;
   console.log(target.value);
 };
 
 const onSubmit = (value: string) => {
-  console.log("submitted");
+  console.log("submitted", value);
 };
 </script>
