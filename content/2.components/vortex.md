@@ -70,4 +70,5 @@ You can copy and paste the following code to create these components:
 
 ## Credits
 
-- Credits to [Aceternity UI](https://ui.aceternity.com/components/bento-grid).
+- Credits to [Aceternity UI](https://ui.aceternity.com/components/vortex).
+- Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.
