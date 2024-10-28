@@ -1,5 +1,5 @@
 ---
-title: Particle Whirlpool Background
+title: Particle Whirlpool
 description: An animated background with swirling particles.
 ---
 
@@ -11,6 +11,11 @@ description: An animated background with swirling particles.
 Without blur and overlay
 
 ::ComponentLoader{label="Preview" componentName="ParticleWhirlpoolBgDemo2" type="examples" id="backgrounds"}
+::
+
+With `particleCount` 500
+
+::ComponentLoader{label="Preview" componentName="ParticleWhirlpoolBgDemo3" type="examples" id="backgrounds"}
 ::
 
 ::alert{type="info"}
