@@ -24,6 +24,7 @@
     "postprocessing": "^6.36.3",
     "qss": "^3.0.0",
     "shadcn-docs-nuxt": "^0.7.0",
+    "simplex-noise": "^4.0.3",
     "three": "^0.169.0",
     "three-globe": "^2.33.0",
     "vue": "^3.5.12",
