@@ -11,17 +11,16 @@ navBadges:
 
 ## API
 
-| Prop Name  | Type     | Description                                                      |
-| ---------- | -------- | ---------------------------------------------------------------- |
-| class      | `String` | Additional classes to be added to the card.                      |
-| starsCount | `Number` | Control the number of stars that are generated                   |
-| starsClass | `String` | Additional classes to be added to the stars floating on content. |
+| Prop Name      | Type            | Default                                               | Description                                                                     |
+| -------------- | --------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `placeholders` | `Array<string>` | `["Placeholder 1", "Placeholder 2", "Placeholder 3"]` | An array of placeholder texts that cycle through as prompts in the input field. |
 
-| Slot Name  | Description                                             |
-| ---------- | ------------------------------------------------------- |
-| header     | `String`                                                |
-| text       | Display default text when the card is not hovered over. |
-| revealText | Text to be revealed when hovered over the card.         |
+This component listens to the following events emitted by the `VanishingInput` component:
+
+| Event Name | Parameters | Description                                               |
+| ---------- | ---------- | --------------------------------------------------------- |
+| `change`   | `Event`    | Triggered when the input value changes.                   |
+| `submit`   | `string`   | Triggered when the input is submitted. |
 
 ## Component Code
 
