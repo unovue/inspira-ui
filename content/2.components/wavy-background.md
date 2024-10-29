@@ -37,17 +37,17 @@ Please install simplex-noise using following commands.
 
 ## API
 
-| Prop Name | Type     | Default | Description                                                     |
-| --------- | -------- | ------- | --------------------------------------------------------------- |
-| `class`   | `string` |   `-`   | The content to be displayed on top of the wavy background.               |
-| `containerClass` | `string` |  `-` | The CSS class to apply to the content container. |
-| `colors` | `string[]` | `["#38bdf8", "#818cf8", "#c084fc", "#e879f9", "#22d3ee"]` | The colors of the waves. |
-| `waveWidth` | `number` | `50` | The width of the waves. |
-| `backgroundFill` | `string` | `"black"` | The background color. |
-| `blur` | `number` | `10` | The blur effect applied to the waves. |
-| `speed` | `"slow" \| "fast"` | `"fast"` | Range of speed variation for particles. |
-| `waveOpacity` | `number` | `0.5` | Base radius of particles. |
-| `[key: string]` | `any` | `-` | Range of radius variation for particles. |
+| Prop Name        | Type               | Default                                                   | Description                                                |
+| ---------------- | ------------------ | --------------------------------------------------------- | ---------------------------------------------------------- |
+| `class`          | `string`           | `-`                                                       | The content to be displayed on top of the wavy background. |
+| `containerClass` | `string`           | `-`                                                       | The CSS class to apply to the content container.           |
+| `colors`         | `string[]`         | `["#38bdf8", "#818cf8", "#c084fc", "#e879f9", "#22d3ee"]` | The colors of the waves.                                   |
+| `waveWidth`      | `number`           | `50`                                                      | The width of the waves.                                    |
+| `backgroundFill` | `string`           | `"black"`                                                 | The background color.                                      |
+| `blur`           | `number`           | `10`                                                      | The blur effect applied to the waves.                      |
+| `speed`          | `"slow" \| "fast"` | `"fast"`                                                  | Range of speed variation for particles.                    |
+| `waveOpacity`    | `number`           | `0.5`                                                     | Base radius of particles.                                  |
+| `[key: string]`  | `any`              | `-`                                                       | Range of radius variation for particles.                   |
 
 ## Component Code
 

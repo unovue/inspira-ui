@@ -26,11 +26,7 @@ navBadges:
 
 You can copy and paste the following code to create this component:
 
-::code-group
-
-    ::CodeViewerTab{label="BorderBeam.vue" language="vue" componentName="BorderBeam" type="ui" id="border-beam"}
-    ::
-
+::CodeViewer{filename="BorderBeam.vue" language="vue" componentName="BorderBeam" type="ui" id="border-beam"}
 ::
 
 ## Features
@@ -42,4 +38,4 @@ You can copy and paste the following code to create this component:
 
 ## Credits
 
-- Inspired by modern border animations and gradient effects for interactive UI elements.
+- Ported from [Magic UI](https://magicui.design/docs/components/border-beam).

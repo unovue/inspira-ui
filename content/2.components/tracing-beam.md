@@ -11,9 +11,9 @@ navBadges:
 
 ## API
 
-| Prop Name  | Type     | Default | Description                                |
-| ---------- | -------- | ------- | ------------------------------------------ |
-| `class`    | `string` | `""`    | Additional CSS classes for custom styling. |
+| Prop Name | Type     | Default | Description                                |
+| --------- | -------- | ------- | ------------------------------------------ |
+| `class`   | `string` | `""`    | Additional CSS classes for custom styling. |
 
 ## Component Code
 

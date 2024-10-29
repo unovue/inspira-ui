@@ -38,7 +38,6 @@ import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { cn } from "~/lib/utils";
-import { render } from "vue";
 
 const { randFloat: rnd, randFloatSpread: rndFS } = MathUtils;
 

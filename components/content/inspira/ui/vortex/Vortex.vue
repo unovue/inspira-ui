@@ -53,7 +53,7 @@ const props = withDefaults(defineProps<VortexProps>(), {
   baseRadius: 1,
   rangeRadius: 2,
   baseHue: 220,
-  backgroundColor: "#000000"
+  backgroundColor: "#000000",
 });
 
 const canvasRef = useTemplateRef<HTMLCanvasElement | null>("canvasRef");
