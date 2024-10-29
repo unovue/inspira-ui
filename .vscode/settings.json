@@ -8,7 +8,7 @@
   },
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue", "yaml"],
   "eslint.options": {
-    "overrideConfigFile": "eslint.config.js"
+    "useFlatConfig": "eslint.config.js"
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.preferences.importModuleSpecifier": "non-relative",

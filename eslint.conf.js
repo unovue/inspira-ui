@@ -59,6 +59,7 @@ export default [
       "import/first": "error",
       "import/newline-after-import": "error",
       "import/no-duplicates": "error",
+      "func-style": ["error", "declaration"],
       "@typescript-eslint/no-empty-object-type": [
         "error",
         { allowInterfaces: "with-single-extends" },
@@ -91,6 +92,7 @@ export default [
       "import/no-duplicates": "error",
       "risxss/catch-potential-xss-vue": "error",
       "@typescript-eslint/no-unused-vars": "off",
+      "func-style": ["error", "declaration"],
     },
   },
   {
