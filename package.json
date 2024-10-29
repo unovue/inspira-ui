@@ -47,8 +47,6 @@
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.0.1",
-    "eslint-plugin-tailwindcss": "^3.17.4",
-    "eslint-plugin-yml": "^1.12.2",
-    "eslint-import-resolver-typescript": "^3.6.3"
+    "eslint-plugin-tailwindcss": "^3.17.4"
   }
 }
