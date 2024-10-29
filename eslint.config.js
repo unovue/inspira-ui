@@ -6,6 +6,7 @@ import pluginTailwind from "eslint-plugin-tailwindcss";
 import eslintConfigPrettier from "eslint-config-prettier";
 import importPlugin from "eslint-plugin-import";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
+import markdown from "eslint-plugin-markdown";
 
 export default [
   {
@@ -14,6 +15,7 @@ export default [
   {
     plugins: {
       unicorn: eslintPluginUnicorn,
+      markdown,
     },
   },
   { languageOptions: { globals: globals.node } },
@@ -23,7 +25,14 @@ export default [
   ...pluginTailwind.configs["flat/recommended"],
   eslintConfigPrettier,
   importPlugin.flatConfigs.recommended,
-  { files: ["**/*.vue"], languageOptions: { parserOptions: { parser: tseslint.parser } } },
+  {
+    files: ["**/*.vue"],
+    languageOptions: { parserOptions: { parser: tseslint.parser } },
+  },
+  {
+    files: ["**/*.md"],
+    processor: "markdown/markdown",
+  },
   {
     rules: {
       "no-console": "error",
@@ -38,7 +47,8 @@ export default [
       "unicorn/filename-case": [
         "error",
         {
-          case: "PascalCase",
+          case: "pascalCase",
+          ignore: ["\\.config\\.(js|ts)$"],
         },
       ],
       "@typescript-eslint/no-empty-object-type": [
