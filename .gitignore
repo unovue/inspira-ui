@@ -16,7 +16,7 @@ logs
 # Misc
 .DS_Store
 .fleet
-.idea
+.idea/workspace.xml
 
 # Local env files
 .env
