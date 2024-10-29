@@ -38,6 +38,18 @@
     "@types/three": "^0.169.0",
     "clsx": "^2.1.1",
     "prettier": "^3.3.3",
-    "tailwind-merge": "^2.5.4"
+    "tailwind-merge": "^2.5.4",
+    "eslint": "^9.13.0",
+    "@eslint/js": "^9.13.0",
+    "eslint-plugin-vue": "^9.30.0",
+    "globals": "^15.11.0",
+    "typescript-eslint": "^8.12.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-tailwindcss": "^3.17.4",
+    "eslint-plugin-unicorn": "^56.0.0",
+    "@eslint/markdown": "^6.2.1",
+    "eslint-plugin-check-file": "^2.8.0"
   }
 }
