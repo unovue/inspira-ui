@@ -95,8 +95,6 @@ const updateScrollYProgress = () => {
     scrollPercentage.value = (windowHeight - boundingRect.top) / (windowHeight + elementHeight);
 
     scrollYProgress.value = (boundingRect.y / windowHeight) * -1;
-
-    console.log(scrollYProgress.value);
   }
 };
 
@@ -104,6 +102,12 @@ onMounted(() => {
   window.addEventListener("scroll", updateScrollYProgress);
   window.addEventListener("resize", updateScrollYProgress);
   updateScrollYProgress();
+
+  const resizeObserver = new ResizeObserver(function () {
+    updateSVGHeight();
+  });
+
+  resizeObserver.observe(tracingBeamContentRef.value!);
 
   updateSVGHeight();
 });
