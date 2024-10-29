@@ -41,8 +41,8 @@
             gradientUnits="userSpaceOnUse"
             x1="0"
             x2="0"
-            :y1="y1"
-            :y2="y2"
+            :y1="spring.y1"
+            :y2="spring.y2"
           >
             <stop stop-color="#18CCFC" stop-opacity="0"></stop>
             <stop stop-color="#18CCFC"></stop>
@@ -60,6 +60,7 @@
 
 <script lang="ts" setup>
 import { cn } from "~/lib/utils";
+import { useSpring } from "vue-use-spring";
 
 defineProps({
   class: String,
@@ -72,18 +73,29 @@ const scrollYProgress = ref(0);
 const svgHeight = ref(0);
 const scrollPercentage = ref(0);
 
-const y1 = computed(() => {
-  return (
+const computedY1 = computed(
+  () =>
     mapRange(scrollYProgress.value, 0, 0.8, scrollYProgress.value, svgHeight.value) *
-    (1.4 - scrollPercentage.value)
-  );
+    (1.4 - scrollPercentage.value),
+);
+
+const computedY2 = computed(
+  () =>
+    mapRange(scrollYProgress.value, 0, 1, scrollYProgress.value, svgHeight.value - 500) *
+    (1.4 - scrollPercentage.value),
+);
+
+const spring = useSpring(
+  { y1: computedY1.value, y2: computedY2.value },
+  { tension: 80, friction: 26, precision: 0.01 },
+);
+
+watch(computedY1, (newY1) => {
+  spring.y1 = newY1;
 });
 
-const y2 = computed(() => {
-  return (
-    mapRange(scrollYProgress.value, 0, 1, scrollYProgress.value, svgHeight.value - 500) *
-    (1.4 - scrollPercentage.value)
-  );
+watch(computedY2, (newY2) => {
+  spring.y2 = newY2;
 });
 
 const updateScrollYProgress = () => {
