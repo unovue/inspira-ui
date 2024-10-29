@@ -6,7 +6,8 @@ import pluginTailwind from "eslint-plugin-tailwindcss";
 import eslintConfigPrettier from "eslint-config-prettier";
 import importPlugin from "eslint-plugin-import";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
-import markdown from "eslint-plugin-markdown";
+import markdown from "@eslint/markdown";
+import checkFile from "eslint-plugin-check-file";
 
 export default [
   {
@@ -15,7 +16,7 @@ export default [
   {
     plugins: {
       unicorn: eslintPluginUnicorn,
-      markdown,
+      "check-file": checkFile,
     },
   },
   { languageOptions: { globals: globals.node } },
@@ -25,13 +26,10 @@ export default [
   ...pluginTailwind.configs["flat/recommended"],
   eslintConfigPrettier,
   importPlugin.flatConfigs.recommended,
+  ...markdown.configs.processor,
   {
     files: ["**/*.vue"],
     languageOptions: { parserOptions: { parser: tseslint.parser } },
-  },
-  {
-    files: ["**/*.md"],
-    processor: "markdown/markdown",
   },
   {
     rules: {
@@ -44,18 +42,24 @@ export default [
       "import/no-unresolved": "off", //Need eslint-import-resolver-typescript, waiting for flatconfig and error fix on package side
       "func-style": ["error", "declaration"],
       "vue/multi-word-component-names": "off",
-      "unicorn/filename-case": [
-        "error",
-        {
-          case: "pascalCase",
-          ignore: ["\\.config\\.(js|ts)$"],
-        },
-      ],
       "@typescript-eslint/no-empty-object-type": [
         "error",
         { allowInterfaces: "with-single-extends" },
       ],
       "@typescript-eslint/no-unused-vars": "off",
+      "check-file/filename-naming-convention": [
+        "error",
+        {
+          "**/*.md": "KEBAB_CASE",
+          "**/!(*.config).{js,ts}": "PASCAL_CASE",
+        },
+      ],
+      "check-file/folder-naming-convention": [
+        "error",
+        {
+          "components/**/": "KEBAB_CASE",
+        },
+      ],
     },
   },
 ];

@@ -6,7 +6,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
   },
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue", "yaml"],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue", "yaml", "markdown"],
   "eslint.nodePath": "node_modules/",
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.preferences.importModuleSpecifier": "non-relative",
