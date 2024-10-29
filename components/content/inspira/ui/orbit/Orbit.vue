@@ -1,15 +1,6 @@
 <template>
-  <svg
-    v-if="path"
-    class="pointer-events-none absolute inset-0 size-full"
-  >
-    <circle
-      class="stroke-foreground/20 stroke-1"
-      cx="50%"
-      cy="50%"
-      :r="radius"
-      fill="none"
-    />
+  <svg v-if="path" class="pointer-events-none absolute inset-0 size-full">
+    <circle class="stroke-1 stroke-foreground/20" cx="50%" cy="50%" :r="radius" fill="none" />
   </svg>
   <div :class="cn('absolute flex size-full transform-gpu animate-orbit', props.class)">
     <slot />
@@ -17,9 +8,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
 import { cn } from "@/lib/utils";
-
 import { ORBIT_DIRECTION, type Props } from ".";
 
 const props = withDefaults(defineProps<Props>(), {

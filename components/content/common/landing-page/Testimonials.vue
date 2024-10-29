@@ -11,14 +11,8 @@
         class="absolute top-8 left-1/2 transform -translate-x-1/2 z-20 mt-4 bg-white bg-opacity-30 backdrop-filter border backdrop-blur-md rounded-3xl p-3"
       >
         <ClientOnly>
-          <NuxtImg
-            v-if="isDark"
-            src="/logo-dark.svg"
-          />
-          <NuxtImg
-            v-else
-            src="/logo.svg"
-          />
+          <NuxtImg v-if="isDark" src="/logo-dark.svg" />
+          <NuxtImg v-else src="/logo.svg" />
         </ClientOnly>
       </div>
 

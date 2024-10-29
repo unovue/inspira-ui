@@ -1,9 +1,6 @@
 <template>
   <div>
-    <ImagesSlider
-      :images="images"
-      autoplay
-    >
+    <ImagesSlider :images="images" autoplay>
       <div
         class="w-full h-full flex justify-center items-end p-8 bg-gradient-to-b from-transparent via-transparent to-black/80"
       >

@@ -1,10 +1,5 @@
 <template>
-  <svg
-    width="100"
-    height="100"
-    viewBox="0 0 175.216 175.552"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="100" height="100" viewBox="0 0 175.216 175.552" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient
         id="b"
@@ -14,14 +9,8 @@
         y2="137.092"
         gradientUnits="userSpaceOnUse"
       >
-        <stop
-          offset="0"
-          stopColor="#57d163"
-        />
-        <stop
-          offset="1"
-          stopColor="#23b33a"
-        />
+        <stop offset="0" stopColor="#57d163" />
+        <stop offset="1" stopColor="#23b33a" />
       </linearGradient>
       <filter
         id="a"

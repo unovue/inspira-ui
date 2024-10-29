@@ -14,38 +14,12 @@
     class="select-none"
   >
     <defs>
-      <linearGradient
-        id="textGradient"
-        gradientUnits="userSpaceOnUse"
-        cx="50%"
-        cy="50%"
-        r="25%"
-      >
-        <stop
-          offset="0%"
-          stop-color="var(--yellow-500)"
-          v-if="hovered"
-        />
-        <stop
-          offset="25%"
-          stop-color="var(--red-500)"
-          v-if="hovered"
-        />
-        <stop
-          offset="50%"
-          stop-color="var(--blue-500)"
-          v-if="hovered"
-        />
-        <stop
-          offset="75%"
-          stop-color="var(--cyan-500)"
-          v-if="hovered"
-        />
-        <stop
-          offset="100%"
-          stop-color="var(--violet-500)"
-          v-if="hovered"
-        />
+      <linearGradient id="textGradient" gradientUnits="userSpaceOnUse" cx="50%" cy="50%" r="25%">
+        <stop offset="0%" stop-color="var(--yellow-500)" v-if="hovered" />
+        <stop offset="25%" stop-color="var(--red-500)" v-if="hovered" />
+        <stop offset="50%" stop-color="var(--blue-500)" v-if="hovered" />
+        <stop offset="75%" stop-color="var(--cyan-500)" v-if="hovered" />
+        <stop offset="100%" stop-color="var(--violet-500)" v-if="hovered" />
       </linearGradient>
 
       <!-- Radial Gradient -->
@@ -59,24 +33,12 @@
           transition: `cx ${transitionDuration}ms ease-out, cy ${transitionDuration}ms ease-out`,
         }"
       >
-        <stop
-          offset="0%"
-          stop-color="white"
-        />
-        <stop
-          offset="100%"
-          stop-color="black"
-        />
+        <stop offset="0%" stop-color="white" />
+        <stop offset="100%" stop-color="black" />
       </radialGradient>
 
       <mask id="textMask">
-        <rect
-          x="0"
-          y="0"
-          width="100%"
-          height="100%"
-          fill="url(#revealMask)"
-        />
+        <rect x="0" y="0" width="100%" height="100%" fill="url(#revealMask)" />
       </mask>
     </defs>
 

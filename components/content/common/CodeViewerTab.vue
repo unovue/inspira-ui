@@ -1,18 +1,8 @@
 <template>
-  <div
-    :icon="icon"
-    :class="cn('relative flex max-h-[32rem]', $props.class)"
-    :code="rawString"
-  >
-    <CodeCopy
-      class="absolute top-0 right-0"
-      :code="rawString"
-    />
+  <div :icon="icon" :class="cn('relative flex max-h-[32rem]', $props.class)" :code="rawString">
+    <CodeCopy class="absolute top-0 right-0" :code="rawString" />
     <code class="overflow-auto px-2 leading-4 min-w-full">
-      <pre
-        class="text-sm"
-        v-html="codeHtml"
-      ></pre>
+      <pre class="text-sm" v-html="codeHtml"></pre>
     </code>
   </div>
 </template>

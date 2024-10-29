@@ -6,10 +6,7 @@
       v-bind="feature"
       :class="feature.class"
     >
-      <template
-        #background
-        v-if="feature.image"
-      >
+      <template #background v-if="feature.image">
         <div
           class="absolute top-0 right-0 size-full opacity-40 bg-center group-hover:opacity-20 transition duration-150 ease-in-out"
           :style="`background-image: url('${feature.image}')`"

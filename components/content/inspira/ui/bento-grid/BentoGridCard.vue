@@ -35,12 +35,7 @@
     <div
       class="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
     >
-      <UiButton
-        variant="ghost"
-        asChild
-        size="sm"
-        class="pointer-events-auto"
-      >
+      <UiButton variant="ghost" asChild size="sm" class="pointer-events-auto">
         <a :href="href"> {{ cta }} → </a>
       </UiButton>
     </div>

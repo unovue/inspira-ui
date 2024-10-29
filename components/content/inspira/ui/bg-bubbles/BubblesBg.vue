@@ -1,8 +1,5 @@
 <template>
-  <div
-    ref="bubbleParentContainer"
-    class="relative overflow-hidden w-full h-72"
-  >
+  <div ref="bubbleParentContainer" class="relative overflow-hidden w-full h-72">
     <div ref="bubbleCanvasContainer"></div>
     <div
       :style="{

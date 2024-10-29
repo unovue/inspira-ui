@@ -1,10 +1,6 @@
 <template>
   <div :class="cn('relative', $props.class)">
-    <span
-      v-motion
-      :initial="initialMainVariants"
-      :visible-once="visibleMainVariants"
-    >
+    <span v-motion :initial="initialMainVariants" :visible-once="visibleMainVariants">
       <slot />
     </span>
     <span

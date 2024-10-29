@@ -7,33 +7,18 @@
       perspective: props.perspective,
     }"
   >
-    <Transition
-      mode="out-in"
-      v-bind="transitionProps"
-    >
-      <div
-        :key="currentImage"
-        class=""
-      >
-        <img
-          :src="currentImage"
-          :class="props.imageClass"
-        />
+    <Transition mode="out-in" v-bind="transitionProps">
+      <div :key="currentImage" class="">
+        <img :src="currentImage" :class="props.imageClass" />
       </div>
     </Transition>
-    <div
-      v-if="hideOverlay !== true"
-      :class="cn('absolute inset-0', props.overlayClass)"
-    >
+    <div v-if="hideOverlay !== true" :class="cn('absolute inset-0', props.overlayClass)">
       <Transition
         appear
         enter-active-class="transition-all duration-300 delay-300 ease-in-out"
         enter-from-class="opacity-0 -translate-y-10"
       >
-        <slot
-          v-if="!isLoading"
-          :current-index="currentIndex"
-        ></slot>
+        <slot v-if="!isLoading" :current-index="currentIndex"></slot>
       </Transition>
     </div>
   </div>

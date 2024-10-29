@@ -1,9 +1,6 @@
 <template>
   <div class="flex flex-col items-center justify-center my-16 mt-24">
-    <BlurReveal
-      :delay="0"
-      :duration="1"
-    >
+    <BlurReveal :delay="0" :duration="1">
       <div class="text-5xl font-semibold">Check out some examples!</div>
     </BlurReveal>
   </div>

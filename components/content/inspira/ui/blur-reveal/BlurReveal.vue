@@ -1,8 +1,5 @@
 <template>
-  <div
-    ref="container"
-    :class="class"
-  >
+  <div ref="container" :class="class">
     <div
       v-for="(child, index) in children"
       :key="index"

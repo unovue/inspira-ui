@@ -1,10 +1,5 @@
 <template>
-  <svg
-    width="100"
-    height="100"
-    viewBox="0 0 48 48"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <svg width="100" height="100" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
     <radialGradient
       id="8O3wK6b5ASW2Wn6hRCB5xa_YFbzdUk7Q3F8_gr1"
       cx="11.087"
@@ -13,34 +8,13 @@
       gradientTransform="matrix(1 0 0 -1 0 50)"
       gradientUnits="userSpaceOnUse"
     >
-      <stop
-        offset="0"
-        stopColor="#1292ff"
-      ></stop>
-      <stop
-        offset=".079"
-        stopColor="#2982ff"
-      ></stop>
-      <stop
-        offset=".23"
-        stopColor="#4e69ff"
-      ></stop>
-      <stop
-        offset=".351"
-        stopColor="#6559ff"
-      ></stop>
-      <stop
-        offset=".428"
-        stopColor="#6d53ff"
-      ></stop>
-      <stop
-        offset=".754"
-        stopColor="#df47aa"
-      ></stop>
-      <stop
-        offset=".946"
-        stopColor="#ff6257"
-      ></stop>
+      <stop offset="0" stopColor="#1292ff"></stop>
+      <stop offset=".079" stopColor="#2982ff"></stop>
+      <stop offset=".23" stopColor="#4e69ff"></stop>
+      <stop offset=".351" stopColor="#6559ff"></stop>
+      <stop offset=".428" stopColor="#6d53ff"></stop>
+      <stop offset=".754" stopColor="#df47aa"></stop>
+      <stop offset=".946" stopColor="#ff6257"></stop>
     </radialGradient>
     <path
       fill="url(#8O3wK6b5ASW2Wn6hRCB5xa_YFbzdUk7Q3F8_gr1)"
