@@ -40,17 +40,15 @@
     "prettier": "^3.3.3",
     "tailwind-merge": "^2.5.4",
     "eslint": "^9.13.0",
+    "@eslint/js": "^9.13.0",
+    "eslint-plugin-vue": "^9.30.0",
+    "globals": "^15.11.0",
+    "typescript-eslint": "^8.12.1",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.0.1",
-    "eslint-plugin-risxss": "^2.1.0",
-    "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-tailwindcss": "^3.17.4",
-    "eslint-plugin-vue": "^9.29.1",
     "eslint-plugin-yml": "^1.12.2",
-    "@typescript-eslint/eslint-plugin": "8.8.1",
-    "@typescript-eslint/parser": "8.8.1",
-    "vue-eslint-parser": "9.4.3",
-    "yaml-eslint-parser": "^1.2.2"
+    "eslint-import-resolver-typescript": "^3.6.3"
   }
 }

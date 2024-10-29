@@ -7,9 +7,7 @@
     "source.fixAll.eslint": "explicit"
   },
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue", "yaml"],
-  "eslint.options": {
-    "useFlatConfig": "eslint.config.js"
-  },
+  "eslint.nodePath": "node_modules/",
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "typescript.inlayHints.parameterNames.enabled": "none",
