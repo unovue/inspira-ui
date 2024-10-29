@@ -2,6 +2,5 @@
 <project version="4">
   <component name="PrettierConfiguration">
     <option name="myConfigurationMode" value="AUTOMATIC" />
-    <option name="myRunOnSave" value="true" />
   </component>
 </project>

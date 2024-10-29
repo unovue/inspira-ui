@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/inspira-ui-fork.iml" filepath="$PROJECT_DIR$/.idea/inspira-ui-fork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/inspira-ui.iml" filepath="$PROJECT_DIR$/.idea/inspira-ui.iml" />
     </modules>
   </component>
 </project>
