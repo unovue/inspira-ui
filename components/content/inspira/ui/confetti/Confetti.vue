@@ -1,6 +1,9 @@
 <template>
   <div>
-    <canvas ref="canvasRef" :class="$props.class"></canvas>
+    <canvas
+      ref="canvasRef"
+      :class="$props.class"
+    ></canvas>
     <slot />
   </div>
 </template>

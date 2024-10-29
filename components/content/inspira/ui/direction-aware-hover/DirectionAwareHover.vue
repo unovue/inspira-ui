@@ -104,16 +104,28 @@ const imageContainerClass = computed(() => ({
   >
     <div class="relative h-full w-full overflow-hidden">
       <transition name="fade">
-        <div v-show="direction !== null" :class="overlayClass" />
+        <div
+          v-show="direction !== null"
+          :class="overlayClass"
+        />
       </transition>
       <div
         class="relative h-full w-full bg-gray-50 dark:bg-black transition-transform duration-300"
         :class="imageContainerClass"
       >
-        <img :src="imageUrl" alt="image" :class="imageClass" width="1000" height="1000" />
+        <img
+          :src="imageUrl"
+          alt="image"
+          :class="imageClass"
+          width="1000"
+          height="1000"
+        />
       </div>
       <transition name="fade">
-        <div v-show="direction !== null" :class="childrenClass">
+        <div
+          v-show="direction !== null"
+          :class="childrenClass"
+        >
           <slot />
         </div>
       </transition>

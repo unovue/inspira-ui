@@ -1,5 +1,8 @@
 <template>
-  <div class="overflow-hidden py-2 flex cursor-default scale-100" @mouseenter="triggerAnimation">
+  <div
+    class="overflow-hidden py-2 flex cursor-default scale-100"
+    @mouseenter="triggerAnimation"
+  >
     <div class="flex">
       <span
         v-for="(letter, i) in displayText"

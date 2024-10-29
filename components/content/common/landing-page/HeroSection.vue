@@ -24,10 +24,19 @@
       target=""
       class="hover:cursor-pointer inline-flex items-center rounded-full bg-muted px-4 py-1.5 text-sm font-medium"
     >
-      <SmartIcon name="lucide:rocket" :size="16" />
-      <UiSeparator class="mx-2 h-4 dark:bg-gray-600" orientation="vertical" />
+      <SmartIcon
+        name="lucide:rocket"
+        :size="16"
+      />
+      <UiSeparator
+        class="mx-2 h-4 dark:bg-gray-600"
+        orientation="vertical"
+      />
       <span class="underline-offset-4 hover:underline">Get Started</span>
-      <Icon name="lucide:arrow-right" class="ml-1 size-4" />
+      <Icon
+        name="lucide:arrow-right"
+        class="ml-1 size-4"
+      />
     </NuxtLink>
     <h1
       class="text-center text-3xl font-bold leading-tight tracking-tighter md:text-6xl lg:leading-[1.1]"
@@ -43,9 +52,15 @@
       <NuxtLink to="/components">
         <UiButton> All Components </UiButton>
       </NuxtLink>
-      <NuxtLink to="https://github.com/unovue/inspira-ui" target="_blank">
+      <NuxtLink
+        to="https://github.com/unovue/inspira-ui"
+        target="_blank"
+      >
         <UiButton variant="outline">
-          <SmartIcon name="lucide:github" class="mr-1" />
+          <SmartIcon
+            name="lucide:github"
+            class="mr-1"
+          />
           Github
         </UiButton>
       </NuxtLink>

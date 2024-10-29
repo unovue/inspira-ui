@@ -1,16 +1,16 @@
 {
-	"recommendations": [
-		"dbaeumer.vscode-eslint",
-		"esbenp.prettier-vscode",
-		"christian-kohler.path-intellisense",
-		"christian-kohler.npm-intellisense",
-		"mrmlnc.vscode-duplicate",
-		"pascalreitermann93.vscode-yaml-sort"
-	],
-	"unwantedRecommendations": [
-		"octref.vetur",
-		"hookyqr.beautify",
-		"dbaeumer.jshint",
-		"ms-vscode.vscode-typescript-tslint-plugin"
-	]
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "christian-kohler.path-intellisense",
+    "christian-kohler.npm-intellisense",
+    "mrmlnc.vscode-duplicate",
+    "pascalreitermann93.vscode-yaml-sort"
+  ],
+  "unwantedRecommendations": [
+    "octref.vetur",
+    "hookyqr.beautify",
+    "dbaeumer.jshint",
+    "ms-vscode.vscode-typescript-tslint-plugin"
+  ]
 }

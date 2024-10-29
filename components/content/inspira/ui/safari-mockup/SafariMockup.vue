@@ -24,9 +24,24 @@
         d="M1.06738 12C1.06738 5.92487 5.99225 1 12.0674 1H1189.93C1196.01 1 1200.93 5.92487 1200.93 12V51H1.06738V12Z"
         class="fill-white dark:fill-[#262626]"
       ></path>
-      <circle cx="27" cy="25" r="6" class="fill-[#E5E5E5] dark:fill-[#404040]"></circle>
-      <circle cx="47" cy="25" r="6" class="fill-[#E5E5E5] dark:fill-[#404040]"></circle>
-      <circle cx="67" cy="25" r="6" class="fill-[#E5E5E5] dark:fill-[#404040]"></circle>
+      <circle
+        cx="27"
+        cy="25"
+        r="6"
+        class="fill-[#E5E5E5] dark:fill-[#404040]"
+      ></circle>
+      <circle
+        cx="47"
+        cy="25"
+        r="6"
+        class="fill-[#E5E5E5] dark:fill-[#404040]"
+      ></circle>
+      <circle
+        cx="67"
+        cy="25"
+        r="6"
+        class="fill-[#E5E5E5] dark:fill-[#404040]"
+      ></circle>
       <path
         d="M286 17C286 13.6863 288.686 11 292 11H946C949.314 11 952 13.6863 952 17V35C952 38.3137 949.314 41 946 41H292C288.686 41 286 38.3137 286 35V17Z"
         class="fill-[#E5E5E5] dark:fill-[#404040]"
@@ -38,7 +53,13 @@
         ></path>
       </g>
       <g class="mix-blend-luminosity">
-        <text x="580" y="30" fill="#A3A3A3" fontSize="12" fontFamily="Arial, sans-serif">
+        <text
+          x="580"
+          y="30"
+          fill="#A3A3A3"
+          fontSize="12"
+          fontFamily="Arial, sans-serif"
+        >
           {{ url }}
         </text>
       </g>
@@ -102,7 +123,11 @@
     </g>
     <defs>
       <clipPath id="path0">
-        <rect fill="white" :width="width" :height="height"></rect>
+        <rect
+          fill="white"
+          :width="width"
+          :height="height"
+        ></rect>
       </clipPath>
       <clipPath id="roundedBottom">
         <path

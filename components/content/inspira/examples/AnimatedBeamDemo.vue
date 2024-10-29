@@ -63,7 +63,11 @@
       :curvature="-75"
       :endYOffset="-10"
     />
-    <AnimatedBeam :containerRef="containerRef" :fromRef="div2Ref" :toRef="div4Ref" />
+    <AnimatedBeam
+      :containerRef="containerRef"
+      :fromRef="div2Ref"
+      :toRef="div4Ref"
+    />
     <AnimatedBeam
       :containerRef="containerRef"
       :fromRef="div3Ref"

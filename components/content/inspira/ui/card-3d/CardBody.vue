@@ -1,5 +1,8 @@
 <template>
-  <div :class="cn('h-96 w-96', $props.class)" style="transform-style: preserve-3d">
+  <div
+    :class="cn('h-96 w-96', $props.class)"
+    style="transform-style: preserve-3d"
+  >
     <slot />
   </div>
 </template>

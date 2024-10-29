@@ -1,5 +1,10 @@
 <template>
-  <svg width="47px" height="65px" viewBox="0 0 47 65" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="47px"
+    height="65px"
+    viewBox="0 0 47 65"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <defs>
       <path
         d="M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z"
@@ -16,8 +21,16 @@
         y2="100.013939%"
         id="linearGradient-5"
       >
-        <stop stopColor="#1A237E" stopOpacity="0.2" offset="0%" />
-        <stop stopColor="#1A237E" stopOpacity="0.02" offset="100%" />
+        <stop
+          stopColor="#1A237E"
+          stopOpacity="0.2"
+          offset="0%"
+        />
+        <stop
+          stopColor="#1A237E"
+          stopOpacity="0.02"
+          offset="100%"
+        />
       </linearGradient>
       <path
         d="M29.375,0 L4.40625,0 C1.9828125,0 0,1.99431818 0,4.43181818 L0,60.5681818 C0,63.0056818 1.9828125,65 4.40625,65 L42.59375,65 C45.0171875,65 47,63.0056818 47,60.5681818 L47,17.7272727 L29.375,0 Z"
@@ -48,18 +61,44 @@
         gradientTransform="translate(0.031680,0.027174),scale(1.000000,0.723077),translate(-0.031680,-0.027174)"
         id="radialGradient-16"
       >
-        <stop stopColor="#FFFFFF" stopOpacity="0.1" offset="0%" />
-        <stop stopColor="#FFFFFF" stopOpacity="0" offset="100%" />
+        <stop
+          stopColor="#FFFFFF"
+          stopOpacity="0.1"
+          offset="0%"
+        />
+        <stop
+          stopColor="#FFFFFF"
+          stopOpacity="0"
+          offset="100%"
+        />
       </radialGradient>
     </defs>
-    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+    <g
+      id="Page-1"
+      stroke="none"
+      strokeWidth="1"
+      fill="none"
+      fillRule="evenodd"
+    >
       <g transform="translate(-451.000000, -463.000000)">
-        <g id="Hero" transform="translate(0.000000, 63.000000)">
-          <g id="Personal" transform="translate(277.000000, 309.000000)">
-            <g id="Docs-icon" transform="translate(174.000000, 91.000000)">
+        <g
+          id="Hero"
+          transform="translate(0.000000, 63.000000)"
+        >
+          <g
+            id="Personal"
+            transform="translate(277.000000, 309.000000)"
+          >
+            <g
+              id="Docs-icon"
+              transform="translate(174.000000, 91.000000)"
+            >
               <g id="Group">
                 <g id="Clipped">
-                  <mask id="mask-2" fill="white">
+                  <mask
+                    id="mask-2"
+                    fill="white"
+                  >
                     <use xlinkHref="#path-1" />
                   </mask>
                   <g id="SVGID_1_" />
@@ -72,7 +111,10 @@
                   />
                 </g>
                 <g id="Clipped">
-                  <mask id="mask-4" fill="white">
+                  <mask
+                    id="mask-4"
+                    fill="white"
+                  >
                     <use xlinkHref="#path-3" />
                   </mask>
                   <g id="SVGID_1_" />
@@ -85,7 +127,10 @@
                   ></polygon>
                 </g>
                 <g id="Clipped">
-                  <mask id="mask-7" fill="white">
+                  <mask
+                    id="mask-7"
+                    fill="white"
+                  >
                     <use xlinkHref="#path-6" />
                   </mask>
                   <g id="SVGID_1_" />
@@ -98,11 +143,17 @@
                   />
                 </g>
                 <g id="Clipped">
-                  <mask id="mask-9" fill="white">
+                  <mask
+                    id="mask-9"
+                    fill="white"
+                  >
                     <use xlinkHref="#path-8" />
                   </mask>
                   <g id="SVGID_1_" />
-                  <g id="Group" mask="url(#mask-9)">
+                  <g
+                    id="Group"
+                    mask="url(#mask-9)"
+                  >
                     <g transform="translate(26.437500, -2.954545)">
                       <path
                         d="M2.9375,2.95454545 L2.9375,16.25 C2.9375,18.6985795 4.90929688,20.6818182 7.34375,20.6818182 L20.5625,20.6818182 L2.9375,2.95454545 Z"
@@ -114,7 +165,10 @@
                   </g>
                 </g>
                 <g id="Clipped">
-                  <mask id="mask-11" fill="white">
+                  <mask
+                    id="mask-11"
+                    fill="white"
+                  >
                     <use xlinkHref="#path-10" />
                   </mask>
                   <g id="SVGID_1_" />
@@ -128,7 +182,10 @@
                   />
                 </g>
                 <g id="Clipped">
-                  <mask id="mask-13" fill="white">
+                  <mask
+                    id="mask-13"
+                    fill="white"
+                  >
                     <use xlinkHref="#path-12" />
                   </mask>
                   <g id="SVGID_1_" />
@@ -142,7 +199,10 @@
                   />
                 </g>
                 <g id="Clipped">
-                  <mask id="mask-15" fill="white">
+                  <mask
+                    id="mask-15"
+                    fill="white"
+                  >
                     <use xlinkHref="#path-14" />
                   </mask>
                   <g id="SVGID_1_" />

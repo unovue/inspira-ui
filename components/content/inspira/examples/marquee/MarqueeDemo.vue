@@ -3,7 +3,10 @@
     class="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
   >
     <!-- First Marquee -->
-    <Marquee pauseOnHover class="[--duration:20s]">
+    <Marquee
+      pauseOnHover
+      class="[--duration:20s]"
+    >
       <ReviewCard
         v-for="review in firstRow"
         :key="review.username"
@@ -15,7 +18,11 @@
     </Marquee>
 
     <!-- Second Marquee (reverse) -->
-    <Marquee reverse pauseOnHover class="[--duration:20s]">
+    <Marquee
+      reverse
+      pauseOnHover
+      class="[--duration:20s]"
+    >
       <ReviewCard
         v-for="review in secondRow"
         :key="review.username"
