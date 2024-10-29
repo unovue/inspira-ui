@@ -5,10 +5,16 @@ import pluginVue from "eslint-plugin-vue";
 import pluginTailwind from "eslint-plugin-tailwindcss";
 import eslintConfigPrettier from "eslint-config-prettier";
 import importPlugin from "eslint-plugin-import";
+import eslintPluginUnicorn from "eslint-plugin-unicorn";
 
 export default [
   {
     ignores: ["*.min.js", "*.map", "*.snap", "**/build/**", "**/dist/**", "**/.nuxt/**"],
+  },
+  {
+    plugins: {
+      unicorn: eslintPluginUnicorn,
+    },
   },
   { languageOptions: { globals: globals.node } },
   pluginJs.configs.recommended,
@@ -29,6 +35,12 @@ export default [
       "import/no-unresolved": "off", //Need eslint-import-resolver-typescript, waiting for flatconfig and error fix on package side
       "func-style": ["error", "declaration"],
       "vue/multi-word-component-names": "off",
+      "unicorn/filename-case": [
+        "error",
+        {
+          case: "PascalCase",
+        },
+      ],
       "@typescript-eslint/no-empty-object-type": [
         "error",
         { allowInterfaces: "with-single-extends" },
