@@ -37,7 +37,14 @@ Lens are static in center
 
 You can copy and paste the following code to create these components:
 
-::CodeViewer{filename="Lens.vue" language="vue" componentName="Lens" type="ui" id="lens"}  
+::code-group
+::CodeViewerTab{label="Lens.vue" icon="vscode-icons:file-type-vue" componentName="Lens" type="ui" id="lens"}
+::
+
+::CodeViewerTab{label="Rays.vue" icon="vscode-icons:file-type-vue" componentName="Rays" type="examples" id="lens"}
+::
+
+::CodeViewerTab{label="Beams.vue" icon="vscode-icons:file-type-vue" componentName="Beams" type="examples" id="lens"}
 ::
 
 ## Features
@@ -46,5 +53,5 @@ You can copy and paste the following code to create these components:
 
 ## Credits
 
-- Credits to [Aceternity UI](https://ui.aceternity.com/components/wavy-background).
+- Credits to [Aceternity UI](https://ui.aceternity.com/components/lens).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.
