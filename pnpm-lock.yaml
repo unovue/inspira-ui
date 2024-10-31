@@ -26,6 +26,9 @@ importers:
       cobe:
         specifier: ^0.6.3
         version: 0.6.3
+      eslint-plugin-nuxt:
+        specifier: ^4.0.0
+        version: 4.0.0(eslint@9.13.0(jiti@2.3.3))
       highlight.js:
         specifier: ^11.10.0
         version: 11.10.0
@@ -2609,6 +2612,9 @@ packages:
     peerDependenciesMeta:
       '@typescript-eslint/parser':
         optional: true
+
+  eslint-plugin-nuxt@4.0.0:
+    resolution: {integrity: sha512-v3Vwdk8YKe52bAz8eSIDqQuTtfL/T1r9dSl1uhC5SyR5pgLxgKkQdxXVf/Bf6Ax7uyd9rHqiAuYVdqqDb7ILdA==}
 
   eslint-plugin-prettier@5.2.1:
     resolution: {integrity: sha512-gH3iR3g4JfF+yYPaJYkN7jEl9QbweL/YfkoRlNnuIEHEz1vHVlCmWOS+eGGiRuzHQXdJFCOTxRgvju9b8VUmrw==}
@@ -8549,6 +8555,15 @@ snapshots:
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
+      - supports-color
+
+  eslint-plugin-nuxt@4.0.0(eslint@9.13.0(jiti@2.3.3)):
+    dependencies:
+      eslint-plugin-vue: 9.30.0(eslint@9.13.0(jiti@2.3.3))
+      semver: 7.6.3
+      vue-eslint-parser: 9.4.3(eslint@9.13.0(jiti@2.3.3))
+    transitivePeerDependencies:
+      - eslint
       - supports-color
 
   eslint-plugin-prettier@5.2.1(eslint-config-prettier@9.1.0(eslint@9.13.0(jiti@2.3.3)))(eslint@9.13.0(jiti@2.3.3))(prettier@3.3.3):

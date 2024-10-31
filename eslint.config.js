@@ -8,6 +8,7 @@ import importPlugin from "eslint-plugin-import";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import markdown from "@eslint/markdown";
 import checkFile from "eslint-plugin-check-file";
+import nuxt from "eslint-plugin-nuxt";
 
 export default [
   {
@@ -17,6 +18,7 @@ export default [
     plugins: {
       unicorn: eslintPluginUnicorn,
       "check-file": checkFile,
+      nuxt,
     },
   },
   { languageOptions: { globals: globals.node } },
@@ -42,6 +44,7 @@ export default [
       "import/no-unresolved": "off", //Need eslint-import-resolver-typescript, waiting for flatconfig and error fix on package side
       "func-style": ["error", "declaration"],
       "vue/multi-word-component-names": "off",
+      "nuxt/no-globals-in-created": "error", // Nuxt-specific rule
       "@typescript-eslint/no-empty-object-type": [
         "error",
         { allowInterfaces: "with-single-extends" },

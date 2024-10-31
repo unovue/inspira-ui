@@ -20,6 +20,7 @@
     "canvas-confetti": "^1.9.3",
     "class-variance-authority": "^0.7.0",
     "cobe": "^0.6.3",
+    "eslint-plugin-nuxt": "^4.0.0",
     "highlight.js": "^11.10.0",
     "nuxt": "^3.13.2",
     "nuxt-gtag": "^3.0.1",
@@ -34,24 +35,24 @@
     "vue-use-spring": "^0.3.3"
   },
   "devDependencies": {
+    "@eslint/js": "^9.13.0",
+    "@eslint/markdown": "^6.2.1",
     "@iconify-json/vscode-icons": "^1.2.2",
     "@inspira-ui/plugins": "0.0.1",
     "@types/canvas-confetti": "^1.6.4",
     "@types/three": "^0.169.0",
     "clsx": "^2.1.1",
-    "prettier": "^3.3.3",
-    "tailwind-merge": "^2.5.4",
     "eslint": "^9.13.0",
-    "@eslint/js": "^9.13.0",
-    "eslint-plugin-vue": "^9.30.0",
-    "globals": "^15.11.0",
-    "typescript-eslint": "^8.12.1",
     "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-check-file": "^2.8.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.0.1",
     "eslint-plugin-tailwindcss": "^3.17.4",
     "eslint-plugin-unicorn": "^56.0.0",
-    "@eslint/markdown": "^6.2.1",
-    "eslint-plugin-check-file": "^2.8.0"
+    "eslint-plugin-vue": "^9.30.0",
+    "globals": "^15.11.0",
+    "prettier": "^3.3.3",
+    "tailwind-merge": "^2.5.4",
+    "typescript-eslint": "^8.12.1"
   }
 }
