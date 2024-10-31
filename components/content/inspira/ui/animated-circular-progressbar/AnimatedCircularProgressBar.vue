@@ -1,18 +1,7 @@
 <template>
   <div
+    class="progress-circle-base"
     :class="cn('relative size-40 text-2xl font-semibold', props.class)"
-    :style="{
-      '--circle-size': '100px',
-      '--circumference': `${circumference}`,
-      '--percent-to-px': `${percentPx}px`,
-      '--gap-percent': '5',
-      '--offset-factor': '0',
-      '--transition-length': '1s',
-      '--transition-step': '200ms',
-      '--delay': '0s',
-      '--percent-to-deg': '3.6deg',
-      transform: 'translateZ(0)',
-    }"
   >
     <svg
       fill="none"
@@ -29,16 +18,7 @@
         stroke-dashoffset="0"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="opacity-100"
-        :style="{
-          stroke: props.gaugeSecondaryColor,
-          '--stroke-percent': 90 - currentPercent,
-          '--offset-factor-secondary': 'calc(1 - var(--offset-factor))',
-          strokeDasharray: `calc(var(--stroke-percent) * var(--percent-to-px)) var(--circumference)`,
-          transform: `rotate(calc(1turn - 90deg - (var(--gap-percent) * var(--percent-to-deg) * var(--offset-factor-secondary)))) scaleY(-1)`,
-          transition: 'all var(--transition-length) ease var(--delay)',
-          transformOrigin: 'calc(var(--circle-size) / 2) calc(var(--circle-size) / 2)',
-        }"
+        class="gauge-secondary-stroke opacity-100"
       />
       <circle
         cx="50"
@@ -48,17 +28,7 @@
         stroke-dashoffset="0"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="opacity-100"
-        :style="{
-          stroke: props.gaugePrimaryColor,
-          '--stroke-percent': currentPercent,
-          strokeDasharray: `calc(var(--stroke-percent) * var(--percent-to-px)) var(--circumference)`,
-          transition:
-            'var(--transition-length) ease var(--delay), stroke var(--transition-length) ease var(--delay)',
-          transitionProperty: 'stroke-dasharray, transform',
-          transform: `rotate(calc(-90deg + var(--gap-percent) * var(--offset-factor) * var(--percent-to-deg)))`,
-          transformOrigin: 'calc(var(--circle-size) / 2) calc(var(--circle-size) / 2)',
-        }"
+        class="gauge-primary-stroke opacity-100"
       />
     </svg>
     <span
@@ -98,4 +68,48 @@ const circumference = 2 * Math.PI * 45;
 const percentPx = circumference / 100;
 
 const currentPercent = computed(() => ((props.value - props.min) / (props.max - props.min)) * 100);
+const percentageInPx = computed(() => `${percentPx}px`);
 </script>
+
+<style scoped lang="css">
+.progress-circle-base {
+  --circle-size: 100px;
+  --circumference: v-bind(circumference);
+  --percent-to-px: v-bind(percentageInPx);
+  --gap-percent: 5;
+  --offset-factor: 0;
+  --transition-length: 1s;
+  --transition-step: 200ms;
+  --delay: 0s;
+  --percent-to-deg: 3.6deg;
+  transform: translateZ(0);
+}
+.gauge-primary-stroke {
+  stroke: v-bind(props.gaugePrimaryColor);
+  --stroke-percent: v-bind(currentPercent);
+  stroke-dasharray: calc(var(--stroke-percent) * var(--percent-to-px)) var(--circumference);
+  transition:
+    var(--transition-length) ease var(--delay),
+    stroke var(--transition-length) ease var(--delay);
+  transition-property: stroke-dasharray, transform;
+  transform: rotate(
+    calc(-90deg + var(--gap-percent) * var(--offset-factor) * var(--percent-to-deg))
+  );
+  transform-origin: calc(var(--circle-size) / 2) calc(var(--circle-size) / 2);
+}
+.gauge-secondary-stroke {
+  stroke: v-bind(props.gaugeSecondaryColor);
+  --stroke-percent: 90 - v-bind(currentPercent);
+  --offset-factor-secondary: calc(1 - var(--offset-factor));
+  stroke-dasharray: calc(var(--stroke-percent) * var(--percent-to-px)) var(--circumference);
+  transform: rotate(
+      calc(
+        1turn - 90deg -
+          (var(--gap-percent) * var(--percent-to-deg) * var(--offset-factor-secondary))
+      )
+    )
+    scaleY(-1);
+  transition: all var(--transition-length) ease var(--delay);
+  transform-origin: calc(var(--circle-size) / 2) calc(var(--circle-size) / 2);
+}
+</style>
