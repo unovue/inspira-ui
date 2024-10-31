@@ -1,5 +1,5 @@
 ---
-title: Animated CirCular Progress Bar
+title: Animated Circular Progress Bar
 description: Animated Circular Progress Bar is a component that displays a circular gauge with a percentage value.
 navBadges:
   - value: New
