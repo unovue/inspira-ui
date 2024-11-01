@@ -1,0 +1,75 @@
+---
+title: Aurora Background
+description: A subtle Aurora or Southern Lights background for your website.
+navBadges:
+  - value: New
+    type: lime
+---
+
+::ComponentLoader{label="Preview" componentName="AuroraBackgroundDemo" type="examples" id="aurora-background"}
+::
+
+## API
+
+| Prop Name        | Type      | Default | Description                                                               |
+| ---------------- | --------- | ------- | ------------------------------------------------------------------------- |
+| `class`          | `string`  | `-`     | Additional CSS classes to apply to the component for styling.             |
+| `radialGradient` | `boolean` | `true`  | Determines whether a radial gradient effect is applied to the background. |
+
+You can copy and paste the <code>tailwind.config.ts</code> code
+
+tailwind.config.ts
+
+<pre>
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
+export default {
+ theme: {
+  extend: {
+    animation: {
+     + aurora: "aurora 60s linear infinite",
+    },
+  },
+  keyframes: {
+    + aurora: {
+       + from: {
+           + backgroundPosition: "50% 50%, 50% 50%",
+       + },
+       + to: {
+           + backgroundPosition: "350% 50%, 350% 50%",
+       + },
+      + },
+      },
+ },
+ plugins: [addVariablesForColors],
+}
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
+</pre>
+
+## Component Code
+
+You can copy and paste the following code to create these components:
+
+::CodeViewer{filename="AuroraBackground.vue" language="vue" componentName="AuroraBackground" type="ui" id="aurora-background"}
+::
+
+## Features
+
+- **Slot Support**: Easily add any content inside the component using the default slot.
+
+## Credits
+
+- Credits to [Aceternity UI](https://ui.aceternity.com/components/aurora-background).
+- Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.
