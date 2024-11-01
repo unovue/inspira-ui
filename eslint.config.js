@@ -53,7 +53,7 @@ export default [
       "check-file/filename-naming-convention": [
         "error",
         {
-          "**/*.md": "KEBAB_CASE",
+          "*//.md": "([a-z0-9]+(-[a-z0-9]+)|[0-9]+.[a-z0-9]+(-[a-z0-9]+))",
           "components/**/*.vue": "PASCAL_CASE",
         },
       ],
