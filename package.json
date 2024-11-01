@@ -14,7 +14,6 @@
     "lint:check": "eslint ."
   },
   "dependencies": {
-    "@nuxt/eslint": "^0.6.1",
     "@nuxt/image": "^1.8.1",
     "@vueuse/core": "^11.1.0",
     "@vueuse/motion": "^2.2.6",
@@ -36,6 +35,7 @@
     "vue-use-spring": "^0.3.3"
   },
   "devDependencies": {
+    "@nuxt/eslint": "^0.6.1",
     "@eslint/js": "^9.13.0",
     "@eslint/markdown": "^6.2.1",
     "@iconify-json/vscode-icons": "^1.2.2",
