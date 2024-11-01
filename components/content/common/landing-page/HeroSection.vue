@@ -35,7 +35,14 @@
     <h1
       class="text-center text-3xl font-bold leading-tight tracking-tighter lg:leading-[1.1] md:text-6xl"
     >
-      Build beautiful websites using Vue & Nuxt
+      Build
+      <TextHighlight
+        class="rounded-xl bg-gradient-to-r from-pink-500 to-violet-500 px-4 py-1"
+        text-end-color="hsl(var(--accent))"
+      >
+        beautiful websites
+      </TextHighlight>
+      using Vue & Nuxt
     </h1>
 
     <span class="mt-4 text-center text-lg text-gray-600 sm:text-xl dark:text-gray-200">
