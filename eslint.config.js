@@ -9,8 +9,9 @@ import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import markdown from "@eslint/markdown";
 import checkFile from "eslint-plugin-check-file";
 import nuxt from "eslint-plugin-nuxt";
+import withNuxt from "./.nuxt/eslint.config.mjs";
 
-export default [
+export default withNuxt(
   {
     ignores: ["*.min.js", "*.map", "*.snap", "**/build/**", "**/dist/**", "**/.nuxt/**"],
   },
@@ -53,7 +54,7 @@ export default [
       "check-file/filename-naming-convention": [
         "error",
         {
-          "*//.md": "([a-z0-9]+(-[a-z0-9]+)|[0-9]+.[a-z0-9]+(-[a-z0-9]+))",
+          "**/*/.md": "([a-z0-9]+(-[a-z0-9]+)|[0-9]+.[a-z0-9]+(-[a-z0-9]+))",
           "components/**/*.vue": "PASCAL_CASE",
         },
       ],
@@ -65,4 +66,4 @@ export default [
       ],
     },
   },
-];
+);
