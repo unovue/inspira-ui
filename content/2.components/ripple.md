@@ -21,8 +21,7 @@ navBadges:
 
 You can copy and paste the following code to create these components:
 
-::code-group
-::CodeViewerTab{label="Ripple.vue" icon="vscode-icons:file-type-vue" componentName="Ripple" type="ui" id="ripple"}
+::CodeViewer{filename="Ripple.vue" language="vue" componentName="Ripple" type="ui" id="ripple"}
 ::
 
 ## Features
