@@ -16,51 +16,6 @@ navBadges:
 | `class`          | `string`  | `-`     | Additional CSS classes to apply to the component for styling.             |
 | `radialGradient` | `boolean` | `true`  | Determines whether a radial gradient effect is applied to the background. |
 
-You can copy and paste the `tailwind.config.ts` code.
-
-```ts{1-3, 13, 16-23, 27, 31-40} [tailwind.config.ts]
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
-
-export default {
-  darkMode: "selector",
-  safelist: ["dark"],
-  prefix: "",
-  content: [],
-  theme: {
-    extend: {
-      animation: {
-        aurora: "aurora 60s linear infinite",
-      },
-      keyframes: {
-        aurora: {
-          from: {
-            backgroundPosition: "50% 50%, 50% 50%",
-          },
-          to: {
-            backgroundPosition: "350% 50%, 350% 50%",
-          },
-        },
-      },
-    },
-  },
-  plugins: [addVariablesForColors],
-};
-
-// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
-function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
-
-  addBase({
-    ":root": newVars,
-  });
-}
-```
-
 ## Component Code
 
 You can copy and paste the following code to create these components:

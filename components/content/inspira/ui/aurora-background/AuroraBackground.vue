@@ -1,16 +1,3 @@
-<script setup lang="ts">
-import { cn } from "@/lib/utils";
-
-interface AuroraBackgroundProps {
-  radialGradient?: boolean;
-  class?: string;
-}
-
-const props = withDefaults(defineProps<AuroraBackgroundProps>(), {
-  radialGradient: true,
-});
-</script>
-
 <template>
   <main>
     <div
@@ -24,9 +11,9 @@ const props = withDefaults(defineProps<AuroraBackgroundProps>(), {
     >
       <div class="absolute inset-0 overflow-hidden">
         <div
-          class="aurora-background-gradient"
           :class="
             cn(
+              'aurora-background-gradient aurora-gradient-animation',
               props.radialGradient &&
                 `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`,
             )
@@ -38,6 +25,19 @@ const props = withDefaults(defineProps<AuroraBackgroundProps>(), {
   </main>
 </template>
 
+<script setup lang="ts">
+import { cn } from "@/lib/utils";
+
+interface AuroraBackgroundProps {
+  radialGradient?: boolean;
+  class?: string;
+}
+
+const props = withDefaults(defineProps<AuroraBackgroundProps>(), {
+  radialGradient: true,
+});
+</script>
+
 <style scoped>
 .aurora-background-gradient {
   @apply [--white-gradient:repeating-linear-gradient(100deg,var(--white)_0%,var(--white)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--white)_16%)]
@@ -48,11 +48,28 @@ const props = withDefaults(defineProps<AuroraBackgroundProps>(), {
             [background-size:300%,_200%]
             [background-position:50%_50%,50%_50%]
             filter blur-[10px] invert dark:invert-0
-            after:content-[""] after:absolute after:inset-0 after:[background-image:var(--white-gradient),var(--aurora)] 
+            after:content-[""] after:absolute after:inset-0 after:[background-image:var(--white-gradient),var(--aurora)]
             after:dark:[background-image:var(--dark-gradient),var(--aurora)]
-            after:[background-size:200%,_100%] 
-            after:animate-aurora after:[background-attachment:fixed] after:mix-blend-difference
+            after:[background-size:200%,_100%]
+            after:[background-attachment:fixed] after:mix-blend-difference
             pointer-events-none
             absolute -inset-[10px] opacity-50 will-change-transform;
+}
+
+.aurora-gradient-animation::after {
+  animation: animate-aurora 60s linear infinite;
+}
+
+@keyframes animate-aurora {
+  0% {
+    background-position:
+      50% 50%,
+      50% 50%;
+  }
+  100% {
+    background-position:
+      350% 50%,
+      350% 50%;
+  }
 }
 </style>

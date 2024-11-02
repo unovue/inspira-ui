@@ -1,9 +1,6 @@
 import type { Config } from "tailwindcss";
 import animate from "tailwindcss-animate";
 import { setupInspiraUI } from "@inspira-ui/plugins";
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
 
 export default {
   darkMode: "selector",
@@ -117,37 +114,16 @@ export default {
         "collapsible-up": {
           from: { height: "var(--radix-collapsible-content-height)" },
           to: { height: "0" },
-        },
-        aurora: {
-          from: {
-            backgroundPosition: "50% 50%, 50% 50%",
-          },
-          to: {
-            backgroundPosition: "350% 50%, 350% 50%",
-          },
-        },
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "collapsible-down": "collapsible-down 0.2s ease-in-out",
         "collapsible-up": "collapsible-up 0.2s ease-in-out",
-        aurora: "aurora 60s linear infinite",
       },
     },
   },
 
-  plugins: [animate, setupInspiraUI, addVariablesForColors],
+  plugins: [animate, setupInspiraUI],
 } satisfies Config;
-
-// This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
-function addVariablesForColors({ addBase, theme }: any) {
-  let allColors = flattenColorPalette(theme("colors"));
-  let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
-  );
-
-  addBase({
-    ":root": newVars,
-  });
-}
