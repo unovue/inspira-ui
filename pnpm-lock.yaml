@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@nuxt/eslint':
-        specifier: ^0.6.1
-        version: 0.6.1(eslint@9.13.0(jiti@2.3.3))(magicast@0.3.5)(rollup@4.24.0)(typescript@5.6.3)(vite@5.4.10(@types/node@22.7.9)(terser@5.36.0))
       '@nuxt/image':
         specifier: ^1.8.1
         version: 1.8.1(ioredis@5.4.1)(magicast@0.3.5)(rollup@4.24.0)
@@ -81,6 +78,9 @@ importers:
       '@inspira-ui/plugins':
         specifier: 0.0.1
         version: 0.0.1
+      '@nuxt/eslint':
+        specifier: ^0.6.1
+        version: 0.6.1(eslint@9.13.0(jiti@2.3.3))(magicast@0.3.5)(rollup@4.24.0)(typescript@5.6.3)(vite@5.4.10(@types/node@22.7.9)(terser@5.36.0))
       '@types/canvas-confetti':
         specifier: ^1.6.4
         version: 1.6.4

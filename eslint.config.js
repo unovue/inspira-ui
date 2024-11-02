@@ -8,8 +8,7 @@ import importPlugin from "eslint-plugin-import";
 import eslintPluginUnicorn from "eslint-plugin-unicorn";
 import markdown from "@eslint/markdown";
 import checkFile from "eslint-plugin-check-file";
-import nuxt from "eslint-plugin-nuxt";
-import withNuxt from "./.nuxt/eslint.config.mjs";
+import { withNuxt } from "./.nuxt/eslint.config.mjs";
 
 export default withNuxt(
   {
@@ -19,16 +18,15 @@ export default withNuxt(
     plugins: {
       unicorn: eslintPluginUnicorn,
       "check-file": checkFile,
-      nuxt,
     },
   },
   { languageOptions: { globals: globals.node } },
+  importPlugin.flatConfigs.recommended,
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   ...pluginVue.configs["flat/recommended"],
   ...pluginTailwind.configs["flat/recommended"],
   eslintConfigPrettier,
-  importPlugin.flatConfigs.recommended,
   ...markdown.configs.processor,
   {
     files: ["**/*.vue"],
@@ -45,7 +43,6 @@ export default withNuxt(
       "import/no-unresolved": "off", //Need eslint-import-resolver-typescript, waiting for flatconfig and error fix on package side
       "func-style": ["error", "declaration"],
       "vue/multi-word-component-names": "off",
-      "nuxt/no-globals-in-created": "error", // Nuxt-specific rule
       "@typescript-eslint/no-empty-object-type": [
         "error",
         { allowInterfaces: "with-single-extends" },
