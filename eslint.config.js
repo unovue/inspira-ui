@@ -12,7 +12,16 @@ import { withNuxt } from "./.nuxt/eslint.config.mjs";
 
 export default withNuxt(
   {
-    ignores: ["*.min.js", "*.map", "*.snap", "**/build/**", "**/dist/**", "**/.nuxt/**"],
+    ignores: [
+      "*.min.js",
+      "*.map",
+      "*.snap",
+      "**/build/**",
+      "**/dist/**",
+      "**/.nuxt/**",
+      "**/CONTRIBUTING.md",
+      "**/3.contribution.md",
+    ],
   },
   {
     plugins: {
