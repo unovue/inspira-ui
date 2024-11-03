@@ -13,9 +13,9 @@ import { ref, onMounted, onBeforeUnmount } from "vue";
 
 const value = ref(0);
 
-const handleIncrement = (prev: number) => {
+function handleIncrement(prev: number) {
   return prev === 100 ? 0 : prev + 10;
-};
+}
 
 onMounted(() => {
   value.value = handleIncrement(value.value);

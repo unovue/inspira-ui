@@ -16,18 +16,16 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-  componentName: {
-    type: String,
-    required: true,
-  },
-  id: String,
-  type: String,
-  label: String,
-  class: String,
-  icon: {
-    type: String,
-    default: "lucide:square-terminal",
-  },
+interface Props {
+  componentName?: string;
+  id?: string;
+  type?: string;
+  label?: string;
+  class?: string;
+  icon?: string;
+}
+
+withDefaults(defineProps<Props>(), {
+  icon: "lucide:square-terminal",
 });
 </script>

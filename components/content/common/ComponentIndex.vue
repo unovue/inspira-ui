@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col w-full gap-4 flex-wrap py-8">
+  <div class="flex w-full flex-col flex-wrap gap-4 py-8">
     <ContentList
       path="components"
       :query="query"
@@ -8,14 +8,15 @@
         <ClientOnly>
           <CardSpotlight
             v-for="(item, index) in list"
-            class="max-w-[32rem] relative border-zinc-200 dark:bg-zinc-900/50 border dark:border-zinc-800 p-6 max-h-14 h-screen overflow-hidden rounded-2xl flex-row justify-between items-center gap-4 cursor-pointer"
-            :gradientColor="gradientColor"
+            :key="`componentIndex_${index}`"
+            class="relative h-screen max-h-14 max-w-lg cursor-pointer flex-row items-center justify-between gap-4 overflow-hidden rounded-2xl border border-zinc-200 p-6 dark:border-zinc-800 dark:bg-zinc-900/50"
+            :gradient-color="gradientColor"
             slot-class="w-full"
           >
             <NuxtLink :to="item._path">
-              <div class="flex flex-row w-full items-center justify-center">
-                <div class="text-right mr-2">{{ index + 1 }}.</div>
-                <div class="font-heading mr-2">{{ item.title }}</div>
+              <div class="flex w-full flex-row items-center justify-center">
+                <div class="mr-2 text-right">{{ index + 1 }}.</div>
+                <div class="mr-2 font-heading">{{ item.title }}</div>
                 <Badge
                   v-for="badge in item.navBadges"
                   :key="`${badge}_${item.title}_${index}`"

@@ -12,7 +12,16 @@ import { withNuxt } from "./.nuxt/eslint.config.mjs";
 
 export default withNuxt(
   {
-    ignores: ["*.min.js", "*.map", "*.snap", "**/build/**", "**/dist/**", "**/.nuxt/**"],
+    ignores: [
+      "*.min.js",
+      "*.map",
+      "*.snap",
+      "**/build/**",
+      "**/dist/**",
+      "**/.nuxt/**",
+      "**/CONTRIBUTING.md",
+      "**/3.contribution.md",
+    ],
   },
   {
     plugins: {
@@ -43,6 +52,8 @@ export default withNuxt(
       "import/no-unresolved": "off", //Need eslint-import-resolver-typescript, waiting for flatconfig and error fix on package side
       "func-style": ["error", "declaration"],
       "vue/multi-word-component-names": "off",
+      "vue/require-default-prop": "off",
+      "tailwindcss/no-custom-classname": "off",
       "@typescript-eslint/no-empty-object-type": [
         "error",
         { allowInterfaces: "with-single-extends" },

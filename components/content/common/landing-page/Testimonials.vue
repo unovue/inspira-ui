@@ -1,14 +1,14 @@
 <template>
-  <div class="flex flex-col justify-center items-center max-w-7xl w-full p-4">
+  <div class="flex w-full max-w-7xl flex-col items-center justify-center p-4">
     <div class="py-12 text-5xl font-semibold">
       Loved by community <span class="text-4xl"> ❤️</span>
     </div>
     <div
-      class="relative w-full h-[430px] overflow-hidden rounded-xl border bg-white dark:bg-background shadow-lg"
+      class="relative h-[430px] w-full overflow-hidden rounded-xl border bg-white shadow-lg dark:bg-background"
     >
       <!-- Logo -->
       <div
-        class="absolute top-8 left-1/2 transform -translate-x-1/2 z-20 mt-4 bg-white bg-opacity-30 backdrop-filter border backdrop-blur-md rounded-3xl p-3"
+        class="absolute left-1/2 top-8 z-20 mt-4 -translate-x-1/2 rounded-3xl border bg-white/30 p-3 backdrop-blur-md"
       >
         <ClientOnly>
           <NuxtImg
@@ -24,10 +24,10 @@
 
       <!-- Center Text -->
       <div
-        class="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-4 mt-20"
+        class="absolute inset-0 z-10 mt-20 flex flex-col items-center justify-center px-4 text-center"
       >
-        <h3 class="text-4xl sm:text-5xl font-bold mb-2">What are you waiting for?</h3>
-        <p class="text-base sm:text-lg m-4">Get started and start building awesome UI 😄</p>
+        <h3 class="mb-2 text-4xl font-bold sm:text-5xl">What are you waiting for?</h3>
+        <p class="m-4 text-base sm:text-lg">Get started and start building awesome UI 😄</p>
         <NuxtLink to="getting-started/installation">
           <UiButton variant="default"> Get Started → </UiButton>
         </NuxtLink>
@@ -38,7 +38,7 @@
         <Marquee
           :style="{ transform: 'translateY(-11.5rem) rotate(-16deg)' }"
           class="marquee"
-          :pauseOnHover="false"
+          :pause-on-hover="false"
         >
           <ReviewCard
             v-for="review in firstRow"
@@ -54,7 +54,7 @@
           :style="{ transform: 'translateY(1rem) rotate(-16deg)' }"
           reverse
           class="marquee"
-          :pauseOnHover="false"
+          :pause-on-hover="false"
         >
           <ReviewCard
             v-for="review in firstRow"
@@ -69,7 +69,7 @@
         <Marquee
           :style="{ transform: 'translateY(13.5rem) rotate(-16deg)' }"
           class="marquee"
-          :pauseOnHover="false"
+          :pause-on-hover="false"
         >
           <ReviewCard
             v-for="review in firstRow"
@@ -85,7 +85,7 @@
           :style="{ transform: 'translateY(26rem) rotate(-16deg)' }"
           reverse
           class="marquee"
-          :pauseOnHover="false"
+          :pause-on-hover="false"
         >
           <ReviewCard
             v-for="review in firstRow"
@@ -100,7 +100,7 @@
 
       <!-- Gradient overlay to fade to white at the bottom -->
       <div
-        class="absolute inset-0 top-0 bg-gradient-to-t from-white dark:from-background to-transparent pointer-events-none"
+        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-white to-transparent dark:from-background"
       ></div>
     </div>
   </div>

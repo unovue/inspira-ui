@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-56 flex flex-col items-center justify-center z-10">
+  <div class="z-10 flex h-56 w-full flex-col items-center justify-center">
     <GradientButton :bg-color="bgColor">Zooooooooooom 🚀</GradientButton>
   </div>
 </template>

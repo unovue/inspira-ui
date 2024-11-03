@@ -9,10 +9,11 @@
 </template>
 
 <script setup lang="ts">
-import confetti, {
-  GlobalOptions as ConfettiGlobalOptions,
-  Options as ConfettiOptions,
-  CreateTypes as ConfettiInstance,
+import {
+  create,
+  type GlobalOptions as ConfettiGlobalOptions,
+  type Options as ConfettiOptions,
+  type CreateTypes as ConfettiInstance,
 } from "canvas-confetti";
 
 type Api = {
@@ -43,7 +44,7 @@ provide("ConfettiContext", api);
 // Initialize confetti when mounted
 onMounted(() => {
   if (canvasRef.value) {
-    instanceRef.value = confetti.create(canvasRef.value, {
+    instanceRef.value = create(canvasRef.value, {
       ...props.globalOptions,
       resize: true,
     });

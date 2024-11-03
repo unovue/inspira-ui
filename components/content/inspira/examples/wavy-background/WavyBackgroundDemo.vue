@@ -1,12 +1,10 @@
 <template>
-  <!-- <div class="flex min-h-[350px] w-full justify-center p-2 sm:p-10 items-center"> -->
-  <WavyBackground class="max-w-4xl mx-auto pb-40">
-    <p class="text-2xl md:text-4xl lg:text-7xl text-white font-bold inter-var text-center">
+  <WavyBackground class="mx-auto max-w-4xl pb-40">
+    <p class="inter-var text-center text-2xl font-bold text-white lg:text-7xl md:text-4xl">
       Hero waves are cool
     </p>
-    <p class="text-base md:text-lg mt-4 text-white font-normal inter-var text-center">
+    <p class="inter-var mt-4 text-center text-base font-normal text-white md:text-lg">
       Leverage the power of canvas to create a beautiful hero section
     </p>
   </WavyBackground>
-  <!-- </div> -->
 </template>

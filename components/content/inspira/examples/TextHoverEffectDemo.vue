@@ -8,5 +8,3 @@
     </div>
   </ClientOnly>
 </template>
-
-<script setup lang="ts"></script>

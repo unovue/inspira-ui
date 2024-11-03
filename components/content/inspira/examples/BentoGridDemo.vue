@@ -1,13 +1,13 @@
 <template>
-  <BentoGrid class="max-w-4xl mx-auto">
+  <BentoGrid class="mx-auto max-w-4xl">
     <BentoGridItem
       v-for="(item, index) in items"
       :key="index"
       :class="index === 3 || index === 6 ? 'md:col-span-2' : ''"
     >
       <template #header>
-        <div class="animate-pulse flex space-x-4 w-full h-full">
-          <div class="rounded-md flex flex-1 h-full w-full bg-zinc-800"></div>
+        <div class="flex size-full animate-pulse space-x-4">
+          <div class="flex size-full flex-1 rounded-md bg-zinc-800"></div>
         </div>
       </template>
 

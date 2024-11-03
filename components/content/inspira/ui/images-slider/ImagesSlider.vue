@@ -2,7 +2,7 @@
   <div
     ref="sliderRef"
     tabindex="0"
-    class="overflow-hidden w-full h-full relative flex items-center justify-center transition-colors focus:ring-1 focus:outline-none"
+    class="relative flex size-full items-center justify-center overflow-hidden transition-colors focus:outline-none focus:ring-1"
     :style="{
       perspective: props.perspective,
     }"
@@ -95,13 +95,13 @@ const currentIndex = defineModel("modelValue", {
   default: 0,
 });
 
-const setCurrentDirection = (dir: "prev" | "next") => {
+function setCurrentDirection(dir: "prev" | "next") {
   if (props.direction === "horizontal") {
     currentDirection.value = dir === "next" ? "left" : "right";
   } else {
     currentDirection.value = dir === "next" ? "up" : "down";
   }
-};
+}
 
 // Image Loading
 const isLoading = ref(true);
@@ -109,7 +109,7 @@ const isTransitioning = ref(false);
 const loadedImages: Ref<string[]> = ref([]);
 const currentImage = computed(() => loadedImages.value[currentIndex.value]);
 
-const loadImages = () => {
+function loadImages() {
   isLoading.value = true;
   const promises = props.images.map(
     (imageSrc): Promise<string> =>
@@ -120,18 +120,16 @@ const loadImages = () => {
         image.onerror = () => reject(imageSrc);
       }),
   );
-  Promise.all(promises)
-    .then((resolvedImages) => {
-      loadedImages.value = resolvedImages;
-      isLoading.value = false;
-    })
-    .catch((error) => console.error("Failed to load images", error));
-};
+  Promise.all(promises).then((resolvedImages) => {
+    loadedImages.value = resolvedImages;
+    isLoading.value = false;
+  });
+}
 loadImages();
 
 // Navigation
 
-const onPrev = () => {
+function onPrev() {
   if (isLoading.value || isTransitioning.value) {
     return false;
   }
@@ -141,9 +139,9 @@ const onPrev = () => {
     target = loadedImages.value.length - 1;
   }
   currentIndex.value = target;
-};
+}
 
-const onNext = () => {
+function onNext() {
   if (isLoading.value || isTransitioning.value) {
     return false;
   }
@@ -153,7 +151,7 @@ const onNext = () => {
     target = 0;
   }
   currentIndex.value = target;
-};
+}
 
 onKeyStroke(
   ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"],
@@ -187,9 +185,17 @@ watch(swipingDirection, (dir) => {
       return onNext();
   }
 });
-watch(isSwiping, (v) => {
-  v === true ? pause() : resume();
-});
+
+watch(isSwiping, setSwiping);
+
+function setSwiping(v: boolean) {
+  if (v) {
+    pause();
+    return;
+  }
+
+  resume();
+}
 
 // Autoplay
 const autoplayInterval = computed(() => {
@@ -210,15 +216,16 @@ watch(isLoading, (v) => {
 });
 
 // Transitions
-const lockViewport = () => {
+function lockViewport() {
   isTransitioning.value = true;
-};
-const unlockViewport = () => {
+}
+
+function unlockViewport() {
   isTransitioning.value = false;
   if (isActive.value === false && autoplayInterval.value) {
     resume();
   }
-};
+}
 const transitionProps = computed(() => {
   const bind = {
     enterActiveClass: props.enterActiveClass,

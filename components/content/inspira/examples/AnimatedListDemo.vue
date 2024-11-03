@@ -1,6 +1,6 @@
 <template>
   <ClientOnly>
-    <div class="relative flex h-[500px] w-full flex-col p-6 overflow-hidden">
+    <div class="relative flex h-[500px] w-full flex-col overflow-hidden p-6">
       <AnimatedList>
         <template #default>
           <Notification

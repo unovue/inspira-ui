@@ -40,7 +40,7 @@ export const PATTERN_BACKGROUND_SPEED = {
   Fast: 5000,
 } as const;
 
-export const patternBackgroundVariants = cva("relative overflow-clip", {
+export const patternBackgroundVariants = cva("relative text-clip", {
   variants: {
     variant: {
       [PATTERN_BACKGROUND_VARIANT.Grid]:

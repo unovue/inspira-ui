@@ -1,64 +1,7 @@
-<script setup lang="ts">
-interface LensProps {
-  zoomFactor?: number;
-  lensSize?: number;
-  position?: {
-    x: number;
-    y: number;
-  };
-  isStatic?: boolean;
-  hovering?: boolean;
-}
-
-const props = withDefaults(defineProps<LensProps>(), {
-  zoomFactor: 1.5,
-  lensSize: 170,
-  isStatic: false,
-  position: () => ({ x: 200, y: 150 }),
-});
-
-const emit = defineEmits<{
-  (e: "hover-update", value: boolean): void;
-}>();
-
-const containerRef = ref<HTMLElement | null>(null);
-const localIsHovering = ref(false);
-const mousePosition = ref({ x: 100, y: 100 });
-
-const isHovering = computed(() => props.hovering ?? localIsHovering.value);
-
-const setIsHovering = (hover: boolean) => {
-  localIsHovering.value = hover;
-  emit("hover-update", hover);
-};
-
-const handleMouseMove = (e: MouseEvent) => {
-  const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
-  mousePosition.value = {
-    x: e.clientX - rect.left,
-    y: e.clientY - rect.top,
-  };
-};
-
-const maskPosition = computed(() => {
-  const pos = props.isStatic ? props.position : mousePosition.value;
-  return `circle ${props.lensSize! / 2}px at ${pos.x}px ${pos.y}px`;
-});
-
-const transformOrigin = computed(() => {
-  const pos = props.isStatic ? props.position : mousePosition.value;
-  return `${pos.x}px ${pos.y}px`;
-});
-
-watchEffect(() => {
-  setIsHovering(false);
-});
-</script>
-
 <template>
   <div
     ref="containerRef"
-    class="relative overflow-hidden rounded-lg z-20"
+    class="relative z-20 overflow-hidden rounded-lg"
     @mouseenter="setIsHovering(true)"
     @mouseleave="setIsHovering(false)"
     @mousemove="handleMouseMove"
@@ -91,3 +34,60 @@ watchEffect(() => {
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+interface LensProps {
+  zoomFactor?: number;
+  lensSize?: number;
+  position?: {
+    x: number;
+    y: number;
+  };
+  isStatic?: boolean;
+  hovering?: boolean;
+}
+
+const props = withDefaults(defineProps<LensProps>(), {
+  zoomFactor: 1.5,
+  lensSize: 170,
+  isStatic: false,
+  position: () => ({ x: 200, y: 150 }),
+});
+
+const emit = defineEmits<{
+  (e: "hover-update", value: boolean): void;
+}>();
+
+const containerRef = ref<HTMLElement | null>(null);
+const localIsHovering = ref(false);
+const mousePosition = ref({ x: 100, y: 100 });
+
+const isHovering = computed(() => props.hovering ?? localIsHovering.value);
+
+function setIsHovering(hover: boolean) {
+  localIsHovering.value = hover;
+  emit("hover-update", hover);
+}
+
+function handleMouseMove(e: MouseEvent) {
+  const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+  mousePosition.value = {
+    x: e.clientX - rect.left,
+    y: e.clientY - rect.top,
+  };
+}
+
+const maskPosition = computed(() => {
+  const pos = props.isStatic ? props.position : mousePosition.value;
+  return `circle ${props.lensSize! / 2}px at ${pos.x}px ${pos.y}px`;
+});
+
+const transformOrigin = computed(() => {
+  const pos = props.isStatic ? props.position : mousePosition.value;
+  return `${pos.x}px ${pos.y}px`;
+});
+
+watchEffect(() => {
+  setIsHovering(false);
+});
+</script>

@@ -3,11 +3,9 @@
     ref="textScrollRevealRef"
     :class="cn('relative z-0 h-[200vh]', $props.class)"
   >
-    <div
-      class="sticky top-0 mx-auto flex h-[50%] max-w-4xl items-center bg-transparent px-[1rem] py-[5rem]"
-    >
+    <div class="sticky top-0 mx-auto flex h-1/2 max-w-4xl items-center bg-transparent px-4 py-20">
       <p
-        class="flex flex-wrap p-5 text-2xl font-bold text-black/20 dark:text-white/20 md:p-8 md:text-3xl lg:p-10 lg:text-4xl xl:text-5xl"
+        class="flex flex-wrap p-5 text-2xl font-bold text-black/20 xl:text-5xl lg:p-10 lg:text-4xl md:p-8 md:text-3xl dark:text-white/20"
       >
         <ScrollWord
           v-for="(word, i) in words"
@@ -25,11 +23,13 @@
 import { ref, computed } from "vue";
 import { cn } from "~/lib/utils";
 
-// Props
-const props = defineProps<{
+interface Props {
   class?: string;
   text: string;
-}>();
+}
+
+// Props
+const props = defineProps<Props>();
 
 const textScrollRevealRef = ref<HTMLElement | null>(null);
 
@@ -37,14 +37,14 @@ const words = computed(() => props.text.split(" "));
 
 const scrollYProgress = ref(0);
 
-const updateScrollYProgress = () => {
+function updateScrollYProgress() {
   if (textScrollRevealRef.value) {
     const boundingRect = textScrollRevealRef.value.getBoundingClientRect();
     const windowHeight = window.innerHeight;
 
     scrollYProgress.value = (boundingRect.y / windowHeight) * -1;
   }
-};
+}
 
 onMounted(() => {
   window.addEventListener("scroll", updateScrollYProgress);

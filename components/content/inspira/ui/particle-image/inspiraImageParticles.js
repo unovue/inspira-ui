@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const inspiraImageParticles = () => {
   "use strict";
 

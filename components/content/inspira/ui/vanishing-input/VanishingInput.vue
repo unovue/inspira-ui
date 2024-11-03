@@ -1,27 +1,27 @@
 <template>
   <form
     :class="[
-      'w-full relative max-w-xl mx-auto bg-white dark:bg-zinc-800 h-12 rounded-full overflow-hidden shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200',
+      'relative mx-auto h-12 w-full max-w-xl overflow-hidden rounded-full bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 dark:bg-zinc-800',
       vanishingText && 'bg-gray-50',
     ]"
     @submit.prevent="handleSubmit"
   >
     <!-- Canvas Element -->
     <canvas
+      ref="canvasRef"
       :class="[
-        'absolute pointer-events-none text-base transform scale-50 top-[20%] left-2 sm:left-8 origin-top-left filter invert dark:invert-0 pr-20',
+        'pointer-events-none absolute left-2 top-[20%] origin-top-left scale-50 pr-20 text-base invert sm:left-8 dark:invert-0',
         animating ? 'opacity-100' : 'opacity-0',
       ]"
-      ref="canvasRef"
     />
 
     <!-- Text Input -->
     <input
+      ref="inputRef"
       v-model="vanishingText"
       :disabled="animating"
-      ref="inputRef"
       type="text"
-      class="w-full relative text-sm sm:text-base z-50 border-none dark:text-white bg-transparent text-black h-full rounded-full focus:outline-none focus:ring-0 pl-4 sm:pl-10 pr-20"
+      class="relative z-50 size-full rounded-full border-none bg-transparent pl-4 pr-20 text-sm text-black focus:outline-none focus:ring-0 sm:pl-10 sm:text-base dark:text-white"
       :class="{ 'text-transparent dark:text-transparent': animating }"
       @keydown.enter="handleKeyDown"
     />
@@ -30,7 +30,7 @@
     <button
       :disabled="!vanishingText"
       type="submit"
-      class="absolute right-2 top-1/2 z-50 -translate-y-1/2 h-8 w-8 rounded-full disabled:bg-gray-100 bg-black dark:bg-zinc-900 dark:disabled:bg-zinc-700 transition duration-200 flex items-center justify-center"
+      class="absolute right-2 top-1/2 z-50 flex size-8 -translate-y-1/2 items-center justify-center rounded-full bg-black transition duration-200 disabled:bg-gray-100 dark:bg-zinc-900 dark:disabled:bg-zinc-700"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="text-gray-300 h-4 w-4"
+        class="size-4 text-gray-300"
       >
         <path
           stroke="none"
@@ -63,7 +63,7 @@
     </button>
 
     <!-- Placeholder Text -->
-    <div class="absolute inset-0 flex items-center rounded-full pointer-events-none">
+    <div class="pointer-events-none absolute inset-0 flex items-center rounded-full">
       <Transition
         v-show="!vanishingText"
         mode="out-in"
@@ -76,7 +76,7 @@
       >
         <p
           :key="currentPlaceholder"
-          class="dark:text-zinc-500 text-sm sm:text-base font-normal text-neutral-500 pl-4 sm:pl-10 text-left w-[calc(100%-2rem)] truncate"
+          class="w-[calc(100%-2rem)] truncate pl-4 text-left text-sm font-normal text-neutral-500 sm:pl-10 sm:text-base dark:text-zinc-500"
         >
           {{ placeholders[currentPlaceholder] }}
         </p>
@@ -127,22 +127,22 @@ onMounted(() => {
   inputRef.value.focus();
 });
 
-const changePlaceholder = (): void => {
+function changePlaceholder(): void {
   intervalRef.value = window.setInterval(() => {
     currentPlaceholder.value = (currentPlaceholder.value + 1) % props.placeholders.length;
   }, 3000);
-};
+}
 
-const handleVisibilityChange = (): void => {
+function handleVisibilityChange(): void {
   if (document.visibilityState !== "visible" && intervalRef.value) {
     clearInterval(intervalRef.value);
     intervalRef.value = null;
   } else if (document.visibilityState === "visible") {
     changePlaceholder();
   }
-};
+}
 
-const draw = (): void => {
+function draw(): void {
   if (!inputRef.value || !canvasRef.value) return;
 
   const canvas = canvasRef.value;
@@ -178,75 +178,71 @@ const draw = (): void => {
     }
   }
   newDataRef.value = newData.map(({ x, y, color }) => ({ x, y, r: 1, color }));
-};
+}
 
-const animate = (start: number): void => {
-  const animateFrame = (pos: number = 0): void => {
-    animationFrame.value = requestAnimationFrame(() => {
-      const newArr: AnimatedPixel[] = [];
-      for (const current of newDataRef.value) {
-        if (current.x < pos) {
-          newArr.push(current);
-        } else {
-          if (current.r <= 0) {
-            current.r = 0;
-            continue;
-          }
-          current.x += Math.random() > 0.5 ? 1 : -1;
-          current.y += Math.random() > 0.5 ? 1 : -1;
-          current.r -= 0.05 * Math.random();
-          newArr.push(current);
-        }
-      }
-      newDataRef.value = newArr;
-      const ctx = canvasRef.value?.getContext("2d");
-      if (ctx) {
-        ctx.clearRect(pos, 0, 800, 800);
-        newDataRef.value.forEach(({ x, y, r, color }) => {
-          if (x > pos) {
-            ctx.beginPath();
-            ctx.rect(x, y, r, r);
-            ctx.fillStyle = color;
-            ctx.strokeStyle = color;
-            ctx.stroke();
-          }
-        });
-      }
-      if (newDataRef.value.length > 0) {
-        animateFrame(pos - 8);
+function animate(start: number = 0): void {
+  animationFrame.value = requestAnimationFrame(() => {
+    const newArr: AnimatedPixel[] = [];
+    for (const current of newDataRef.value) {
+      if (current.x < start) {
+        newArr.push(current);
       } else {
-        vanishingText.value = "";
-        animating.value = false;
-        setTimeout(() => {
-          // regain focus after animation
-          inputRef.value.focus();
-        }, 100);
+        if (current.r <= 0) {
+          current.r = 0;
+          continue;
+        }
+        current.x += Math.random() > 0.5 ? 1 : -1;
+        current.y += Math.random() > 0.5 ? 1 : -1;
+        current.r -= 0.05 * Math.random();
+        newArr.push(current);
       }
-    });
-  };
-  animateFrame(start);
-};
+    }
+    newDataRef.value = newArr;
+    const ctx = canvasRef.value?.getContext("2d");
+    if (ctx) {
+      ctx.clearRect(start, 0, 800, 800);
+      newDataRef.value.forEach(({ x, y, r, color }) => {
+        if (x > start) {
+          ctx.beginPath();
+          ctx.rect(x, y, r, r);
+          ctx.fillStyle = color;
+          ctx.strokeStyle = color;
+          ctx.stroke();
+        }
+      });
+    }
+    if (newDataRef.value.length > 0) {
+      animate(start - 8);
+    } else {
+      vanishingText.value = "";
+      animating.value = false;
+      setTimeout(() => {
+        // regain focus after animation
+        inputRef.value.focus();
+      }, 100);
+    }
+  });
+}
 
-const handleKeyDown = (e: KeyboardEvent): void => {
+function handleKeyDown(e: KeyboardEvent): void {
   if (e.key === "Enter" && !animating.value) {
     vanishAndSubmit();
   }
-};
+}
 
-const vanishAndSubmit = (): void => {
+function vanishAndSubmit(): void {
   animating.value = true;
-  vanishingText.value = vanishingText.value;
   draw();
   if (vanishingText.value) {
     const maxX = Math.max(...newDataRef.value.map(({ x }) => x));
     animate(maxX);
     emit("submit", vanishingText.value);
   }
-};
+}
 
-const handleSubmit = (): void => {
+function handleSubmit(): void {
   vanishAndSubmit();
-};
+}
 
 // Watch for value changes
 watch(vanishingText, (newVal: string) => {

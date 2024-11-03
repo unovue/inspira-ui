@@ -1,10 +1,10 @@
 <template>
   <div
-    class="h-[60rem] md:h-[80rem] flex items-center justify-center relative p-2 md:p-20"
     ref="containerRef"
+    class="relative flex h-[60rem] items-center justify-center p-2 md:h-[80rem] md:p-20"
   >
     <div
-      class="py-10 md:py-40 w-full relative"
+      class="relative w-full py-10 md:py-40"
       style="perspective: 1000px"
     >
       <ContainerScrollTitle :translate="translateY">
@@ -26,9 +26,9 @@ import { useWindowSize, useScroll, useElementBounding } from "@vueuse/core";
 const containerRef = ref(null);
 const isMobile = ref(false);
 
-const updateIsMobile = () => {
+function updateIsMobile() {
   isMobile.value = window.innerWidth <= 768;
-};
+}
 
 onMounted(() => {
   updateIsMobile();

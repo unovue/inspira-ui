@@ -1,8 +1,8 @@
 <template>
   <div class="flex flex-col items-center justify-center">
     <ParticleImage
-      imageSrc="/og-image.png"
-      :responsiveWidth="true"
+      image-src="/og-image.png"
+      :responsive-width="true"
     />
   </div>
 </template>

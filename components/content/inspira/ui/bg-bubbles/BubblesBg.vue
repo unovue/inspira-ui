@@ -1,14 +1,14 @@
 <template>
   <div
     ref="bubbleParentContainer"
-    class="relative overflow-hidden w-full h-72"
+    class="relative h-72 w-full overflow-hidden"
   >
     <div ref="bubbleCanvasContainer"></div>
     <div
       :style="{
         '--bubbles-blur': `${blur}px`,
       }"
-      class="absolute z-[2] top-0 left-0 right-0 bottom-0 h-full w-full backdrop-blur-[--bubbles-blur]"
+      class="absolute inset-0 z-[2] size-full backdrop-blur-[--bubbles-blur]"
     >
       <slot />
     </div>
@@ -44,8 +44,6 @@ let camera: PerspectiveCamera;
 let clock: Clock;
 const spheres: Mesh[] = [];
 
-const rgb = (r: number, g: number, b: number) => new Color(r / 255, g / 255, b / 255);
-
 const BG_COLOR_BOTTOM_BLUISH = rgb(170, 215, 217);
 const BG_COLOR_TOP_BLUISH = rgb(57, 167, 255);
 const BG_COLOR_BOTTOM_ORANGISH = rgb(255, 160, 75);
@@ -63,7 +61,7 @@ const ORBIT_MAX = ORBIT_MIN + 10;
 const RAND_SEED = 898211544;
 
 const rand = seededRandom(RAND_SEED);
-const randRange = (n = 1) => rand() * n;
+
 const { PI, cos, sin } = Math;
 const PI2 = PI * 2;
 const sizes = new Array(SPHERE_COUNT).fill(0).map(() => randRange(1) * Math.pow(randRange(), 3));
@@ -106,6 +104,14 @@ function seededRandom(a: number) {
     t = Math.imul(t, 0x735a2d97);
     return ((t = t ^ (t >>> 15)) >>> 0) / 4294967296;
   };
+}
+
+function randRange(n = 1) {
+  return rand() * n;
+}
+
+function rgb(r: number, g: number, b: number) {
+  return new Color(r / 255, g / 255, b / 255);
 }
 
 function getGradientMaterial(

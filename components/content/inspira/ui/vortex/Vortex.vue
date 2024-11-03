@@ -1,11 +1,11 @@
 <template>
   <div :class="cn('relative h-full w-full', props.containerClass)">
     <div
+      ref="containerRef"
       v-motion
       :initial="{ opacity: 0 }"
       :enter="{ opacity: 1 }"
-      ref="containerRef"
-      class="absolute h-full w-full inset-0 z-0 bg-transparent flex items-center justify-center"
+      class="absolute inset-0 z-0 flex size-full items-center justify-center bg-transparent"
     >
       <canvas ref="canvasRef"></canvas>
     </div>
@@ -65,15 +65,24 @@ const noise3D = createNoise3D();
 let particleProps = new Float32Array(particlePropsLength);
 let center: [number, number] = [0, 0];
 
-const rand = (n: number): number => n * Math.random();
-const randRange = (n: number): number => n - rand(2 * n);
-const fadeInOut = (t: number, m: number): number => {
+function rand(n: number): number {
+  return n * Math.random();
+}
+
+function randRange(n: number): number {
+  return n - rand(2 * n);
+}
+
+function fadeInOut(t: number, m: number): number {
   const hm = 0.5 * m;
   return Math.abs(((t + hm) % m) - hm) / hm;
-};
-const lerp = (n1: number, n2: number, speed: number): number => (1 - speed) * n1 + speed * n2;
+}
 
-const setup = () => {
+function lerp(n1: number, n2: number, speed: number): number {
+  return (1 - speed) * n1 + speed * n2;
+}
+
+function setup() {
   const canvas = canvasRef.value;
   const container = containerRef.value;
   if (canvas && container) {
@@ -84,17 +93,17 @@ const setup = () => {
       draw(canvas, ctx);
     }
   }
-};
+}
 
-const initParticles = () => {
+function initParticles() {
   tick = 0;
   particleProps = new Float32Array(particlePropsLength);
   for (let i = 0; i < particlePropsLength; i += particlePropCount) {
     initParticle(i);
   }
-};
+}
 
-const initParticle = (i: number) => {
+function initParticle(i: number) {
   const canvas = canvasRef.value;
   if (!canvas) return;
 
@@ -110,9 +119,9 @@ const initParticle = (i: number) => {
   hue = props.baseHue + rand(rangeHue);
 
   particleProps.set([x, y, vx, vy, life, ttl, speed, radius, hue], i);
-};
+}
 
-const draw = (canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) => {
+function draw(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
   tick++;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -124,15 +133,15 @@ const draw = (canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) => {
   renderToScreen(canvas, ctx);
 
   requestAnimationFrame(() => draw(canvas, ctx));
-};
+}
 
-const drawParticles = (ctx: CanvasRenderingContext2D) => {
+function drawParticles(ctx: CanvasRenderingContext2D) {
   for (let i = 0; i < particlePropsLength; i += particlePropCount) {
     updateParticle(i, ctx);
   }
-};
+}
 
-const updateParticle = (i: number, ctx: CanvasRenderingContext2D) => {
+function updateParticle(i: number, ctx: CanvasRenderingContext2D) {
   const canvas = canvasRef.value;
   if (!canvas) return;
 
@@ -163,9 +172,9 @@ const updateParticle = (i: number, ctx: CanvasRenderingContext2D) => {
   if (checkBounds(x, y, canvas) || life > ttl) {
     initParticle(i);
   }
-};
+}
 
-const drawParticle = (
+function drawParticle(
   x: number,
   y: number,
   x2: number,
@@ -175,7 +184,7 @@ const drawParticle = (
   radius: number,
   hue: number,
   ctx: CanvasRenderingContext2D,
-) => {
+) {
   ctx.save();
   ctx.lineCap = "round";
   ctx.lineWidth = radius;
@@ -186,20 +195,21 @@ const drawParticle = (
   ctx.stroke();
   ctx.closePath();
   ctx.restore();
-};
+}
 
-const checkBounds = (x: number, y: number, canvas: HTMLCanvasElement) =>
-  x > canvas.width || x < 0 || y > canvas.height || y < 0;
+function checkBounds(x: number, y: number, canvas: HTMLCanvasElement) {
+  return x > canvas.width || x < 0 || y > canvas.height || y < 0;
+}
 
-const resize = (canvas: HTMLCanvasElement, ctx?: CanvasRenderingContext2D) => {
+function resize(canvas: HTMLCanvasElement, ctx?: CanvasRenderingContext2D) {
   const { innerWidth, innerHeight } = window;
   canvas.width = innerWidth;
   canvas.height = innerHeight;
   center[0] = 0.5 * canvas.width;
   center[1] = 0.5 * canvas.height;
-};
+}
 
-const renderGlow = (canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) => {
+function renderGlow(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
   ctx.save();
   ctx.filter = "blur(8px) brightness(200%)";
   ctx.globalCompositeOperation = "lighter";
@@ -211,14 +221,14 @@ const renderGlow = (canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) =>
   ctx.globalCompositeOperation = "lighter";
   ctx.drawImage(canvas, 0, 0);
   ctx.restore();
-};
+}
 
-const renderToScreen = (canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) => {
+function renderToScreen(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
   ctx.save();
   ctx.globalCompositeOperation = "lighter";
   ctx.drawImage(canvas, 0, 0);
   ctx.restore();
-};
+}
 
 onMounted(() => {
   setup();

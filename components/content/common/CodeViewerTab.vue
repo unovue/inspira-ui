@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
   <div
     :icon="icon"
@@ -5,10 +6,10 @@
     :code="rawString"
   >
     <CodeCopy
-      class="absolute top-0 right-0"
+      class="absolute right-0 top-0"
       :code="rawString"
     />
-    <code class="overflow-auto px-2 leading-4 min-w-full">
+    <code class="min-w-full overflow-auto px-2 leading-4">
       <pre
         class="text-sm"
         v-html="codeHtml"
@@ -24,22 +25,21 @@ import { cn } from "~/lib/utils";
 import hljs from "highlight.js";
 import "~/assets/css/code-theme.css";
 
+interface Props {
+  componentName?: string;
+  id?: string;
+  type?: string;
+  icon?: string;
+  class?: string;
+  extension?: string;
+}
+
 const rawString = ref("");
 const codeHtml = ref("");
 
-const props = defineProps({
-  componentName: String,
-  id: String,
-  type: String,
-  icon: {
-    type: String,
-    default: "lucide:square-terminal",
-  },
-  class: String,
-  extension: {
-    type: String,
-    default: "vue",
-  },
+const props = withDefaults(defineProps<Props>(), {
+  icon: "lucide:square-terminal",
+  extension: "vue",
 });
 
 // Create a map of all possible components using import.meta.glob
@@ -68,7 +68,7 @@ async function loadAndProcessComponentCode() {
     rawString.value = updateImportPaths(componentCode);
     codeHtml.value = hljs.highlightAuto(rawString.value, ["ts", "html", "css", "js", "d.ts"]).value;
   } catch (error) {
-    console.error("Error loading component code:", error);
+    throw new Error("Error loading component code:", error);
   }
 }
 
@@ -79,7 +79,7 @@ async function fetchComponentCode() {
   if (!loadRawComponent) throw new Error(`Component not found: ${path}`);
 
   const mod = await loadRawComponent();
-  return (mod as any).trim();
+  return (mod as unknown).trim();
 }
 
 // Update import paths in the raw code using MagicString

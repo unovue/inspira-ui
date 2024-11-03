@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import confetti from "canvas-confetti";
-import type { ConfettiOptions } from "canvas-confetti";
+import type { Options as ConfettiOptions } from "canvas-confetti";
 
 type ConfettiButtonProps = {
   options?: ConfettiOptions & { canvas?: HTMLCanvasElement };
@@ -16,7 +16,7 @@ const props = defineProps<ConfettiButtonProps>();
 const confettiContext = inject<{ fire: (opts?: ConfettiOptions) => void }>("ConfettiContext");
 
 // Handle click event
-const handleClick = (event: MouseEvent) => {
+function handleClick(event: MouseEvent) {
   const target = event.target as HTMLElement;
   const rect = target.getBoundingClientRect();
   const x = rect.left + rect.width / 2;
@@ -33,5 +33,5 @@ const handleClick = (event: MouseEvent) => {
   if (confettiContext) {
     confettiContext.fire({ ...props.options });
   }
-};
+}
 </script>

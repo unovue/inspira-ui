@@ -1,9 +1,9 @@
 <template>
   <div :class="cn('h-screen flex flex-col items-center justify-center', props.containerClass)">
     <canvas
+      id="canvas"
       ref="canvasRef"
       class="absolute z-0"
-      id="canvas"
       :style="{ filter: isSafari ? `blur(${props.blur}px)` : undefined }"
     ></canvas>
     <div :class="cn('relative z-10', props.class)">
@@ -25,6 +25,7 @@ interface WavyBackgroundProps {
   blur?: number;
   speed?: "slow" | "fast";
   waveOpacity?: number;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
@@ -44,14 +45,15 @@ let w: number,
   h: number,
   nt = 0,
   ctx: CanvasRenderingContext2D | null = null;
+let animationId: number;
 
 const canvasRef = useTemplateRef<HTMLCanvasElement | null>("canvasRef");
 
-const getSpeed = (): number => {
+function getSpeed(): number {
   return props.speed === "slow" ? 0.001 : 0.002;
-};
+}
 
-const init = () => {
+function init() {
   const canvas = canvasRef.value;
   if (canvas) {
     ctx = canvas.getContext("2d");
@@ -73,9 +75,9 @@ const init = () => {
       render();
     }
   }
-};
+}
 
-const drawWave = (n: number) => {
+function drawWave(n: number) {
   nt += getSpeed();
   for (let i = 0; i < n; i++) {
     ctx!.beginPath();
@@ -88,10 +90,9 @@ const drawWave = (n: number) => {
     ctx!.stroke();
     ctx!.closePath();
   }
-};
+}
 
-let animationId: number;
-const render = () => {
+function render() {
   if (ctx) {
     ctx.fillStyle = props.backgroundFill!;
     ctx.globalAlpha = props.waveOpacity!;
@@ -99,7 +100,7 @@ const render = () => {
     drawWave(5);
     animationId = requestAnimationFrame(render);
   }
-};
+}
 
 onBeforeUnmount(() => {
   cancelAnimationFrame(animationId);

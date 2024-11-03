@@ -1,9 +1,9 @@
 <template>
   <div class="absolute inset-0">
     <Motion
+      is="span"
       v-for="i in starsCount"
       :key="`star-${i}`"
-      is="span"
       :initial="generatePosition()"
       :enter="generateEnterAnimation()"
       :duration="randomDuration"
@@ -14,44 +14,58 @@
 
 <script setup lang="ts">
 import { cn } from "~/lib/utils";
+
 interface Props {
   starsCount: number;
   starsClass?: string;
 }
+
 withDefaults(defineProps<Props>(), {
   starsCount: 130,
   starsClass: "",
 });
 
-const randomMove = () => Math.random() * 4 - 2;
-const randomOpacity = () => Math.random();
-const random = () => Math.random();
+function randomMove() {
+  return Math.random() * 4 - 2;
+}
 
-const generatePosition = () => ({
-  top: `calc(${random() * 100}% + ${randomMove()}px)`,
-  left: `calc(${random() * 100}% + ${randomMove()}px)`,
-});
+function randomOpacity() {
+  return Math.random();
+}
 
-const generateEnterAnimation = () => ({
-  top: `calc(${random() * 100}% + ${randomMove()}px)`,
-  left: `calc(${random() * 100}% + ${randomMove()}px)`,
-  opacity: randomOpacity(),
-  scale: [1, 1.2, 0],
-  transition: {
-    opacity: {
-      duration: 1000,
+function random() {
+  return Math.random();
+}
+
+function generatePosition() {
+  return {
+    top: `calc(${random() * 100}% + ${randomMove()}px)`,
+    left: `calc(${random() * 100}% + ${randomMove()}px)`,
+  };
+}
+
+function generateEnterAnimation() {
+  return {
+    top: `calc(${random() * 100}% + ${randomMove()}px)`,
+    left: `calc(${random() * 100}% + ${randomMove()}px)`,
+    opacity: randomOpacity(),
+    scale: [1, 1.2, 0],
+    transition: {
+      opacity: {
+        duration: 1000,
+        repeat: Infinity,
+        type: "tween",
+      },
+      scale: {
+        duration: 1000,
+        repeat: Infinity,
+        type: "tween",
+      },
       repeat: Infinity,
-      type: "tween",
+      ease: "linear",
     },
-    scale: {
-      duration: 1000,
-      repeat: Infinity,
-      type: "tween",
-    },
-    repeat: Infinity,
-    ease: "linear",
-  },
-});
+  };
+}
 
 const randomDuration = random() * 10000 + 20000;
 </script>

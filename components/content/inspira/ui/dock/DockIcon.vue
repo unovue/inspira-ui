@@ -27,10 +27,10 @@ const distance = inject("distance", 140);
 
 const margin = ref(0);
 
-const calculateDistance = (val: number) => {
+function calculateDistance(val: number) {
   const bounds = iconRef.value?.getBoundingClientRect() || { x: 0, width: 0 };
   return val - bounds.x - bounds.width / 2;
-};
+}
 
 const iconWidth = computed(() => {
   const distanceCalc = calculateDistance(mouseX.value);

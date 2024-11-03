@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-center text-blance p-10">
-    <h1 class="text-4xl font-bold text-center text-balance leading-relaxed">
+  <div class="text-blance flex justify-center p-10">
+    <h1 class="text-balance text-center text-4xl font-bold leading-relaxed">
       CSS variables are amazing to match
       <TextHighlight class="my-amazing-class">your design system</TextHighlight>
     </h1>

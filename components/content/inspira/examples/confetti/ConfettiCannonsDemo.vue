@@ -1,8 +1,8 @@
 <template>
-  <div class="relative flex flex-col w-full h-24 items-center justify-center">
+  <div class="relative flex h-24 w-full flex-col items-center justify-center">
     <button
+      class="rounded-lg bg-foreground px-4 py-2 text-background transition duration-500 hover:scale-110"
       @click="handleClick"
-      class="bg-foreground text-background px-4 py-2 rounded-lg hover:scale-110 transition duration-500"
     >
       Trigger Side Cannons
     </button>
@@ -13,12 +13,12 @@
 import confetti from "canvas-confetti";
 
 // Function to trigger the confetti side cannons
-const handleClick = () => {
+function handleClick() {
   const end = Date.now() + 3 * 1000; // 3 seconds
   const colors = ["#a786ff", "#fd8bbc", "#eca184", "#f8deb1"];
 
   // Frame function to trigger confetti cannons
-  const frame = () => {
+  function frame() {
     if (Date.now() > end) return;
 
     // Left side confetti cannon
@@ -42,8 +42,8 @@ const handleClick = () => {
     });
 
     requestAnimationFrame(frame); // Keep calling the frame function
-  };
+  }
 
   frame();
-};
+}
 </script>

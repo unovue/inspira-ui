@@ -15,21 +15,21 @@
     <div
       v-if="isVisible"
       ref="preview"
-      class="absolute z-50 pointer-events-none"
+      class="pointer-events-none absolute z-50"
       :style="previewStyle"
     >
       <div
-        class="shadow-xl rounded-xl overflow-hidden"
+        class="overflow-hidden rounded-xl shadow-xl"
         :class="[popClass, { 'transform-gpu': !props.isStatic }]"
       >
         <div
-          class="block p-1 bg-white border-2 border-transparent shadow-lg rounded-xl dark:bg-gray-900"
+          class="block rounded-xl border-2 border-transparent bg-white p-1 shadow-lg dark:bg-gray-900"
         >
           <img
             :src="previewSrc"
             :width="width"
             :height="height"
-            class="rounded-lg w-full h-full object-cover"
+            class="size-full rounded-lg object-cover"
             :style="imageStyle"
             alt="preview"
             @load="handleImageLoad"
@@ -141,26 +141,26 @@ const popClass = computed(() => {
   return "animate-pop";
 });
 
-const handleMouseMove = (event: MouseEvent) => {
+function handleMouseMove(event: MouseEvent) {
   mousePosition.x = event.clientX;
   mousePosition.y = event.clientY;
-};
+}
 
-const showPreview = () => {
+function showPreview() {
   isVisible.value = true;
   setTimeout(() => {
     hasPopped.value = true;
   }, 50);
-};
+}
 
-const hidePreview = () => {
+function hidePreview() {
   isVisible.value = false;
   hasPopped.value = false;
-};
+}
 
-const handleImageLoad = () => {
+function handleImageLoad() {
   isLoading.value = false;
-};
+}
 </script>
 
 <style scoped>

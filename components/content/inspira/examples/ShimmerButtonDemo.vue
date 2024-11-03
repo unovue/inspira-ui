@@ -2,10 +2,10 @@
   <div class="z-10 flex min-h-64 items-center justify-center">
     <ShimmerButton
       class="shadow-2xl"
-      shimmerSize="2px"
+      shimmer-size="2px"
     >
       <span
-        class="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 lg:text-lg"
+        class="whitespace-pre-wrap text-center text-sm font-medium leading-none tracking-tight text-white lg:text-lg dark:from-white dark:to-slate-900/10"
       >
         Cool Button
       </span>

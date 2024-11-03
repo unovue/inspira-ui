@@ -1,13 +1,11 @@
 <template>
-  <div class="h-[40rem] flex flex-col justify-center items-center px-4">
-    <h2 class="mb-10 sm:mb-20 text-xl text-center sm:text-5xl dark:text-white text-black">
+  <div class="flex h-[40rem] flex-col items-center justify-center px-4">
+    <h2 class="mb-10 text-center text-xl text-black sm:mb-20 sm:text-5xl dark:text-white">
       Ask Anything Silly
     </h2>
     <VanishingInput
       v-model="text"
       :placeholders="placeholders"
-      @change="handleChange"
-      @submit="onSubmit"
     />
   </div>
 </template>
@@ -21,13 +19,4 @@ const placeholders = [
   "Do loops ever get dizzy?",
 ];
 const text = ref("");
-
-const handleChange = (event: Event) => {
-  const target = event.target as HTMLInputElement;
-  console.log(target.value);
-};
-
-const onSubmit = (value: string) => {
-  console.log("submitted", value);
-};
 </script>

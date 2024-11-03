@@ -10,7 +10,7 @@ import { ORBIT_DIRECTION } from "../ui/orbit";
 
     <!-- Inner Circles -->
     <Orbit
-      class="size-[30px] border-none bg-transparent items-center justify-center"
+      class="size-[30px] items-center justify-center border-none bg-transparent"
       :duration="20"
       :delay="20"
       :radius="80"
@@ -19,7 +19,7 @@ import { ORBIT_DIRECTION } from "../ui/orbit";
       <WhatsAppIcon />
     </Orbit>
     <Orbit
-      class="size-[30px] border-none bg-transparent items-center justify-center"
+      class="size-[30px] items-center justify-center border-none bg-transparent"
       :duration="20"
       :delay="10"
       :radius="80"
@@ -31,7 +31,7 @@ import { ORBIT_DIRECTION } from "../ui/orbit";
 
     <!-- Outer Circles (reverse) -->
     <Orbit
-      class="size-[50px] border-none bg-transparent items-center justify-center"
+      class="size-[50px] items-center justify-center border-none bg-transparent"
       :radius="190"
       :duration="20"
       path
@@ -39,7 +39,7 @@ import { ORBIT_DIRECTION } from "../ui/orbit";
       <GoogleDriveIcon />
     </Orbit>
     <Orbit
-      class="size-[50px] border-none bg-transparent items-center justify-center"
+      class="size-[50px] items-center justify-center border-none bg-transparent"
       :radius="190"
       :duration="20"
       :delay="200"
@@ -48,7 +48,7 @@ import { ORBIT_DIRECTION } from "../ui/orbit";
       <GitHubIcon />
     </Orbit>
     <Orbit
-      class="text-4xl border-none bg-transparent items-center justify-center"
+      class="items-center justify-center border-none bg-transparent text-4xl"
       :radius="140"
       :delay="4"
     >

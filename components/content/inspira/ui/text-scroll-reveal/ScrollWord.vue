@@ -11,20 +11,13 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
-  word: {
-    type: String,
-    required: true,
-  },
-  progress: {
-    type: Number,
-    required: true,
-  },
-  range: {
-    type: Array<number>,
-    required: true,
-  },
-});
+interface Props {
+  word: string;
+  progress: number;
+  range: Array<number>;
+}
+
+const props = defineProps<Props>();
 
 const computedOpacity = computed(() => {
   const [start, end] = props.range;

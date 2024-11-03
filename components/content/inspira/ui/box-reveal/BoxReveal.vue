@@ -9,7 +9,7 @@
     </span>
     <span
       v-motion
-      class="absolute inset-0 z-20 box-background"
+      class="box-background absolute inset-0 z-20"
       :initial="initialSlideVariants"
       :visible-once="visibleSlideVariants"
     ></span>

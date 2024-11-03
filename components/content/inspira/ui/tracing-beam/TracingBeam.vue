@@ -3,19 +3,19 @@
     ref="tracingBeamRef"
     :class="cn('relative w-full max-w-4xl mx-auto h-full', $props.class)"
   >
-    <div class="absolute -left-4 md:-left-12 top-3">
+    <div class="absolute -left-4 top-3 md:-left-12">
       <div
         :style="{
           boxShadow: scrollYProgress > 0 ? 'none' : 'rgba(0, 0, 0, 0.24) 0px 3px 8px',
         }"
-        class="ml-[27px] h-4 w-4 rounded-full border border-netural-200 shadow-sm flex items-center justify-center"
+        class="border-netural-200 ml-[27px] flex size-4 items-center justify-center rounded-full border shadow-sm"
       >
         <div
           :enter="{
             backgroundColor: scrollYProgress > 0 ? 'white' : 'var(--emerald-500)',
             borderColor: scrollYProgress > 0 ? 'white' : 'var(--emerald-600)',
           }"
-          class="h-2 w-2 rounded-full border border-neutral-300 bg-white"
+          class="size-2 rounded-full border border-neutral-300 bg-white"
         />
       </div>
       <svg
@@ -111,7 +111,7 @@ watch(computedY2, (newY2) => {
   spring.y2 = newY2;
 });
 
-const updateScrollYProgress = () => {
+function updateScrollYProgress() {
   if (tracingBeamRef.value) {
     const boundingRect = tracingBeamRef.value.getBoundingClientRect();
     const windowHeight = window.innerHeight;
@@ -121,7 +121,7 @@ const updateScrollYProgress = () => {
 
     scrollYProgress.value = (boundingRect.y / windowHeight) * -1;
   }
-};
+}
 
 onMounted(() => {
   window.addEventListener("scroll", updateScrollYProgress);

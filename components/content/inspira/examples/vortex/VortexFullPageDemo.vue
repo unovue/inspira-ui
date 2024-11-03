@@ -1,18 +1,18 @@
 <template>
-  <div class="w-[calc(100%-4rem)] mx-auto rounded-md h-screen overflow-hidden">
+  <div class="mx-auto h-screen w-[calc(100%-4rem)] overflow-hidden rounded-md">
     <Vortex
-      backgroundColor="black"
-      :rangeY="800"
-      :particleCount="500"
-      :baseHue="120"
-      class="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
+      background-color="black"
+      :range-y="800"
+      :particle-count="500"
+      :base-hue="120"
+      class="flex size-full flex-col items-center justify-center px-2 py-4 md:px-10"
     >
-      <h2 class="text-white text-2xl md:text-6xl font-bold text-center">The hell is this?</h2>
-      <p class="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
+      <h2 class="text-center text-2xl font-bold text-white md:text-6xl">The hell is this?</h2>
+      <p class="mt-6 max-w-xl text-center text-sm text-white md:text-2xl">
         This is chemical burn. It&apos;ll hurt more than you&apos;ve ever been burned and
         you&apos;ll have a scar.
       </p>
-      <div class="flex flex-col sm:flex-row items-center gap-4 mt-6">
+      <div class="mt-6 flex flex-col items-center gap-4 sm:flex-row">
         <UiButton
           variant="outline"
           class="bg-blue-600 hover:bg-blue-600"

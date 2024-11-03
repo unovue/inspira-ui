@@ -14,7 +14,7 @@ function switchDirection() {
 </script>
 
 <template>
-  <div class="flex flex-row items-center justify-between py-4 w-full">
+  <div class="flex w-full flex-row items-center justify-between py-4">
     <p>
       {{
         `Current direction : ${ORBIT_DIRECTION.Clockwise === direction ? "Clockwise" : "CounterClockwise"}`
@@ -30,7 +30,7 @@ function switchDirection() {
     <span class="pointer-events-none text-center text-8xl font-semibold leading-none"> 🌍 </span>
 
     <Orbit
-      class="text-xl border-none bg-transparent items-center justify-center"
+      class="items-center justify-center border-none bg-transparent text-xl"
       :radius="190"
       :duration="20"
       :delay="200"
@@ -40,7 +40,7 @@ function switchDirection() {
       🪨
     </Orbit>
     <Orbit
-      class="text-4xl border-none bg-transparent items-center justify-center"
+      class="items-center justify-center border-none bg-transparent text-4xl"
       :radius="100"
       :delay="4"
       :direction="direction"
@@ -49,7 +49,7 @@ function switchDirection() {
       🌕
     </Orbit>
     <Orbit
-      class="text-4xl border-none bg-transparent items-center justify-center"
+      class="items-center justify-center border-none bg-transparent text-4xl"
       :radius="250"
       :delay="4"
       :direction="direction"

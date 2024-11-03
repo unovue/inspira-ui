@@ -1,13 +1,13 @@
 <template>
   <div
     ref="container"
-    :class="class"
+    :class="props.class"
   >
     <div
       v-for="(child, index) in children"
       :key="index"
-      v-motion
       ref="childElements"
+      v-motion
       :initial="getInitial()"
       :enter="getEnter(index)"
     >
@@ -17,29 +17,26 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  duration: {
-    type: Number,
-    default: 1,
-  },
-  delay: {
-    type: Number,
-    default: 2,
-  },
-  blur: {
-    type: String,
-    default: "20px",
-  },
-  yOffset: {
-    type: Number,
-    default: 20, // Default offset for animation
-  },
-  class: String,
+interface Props {
+  duration?: number;
+  delay?: number;
+  blur?: string;
+  yOffset?: number;
+  class?: string;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  duration: 1,
+  delay: 2,
+  blur: "20px",
+  yOffset: 20,
 });
 
 const container = ref(null);
 const childElements = ref([]);
 const slots = useSlots();
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const children = ref<any>([]);
 
 onMounted(() => {

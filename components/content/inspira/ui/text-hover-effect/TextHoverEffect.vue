@@ -5,13 +5,13 @@
     height="100%"
     viewBox="0 0 300 100"
     xmlns="http://www.w3.org/2000/svg"
+    class="select-none"
     @mouseenter="handleMouseEnter"
     @mouseleave="handleMouseLeave"
     @mousemove="handleMouseMove"
     @touchstart="handleTouchStart"
     @touchmove="handleTouchMove"
     @touchend="handleTouchEnd"
-    class="select-none"
   >
     <defs>
       <linearGradient
@@ -22,29 +22,29 @@
         r="25%"
       >
         <stop
+          v-if="hovered"
           offset="0%"
           stop-color="var(--yellow-500)"
-          v-if="hovered"
         />
         <stop
+          v-if="hovered"
           offset="25%"
           stop-color="var(--red-500)"
-          v-if="hovered"
         />
         <stop
+          v-if="hovered"
           offset="50%"
           stop-color="var(--blue-500)"
-          v-if="hovered"
         />
         <stop
+          v-if="hovered"
           offset="75%"
           stop-color="var(--cyan-500)"
-          v-if="hovered"
         />
         <stop
+          v-if="hovered"
           offset="100%"
           stop-color="var(--violet-500)"
-          v-if="hovered"
         />
       </linearGradient>
 
@@ -87,7 +87,7 @@
       dominant-baseline="middle"
       :stroke-width="strokeWidth"
       :style="{ opacity: hovered ? opacity : 0 }"
-      class="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-7xl"
+      class="fill-transparent stroke-neutral-200 font-[helvetica] text-7xl font-bold dark:stroke-neutral-800"
     >
       {{ text }}
     </text>
@@ -100,7 +100,7 @@
       dominant-baseline="middle"
       :stroke-width="strokeWidth"
       :style="strokeStyle"
-      class="font-[helvetica] font-bold fill-transparent text-7xl stroke-neutral-200 dark:stroke-neutral-800"
+      class="fill-transparent stroke-neutral-200 font-[helvetica] text-7xl font-bold dark:stroke-neutral-800"
     >
       {{ text }}
     </text>
@@ -113,7 +113,7 @@
       stroke="url(#textGradient)"
       :stroke-width="strokeWidth"
       mask="url(#textMask)"
-      class="font-[helvetica] font-bold fill-transparent text-7xl"
+      class="fill-transparent font-[helvetica] text-7xl font-bold"
     >
       {{ text }}
     </text>
@@ -168,28 +168,34 @@ const strokeStyle = computed(() => ({
   transition: "stroke-dashoffset 4s ease-in-out, stroke-dasharray 4s ease-in-out",
 }));
 
-const handleMouseEnter = () => (hovered.value = true);
-const handleMouseLeave = () => (hovered.value = false);
-const handleMouseMove = (e: MouseEvent) => {
+function handleMouseEnter() {
+  hovered.value = true;
+}
+
+function handleMouseLeave() {
+  hovered.value = false;
+}
+
+function handleMouseMove(e: MouseEvent) {
   cursor.x = e.clientX;
   cursor.y = e.clientY;
-};
+}
 
 // Touch support
-const handleTouchStart = (e: TouchEvent) => {
+function handleTouchStart(e: TouchEvent) {
   hovered.value = true;
   handleTouchMove(e); // Update the position on touch start
-};
+}
 
-const handleTouchMove = (e: TouchEvent) => {
+function handleTouchMove(e: TouchEvent) {
   const touch = e.touches[0];
   cursor.x = touch.clientX;
   cursor.y = touch.clientY;
-};
+}
 
-const handleTouchEnd = () => {
+function handleTouchEnd() {
   hovered.value = false;
-};
+}
 </script>
 
 <style scoped>

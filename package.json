@@ -10,8 +10,8 @@
     "postinstall": "nuxt prepare",
     "format": "prettier . --write",
     "format:check": "prettier . --check",
-    "lint": "eslint . --fix",
-    "lint:check": "eslint ."
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@nuxt/image": "^1.8.1",
