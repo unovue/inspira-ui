@@ -17,11 +17,11 @@
           cn('absolute rounded-full bg-[#0000]/25 dark:bg-[#fff]/25 shadow-xl', 'animate-ripple')
         "
         :style="{
-          width: `${props.mainCircleSize + i * 70}px`,
-          height: `${props.mainCircleSize + i * 70}px`,
-          opacity: props.mainCircleOpacity - i * 0.03,
+          width: `${props.circleSize + i * 70}px`,
+          height: `${props.circleSize + i * 70}px`,
+          opacity: props.circleOpacity - i * 0.03,
           animationDelay: `${i * 0.06}s`,
-          borderStyle: i === props.numCircles - 1 ? 'dashed' : 'solid',
+          borderStyle: i === props.count - 1 ? 'dashed' : 'solid',
           borderWidth: '1px',
           borderColor: `hsl(var(--foreground), ${5 + (i * 5) / 100})`,
           top: '50%',
@@ -37,20 +37,20 @@
 import { cn } from "@/lib/utils";
 
 interface RippleProps {
-  mainCircleSize?: number;
-  mainCircleOpacity?: number;
-  numCircles?: number;
+  circleSize?: number;
+  circleOpacity?: number;
+  count?: number;
   class?: string;
 }
 
 const props = withDefaults(defineProps<RippleProps>(), {
-  mainCircleSize: 210,
-  mainCircleOpacity: 0.24,
-  numCircles: 8,
+  circleSize: 210,
+  circleOpacity: 0.24,
+  count: 8,
 });
 
 const numberOfCircles = computed(() => {
-  return Array.from({ length: props.numCircles });
+  return Array.from({ length: props.count });
 });
 </script>
 

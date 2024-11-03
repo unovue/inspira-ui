@@ -11,11 +11,11 @@ navBadges:
 
 ## API
 
-| Prop Name           | Type     | Default | Description                             |
-| ------------------- | -------- | ------- | --------------------------------------- |
-| `mainCircleSize`    | `number` | `210`   | The size of the main circle in pixels.  |
-| `mainCircleOpacity` | `number` | `0.24`  | The opacity of the main circle.         |
-| `numCircles`        | `number` | `8`     | The number of ripple circles to render. |
+| Prop Name       | Type     | Default | Description                             |
+| --------------- | -------- | ------- | --------------------------------------- |
+| `circleSize`    | `number` | `210`   | The size of the main circle in pixels.  |
+| `circleOpacity` | `number` | `0.24`  | The opacity of the main circle.         |
+| `count`         | `number` | `8`     | The number of ripple circles to render. |
 
 ## Component Code
 
