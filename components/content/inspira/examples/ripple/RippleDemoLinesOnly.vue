@@ -5,8 +5,9 @@
     <p
       class="z-10 whitespace-pre-wrap text-center text-5xl font-medium tracking-tighter text-black dark:text-white"
     >
-      Lines only
+      Lines
     </p>
-    <Ripple circle-class="border-[hsl(var(--primary))]" />
+    <small>Only</small>
+    <Ripple circle-class="border-[hsl(var(--primary))] rounded-full" />
   </div>
 </template>

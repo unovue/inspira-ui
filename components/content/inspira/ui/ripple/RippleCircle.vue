@@ -1,5 +1,5 @@
 <template>
-  <div :class="cn('absolute rounded-full shadow-xl', 'animate-ripple-circle', props.class)" />
+  <div :class="cn('absolute shadow-xl', 'animate-ripple-circle', props.class)" />
 </template>
 
 <script setup lang="ts">

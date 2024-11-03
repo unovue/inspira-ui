@@ -16,6 +16,16 @@ Only lines
 ::ComponentLoader{label="Preview" componentName="RippleDemoLinesOnly" type="examples" id="ripple"}
 ::
 
+Squared
+
+::ComponentLoader{label="Preview" componentName="RippleDemoSquared" type="examples" id="ripple"}
+::
+
+Blobed
+
+::ComponentLoader{label="Preview" componentName="RippleDemoBlobed" type="examples" id="ripple"}
+::
+
 ## API
 
 | Prop Name                     | Type     | Default     | Description                                                            |
