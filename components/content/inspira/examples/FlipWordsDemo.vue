@@ -1,6 +1,6 @@
 <template>
-  <div class="h-[40rem] flex justify-center items-center px-4">
-    <div class="text-4xl mx-auto font-normal text-neutral-600 dark:text-neutral-400">
+  <div class="flex h-[40rem] items-center justify-center px-4">
+    <div class="mx-auto text-4xl font-normal text-neutral-600 dark:text-neutral-400">
       Vuejs: The
       <FlipWords
         :words="['Progressive', 'Approachable', 'Performant', 'Versatile']"

@@ -1,15 +1,15 @@
 <template>
   <div
-    class="overflow-hidden py-2 flex cursor-default scale-100"
+    class="flex scale-100 cursor-default overflow-hidden py-2"
     @mouseenter="triggerAnimation"
   >
     <div class="flex">
       <span
         v-for="(letter, i) in displayText"
         :key="i"
-        :class="cn(letter === ' ' ? 'w-3' : '', $props.class)"
-        class="font-mono inline-block"
         v-motion
+        :class="cn(letter === ' ' ? 'w-3' : '', $props.class)"
+        class="inline-block font-mono"
         :initial="{ opacity: 0, y: -10 }"
         :enter="{ opacity: 1, y: 0 }"
         :delay="i * (duration / (text.length * 10))"
@@ -47,12 +47,14 @@ const props = defineProps({
 const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const displayText = ref(props.text.split(""));
 const iterations = ref(0);
-const getRandomLetter = () => alphabets[Math.floor(Math.random() * alphabets.length)];
 
-const triggerAnimation = () => {
+function getRandomLetter() {
+  return alphabets[Math.floor(Math.random() * alphabets.length)];
+}
+function triggerAnimation() {
   iterations.value = 0;
   startAnimation();
-};
+}
 
 const { pause, resume } = useIntervalFn(
   () => {
@@ -68,10 +70,10 @@ const { pause, resume } = useIntervalFn(
   computed(() => props.duration / (props.text.length * 10)),
 );
 
-const startAnimation = () => {
+function startAnimation() {
   pause();
   resume();
-};
+}
 
 watch(
   () => props.text,

@@ -1,3 +1,3 @@
 <template>
-  <BubblesBg class="w-full h-96" />
+  <BubblesBg class="h-96 w-full" />
 </template>

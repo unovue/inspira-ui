@@ -1,10 +1,10 @@
 <template>
   <BubblesBg
-    class="w-full h-96"
+    class="h-96 w-full"
     :blur="4"
   >
-    <div class="flex flex-col w-full h-full items-center justify-center">
-      <span class="text-6xl text-background font-heading font-bold backdrop-blur-md opacity-80">
+    <div class="flex size-full flex-col items-center justify-center">
+      <span class="font-heading text-6xl font-bold text-background opacity-80 backdrop-blur-md">
         Hello
       </span>
     </div>

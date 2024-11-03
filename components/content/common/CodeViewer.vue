@@ -1,4 +1,6 @@
+<!-- eslint-disable vue/no-v-html -->
 <template>
+  <!-- @vue-expect-error -->
   <ProsePre
     :class="cn('overflow-auto max-h-[32rem] px-5', $props.class)"
     :code="rawString"
@@ -18,34 +20,21 @@ import { cn } from "~/lib/utils";
 import hljs from "highlight.js";
 import "~/assets/css/code-theme.css";
 
+interface Props {
+  componentName: string;
+  id?: string;
+  class?: string;
+  language?: string;
+  filename?: string;
+  extension?: string;
+  type?: string;
+}
+
 const rawString = ref("");
 const codeHtml = ref("");
 
-const props = defineProps({
-  componentName: String,
-  id: String,
-  type: String,
-  class: String,
-  language: {
-    type: String as any,
-    default: null,
-  },
-  filename: {
-    type: String,
-    default: null,
-  },
-  inGroup: {
-    type: Boolean,
-    default: false,
-  },
-  highlights: {
-    type: Array as () => number[],
-    default: () => [],
-  },
-  extension: {
-    type: String,
-    default: "vue",
-  },
+const props = withDefaults(defineProps<Props>(), {
+  extension: "vue",
 });
 
 // Create a map of all possible components using import.meta.glob
@@ -72,7 +61,7 @@ async function loadAndProcessComponentCode() {
     rawString.value = updateImportPaths(componentCode);
     codeHtml.value = hljs.highlightAuto(rawString.value, ["ts", "html", "css"]).value;
   } catch (error) {
-    console.error("Error loading component code:", error);
+    throw new Error("Error loading component code:", error as never);
   }
 }
 
@@ -83,7 +72,7 @@ async function fetchComponentCode() {
   if (!loadRawComponent) throw new Error(`Component not found: ${path}`);
 
   const mod = await loadRawComponent();
-  return (mod as any).trim();
+  return (mod as unknown as string).trim();
 }
 
 // Update import paths in the raw code using MagicString

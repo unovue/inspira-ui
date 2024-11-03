@@ -1,17 +1,9 @@
-<script setup lang="ts">
-import {
-  PATTERN_BACKGROUND_DIRECTION,
-  PATTERN_BACKGROUND_SPEED,
-  PATTERN_BACKGROUND_VARIANT,
-} from "../../ui/pattern-background";
-</script>
-
 <template>
   <PatternBackground
     :animate="true"
     :direction="PATTERN_BACKGROUND_DIRECTION.Right"
     :variant="PATTERN_BACKGROUND_VARIANT.Grid"
-    class="h-[36rem] w-full flex items-center justify-center"
+    class="flex h-[36rem] w-full items-center justify-center"
     size="xs"
     :speed="PATTERN_BACKGROUND_SPEED.Slow"
   >
@@ -22,3 +14,11 @@ import {
     </p>
   </PatternBackground>
 </template>
+
+<script setup lang="ts">
+import {
+  PATTERN_BACKGROUND_DIRECTION,
+  PATTERN_BACKGROUND_SPEED,
+  PATTERN_BACKGROUND_VARIANT,
+} from "../../ui/pattern-background";
+</script>

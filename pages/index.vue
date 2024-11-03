@@ -1,14 +1,14 @@
 <template>
-  <div class="flex flex-col items-center justify-center px-4 py-6 md:px-8 font-heading">
+  <div class="flex flex-col items-center justify-center px-4 py-6 font-heading md:px-8">
     <HeroSection />
-    <div class="w-full flex flex-col items-center mb-16">
+    <div class="mb-16 flex w-full flex-col items-center">
       <a
         href="https://github.com/sponsors/rahul-vashishtha"
         target="_blank"
       >
         <UiButton
           variant="secondary"
-          class="gap-2 text-base py-6"
+          class="gap-2 py-6 text-base"
         >
           Become a Sponsor <span class="text-red-500">♥️</span>
         </UiButton>
@@ -24,8 +24,8 @@
 const config = useConfig();
 
 useSeoMeta({
-  title: `Home - ${config.value.site.name}`,
-  ogTitle: `Home - ${config.value.site.name}`,
+  title: `Inspira UI: Build beautiful websites using Vue & Nuxt`,
+  ogTitle: `Inspira UI: Build beautiful websites using Vue & Nuxt`,
   description:
     "Open Source components to build stunning animated interfaces effortlessly using Vue & Nuxt.",
   ogDescription:

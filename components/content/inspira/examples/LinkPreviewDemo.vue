@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-center items-center h-[40rem] flex-col px-4">
-    <p class="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto mb-10">
+  <div class="flex h-[40rem] flex-col items-center justify-center px-4">
+    <p class="mx-auto mb-10 max-w-3xl text-xl text-neutral-500 md:text-3xl dark:text-neutral-400">
       <LinkPreview
         url="https://tailwindcss.com"
         class="font-bold"
@@ -16,7 +16,7 @@
       </LinkPreview>
       are a great way to build modern websites.
     </p>
-    <p class="text-neutral-500 dark:text-neutral-400 text-xl md:text-3xl max-w-3xl mx-auto">
+    <p class="mx-auto max-w-3xl text-xl text-neutral-500 md:text-3xl dark:text-neutral-400">
       Visit
       <LinkPreview
         url="https://inspira-ui.com"
@@ -24,7 +24,7 @@
         :height="200"
       >
         <span
-          class="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500"
+          class="bg-gradient-to-br from-purple-500 to-pink-500 bg-clip-text font-bold text-transparent"
         >
           Inspira UI
         </span>

@@ -50,8 +50,8 @@ interface InspiraImageParticleOptions {
  * Interface for event handling methods.
  */
 export interface EventHandlers {
-  on(event: string, callback: (params?: any) => void): void;
-  emit(event: string, params?: any): void;
+  on(event: string, callback: (params?: unknow) => void): void;
+  emit(event: string, params?: unknow): void;
 }
 
 /**
@@ -65,11 +65,12 @@ export declare class InspiraImageParticle implements EventHandlers {
   touches: Array<{ x: number; y: number; z: number; force: number }>;
   colorArr: number[];
   vertices: Float32Array | false;
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
   events: { [key: string]: Function[] };
   canvas?: HTMLCanvasElement;
   context?: CanvasRenderingContext2D | WebGLRenderingContext;
-  particles: any[];
-  origins: any[];
+  particles: unknow[];
+  origins: unknow[];
   width: number;
   height: number;
   maxWidth?: number;
@@ -116,8 +117,8 @@ export declare class InspiraImageParticle implements EventHandlers {
   color: string;
 
   // Public Methods
-  on(event: string, fn: (params?: any) => void): void;
-  emit(event: string, params?: any): void;
+  on(event: string, fn: (params?: unknow) => void): void;
+  emit(event: string, params?: unknow): void;
 
   start(options?: Partial<InspiraImageParticleOptions>): void;
   stop(options?: Partial<InspiraImageParticleOptions>): void;
@@ -137,10 +138,10 @@ export declare class InspiraImageParticle implements EventHandlers {
   private _fade(): void;
   private _initParticles(): void;
   private _initOrigins(): void;
-  private _initParticlePosition(origin: any, particle: any): void;
-  private _initParticleDirection(particle: any): void;
-  private _fadeOriginPosition(origin: any): void;
-  private _fadeOriginDirection(particle: any): void;
+  private _initParticlePosition(origin: unknow, particle: unknow): void;
+  private _initParticleDirection(particle: unknow): void;
+  private _fadeOriginPosition(origin: unknow): void;
+  private _fadeOriginDirection(particle: unknow): void;
   private _parseColor(str: string): number[] | undefined;
 
   // Private Getters

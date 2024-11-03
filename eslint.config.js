@@ -52,6 +52,8 @@ export default withNuxt(
       "import/no-unresolved": "off", //Need eslint-import-resolver-typescript, waiting for flatconfig and error fix on package side
       "func-style": ["error", "declaration"],
       "vue/multi-word-component-names": "off",
+      "vue/require-default-prop": "off",
+      "tailwindcss/no-custom-classname": "off",
       "@typescript-eslint/no-empty-object-type": [
         "error",
         { allowInterfaces: "with-single-extends" },

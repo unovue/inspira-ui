@@ -5,7 +5,6 @@
     :width="width"
     :height="height"
     :viewBox="`0 0 ${width} ${height}`"
-    v-bind="$props"
   >
     <g clipPath="url(#path0)">
       <path
@@ -143,8 +142,8 @@
 type SafariMockupProps = {
   url?: string;
   src?: string;
-  width?: string;
-  height?: string;
+  width?: number;
+  height?: number;
 };
 
 withDefaults(defineProps<SafariMockupProps>(), {

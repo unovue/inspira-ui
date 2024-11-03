@@ -4,7 +4,7 @@
   >
     <!-- First Marquee -->
     <Marquee
-      pauseOnHover
+      pause-on-hover
       class="[--duration:20s]"
     >
       <ReviewCard
@@ -20,7 +20,7 @@
     <!-- Second Marquee (reverse) -->
     <Marquee
       reverse
-      pauseOnHover
+      pause-on-hover
       class="[--duration:20s]"
     >
       <ReviewCard

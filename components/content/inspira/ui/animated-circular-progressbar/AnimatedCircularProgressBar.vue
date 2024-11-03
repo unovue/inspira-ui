@@ -33,7 +33,7 @@
     </svg>
     <span
       :data-current-value="currentPercent"
-      class="duration-[var(--transition-length)] delay-[var(--delay)] absolute inset-0 m-auto size-fit ease-linear animate-in fade-in"
+      class="absolute inset-0 m-auto size-fit delay-0 duration-1000 ease-linear animate-in fade-in"
     >
       {{ currentPercent }}
     </span>
@@ -60,7 +60,6 @@ const props = withDefaults(defineProps<Props>(), {
   value: 0,
   gaugePrimaryColor: "rgb(79 70 229)",
   gaugeSecondaryColor: "rgba(0, 0, 0, 0.1)",
-  class: "",
   circleStrokeWidth: 10,
 });
 
@@ -78,27 +77,27 @@ const percentageInPx = computed(() => `${percentPx}px`);
   --percent-to-px: v-bind(percentageInPx);
   --gap-percent: 5;
   --offset-factor: 0;
-  --transition-length: 1s;
   --transition-step: 200ms;
-  --delay: 0s;
   --percent-to-deg: 3.6deg;
   transform: translateZ(0);
 }
+
 .gauge-primary-stroke {
-  stroke: v-bind(props.gaugePrimaryColor);
+  stroke: v-bind(gaugePrimaryColor);
   --stroke-percent: v-bind(currentPercent);
   stroke-dasharray: calc(var(--stroke-percent) * var(--percent-to-px)) var(--circumference);
   transition:
-    var(--transition-length) ease var(--delay),
-    stroke var(--transition-length) ease var(--delay);
+    1s ease,
+    stroke 1s ease;
   transition-property: stroke-dasharray, transform;
   transform: rotate(
     calc(-90deg + var(--gap-percent) * var(--offset-factor) * var(--percent-to-deg))
   );
   transform-origin: calc(var(--circle-size) / 2) calc(var(--circle-size) / 2);
 }
+
 .gauge-secondary-stroke {
-  stroke: v-bind(props.gaugeSecondaryColor);
+  stroke: v-bind(gaugeSecondaryColor);
   --stroke-percent: 90 - v-bind(currentPercent);
   --offset-factor-secondary: calc(1 - var(--offset-factor));
   stroke-dasharray: calc(var(--stroke-percent) * var(--percent-to-px)) var(--circumference);
@@ -109,7 +108,7 @@ const percentageInPx = computed(() => `${percentPx}px`);
       )
     )
     scaleY(-1);
-  transition: all var(--transition-length) ease var(--delay);
+  transition: all 1s ease;
   transform-origin: calc(var(--circle-size) / 2) calc(var(--circle-size) / 2);
 }
 </style>

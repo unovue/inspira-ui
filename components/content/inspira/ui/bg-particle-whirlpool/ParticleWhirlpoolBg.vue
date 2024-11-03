@@ -5,7 +5,7 @@
   >
     <canvas
       ref="whirlpoolCanvasRef"
-      class="w-full h-full"
+      class="size-full"
     ></canvas>
     <div
       :style="{

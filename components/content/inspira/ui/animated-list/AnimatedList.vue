@@ -23,21 +23,22 @@
 </template>
 
 <script lang="ts" setup>
+import type { Slot, VNodeNormalizedChildren } from "vue";
 import { cn } from "~/lib/utils";
 
-const props = defineProps({
-  class: {
-    type: String,
-    default: "",
-  },
-  delay: {
-    type: Number,
-    default: 1000,
-  },
+interface Props {
+  class?: string;
+  delay?: number;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  delay: 1000,
 });
 
 const slots = useSlots();
 const index = ref(0);
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const slotsArray = ref<any>([]);
 
 onMounted(loadComponents);
@@ -51,11 +52,11 @@ async function loadComponents() {
 
   while (index.value < slotsArray.value.length) {
     index.value++;
-    await delay(props.delay);
+    await wait(props.delay);
   }
 }
 
-async function delay(ms: number) {
+async function wait(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 

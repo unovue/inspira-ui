@@ -7,7 +7,7 @@
       )
     "
   >
-    <span class="inline-flex size-full items-center justify-center btn-content px-4 py-2">
+    <span class="btn-content inline-flex size-full items-center justify-center px-4 py-2">
       <slot />
     </span>
   </button>

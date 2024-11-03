@@ -101,8 +101,10 @@ function updateMovement(clientX: number) {
   }
 }
 
-function onRender(state: Record<string, any>) {
-  !pointerInteracting.value && (phi.value += 0.005);
+function onRender(state: Record<string, unknown>) {
+  if (!pointerInteracting.value) {
+    phi.value += 0.005;
+  }
 
   state.phi = phi.value + spring.r;
   state.width = width.value * 2;

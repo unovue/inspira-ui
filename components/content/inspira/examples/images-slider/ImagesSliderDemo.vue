@@ -5,14 +5,14 @@
       autoplay
     >
       <div
-        class="w-full h-full flex justify-center items-end p-8 bg-gradient-to-b from-transparent via-transparent to-black/80"
+        class="flex size-full items-end justify-center bg-gradient-to-b from-transparent via-transparent to-black/80 p-8"
       >
         <div class="max-w-prose text-center">
-          <h1 class="text-5xl mb-8 max-md:text-2xl">
+          <h1 class="mb-8 text-5xl max-md:text-2xl">
             The hero section slide-show nobody asked for
           </h1>
           <button
-            class="rounded-full backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white px-4 py-2 text-sm"
+            class="rounded-full border border-emerald-500/20 bg-emerald-300/10 px-4 py-2 text-sm text-white backdrop-blur-sm"
           >
             Join Now
           </button>

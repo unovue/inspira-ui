@@ -12,7 +12,7 @@
       <template #card>
         <NuxtImg
           src="/linear.webp"
-          class="mx-auto rounded-2xl object-cover h-full object-left-top"
+          class="mx-auto h-full rounded-2xl object-cover object-left-top"
           alt="hero"
           height="720"
           width="1400"

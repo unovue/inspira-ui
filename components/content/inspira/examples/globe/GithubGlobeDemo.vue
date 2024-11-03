@@ -1,6 +1,6 @@
 <template>
   <ClientOnly>
-    <div class="flex flex-col w-full items-center justify-center">
+    <div class="flex w-full flex-col items-center justify-center">
       <GithubGlobe
         :globe-config="globeConfig"
         :data="sampleArcs"
@@ -33,6 +33,7 @@ const globeConfig = {
   autoRotate: true,
   autoRotateSpeed: 0.5,
 };
+
 const colors = [
   "#eae547",
   "#9347ea",

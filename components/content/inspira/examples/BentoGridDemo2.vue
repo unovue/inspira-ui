@@ -1,5 +1,5 @@
 <template>
-  <BentoGrid class="lg:grid-rows-3 grid w-full auto-rows-[22rem] grid-cols-3 gap-4">
+  <BentoGrid class="grid w-full auto-rows-[22rem] grid-cols-3 gap-4 lg:grid-rows-3">
     <BentoGridCard
       v-for="(feature, index) in features"
       :key="index"
@@ -7,11 +7,11 @@
       :class="feature.class"
     >
       <template
-        #background
         v-if="feature.image"
+        #background
       >
         <div
-          class="absolute top-0 right-0 size-full opacity-40 bg-center group-hover:opacity-20 transition duration-150 ease-in-out"
+          class="absolute right-0 top-0 size-full bg-center opacity-40 transition duration-150 ease-in-out group-hover:opacity-20"
           :style="`background-image: url('${feature.image}')`"
         ></div>
       </template>

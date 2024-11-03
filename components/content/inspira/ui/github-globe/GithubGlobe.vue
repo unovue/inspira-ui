@@ -7,13 +7,14 @@
 
 <script lang="ts" setup>
 // Download globe json file from https://geojson-maps.kyd.au/ and save in the same folder
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import ThreeGlobe from "three-globe";
 import {
   AmbientLight,
   Color,
   DirectionalLight,
-  Fog,
   PerspectiveCamera,
   PointLight,
   Scene,
@@ -32,15 +33,15 @@ type Position = {
   color: string;
 };
 
-type GlobeData = {
+interface GlobeData {
   size: number | undefined;
   order: number;
   color: (t: number) => string;
   lat: number;
   lng: number;
-};
+}
 
-type GlobeConfig = {
+interface GlobeConfig {
   pointSize?: number;
   globeColor?: string;
   showAtmosphere?: boolean;
@@ -64,7 +65,7 @@ type GlobeConfig = {
   };
   autoRotate?: boolean;
   autoRotateSpeed?: number;
-};
+}
 
 interface Props {
   globeConfig?: GlobeConfig;
@@ -119,9 +120,6 @@ onMounted(() => {
   window.addEventListener("resize", onWindowResize, false);
 
   watch(globeData, () => {
-    console.log("watch", globe);
-    console.log("watch", globeData.value);
-
     if (!globe || !globeData.value) return;
 
     numberOfRings = genRandomNumbers(0, props.data.length, Math.floor((props.data.length * 4) / 5));
@@ -187,8 +185,6 @@ function setupScene() {
 function initGlobe() {
   buildData();
 
-  console.log(globeData.value);
-
   globe = new ThreeGlobe({
     waitForGlobeReady: true,
     animateIn: true,
@@ -232,13 +228,8 @@ function onWindowResize() {
 
   renderer.setSize(width, height);
 }
-
 function startAnimation() {
   if (!globe || !globeData.value!) return;
-
-  console.log("startAnimation", globe);
-  console.log("startAnimation", globeData);
-
   globe
     .arcsData(props.data)
     .arcStartLat((d: any) => d.startLat * 1)

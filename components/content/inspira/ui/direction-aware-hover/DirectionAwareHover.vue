@@ -1,5 +1,44 @@
+<template>
+  <div
+    ref="divRef"
+    :class="containerClass"
+    @mouseenter="handleMouseEnter"
+    @mouseleave="handleMouseLeave"
+  >
+    <div class="relative size-full overflow-hidden">
+      <transition name="fade">
+        <div
+          v-show="direction !== null"
+          :class="overlayClass"
+        />
+      </transition>
+      <div
+        class="relative size-full bg-gray-50 transition-transform duration-300 dark:bg-black"
+        :class="imageContainerClass"
+      >
+        <img
+          :src="imageUrl"
+          alt="image"
+          :class="imageClass"
+          width="1000"
+          height="1000"
+        />
+      </div>
+      <transition name="fade">
+        <div
+          v-show="direction !== null"
+          :class="childrenClass"
+        >
+          <slot />
+        </div>
+      </transition>
+    </div>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { ref, computed } from "vue";
+import { cn } from "~/lib/utils";
 
 interface Props {
   imageUrl: string;
@@ -17,7 +56,7 @@ const props = withDefaults(defineProps<Props>(), {
 const divRef = ref<HTMLDivElement | null>(null);
 const direction = ref<"top" | "bottom" | "left" | "right" | null>(null);
 
-const handleMouseEnter = (event: MouseEvent) => {
+function handleMouseEnter(event: MouseEvent) {
   if (!divRef.value) return;
 
   const fetchedDirection = getDirection(event, divRef.value);
@@ -38,21 +77,19 @@ const handleMouseEnter = (event: MouseEvent) => {
       direction.value = "left";
       break;
   }
-};
+}
 
-const handleMouseLeave = () => {
+function handleMouseLeave() {
   direction.value = null;
-};
+}
 
-const getDirection = (ev: MouseEvent, obj: HTMLElement) => {
+function getDirection(ev: MouseEvent, obj: HTMLElement) {
   const { width: w, height: h, left, top } = obj.getBoundingClientRect();
   const x = ev.clientX - left - (w / 2) * (w > h ? h / w : 1);
   const y = ev.clientY - top - (h / 2) * (h > w ? w / h : 1);
   const d = Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
   return d;
-};
-
-const cn = (...classes: (string | undefined)[]) => classes.filter(Boolean).join(" ");
+}
 
 const containerClass = computed(() =>
   cn(
@@ -94,44 +131,6 @@ const imageContainerClass = computed(() => ({
   "-translate-x-5": direction.value === "right",
 }));
 </script>
-
-<template>
-  <div
-    ref="divRef"
-    :class="containerClass"
-    @mouseenter="handleMouseEnter"
-    @mouseleave="handleMouseLeave"
-  >
-    <div class="relative h-full w-full overflow-hidden">
-      <transition name="fade">
-        <div
-          v-show="direction !== null"
-          :class="overlayClass"
-        />
-      </transition>
-      <div
-        class="relative h-full w-full bg-gray-50 dark:bg-black transition-transform duration-300"
-        :class="imageContainerClass"
-      >
-        <img
-          :src="imageUrl"
-          alt="image"
-          :class="imageClass"
-          width="1000"
-          height="1000"
-        />
-      </div>
-      <transition name="fade">
-        <div
-          v-show="direction !== null"
-          :class="childrenClass"
-        >
-          <slot />
-        </div>
-      </transition>
-    </div>
-  </div>
-</template>
 
 <style scoped>
 .fade-enter-active,

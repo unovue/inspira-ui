@@ -47,15 +47,15 @@ const dockClass = computed(() => ({
   "items-end": props.direction === "bottom",
 }));
 
-const onMouseMove = (e: MouseEvent) => {
+function onMouseMove(e: MouseEvent) {
   requestAnimationFrame(() => {
     mouseX.value = e.pageX;
   });
-};
+}
 
-const onMouseLeave = () => {
+function onMouseLeave() {
   mouseX.value = Infinity;
-};
+}
 
 provide("mouseX", mouseX);
 provide("magnification", props.magnification);

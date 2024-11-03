@@ -1,26 +1,26 @@
 <template>
   <div class="w-full items-center justify-center px-8">
     <TracingBeam class="px-6">
-      <div class="max-w-2xl mx-auto antialiased pt-4 relative">
+      <div class="relative mx-auto max-w-2xl pt-4 antialiased">
         <div
           v-for="(item, index) in dummyContent"
           :key="`content-${index}`"
           class="mb-10"
         >
-          <Badge class="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
+          <Badge class="mb-4 w-fit rounded-full bg-black px-4 py-1 text-sm text-white">
             {{ item.badge }}
           </Badge>
 
-          <p :class="['text-xl mb-4']">
+          <p :class="['mb-4 text-xl']">
             {{ item.title }}
           </p>
 
-          <div class="text-sm prose prose-sm dark:prose-invert">
+          <div class="prose prose-sm dark:prose-invert text-sm">
             <img
               v-if="item.image"
               :src="item.image"
               alt="blog thumbnail"
-              class="rounded-lg mb-10 object-cover"
+              class="mb-10 rounded-lg object-cover"
             />
             <div>
               <p

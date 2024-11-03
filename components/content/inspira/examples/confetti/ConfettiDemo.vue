@@ -11,7 +11,7 @@
     <!-- Confetti component with ref -->
     <Confetti
       ref="confettiRef"
-      class="absolute top-0 left-0 z-0 size-full"
+      class="absolute left-0 top-0 z-0 size-full"
       @mouseenter="fireConfetti"
     />
   </div>
@@ -21,7 +21,7 @@
 const confettiRef = ref(null);
 
 // Function to trigger confetti
-const fireConfetti = () => {
+function fireConfetti() {
   confettiRef.value?.fire({});
-};
+}
 </script>

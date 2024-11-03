@@ -1,11 +1,11 @@
 <template>
   <div
-    @mousemove="handleMouseMove"
-    @mouseleave="handleMouseLeave"
     :class="[
-      'group relative flex w-full h-full overflow-hidden rounded-xl bg-neutral-100 dark:bg-neutral-900 border text-black dark:text-white',
+      'group relative flex size-full overflow-hidden rounded-xl border bg-neutral-100 text-black dark:bg-neutral-900 dark:text-white',
       $props.class,
     ]"
+    @mousemove="handleMouseMove"
+    @mouseleave="handleMouseLeave"
   >
     <div :class="cn('relative z-10', props.slotClass)">
       <slot></slot>
@@ -35,17 +35,17 @@ const props = defineProps({
 const mouseX = ref(-props.gradientSize * 10);
 const mouseY = ref(-props.gradientSize * 10);
 
-const handleMouseMove = (e: MouseEvent) => {
+function handleMouseMove(e: MouseEvent) {
   const target = e.currentTarget as HTMLElement;
   const rect = target.getBoundingClientRect();
   mouseX.value = e.clientX - rect.left;
   mouseY.value = e.clientY - rect.top;
-};
+}
 
-const handleMouseLeave = () => {
+function handleMouseLeave() {
   mouseX.value = -props.gradientSize * 10;
   mouseY.value = -props.gradientSize * 10;
-};
+}
 
 onMounted(() => {
   mouseX.value = -props.gradientSize * 10;

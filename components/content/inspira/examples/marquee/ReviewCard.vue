@@ -1,6 +1,6 @@
 <template>
   <figure
-    class="relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4 border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+    class="relative w-64 cursor-pointer overflow-hidden rounded-xl border border-gray-950/[.1] bg-gray-950/[.01] p-4 hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
   >
     <div class="flex flex-row items-center gap-2">
       <NuxtImg
@@ -22,10 +22,12 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-  img: { type: String, required: true },
-  name: { type: String, required: true },
-  username: { type: String, required: true },
-  body: { type: String, required: true },
-});
+interface Props {
+  img: string;
+  name: string;
+  username: string;
+  body: string;
+}
+
+defineProps<Props>();
 </script>

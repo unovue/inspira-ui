@@ -1,12 +1,12 @@
 <template>
   <TextRevealCard class="mx-auto my-8">
     <template #header>
-      <h2 class="text-white text-lg mb-2 font-semibold">Text Reveal</h2>
-      <p class="text-[#a9a9a9] text-sm">Hover over the text to reveal the animation</p>
+      <h2 class="mb-2 text-lg font-semibold text-white">Text Reveal</h2>
+      <p class="text-sm text-[#a9a9a9]">Hover over the text to reveal the animation</p>
     </template>
     <template #text>
       <p
-        class="text-sm sm:text-3xl md:text-[3rem] py-4 sm:py-6 md:py-10 font-bold bg-clip-text text-transparent bg-[#323238]"
+        class="bg-[#323238] bg-clip-text py-4 text-sm font-bold text-transparent md:py-10 md:text-[3rem] sm:py-6 sm:text-3xl"
       >
         Get ready to see what's hidden
       </p>
@@ -16,20 +16,20 @@
         :style="{
           textShadow: '4px 4px 15px rgba(0,0,0,0.5)',
         }"
-        class="text-sm sm:text-3xl md:text-[3rem] py-4 sm:py-6 md:py-10 font-bold text-white bg-clip-text text-transparent bg-gradient-to-b from-white to-neutral-300"
+        class="bg-gradient-to-b from-white to-neutral-300 bg-clip-text py-4 text-sm font-bold text-white md:py-10 md:text-[3rem] sm:py-6 sm:text-3xl"
       >
         Light reveals what shadows hide
       </p>
     </template>
   </TextRevealCard>
   <TextRevealCard
-    :starsCount="500"
-    starsClass="bg-red-500"
+    :stars-count="500"
+    stars-class="bg-red-500"
     class="mx-auto my-8"
   >
     <template #header>
-      <h2 class="text-3xl mb-2 font-semibold">Text Reveal</h2>
-      <p class="text-[#a9a9a9] text-sm">Hover over the text to reveal the animation</p>
+      <h2 class="mb-2 text-3xl font-semibold">Text Reveal</h2>
+      <p class="text-sm text-[#a9a9a9]">Hover over the text to reveal the animation</p>
     </template>
     <template #text>
       <p class="text-white">

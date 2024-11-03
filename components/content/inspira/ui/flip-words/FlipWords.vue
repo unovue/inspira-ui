@@ -1,70 +1,13 @@
-<script setup lang="ts">
-interface Props {
-  words: string[];
-  duration?: number;
-  class?: string;
-}
-
-const props = withDefaults(defineProps<Props>(), {
-  duration: 3000,
-  class: "",
-});
-
-const currentWord = ref(props.words[0]);
-const isVisible = ref(true);
-const timeoutId = ref<number | null>(null);
-
-const startAnimation = () => {
-  isVisible.value = false;
-
-  setTimeout(() => {
-    const currentIndex = props.words.indexOf(currentWord.value);
-    const nextWord = props.words[currentIndex + 1] || props.words[0];
-    currentWord.value = nextWord;
-    isVisible.value = true;
-  }, 600);
-};
-
-const splitWords = computed(() => {
-  return currentWord.value.split(" ").map((word) => ({
-    word,
-    letters: word.split(""),
-  }));
-});
-
-const startTimeout = () => {
-  timeoutId.value = window.setTimeout(() => {
-    startAnimation();
-  }, props.duration);
-};
-
-onMounted(() => {
-  startTimeout();
-});
-
-onBeforeUnmount(() => {
-  if (timeoutId.value) {
-    clearTimeout(timeoutId.value);
-  }
-});
-
-watch(isVisible, (newValue) => {
-  if (newValue) {
-    startTimeout();
-  }
-});
-</script>
-
 <template>
   <div class="relative inline-block px-2">
     <Transition
-      @after-enter="$emit('animationComplete')"
+      @after-enter="$emit('animationStart')"
       @after-leave="$emit('animationComplete')"
     >
       <div
         v-show="isVisible"
         :class="[
-          'relative inline-block text-left text-neutral-900 dark:text-neutral-100 z-10',
+          'relative z-10 inline-block text-left text-neutral-900 dark:text-neutral-100',
           props.class,
         ]"
       >
@@ -97,6 +40,65 @@ watch(isVisible, (newValue) => {
     </Transition>
   </div>
 </template>
+
+<script setup lang="ts">
+interface Props {
+  words: string[];
+  duration?: number;
+  class?: string;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  duration: 3000,
+  class: "",
+});
+
+defineEmits(["animationStart", "animationComplete"]);
+
+const currentWord = ref(props.words[0]);
+const isVisible = ref(true);
+const timeoutId = ref<number | null>(null);
+
+function startAnimation() {
+  isVisible.value = false;
+
+  setTimeout(() => {
+    const currentIndex = props.words.indexOf(currentWord.value);
+    const nextWord = props.words[currentIndex + 1] || props.words[0];
+    currentWord.value = nextWord;
+    isVisible.value = true;
+  }, 600);
+}
+
+const splitWords = computed(() => {
+  return currentWord.value.split(" ").map((word) => ({
+    word,
+    letters: word.split(""),
+  }));
+});
+
+function startTimeout() {
+  timeoutId.value = window.setTimeout(() => {
+    startAnimation();
+  }, props.duration);
+}
+
+onMounted(() => {
+  startTimeout();
+});
+
+onBeforeUnmount(() => {
+  if (timeoutId.value) {
+    clearTimeout(timeoutId.value);
+  }
+});
+
+watch(isVisible, (newValue) => {
+  if (newValue) {
+    startTimeout();
+  }
+});
+</script>
 
 <style>
 @keyframes fadeInWord {

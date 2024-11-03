@@ -4,7 +4,7 @@
     class="h-96"
   >
     <div
-      class="text-white text-5xl font-heading flex flex-col w-full h-full items-center justify-center"
+      class="flex size-full flex-col items-center justify-center font-heading text-5xl text-white"
     >
       Cool Background
     </div>

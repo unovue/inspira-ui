@@ -14,11 +14,10 @@
 </template>
 
 <script setup lang="ts">
+interface Props {
+  componentName?: string;
+}
+
 // Define props for the component
-defineProps({
-  componentName: {
-    type: String,
-    required: true,
-  },
-});
+defineProps<Props>();
 </script>

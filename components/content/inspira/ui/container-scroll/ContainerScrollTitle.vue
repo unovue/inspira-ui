@@ -1,7 +1,7 @@
 <template>
   <div
     :style="{ transform: `translateY(${translate}px)` }"
-    class="max-w-5xl mx-auto text-center"
+    class="mx-auto max-w-5xl text-center"
   >
     <slot></slot>
   </div>

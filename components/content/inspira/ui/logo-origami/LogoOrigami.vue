@@ -18,7 +18,7 @@
         zIndex: -1,
         backfaceVisibility: 'hidden',
       }"
-      class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
     >
       <component :is="children[(activeIndex + 1) % children.length]" />
     </div>
@@ -30,7 +30,7 @@
         zIndex: -1,
         backfaceVisibility: 'hidden',
       }"
-      class="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2"
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
     >
       <component :is="children[activeIndex % children.length]" />
     </div>
@@ -129,7 +129,7 @@ const slots = useSlots();
 
 const interval = ref();
 const activeIndex = ref(0);
-const children = ref<any[]>([]);
+const children = ref<unknown[]>([]);
 
 onMounted(() => {
   watchEffect(() => {

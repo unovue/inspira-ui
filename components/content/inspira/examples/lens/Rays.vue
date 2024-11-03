@@ -1,12 +1,3 @@
-<script setup lang="ts">
-import { cn } from "~/lib/utils";
-
-interface Props {
-  class?: string;
-}
-const props = defineProps<Props>();
-</script>
-
 <template>
   <svg
     width="380"
@@ -22,34 +13,67 @@ const props = defineProps<Props>();
         fill="url(#paint0_linear_120_7480)"
       />
     </g>
-    <g style="mix-blend-mode: plus-lighter" opacity="0.3" filter="url(#filter1_f_120_7480)">
+    <g
+      style="mix-blend-mode: plus-lighter"
+      opacity="0.3"
+      filter="url(#filter1_f_120_7480)"
+    >
       <path
         d="M-109.54 -36.9027L-84.2903 -58.0902L178.786 193.228L132.846 223.731L-109.54 -36.9027Z"
         fill="url(#paint1_linear_120_7480)"
       />
     </g>
-    <g style="mix-blend-mode: plus-lighter" opacity="0.86" filter="url(#filter2_f_120_7480)">
+    <g
+      style="mix-blend-mode: plus-lighter"
+      opacity="0.86"
+      filter="url(#filter2_f_120_7480)"
+    >
       <path
         d="M-100.647 -65.795L-69.7261 -92.654L194.786 157.229L139.51 197.068L-100.647 -65.795Z"
         fill="url(#paint2_linear_120_7480)"
       />
     </g>
-    <g style="mix-blend-mode: plus-lighter" opacity="0.31" filter="url(#filter3_f_120_7480)">
+    <g
+      style="mix-blend-mode: plus-lighter"
+      opacity="0.31"
+      filter="url(#filter3_f_120_7480)"
+    >
       <path
         d="M163.917 -89.0982C173.189 -72.1354 80.9618 2.11525 34.7334 30.1553C-11.495 58.1954 -106.505 97.514 -115.777 80.5512C-125.048 63.5885 -45.0708 -3.23233 1.15763 -31.2724C47.386 -59.3124 154.645 -106.061 163.917 -89.0982Z"
         fill="#8A50FF"
       />
     </g>
-    <g style="mix-blend-mode: plus-lighter" filter="url(#filter4_f_120_7480)">
-      <path d="M34.2031 13.2222L291.721 269.534" stroke="url(#paint3_linear_120_7480)" />
+    <g
+      style="mix-blend-mode: plus-lighter"
+      filter="url(#filter4_f_120_7480)"
+    >
+      <path
+        d="M34.2031 13.2222L291.721 269.534"
+        stroke="url(#paint3_linear_120_7480)"
+      />
     </g>
-    <g style="mix-blend-mode: plus-lighter" filter="url(#filter5_f_120_7480)">
-      <path d="M41 -40.9331L298.518 215.378" stroke="url(#paint4_linear_120_7480)" />
+    <g
+      style="mix-blend-mode: plus-lighter"
+      filter="url(#filter5_f_120_7480)"
+    >
+      <path
+        d="M41 -40.9331L298.518 215.378"
+        stroke="url(#paint4_linear_120_7480)"
+      />
     </g>
-    <g style="mix-blend-mode: plus-lighter" filter="url(#filter6_f_120_7480)">
-      <path d="M61.3691 3.8999L317.266 261.83" stroke="url(#paint5_linear_120_7480)" />
+    <g
+      style="mix-blend-mode: plus-lighter"
+      filter="url(#filter6_f_120_7480)"
+    >
+      <path
+        d="M61.3691 3.8999L317.266 261.83"
+        stroke="url(#paint5_linear_120_7480)"
+      />
     </g>
-    <g style="mix-blend-mode: plus-lighter" filter="url(#filter7_f_120_7480)">
+    <g
+      style="mix-blend-mode: plus-lighter"
+      filter="url(#filter7_f_120_7480)"
+    >
       <path
         d="M-1.46191 9.06348L129.458 145.868"
         stroke="url(#paint6_linear_120_7480)"
@@ -66,9 +90,20 @@ const props = defineProps<Props>();
         filterUnits="userSpaceOnUse"
         colorInterpolationFilters="sRGB"
       >
-        <feFlood floodOpacity="0" result="BackgroundImageFix" />
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur stdDeviation="6" result="effect1_foregroundBlur_120_7480" />
+        <feFlood
+          floodOpacity="0"
+          result="BackgroundImageFix"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation="6"
+          result="effect1_foregroundBlur_120_7480"
+        />
       </filter>
       <filter
         id="filter1_f_120_7480"
@@ -79,9 +114,20 @@ const props = defineProps<Props>();
         filterUnits="userSpaceOnUse"
         colorInterpolationFilters="sRGB"
       >
-        <feFlood floodOpacity="0" result="BackgroundImageFix" />
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur stdDeviation="3" result="effect1_foregroundBlur_120_7480" />
+        <feFlood
+          floodOpacity="0"
+          result="BackgroundImageFix"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation="3"
+          result="effect1_foregroundBlur_120_7480"
+        />
       </filter>
       <filter
         id="filter2_f_120_7480"
@@ -92,9 +138,20 @@ const props = defineProps<Props>();
         filterUnits="userSpaceOnUse"
         colorInterpolationFilters="sRGB"
       >
-        <feFlood floodOpacity="0" result="BackgroundImageFix" />
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur stdDeviation="5.5" result="effect1_foregroundBlur_120_7480" />
+        <feFlood
+          floodOpacity="0"
+          result="BackgroundImageFix"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation="5.5"
+          result="effect1_foregroundBlur_120_7480"
+        />
       </filter>
       <filter
         id="filter3_f_120_7480"
@@ -105,9 +162,20 @@ const props = defineProps<Props>();
         filterUnits="userSpaceOnUse"
         colorInterpolationFilters="sRGB"
       >
-        <feFlood floodOpacity="0" result="BackgroundImageFix" />
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur stdDeviation="48" result="effect1_foregroundBlur_120_7480" />
+        <feFlood
+          floodOpacity="0"
+          result="BackgroundImageFix"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation="48"
+          result="effect1_foregroundBlur_120_7480"
+        />
       </filter>
       <filter
         id="filter4_f_120_7480"
@@ -118,9 +186,20 @@ const props = defineProps<Props>();
         filterUnits="userSpaceOnUse"
         colorInterpolationFilters="sRGB"
       >
-        <feFlood floodOpacity="0" result="BackgroundImageFix" />
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur stdDeviation="4" result="effect1_foregroundBlur_120_7480" />
+        <feFlood
+          floodOpacity="0"
+          result="BackgroundImageFix"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation="4"
+          result="effect1_foregroundBlur_120_7480"
+        />
       </filter>
       <filter
         id="filter5_f_120_7480"
@@ -131,9 +210,20 @@ const props = defineProps<Props>();
         filterUnits="userSpaceOnUse"
         colorInterpolationFilters="sRGB"
       >
-        <feFlood floodOpacity="0" result="BackgroundImageFix" />
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur stdDeviation="4" result="effect1_foregroundBlur_120_7480" />
+        <feFlood
+          floodOpacity="0"
+          result="BackgroundImageFix"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation="4"
+          result="effect1_foregroundBlur_120_7480"
+        />
       </filter>
       <filter
         id="filter6_f_120_7480"
@@ -144,9 +234,20 @@ const props = defineProps<Props>();
         filterUnits="userSpaceOnUse"
         colorInterpolationFilters="sRGB"
       >
-        <feFlood floodOpacity="0" result="BackgroundImageFix" />
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur stdDeviation="3.5" result="effect1_foregroundBlur_120_7480" />
+        <feFlood
+          floodOpacity="0"
+          result="BackgroundImageFix"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation="3.5"
+          result="effect1_foregroundBlur_120_7480"
+        />
       </filter>
       <filter
         id="filter7_f_120_7480"
@@ -157,9 +258,20 @@ const props = defineProps<Props>();
         filterUnits="userSpaceOnUse"
         colorInterpolationFilters="sRGB"
       >
-        <feFlood floodOpacity="0" result="BackgroundImageFix" />
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-        <feGaussianBlur stdDeviation="3.5" result="effect1_foregroundBlur_120_7480" />
+        <feFlood
+          floodOpacity="0"
+          result="BackgroundImageFix"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="BackgroundImageFix"
+          result="shape"
+        />
+        <feGaussianBlur
+          stdDeviation="3.5"
+          result="effect1_foregroundBlur_120_7480"
+        />
       </filter>
       <linearGradient
         id="paint0_linear_120_7480"
@@ -169,8 +281,15 @@ const props = defineProps<Props>();
         y2="351.523"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0.214779" stopColor="#AF53FF" />
-        <stop offset="0.781583" stopColor="#B253FF" stopOpacity="0" />
+        <stop
+          offset="0.214779"
+          stopColor="#AF53FF"
+        />
+        <stop
+          offset="0.781583"
+          stopColor="#B253FF"
+          stopOpacity="0"
+        />
       </linearGradient>
       <linearGradient
         id="paint1_linear_120_7480"
@@ -180,8 +299,15 @@ const props = defineProps<Props>();
         y2="379.765"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0.214779" stopColor="#AF53FF" />
-        <stop offset="0.781583" stopColor="#9E53FF" stopOpacity="0" />
+        <stop
+          offset="0.214779"
+          stopColor="#AF53FF"
+        />
+        <stop
+          offset="0.781583"
+          stopColor="#9E53FF"
+          stopOpacity="0"
+        />
       </linearGradient>
       <linearGradient
         id="paint2_linear_120_7480"
@@ -191,8 +317,15 @@ const props = defineProps<Props>();
         y2="342.58"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0.214779" stopColor="#9D53FF" />
-        <stop offset="0.781583" stopColor="#A953FF" stopOpacity="0" />
+        <stop
+          offset="0.214779"
+          stopColor="#9D53FF"
+        />
+        <stop
+          offset="0.781583"
+          stopColor="#A953FF"
+          stopOpacity="0"
+        />
       </linearGradient>
       <linearGradient
         id="paint3_linear_120_7480"
@@ -203,7 +336,11 @@ const props = defineProps<Props>();
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#AF81FF" />
-        <stop offset="1" stopColor="#C081FF" stopOpacity="0" />
+        <stop
+          offset="1"
+          stopColor="#C081FF"
+          stopOpacity="0"
+        />
       </linearGradient>
       <linearGradient
         id="paint4_linear_120_7480"
@@ -214,7 +351,11 @@ const props = defineProps<Props>();
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#AF81FF" />
-        <stop offset="1" stopColor="#C081FF" stopOpacity="0" />
+        <stop
+          offset="1"
+          stopColor="#C081FF"
+          stopOpacity="0"
+        />
       </linearGradient>
       <linearGradient
         id="paint5_linear_120_7480"
@@ -225,7 +366,11 @@ const props = defineProps<Props>();
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#B981FF" />
-        <stop offset="1" stopColor="#CF81FF" stopOpacity="0" />
+        <stop
+          offset="1"
+          stopColor="#CF81FF"
+          stopOpacity="0"
+        />
       </linearGradient>
       <linearGradient
         id="paint6_linear_120_7480"
@@ -236,8 +381,21 @@ const props = defineProps<Props>();
         gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#A981FF" />
-        <stop offset="1" stopColor="#CB81FF" stopOpacity="0" />
+        <stop
+          offset="1"
+          stopColor="#CB81FF"
+          stopOpacity="0"
+        />
       </linearGradient>
     </defs>
   </svg>
 </template>
+
+<script setup lang="ts">
+import { cn } from "~/lib/utils";
+
+interface Props {
+  class?: string;
+}
+const props = defineProps<Props>();
+</script>
