@@ -25,13 +25,13 @@ Lens are static in center
 
 ## API
 
-| Prop Name | Type     | Default | Description                                                     |
-| --------- | -------- | ------- | --------------------------------------------------------------- |
-| `zoomFactor`   | `number` |   `1.5`   | The magnification factor for the lens.               |
-| `lensSize` | `number` |  `170` | The diameter of the lens in pixels. |
-| `position` | `{ x: number, y: number }` | `{ x: 200, y: 150 }` | The static position of the lens (when isStatic is true). |
-| `isStatic` | `boolean` | `false` | If true, the lens stays in a fixed position; if false, it follows the mouse. |
-| `hovering` | `boolean` | `"false"` | External control for the hover state. |
+| Prop Name    | Type                       | Default              | Description                                                                  |
+| ------------ | -------------------------- | -------------------- | ---------------------------------------------------------------------------- |
+| `zoomFactor` | `number`                   | `1.5`                | The magnification factor for the lens.                                       |
+| `lensSize`   | `number`                   | `170`                | The diameter of the lens in pixels.                                          |
+| `position`   | `{ x: number, y: number }` | `{ x: 200, y: 150 }` | The static position of the lens (when isStatic is true).                     |
+| `isStatic`   | `boolean`                  | `false`              | If true, the lens stays in a fixed position; if false, it follows the mouse. |
+| `hovering`   | `boolean`                  | `"false"`            | External control for the hover state.                                        |
 
 ## Component Code
 
