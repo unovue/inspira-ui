@@ -1,12 +1,7 @@
 <template>
   <div :class="cn('leading-snug tracking-wide', props.class)">
     <div ref="scope">
-      <span
-        v-for="(word, idx) in wordsArray"
-        :key="word + idx"
-        class="inline-block"
-        :style="spanStyle"
-      >
+      <span v-for="(word, idx) in wordsArray" :key="word + idx" class="inline-block" :style="spanStyle">
         {{ word }}&nbsp;
       </span>
     </div>
@@ -23,9 +18,10 @@ const props = withDefaults(
     words: string;
     filter?: boolean;
     duration?: number;
+    delay?: number;
     class: HTMLAttributes["class"];
   }>(),
-  { duration: 0.7, filter: true },
+  { duration: 0.7, delay: 0, filter: true },
 );
 
 const scope = ref(null);
@@ -40,12 +36,15 @@ const spanStyle = computed(() => ({
 onMounted(() => {
   if (scope.value) {
     const spans = (scope.value as HTMLElement).querySelectorAll("span");
-    spans.forEach((span: HTMLElement, index: number) => {
-      setTimeout(() => {
-        span.style.opacity = "1";
-        span.style.filter = props.filter ? "blur(0px)" : "none";
-      }, index * 200);
-    });
+
+    setTimeout(() => {
+      spans.forEach((span: HTMLElement, index: number) => {
+        setTimeout(() => {
+          span.style.opacity = "1";
+          span.style.filter = props.filter ? "blur(0px)" : "none";
+        }, index * 200);
+      });
+    }, props.delay);
   }
 });
 </script>
