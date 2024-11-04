@@ -2,10 +2,11 @@
   <div class="flex flex-col gap-4 items-start">
     <!-- Simple Loading Demo -->
     <section class="w-full">
-      <h2 class="text-lg font-semibold mb-2">Simple Loading Demo</h2>
+      <h2 class="text-lg font-semibold mb-2">Simple Loading Demo (prevent close)</h2>
       <MultiStepLoader
         :steps="simpleLoadingSteps"
         :loading="uiState.isSimpleLoading"
+        :preventClose="true"
         @state-change="handleStateChange"
         @complete="handleComplete"
       />
@@ -16,7 +17,7 @@
         {{ uiState.isSimpleLoading ? "Stop Loading" : "Start Simple Loading" }}
       </UiButton>
     </section>
-
+    <hr class="w-full h-px bg-gray-200 my-4" />
     <!-- Async Loading Demo -->
     <section class="w-full">
       <h2 class="text-lg font-semibold mb-2">Async Loading Demo</h2>
@@ -25,6 +26,7 @@
         :loading="uiState.isAfterTextLoading"
         @state-change="handleStateChange"
         @complete="handleComplete"
+        @close="uiState.closeAsync"
       />
       <UiButton
         @click="startAsyncLoading"
@@ -55,6 +57,12 @@ const loaderStates = reactive({
 const uiState = reactive({
   isSimpleLoading: false,
   isAfterTextLoading: false,
+  closeSimple: () => {
+    uiState.isSimpleLoading = false;
+  },
+  closeAsync: () => {
+    uiState.isAfterTextLoading = false;
+  },
 });
 
 // Simple loading steps configuration
@@ -161,14 +169,3 @@ const startAsyncLoading = async () => {
   }
 };
 </script>
-
-<style scoped>
-section {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 1rem;
-}
-
-section:last-child {
-  border-bottom: none;
-}
-</style>

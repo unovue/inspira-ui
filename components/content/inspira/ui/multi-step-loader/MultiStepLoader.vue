@@ -11,6 +11,18 @@
       v-if="loading && steps.length > 0"
       class="w-full h-full fixed inset-0 z-[100] flex items-center justify-center backdrop-blur-2xl"
     >
+      <!-- Closing Button -->
+      <UiButton
+        v-show="!preventClose"
+        class="absolute top-4 right-4 bg-primary z-[101]"
+        size="sm"
+        @click="close"
+      >
+        <SmartIcon
+          name="mdi:close"
+          class="w-6 h-6"
+        />
+      </UiButton>
       <div class="h-96 relative">
         <div class="flex relative justify-start max-w-xl mx-auto flex-col mt-40">
           <div
@@ -37,7 +49,7 @@
                 "
                 :size="24"
                 name="i-heroicons-check-circle-solid"
-                class="text-primary-500"
+                class="text-primary"
               />
               <SmartIcon
                 v-else-if="
@@ -45,7 +57,7 @@
                 "
                 :size="24"
                 name="i-heroicons-arrow-path"
-                class="animate-spin text-primary-500"
+                class="animate-spin text-primary"
               />
               <SmartIcon
                 v-else
@@ -100,22 +112,22 @@ interface Step {
   duration?: number; // Duration in ms before proceeding (default: 2000)
   action?: () => void; // Function to execute when step is active
 }
-
-const props = withDefaults(
-  defineProps<{
-    steps: Step[];
-    loading?: boolean;
-    defaultDuration?: number;
-  }>(),
-  {
-    loading: false,
-    defaultDuration: 1500,
-  },
-);
+interface Props {
+  steps: Step[];
+  loading?: boolean;
+  defaultDuration?: number;
+  preventClose?: boolean;
+}
+const props = withDefaults(defineProps<Props>(), {
+  loading: false,
+  defaultDuration: 1500,
+  preventClose: false,
+});
 
 const emit = defineEmits<{
   "state-change": [number];
   complete: [];
+  close: [];
 }>();
 
 const currentState = ref(0);
@@ -162,6 +174,10 @@ const processCurrentStep = async () => {
       proceedToNextStep();
     }, duration);
   }
+};
+
+const close = () => {
+  emit("close");
 };
 
 // Watch for changes in the async property
