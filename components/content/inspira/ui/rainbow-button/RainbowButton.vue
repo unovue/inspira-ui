@@ -44,8 +44,8 @@ const speedInSeconds = computed(() => `${props.speed}s`);
   animation: rainbow var(--speed) infinite linear;
 }
 
-.animate-rainbow:before {
-  animation: rainbow var(--speed) infinite linear reverse;
+.rainbow-button:before {
+  animation: rainbow var(--speed) infinite linear;
 }
 
 @keyframes rainbow {
