@@ -9,29 +9,29 @@
   >
     <div
       v-if="loading && steps.length > 0"
-      class="w-full h-full fixed inset-0 z-[100] flex items-center justify-center backdrop-blur-2xl"
+      class="fixed inset-0 z-[100] flex size-full items-center justify-center backdrop-blur-2xl"
     >
       <!-- Closing Button -->
       <UiButton
         v-show="!preventClose"
-        class="absolute top-4 right-4 bg-primary z-[101]"
+        class="absolute right-4 top-4 z-[101] bg-primary"
         size="sm"
         @click="close"
       >
         <SmartIcon
           name="mdi:close"
-          class="w-6 h-6"
+          class="size-6"
         />
       </UiButton>
-      <div class="h-96 relative">
-        <div class="flex relative justify-start max-w-xl mx-auto flex-col mt-40">
+      <div class="relative h-96">
+        <div class="relative mx-auto mt-40 flex max-w-xl flex-col justify-start">
           <div
             v-for="(step, index) in steps"
             :key="index"
           >
             <div
               v-if="step"
-              class="text-left flex items-center gap-2 mb-4 transition-all duration-300 ease-in-out"
+              class="mb-4 flex items-center gap-2 text-left transition-all duration-300 ease-in-out"
               :style="{
                 opacity:
                   index === currentState
@@ -63,12 +63,12 @@
                 v-else
                 :size="24"
                 name="i-heroicons-check-circle"
-                class="text-black dark:text-white opacity-50"
+                class="text-black opacity-50 dark:text-white"
               />
               <div class="flex flex-col">
                 <span
                   :class="[
-                    'text-black dark:text-white text-lg',
+                    'text-lg text-black dark:text-white',
                     index > currentState && 'opacity-50',
                   ]"
                 >
@@ -87,7 +87,7 @@
                           index === currentState &&
                           isLastStepComplete))
                     "
-                    class="text-sm text-gray-500 dark:text-gray-400 mt-1"
+                    class="mt-1 text-sm text-gray-500 dark:text-gray-400"
                   >
                     {{ step.afterText }}
                   </span>
@@ -98,7 +98,7 @@
         </div>
       </div>
       <div
-        class="bg-gradient-to-t inset-x-0 z-20 bottom-0 bg-white dark:bg-black h-full absolute [mask-image:radial-gradient(900px_at_center,transparent_30%,white)]"
+        class="absolute inset-x-0 bottom-0 z-20 h-full bg-white bg-gradient-to-t [mask-image:radial-gradient(900px_at_center,transparent_30%,white)] dark:bg-black"
       ></div>
     </div>
   </Transition>
@@ -133,15 +133,16 @@ const emit = defineEmits<{
 const currentState = ref(0);
 const stepStartTime = ref(Date.now());
 const isLastStepComplete = ref(false);
-let currentTimer: NodeJS.Timeout | null = null;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let currentTimer: any = null;
 
-const executeStepAction = async (step: Step) => {
+async function executeStepAction(step: Step) {
   if (typeof step.action === "function") {
     await step.action();
   }
-};
+}
 
-const proceedToNextStep = async () => {
+async function proceedToNextStep() {
   const currentStep = props.steps[currentState.value];
   if (!currentStep) return;
 
@@ -157,9 +158,9 @@ const proceedToNextStep = async () => {
     isLastStepComplete.value = true;
     emit("complete");
   }
-};
+}
 
-const processCurrentStep = async () => {
+async function processCurrentStep() {
   if (currentTimer) {
     clearTimeout(currentTimer);
   }
@@ -174,11 +175,11 @@ const processCurrentStep = async () => {
       proceedToNextStep();
     }, duration);
   }
-};
+}
 
-const close = () => {
+function close() {
   emit("close");
-};
+}
 
 // Watch for changes in the async property
 watch(

@@ -1,26 +1,26 @@
 <template>
-  <div class="flex flex-col gap-4 items-start">
+  <div class="flex flex-col items-start gap-4">
     <!-- Simple Loading Demo -->
-    <section class="w-full">
-      <h2 class="text-lg font-semibold mb-2">Simple Loading Demo (prevent close)</h2>
+    <section class="flex w-full flex-col items-center justify-center">
+      <h2 class="mb-2 text-lg font-semibold">Simple Loading Demo (prevent close)</h2>
       <MultiStepLoader
         :steps="simpleLoadingSteps"
         :loading="uiState.isSimpleLoading"
-        :preventClose="true"
+        :prevent-close="true"
         @state-change="handleStateChange"
         @complete="handleComplete"
       />
       <UiButton
-        @click="toggleSimpleLoading"
         class="mt-4"
+        @click="toggleSimpleLoading"
       >
         {{ uiState.isSimpleLoading ? "Stop Loading" : "Start Simple Loading" }}
       </UiButton>
     </section>
-    <hr class="w-full h-px bg-gray-200 my-4" />
+    <hr class="my-4 h-px w-full bg-gray-200" />
     <!-- Async Loading Demo -->
-    <section class="w-full">
-      <h2 class="text-lg font-semibold mb-2">Async Loading Demo</h2>
+    <section class="flex w-full flex-col items-center justify-center">
+      <h2 class="mb-2 text-lg font-semibold">Async Loading Demo</h2>
       <MultiStepLoader
         :steps="asyncLoadingSteps"
         :loading="uiState.isAfterTextLoading"
@@ -29,9 +29,9 @@
         @close="uiState.closeAsync"
       />
       <UiButton
-        @click="startAsyncLoading"
         class="mt-4"
         :disabled="uiState.isAfterTextLoading"
+        @click="startAsyncLoading"
       >
         Start Async Loading
       </UiButton>
@@ -119,30 +119,30 @@ const asyncLoadingSteps = computed<Step[]>(() => [
 ]);
 
 // Event handlers
-const handleStateChange = (state: number) => {
-  console.log("Loading state changed:", state);
-};
+function handleStateChange(state: number) {
+  // Handle Loading State Change
+}
 
-const handleComplete = () => {
-  console.log("Loading sequence completed");
-};
+function handleComplete() {
+  // Handle Loading Complete
+}
 
-const handleSimpleLoadingComplete = () => {
+function handleSimpleLoadingComplete() {
   alert("Simple loading complete, redirecting...");
   uiState.isSimpleLoading = false;
-};
+}
 
-const handleAsyncLoadingComplete = () => {
+function handleAsyncLoadingComplete() {
   alert("Async loading complete, redirecting...");
   uiState.isAfterTextLoading = false;
-};
+}
 
 // Action handlers
-const toggleSimpleLoading = () => {
+function toggleSimpleLoading() {
   uiState.isSimpleLoading = !uiState.isSimpleLoading;
-};
+}
 
-const startAsyncLoading = async () => {
+async function startAsyncLoading() {
   // Reset states
   uiState.isAfterTextLoading = true;
   loaderStates.isProcessing = true;
@@ -150,22 +150,21 @@ const startAsyncLoading = async () => {
   loaderStates.sendingMails = true;
 
   // Simulate async operations
-  const simulateAsyncStep = (stateProp: keyof typeof loaderStates, delay: number) => {
+  function simulateAsyncStep(stateProp: keyof typeof loaderStates, delay: number) {
     return new Promise<void>((resolve) => {
       setTimeout(() => {
         loaderStates[stateProp] = false;
         resolve();
       }, delay);
     });
-  };
+  }
 
   try {
     await simulateAsyncStep("isProcessing", 2000);
     await simulateAsyncStep("isSavingOrder", 3000);
     await simulateAsyncStep("sendingMails", 2500);
   } catch (error) {
-    console.error("Error during async loading:", error);
     uiState.isAfterTextLoading = false;
   }
-};
+}
 </script>
