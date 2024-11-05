@@ -14,7 +14,7 @@
       :animate="true"
       :direction="PATTERN_BACKGROUND_DIRECTION.TopRight"
       :variant="PATTERN_BACKGROUND_VARIANT.Dot"
-      class="flex h-fit w-full flex-col items-center gap-4 rounded-lg border px-4 py-8 overflow-hidden"
+      class="flex h-fit w-full flex-col items-center gap-4 overflow-hidden rounded-lg border px-4 py-8"
       :speed="PATTERN_BACKGROUND_SPEED.Slow"
     >
       <h3
@@ -29,7 +29,7 @@
       :animate="true"
       :direction="PATTERN_BACKGROUND_DIRECTION.TopRight"
       :variant="PATTERN_BACKGROUND_VARIANT.Dot"
-      class="flex h-fit w-full flex-col items-center gap-4 rounded-lg border px-4 py-8 overflow-hidden"
+      class="flex h-fit w-full flex-col items-center gap-4 overflow-hidden rounded-lg border px-4 py-8"
       :speed="PATTERN_BACKGROUND_SPEED.Slow"
     >
       <h3
@@ -45,7 +45,7 @@
       :animate="true"
       :direction="PATTERN_BACKGROUND_DIRECTION.TopRight"
       :variant="PATTERN_BACKGROUND_VARIANT.Dot"
-      class="flex h-fit w-full flex-col items-center gap-4 rounded-lg border px-4 py-8 overflow-hidden"
+      class="flex h-fit w-full flex-col items-center gap-4 overflow-hidden rounded-lg border px-4 py-8"
       :speed="PATTERN_BACKGROUND_SPEED.Slow"
     >
       <h3
