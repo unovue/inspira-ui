@@ -40,9 +40,12 @@
         class="rounded-xl bg-gradient-to-r from-pink-500 to-violet-500 px-4 py-1"
         text-end-color="hsl(var(--accent))"
       >
-        beautiful websites
+        <FlipWords
+          :words="['beautiful', 'stunning']"
+          :duration="3000"
+        />
       </TextHighlight>
-      using Vue & Nuxt
+      websites using Vue & Nuxt
     </h1>
 
     <span class="mt-4 text-center text-lg text-gray-600 sm:text-xl dark:text-gray-200">
