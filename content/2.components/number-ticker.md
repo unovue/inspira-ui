@@ -31,4 +31,5 @@ You can copy and paste the following code to create this component:
 
 ## Credits
 
+- Credits to [Grzegorz Krol](https://github.com/Grzechu335) for porting this component.
 - Ported from [Magic UI NumberTicker](https://magicui.design/docs/components/number-ticker).
