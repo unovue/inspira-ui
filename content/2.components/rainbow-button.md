@@ -25,4 +25,5 @@ You can copy and paste the following code to create these components:
 
 ## Credits
 
-- Credits to [Magic UI](https://magicui.design/docs/components/rainbow-button) for this fantastic component.
+- Credits to [Grzegorz Krol](https://github.com/Grzechu335) for porting this component.
+- Credits to [Magic UI](https://magicui.design/docs/components/rainbow-button).
