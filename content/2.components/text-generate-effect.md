@@ -15,12 +15,12 @@ Two text with different delay
 
 ## API
 
-| Prop Name  | Type      | Default  | Description                                               |
-| ---------- | --------- | -------- | --------------------------------------------------------- |
-| `words`    | `string`  | Required | The text to be displayed with the generating effect.      |
-| `duration` | `number`  | `0.7`    | The duration of the text generation animation in seconds. |
-| `delay`    | `number`  | `0`      | The delay before the text generation animation starts.    |
-| `filter`   | `boolean` | `true`   | The blur of the text.                                     |
+| Prop Name  | Type      | Default  | Description                                                            |
+| ---------- | --------- | -------- | ---------------------------------------------------------------------- |
+| `words`    | `string`  | Required | The text to be displayed with the generating effect.                   |
+| `duration` | `number`  | `0.7`    | The duration of the text generation animation in seconds.              |
+| `delay`    | `number`  | `0`      | The delay before the text generation animation starts in milliseconds. |
+| `filter`   | `boolean` | `true`   | The blur of the text.                                                  |
 
 ## Component Code
 
