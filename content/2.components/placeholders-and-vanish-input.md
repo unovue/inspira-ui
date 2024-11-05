@@ -1,9 +1,6 @@
 ---
 title: Placeholders And Vanish Input
 description: Sliding in placeholders and vanish effect of input on submit
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="VanishingInputDemo" type="examples"}  

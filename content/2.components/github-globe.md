@@ -1,9 +1,6 @@
 ---
 title: Github Globe
 description: A 3D interactive globe visualization with customizable arcs, points, and animation options inspired from Github.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="GithubGlobeDemo" type="examples" id="globe"}

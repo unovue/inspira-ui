@@ -1,9 +1,6 @@
 ---
 title: Vortex Background
 description: A wavy, swirly, vortex background ideal for CTAs and backgrounds.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="VortexDemo" type="examples" id="vortex"}

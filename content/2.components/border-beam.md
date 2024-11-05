@@ -1,9 +1,6 @@
 ---
 title: Border Beam
 description: A stylish animated border beam effect with customizable size, duration, colors, and delay.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="BorderBeamDemo" type="examples"}

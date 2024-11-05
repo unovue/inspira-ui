@@ -1,9 +1,6 @@
 ---
 title: Orbit
 description: A component that animates content in a circular orbit, with customizable duration, delay, and radius. It also offers an optional orbit path display.
-navBadges:
-  - value: Updated
-    type: info
 ---
 
 ::ComponentLoader{label="Preview" componentName="OrbitDemo" type="examples"}  

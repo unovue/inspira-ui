@@ -1,9 +1,6 @@
 ---
 title: Tracing Beam
 description: A component that renders a tracing beam effect with dynamic scrolling animations and gradient strokes.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="TracingBeamDemo" type="examples"}

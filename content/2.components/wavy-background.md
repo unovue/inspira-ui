@@ -1,9 +1,6 @@
 ---
 title: Wavy Background
 description: A cool background effect with waves that move.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="WavyBackgroundDemo" type="examples" id="wavy-background"}

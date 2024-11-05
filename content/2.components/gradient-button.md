@@ -1,9 +1,6 @@
 ---
 title: Gradient Button
 description: A stylish animated button with a rotating conic gradient border and customizable properties for a vibrant look.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="GradientButtonDemo" type="examples"}
