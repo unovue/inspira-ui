@@ -11,10 +11,11 @@ navBadges:
 
 ## API
 
-| Prop Name | Type     | Default | Description                                    |
-| --------- | -------- | ------- | ---------------------------------------------- |
-| `class`   | `string` | `""`    | Additional CSS classes to apply to the button. |
-| `speed`   | `number` | `2`     | Duration of the animation in seconds.          |
+| Prop Name | Type     | Default    | Description                                    |
+| --------- | -------- | ---------- | ---------------------------------------------- |
+| `class`   | `string` | `""`       | Additional CSS classes to apply to the button. |
+| `is`      | `string` | `"button"` | The HTML tag to render for the component.      |
+| `speed`   | `number` | `2`        | Duration of the animation in seconds.          |
 
 ## Component Code
 

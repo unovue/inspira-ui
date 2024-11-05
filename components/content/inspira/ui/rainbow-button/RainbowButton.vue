@@ -1,5 +1,6 @@
 <template>
-  <button
+  <component
+    :is="is"
     :class="
       cn(
         'rainbow-button',
@@ -12,7 +13,7 @@
     "
   >
     <slot />
-  </button>
+  </component>
 </template>
 
 <script setup lang="ts">
@@ -20,11 +21,13 @@ import { cn } from "~/lib/utils";
 
 interface RainbowButtonProps {
   class?: string;
+  is?: string;
   speed?: number;
 }
 
 const props = withDefaults(defineProps<RainbowButtonProps>(), {
   speed: 2,
+  is: "button",
 });
 
 const speedInSeconds = computed(() => `${props.speed}s`);
