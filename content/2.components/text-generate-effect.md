@@ -12,7 +12,7 @@ description: A cool text effect that fades in text on page load, one by one.
 | ---------- | --------- | -------- | --------------------------------------------------------- |
 | `words`    | `string`  | Required | The text to be displayed with the generating effect.      |
 | `duration` | `number`  | `0.7`    | The duration of the text generation animation in seconds. |
-| `delay`    | `number`  | `0.1`    | The delay before the text generation animation starts.    |
+| `delay`    | `number`  | `0`      | The delay before the text generation animation starts.    |
 | `filter`   | `boolean` | `true`   | The blur of the text.                                     |
 
 ## Component Code
