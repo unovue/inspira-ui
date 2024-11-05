@@ -6,6 +6,13 @@ description: A cool text effect that fades in text on page load, one by one.
 ::ComponentLoader{label="Preview" componentName="TextGenerateDemo" type="examples"}  
 ::
 
+## Examples
+
+Two text with different delay
+
+::ComponentLoader{label="Preview" componentName="TextGenerateEffectDemoDelayed" type="examples" id="text-generate-effect"}
+::
+
 ## API
 
 | Prop Name  | Type      | Default  | Description                                               |
