@@ -15,12 +15,24 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       NUXT_CLARITY_ID: process.env.NUXT_CLARITY_ID,
+      NUXT_ADSENSE_ACCOUNT: process.env.NUXT_ADSENSE_ACCOUNT,
     },
   },
 
   eslint: {
     config: {
       standalone: false,
+    },
+  },
+
+  app: {
+    head: {
+      meta: [
+        {
+          name: "google-adsense-account",
+          content: process.env.NUXT_ADSENSE_ACCOUNT,
+        },
+      ],
     },
   },
 
