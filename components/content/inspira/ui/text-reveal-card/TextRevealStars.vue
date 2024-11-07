@@ -7,7 +7,7 @@
       :initial="generatePosition()"
       :enter="generateEnterAnimation()"
       :duration="randomDuration"
-      :class="cn('inline-block absolute w-0.5 h-0.5 bg-white rounded-full z-[1]', starsClass)"
+      :class="cn('inline-block absolute w-0.5 h-0.5 bg-white rounded-full z-[1]', props.class)"
     />
   </div>
 </template>
@@ -17,12 +17,12 @@ import { cn } from "~/lib/utils";
 
 interface Props {
   starsCount: number;
-  starsClass?: string;
+  class?: string;
 }
 
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
   starsCount: 130,
-  starsClass: "",
+  class: "",
 });
 
 function randomMove() {

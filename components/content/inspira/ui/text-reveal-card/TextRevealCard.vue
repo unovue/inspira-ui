@@ -12,7 +12,7 @@
     @touchend="mouseLeaveHandler"
     @touchmove="touchMoveHandler"
   >
-    <slot name="header" />
+    <slot name="header"></slot>
     <div class="relative flex h-40 items-center overflow-hidden">
       <div
         :style="{
@@ -39,11 +39,11 @@
       <div
         class="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]"
       >
-        <slot name="revealText" />
+        <slot name="revealText"></slot>
 
         <TextRevealStars
           :stars-count
-          :stars-class
+          :class="starsClass"
         />
       </div>
     </div>

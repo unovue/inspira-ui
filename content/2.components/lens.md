@@ -1,9 +1,6 @@
 ---
 title: Lens
 description: A lens component to zoom into images, videos, or practically anything.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="LensDemo" type="examples" id="lens"}
