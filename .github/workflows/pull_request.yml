@@ -1,0 +1,17 @@
+name: Pull Request
+
+on:
+  pull_request:
+
+jobs:
+  checkformat:
+    name: "Check ESLint and Prettier rules"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: "actions/checkout@v4"
+      - name: Install dependencies
+        run: pnpm install
+      - name: Run ESLint
+        run: pnpm lint
+      - name: Run Prettier
+        run: pnpm format
