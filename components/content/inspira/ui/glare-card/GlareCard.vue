@@ -1,12 +1,7 @@
 <template>
   <div
     ref="refElement"
-    :class="
-      cn(
-        'container-style duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] container relative isolate transition-transform will-change-transform [aspect-ratio:17/21] [contain:layout_style] [perspective:600px]',
-        `w-[${props.cardWidth}px]`,
-      )
-    "
+    class="container-style duration-[var(--duration)] w-[320px] ease-[var(--easing)] delay-[var(--delay)] container relative isolate transition-transform will-change-transform [aspect-ratio:17/21] [contain:layout_style] [perspective:600px]"
     @pointermove="handlePointerMove"
     @pointerenter="handlePointerEnter"
     @pointerleave="handlePointerLeave"
@@ -36,12 +31,9 @@ import { cn } from "~/lib/utils";
 
 interface GlareCardProps {
   class?: string;
-  cardWidth?: number;
 }
 
-const props = withDefaults(defineProps<GlareCardProps>(), {
-  cardWidth: 320,
-});
+const props = defineProps<GlareCardProps>();
 
 const isPointerInside = ref(false);
 const refElement = ref<HTMLElement | null>(null);
