@@ -39,4 +39,4 @@ You can copy and paste the following code to create this component:
 
 ## Credits
 
-- Inspired from [Jhey's CSS only version of Balance Slider](https://x.com/jh3yy/status/1748809599598399792?s=46)
+- Inspired and ported from code shared in [Jhey's CSS only version of Balance Slider](https://x.com/jh3yy/status/1748809599598399792?s=46)
