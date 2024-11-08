@@ -1,7 +1,7 @@
 <template>
   <div
-    class="control"
-    :style="controlStyles"
+    class="slider-container relative mx-auto my-0 grid place-items-center overflow-hidden"
+    :style="sliderStyles"
     @mouseenter="active = 1"
     @mouseleave="active = 0"
     @focusin="active = 1"
@@ -15,22 +15,29 @@
       type="range"
       min="0"
       max="100"
+      class="size-full touch-none opacity-0 hover:cursor-grab focus-visible:outline-offset-4 focus-visible:outline-transparent active:cursor-grabbing"
     />
     <div
       aria-hidden="true"
-      class="tooltip"
-      :style="tooltipStyles"
+      :class="
+        cn('slider-value-labels pointer-events-none absolute inset-x-0 top-0 z-[2] h-1/2 text-base')
+      "
+      :style="sliderLabelStyles"
     ></div>
     <div
-      class="control-track"
-      :style="trackStyles"
+      class="slider-track pointer-events-none absolute bottom-0 w-full"
+      :style="sliderTrackStyles"
     >
-      <div class="control-indicator"></div>
+      <div
+        class="slider-indicator absolute top-1/2 z-[2] h-3/4 w-1 -translate-x-1/2 -translate-y-1/2 rounded-sm"
+      ></div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { cn } from "~/lib/utils";
+
 interface Props {
   initialValue?: number;
   leftColor?: string;
@@ -40,6 +47,7 @@ interface Props {
   leftContent?: string;
   rightContent?: string;
   indicatorColor?: string;
+  borderRadius?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -51,6 +59,7 @@ const props = withDefaults(defineProps<Props>(), {
   leftColor: "#e68a00",
   rightColor: "#ffffff",
   indicatorColor: "#FFFFFF",
+  borderRadius: 8,
 });
 
 const value = ref(props.initialValue);
@@ -60,7 +69,7 @@ const shift = computed(() =>
   value.value > props.minShiftLimit && value.value < props.maxShiftLimit ? 1 : 0,
 );
 
-const controlStyles = computed(() => ({
+const sliderStyles = computed(() => ({
   "--value": value.value,
   "--shift": shift.value,
   "--active": active.value,
@@ -69,11 +78,11 @@ const controlStyles = computed(() => ({
   "--indicatorColor": indicatorColorHsl.value,
 }));
 
-const tooltipStyles = computed(() => ({
+const sliderLabelStyles = computed(() => ({
   "--shift": shift.value,
 }));
 
-const trackStyles = computed(() => ({
+const sliderTrackStyles = computed(() => ({
   "--value": value.value,
   "--shift": shift.value,
   "--leftColor": leftColorHsl.value,
@@ -98,6 +107,8 @@ const indicatorColorHsl = computed(() => {
   const activeAlpha = active.value * 0.5 + 0.5; // Calculate alpha based on active state
   return `hsl(${h} ${s}% ${l}% / ${activeAlpha})`;
 });
+
+const borderRadiusInPx = computed(() => `${props.borderRadius}px`);
 
 function hexToHsl(hex: string): [number, number, number] {
   // Remove "#" if present
@@ -137,11 +148,7 @@ function hexToHsl(hex: string): [number, number, number] {
 </script>
 
 <style scoped>
-.control {
-  position: relative;
-  display: grid;
-  place-items: center;
-  margin: 0 auto;
+.slider-container {
   --speed: 0.65s;
   --update: 0s;
   --timing: linear(
@@ -165,40 +172,14 @@ function hexToHsl(hex: string): [number, number, number] {
   );
 }
 
-[type="range"] {
-  width: 100%;
-  opacity: 0;
-  height: 60px;
-  touch-action: none;
-}
-
-[type="range"]:hover {
-  cursor: grab;
-}
-[type="range"]:active {
-  cursor: grabbing;
-}
-
-[type="range"]:focus-visible {
-  outline-offset: 0.25rem;
-  outline-color: transparent;
-}
-
-.tooltip {
-  font-size: 1rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 50%;
-  pointer-events: none;
+.slider-value-labels {
   transform: translateY(calc(var(--shift, 0) * 50%));
   transition: transform var(--speed) var(--timing);
-  z-index: 2;
+  counter-reset: low var(--value) high calc(100 - var(--value));
 }
 
-.tooltip::after,
-.tooltip::before {
+.slider-value-labels::after,
+.slider-value-labels::before {
   font-variant: tabular-nums;
   position: absolute;
   top: 50%;
@@ -208,11 +189,7 @@ function hexToHsl(hex: string): [number, number, number] {
   font-family: monospace;
 }
 
-.tooltip {
-  counter-reset: low var(--value) high calc(100 - var(--value));
-}
-
-.tooltip::before {
+.slider-value-labels::before {
   --range: calc((70 - (var(--value) / 100 * 10)) * 1%);
   color: hsl(24 74% 54%);
   content: var(--leftContent) counter(low) "%";
@@ -220,23 +197,19 @@ function hexToHsl(hex: string): [number, number, number] {
   left: 0.5rem;
 }
 
-.tooltip::after {
+.slider-value-labels::after {
   --range: calc((50 - (var(--value) / 100 * 10)) * 1%);
   content: counter(high) "% " var(--rightContent);
   mask: linear-gradient(90deg, hsl(0 0% 100% / 1) var(--range), hsl(0 0% 100% / 0.5) var(--range));
   right: 0.5rem;
 }
 
-.control-track {
+.slider-track {
   height: calc(50% + (var(--shift) * 50%));
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  pointer-events: none;
   transition: height var(--speed) var(--timing);
 }
 
-.control-track::before {
+.slider-track::before {
   content: "";
   position: absolute;
   top: 0;
@@ -244,11 +217,11 @@ function hexToHsl(hex: string): [number, number, number] {
   left: 0;
   width: calc(var(--value, 0) * 1% - 0.5rem);
   background: var(--leftColor);
-  border-radius: 4px;
+  border-radius: v-bind(borderRadiusInPx);
   transition: width var(--update);
 }
 
-.control-track::after {
+.slider-track::after {
   content: "";
   position: absolute;
   top: 0;
@@ -256,20 +229,13 @@ function hexToHsl(hex: string): [number, number, number] {
   right: 0;
   width: calc((100 - var(--value, 0)) * 1% - 0.5rem);
   background: var(--rightColor);
-  border-radius: 4px;
+  border-radius: v-bind(borderRadiusInPx);
   transition: width var(--update);
 }
 
-.control-indicator {
-  height: 75%;
-  border-radius: 4px;
-  width: 4px;
-  position: absolute;
-  top: 50%;
+.slider-indicator {
   background: var(--indicatorColor);
   left: calc(var(--value, 0) * 1%);
-  z-index: 2;
-  transform: translate(-50%, -50%);
   transition: left var(--update);
 }
 
