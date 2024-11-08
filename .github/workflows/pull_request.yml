@@ -2,8 +2,7 @@ name: Verify Pull Request
 
 on:
   pull_request:
-    types:
-      - opened
+    types: [opened, reopened, review_requested, edited, ready_for_review]
 
   workflow_dispatch:
 
