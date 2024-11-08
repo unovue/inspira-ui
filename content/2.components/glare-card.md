@@ -21,7 +21,6 @@ navBadges:
 | Prop Name   | Type     | Default | Description                                               |
 | ----------- | -------- | ------- | --------------------------------------------------------- |
 | `class`     | `string` | `-`     | Additional Tailwind CSS class names to apply to the card. |
-| `cardWidth` | `number` | `320`   | Adjust the card width based on your needs.                |
 
 ## Component Code
 
