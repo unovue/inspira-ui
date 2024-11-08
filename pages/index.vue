@@ -14,6 +14,9 @@
         </UiButton>
       </a>
     </div>
+
+    <CarbonAds />
+
     <FeatureSection />
     <HomePageExamples />
     <Testimonials />

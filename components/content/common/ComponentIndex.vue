@@ -1,5 +1,6 @@
 <template>
   <div class="flex w-full flex-col flex-wrap gap-4 py-8">
+    <CarbonAds class="mb-8" />
     <ContentList
       path="components"
       :query="query"

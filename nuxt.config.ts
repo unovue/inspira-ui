@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   plugins: [{ src: "~/plugins/clarity.js", mode: "client" }],
 
-  modules: ["@nuxt/image", "nuxt-gtag", "@vueuse/motion/nuxt", "@nuxt/eslint"],
+  modules: ["@nuxt/image", "nuxt-gtag", "@vueuse/motion/nuxt", "@nuxt/eslint", "@nuxt/scripts"],
 
   components: [
     {
@@ -27,13 +27,6 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      script: [
-        {
-          src: "https://cdn.carbonads.com/carbon.js?serve=CW7DEK37&placement=inspira-uicom&format=responsive",
-          async: true,
-          id: "_carbonads_js",
-        },
-      ],
       meta: [
         {
           name: "google-adsense-account",
