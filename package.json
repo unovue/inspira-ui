@@ -11,7 +11,8 @@
     "format": "prettier . --check",
     "format:fix": "prettier . --write",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@nuxt/image": "^1.8.1",
@@ -53,6 +54,8 @@
     "eslint-plugin-unicorn": "^56.0.0",
     "eslint-plugin-vue": "^9.30.0",
     "globals": "^15.11.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "tailwind-merge": "^2.5.4",
     "typescript-eslint": "^8.12.1"
