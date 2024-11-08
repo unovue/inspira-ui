@@ -1,8 +1,11 @@
 name: Verify Pull Request
 
 on:
-  - pull_request
-  - workflow_dispatch
+  pull_request:
+    types:
+      - opened
+
+  workflow_dispatch:
 
 jobs:
   checkformat:
