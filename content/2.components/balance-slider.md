@@ -40,3 +40,4 @@ You can copy and paste the following code to create this component:
 ## Credits
 
 - Inspired and ported from code shared in [Jhey's CSS only version of Balance Slider](https://x.com/jh3yy/status/1748809599598399792?s=46)
+- Original concept by [Malay Vasa](https://x.com/MalayVasa/status/1748726374079381930)
