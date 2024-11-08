@@ -27,6 +27,13 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      script: [
+        {
+          src: "https://cdn.carbonads.com/carbon.js?serve=CW7DEK37&placement=inspira-uicom&format=responsive",
+          async: true,
+          id: "_carbonads_js",
+        },
+      ],
       meta: [
         {
           name: "google-adsense-account",
