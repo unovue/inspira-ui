@@ -1,17 +1,31 @@
-name: Pull Request
+name: Verify Pull Request
 
 on:
-  pull_request:
+  - pull_request
 
 jobs:
   checkformat:
     name: "Check ESLint and Prettier rules"
     runs-on: ubuntu-latest
     steps:
-      - uses: "actions/checkout@v4"
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
       - name: Install dependencies
         run: pnpm install
+
       - name: Run ESLint
         run: pnpm lint
+
       - name: Run Prettier
         run: pnpm format
