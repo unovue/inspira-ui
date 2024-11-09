@@ -18,9 +18,9 @@ navBadges:
 
 ## API
 
-| Prop Name   | Type     | Default | Description                                               |
-| ----------- | -------- | ------- | --------------------------------------------------------- |
-| `class`     | `string` | `-`     | Additional Tailwind CSS class names to apply to the card. |
+| Prop Name | Type     | Default | Description                                               |
+| --------- | -------- | ------- | --------------------------------------------------------- |
+| `class`   | `string` | `-`     | Additional Tailwind CSS class names to apply to the card. |
 
 ## Component Code
 
