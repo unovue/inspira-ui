@@ -1,5 +1,5 @@
 <template>
-  <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
+  <div class="grid grid-cols-1 gap-10 overflow-scroll md:grid-cols-3">
     <GlareCard class="flex flex-col items-center justify-center">
       <NuxtImg src="/logo-dark.svg" />
     </GlareCard>
