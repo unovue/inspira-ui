@@ -8,11 +8,11 @@
         left: star.left,
         width: `${star.size}px`,
         height: `${star.size}px`,
-        '--twinkle-duration': `${star.twinkleDuration}s`,
-        '--drift-duration': `${star.driftDuration}s`,
-        '--drift-direction': `${star.driftDirection}px`,
-        '--opacity-start': star.opacityStart,
-        '--opacity-end': star.opacityEnd,
+        '--inspira-twinkle-duration': `${star.twinkleDuration}s`,
+        '--inspira-drift-duration': `${star.driftDuration}s`,
+        '--inspira-drift-direction': `${star.driftDirection}px`,
+        '--inspira-opacity-start': star.opacityStart,
+        '--inspira-opacity-end': star.opacityEnd,
       }"
       class="star absolute rounded-full bg-white"
     />
@@ -69,18 +69,18 @@ const stars = computed(() =>
 
 <style scoped>
 .star {
-  opacity: var(--opacity-start);
+  opacity: var(--inspira-opacity-start);
   animation:
-    twinkle var(--twinkle-duration) ease-in-out infinite alternate,
-    drift var(--drift-duration) linear infinite;
+    twinkle var(--inspira-twinkle-duration) ease-in-out infinite alternate,
+    drift var(--inspira-drift-duration) linear infinite;
 }
 
 @keyframes twinkle {
   0% {
-    opacity: var(--opacity-start);
+    opacity: var(--inspira-opacity-start);
   }
   100% {
-    opacity: var(--opacity-end);
+    opacity: var(--inspira-opacity-end);
   }
 }
 
@@ -89,13 +89,16 @@ const stars = computed(() =>
     transform: translate(0, 0);
   }
   25% {
-    transform: translate(var(--drift-direction), calc(var(--drift-direction) / 2));
+    transform: translate(var(--inspira-drift-direction), calc(var(--inspira-drift-direction) / 2));
   }
   50% {
-    transform: translate(calc(var(--drift-direction) / 2), var(--drift-direction));
+    transform: translate(calc(var(--inspira-drift-direction) / 2), var(--inspira-drift-direction));
   }
   75% {
-    transform: translate(calc(var(--drift-direction) * -1), calc(var(--drift-direction) / 2));
+    transform: translate(
+      calc(var(--inspira-drift-direction) * -1),
+      calc(var(--inspira-drift-direction) / 2)
+    );
   }
   100% {
     transform: translate(0, 0);
