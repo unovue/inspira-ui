@@ -6,6 +6,8 @@
       :style="{
         top: star.top,
         left: star.left,
+        width: `${star.size}px`,
+        height: `${star.size}px`,
         '--twinkle-duration': `${star.twinkleDuration}s`,
         '--drift-duration': `${star.driftDuration}s`,
         '--drift-direction': `${star.driftDirection}px`,
@@ -26,6 +28,7 @@ interface Star {
   id: number;
   top: string;
   left: string;
+  size: number;
   twinkleDuration: number;
   driftDuration: number;
   driftDirection: number;
@@ -41,6 +44,11 @@ function random(min: number, max: number): number {
   return Math.random() * (max - min) + min;
 }
 
+function randomSize(): number {
+  // Randomly return either 1 or 2
+  return Math.random() < 0.5 ? 1 : 2;
+}
+
 const stars = computed(() =>
   Array.from(
     { length: props.starsCount },
@@ -48,6 +56,7 @@ const stars = computed(() =>
       id: i,
       top: `${random(0, 100)}%`,
       left: `${random(0, 100)}%`,
+      size: randomSize(),
       twinkleDuration: random(2, 4),
       driftDuration: random(5, 10),
       driftDirection: random(-50, 50),
@@ -67,8 +76,6 @@ const stars = computed(() =>
 
 .star {
   position: absolute;
-  width: 2px;
-  height: 2px;
   background-color: white;
   border-radius: 50%;
   opacity: var(--opacity-start);
@@ -77,7 +84,6 @@ const stars = computed(() =>
     drift var(--drift-duration) linear infinite;
 }
 
-/* Single twinkle keyframe using CSS variables */
 @keyframes twinkle {
   0% {
     opacity: var(--opacity-start);
@@ -87,7 +93,6 @@ const stars = computed(() =>
   }
 }
 
-/* Single drift keyframe using CSS variables */
 @keyframes drift {
   0% {
     transform: translate(0, 0);
