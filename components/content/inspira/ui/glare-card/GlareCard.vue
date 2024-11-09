@@ -1,7 +1,7 @@
 <template>
   <div
     ref="refElement"
-    class="container-style duration-[var(--duration)] w-[320px] ease-[var(--easing)] delay-[var(--delay)] container relative isolate transition-transform will-change-transform [aspect-ratio:17/21] [contain:layout_style] [perspective:600px]"
+    class="container-style duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] container relative isolate w-[320px] transition-transform will-change-transform [aspect-ratio:17/21] [contain:layout_style] [perspective:600px]"
     @pointermove="handlePointerMove"
     @pointerenter="handlePointerEnter"
     @pointerleave="handlePointerLeave"
