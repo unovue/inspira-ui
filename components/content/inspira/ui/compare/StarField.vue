@@ -1,5 +1,5 @@
 <template>
-  <div class="star-field">
+  <div class="absolute inset-0 overflow-hidden">
     <div
       v-for="star in stars"
       :key="star.id"
@@ -14,7 +14,7 @@
         '--opacity-start': star.opacityStart,
         '--opacity-end': star.opacityEnd,
       }"
-      class="star"
+      class="star absolute rounded-full bg-white"
     />
   </div>
 </template>
@@ -68,16 +68,7 @@ const stars = computed(() =>
 </script>
 
 <style scoped>
-.star-field {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-}
-
 .star {
-  position: absolute;
-  background-color: white;
-  border-radius: 50%;
   opacity: var(--opacity-start);
   animation:
     twinkle var(--twinkle-duration) ease-in-out infinite alternate,
