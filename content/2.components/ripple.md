@@ -1,9 +1,6 @@
 ---
 title: Ripple
 description: An animated ripple effect typically used behind elements to emphasize them.
-navBadges:
-  - value: Updated
-    type: info
 ---
 
 ::ComponentLoader{label="Preview" componentName="RippleDemo" type="examples" id="ripple"}

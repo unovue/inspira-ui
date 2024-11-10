@@ -1,9 +1,6 @@
 ---
 title: Aurora Background
 description: A subtle Aurora or Southern Lights background for your website.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="AuroraBackgroundDemo" type="examples" id="aurora-background"}
