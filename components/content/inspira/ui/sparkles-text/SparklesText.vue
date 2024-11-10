@@ -33,7 +33,7 @@ const props = withDefaults(defineProps<SparklesTextProps>(), {
 
 const sparkles = ref<Sparkle[]>([]);
 
-const generateSparkle = (): Sparkle => {
+function generateSparkle(): Sparkle {
   const starX = `${Math.random() * 100}%`;
   const starY = `${Math.random() * 100}%`;
   const color = Math.random() > 0.5 ? props.colors.first : props.colors.second;
@@ -44,11 +44,11 @@ const generateSparkle = (): Sparkle => {
   return { id, x: starX, y: starY, color, delay, scale, lifespan };
 };
 
-const initializeSparkles = () => {
+function initializeSparkles() {
   sparkles.value = Array.from({ length: props.sparklesCount }, generateSparkle);
 };
 
-const updateSparkles = () => {
+function updateSparkles() {
   sparkles.value = sparkles.value.map((sparkle) => {
     if (sparkle.lifespan <= 0) {
       return generateSparkle();
