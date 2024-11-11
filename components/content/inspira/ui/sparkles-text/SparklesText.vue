@@ -42,11 +42,11 @@ function generateSparkle(): Sparkle {
   const lifespan = Math.random() * 10 + 5;
   const id = `${starX}-${starY}-${Date.now()}`;
   return { id, x: starX, y: starY, color, delay, scale, lifespan };
-};
+}
 
 function initializeSparkles() {
   sparkles.value = Array.from({ length: props.sparklesCount }, generateSparkle);
-};
+}
 
 function updateSparkles() {
   sparkles.value = sparkles.value.map((sparkle) => {
@@ -56,7 +56,7 @@ function updateSparkles() {
       return { ...sparkle, lifespan: sparkle.lifespan - 0.1 };
     }
   });
-};
+}
 
 useIntervalFn(updateSparkles, 100);
 
