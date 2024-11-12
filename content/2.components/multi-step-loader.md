@@ -1,9 +1,6 @@
 ---
 title: Multi Step Loader
 description: A step loader for screens that works with async conditions too.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="MultiStepLoaderDemo" type="examples"}  

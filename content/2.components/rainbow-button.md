@@ -1,9 +1,6 @@
 ---
 title: Rainbow Button
 description: A rainbow effect on button.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="RainbowButtonDemo" type="examples"}

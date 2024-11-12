@@ -1,9 +1,6 @@
 ---
 title: Text Generate Effect
 description: A cool text effect that fades in text on page load, one by one.
-navBadges:
-  - value: Updated
-    type: info
 ---
 
 ::ComponentLoader{label="Preview" componentName="TextGenerateDemo" type="examples"}  

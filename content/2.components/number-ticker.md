@@ -1,9 +1,6 @@
 ---
 title: Number Ticker
 description: Animate numbers to count up or down to a target number
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="NumberTickerDemo" type="examples"}
