@@ -1,6 +1,6 @@
 ---
 title: Flip Card
-description: Staggered letter pull up text animation.
+description: A dynamic flip card with smooth 180-degree flipping animations along both the X and Y axes, providing an engaging and interactive visual effect.
 navBadges:
   - value: New
     type: lime
