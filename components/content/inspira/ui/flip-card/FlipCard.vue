@@ -10,7 +10,7 @@
     >
       <!-- Front -->
       <div class="absolute size-full [backface-visibility:hidden]">
-        <NuxtImg
+        <img
           :src="props.image"
           alt="image"
           class="size-full rounded-2xl object-cover shadow-2xl shadow-black/40"
