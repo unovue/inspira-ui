@@ -12,17 +12,28 @@
       class="fixed inset-0 z-[100] flex size-full items-center justify-center backdrop-blur-2xl"
     >
       <!-- Closing Button -->
-      <UiButton
+      <button
         v-show="!preventClose"
-        class="absolute right-4 top-4 z-[101] bg-primary"
+        class="absolute right-4 top-4 z-[101] inline-flex h-9 items-center justify-center whitespace-nowrap rounded-md bg-primary px-3 text-sm font-medium text-primary-foreground ring-offset-background transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
         size="sm"
         @click="close"
       >
-        <SmartIcon
-          name="mdi:close"
+        <!-- x-mark-heroicons -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
           class="size-6"
-        />
-      </UiButton>
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18 18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
       <div class="relative h-96">
         <div class="relative mx-auto mt-40 flex max-w-xl flex-col justify-start">
           <div
@@ -42,29 +53,55 @@
                 }px)`,
               }"
             >
-              <SmartIcon
+              <!--  check-circle-solid-heroicons -->
+              <svg
                 v-if="
                   index < currentState ||
                   (index === steps.length - 1 && index === currentState && isLastStepComplete)
                 "
-                :size="24"
-                name="i-heroicons-check-circle-solid"
-                class="text-primary"
-              />
-              <SmartIcon
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6 text-primary"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <!-- arrow-path-heroicons -->
+              <svg
                 v-else-if="
                   index === currentState && (!isLastStepComplete || index !== steps.length - 1)
                 "
-                :size="24"
-                name="i-heroicons-arrow-path"
-                class="animate-spin text-primary"
-              />
-              <SmartIcon
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                class="size-6 animate-spin text-primary"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.755 10.059a7.5 7.5 0 0 1 12.548-3.364l1.903 1.903h-3.183a.75.75 0 1 0 0 1.5h4.992a.75.75 0 0 0 .75-.75V4.356a.75.75 0 0 0-1.5 0v3.18l-1.9-1.9A9 9 0 0 0 3.306 9.67a.75.75 0 1 0 1.45.388Zm15.408 3.352a.75.75 0 0 0-.919.53 7.5 7.5 0 0 1-12.548 3.364l-1.902-1.903h3.183a.75.75 0 0 0 0-1.5H2.984a.75.75 0 0 0-.75.75v4.992a.75.75 0 0 0 1.5 0v-3.18l1.9 1.9a9 9 0 0 0 15.059-4.035.75.75 0 0 0-.53-.918Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <!-- check-circle-outline-heroicons -->
+              <svg
                 v-else
-                :size="24"
-                name="i-heroicons-check-circle"
-                class="text-black opacity-50 dark:text-white"
-              />
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 text-black opacity-50 dark:text-white"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
               <div class="flex flex-col">
                 <span
                   :class="[
