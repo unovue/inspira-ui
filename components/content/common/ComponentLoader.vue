@@ -14,7 +14,7 @@
         />
       </CodeGroup>
     </ClientOnly>
-    <CarbonAds />
+    <InspiraCarbonAds />
   </div>
 </template>
 

@@ -140,6 +140,12 @@ export default defineAppConfig({
     toc: {
       enable: true,
       title: "On This Page",
+      carbonAds: {
+        enable: true,
+        code: "CW7DEK37",
+        placement: "inspira-uicom",
+        format: "your-carbon-format", // defaults to 'cover'
+      },
       links: [
         {
           title: "Star on GitHub",

@@ -15,7 +15,7 @@
       </a>
     </div>
 
-    <CarbonAds />
+    <InspiraCarbonAds />
 
     <FeatureSection />
     <HomePageExamples />

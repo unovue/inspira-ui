@@ -1,5 +1,6 @@
 <template>
   <ScriptCarbonAdsFormat
+    v-if="!isDesktop"
     :class="
       cn(
         'w-fit gap-4 rounded-lg border border-gray-200 bg-white text-black dark:border-gray-800 dark:bg-white/5 dark:text-white',
@@ -18,6 +19,8 @@ import { cn } from "~/lib/utils";
 const props = defineProps({
   class: String,
 });
+
+const isDesktop = useMediaQuery("(min-width: 768px)");
 </script>
 
 <style>

@@ -43,11 +43,19 @@ const carbonadsEl = ref<HTMLElement | null>(
 );
 // syncs to useScript status
 const status = ref("awaitingLoad");
+const loaded = ref(false);
 
 function loadCarbon() {
   if (!carbonadsEl.value) {
     return;
   }
+
+  if (!loaded.value) {
+    loaded.value = true;
+  } else {
+    return;
+  }
+
   status.value = "loading";
   const script = document.createElement("script");
   script.setAttribute(
