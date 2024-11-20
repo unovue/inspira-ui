@@ -50,12 +50,6 @@ function loadCarbon() {
     return;
   }
 
-  if (!loaded.value) {
-    loaded.value = true;
-  } else {
-    return;
-  }
-
   status.value = "loading";
   const script = document.createElement("script");
   script.setAttribute(
@@ -84,11 +78,12 @@ function loadCarbon() {
 
 const trigger = useScriptTriggerElement({ trigger: props.trigger, el: carbonadsEl });
 onMounted(() => {
-  if (trigger === "onNuxtReady") {
-    loadCarbon();
-  } else {
-    trigger.then(loadCarbon);
+  if (loaded.value) {
+    return;
   }
+
+  loaded.value = true;
+  loadCarbon();
 });
 
 const rootAttrs = computed(() => {

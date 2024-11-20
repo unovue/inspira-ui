@@ -15,7 +15,7 @@
       </a>
     </div>
 
-    <InspiraCarbonAds />
+    <InspiraCarbonAds :is-home-page="true" />
 
     <FeatureSection />
     <HomePageExamples />
