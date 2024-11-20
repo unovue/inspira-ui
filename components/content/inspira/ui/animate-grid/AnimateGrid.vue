@@ -1,16 +1,29 @@
 <template>
-  <div class="relative hidden xl:block">
-    <div class="grid-transform grid w-full max-w-full grid-cols-4 items-center justify-center">
+  <div :class="cn('relative hidden xl:block', props.class)">
+    <div
+      :class="
+        cn(
+          'grid-transform grid w-full max-w-full items-center justify-center',
+          props.cards.length < 4 ? `grid-cols-${props.cards.length}` : 'grid-cols-4',
+        )
+      "
+    >
       <div
-        v-for="key in 16"
-        :key="key"
+        v-for="(item, index) in props.cards"
+        :key="index"
         ref="card"
         class="card block rounded px-3 py-5"
-        :style="{ zIndex: key }"
+        :style="{ zIndex: index + 1 }"
       >
+        <div
+          v-if="item.logo.startsWith('<svg')"
+          class="logo mx-auto h-10 w-auto justify-center"
+          v-html="item.logo"
+        />
         <img
-          class="logo h-10 w-auto"
-          src="./xyz.svg"
+          v-else
+          class="logo mx-auto h-10 w-auto"
+          :src="item.logo"
         />
       </div>
     </div>
@@ -18,7 +31,24 @@
 </template>
 
 <script lang="ts" setup>
+import { cn } from "~/lib/utils";
+
 const card = ref<HTMLElement[]>();
+interface Cards {
+  logo: string;
+}
+interface Props {
+  class?: string;
+  textGlowStart?: string;
+  textGlowEnd?: string;
+  cards: Cards[];
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  textGlowStart: "rgba(56, 239, 125, 0.5)",
+  textGlowEnd: "rgba(56, 239, 125, 1)",
+});
+
 function adjacentCardItems(i: number): HTMLElement[] {
   return [i - 1, i + 1, i - 4, i + 4]
     .filter((index) => {
@@ -146,11 +176,11 @@ onMounted(() => {
 
 @keyframes text-glow {
   0% {
-    filter: drop-shadow(0px 0px 2px rgba(56, 239, 125, 0.5));
+    filter: drop-shadow(0px 0px 2px v-bind(props.textGlowStart));
   }
 
   100% {
-    filter: drop-shadow(0px 1px 8px rgba(56, 239, 125, 1));
+    filter: drop-shadow(0px 1px 8px v-bind(textGlowEnd));
   }
 }
 
