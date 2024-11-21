@@ -1,3 +1,22 @@
+<template>
+  <div class="flex items-center justify-center p-4">
+    <AnimateGrid :cards>
+      <template #logo="{ logo }">
+        <div
+          v-if="logo.startsWith('<svg')"
+          class="logo mx-auto h-10 w-auto justify-center"
+          v-html="logo"
+        />
+        <img
+          v-else
+          class="logo mx-auto h-10 w-auto"
+          :src="logo"
+        />
+      </template>
+    </AnimateGrid>
+  </div>
+</template>
+
 <script lang="ts" setup>
 const cards = [
   {
@@ -50,9 +69,3 @@ const cards = [
   },
 ];
 </script>
-
-<template>
-  <div class="flex items-center justify-center p-4">
-    <AnimateGrid :cards />
-  </div>
-</template>
