@@ -3,27 +3,25 @@
     <div
       :class="
         cn(
-          'grid-transform grid w-full max-w-full items-center justify-center',
+          'relative grid w-full max-w-full items-center justify-center',
           props.cards.length < 4 ? `grid-cols-${props.cards.length}` : 'grid-cols-4',
         )
       "
+      :style="{
+        transform: `perspective(${props.perspective}px) rotateX(${props.rotateX}deg) rotateY(${props.rotateY}deg)`,
+      }"
     >
       <div
         v-for="(item, index) in props.cards"
         :key="index"
         ref="card"
-        class="card block rounded px-3 py-5"
+        class="card block rounded border border-transparent px-3 py-5 transition-all duration-200"
         :style="{ zIndex: index + 1 }"
       >
-        <div
-          v-if="item.logo.startsWith('<svg')"
-          class="logo mx-auto h-10 w-auto justify-center"
-          v-html="item.logo"
-        />
-        <img
-          v-else
-          class="logo mx-auto h-10 w-auto"
-          :src="item.logo"
+        <slot
+          name="logo"
+          :logo="item.logo"
+          :index="index"
         />
       </div>
     </div>
@@ -39,14 +37,20 @@ interface Cards {
 }
 interface Props {
   class?: string;
-  textGlowStart?: string;
-  textGlowEnd?: string;
+  textGlowStartColor?: string;
+  perspective?: number;
+  textGlowEndColor?: string;
   cards: Cards[];
+  rotateX?: number;
+  rotateY?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  textGlowStart: "rgba(56, 239, 125, 0.5)",
-  textGlowEnd: "rgba(56, 239, 125, 1)",
+  textGlowStartColor: "#38ef7d80",
+  textGlowEndColor: "#38ef7d",
+  perspective: 600,
+  rotateX: -1,
+  rotateY: -15,
 });
 
 function adjacentCardItems(i: number): HTMLElement[] {
@@ -94,11 +98,6 @@ onMounted(() => {
   margin: 0 auto;
 }
 
-.grid-transform {
-  position: relative;
-  transform: perspective(600px) rotateX(-1deg) rotateY(-15deg);
-}
-
 .grid-transform:before {
   content: "";
   z-index: -1;
@@ -116,12 +115,10 @@ onMounted(() => {
 }
 
 .card {
-  border: 1px solid transparent;
   box-shadow:
     2px 2px 5px rgba(217, 251, 232, 0.5),
     3px 3px 10px rgba(217, 251, 232, 0.5),
     6px 6px 20px rgba(217, 251, 232, 0.1);
-  transition: all 0.2s;
 }
 
 .dark .card {
@@ -176,11 +173,11 @@ onMounted(() => {
 
 @keyframes text-glow {
   0% {
-    filter: drop-shadow(0px 0px 2px v-bind(props.textGlowStart));
+    filter: drop-shadow(0px 0px 2px v-bind(props.textGlowStartColor));
   }
 
   100% {
-    filter: drop-shadow(0px 1px 8px v-bind(textGlowEnd));
+    filter: drop-shadow(0px 1px 8px v-bind(props.textGlowEndColor));
   }
 }
 
