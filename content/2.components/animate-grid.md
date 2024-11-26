@@ -28,6 +28,10 @@ You can copy and paste the following code to create this component:
 ::CodeViewer{filename="AnimateGrid.vue" language="vue" componentName="AnimateGrid" type="ui" id="animate-grid"}
 ::
 
+## Features
+
+- **Slot-Based Content**: Supports a default slot to add content inside the Animate Grid container.
+
 ## Credits
 
 - Thanks to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for providing this component.
