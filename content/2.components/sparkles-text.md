@@ -1,9 +1,6 @@
 ---
 title: Sparkles Text
 description: A dynamic text that generates continuous sparkles with smooth transitions, perfect for highlighting text with animated stars.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="SparklesTextDemo" type="examples" id="sparkles-text"}

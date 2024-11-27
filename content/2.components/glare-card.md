@@ -1,9 +1,6 @@
 ---
 title: Glare Card
 description: A glare effect that happens on hover, as seen on Linear's website.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="GlareCardDemo" type="examples" id="glare-card"}

@@ -1,9 +1,6 @@
 ---
 title: 3D Text
 description: A stylish 3D text component with customizable colors, shadows, and animation options.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="Text3dDemo" type="examples"}

@@ -1,9 +1,6 @@
 ---
 title: Balance Slider
 description: A dynamic balance slider with adjustable colors, limits, and interactive tooltip.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="BalanceSliderDemo" type="examples"}

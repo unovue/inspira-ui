@@ -1,9 +1,6 @@
 ---
 title: Sparkles
 description: A configurable sparkles component that can be used as a background or as a standalone component.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="SparklesDemo" type="examples" id="sparkles"}

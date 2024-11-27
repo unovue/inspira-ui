@@ -1,9 +1,6 @@
 ---
 title: Letter Pullup
 description: Staggered letter pull up text animation.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="LetterPullupDemo" type="examples" id="letter-pullup"}
