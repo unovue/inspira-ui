@@ -1,9 +1,6 @@
 ---
 title: Animated Logo Cloud
 description: Animated company cloud logs. Usually we can use to show company logos.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="StaticLogoCloudDemo" type="examples" id="logo-cloud"}

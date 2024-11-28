@@ -1,6 +1,9 @@
 ---
 title: SVG Mask
 description: A dynamic SVG mask component that reveals content with hover and mouse movement.
+navBadges:
+  - value: New
+    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="SvgMaskDemo" type="examples" id="svg-mask"}
