@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full space-y-8">
+  <div class="my-4 w-full space-y-8">
     <ClientOnly>
       <CodeGroup>
         <div

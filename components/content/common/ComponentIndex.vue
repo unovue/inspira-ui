@@ -2,7 +2,7 @@
   <div class="flex w-full flex-col flex-wrap gap-4 py-8">
     <InspiraCarbonAds class="mb-8" />
     <ContentList
-      path="components"
+      :path="props.path"
       :query="query"
     >
       <template #default="{ list }">
@@ -42,17 +42,36 @@
 <script setup lang="ts">
 import type { QueryBuilderParams } from "@nuxt/content";
 
+interface Props {
+  path?: "components" | "blocks";
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  path: "components",
+});
+
 const isDark = computed(() => useColorMode().value == "dark");
 const gradientColor = computed(() => (isDark.value ? "#363636" : "#C9C9C9"));
 
 const query: QueryBuilderParams = {
-  path: "/components",
+  path: "/" + props.path,
   where: [
     {
       _extension: "md",
-      title: {
-        $ne: "Component Index",
-      },
+    },
+    {
+      $and: [
+        {
+          title: {
+            $ne: "Component Index",
+          },
+        },
+        {
+          title: {
+            $ne: "Block Index",
+          },
+        },
+      ],
     },
   ],
 };
