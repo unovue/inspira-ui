@@ -11,11 +11,11 @@ navBadges:
 
 ## API
 
-| Prop Name        | Type     | Default             | Description                                            |
-| ---------------- | -------- | ------------------- | ------------------------------------------------------ |
-| `items`          | `[]`     | `"[{src: string}]"` | Pass items / image src to animate                      |
-| `containerClass` | `string` | `""`                | Additional tailwind CSS classes for container styling. |
-| `class`          | `string` | `""`                | Additional tailwind CSS classes for custom styling.    |
+| Prop Name        | Type                | Default | Description                                            |
+| ---------------- | ------------------- | ------- | ------------------------------------------------------ |
+| `items`          | `"[{src: string}]"` | `[]`    | Pass items / image src to animate                      |
+| `containerClass` | `string`            | `""`    | Additional tailwind CSS classes for container styling. |
+| `class`          | `string`            | `""`    | Additional tailwind CSS classes for custom styling.    |
 
 ## Component Code
 
