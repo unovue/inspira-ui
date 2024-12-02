@@ -144,7 +144,6 @@ export default defineAppConfig({
         enable: true,
         code: "CW7DEK37",
         placement: "inspira-uicom",
-        format: "your-carbon-format", // defaults to 'cover'
       },
       links: [
         {
