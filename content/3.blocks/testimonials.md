@@ -1,6 +1,6 @@
 ---
 title: Testimonials
-description: Testimonial Blocks
+description: Show testimonials in style
 ---
 
 ### With skewed marquee
