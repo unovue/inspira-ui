@@ -1,12 +1,9 @@
 ---
 title: Animated Tooltip
 description: A cool tooltip that reveals on hover, follows mouse pointer
-navBadges:
-  - value: New
-    type: lime
 ---
 
-::ComponentLoader{label="Preview" componentName="AnimatedTooltipDemo" type="examples" id="animated-tooltip"}
+::ComponentLoader{label="Preview" componentName="AnimatedTooltipDemo" type="examples"}
 ::
 
 ## API
@@ -19,7 +16,7 @@ navBadges:
 
 You can copy and paste the following code to create this component:
 
-::CodeViewerTab{filename="AnimatedTooltip.vue" language="vue" componentName="AnimatedTooltip" type="ui" id="animated-tooltip"}
+::CodeViewer{filename="AnimatedTooltip.vue" language="vue" componentName="AnimatedTooltip" type="ui" id="animated-tooltip"}
 ::
 
 ## Credits
