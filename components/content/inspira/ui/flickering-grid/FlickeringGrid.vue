@@ -124,24 +124,16 @@ function updateCanvasSize() {
   gridParams.value = setupCanvas(canvasRef.value!, newWidth, newHeight);
 }
 
-const animationFrameId = ref<number>(0);
-const resizeObserver = new ResizeObserver(() => {
-  updateCanvasSize();
-});
-const lastTime = ref(0);
-const intersectionObserver = new IntersectionObserver(
-  ([entry]) => {
-    isInView.value = entry.isIntersecting;
-    animationFrameId.value = requestAnimationFrame(animate);
-  },
-  { threshold: 0 },
-);
+let animationFrameId: number | undefined;
+let resizeObserver: ResizeObserver | undefined;
+let intersectionObserver: IntersectionObserver | undefined;
+let lastTime = 0;
 
 function animate(time: number) {
   if (!isInView.value) return;
 
-  const deltaTime = (time - lastTime.value) / 1000;
-  lastTime.value = time;
+  const deltaTime = (time - lastTime) / 1000;
+  lastTime = time;
 
   updateSquares(gridParams.value!.squares, deltaTime);
   drawGrid(
@@ -153,23 +145,36 @@ function animate(time: number) {
     gridParams.value!.squares,
     gridParams.value!.dpr,
   );
-  animationFrameId.value = requestAnimationFrame(animate);
+  animationFrameId = requestAnimationFrame(animate);
 }
 
-onMounted(async () => {
+onMounted(() => {
   if (!canvasRef.value || !containerRef.value) return;
   context.value = canvasRef.value.getContext("2d")!;
   if (!context.value) return;
 
   updateCanvasSize();
 
+  resizeObserver = new ResizeObserver(() => {
+    updateCanvasSize();
+  });
+  intersectionObserver = new IntersectionObserver(
+    ([entry]) => {
+      isInView.value = entry.isIntersecting;
+      animationFrameId = requestAnimationFrame(animate);
+    },
+    { threshold: 0 },
+  );
+
   resizeObserver.observe(containerRef.value);
   intersectionObserver.observe(canvasRef.value);
 });
 
 onBeforeUnmount(() => {
-  cancelAnimationFrame(animationFrameId.value);
-  resizeObserver.disconnect();
-  intersectionObserver.disconnect();
+  if (animationFrameId) {
+    cancelAnimationFrame(animationFrameId);
+  }
+  resizeObserver?.disconnect();
+  intersectionObserver?.disconnect();
 });
 </script>
