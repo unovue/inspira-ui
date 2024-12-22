@@ -40,15 +40,18 @@
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
 
-const MORPH_TIME = 1.5;
-const COOL_DOWN_TIME = 0.5;
 const TEXT_CLASSES = "absolute inset-x-0 top-0 m-auto inline-block w-full";
 
 interface Props {
   class?: string;
   texts: string[];
+  morphTime?: number;
+  coolDownTime?: number;
 }
-const props = defineProps<Props>();
+const props = withDefaults(defineProps<Props>(), {
+  morphTime: 1.5,
+  coolDownTime: 0.5,
+});
 
 const textIndex = ref(0);
 const morph = ref(0);
@@ -76,10 +79,10 @@ function doMorph() {
   morph.value -= coolDown.value;
   coolDown.value = 0;
 
-  let fraction = morph.value / MORPH_TIME;
+  let fraction = morph.value / props.morphTime;
 
   if (fraction > 1) {
-    coolDown.value = COOL_DOWN_TIME;
+    coolDown.value = props.coolDownTime;
     fraction = 1;
   }
 

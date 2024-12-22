@@ -12,10 +12,12 @@ navBadges:
 
 ## API
 
-| Prop Name | Type       | Default | Description                           |
-| --------- | ---------- | ------- | ------------------------------------- |
-| `texts`   | `string[]` | `[]`    | Array of texts to morph between.      |
-| `class`   | `string`   | `""`    | Additional classes for the container. |
+| Prop Name      | Type       | Default | Description                           |
+| -------------- | ---------- | ------- | ------------------------------------- |
+| `texts`        | `string[]` | `[]`    | Array of texts to morph between.      |
+| `class`        | `string`   | `""`    | Additional classes for the container. |
+| `morphTime`    | `number`   | `1.5`   | Animation execution time.             |
+| `coolDownTime` | `number`   | `0.5`   | Animation dwell time.                 |
 
 ## Component Code
 
