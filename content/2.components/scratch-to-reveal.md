@@ -25,7 +25,7 @@ navBadges:
 
 | Slot Name | Default Content | Description                            |
 | --------- | --------------- | -------------------------------------- |
-| `default` | `-`             | The content to display in the marquee. |
+| `default` | `-`             | The text below the scratch-off ticket. |
 
 ## Component Code
 
