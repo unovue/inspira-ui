@@ -26,4 +26,5 @@ You can copy and paste the following code to create these components:
 
 ## Credits
 
+- Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Inspired and ported from [Magic UI Morphing Text](https://magicui.design/docs/components/morphing-text).
