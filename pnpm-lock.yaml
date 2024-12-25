@@ -53,6 +53,9 @@ importers:
       simplex-noise:
         specifier: ^4.0.3
         version: 4.0.3
+      theme-colors:
+        specifier: ^0.1.0
+        version: 0.1.0
       three:
         specifier: ^0.170.0
         version: 0.170.0
@@ -5691,6 +5694,9 @@ packages:
 
   text-decoder@1.2.1:
     resolution: {integrity: sha512-x9v3H/lTKIJKQQe7RPQkLfKAnc9lUTkWDypIQgTzPJAq+5/GCDHonmshfvlsNSj58yyshbIJJDLmU15qNERrXQ==}
+
+  theme-colors@0.1.0:
+    resolution: {integrity: sha512-6gTEHQqWlQNiOEGHCSSQmU//E5SnXHJ4H7oHQOD8x77CvNYNQAmt73dqR71mzw5ULV87zaHLxK5pIBnsToFuZw==}
 
   thenify-all@1.6.0:
     resolution: {integrity: sha512-RNxQH/qI8/t3thXJDwcstUO4zeqo64+Uy/+sNVRBx4Xn2OX+OZ9oP+iJnNFqplFra2ZUVeKCSa2oVWi3T4uVmA==}
@@ -13503,6 +13509,8 @@ snapshots:
       source-map-support: 0.5.21
 
   text-decoder@1.2.1: {}
+
+  theme-colors@0.1.0: {}
 
   thenify-all@1.6.0:
     dependencies:

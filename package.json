@@ -30,6 +30,7 @@
     "qss": "^3.0.0",
     "shadcn-docs-nuxt": "^0.7.9",
     "simplex-noise": "^4.0.3",
+    "theme-colors": "^0.1.0",
     "three": "^0.170.0",
     "three-globe": "^2.35.2",
     "vue": "^3.5.13",
