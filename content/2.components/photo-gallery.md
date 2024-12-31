@@ -1,9 +1,6 @@
 ---
 title: Photo Gallery
 description: Showcase your team with pride using our stunning Photo Gallery Component.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="PhotoGalleryDemo" type="examples" id="photo-gallery"}

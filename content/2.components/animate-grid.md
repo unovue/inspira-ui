@@ -1,9 +1,6 @@
 ---
 title: Animate Grid
 description: Skew Animation grid with box shadow.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="AnimateGridDemo" type="examples" id="animate-grid"}

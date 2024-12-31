@@ -1,9 +1,6 @@
 ---
 title: Input
 description: A versatile and visually dynamic input field with radial hover effects, styled for modern web applications.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="InputDemo" type="examples" id="input"}
