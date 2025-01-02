@@ -18,7 +18,7 @@
 
     <svg
       id="filters"
-      class="hidden size-full"
+      class="fixed size-0"
       preserveAspectRatio="xMidYMid slice"
     >
       <defs>
