@@ -121,7 +121,7 @@ export default defineAppConfig({
       showTitle: true,
     },
     footer: {
-      credits: "Copyright © 2024",
+      credits: "Copyright © 2024 - 2025",
       links: [
         {
           icon: "lucide:globe",
