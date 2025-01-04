@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { ORBIT_DIRECTION } from "../ui/orbit";
-</script>
-
 <template>
   <div
     class="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl"
@@ -56,3 +52,7 @@ import { ORBIT_DIRECTION } from "../ui/orbit";
     </Orbit>
   </div>
 </template>
+
+<script setup lang="ts">
+import { ORBIT_DIRECTION } from "../ui/orbit";
+</script>

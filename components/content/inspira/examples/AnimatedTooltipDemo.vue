@@ -1,3 +1,9 @@
+<template>
+  <div class="mb-10 flex min-h-96 w-full flex-row items-center justify-center">
+    <AnimatedTooltip :items="people" />
+  </div>
+</template>
+
 <script setup lang="ts">
 const people = [
   {
@@ -44,9 +50,3 @@ const people = [
   },
 ];
 </script>
-
-<template>
-  <div class="mb-10 flex min-h-96 w-full flex-row items-center justify-center">
-    <AnimatedTooltip :items="people" />
-  </div>
-</template>

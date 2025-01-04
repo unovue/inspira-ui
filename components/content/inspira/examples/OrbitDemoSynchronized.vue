@@ -1,18 +1,3 @@
-<script setup lang="ts">
-import { ORBIT_DIRECTION, type OrbitDirection } from "../ui/orbit";
-
-const direction = ref<OrbitDirection>(ORBIT_DIRECTION.Clockwise);
-
-function switchDirection() {
-  if (ORBIT_DIRECTION.Clockwise === direction.value) {
-    direction.value = ORBIT_DIRECTION.CounterClockwise;
-    return;
-  }
-
-  direction.value = ORBIT_DIRECTION.Clockwise;
-}
-</script>
-
 <template>
   <div class="flex w-full flex-row items-center justify-between py-4">
     <p>
@@ -59,3 +44,18 @@ function switchDirection() {
     </Orbit>
   </div>
 </template>
+
+<script setup lang="ts">
+import { ORBIT_DIRECTION, type OrbitDirection } from "../ui/orbit";
+
+const direction = ref<OrbitDirection>(ORBIT_DIRECTION.Clockwise);
+
+function switchDirection() {
+  if (ORBIT_DIRECTION.Clockwise === direction.value) {
+    direction.value = ORBIT_DIRECTION.CounterClockwise;
+    return;
+  }
+
+  direction.value = ORBIT_DIRECTION.Clockwise;
+}
+</script>
