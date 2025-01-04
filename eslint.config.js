@@ -53,6 +53,12 @@ export default withNuxt(
       "func-style": ["error", "declaration"],
       "vue/multi-word-component-names": "off",
       "vue/require-default-prop": "off",
+      "vue/block-order": [
+        "error",
+        {
+          order: ["template", "script", "style"],
+        },
+      ],
       "tailwindcss/no-custom-classname": "off",
       "@typescript-eslint/no-empty-object-type": [
         "error",
