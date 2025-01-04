@@ -18,7 +18,7 @@ description: A versatile and visually dynamic input field with radial hover effe
 
 You can copy and paste the following code to create this component:
 
-::CodeViewer{filename="IInput.vue" language="vue" componentName="IInput" type="ui" id="input"}
+::CodeViewer{filename="Input.vue" language="vue" componentName="Input" type="ui" id="input"}
 ::
 
 ## Features

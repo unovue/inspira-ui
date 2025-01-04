@@ -5,10 +5,10 @@
       class="ml-4 w-full max-w-sm"
       >Hover over below input</UiLabel
     >
-    <IInput
+    <Input
       id="inputDemo"
       placeholder="Hover over me"
       container-class="w-full max-w-sm"
-    ></IInput>
+    ></Input>
   </div>
 </template>

@@ -56,7 +56,7 @@
                 </CardItem>
 
                 <CardItem class="mt-4 flex w-full flex-col gap-4">
-                  <IInput placeholder="Enter email"></IInput>
+                  <Input placeholder="Enter email"></Input>
                   <UiButton>Sign Me Up!</UiButton>
                 </CardItem>
               </CardBody>
