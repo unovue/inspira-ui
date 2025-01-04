@@ -7,16 +7,16 @@
       )
     "
   >
-    <template v-for="row in rows">
+    <template v-for="row in ROWS">
       <template
-        v-for="col in columns"
+        v-for="col in COLUMNS"
         :key="`${row}-${col}`"
       >
         <div
           :class="
             cn(
               'w-10 h-10 flex flex-shrink-0 rounded-[2px]',
-              ((row - 1) * columns + (col - 1)) % 2 === 0
+              ((row - 1) * COLUMNS + (col - 1)) % 2 === 0
                 ? 'bg-gray-50 dark:bg-neutral-950'
                 : 'bg-gray-50 dark:bg-neutral-950 shadow-[0px_0px_1px_3px_rgba(255,255,255,1)_inset] dark:shadow-[0px_0px_1px_3px_rgba(0,0,0,1)_inset]',
             )
@@ -37,6 +37,6 @@ interface FileUploadGridProps {
 
 defineProps<FileUploadGridProps>();
 
-const rows = ref(11);
-const columns = ref(41);
+const ROWS = 11;
+const COLUMNS = 41;
 </script>
