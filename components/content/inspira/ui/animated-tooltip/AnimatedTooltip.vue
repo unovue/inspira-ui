@@ -1,46 +1,3 @@
-<script setup lang="ts">
-interface Item {
-  id: number;
-  name: string;
-  designation: string;
-  image: string;
-}
-
-defineProps<{
-  items: Item[];
-}>();
-
-const hoveredIndex = ref<number | null>(null);
-const mouseX = ref<number>(0);
-
-// Calculate rotation and translation based on mouse position
-const rotation = computed<number>(() => {
-  const x = mouseX.value;
-  return (x / 100) * 50;
-});
-
-const translation = computed<number>(() => {
-  const x = mouseX.value;
-  return (x / 100) * 50;
-});
-
-// Handle initial mouse position and hover
-function handleMouseEnter(event: MouseEvent, itemId: number) {
-  hoveredIndex.value = itemId;
-  // Calculate initial position immediately
-  const rect = (event.target as HTMLElement)?.getBoundingClientRect();
-  const halfWidth = rect.width / 2;
-  mouseX.value = event.clientX - rect.left - halfWidth;
-}
-
-// Handle mouse movement
-function handleMouseMove(event: MouseEvent) {
-  const rect = (event.target as HTMLElement)?.getBoundingClientRect();
-  const halfWidth = rect.width / 2;
-  mouseX.value = event.clientX - rect.left - halfWidth;
-}
-</script>
-
 <template>
   <div
     v-for="item in items"
@@ -100,3 +57,46 @@ function handleMouseMove(event: MouseEvent) {
     />
   </div>
 </template>
+
+<script setup lang="ts">
+interface Item {
+  id: number;
+  name: string;
+  designation: string;
+  image: string;
+}
+
+defineProps<{
+  items: Item[];
+}>();
+
+const hoveredIndex = ref<number | null>(null);
+const mouseX = ref<number>(0);
+
+// Calculate rotation and translation based on mouse position
+const rotation = computed<number>(() => {
+  const x = mouseX.value;
+  return (x / 100) * 50;
+});
+
+const translation = computed<number>(() => {
+  const x = mouseX.value;
+  return (x / 100) * 50;
+});
+
+// Handle initial mouse position and hover
+function handleMouseEnter(event: MouseEvent, itemId: number) {
+  hoveredIndex.value = itemId;
+  // Calculate initial position immediately
+  const rect = (event.target as HTMLElement)?.getBoundingClientRect();
+  const halfWidth = rect.width / 2;
+  mouseX.value = event.clientX - rect.left - halfWidth;
+}
+
+// Handle mouse movement
+function handleMouseMove(event: MouseEvent) {
+  const rect = (event.target as HTMLElement)?.getBoundingClientRect();
+  const halfWidth = rect.width / 2;
+  mouseX.value = event.clientX - rect.left - halfWidth;
+}
+</script>
