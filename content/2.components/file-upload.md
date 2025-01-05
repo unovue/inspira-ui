@@ -68,3 +68,8 @@ You can copy and paste the following code to create these components:
 ::
 
 ::
+
+## Credits
+
+- Credits to [kalix127](https://github.com/kalix127) for porting this component.
+- Inspired by [AcernityUI](https://ui.aceternity.com/components/file-upload).
