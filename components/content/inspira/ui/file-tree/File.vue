@@ -18,7 +18,7 @@
       :name="fileIcon"
       size="16"
     />
-    <span>{{ name }}</span>
+    <span class="select-none">{{ name }}</span>
   </button>
 </template>
 
