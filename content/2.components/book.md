@@ -169,3 +169,8 @@ export { default as BookDescription } from "./BookDescription.vue";
 ```
 
 ::
+
+## Credits
+
+- Credits to [x/UI](https://ui.3x.gl/docs/book) for inspiring this component.
+- Credits to [kalix127](https://github.com/kalix127) for porting this component.
