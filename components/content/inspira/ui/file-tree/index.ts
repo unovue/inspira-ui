@@ -1,5 +1,12 @@
 import type { HTMLAttributes } from "vue";
 
+export interface TreeViewElement {
+  id: string;
+  name: string;
+  isSelectable?: boolean;
+  children?: TreeViewElement[];
+}
+
 export interface TreeProps {
   class?: HTMLAttributes["class"];
   initialSelectedId: string;
@@ -25,13 +32,6 @@ export interface TreeContextProps {
   setExpandedItems: (items: string[] | undefined) => void;
 }
 
-export interface TreeViewElement {
-  id: string;
-  name: string;
-  isSelectable?: boolean;
-  children?: TreeViewElement[];
-}
-
 export interface BaseItemProps {
   class?: HTMLAttributes["class"];
   id: string;
@@ -49,3 +49,4 @@ export const TREE_CONTEXT_SYMBOL = Symbol("TREE_CONTEXT_SYMBOL");
 export { default as Tree } from "./Tree.vue";
 export { default as Folder } from "./Folder.vue";
 export { default as File } from "./File.vue";
+export { default as TreeIndicator } from "./TreeIndicator.vue";
