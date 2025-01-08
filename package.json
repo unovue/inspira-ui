@@ -12,7 +12,7 @@
     "format:fix": "prettier . --write",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@nuxt/image": "^1.8.1",
