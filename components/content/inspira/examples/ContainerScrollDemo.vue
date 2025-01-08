@@ -2,9 +2,9 @@
   <div class="flex flex-col overflow-hidden">
     <ContainerScroll>
       <template #title>
-        <h1 className="text-4xl font-semibold text-black dark:text-white">
+        <h1 class="text-4xl font-semibold text-black dark:text-white">
           Unleash the power of <br />
-          <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+          <span class="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
             Scroll Animations
           </span>
         </h1>
