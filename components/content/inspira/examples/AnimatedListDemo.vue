@@ -18,7 +18,7 @@
   </ClientOnly>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const notifications = [
   {
     name: "Payment received",

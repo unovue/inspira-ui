@@ -100,7 +100,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const containerRef = ref(null);
 const div1Ref = ref(null);
 const div2Ref = ref(null);
