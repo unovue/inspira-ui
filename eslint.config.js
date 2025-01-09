@@ -59,6 +59,14 @@ export default withNuxt(
           order: ["template", "script", "style"],
         },
       ],
+      "vue/block-lang": [
+        "error",
+        {
+          script: {
+            lang: "ts",
+          },
+        },
+      ],
       "tailwindcss/no-custom-classname": "off",
       "@typescript-eslint/no-empty-object-type": [
         "error",
