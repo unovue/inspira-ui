@@ -9,6 +9,10 @@ navBadges:
 ::ComponentLoader{label="Preview" componentName="TetrisDemo" type="examples" id="tetris"}
 ::
 
+::alert{type="warning"}
+This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
+::
+
 ::alert
 **Note:** This component requires `theme-colors` as a dependency. Please install these using following commands.
 

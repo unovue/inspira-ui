@@ -13,6 +13,10 @@ With rotation
 ::ComponentLoader{label="Preview" componentName="CardDemo2" type="examples"}
 ::
 
+::alert{type="warning"}
+This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
+::
+
 ## API
 
 ::steps

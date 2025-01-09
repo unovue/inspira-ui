@@ -12,6 +12,10 @@ description: A sequentially animated list that introduces each item with a timed
 | --------- | -------- | ------- | -------------------------------------------------------------- |
 | `delay`   | `number` | `1000`  | The delay in milliseconds before adding each item to the list. |
 
+::alert{type="warning"}
+This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
+::
+
 ## Component Code
 
 You can copy and paste the following code to create this component:
