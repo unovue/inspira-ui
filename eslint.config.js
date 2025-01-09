@@ -19,6 +19,7 @@ export default withNuxt(
       "**/build/**",
       "**/dist/**",
       "**/.nuxt/**",
+      "**/.output/**",
       "**/CONTRIBUTING.md",
       "**/3.contribution.md",
     ],
