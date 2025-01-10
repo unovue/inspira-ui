@@ -1,6 +1,6 @@
 <template>
   <ClientOnly>
-    <div className="relative size-[600px] rounded-lg w-full bg-background overflow-hidden border">
+    <div class="relative size-[600px] rounded-lg w-full bg-background overflow-hidden border">
       <FlickeringGrid
         class="relative inset-0 z-0 [mask-image:radial-gradient(450px_circle_at_center,white,transparent)]"
         :square-size="4"
