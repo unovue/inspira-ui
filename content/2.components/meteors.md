@@ -6,6 +6,10 @@ description: A component that displays a meteor shower animation with customizab
 ::ComponentLoader{label="Preview" componentName="MeteorsDemo" type="examples"}  
 ::
 
+::alert{type="warning"}
+This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
+::
+
 ## API
 
 | Prop Name | Type     | Default | Description                                                       |

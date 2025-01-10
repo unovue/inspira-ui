@@ -6,6 +6,10 @@ description: A stylish animated border beam effect with customizable size, durat
 ::ComponentLoader{label="Preview" componentName="BorderBeamDemo" type="examples"}
 ::
 
+::alert{type="warning"}
+This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
+::
+
 ## API
 
 | Prop Name     | Type     | Default     | Description                                                           |

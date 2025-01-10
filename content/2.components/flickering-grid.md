@@ -10,6 +10,10 @@ navBadges:
 ::ComponentLoader{label="Preview" componentName="FlickeringGridDemo" type="examples" id="flickering-grid"}
 ::
 
+::alert{type="warning"}
+This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
+::
+
 ## API
 
 | Prop Name       | Type     | Default        | Description                            |

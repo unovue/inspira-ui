@@ -6,6 +6,10 @@ description: A text hover effect that animates and outlines gradient on hover, a
 ::ComponentLoader{label="Preview" componentName="TextHoverEffectDemo" type="examples"}
 ::
 
+::alert{type="warning"}
+This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
+::
+
 ## API
 
 | Prop Name     | Type     | Default  | Description                                               |
