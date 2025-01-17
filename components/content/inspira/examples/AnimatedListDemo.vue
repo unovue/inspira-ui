@@ -49,32 +49,11 @@ const notifications = [
     color: "#1E86FF",
   },
   {
-    name: "Payment received",
+    name: "Task completed",
     description: "Inspira UI",
-    time: "15m ago",
-    icon: "💸",
-    color: "#00C9A7",
-  },
-  {
-    name: "User signed up",
-    description: "Inspira UI",
-    time: "10m ago",
-    icon: "👤",
-    color: "#FFB800",
-  },
-  {
-    name: "New message",
-    description: "Inspira UI",
-    time: "5m ago",
-    icon: "💬",
-    color: "#FF3D71",
-  },
-  {
-    name: "New event",
-    description: "Inspira UI",
-    time: "2m ago",
-    icon: "🗞️",
-    color: "#1E86FF",
+    time: "1m ago",
+    icon: "✅",
+    color: "#45B26B",
   },
 ];
 </script>
