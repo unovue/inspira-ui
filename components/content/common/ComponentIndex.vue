@@ -43,7 +43,6 @@
         </UiAccordionContent>
       </UiAccordionItem>
     </UiAccordion>
-    <p v-else>No components found.</p>
   </div>
 </template>
 
