@@ -1,0 +1,61 @@
+name: 🐞 Bug report
+description: Create a report to help us improve
+labels: [bug]
+title: '[BUG]: '
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+        This form is only for submitting bug reports. If you have a usage question
+        or are unsure if this is really a bug, make sure to:
+
+        - Check if there's already an existing issue for this bug in [Issues](https://github.com/unovue/inspira-ui/issues)
+        - Ask on [GitHub Discussions](https://github.com/unovue/inspira-ui/discussions) if you're unsure
+  - type: textarea
+    id: bug-env
+    attributes:
+      label: Environment
+      description: Output of `npx envinfo --system --npmPackages vue,@vueuse/core,radix-vue,nuxt,@vueuse/motion --binaries --browsers`
+      placeholder: Environment
+    validations:
+      required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is. If you intend to submit a PR for this issue, tell us in the description. Thanks!
+      placeholder: Bug description
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Steps to reproduce the behavior.
+      placeholder: Reproduction
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: If applicable, add any other context about the problem here
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: |
+        If applicable, add screenshots to help explain your problem.
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: |
+        Optional if provided reproduction. Please try not to insert an image but copy paste the log text.
+      render: shell-script
+  - type: checkboxes
+    id: checkboxes
+    attributes:
+      label: Additional information
+      description: Please let us know if you'd be interested in contributing to the solution. This helps us better coordinate with potential contributors.
+      options:
+        - label: Would you be willing to fix this bug?
