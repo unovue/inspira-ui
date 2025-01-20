@@ -1,7 +1,7 @@
 name: Feature request
 description: Suggest a feature that will improve inspira-ui
 labels: [add-request-feature]
-title: 'Feature request: '
+title: "Feature request: "
 body:
   - type: textarea
     id: solution-description
