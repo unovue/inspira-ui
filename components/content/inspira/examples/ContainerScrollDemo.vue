@@ -4,7 +4,7 @@
       <template #title>
         <h1 class="text-4xl font-semibold text-black dark:text-white">
           Unleash the power of <br />
-          <span class="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+          <span class="mt-1 text-4xl font-bold leading-none md:text-[6rem]">
             Scroll Animations
           </span>
         </h1>
