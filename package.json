@@ -12,7 +12,8 @@
     "format:fix": "prettier . --write",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prepare": "husky"
+    "prepare": "husky",
+    "build:registry": "tsx ./scripts/build-registry.mts"
   },
   "dependencies": {
     "@nuxt/image": "^1.9.0",
