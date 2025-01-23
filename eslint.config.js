@@ -22,6 +22,8 @@ export default withNuxt(
       "**/.output/**",
       "**/CONTRIBUTING.md",
       "**/3.contribution.md",
+      "__registry__/**/**",
+      "scripts/**",
     ],
   },
   {
