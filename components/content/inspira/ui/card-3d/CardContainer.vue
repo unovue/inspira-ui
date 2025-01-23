@@ -23,7 +23,7 @@
 import { useMouseState } from "~/composables/useMouseState";
 import { provide, ref } from "vue";
 
-const props = defineProps({
+defineProps({
   class: String,
   containerClass: String,
 });
