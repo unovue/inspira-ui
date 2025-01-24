@@ -55,11 +55,9 @@ export interface EventHandlers {
 }
 
 /**
- * InspiraImageParticle class for creating particle animations from images.
+ * Interface containing all public property definitions for InspiraImageParticle.
  */
-export declare class InspiraImageParticle implements EventHandlers {
-  constructor(options?: InspiraImageParticleOptions);
-
+export interface InspiraImageParticleProps {
   // Public Properties
   state: string;
   touches: Array<{ x: number; y: number; z: number; force: number }>;
@@ -115,6 +113,13 @@ export declare class InspiraImageParticle implements EventHandlers {
   gravityFactor: number;
   renderer: "default" | "webgl";
   color: string;
+}
+
+/**
+ * InspiraImageParticle class for creating particle animations from images.
+ */
+export declare class InspiraImageParticle implements InspiraImageParticleProps, EventHandlers {
+  constructor(options?: InspiraImageParticleOptions);
 
   // Public Methods
   on(event: string, fn: (params?: unknow) => void): void;
