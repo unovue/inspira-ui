@@ -107,8 +107,8 @@ const vanishingText = defineModel<string>({
 const emit = defineEmits(["submit", "change"]);
 
 // template refs
-const canvasRef = templateRef<HTMLCanvasElement>("canvasRef");
-const inputRef = templateRef<HTMLInputElement>("inputRef");
+const canvasRef = useTemplateRef<HTMLCanvasElement>("canvasRef");
+const inputRef = useTemplateRef<HTMLInputElement>("inputRef");
 
 // normal refs
 const currentPlaceholder = ref<number>(0);
@@ -124,6 +124,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 // Focus on input when mounted
 onMounted(() => {
+  if (!inputRef.value) return;
   inputRef.value.focus();
 });
 
