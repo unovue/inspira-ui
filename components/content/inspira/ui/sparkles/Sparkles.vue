@@ -43,8 +43,8 @@ const props = withDefaults(defineProps<Props>(), {
   particleDensity: 120,
 });
 
-const containerRef = templateRef<HTMLElement | null>("containerRef");
-const canvasRef = templateRef<HTMLCanvasElement | null>("canvasRef");
+const containerRef = useTemplateRef<HTMLElement | null>("containerRef");
+const canvasRef = useTemplateRef<HTMLCanvasElement | null>("canvasRef");
 const particles = ref<Particle[]>([]);
 const ctx = ref<CanvasRenderingContext2D | null>(null);
 
