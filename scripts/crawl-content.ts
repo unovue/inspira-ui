@@ -16,11 +16,12 @@ const DEPENDENCIES = new Map<string, string[]>([
   ["vee-validate", ["@vee-validate/zod", "zod"]],
   ["three", ["@types/three"]],
   ["canvas-confetti", ["@types/canvas-confetti"]],
-  ["three-globe", ["three"]],
+  ["three-globe", ["three", "postprocessing"]],
   ["cobe", []],
   ["vue-use-spring", []],
   ["theme-colors", []],
   ["simplex-noise", []],
+  ["qss", []],
 ]);
 
 const REGISTRY_DEPENDENCY = "@/";
