@@ -161,7 +161,7 @@ const emit = defineEmits<{
   (e: "hover:leave"): void;
 }>();
 
-const sliderRef = templateRef<HTMLDivElement | null>("sliderRef");
+const sliderRef = useTemplateRef<HTMLDivElement | null>("sliderRef");
 const sliderXPercent = ref(props.initialSliderPercentage);
 const isDragging = ref(false);
 const isMouseOver = ref(false);
