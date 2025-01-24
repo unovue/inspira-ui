@@ -181,6 +181,7 @@ async function buildUIRegistry(componentPath: string, componentName: string) {
 
   for (const dirent of dir) {
     if (!dirent.isFile()) continue;
+    if (componentName === "github-globe" && dirent.name === "globe.json") continue;
 
     const filepath = join(componentPath, dirent.name);
     const relativePath = join("ui", componentName, dirent.name);
