@@ -4,6 +4,7 @@ import { parseSync } from "@oxc-parser/wasm";
 import { join, resolve } from "pathe";
 import { compileScript, parse } from "vue/compiler-sfc";
 
+// TODO: Maybe specify the types of the dependencies between normal and dev dependencies, like @types/three
 const DEPENDENCIES = new Map<string, string[]>([
   ["reka-ui", []],
   ["@vueuse/core", []],
@@ -13,6 +14,13 @@ const DEPENDENCIES = new Map<string, string[]>([
   ["@unovis/vue", ["@unovis/ts"]],
   ["embla-carousel-vue", []],
   ["vee-validate", ["@vee-validate/zod", "zod"]],
+  ["three", ["@types/three"]],
+  ["canvas-confetti", ["@types/canvas-confetti"]],
+  ["three-globe", ["three"]],
+  ["cobe", []],
+  ["vue-use-spring", []],
+  ["theme-colors", []],
+  ["simplex-noise", []],
 ]);
 
 const REGISTRY_DEPENDENCY = "@/";
