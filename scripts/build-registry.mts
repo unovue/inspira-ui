@@ -15,7 +15,6 @@ const REGISTRY_PATH = path.join(process.cwd(), "public/r");
 
 const REGISTRY_INDEX_WHITELIST: z.infer<typeof registryItemTypeSchema>[] = [
   "registry:ui",
-  "registry:lib",
   "registry:block",
   "registry:example",
 ];
