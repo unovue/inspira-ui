@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   plugins: [{ src: "~/plugins/clarity.js", mode: "client" }],
 
-  modules: ["@nuxt/image", "nuxt-gtag", "@vueuse/motion/nuxt", "@nuxt/eslint", "@nuxt/scripts"],
+  modules: ["@nuxt/image", "nuxt-gtag", "@nuxt/eslint", "@nuxt/scripts", "motion-v/nuxt"],
 
   components: [
     {
