@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "build": "pnpm build:registry && nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
