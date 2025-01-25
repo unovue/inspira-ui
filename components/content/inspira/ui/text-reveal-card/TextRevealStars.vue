@@ -5,8 +5,12 @@
       v-for="i in starsCount"
       :key="`star-${i}`"
       :initial="generatePosition()"
-      :enter="generateEnterAnimation()"
-      :duration="randomDuration"
+      :animate="generateEnterAnimation()"
+      :transition="{
+        duration: randomDuration,
+        repeat: Infinity,
+        ease: 'linear',
+      }"
       :class="cn('inline-block absolute w-0.5 h-0.5 bg-white rounded-full z-[1]', props.class)"
     />
   </div>
@@ -50,22 +54,8 @@ function generateEnterAnimation() {
     left: `calc(${random() * 100}% + ${randomMove()}px)`,
     opacity: randomOpacity(),
     scale: [1, 1.2, 0],
-    transition: {
-      opacity: {
-        duration: 1000,
-        repeat: Infinity,
-        type: "tween",
-      },
-      scale: {
-        duration: 1000,
-        repeat: Infinity,
-        type: "tween",
-      },
-      repeat: Infinity,
-      ease: "linear",
-    },
   };
 }
 
-const randomDuration = random() * 10000 + 20000;
+const randomDuration = random() * 10 + 20;
 </script>

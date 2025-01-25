@@ -8,12 +8,12 @@ description: A hyper changing text animation as you hover..
 
 ## API
 
-| Prop Name       | Type      | Default  | Description                                                    |
-| --------------- | --------- | -------- | -------------------------------------------------------------- |
-| `class`         | `string`  | `""`     | Additional CSS classes to apply to the component.              |
-| `text`          | `string`  | Required | Text to animate                                                |
-| `duration`      | `number`  | `800`    | The total duration (in milliseconds) for the entire animation. |
-| `animateOnLoad` | `boolean` | `true`   | Play animation on load                                         |
+| Prop Name       | Type      | Default  | Description                                               |
+| --------------- | --------- | -------- | --------------------------------------------------------- |
+| `class`         | `string`  | `""`     | Additional CSS classes to apply to the component.         |
+| `text`          | `string`  | Required | Text to animate                                           |
+| `duration`      | `number`  | `0.8`    | The total duration (in seconds) for the entire animation. |
+| `animateOnLoad` | `boolean` | `true`   | Play animation on load                                    |
 
 ## Component Code
 

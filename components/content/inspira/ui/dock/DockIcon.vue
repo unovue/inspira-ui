@@ -1,7 +1,6 @@
 <template>
   <div
     ref="iconRef"
-    v-motion
     class="flex aspect-square cursor-pointer items-center justify-center rounded-full transition-all duration-200 ease-out"
     :style="{
       width: `${iconWidth}px`,

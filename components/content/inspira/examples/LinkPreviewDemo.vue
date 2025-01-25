@@ -9,10 +9,10 @@
       </LinkPreview>
       and
       <LinkPreview
-        url="https://motion.vueuse.org/"
+        url="https://motion.unovue.com/"
         class="font-bold"
       >
-        @vueuse/motion
+        motion-v
       </LinkPreview>
       are a great way to build modern websites.
     </p>

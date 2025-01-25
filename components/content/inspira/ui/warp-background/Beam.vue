@@ -1,31 +1,32 @@
 <template>
-  <div
-    v-motion
+  <Motion
     :style="{
       '--x': `${props.x}`,
       '--width': `${props.width}`,
       '--aspect-ratio': `${ar}`,
       '--background': `linear-gradient(hsl(${hue} 80% 60%), transparent)`,
     }"
-    class="absolute left-[var(--x)] top-0 translate-y-[100cqmax] [aspect-ratio:1/var(--aspect-ratio)] [background:var(--background)] [width:var(--width)]"
+    class="absolute left-[var(--x)] top-0 [aspect-ratio:1/var(--aspect-ratio)] [background:var(--background)] [width:var(--width)]"
     :initial="{
-      x: -50,
-      y: 200,
+      x: '-50%',
+      y: '100cqmax',
     }"
-    :enter="{
-      x: -50,
-      y: -100,
-      transition: {
-        duration: props.duration,
-        delay: props.delay,
-        repeat: Infinity,
-        ease: 'linear',
-      },
+    :animate="{
+      x: '-50%',
+      y: '-100%',
     }"
-  ></div>
+    :transition="{
+      duration: props.duration,
+      delay: props.delay,
+      repeat: Infinity,
+      ease: 'linear',
+    }"
+  ></Motion>
 </template>
 
 <script lang="ts" setup>
+import { Motion } from "motion-v";
+
 interface Props {
   width: string | number;
   x: string | number;

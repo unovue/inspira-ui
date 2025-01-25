@@ -11,11 +11,11 @@
     <div v-if="props.isStatic || isHovering">
       <Motion
         :initial="{ opacity: 0, scale: 0.58 }"
-        :enter="{
+        :animate="{
           opacity: 1,
           scale: 1,
-          transition: { duration: 0.3, ease: 'easeOut' },
         }"
+        :transition="{ duration: 0.3, ease: 'easeOut' }"
         :leave="{ opacity: 0, scale: 0.8 }"
         class="absolute inset-0 overflow-hidden"
         :style="{
@@ -36,6 +36,8 @@
 </template>
 
 <script setup lang="ts">
+import { Motion } from "motion-v";
+
 interface LensProps {
   zoomFactor?: number;
   lensSize?: number;

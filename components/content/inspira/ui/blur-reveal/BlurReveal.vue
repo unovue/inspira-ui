@@ -3,20 +3,27 @@
     ref="container"
     :class="props.class"
   >
-    <div
+    <Motion
       v-for="(child, index) in children"
       :key="index"
       ref="childElements"
-      v-motion
+      as="div"
       :initial="getInitial()"
-      :enter="getEnter(index)"
+      :in-view="getAnimate()"
+      :transition="{
+        duration: props.duration,
+        easing: 'easeInOut',
+        delay: props.delay * index,
+      }"
     >
       <component :is="child" />
-    </div>
+    </Motion>
   </div>
 </template>
 
 <script setup lang="ts">
+import { Motion } from "motion-v";
+
 interface Props {
   duration?: number;
   delay?: number;
@@ -51,24 +58,14 @@ function getInitial() {
     opacity: 0,
     filter: `blur(${props.blur})`,
     y: props.yOffset,
-    transition: {
-      duration: 0,
-      easing: "easeInOut",
-      delay: 0,
-    },
   };
 }
 
-function getEnter(index: number) {
+function getAnimate() {
   return {
     opacity: 1,
     filter: `blur(0px)`,
     y: 0,
-    transition: {
-      duration: props.duration * 1000,
-      easing: "easeInOut",
-      delay: props.delay * index * 1000,
-    },
   };
 }
 </script>

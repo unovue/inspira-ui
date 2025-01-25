@@ -4,10 +4,13 @@
       v-for="(letter, index) in letters"
       :key="letter"
     >
-      <h1
-        v-motion
+      <Motion
+        as="h1"
         :initial="pullupVariant.initial"
-        :enter="pullupVariant.enter(index)"
+        :animate="pullupVariant.animate"
+        :transition="{
+          delay: index * (props.delay ? props.delay : 0.05),
+        }"
         :class="
           cn(
             'font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm md:text-4xl md:leading-[5rem]',
@@ -17,12 +20,13 @@
       >
         <span v-if="letter === ' '">&nbsp;</span>
         <span v-else>{{ letter }}</span>
-      </h1>
+      </Motion>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { Motion } from "motion-v";
 import { cn } from "~/lib/utils";
 
 interface LetterPullupProps {
@@ -37,12 +41,9 @@ const letters = props.words.split("");
 
 const pullupVariant = {
   initial: { y: 100, opacity: 0 },
-  enter: (i: number) => ({
+  animate: {
     y: 0,
     opacity: 1,
-    transition: {
-      delay: i * (props.delay ? props.delay : 0.05),
-    },
-  }),
+  },
 };
 </script>
