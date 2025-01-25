@@ -161,6 +161,8 @@ const emit = defineEmits<{
   (e: "hover:leave"): void;
 }>();
 
+// Note: useTemplateRef is a new feature introduced in Vue 3.5+
+// For Vue <3.5, use ref() instead.
 const sliderRef = useTemplateRef<HTMLDivElement | null>("sliderRef");
 const sliderXPercent = ref(props.initialSliderPercentage);
 const isDragging = ref(false);

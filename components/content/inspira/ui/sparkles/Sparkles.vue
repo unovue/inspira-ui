@@ -43,6 +43,8 @@ const props = withDefaults(defineProps<Props>(), {
   particleDensity: 120,
 });
 
+// Note: useTemplateRef is a new feature introduced in Vue 3.5+
+// For Vue <3.5, use ref() instead.
 const containerRef = useTemplateRef<HTMLElement | null>("containerRef");
 const canvasRef = useTemplateRef<HTMLCanvasElement | null>("canvasRef");
 const particles = ref<Particle[]>([]);

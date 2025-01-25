@@ -47,6 +47,8 @@ let w: number,
   ctx: CanvasRenderingContext2D | null = null;
 let animationId: number;
 
+// Note: useTemplateRef is a new feature introduced in Vue 3.5+
+// For Vue <3.5, use ref() instead.
 const canvasRef = useTemplateRef<HTMLCanvasElement | null>("canvasRef");
 
 function getSpeed(): number {
