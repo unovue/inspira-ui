@@ -4,18 +4,18 @@
     @mouseenter="triggerAnimation"
   >
     <div class="flex">
-      <span
+      <Motion
         v-for="(letter, i) in displayText"
         :key="i"
-        v-motion
+        as="span"
         :class="cn(letter === ' ' ? 'w-3' : '', $props.class)"
         class="inline-block font-mono"
         :initial="{ opacity: 0, y: -10 }"
-        :enter="{ opacity: 1, y: 0 }"
+        :animate="{ opacity: 1, y: 0 }"
         :delay="i * (duration / (text.length * 10))"
       >
         {{ letter.toUpperCase() }}
-      </span>
+      </Motion>
     </div>
   </div>
 </template>
@@ -24,6 +24,7 @@
 import { ref, computed, watch } from "vue";
 import { useIntervalFn } from "@vueuse/core";
 import { cn } from "@/lib/utils";
+import { Motion } from "motion-v";
 
 const props = defineProps({
   text: {
@@ -32,7 +33,7 @@ const props = defineProps({
   },
   duration: {
     type: Number,
-    default: 800,
+    default: 0.8,
   },
   class: {
     type: String,

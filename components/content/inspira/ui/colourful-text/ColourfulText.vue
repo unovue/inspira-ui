@@ -1,8 +1,7 @@
 <template>
-  <span
+  <Motion
     v-for="(char, index) in props.text"
     :key="`${char}-${count}-${index}`"
-    v-motion
     class="inline-block whitespace-pre font-sans tracking-tight"
     :initial="{
       y: -3,
@@ -10,39 +9,33 @@
       color: props.startColor,
       scale: 1,
       filter: 'blur(5px)',
-      transition: {
-        duration: props.duration,
-        delay: index * 50,
-      },
     }"
-    :enter="{
+    :transition="{
+      duration: props.duration,
+      delay: index * 0.05,
+    }"
+    :animate="{
       y: 0,
       opacity: 1,
       scale: 1.01,
       filter: 'blur(0px)',
       color: currentColors[index % currentColors.length],
-      transition: {
-        duration: props.duration,
-        delay: index * 50,
-      },
     }"
-    :leave="{
+    :exit="{
       y: -3,
       opacity: 1,
       scale: 1,
       filter: 'blur(5px)',
       color: props.startColor,
-      transition: {
-        duration: props.duration,
-        delay: index * 50,
-      },
     }"
   >
     {{ char }}
-  </span>
+  </Motion>
 </template>
 
 <script setup lang="ts">
+import { Motion } from "motion-v";
+
 interface Props {
   text: string;
   colors?: string[];
@@ -52,7 +45,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   startColor: "rgb(255,255,255)",
-  duration: 500,
+  duration: 0.5,
   colors: () => [
     "rgb(131, 179, 32)",
     "rgb(47, 195, 106)",

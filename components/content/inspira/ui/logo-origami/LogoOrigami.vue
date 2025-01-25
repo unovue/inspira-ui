@@ -36,9 +36,9 @@
     </div>
 
     <!-- Upper part of the flip -->
-    <div
+    <Motion
       :key="activeIndex"
-      v-motion
+      as="div"
       :style="{
         clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)',
         zIndex: -activeIndex,
@@ -49,29 +49,25 @@
         y: '-50%',
         x: '-50%',
       }"
-      :enter="{
+      :animate="{
         rotateX: '-180deg',
-        transition: {
-          duration: duration * 1000,
-          ease: 'easeInOut',
-        },
       }"
-      :leave="{
+      :exit="{
         rotateX: '-180deg',
-        transition: {
-          duration: duration * 1000,
-          ease: 'easeInOut',
-        },
+      }"
+      :transition="{
+        duration: duration,
+        ease: 'easeInOut',
       }"
       class="absolute left-1/2 top-1/2"
     >
       <component :is="children[activeIndex % children.length]" />
-    </div>
+    </Motion>
 
     <!-- Lower part of the flip  -->
-    <div
+    <Motion
       :key="(activeIndex + 1) * 2"
-      v-motion
+      as="div"
       :style="{
         clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)',
         zIndex: activeIndex,
@@ -82,24 +78,20 @@
         y: '-50%',
         x: '-50%',
       }"
-      :enter="{
+      :animate="{
         rotateX: '0deg',
-        transition: {
-          duration: duration * 1000,
-          ease: 'easeInOut',
-        },
       }"
-      :leave="{
+      :exit="{
         rotateX: '0deg',
-        transition: {
-          duration: duration * 1000,
-          ease: 'easeInOut',
-        },
+      }"
+      :transition="{
+        duration: duration,
+        ease: 'easeInOut',
       }"
       class="absolute left-1/2 top-1/2"
     >
       <component :is="children[(activeIndex + 1) % children.length]" />
-    </div>
+    </Motion>
 
     <!-- Center divider line -->
     <hr
@@ -111,6 +103,7 @@
 
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
+import { Motion } from "motion-v";
 
 type LogoOrigamiProps = {
   duration?: number;

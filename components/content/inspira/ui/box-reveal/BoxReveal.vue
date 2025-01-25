@@ -1,22 +1,30 @@
 <template>
   <div :class="cn('relative', $props.class)">
-    <span
-      v-motion
+    <Motion
       :initial="initialMainVariants"
-      :visible-once="visibleMainVariants"
+      :in-view="visibleMainVariants"
+      :transition="{
+        duration: props.duration,
+        delay: props.delay * 2,
+      }"
     >
       <slot />
-    </span>
-    <span
-      v-motion
+    </Motion>
+    <Motion
       class="box-background absolute inset-0 z-20"
       :initial="initialSlideVariants"
-      :visible-once="visibleSlideVariants"
-    ></span>
+      :in-view="visibleSlideVariants"
+      :transition="{
+        duration: props.duration,
+        ease: 'easeIn',
+        delay: props.delay,
+      }"
+    ></Motion>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { Motion } from "motion-v";
 import type { HTMLAttributes } from "vue";
 import { cn } from "@/lib/utils";
 
@@ -34,24 +42,15 @@ const props = withDefaults(defineProps<BoxRevealProps>(), {
 });
 
 // Motion variants
-const initialMainVariants = { opacity: 0, y: 75 };
+const initialMainVariants = { opacity: 0, y: 25 };
 const visibleMainVariants = {
   opacity: 1,
   y: 0,
-  transition: {
-    duration: props.duration * 1000,
-    delay: props.delay * 1000,
-  },
 };
 
 const initialSlideVariants = { left: "0%" };
 const visibleSlideVariants = {
   left: "100%",
-  transition: {
-    duration: props.duration * 1000,
-    ease: "easeIn",
-    delay: props.delay * 1000,
-  },
 };
 </script>
 

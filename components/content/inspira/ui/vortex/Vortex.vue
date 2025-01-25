@@ -1,14 +1,14 @@
 <template>
   <div :class="cn('relative h-full w-full', props.containerClass)">
-    <div
+    <Motion
       ref="containerRef"
-      v-motion
+      as="div"
       :initial="{ opacity: 0 }"
-      :enter="{ opacity: 1 }"
+      :animate="{ opacity: 1 }"
       class="absolute inset-0 z-0 flex size-full items-center justify-center bg-transparent"
     >
       <canvas ref="canvasRef"></canvas>
-    </div>
+    </Motion>
 
     <div :class="cn('relative z-10', props.class)">
       <slot />
