@@ -122,7 +122,7 @@
 
 <script setup lang="ts">
 import { ref, reactive, computed } from "vue";
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 
 const props = defineProps({
   strokeWidth: {

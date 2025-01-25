@@ -36,7 +36,7 @@
 </template>
 
 <script setup lang="ts">
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 
 interface Props {
   initialValue?: number;

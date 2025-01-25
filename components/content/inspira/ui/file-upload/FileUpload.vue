@@ -115,7 +115,7 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
 import { useMotion } from "@vueuse/motion";
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 
 interface FileUploadProps {
   class?: HTMLAttributes["class"];

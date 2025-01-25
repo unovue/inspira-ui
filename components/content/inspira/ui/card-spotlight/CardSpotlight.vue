@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 
 const props = defineProps({
   gradientSize: { type: Number, default: 200 },

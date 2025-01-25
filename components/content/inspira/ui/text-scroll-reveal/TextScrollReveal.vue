@@ -21,7 +21,7 @@
 
 <script lang="ts" setup>
 import { ref, computed } from "vue";
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 
 interface Props {
   class?: string;

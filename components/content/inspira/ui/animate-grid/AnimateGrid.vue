@@ -29,7 +29,7 @@
 </template>
 
 <script lang="ts" setup>
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 import { useMouseInElement, useDebounceFn } from "@vueuse/core";
 
 const card = ref<HTMLElement[]>();

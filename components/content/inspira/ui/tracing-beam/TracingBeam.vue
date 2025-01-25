@@ -72,7 +72,7 @@
 </template>
 
 <script lang="ts" setup>
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 import { useSpring } from "vue-use-spring";
 
 defineProps({

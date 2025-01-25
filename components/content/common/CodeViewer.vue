@@ -16,7 +16,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted } from "vue";
 import { MagicString } from "vue/compiler-sfc";
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 import hljs from "highlight.js";
 import "~/assets/css/code-theme.css";
 

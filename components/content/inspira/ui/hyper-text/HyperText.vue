@@ -23,7 +23,7 @@
 <script setup lang="ts">
 import { ref, computed, watch } from "vue";
 import { useIntervalFn } from "@vueuse/core";
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 
 const props = defineProps({
   text: {
