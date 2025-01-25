@@ -16,7 +16,7 @@ body:
     id: bug-env
     attributes:
       label: Environment
-      description: Output of `npx envinfo --system --npmPackages vue,@vueuse/core,radix-vue,nuxt,@vueuse/motion --binaries --browsers`
+      description: Output of `npx envinfo --system --npmPackages vue,@vueuse/core,radix-vue,nuxt,motion-v --binaries --browsers`
       placeholder: Environment
     validations:
       required: true

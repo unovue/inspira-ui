@@ -1,16 +1,17 @@
 <template>
   <AuroraBackground>
-    <div
-      v-motion
-      :initial="{ opacity: 0, y: 40 }"
-      :visible="{
+    <Motion
+      as="div"
+      :initial="{ opacity: 0, y: 40, filter: 'blur(10px)' }"
+      :in-view="{
         opacity: 1,
         y: 0,
-        transition: {
-          delay: 0.3,
-          duration: 0.8,
-          ease: 'easeInOut',
-        },
+        filter: 'blur(0px)',
+      }"
+      :transition="{
+        delay: 0.3,
+        duration: 0.8,
+        ease: 'easeInOut',
       }"
       class="relative flex flex-col items-center justify-center gap-4 px-4"
     >
@@ -25,6 +26,10 @@
       >
         Burn it now
       </button>
-    </div>
+    </Motion>
   </AuroraBackground>
 </template>
+
+<script setup lang="ts">
+import { Motion } from "motion-v";
+</script>

@@ -1,13 +1,15 @@
 <template>
   <div class="relative flex h-screen w-full items-center justify-center overflow-hidden bg-black">
-    <img
-      v-motion
+    <Motion
+      as="img"
       src="https://assets.aceternity.com/linear-demo.webp"
       class="pointer-events-none absolute inset-0 size-full object-cover [mask-image:radial-gradient(circle,transparent,black_80%)]"
       :initial="{ opacity: 0 }"
-      :visible="{
+      :in-view="{
         opacity: 0.5,
-        transition: { duration: 1 },
+      }"
+      :transition="{
+        duration: 1,
       }"
     />
     <div>
@@ -22,4 +24,6 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { Motion } from "motion-v";
+</script>

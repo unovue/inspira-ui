@@ -18,7 +18,6 @@
         />
       </Lens>
       <div
-        v-motion
         :style="{ filter: hovering ? 'blur(2px)' : 'blur(0px)' }"
         class="relative z-20 py-4"
       >

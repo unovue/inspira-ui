@@ -13,7 +13,7 @@
     }"
     :animate="{
       x: '-50%',
-      y: '100%',
+      y: '-100%',
     }"
     :transition="{
       duration: props.duration,
