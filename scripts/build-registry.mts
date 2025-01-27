@@ -17,6 +17,7 @@ const REGISTRY_INDEX_WHITELIST: z.infer<typeof registryItemTypeSchema>[] = [
   "registry:ui",
   "registry:block",
   "registry:example",
+  "registry:hook",
 ];
 
 // ----------------------------------------------------------------------------
@@ -192,10 +193,14 @@ async function buildStyles(registry: Registry) {
 
           let content: string;
           try {
-            content = await fs.readFile(
-              path.join(process.cwd(), "components", "content", "inspira", file.path),
-              "utf8",
-            );
+            if (file.type === "registry:hook") {
+              content = await fs.readFile(path.join(process.cwd(), file.path), "utf8");
+            } else {
+              content = await fs.readFile(
+                path.join(process.cwd(), "components", "content", "inspira", file.path),
+                "utf8",
+              );
+            }
           } catch (error) {
             console.error(error);
             return;

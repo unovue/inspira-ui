@@ -36,14 +36,16 @@ export async function buildRegistry() {
   const uiPath = resolve(registryRootPath, "ui");
   const examplesPath = resolve(registryRootPath, "examples");
   const blocksPath = resolve(registryRootPath, "blocks");
+  const composablesPath = resolve("composables");
 
-  const [ui, example, block] = await Promise.all([
+  const [ui, example, block, hooks] = await Promise.all([
     crawlUI(uiPath),
     crawlExample(examplesPath),
     crawlBlock(blocksPath),
+    crawlHook(composablesPath),
   ]);
 
-  registry.push(...ui, ...example, ...block);
+  registry.push(...ui, ...example, ...block, ...hooks);
 
   return registry;
 }
@@ -155,6 +157,42 @@ async function crawlBlock(rootPath: string) {
       target,
       type,
     };
+    const { dependencies, registryDependencies } = await getFileDependencies(filepath, source);
+
+    registry.push({
+      name,
+      type,
+      files: [file],
+      registryDependencies: Array.from(registryDependencies),
+      dependencies: Array.from(dependencies),
+    });
+  }
+
+  return registry;
+}
+
+async function crawlHook(rootPath: string) {
+  const type = `registry:hook` as const;
+  const registry: Registry = [];
+
+  const dir = await readdir(rootPath, { withFileTypes: true });
+
+  for (const dirent of dir) {
+    if (!dirent.isFile() || !dirent.name.endsWith(".ts")) continue;
+
+    const [name] = dirent.name.split(".ts");
+    const filepath = join(rootPath, dirent.name);
+    const source = await readFile(filepath, { encoding: "utf8" });
+    const relativePath = join("composables", dirent.name);
+
+    const file = {
+      name: dirent.name,
+      content: source,
+      path: relativePath,
+      type,
+      target: "",
+    };
+
     const { dependencies, registryDependencies } = await getFileDependencies(filepath, source);
 
     registry.push({
