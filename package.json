@@ -15,6 +15,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@number-flow/vue": "^0.4.3",
     "@nuxt/image": "^1.9.0",
     "@nuxt/scripts": "^0.9.5",
     "@vueuse/core": "^11.3.0",
