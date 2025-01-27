@@ -32,6 +32,7 @@
       />
     </svg>
     <span
+      v-if="showPercentage"
       :data-current-value="currentPercent"
       class="absolute inset-0 m-auto size-fit delay-0 duration-1000 ease-linear animate-in fade-in"
     >
@@ -52,6 +53,8 @@ interface Props {
   gaugeSecondaryColor?: string;
   class?: string;
   circleStrokeWidth?: number;
+  showPercentage?: boolean;
+  duration?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -61,6 +64,8 @@ const props = withDefaults(defineProps<Props>(), {
   gaugePrimaryColor: "rgb(79 70 229)",
   gaugeSecondaryColor: "rgba(0, 0, 0, 0.1)",
   circleStrokeWidth: 10,
+  showPercentage: true,
+  duration: 1,
 });
 
 const circumference = 2 * Math.PI * 45;
@@ -68,6 +73,7 @@ const percentPx = circumference / 100;
 
 const currentPercent = computed(() => ((props.value - props.min) / (props.max - props.min)) * 100);
 const percentageInPx = computed(() => `${percentPx}px`);
+const durationInSeconds = computed(() => `${props.duration}s`);
 </script>
 
 <style scoped lang="css">
@@ -87,8 +93,8 @@ const percentageInPx = computed(() => `${percentPx}px`);
   --stroke-percent: v-bind(currentPercent);
   stroke-dasharray: calc(var(--stroke-percent) * var(--percent-to-px)) var(--circumference);
   transition:
-    1s ease,
-    stroke 1s ease;
+    v-bind(durationInSeconds) ease,
+    stroke v-bind(durationInSeconds) ease;
   transition-property: stroke-dasharray, transform;
   transform: rotate(
     calc(-90deg + var(--gap-percent) * var(--offset-factor) * var(--percent-to-deg))
@@ -108,7 +114,7 @@ const percentageInPx = computed(() => `${percentPx}px`);
       )
     )
     scaleY(-1);
-  transition: all 1s ease;
+  transition: all v-bind(durationInSeconds) ease;
   transform-origin: calc(var(--circle-size) / 2) calc(var(--circle-size) / 2);
 }
 </style>
