@@ -56,10 +56,8 @@ const props = withDefaults(defineProps<VortexProps>(), {
   backgroundColor: "#000000",
 });
 
-// Note: useTemplateRef is a new feature introduced in Vue 3.5+
-// For Vue <3.5, use ref() instead.
-const canvasRef = useTemplateRef<HTMLCanvasElement | null>("canvasRef");
-const containerRef = useTemplateRef<HTMLElement | null>("containerRef");
+const canvasRef = templateRef<HTMLCanvasElement | null>("canvasRef");
+const containerRef = templateRef<HTMLElement | null>("containerRef");
 
 const particlePropsLength = props.particleCount * particlePropCount;
 

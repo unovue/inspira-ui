@@ -106,10 +106,8 @@ const vanishingText = defineModel<string>({
 });
 const emit = defineEmits(["submit", "change"]);
 
-// Note: useTemplateRef is a new feature introduced in Vue 3.5+
-// For Vue <3.5, use ref() instead.
-const canvasRef = useTemplateRef<HTMLCanvasElement>("canvasRef");
-const inputRef = useTemplateRef<HTMLInputElement>("inputRef");
+const canvasRef = templateRef<HTMLCanvasElement>("canvasRef");
+const inputRef = templateRef<HTMLInputElement>("inputRef");
 
 // normal refs
 const currentPlaceholder = ref<number>(0);
