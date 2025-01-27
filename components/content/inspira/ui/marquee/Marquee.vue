@@ -30,7 +30,7 @@
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
 
-const props = withDefaults(
+withDefaults(
   defineProps<{
     class?: string;
     reverse?: boolean;

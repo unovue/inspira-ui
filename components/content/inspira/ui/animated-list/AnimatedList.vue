@@ -36,6 +36,7 @@
 </template>
 
 <script lang="ts" setup>
+import { computed, onMounted, ref, useSlots } from "vue";
 import { cn } from "@/lib/utils";
 
 interface Props {

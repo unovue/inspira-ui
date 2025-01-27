@@ -51,6 +51,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed, onMounted } from "vue";
+
 interface Props {
   class?: string;
   starsCount?: number;

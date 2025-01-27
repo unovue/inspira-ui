@@ -104,6 +104,7 @@
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
 import { Motion } from "motion-v";
+import { ref, onMounted, onBeforeUnmount, watchEffect, useSlots } from "vue";
 
 type LogoOrigamiProps = {
   duration?: number;

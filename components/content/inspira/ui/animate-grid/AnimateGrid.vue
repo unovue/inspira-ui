@@ -29,6 +29,7 @@
 </template>
 
 <script lang="ts" setup>
+import { onMounted, ref, watch } from "vue";
 import { cn } from "@/lib/utils";
 import { useMouseInElement, useDebounceFn } from "@vueuse/core";
 

@@ -14,6 +14,7 @@
 
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
+import { computed } from "vue";
 
 interface BorderBeamProps {
   class?: string;

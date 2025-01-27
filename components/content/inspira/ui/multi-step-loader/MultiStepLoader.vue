@@ -142,6 +142,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref, watch, onUnmounted } from "vue";
+
 interface Step {
   text: string; // Display text for the step
   afterText?: string; // Text to show after step completion

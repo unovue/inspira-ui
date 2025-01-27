@@ -68,6 +68,7 @@
 </template>
 
 <script lang="ts" setup>
+import { onBeforeUnmount, ref, watchEffect } from "vue";
 import { cn } from "@/lib/utils";
 
 type AnimatedBeamProps = {

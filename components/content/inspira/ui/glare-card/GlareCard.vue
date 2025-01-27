@@ -28,6 +28,8 @@
 
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
+import { useTimeoutFn } from "@vueuse/core";
+import { ref } from "vue";
 
 interface GlareCardProps {
   class?: string;

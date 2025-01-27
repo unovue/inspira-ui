@@ -15,6 +15,8 @@
 <script setup lang="ts">
 import { createNoise3D } from "simplex-noise";
 import { cn } from "@/lib/utils";
+import { ref, onMounted, onBeforeUnmount } from "vue";
+import { templateRef } from "@vueuse/core";
 
 interface WavyBackgroundProps {
   class?: string;

@@ -16,6 +16,7 @@
 <script lang="ts" setup>
 import type { SphereIcon, IconCloudProps } from "./index";
 import { cn } from "@/lib/utils";
+import { ref, onMounted, onBeforeUnmount, reactive, watchEffect } from "vue";
 
 const props = defineProps<IconCloudProps>();
 

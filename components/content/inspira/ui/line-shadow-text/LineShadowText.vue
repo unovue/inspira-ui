@@ -21,6 +21,7 @@
 
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
+import { useSlots, type VNode } from "vue";
 
 interface LineShadowTextProps {
   shadowColor?: string;

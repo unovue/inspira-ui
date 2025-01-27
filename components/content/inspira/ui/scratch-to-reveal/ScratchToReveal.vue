@@ -29,6 +29,7 @@
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
 import { Motion, useAnimate } from "motion-v";
+import { ref, computed, onMounted, onUnmounted, type Ref } from "vue";
 
 const cursorImg =
   "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNSIgc3R5bGU9ImZpbGw6I2ZmZjtzdHJva2U6IzAwMDtzdHJva2Utd2lkdGg6MXB4OyIgLz4KPC9zdmc+'), auto";

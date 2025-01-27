@@ -134,6 +134,7 @@
 import type { HTMLAttributes } from "vue";
 import { cn } from "@/lib/utils";
 import { Motion } from "motion-v";
+import { ref } from "vue";
 
 interface FileUploadProps {
   class?: HTMLAttributes["class"];

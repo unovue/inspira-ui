@@ -86,6 +86,9 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, watch, onBeforeUnmount } from "vue";
+import { templateRef } from "@vueuse/core";
+
 // Define interfaces for props and data structures
 interface Props {
   placeholders: string[];

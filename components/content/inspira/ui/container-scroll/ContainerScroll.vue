@@ -22,6 +22,7 @@
 
 <script setup lang="ts">
 import { useWindowSize, useScroll, useElementBounding } from "@vueuse/core";
+import { ref, onMounted, onUnmounted, computed } from "vue";
 
 const containerRef = ref(null);
 const isMobile = ref(false);

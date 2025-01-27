@@ -37,6 +37,7 @@
 
 <script setup lang="ts">
 import { Motion } from "motion-v";
+import { ref, computed, watchEffect } from "vue";
 
 interface LensProps {
   zoomFactor?: number;

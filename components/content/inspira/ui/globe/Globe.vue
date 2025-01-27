@@ -16,6 +16,7 @@
 import { cn } from "@/lib/utils";
 import createGlobe, { type COBEOptions } from "cobe";
 import { useSpring } from "vue-use-spring";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 type GlobeProps = {
   class?: string;

@@ -39,6 +39,7 @@
 
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const TEXT_CLASSES = "absolute inset-x-0 top-0 m-auto inline-block w-full";
 

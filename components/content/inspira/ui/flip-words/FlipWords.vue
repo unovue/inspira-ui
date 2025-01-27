@@ -42,6 +42,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed, onMounted, onBeforeUnmount, watch } from "vue";
+
 interface Props {
   words: string[];
   duration?: number;

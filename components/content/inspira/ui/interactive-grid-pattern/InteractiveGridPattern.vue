@@ -21,7 +21,7 @@
 
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
-import type { HTMLAttributes } from "vue";
+import { ref, computed, type HTMLAttributes } from "vue";
 
 interface InteractiveGridPatternProps {
   className?: HTMLAttributes["class"];
