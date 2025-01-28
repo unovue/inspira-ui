@@ -16,6 +16,7 @@
     "build:registry": "tsx ./scripts/build-registry.mts"
   },
   "dependencies": {
+    "@number-flow/vue": "^0.4.3",
     "@nuxt/image": "^1.9.0",
     "@nuxt/scripts": "^0.9.5",
     "@types/lodash.template": "^4.5.3",
