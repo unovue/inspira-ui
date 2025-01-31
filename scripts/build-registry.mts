@@ -518,10 +518,7 @@ async function buildThemes() {
 }
 
 try {
-  // check if the __registry__ and public/r directories exist, if not, create them.
-  if (!existsSync(path.join(process.cwd(), "__registry__"))) {
-    await fs.mkdir(path.join(process.cwd(), "__registry__"), { recursive: true });
-  }
+  // check if the public/r directories exist, if not, create them.
   if (!existsSync(REGISTRY_PATH)) {
     await fs.mkdir(REGISTRY_PATH, { recursive: true });
   }
