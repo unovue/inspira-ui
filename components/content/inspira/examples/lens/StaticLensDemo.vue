@@ -29,6 +29,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+
 const hovering = ref(false);
 
 function setHovering(value: boolean) {

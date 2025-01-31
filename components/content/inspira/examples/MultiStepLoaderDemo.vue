@@ -40,6 +40,8 @@
 </template>
 
 <script setup lang="ts">
+import { reactive, computed } from "vue";
+
 interface Step {
   text: string; // Display text for the step
   afterText?: string; // Text to show after step completion

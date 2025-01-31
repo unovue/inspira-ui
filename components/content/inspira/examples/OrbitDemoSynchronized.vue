@@ -46,6 +46,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import { ORBIT_DIRECTION, type OrbitDirection } from "../ui/orbit";
 
 const direction = ref<OrbitDirection>(ORBIT_DIRECTION.Clockwise);

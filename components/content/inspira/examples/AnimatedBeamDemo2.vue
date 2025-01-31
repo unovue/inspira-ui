@@ -43,6 +43,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+
 const containerRef = ref(null);
 const div1Ref = ref(null);
 const div2Ref = ref(null);
