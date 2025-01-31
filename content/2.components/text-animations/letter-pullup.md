@@ -8,11 +8,11 @@ description: Staggered letter pull up text animation.
 
 ## API
 
-| Prop Name | Type     | Default                    | Description                                             |
-| --------- | -------- | -------------------------- | ------------------------------------------------------- |
-| `class`   | `string` | `-`                        | The class to be applied to the component.               |
-| `words`   | `string` | `Staggered Letter Pull Up` | Text to animate.                                        |
-| `delay`   | `number` | `50`                       | Delay each letter's animation by this many milliseconds |
+| Prop Name | Type     | Default                    | Description                                        |
+| --------- | -------- | -------------------------- | -------------------------------------------------- |
+| `class`   | `string` | `-`                        | The class to be applied to the component.          |
+| `words`   | `string` | `Staggered Letter Pull Up` | Text to animate.                                   |
+| `delay`   | `number` | `0.05`                     | Delay each letter's animation by this many seconds |
 
 ## Component Code
 

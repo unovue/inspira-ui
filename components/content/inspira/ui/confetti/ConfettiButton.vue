@@ -7,6 +7,7 @@
 <script setup lang="ts">
 import confetti from "canvas-confetti";
 import type { Options as ConfettiOptions } from "canvas-confetti";
+import { inject } from "vue";
 
 type ConfettiButtonProps = {
   options?: ConfettiOptions & { canvas?: HTMLCanvasElement };

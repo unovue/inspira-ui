@@ -8,25 +8,24 @@
     @mousemove="handleMouseMove"
   >
     <!-- Tooltip -->
-    <div
+    <Motion
       v-if="hoveredIndex === item.id"
-      v-motion
       :initial="{
         opacity: 0,
         y: 20,
         scale: 0.6,
       }"
-      :enter="{
+      :animate="{
         opacity: 1,
         y: 0,
         scale: 1,
-        transition: {
-          type: 'spring',
-          stiffness: 260,
-          damping: 10,
-        },
       }"
-      :leave="{
+      :transition="{
+        type: 'spring',
+        stiffness: 260,
+        damping: 10,
+      }"
+      :exit="{
         opacity: 0,
         y: 20,
         scale: 0.6,
@@ -47,7 +46,7 @@
         {{ item.name }}
       </div>
       <div class="text-xs text-white">{{ item.designation }}</div>
-    </div>
+    </Motion>
 
     <!-- Avatar Image -->
     <img
@@ -59,6 +58,9 @@
 </template>
 
 <script setup lang="ts">
+import { computed, ref } from "vue";
+import { Motion } from "motion-v";
+
 interface Item {
   id: number;
   name: string;

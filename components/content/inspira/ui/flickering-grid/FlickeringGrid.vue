@@ -14,6 +14,7 @@
 
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
+import { ref, onMounted, onBeforeUnmount, toRefs, computed } from "vue";
 
 interface FlickeringGridProps {
   squareSize?: number;

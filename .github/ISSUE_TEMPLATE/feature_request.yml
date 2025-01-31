@@ -1,0 +1,26 @@
+name: Feature request
+description: Suggest a feature that will improve inspira-ui
+labels: [add-request-feature]
+title: "Feature request: "
+body:
+  - type: textarea
+    id: solution-description
+    attributes:
+      label: Describe the solution you'd like
+      description: A clear and concise description of what you think would be a helpful addition to inspira-ui, including the possible use cases and alternatives you have considered. If you have a working prototype or module that implements it, please include a link.
+      placeholder: Solution description
+    validations:
+      required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: |
+        Add any other context or screenshots about the feature request here.
+  - type: checkboxes
+    id: additional-info
+    attributes:
+      label: Additional information
+      description: Additional information that helps us decide how to proceed.
+      options:
+        - label: Would you be willing to help implement this feature?

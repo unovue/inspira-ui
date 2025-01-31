@@ -50,6 +50,7 @@
 import { useElementSize } from "@vueuse/core";
 import { cn } from "@/lib/utils";
 import { getColors } from "theme-colors";
+import { ref, onMounted, onUnmounted, watch } from "vue";
 
 interface Props {
   class?: string;

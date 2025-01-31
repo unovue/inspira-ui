@@ -66,7 +66,7 @@ const features = [
   {
     title: "Built-in Motion and Animations",
     description:
-      "Add life to your UI with smooth transitions powered by vueuse/motion, no need for external animation libraries.",
+      "Add life to your UI with smooth transitions powered by motion-v, no need for external animation libraries.",
     icon: "lucide:activity",
   },
 ];

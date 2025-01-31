@@ -28,4 +28,4 @@ You can copy and paste the following code to create these components:
 
 ## Credits
 
-- Credits to [Magic UI](https://magicui.design/docs/components/shine-border) for this fantastic component.
+- Credits to [Magic UI](https://magicui.design/docs/components/blur-fade) for this fantastic component.

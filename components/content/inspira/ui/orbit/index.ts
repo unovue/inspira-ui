@@ -1,4 +1,4 @@
-import type { ObjectValues } from "@/lib/utils";
+type ObjectValues<T> = T[keyof T];
 
 export const ORBIT_DIRECTION = {
   Clockwise: "normal",

@@ -15,6 +15,7 @@ import {
   type Options as ConfettiOptions,
   type CreateTypes as ConfettiInstance,
 } from "canvas-confetti";
+import { ref, onMounted, onUnmounted, provide } from "vue";
 
 type Api = {
   fire: (options?: ConfettiOptions) => void;

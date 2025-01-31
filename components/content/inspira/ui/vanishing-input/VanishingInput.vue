@@ -86,6 +86,9 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, watch, onBeforeUnmount } from "vue";
+import { templateRef } from "@vueuse/core";
+
 // Define interfaces for props and data structures
 interface Props {
   placeholders: string[];
@@ -106,7 +109,6 @@ const vanishingText = defineModel<string>({
 });
 const emit = defineEmits(["submit", "change"]);
 
-// template refs
 const canvasRef = templateRef<HTMLCanvasElement>("canvasRef");
 const inputRef = templateRef<HTMLInputElement>("inputRef");
 
@@ -124,6 +126,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 // Focus on input when mounted
 onMounted(() => {
+  if (!inputRef.value) return;
   inputRef.value.focus();
 });
 

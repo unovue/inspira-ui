@@ -40,9 +40,9 @@
 </template>
 
 <script setup lang="ts">
-import { useIntervalFn, onKeyStroke } from "@vueuse/core";
-import { ref, watch, computed, type PropType } from "vue";
-import { cn } from "~/lib/utils";
+import { useIntervalFn, onKeyStroke, useSwipe } from "@vueuse/core";
+import { ref, watch, computed, type PropType, type Ref } from "vue";
+import { cn } from "@/lib/utils";
 
 const props = defineProps({
   images: {

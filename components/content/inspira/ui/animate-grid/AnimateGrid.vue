@@ -29,7 +29,9 @@
 </template>
 
 <script lang="ts" setup>
-import { cn } from "~/lib/utils";
+import { onMounted, ref, watch } from "vue";
+import { cn } from "@/lib/utils";
+import { useMouseInElement, useDebounceFn } from "@vueuse/core";
 
 const card = ref<HTMLElement[]>();
 interface Cards {

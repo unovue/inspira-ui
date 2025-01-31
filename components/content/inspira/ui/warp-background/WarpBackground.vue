@@ -1,5 +1,5 @@
 <template>
-  <div :class="cn('relative rounded border p-2 md:p-20', props.class)">
+  <div :class="cn('relative rounded border md:p-20', props.class)">
     <div
       :style="{
         '--perspective': `${props.perspective}px`,
@@ -71,6 +71,7 @@
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
 import Beam from "./Beam.vue";
+import { computed } from "vue";
 
 interface Props {
   perspective?: number;
@@ -93,17 +94,18 @@ const props = withDefaults(defineProps<Props>(), {
   gridColor: "hsl(var(--border))",
 });
 
-const beamDuration = computed(() => props.beamDuration * 1000);
-const beamDelayMax = computed(() => props.beamDelayMax * 1000);
-const beamDelayMin = computed(() => props.beamDelayMin * 1000);
+const beamDuration = computed(() => props.beamDuration);
+const beamDelayMax = computed(() => props.beamDelayMax);
+const beamDelayMin = computed(() => props.beamDelayMin);
 
 function generateBeams() {
   const beams = [];
+  const cellsPerSide = Math.floor(100 / props.beamSize);
+  const step = cellsPerSide / props.beamsPerSide;
 
   for (let i = 0; i < props.beamsPerSide; i++) {
-    const x = Math.floor((i * Math.floor(100 / props.beamSize)) / props.beamsPerSide);
-    const delay = Math.random() * beamDelayMax.value - beamDelayMin.value + beamDelayMin.value;
-
+    const x = Math.floor(i * step);
+    const delay = Math.random() * (beamDelayMax.value - beamDelayMin.value) + beamDelayMin.value;
     beams.push({ x, delay });
   }
   return beams;

@@ -1,5 +1,5 @@
 <template>
-  <div
+  <Motion
     ref="containerRef"
     :class="cn('relative select-none', props.class)"
     :style="{
@@ -7,6 +7,11 @@
       height: containerHeight,
       cursor: cursorImg,
     }"
+    :initial="{
+      scale: 1,
+      rotate: [0, 10, -10, 10, -10, 0],
+    }"
+    :transition="{ duration: 0.5 }"
   >
     <canvas
       ref="canvasRef"
@@ -18,12 +23,13 @@
     />
 
     <slot />
-  </div>
+  </Motion>
 </template>
 
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
-import { useMotion } from "@vueuse/motion";
+import { Motion, useAnimate } from "motion-v";
+import { ref, computed, onMounted, onUnmounted, type Ref } from "vue";
 
 const cursorImg =
   "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxNSIgc3R5bGU9ImZpbGw6I2ZmZjtzdHJva2U6IzAwMDtzdHJva2Utd2lkdGg6MXB4OyIgLz4KPC9zdmc+'), auto";
@@ -148,19 +154,12 @@ function checkCompletion() {
   }
 }
 
-const containerRef = ref<HTMLDivElement>();
+const [containerRef, animate] = useAnimate();
 async function startAnimation() {
   if (!containerRef.value) return;
-  useMotion(containerRef, {
-    initial: {
-      scale: 1,
-      rotate: [0, 10, -10, 10, -10, 0],
-      transition: { duration: 0.5 },
-    },
-    enter: {
-      scale: 1,
-      rotate: [0, 10, -10, 10, -10, 0],
-    },
+  animate(containerRef.value, {
+    scale: 1,
+    rotate: [0, 10, -10, 10, -10, 0],
   });
 
   emit("complete");

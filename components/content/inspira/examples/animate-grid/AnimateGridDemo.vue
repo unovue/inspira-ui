@@ -10,7 +10,6 @@
     </AnimateGrid>
   </div>
 </template>
-
 <script lang="ts" setup>
 import cloudflare from "./cloudflare.svg";
 

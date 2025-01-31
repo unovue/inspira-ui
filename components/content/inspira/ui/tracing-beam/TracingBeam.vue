@@ -10,8 +10,8 @@
         }"
         class="border-netural-200 ml-[27px] flex size-4 items-center justify-center rounded-full border shadow-sm"
       >
-        <div
-          :enter="{
+        <Motion
+          :animate="{
             backgroundColor: scrollYProgress > 0 ? 'white' : 'var(--emerald-500)',
             borderColor: scrollYProgress > 0 ? 'white' : 'var(--emerald-600)',
           }"
@@ -72,8 +72,10 @@
 </template>
 
 <script lang="ts" setup>
-import { cn } from "~/lib/utils";
+import { Motion } from "motion-v";
+import { cn } from "@/lib/utils";
 import { useSpring } from "vue-use-spring";
+import { ref, computed, onMounted, onUnmounted, watch } from "vue";
 
 defineProps({
   class: String,

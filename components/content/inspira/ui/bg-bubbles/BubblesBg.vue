@@ -28,6 +28,7 @@ import {
   Scene,
   PerspectiveCamera,
 } from "three";
+import { ref, onMounted, onBeforeUnmount } from "vue";
 
 defineProps({
   blur: {

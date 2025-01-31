@@ -1,14 +1,14 @@
 <template>
   <div :class="cn('relative h-full w-full', props.containerClass)">
-    <div
+    <Motion
       ref="containerRef"
-      v-motion
+      as="div"
       :initial="{ opacity: 0 }"
-      :enter="{ opacity: 1 }"
+      :animate="{ opacity: 1 }"
       class="absolute inset-0 z-0 flex size-full items-center justify-center bg-transparent"
     >
       <canvas ref="canvasRef"></canvas>
-    </div>
+    </Motion>
 
     <div :class="cn('relative z-10', props.class)">
       <slot />
@@ -19,6 +19,8 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
 import { createNoise3D } from "simplex-noise";
+import { onMounted, onUnmounted } from "vue";
+import { templateRef } from "@vueuse/core";
 
 // All constants
 const TAU = 2 * Math.PI;
@@ -56,8 +58,8 @@ const props = withDefaults(defineProps<VortexProps>(), {
   backgroundColor: "#000000",
 });
 
-const canvasRef = useTemplateRef<HTMLCanvasElement | null>("canvasRef");
-const containerRef = useTemplateRef<HTMLElement | null>("containerRef");
+const canvasRef = templateRef<HTMLCanvasElement | null>("canvasRef");
+const containerRef = templateRef<HTMLElement | null>("containerRef");
 
 const particlePropsLength = props.particleCount * particlePropCount;
 

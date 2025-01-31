@@ -16,10 +16,11 @@
 <script lang="ts" setup>
 import type { SphereIcon, IconCloudProps } from "./index";
 import { cn } from "@/lib/utils";
+import { ref, onMounted, onBeforeUnmount, reactive, watchEffect } from "vue";
 
 const props = defineProps<IconCloudProps>();
 
-const { images, ariaLabel } = props;
+const { images } = props;
 
 const canvasRef = ref<HTMLCanvasElement | null>(null);
 const animationFrameRef = ref<number>(0);

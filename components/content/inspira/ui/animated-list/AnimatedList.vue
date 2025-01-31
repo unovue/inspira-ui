@@ -7,23 +7,37 @@
       move-class="move"
     >
       <!-- Only render the items up to the current index -->
-      <div
-        v-for="(data, idx) in itemsToShow"
+      <Motion
+        v-for="data in itemsToShow"
         :key="data.id"
-        v-motion
-        :initial="getInitial(idx)"
-        :enter="getEnter(idx)"
-        :leave="getLeave()"
+        as="div"
+        :initial="{ scale: 0, opacity: 0 }"
+        :animate="{
+          scale: 1,
+          opacity: 1,
+          y: 0,
+        }"
+        :exit="{
+          scale: 0,
+          opacity: 0,
+          y: 0,
+        }"
+        :transition="{
+          type: 'spring',
+          stiffness: 350,
+          damping: 40,
+        }"
         :class="cn('mx-auto w-full')"
       >
         <component :is="data.node" />
-      </div>
+      </Motion>
     </transition-group>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { cn } from "~/lib/utils";
+import { computed, onMounted, ref, useSlots } from "vue";
+import { cn } from "@/lib/utils";
 
 interface Props {
   class?: string;
@@ -31,7 +45,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  delay: 1000,
+  delay: 1,
 });
 
 const slots = useSlots();
@@ -69,42 +83,9 @@ const itemsToShow = computed(() => displayedItems.value);
 async function wait(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
-
-function getInitial(idx: number) {
-  return { scale: 0, opacity: 0 };
-}
-
-function getEnter(idx: number) {
-  return {
-    scale: 1,
-    opacity: 1,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 250,
-      damping: 40,
-    },
-  };
-}
-
-// Get leave animation (same for all)
-function getLeave() {
-  return {
-    scale: 0,
-    opacity: 0,
-    y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 350,
-      damping: 40,
-    },
-  };
-}
 </script>
 
-<!-- Add style for smooth transition on move -->
 <style scoped>
-/* This class is added by transition-group when items move */
 .move {
   transition: transform 0.4s ease-out;
 }

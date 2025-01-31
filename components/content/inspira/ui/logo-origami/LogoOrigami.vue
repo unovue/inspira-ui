@@ -35,73 +35,63 @@
       <component :is="children[activeIndex % children.length]" />
     </div>
 
-    <TransitionGroup>
-      <!-- Upper part of the flip -->
-      <div
-        :key="activeIndex"
-        v-motion
-        :style="{
-          clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)',
-          zIndex: -activeIndex,
-          backfaceVisibility: 'hidden',
-        }"
-        :initial="{
-          rotateX: '0deg',
-          y: '-50%',
-          x: '-50%',
-        }"
-        :enter="{
-          rotateX: '-180deg',
-          transition: {
-            duration: duration * 1000,
-            ease: 'easeInOut',
-          },
-        }"
-        :leave="{
-          rotateX: '-180deg',
-          transition: {
-            duration: duration * 1000,
-            ease: 'easeInOut',
-          },
-        }"
-        class="absolute left-1/2 top-1/2"
-      >
-        <component :is="children[activeIndex % children.length]" />
-      </div>
+    <!-- Upper part of the flip -->
+    <Motion
+      :key="activeIndex"
+      as="div"
+      :style="{
+        clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)',
+        zIndex: -activeIndex,
+        backfaceVisibility: 'hidden',
+      }"
+      :initial="{
+        rotateX: '0deg',
+        y: '-50%',
+        x: '-50%',
+      }"
+      :animate="{
+        rotateX: '-180deg',
+      }"
+      :exit="{
+        rotateX: '-180deg',
+      }"
+      :transition="{
+        duration: duration,
+        ease: 'easeInOut',
+      }"
+      class="absolute left-1/2 top-1/2"
+    >
+      <component :is="children[activeIndex % children.length]" />
+    </Motion>
 
-      <!-- Lower part of the flip  -->
-      <div
-        :key="(activeIndex + 1) * 2"
-        v-motion
-        :style="{
-          clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)',
-          zIndex: activeIndex,
-          backfaceVisibility: 'hidden',
-        }"
-        :initial="{
-          rotateX: '180deg',
-          y: '-50%',
-          x: '-50%',
-        }"
-        :enter="{
-          rotateX: '0deg',
-          transition: {
-            duration: duration * 1000,
-            ease: 'easeInOut',
-          },
-        }"
-        :leave="{
-          rotateX: '0deg',
-          transition: {
-            duration: duration * 1000,
-            ease: 'easeInOut',
-          },
-        }"
-        class="absolute left-1/2 top-1/2"
-      >
-        <component :is="children[(activeIndex + 1) % children.length]" />
-      </div>
-    </TransitionGroup>
+    <!-- Lower part of the flip  -->
+    <Motion
+      :key="(activeIndex + 1) * 2"
+      as="div"
+      :style="{
+        clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)',
+        zIndex: activeIndex,
+        backfaceVisibility: 'hidden',
+      }"
+      :initial="{
+        rotateX: '180deg',
+        y: '-50%',
+        x: '-50%',
+      }"
+      :animate="{
+        rotateX: '0deg',
+      }"
+      :exit="{
+        rotateX: '0deg',
+      }"
+      :transition="{
+        duration: duration,
+        ease: 'easeInOut',
+      }"
+      class="absolute left-1/2 top-1/2"
+    >
+      <component :is="children[(activeIndex + 1) % children.length]" />
+    </Motion>
 
     <!-- Center divider line -->
     <hr
@@ -112,7 +102,9 @@
 </template>
 
 <script lang="ts" setup>
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
+import { Motion } from "motion-v";
+import { ref, onMounted, onBeforeUnmount, watchEffect, useSlots } from "vue";
 
 type LogoOrigamiProps = {
   duration?: number;

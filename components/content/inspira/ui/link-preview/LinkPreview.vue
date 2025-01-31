@@ -41,8 +41,8 @@
 </template>
 
 <script setup lang="ts">
-import type { CSSProperties } from "vue";
-import { cn } from "~/lib/utils";
+import { ref, computed, reactive, type CSSProperties } from "vue";
+import { cn } from "@/lib/utils";
 
 interface BaseProps {
   class?: string;

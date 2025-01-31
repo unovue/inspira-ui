@@ -24,7 +24,7 @@
           <span class="font-semibold text-[#E1251B]"> Vue/Nuxt</span>,
           <span class="font-semibold text-[#E1251B]"> Typescript</span>,
           <span class="font-semibold text-[#E1251B]"> Tailwind CSS</span>, and
-          <span class="font-semibold text-[#E1251B]"> @vueuse/motion</span>
+          <span class="font-semibold text-[#E1251B]"> motion-v</span>
           . <br />
           -&gt; 100% open-source, and customizable. <br />
         </p>

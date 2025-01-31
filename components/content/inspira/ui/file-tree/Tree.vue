@@ -13,13 +13,14 @@
 </template>
 
 <script lang="ts" setup>
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 import {
   type TreeContextProps,
   type TreeViewElement,
   type TreeProps,
   TREE_CONTEXT_SYMBOL,
 } from "./index";
+import { inject, computed, toRefs, ref, onMounted, provide } from "vue";
 
 const props = withDefaults(defineProps<TreeProps>(), {
   indicator: true,
