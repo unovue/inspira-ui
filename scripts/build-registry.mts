@@ -170,7 +170,7 @@ export const Index: Record<string, any> = {`;
 // Build registry/styles/[style]/[name].json.
 // ----------------------------------------------------------------------------
 async function buildStyles(registry: Registry) {
-  const targetPath = path.join(REGISTRY_PATH, "styles");
+  const targetPath = path.join(REGISTRY_PATH);
 
   // Create directory if it doesn't exist.
   if (!existsSync(targetPath)) {
@@ -539,10 +539,11 @@ try {
     process.exit(1);
   }
 
-  await buildRegistry(result.data);
-  await buildBlockRegistry(result.data);
+  // await buildRegistry(result.data);
+  // await buildBlockRegistry(result.data);
+  // We only need to build registry for component & composables
   await buildStyles(result.data);
-  await buildThemes();
+  // await buildThemes();
 
   // eslint-disable-next-line no-console
   console.log("✅ Done!");

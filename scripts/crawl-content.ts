@@ -24,6 +24,7 @@ const DEPENDENCIES = new Map<string, string[]>([
   ["qss", []],
 ]);
 
+const REGISTRY_URL = process.env.REGISTRY_URL ?? "https://inspira-ui.com/r";
 const REGISTRY_DEPENDENCY = "@/";
 
 type ArrayItem<T> = T extends Array<infer X> ? X : never;
@@ -296,7 +297,8 @@ async function getFileDependencies(filename: string, sourceCode: string) {
 
     if (source.startsWith(REGISTRY_DEPENDENCY) && !source.endsWith(".vue")) {
       const component = source.split("/").at(-1)!;
-      registryDependencies.add(component);
+      const jsonPath = component === "utils" ? component : `${REGISTRY_URL}/${component}.json`;
+      registryDependencies.add(jsonPath);
     }
   }
 
