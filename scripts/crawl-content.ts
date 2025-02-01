@@ -23,6 +23,7 @@ const DEPENDENCIES = new Map<string, string[]>([
   ["simplex-noise", []],
   ["qss", []],
   ["motion-v", []],
+  ["@number-flow/vue", []],
 ]);
 
 const REGISTRY_URL = process.env.REGISTRY_URL ?? "https://inspira-ui.com/r";
