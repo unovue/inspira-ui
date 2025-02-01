@@ -22,6 +22,7 @@ const DEPENDENCIES = new Map<string, string[]>([
   ["theme-colors", []],
   ["simplex-noise", []],
   ["qss", []],
+  ["motion-v", []],
 ]);
 
 const REGISTRY_URL = process.env.REGISTRY_URL ?? "https://inspira-ui.com/r";
