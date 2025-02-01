@@ -26,6 +26,11 @@ const DEPENDENCIES = new Map<string, string[]>([
   ["@number-flow/vue", []],
 ]);
 
+const COMPONENT_DEPENDENCIES = new Map<string, string[]>([
+  ["animated-list", ["notification"]],
+  ["scroll-island", ["animated-circular-progressbar"]],
+]);
+
 const REGISTRY_URL = process.env.REGISTRY_URL ?? "https://inspira-ui.com/r";
 const REGISTRY_DEPENDENCY = "@/";
 
@@ -239,6 +244,14 @@ async function buildUIRegistry(componentPath: string, componentName: string) {
 
     deps.dependencies.forEach((dep) => dependencies.add(dep));
     deps.registryDependencies.forEach((dep) => registryDependencies.add(dep));
+  }
+
+  // Add component dependencies if they exist in the map
+  const componentDeps = COMPONENT_DEPENDENCIES.get(componentName);
+  if (componentDeps) {
+    componentDeps.forEach((dep) => {
+      registryDependencies.add(`${REGISTRY_URL}/${dep}.json`);
+    });
   }
 
   return {
