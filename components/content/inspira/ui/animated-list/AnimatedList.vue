@@ -44,7 +44,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  delay: 1,
+  delay: 1000,
 });
 
 const slots = useSlots();
