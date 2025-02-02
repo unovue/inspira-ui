@@ -26,8 +26,6 @@ export interface BaseProps {
   speed?: ObjectValues<typeof PATTERN_BACKGROUND_SPEED>;
 }
 
-export { default as PatternBackground } from "./PatternBackground.vue";
-
 export const PATTERN_BACKGROUND_VARIANT = {
   Grid: "grid",
   Dot: "dot",
@@ -85,3 +83,5 @@ export const patternBackgroundMaskVariants = cva("bg-background", {
 });
 
 export type PatternBackgroundMaskVariants = VariantProps<typeof patternBackgroundMaskVariants>;
+
+export { default as PatternBackground } from "./PatternBackground.vue";
