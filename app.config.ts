@@ -101,13 +101,18 @@ export default defineAppConfig({
           target: "_blank",
         },
         {
-          icon: "lucide:x",
+          icon: "prime:twitter",
           to: "https://x.com/rahulv_dev",
           target: "_blank",
         },
         {
-          icon: "lucide:bot",
+          icon: "ri:discord-line",
           to: "https://discord.gg/Xbh5DwJRc9",
+          target: "_blank",
+        },
+        {
+          icon: "ri:bluesky-line",
+          to: "http://bsky.app/profile/inspira-ui.com",
           target: "_blank",
         },
       ],
@@ -161,7 +166,7 @@ export default defineAppConfig({
         },
         {
           title: "Join Discord",
-          icon: "lucide:bot",
+          icon: "ri:discord-line",
           to: "https://discord.gg/Xbh5DwJRc9",
           target: "_blank",
         },
