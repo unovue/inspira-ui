@@ -176,6 +176,18 @@ export default defineAppConfig({
           to: "https://github.com/unovue/inspira-ui/discussions",
           target: "_blank",
         },
+        {
+          title: "Follow on X",
+          icon: "prime:twitter",
+          to: "https://x.com/rahulv_dev",
+          target: "_blank",
+        },
+        {
+          title: "Follow on Bluesky",
+          icon: "ri:bluesky-line",
+          to: "http://bsky.app/profile/inspira-ui.com",
+          target: "_blank",
+        },
       ],
     },
     search: {
