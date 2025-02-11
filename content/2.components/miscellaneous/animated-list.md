@@ -8,9 +8,9 @@ description: A sequentially animated list that introduces each item with a timed
 
 ## API
 
-| Prop Name | Type     | Default | Description                                               |
-| --------- | -------- | ------- | --------------------------------------------------------- |
-| `delay`   | `number` | `1`     | The delay in seconds before adding each item to the list. |
+| Prop Name | Type     | Default | Description                                                    |
+| --------- | -------- | ------- | -------------------------------------------------------------- |
+| `delay`   | `number` | `1`     | The delay in milliseconds before adding each item to the list. |
 
 ::alert{type="warning"}
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.

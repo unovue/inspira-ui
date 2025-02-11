@@ -20,7 +20,14 @@ navBadges:
 
 You can copy and paste the following code to create this component:
 
-::CodeViewer{filename="IconCloud.vue" language="vue" componentName="IconCloud" type="ui" id="icon-cloud"}
+::code-group
+
+::CodeViewerTab{filename="IconCloud.vue" language="vue" componentName="IconCloud" type="ui" id="icon-cloud"}
+::
+
+::CodeViewerTab{filename="index.ts" language="typescript" componentName="index" type="ui" id="icon-cloud" extension="ts"}
+::
+
 ::
 
 ## Credits

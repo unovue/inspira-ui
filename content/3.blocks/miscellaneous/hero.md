@@ -10,10 +10,10 @@ description: Elevate website experience with unique hero blocks.
 
 #### Components used:
 
-- [Falling Stars Background](/components/falling-stars)
-- [Blur Reveal](/components/blur-reveal)
-- [Flip Words](/components/flip-words)
-- [Border Beam](/components/border-beam)
+- [Falling Stars Background](https://inspira-ui.com/components/backgrounds/falling-stars)
+- [Blur Reveal](https://inspira-ui.com/components/text-animations/blur-reveal)
+- [Flip Words](https://inspira-ui.com/components/text-animations/flip-words)
+- [Border Beam](https://inspira-ui.com/components/special-effects/border-beam)
 
 ### Hero Section 2
 
@@ -22,7 +22,7 @@ description: Elevate website experience with unique hero blocks.
 
 #### Components used:
 
-- [Vortex Background](/components/vortext)
-- [Animated Tooltip](/components/animated-tooltip)
-- [Text Highlight](/components/text-highlight)
-- [3D Card](/components/3d-card)
+- [Vortex Background](https://inspira-ui.com/components/backgrounds/vortex)
+- [Animated Tooltip](https://inspira-ui.com/components/miscellaneous/animated-tooltip)
+- [Text Highlight](https://inspira-ui.com/components/text-animations/text-highlight)
+- [3D Card](https://inspira-ui.com/components/cards/3d-card)
