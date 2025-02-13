@@ -1,10 +1,6 @@
 ---
 title: Morphing Tabs
 description: This is a morphing tabs interaction, recreated by Preet's work and featuring the gooey effect component.
-
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="MorphingTabsDemo" type="examples" id="morphing-tabs"}

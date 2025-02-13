@@ -1,9 +1,6 @@
 ---
 title: Tetris
 description: Tetris background component, you can even click on a block to eliminate it.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="TetrisDemo" type="examples" id="tetris"}
