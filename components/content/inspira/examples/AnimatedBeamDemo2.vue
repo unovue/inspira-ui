@@ -8,15 +8,21 @@
         <div class="flex flex-row justify-between">
           <div
             ref="div1Ref"
-            class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] dark:text-black"
+            class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-2 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]"
           >
-            <GitHubIcon />
+            <Icon
+              name="logos:github-icon"
+              size="24"
+            />
           </div>
           <div
             ref="div2Ref"
-            class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]"
+            class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-2 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]"
           >
-            <GoogleDriveIcon />
+            <Icon
+              name="logos:google-drive"
+              size="24"
+            />
           </div>
         </div>
       </div>

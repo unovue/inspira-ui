@@ -9,49 +9,70 @@
       <div class="flex flex-row items-center justify-between">
         <div
           ref="div1Ref"
-          class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] dark:text-black"
+          class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-2 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] dark:text-black"
         >
-          <GoogleDriveIcon />
+          <Icon
+            name="devicon:googlecloud"
+            size="24"
+          />
         </div>
         <div
           ref="div5Ref"
-          class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]"
+          class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-2 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]"
         >
-          <GoogleDocsIcon />
+          <Icon
+            name="logos:google-drive"
+            size="24"
+          />
         </div>
       </div>
       <div class="flex flex-row items-center justify-between">
         <div
           ref="div2Ref"
-          class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] dark:text-black"
+          class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-2 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] dark:text-black"
         >
-          <NotionIcon />
+          <Icon
+            name="logos:notion-icon"
+            size="24"
+          />
         </div>
         <div
           ref="div4Ref"
-          class="z-10 flex size-16 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]"
+          class="z-10 flex size-16 items-center justify-center rounded-full border-2 bg-white p-2 text-black shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]"
         >
-          <OpenAIIcon />
+          <Icon
+            name="simple-icons:openai"
+            size="30"
+          />
         </div>
         <div
           ref="div6Ref"
-          class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]"
+          class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-2 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]"
         >
-          <ZapierIcon />
+          <Icon
+            name="logos:google-gmail"
+            size="24"
+          />
         </div>
       </div>
       <div class="flex flex-row items-center justify-between">
         <div
           ref="div3Ref"
-          class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] dark:text-black"
+          class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-2 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)] dark:text-black"
         >
-          <WhatsAppIcon />
+          <Icon
+            name="logos:whatsapp-icon"
+            size="24"
+          />
         </div>
         <div
           ref="div7Ref"
-          class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]"
+          class="z-10 flex size-12 items-center justify-center rounded-full border-2 bg-white p-2 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]"
         >
-          <MessengerIcon />
+          <Icon
+            name="logos:messenger"
+            size="24"
+          />
         </div>
       </div>
     </div>
