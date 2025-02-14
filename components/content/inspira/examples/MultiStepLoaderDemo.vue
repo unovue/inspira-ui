@@ -10,12 +10,12 @@
         @state-change="handleStateChange"
         @complete="handleComplete"
       />
-      <UiButton
-        class="mt-4"
+      <button
+        class="mt-4 rounded-md bg-black px-4 py-2 text-sm font-medium text-white dark:bg-white dark:text-black"
         @click="toggleSimpleLoading"
       >
         {{ uiState.isSimpleLoading ? "Stop Loading" : "Start Simple Loading" }}
-      </UiButton>
+      </button>
     </section>
     <hr class="my-4 h-px w-full bg-gray-200" />
     <!-- Async Loading Demo -->
@@ -28,13 +28,13 @@
         @complete="handleComplete"
         @close="uiState.closeAsync"
       />
-      <UiButton
-        class="mt-4"
+      <button
+        class="mt-4 rounded-md bg-black px-4 py-2 text-sm font-medium text-white dark:bg-white dark:text-black"
         :disabled="uiState.isAfterTextLoading"
         @click="startAsyncLoading"
       >
         Start Async Loading
-      </UiButton>
+      </button>
     </section>
   </div>
 </template>

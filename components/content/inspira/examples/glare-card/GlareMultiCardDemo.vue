@@ -1,10 +1,10 @@
 <template>
   <div class="grid grid-cols-1 gap-10 overflow-scroll md:grid-cols-3">
     <GlareCard class="flex flex-col items-center justify-center">
-      <NuxtImg src="/logo-dark.svg" />
+      <img src="/logo-dark.svg" />
     </GlareCard>
     <GlareCard class="flex flex-col items-center justify-center">
-      <NuxtImg
+      <img
         class="absolute inset-0 size-full object-cover"
         src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       />
