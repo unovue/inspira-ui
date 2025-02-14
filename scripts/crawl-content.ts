@@ -42,18 +42,18 @@ export async function buildRegistry() {
   const registry: Registry = [];
 
   const uiPath = resolve(registryRootPath, "ui");
-  const examplesPath = resolve(registryRootPath, "examples");
+  // const examplesPath = resolve(registryRootPath, "examples");
   const blocksPath = resolve(registryRootPath, "blocks");
   const composablesPath = resolve("composables");
 
-  const [ui, example, block, hooks] = await Promise.all([
+  const [ui, block, hooks] = await Promise.all([
     crawlUI(uiPath),
-    crawlExample(examplesPath),
+    // crawlExample(examplesPath),
     crawlBlock(blocksPath),
     crawlHook(composablesPath),
   ]);
 
-  registry.push(...ui, ...example, ...block, ...hooks);
+  registry.push(...ui, ...block, ...hooks);
 
   return registry;
 }
