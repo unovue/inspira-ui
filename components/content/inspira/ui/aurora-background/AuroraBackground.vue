@@ -45,15 +45,10 @@ const props = withDefaults(defineProps<AuroraBackgroundProps>(), {
 </script>
 
 <style scoped>
+@import "tailwindcss";
+
 .aurora-background-gradient-after {
-  @apply after:content-[""] 
-          after:absolute 
-          after:inset-0 
-          after:[background-image:var(--white-gradient),var(--aurora)]
-          after:dark:[background-image:var(--dark-gradient),var(--aurora)]
-          after:[background-size:200%,_100%]
-          after:[background-attachment:fixed] 
-          after:mix-blend-difference;
+  @apply after:content-[""] after:absolute after:inset-0 after:[background-image:var(--white-gradient), var(--aurora)] after:dark:[background-image:var(--dark-gradient), var(--aurora)] after:[background-size:200%, _100%] after:[background-attachment:fixed] after:mix-blend-difference;
 }
 
 .aurora-gradient-animation::after {
@@ -66,6 +61,7 @@ const props = withDefaults(defineProps<AuroraBackgroundProps>(), {
       50% 50%,
       50% 50%;
   }
+
   100% {
     background-position:
       350% 50%,
