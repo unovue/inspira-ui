@@ -6,6 +6,22 @@ description: A macOS-style dock with magnifying icons as you hover over them.
 ::ComponentLoader{label="Preview" componentName="DockDemo" type="examples"}  
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="dock"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="Dock.vue" language="vue" componentName="Dock" type="ui" id="dock"}
+:CodeViewerTab{label="DockIcon.vue" language="vue" componentName="DockIcon" type="ui" id="dock"}
+
+::
+
 ## API
 
 ::steps
@@ -29,17 +45,6 @@ description: A macOS-style dock with magnifying icons as you hover over them.
 | --------- | ------------------------------------------------------- |
 | `default` | Component or icon to be displayed inside the dock icon. |
 
-::
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeGroup  
- ::CodeViewerTab{filename="Dock.vue" language="vue" componentName="Dock" type="ui" id="dock"}  
- ::
-::CodeViewerTab{filename="DockIcon.vue" language="vue" componentName="DockIcon" type="ui" id="dock"}  
- ::
 ::
 
 ## Credits

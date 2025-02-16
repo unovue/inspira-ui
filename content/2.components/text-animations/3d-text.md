@@ -6,6 +6,18 @@ description: A stylish 3D text component with customizable colors, shadows, and 
 ::ComponentLoader{label="Preview" componentName="Text3dDemo" type="examples"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="text-3d"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="Text3d.vue" language="vue" componentName="Text3d" type="ui" id="text-3d"}
+::
+
 ## API
 
 | Prop Name           | Type      | Default    | Description                                        |
@@ -20,13 +32,6 @@ description: A stylish 3D text component with customizable colors, shadows, and 
 | `class`             | `string`  | `""`       | Additional CSS classes for custom styling.         |
 | `animate`           | `boolean` | `true`     | Enables wiggle animation when set to `true`.       |
 | `animationDuration` | `number`  | `1500`     | Duration of the wiggle animation in milliseconds.  |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="Text3d.vue" language="vue" componentName="Text3d" type="ui" id="text-3d"}
-::
 
 ## Features
 

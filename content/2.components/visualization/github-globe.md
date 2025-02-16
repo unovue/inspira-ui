@@ -8,38 +8,52 @@ description: A 3D interactive globe visualization with customizable arcs, points
 
 ::alert{type="info"}
 **Note:** This component uses Three.js & requires `three`, `three-globe` & `postprocessing` npm package as a dependency.
-
-Please install Three.js using following commands.
-
-    ::code-group
-
-    ```bash [npm]
-    npm install three postprocessing three-globe
-    npm install -D @types/three
-    ```
-
-    ```bash [pnpm]
-    pnpm install three postprocessing three-globe
-    pnpm install -D @types/three
-    ```
-
-    ```bash [bun]
-    bun add three postprocessing three-globe
-    bun add -d @types/three
-    ```
-
-    ```bash [yarn]
-    yarn add three postprocessing three-globe
-    yarn add --dev @types/three
-    ```
-    ::
-
 ::
 
 ::alert{type="warning"}
 **For Nuxt users**:
-
 Use `<ClientOnly>` tag to wrap this component to avoid `window is not defined` error.
+::
+
+## Install using CLI
+
+::InstallationCli{componentId="github-globe"}
+::
+
+## Install Manually
+
+::steps{level=4}
+
+#### Install the dependencies
+
+::code-group
+
+```bash [npm]
+npm install three postprocessing three-globe
+npm install -D @types/three
+```
+
+```bash [pnpm]
+pnpm install three postprocessing three-globe
+pnpm install -D @types/three
+```
+
+```bash [bun]
+bun add three postprocessing three-globe
+bun add -d @types/three
+```
+
+```bash [yarn]
+yarn add three postprocessing three-globe
+yarn add --dev @types/three
+```
+
+::
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="GithubGlobe.vue" language="vue" componentName="GithubGlobe" type="ui" id="github-globe"}  
+::
 ::
 
 ## API
@@ -82,13 +96,6 @@ Use `<ClientOnly>` tag to wrap this component to avoid `window is not defined` e
 | `endLng`   | `number` | Ending longitude for an arc.                    |
 | `arcAlt`   | `number` | Altitude of the arc (determines arc height).    |
 | `color`    | `string` | Color of the arc or point in hex or RGB format. |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="GithubGlobe.vue" language="vue" componentName="GithubGlobe" type="ui" id="github-globe"}
-::
 
 ## Features
 

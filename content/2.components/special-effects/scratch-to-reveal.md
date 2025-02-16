@@ -9,6 +9,18 @@ navBadges:
 ::ComponentLoader{label="Preview" componentName="ScratchToRevealDemo" type="examples" id="scratch-to-reveal"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="scratch-to-reveal"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="ScratchToReveal.vue" language="vue" componentName="ScratchToReveal" type="ui" id="scratch-to-reveal"}
+::
+
 ## API
 
 | Prop Name              | Type                     | Default | Description                                                                                   |

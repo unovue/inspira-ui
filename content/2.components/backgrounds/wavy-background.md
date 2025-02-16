@@ -7,29 +7,44 @@ description: A cool background effect with waves that move.
 ::
 
 ::alert{type="info"}
-**Note:** This component uses simplex-noise & requires `simplex-noise` npm package as a dependency.
+**Note:** This component requires `simplex-noise` as a dependency.
+::
 
-Please install simplex-noise using following commands.
+## Install using CLI
 
-    ::code-group
+::InstallationCli{componentId="wavy-background"}
+::
 
-    ```bash [npm]
-    npm install simplex-noise
-    ```
+## Install Manually
 
-    ```bash [pnpm]
-    pnpm install simplex-noise
-    ```
+::steps{level=4}
 
-    ```bash [bun]
-    bun add simplex-noise
-    ```
+#### Install the dependencies
 
-    ```bash [yarn]
-    yarn add simplex-noise
-    ```
-    ::
+::code-group
 
+```bash [npm]
+npm install simplex-noise
+```
+
+```bash [pnpm]
+pnpm install simplex-noise
+```
+
+```bash [bun]
+bun add simplex-noise
+```
+
+```bash [yarn]
+yarn add simplex-noise
+```
+
+::
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="WavyBackground.vue" language="vue" componentName="WavyBackground" type="ui" id="wavy-background"}  
+::
 ::
 
 ## API
@@ -45,13 +60,6 @@ Please install simplex-noise using following commands.
 | `speed`          | `"slow" \| "fast"` | `"fast"`                                                  | Range of speed variation for particles.                    |
 | `waveOpacity`    | `number`           | `0.5`                                                     | Base radius of particles.                                  |
 | `[key: string]`  | `any`              | `-`                                                       | Range of radius variation for particles.                   |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="WavyBackground.vue" language="vue" componentName="WavyBackground" type="ui" id="wavy-background"}  
-::
 
 ## Features
 

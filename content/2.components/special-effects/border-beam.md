@@ -10,6 +10,18 @@ description: A stylish animated border beam effect with customizable size, durat
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="border-beam"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="BorderBeam.vue" language="vue" componentName="BorderBeam" type="ui" id="border-beam"}
+::
+
 ## API
 
 | Prop Name     | Type     | Default     | Description                                                           |
@@ -22,13 +34,6 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 | `colorFrom`   | `string` | `"#ffaa40"` | Starting color for the gradient of the beam.                          |
 | `colorTo`     | `string` | `"#9c40ff"` | Ending color for the gradient of the beam.                            |
 | `delay`       | `number` | `0`         | Delay before the animation starts, in seconds.                        |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="BorderBeam.vue" language="vue" componentName="BorderBeam" type="ui" id="border-beam"}
-::
 
 ## Features
 

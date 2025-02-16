@@ -9,13 +9,27 @@ navBadges:
 ::ComponentLoader{label="Preview" componentName="FileUploadDemo" type="examples"}
 ::
 
-## API
-
 ::alert{type="warning"}
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
-::steps
+## Install using CLI
+
+::InstallationCli{componentId="file-upload"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="FileUpload.vue" language="vue" componentName="FileUpload" type="ui" id="file-upload"}
+:CodeViewerTab{label="FileUploadGrid.vue" language="vue" componentName="FileUploadGrid" type="ui" id="file-upload"}
+
+::
+
+## API
 
 ### `FileUpload`
 
@@ -56,22 +70,6 @@ The `FileUploadGrid` component provides the background grid pattern for the file
 ```vue [MyComponent.vue]
 <FileUploadGrid class="custom-class" />
 ```
-
-::
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::code-group
-
-::CodeViewerTab{label="FileUpload.vue" icon="vscode-icons:file-type-vue" componentName="FileUpload" type="ui" id="file-upload"}
-::
-
-::CodeViewerTab{label="FileUploadGrid.vue" icon="vscode-icons:file-type-vue" componentName="FileUploadGrid" type="ui" id="file-upload"}
-::
-
-::
 
 ## Credits
 

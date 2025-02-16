@@ -6,6 +6,23 @@ description: A container scrolling effect that transforms the content inside bas
 ::ComponentLoader{label="Preview" componentName="ContainerScrollDemo" type="examples"}  
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="container-scroll"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="ContainerScroll.vue" language="vue" componentName="ContainerScroll" type="ui" id="container-scroll"}
+:CodeViewerTab{label="ContainerScrollTitle.vue" language="vue" componentName="ContainerScrollTitle" type="ui" id="container-scroll"}
+:CodeViewerTab{label="ContainerScrollCard.vue" language="vue" componentName="ContainerScrollCard" type="ui" id="container-scroll"}
+
+::
+
 ## API
 
 ::steps
@@ -88,23 +105,6 @@ To customize the scroll animations and responsiveness, you can set the following
 - **`--scale-end`**: Final scale value for the card as the scroll progresses.
 - **`--rotate-start`**: Initial rotation value for the card.
 - **`--rotate-end`**: Final rotation value for the card as the scroll progresses.
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::code-group
-
-    ::CodeViewerTab{label="ContainerScroll.vue" language="vue" componentName="ContainerScroll" type="ui" id="container-scroll"}
-    ::
-
-    ::CodeViewerTab{label="ContainerScrollTitle.vue" language="vue" componentName="ContainerScrollTitle" type="ui" id="container-scroll"}
-    ::
-
-    ::CodeViewerTab{label="ContainerScrollCard.vue" language="vue" componentName="ContainerScrollCard" type="ui" id="container-scroll"}
-    ::
-
-::
 
 ## Features
 

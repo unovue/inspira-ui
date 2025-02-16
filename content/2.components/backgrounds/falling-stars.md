@@ -6,19 +6,24 @@ description: A stunning animated starfield background with glowing and sharp tra
 ::ComponentLoader{label="Preview" componentName="FallingStarsBgDemo" type="examples" id="backgrounds"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="bg-falling-stars"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="FallingStarsBg.vue" language="vue" componentName="FallingStarsBg" type="ui" id="bg-falling-stars"}
+::
+
 ## API
 
 | Prop Name | Type     | Default  | Description                                 |
 | --------- | -------- | -------- | ------------------------------------------- |
 | `color`   | `string` | `"#FFF"` | Color of the stars in the starfield.        |
 | `count`   | `number` | `200`    | Number of stars displayed in the animation. |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="FallingStarsBg.vue" language="vue" componentName="FallingStarsBg" type="ui" id="bg-falling-stars"}
-::
 
 ## Features
 

@@ -7,11 +7,27 @@ Grid background with dot
 ::ComponentLoader{label="Preview" componentName="PatternBackgroundDotDemo" type="examples" id="pattern-background"}
 ::
 
-Grid background with big dot and ellipse on top
-::ComponentLoader{label="Preview" componentName="PatternBackgroundBigDotDemo" type="examples" id="pattern-background"}
+## Install using CLI
+
+::InstallationCli{componentId="pattern-background"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="PatternBackground.vue" language="vue" componentName="PatternBackground" type="ui" id="pattern-background"}
+:CodeViewerTab{filename="index.ts" language="typescript" componentName="index" type="ui" id="pattern-background" extension="ts"}
+
 ::
 
 ## Examples
+
+Grid background with big dot and ellipse on top
+::ComponentLoader{label="Preview" componentName="PatternBackgroundBigDotDemo" type="examples" id="pattern-background"}
+::
 
 Grid background without animation
 ::ComponentLoader{label="Preview" componentName="PatternBackgroundGridDemo" type="examples" id="pattern-background"}
@@ -35,20 +51,6 @@ Small grid background with animation
 ### Custom variants, values and constants
 
 You can customize your needs directly within the `index.ts` file. See code below.
-
-## Component Code
-
-You can copy and paste the following code to create these components (put them under the same folder):
-
-::code-group
-
-::CodeViewerTab{label="PatternBackground.vue" language="vue" componentName="PatternBackground" type="ui" id="pattern-background"}
-::
-
-::CodeViewerTab{filename="index.ts" language="typescript" componentName="index" type="ui" id="pattern-background" extension="ts"}
-::
-
-::
 
 ## Credits
 

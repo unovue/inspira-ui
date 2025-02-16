@@ -6,6 +6,18 @@ description: An SVG mockup of the Safari browser.
 ::ComponentLoader{label="Preview" componentName="SafariMockupDemo" type="examples" id="mockups"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="safari-mockup"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="SafariMockup.vue" language="vue" componentName="SafariMockup" type="ui" id="safari-mockup"}
+::
+
 ## API
 
 | Prop Name | Type     | Default | Description                                    |
@@ -14,13 +26,6 @@ description: An SVG mockup of the Safari browser.
 | `src`     | `string` | `null`  | URL of the image to display inside the mockup. |
 | `width`   | `number` | `1203`  | Width of the mockup SVG in pixels.             |
 | `height`  | `number` | `753`   | Height of the mockup SVG in pixels.            |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="SafariMockup.vue" language="vue" componentName="SafariMockup" type="ui" id="safari-mockup"}
-::
 
 ## Features
 

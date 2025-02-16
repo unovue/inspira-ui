@@ -6,6 +6,18 @@ description: An SVG mockup of an iPhone.
 ::ComponentLoader{label="Preview" componentName="iPhone15ProMockupDemo" type="examples" id="mockups"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="iphone-mockup"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="iPhone15ProMockup.vue" language="vue" componentName="iPhone15ProMockup" type="ui" id="iphone-mockup"}
+::
+
 ## API
 
 | Prop Name | Type     | Default | Description                                    |
@@ -13,13 +25,6 @@ description: An SVG mockup of an iPhone.
 | `width`   | `number` | `433`   | Width of the mockup SVG in pixels.             |
 | `height`  | `number` | `882`   | Height of the mockup SVG in pixels.            |
 | `src`     | `string` | `null`  | URL of the image to display inside the mockup. |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="iPhone15ProMockup.vue" language="vue" componentName="iPhone15ProMockup" type="ui" id="iphone-mockup"}
-::
 
 ## Features
 

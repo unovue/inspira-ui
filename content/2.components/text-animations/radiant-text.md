@@ -6,19 +6,24 @@ description: A glare effect on text.
 ::ComponentLoader{label="Preview" componentName="RadiantTextDemo" type="examples"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="radiant-text"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="RadiantText.vue" language="vue" componentName="RadiantText" type="ui" id="radiant-text"}
+::
+
 ## API
 
 | Prop Name      | Type     | Default | Description                           |
 | -------------- | -------- | ------- | ------------------------------------- |
 | `duration`     | `number` | `10`    | Duration of the animation in seconds. |
 | `radiantWidth` | `number` | `100`   | Width of the radiant animation.       |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="RadiantText.vue" language="vue" componentName="RadiantText" type="ui" id="radiant-text"}
-::
 
 ## Credits
 

@@ -10,6 +10,25 @@ description: An SVG beam connecting elements with animation.
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="animated-beam"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="AnimatedBeam.vue" language="vue" componentName="AnimatedBeam" type="ui" id="animated-beam"}
+::
+
+## Example
+
+Double-sided beam.
+
+::ComponentLoader{label="Preview" componentName="AnimatedBeamDemo2" type="examples"}
+::
+
 ## API
 
 | Prop Name            | Type          | Default                | Description                                                                  |
@@ -31,20 +50,6 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 | `startYOffset`       | `number`      | `0`                    | Vertical offset for the beam's starting point.                               |
 | `endXOffset`         | `number`      | `0`                    | Horizontal offset for the beam's ending point.                               |
 | `endYOffset`         | `number`      | `0`                    | Vertical offset for the beam's ending point.                                 |
-
-## Example
-
-Double-sided beam.
-
-::ComponentLoader{label="Preview" componentName="AnimatedBeamDemo2" type="examples"}
-::
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="AnimatedBeam.vue" language="vue" componentName="AnimatedBeam" type="ui" id="animated-beam"}
-::
 
 ## Features
 

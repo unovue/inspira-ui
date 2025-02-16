@@ -6,6 +6,22 @@ description: A customizable scrolling component that loops its content horizonta
 ::ComponentLoader{label="Preview" componentName="MarqueeDemo" type="examples" id="marquee"}  
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="marquee"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="Marquee.vue" language="vue" componentName="Marquee" type="ui" id="marquee"}
+:CodeViewerTab{label="ReviewCard.vue" language="vue" componentName="ReviewCard" type="examples" id="marquee"}
+
+::
+
 ## API
 
 | Prop Name      | Type      | Default | Description                                                               |
@@ -15,19 +31,6 @@ description: A customizable scrolling component that loops its content horizonta
 | `pauseOnHover` | `boolean` | `false` | Pauses the marquee animation when hovered.                                |
 | `vertical`     | `boolean` | `false` | Sets the scrolling direction to vertical instead of horizontal.           |
 | `repeat`       | `number`  | `4`     | Number of times the content inside the marquee should be repeated.        |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::code-group
-
-::CodeViewerTab{label="Marquee.vue" language="vue" componentName="Marquee" type="ui" id="marquee"}
-::
-::CodeViewerTab{label="ReviewCard.vue" language="vue" componentName="ReviewCard" type="examples" id="marquee"}
-::
-
-::
 
 ## Features
 

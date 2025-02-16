@@ -6,6 +6,18 @@ description: A card component with a dynamic spotlight effect that follows the m
 ::ComponentLoader{label="Preview" componentName="CardSpotlightDemo" type="examples"}  
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="card-spotlight"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="CardSpotlight.vue" language="vue" componentName="CardSpotlight" type="ui" id="card-spotlight"}
+::
+
 ## API
 
 | Prop Name         | Type     | Default     | Description                                                 |
@@ -14,13 +26,6 @@ description: A card component with a dynamic spotlight effect that follows the m
 | `gradientColor`   | `string` | `'#262626'` | The color of the spotlight gradient.                        |
 | `gradientOpacity` | `number` | `0.8`       | The opacity level of the spotlight gradient effect.         |
 | `slotClass`       | `string` | `undefined` | Class to apply to the parent container containing the slot. |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="CardSpotlight.vue" language="vue" componentName="CardSpotlight" type="ui" id="card-spotlight"}
-::
 
 ## Features
 

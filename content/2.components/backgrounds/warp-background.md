@@ -6,6 +6,22 @@ description: A container component that applies a warp animation effect to its c
 ::ComponentLoader{label="Preview" componentName="WarpBackgroundDemo" type="examples" id="warp-background"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="warp-background"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="WarpBackground.vue" language="vue" componentName="WarpBackground" type="ui" id="warp-background"}
+:CodeViewerTab{filename="Beam.vue" language="vue" componentName="Beam" type="ui" id="warp-background"}
+
+::
+
 ## API
 
 | Prop Name      | Type     | Default                | Description                               |
@@ -17,18 +33,6 @@ description: A container component that applies a warp animation effect to its c
 | `beamDelayMin` | `number` | `0`                    | The minimum delay of the beams in seconds |
 | `beamDuration` | `number` | `3`                    | The duration of the beams                 |
 | `gridColor`    | `string` | `"hsl(var(--border))"` | The color of the grid lines               |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeGroup
-::CodeViewer{filename="WarpBackground.vue" language="vue" componentName="WarpBackground" type="ui" id="warp-background"}
-::
-
-::CodeViewer{filename="Beam.vue" language="vue" componentName="Beam" type="ui" id="warp-background"}
-::
-::
 
 ## Credits
 

@@ -6,19 +6,24 @@ description: A subtle Aurora or Southern Lights background for your website.
 ::ComponentLoader{label="Preview" componentName="AuroraBackgroundDemo" type="examples" id="aurora-background"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="aurora-background"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="AuroraBackground.vue" language="vue" componentName="AuroraBackground" type="ui" id="aurora-background"}
+::
+
 ## API
 
 | Prop Name        | Type      | Default | Description                                                               |
 | ---------------- | --------- | ------- | ------------------------------------------------------------------------- |
 | `class`          | `string`  | `-`     | Additional CSS classes to apply to the component for styling.             |
 | `radialGradient` | `boolean` | `true`  | Determines whether a radial gradient effect is applied to the background. |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="AuroraBackground.vue" language="vue" componentName="AuroraBackground" type="ui" id="aurora-background"}
-::
 
 ## Features
 

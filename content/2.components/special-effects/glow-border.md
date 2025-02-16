@@ -10,6 +10,18 @@ description: An animated border effect.
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="glow-border"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="GlowBorder.vue" language="vue" componentName="GlowBorder" type="ui" id="glow-border"}
+::
+
 ## API
 
 | Prop Name      | Type                 | Default | Description                                                |
@@ -18,13 +30,6 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 | `color`        | `string \| string[]` | `#FFF`  | Color or array of colors to applied on the glowing border. |
 | `borderRadius` | `number`             | `10`    | Radius of the border.                                      |
 | `borderWidth`  | `number`             | `2`     | Width of the border.                                       |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="GlowBorder.vue" language="vue" componentName="GlowBorder" type="ui" id="glow-border"}
-::
 
 ## Credits
 

@@ -6,6 +6,18 @@ description: An animated box reveal effect with customizable colors, duration, a
 ::ComponentLoader{label="Preview" componentName="BoxRevealDemo" type="examples"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="box-reveal"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="BoxReveal.vue" language="vue" componentName="BoxReveal" type="ui" id="box-reveal"}
+::
+
 ## API
 
 | Prop Name  | Type     | Default     | Description                                          |
@@ -14,13 +26,6 @@ description: An animated box reveal effect with customizable colors, duration, a
 | `duration` | `number` | `0.5`       | Duration of the reveal animation in seconds.         |
 | `delay`    | `number` | `0.25`      | Delay before the reveal animation starts in seconds. |
 | `class`    | `string` | `""`        | Additional CSS classes for custom styling.           |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="BoxReveal.vue" language="vue" componentName="BoxReveal" type="ui" id="box-reveal"}
-::
 
 ## Features
 

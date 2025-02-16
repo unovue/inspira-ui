@@ -6,6 +6,22 @@ description: An animated ripple effect typically used behind elements to emphasi
 ::ComponentLoader{label="Preview" componentName="RippleDemo" type="examples" id="ripple"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="ripple"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="Ripple.vue" language="vue" componentName="Ripple" type="ui" id="ripple"}
+:CodeViewerTab{filename="RippleCircle.vue" language="vue" componentName="RippleCircle" type="ui" id="ripple"}
+:CodeViewerTab{filename="RippleContainer.vue" language="vue" componentName="RippleContainer" type="ui" id="ripple"}
+::
+
 ## Examples
 
 Only lines
@@ -34,23 +50,6 @@ Blobed
 | `circleClass`                 | `string` | `undefined` | CSS class name(s) for additional styling of circles.                   |
 | `waveSpeed`                   | `number` | `80`        | The animation speed for the wave effect, measured in ms.               |
 | `numberOfCircles`             | `number` | `7`         | The number of ripple circles to render.                                |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::code-group
-
-::CodeViewerTab{filename="Ripple.vue" language="vue" componentName="Ripple" type="ui" id="ripple"}
-::
-
-::CodeViewerTab{filename="RippleCircle.vue" language="vue" componentName="RippleCircle" type="ui" id="ripple"}
-::
-
-::CodeViewerTab{filename="RippleContainer.vue" language="vue" componentName="RippleContainer" type="ui" id="ripple"}
-::
-
-::
 
 ## Credits
 

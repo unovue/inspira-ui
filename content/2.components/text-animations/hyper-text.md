@@ -6,6 +6,18 @@ description: A hyper changing text animation as you hover..
 ::ComponentLoader{label="Preview" componentName="HyperTextDemo" type="examples"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="hyper-text"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="HyperText.vue" language="vue" componentName="HyperText" type="ui" id="hyper-text"}
+::
+
 ## API
 
 | Prop Name       | Type      | Default  | Description                                               |
@@ -14,13 +26,6 @@ description: A hyper changing text animation as you hover..
 | `text`          | `string`  | Required | Text to animate                                           |
 | `duration`      | `number`  | `0.8`    | The total duration (in seconds) for the entire animation. |
 | `animateOnLoad` | `boolean` | `true`   | Play animation on load                                    |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="HyperText.vue" language="vue" componentName="HyperText" type="ui" id="hyper-text"}
-::
 
 ## Credits
 
