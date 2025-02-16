@@ -5,6 +5,8 @@ export default defineNuxtConfig({
 
   modules: ["@nuxt/image", "nuxt-gtag", "@nuxt/eslint", "@nuxt/scripts", "motion-v/nuxt"],
 
+  css: ["~/assets/css/main.css"],
+
   components: [
     {
       path: "~/components",

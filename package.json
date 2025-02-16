@@ -29,7 +29,7 @@
     "nuxt-gtag": "^3.0.2",
     "postprocessing": "^6.36.7",
     "qss": "^3.0.0",
-    "shadcn-docs-nuxt": "1.0.1-next.1",
+    "shadcn-docs-nuxt": "1.0.1-next.3",
     "simplex-noise": "^4.0.3",
     "theme-colors": "^0.1.0",
     "three": "^0.173.0",

@@ -51,8 +51,8 @@ importers:
         specifier: ^3.0.0
         version: 3.0.0
       shadcn-docs-nuxt:
-        specifier: 1.0.1-next.1
-        version: 1.0.1-next.1(@parcel/watcher@2.5.1)(@types/google.maps@3.58.1)(@types/node@22.13.4)(@types/vimeo__player@2.18.3)(@types/youtube@0.1.0)(@unhead/vue@1.11.19(vue@3.5.13(typescript@5.7.3)))(db0@0.2.4)(eslint@9.20.1(jiti@2.4.2))(ioredis@5.5.0)(lightningcss@1.29.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.34.7)(terser@5.39.0)(tsx@4.19.2)(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))(yaml@2.7.0)
+        specifier: 1.0.1-next.3
+        version: 1.0.1-next.3(@parcel/watcher@2.5.1)(@types/google.maps@3.58.1)(@types/node@22.13.4)(@types/vimeo__player@2.18.3)(@types/youtube@0.1.0)(@unhead/vue@1.11.19(vue@3.5.13(typescript@5.7.3)))(db0@0.2.4)(eslint@9.20.1(jiti@2.4.2))(ioredis@5.5.0)(lightningcss@1.29.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.34.7)(terser@5.39.0)(tsx@4.19.2)(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))(yaml@2.7.0)
       simplex-noise:
         specifier: ^4.0.3
         version: 4.0.3
@@ -4986,8 +4986,8 @@ packages:
   setprototypeof@1.2.0:
     resolution: {integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==}
 
-  shadcn-docs-nuxt@1.0.1-next.1:
-    resolution: {integrity: sha512-SFKSZWCo7sWdQACQQ6J5mFlPjqXSqc8E5bDlkShnpyd5qJTps67Q+LDNBIF8Kxd19UpjMNFeLPeyP+ss2QmZzQ==}
+  shadcn-docs-nuxt@1.0.1-next.3:
+    resolution: {integrity: sha512-U3BeKZ98nN5h6yTu4GfsZUdr/5eQ+CgiT3Omu9/z+zdizESBKkO6NNuGGqK30cSvIB6Zm6IHhazKzxRy+Z+Gcw==}
 
   shadcn-nuxt@0.11.3:
     resolution: {integrity: sha512-Q0OxqTEbTmtbm/4wV9jd/7DTQYn65AGHkVJZjjHQdHGHTHCwhAbZ2jlCPnMuzJ8kgSsJyXFGNcImAphDCjjV5w==}
@@ -12155,7 +12155,7 @@ snapshots:
 
   setprototypeof@1.2.0: {}
 
-  shadcn-docs-nuxt@1.0.1-next.1(@parcel/watcher@2.5.1)(@types/google.maps@3.58.1)(@types/node@22.13.4)(@types/vimeo__player@2.18.3)(@types/youtube@0.1.0)(@unhead/vue@1.11.19(vue@3.5.13(typescript@5.7.3)))(db0@0.2.4)(eslint@9.20.1(jiti@2.4.2))(ioredis@5.5.0)(lightningcss@1.29.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.34.7)(terser@5.39.0)(tsx@4.19.2)(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))(yaml@2.7.0):
+  shadcn-docs-nuxt@1.0.1-next.3(@parcel/watcher@2.5.1)(@types/google.maps@3.58.1)(@types/node@22.13.4)(@types/vimeo__player@2.18.3)(@types/youtube@0.1.0)(@unhead/vue@1.11.19(vue@3.5.13(typescript@5.7.3)))(db0@0.2.4)(eslint@9.20.1(jiti@2.4.2))(ioredis@5.5.0)(lightningcss@1.29.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.34.7)(terser@5.39.0)(tsx@4.19.2)(vite@6.1.0(@types/node@22.13.4)(jiti@2.4.2)(lightningcss@1.29.1)(terser@5.39.0)(tsx@4.19.2)(yaml@2.7.0))(yaml@2.7.0):
     dependencies:
       '@iconify-json/lucide': 1.2.26
       '@iconify-json/vscode-icons': 1.2.14
