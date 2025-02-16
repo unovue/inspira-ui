@@ -18,7 +18,7 @@ description: A sequentially animated list that introduces each item with a timed
 ::code-group
 
 :CodeViewerTab{label="AnimatedList.vue" language="vue" componentName="AnimatedList" type="ui" id="animated-list"}
-:CodeViewerTab{label="Notification.vue" language="vue" componentName="Notification" type="ui" id="notification"}
+:CodeViewerTab{label="Notification.vue" language="vue" componentName="Notification" type="ui" id="animated-list"}
 ::
 
 ## API
