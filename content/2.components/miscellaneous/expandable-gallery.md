@@ -1,9 +1,6 @@
 ---
 title: Expandable Gallery
 description: A responsive image gallery with an interactive hover effect that expands images dynamically.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="ExpandableGalleryDemo" type="examples" id="expandable-gallery"}
