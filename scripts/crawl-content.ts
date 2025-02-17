@@ -26,8 +26,8 @@ const DEPENDENCIES = new Map<string, string[]>([
   ["@number-flow/vue", []],
 ]);
 
+// This map is used when a basic Inspira UI component internally uses another Inspira component.
 const COMPONENT_DEPENDENCIES = new Map<string, string[]>([
-  ["animated-list", ["notification"]],
   ["scroll-island", ["animated-circular-progressbar"]],
 ]);
 
