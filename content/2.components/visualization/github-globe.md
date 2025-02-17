@@ -54,6 +54,11 @@ yarn add --dev @types/three
 
 ::CodeViewer{filename="GithubGlobe.vue" language="vue" componentName="GithubGlobe" type="ui" id="github-globe"}  
 ::
+
+#### Download GeoJSON file
+
+Download a GeoJSON file containing the globe's geographical data from [GeoJSON Maps](https://geojson-maps.kyd.au/) by customizing the continents and detail level. Save the downloaded file as `globe.json` in the same folder as your component.
+
 ::
 
 ## API
