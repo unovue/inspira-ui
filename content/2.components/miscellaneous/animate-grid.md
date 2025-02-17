@@ -13,9 +13,17 @@ description: Skew Animation grid with box shadow.
 
 ## Install Manually
 
+::steps{level=4}
+
 #### Copy and paste the following code
 
 ::CodeViewer{filename="AnimateGrid.vue" language="vue" componentName="AnimateGrid" type="ui" id="animate-grid"}
+::
+
+#### Add SVG file
+
+Add at least one SVG file to the same folder as your component and update the import in your component to use it
+
 ::
 
 ## API
