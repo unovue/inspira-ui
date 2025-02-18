@@ -6,6 +6,24 @@ description: Animated company cloud logs. Usually we can use to show company log
 ::ComponentLoader{label="Preview" componentName="StaticLogoCloudDemo" type="examples" id="logo-cloud"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="logo-cloud"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="AnimatedLogoCloud.vue" language="vue" componentName="AnimatedLogoCloud" type="ui" id="logo-cloud"}
+:CodeViewerTab{label="IconLogoCloud.vue" language="vue" componentName="IconLogoCloud" type="ui" id="logo-cloud"}
+:CodeViewerTab{label="StaticLogoCloud.vue" language="vue" componentName="StaticLogoCloud" type="ui" id="logo-cloud"}
+:CodeViewerTab{filename="index.ts" language="typescript" componentName="index" type="ui" id="logo-cloud" extension="ts"}
+
+::
+
 ## Examples
 
 ### Animated logs
@@ -29,24 +47,6 @@ Company logo icons
 | `class`   | `string` | `-`                         | The delay in milliseconds before adding each item to the list. |
 | `title`   | `string` | `Trusted by Companies like` | Title of animated logs.                                        |
 | `logos`   | `[]`     | `[{name: "", path: ""}]`    | Array of items(logos) with name & path fields.                 |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeGroup
-::CodeViewerTab{label="StaticLogoCloud.vue" language="vue" componentName="StaticLogoCloud" type="ui" id="logo-cloud"}
-::
-
-::CodeViewerTab{label="AnimatedLogoCloud.vue" language="vue" componentName="AnimatedLogoCloud" type="ui" id="logo-cloud"}
-::
-
-::CodeViewerTab{label="IconLogoCloud.vue" language="vue" componentName="IconLogoCloud" type="ui" id="logo-cloud"}
-::
-
-::CodeViewerTab{filename="index.ts" language="ts" componentName="index" type="ui" id="logo-cloud" extension="ts"}
-::
-::
 
 ## Credits
 

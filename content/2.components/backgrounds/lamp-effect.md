@@ -6,6 +6,18 @@ description: A captivating lamp lighting effect with conic gradients, spotlights
 ::ComponentLoader{label="Preview" componentName="LampEffectDemo" type="examples"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="lamp-effect"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="LampEffect.vue" language="vue" componentName="LampEffect" type="ui" id="lamp-effect"}
+::
+
 ## API
 
 | Prop Name  | Type     | Default | Description                                    |
@@ -13,13 +25,6 @@ description: A captivating lamp lighting effect with conic gradients, spotlights
 | `delay`    | `number` | `0.5`   | Delay before the animation starts, in seconds. |
 | `duration` | `number` | `0.8`   | Duration of the animation, in seconds.         |
 | `class`    | `string` | `""`    | Additional CSS classes for custom styling.     |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="LampEffect.vue" language="vue" componentName="LampEffect" type="ui" id="lamp-effect"}
-::
 
 ## Features
 

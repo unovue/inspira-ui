@@ -6,37 +6,52 @@ description: A wavy, swirly, vortex background ideal for CTAs and backgrounds.
 ::ComponentLoader{label="Preview" componentName="VortexDemo" type="examples" id="vortex"}
 ::
 
+::alert{type="info"}
+**Note:** This component requires `simplex-noise` as a dependency.
+::
+
+## Install using CLI
+
+::InstallationCli{componentId="vortex"}
+::
+
+## Install Manually
+
+::steps{level=4}
+
+#### Install the dependencies
+
+::code-group
+
+```bash [npm]
+npm install simplex-noise
+```
+
+```bash [pnpm]
+pnpm install simplex-noise
+```
+
+```bash [bun]
+bun add simplex-noise
+```
+
+```bash [yarn]
+yarn add simplex-noise
+```
+
+::
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="Vortex.vue" language="vue" componentName="Vortex" type="ui" id="vortex"}  
+::
+::
+
 ## Example
 
 Full page demo usage
 
 ::ComponentLoader{label="Preview" componentName="VortexFullPageDemo" type="examples" id="vortex"}
-::
-
-::alert{type="info"}
-**Note:** This component uses simplex-noise & requires `simplex-noise` npm package as a dependency.
-
-Please install simplex-noise using following commands.
-
-    ::code-group
-
-    ```bash [npm]
-    npm install simplex-noise
-    ```
-
-    ```bash [pnpm]
-    pnpm install simplex-noise
-    ```
-
-    ```bash [bun]
-    bun add simplex-noise
-    ```
-
-    ```bash [yarn]
-    yarn add simplex-noise
-    ```
-    ::
-
 ::
 
 ## API
@@ -53,13 +68,6 @@ Please install simplex-noise using following commands.
 | `baseRadius`      | `number` | `1`         | Base radius of particles.                            |
 | `rangeRadius`     | `number` | `2`         | Range of radius variation for particles.             |
 | `backgroundColor` | `string` | `"#000000"` | Background color of the canvas.                      |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="Vortex.vue" language="vue" componentName="Vortex" type="ui" id="vortex"}  
-::
 
 ## Features
 

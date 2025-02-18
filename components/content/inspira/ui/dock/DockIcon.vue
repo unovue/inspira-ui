@@ -11,7 +11,7 @@
       marginRight: margin,
     }"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

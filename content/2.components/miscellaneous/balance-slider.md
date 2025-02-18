@@ -6,6 +6,18 @@ description: A dynamic balance slider with adjustable colors, limits, and intera
 ::ComponentLoader{label="Preview" componentName="BalanceSliderDemo" type="examples"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="balance-slider"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="BalanceSlider.vue" language="vue" componentName="BalanceSlider" type="ui" id="balance-slider"}
+::
+
 ## API
 
 | Prop Name        | Type     | Default     | Description                                         |
@@ -18,13 +30,6 @@ description: A dynamic balance slider with adjustable colors, limits, and intera
 | `leftContent`    | `string` | `"LEFT"`    | Text displayed in the tooltip for the left side.    |
 | `rightContent`   | `string` | `"RIGHT"`   | Text displayed in the tooltip for the right side.   |
 | `indicatorColor` | `string` | `"#FFFFFF"` | Color of the central indicator on the slider.       |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="BalanceSlider.vue" language="vue" componentName="BalanceSlider" type="ui" id="balance-slider"}
-::
 
 ## Features
 

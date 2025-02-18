@@ -6,6 +6,26 @@ description: Skew Animation grid with box shadow.
 ::ComponentLoader{label="Preview" componentName="AnimateGridDemo" type="examples" id="animate-grid"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="animate-grid"}
+::
+
+## Install Manually
+
+::steps{level=4}
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="AnimateGrid.vue" language="vue" componentName="AnimateGrid" type="ui" id="animate-grid"}
+::
+
+#### Add SVG file
+
+Add at least one SVG file to the same folder as your component and update the import in your component to use it
+
+::
+
 ## API
 
 | Prop Name            | Type     | Default             | Description                                         |
@@ -17,13 +37,6 @@ description: Skew Animation grid with box shadow.
 | `rotateY`            | `number` | `-15`               | You can pass rotateY to transform CSS property.     |
 | `cards`              | `[]`     | `"[{logo: 'src'}]"` | Cards to display in grid.                           |
 | `class`              | `string` | `""`                | Additional tailwind CSS classes for custom styling. |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="AnimateGrid.vue" language="vue" componentName="AnimateGrid" type="ui" id="animate-grid"}
-::
 
 ## Features
 

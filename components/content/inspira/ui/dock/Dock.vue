@@ -11,7 +11,7 @@
     @mousemove="onMouseMove"
     @mouseleave="onMouseLeave"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

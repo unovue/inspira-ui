@@ -6,6 +6,18 @@ description: A button with a shimmering animated effect.
 ::ComponentLoader{label="Preview" componentName="ShimmerButtonDemo" type="examples"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="shimmer-button"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="ShimmerButton.vue" language="vue" componentName="ShimmerButton" type="ui" id="shimmer-button"}
+::
+
 ## API
 
 | Prop Name         | Type     | Default              | Description                                             |
@@ -16,13 +28,6 @@ description: A button with a shimmering animated effect.
 | `borderRadius`    | `string` | `"100px"`            | Border radius of the button.                            |
 | `shimmerDuration` | `string` | `"3s"`               | Duration of the shimmer animation.                      |
 | `background`      | `string` | `"rgba(0, 0, 0, 1)"` | Background color of the button. Can be rgb or hex code. |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="ShimmerButton.vue" language="vue" componentName="ShimmerButton" type="ui" id="shimmer-button"}
-::
 
 ## Features
 

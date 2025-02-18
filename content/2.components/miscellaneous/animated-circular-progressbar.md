@@ -6,6 +6,18 @@ description: Animated Circular Progress Bar is a component that displays a circu
 ::ComponentLoader{label="Preview" componentName="AnimatedCircularProgressBarDemo" type="examples" id="animated-circular-progressbar"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="animated-circular-progressbar"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="AnimatedCircularProgressBar.vue" language="vue" componentName="AnimatedCircularProgressBar" type="ui" id="animated-circular-progressbar"}
+::
+
 ## API
 
 | Prop Name             | Type      | Default              | Description                                 |
@@ -19,13 +31,6 @@ description: Animated Circular Progress Bar is a component that displays a circu
 | `circleStrokeWidth`   | `number`  | `10`                 | The width of the circle progress bar.       |
 | `showPercentage`      | `boolean` | `true`               | Show the value inside the circle            |
 | `duration`            | `number`  | `1`                  | The duration of the animation (in seconds). |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="AnimatedCircularProgressBar.vue" language="vue" componentName="AnimatedCircularProgressBar" type="ui" id="animated-circular-progressbar"}  
-::
 
 ## Credits
 

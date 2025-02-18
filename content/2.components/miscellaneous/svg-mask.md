@@ -6,22 +6,18 @@ description: A dynamic SVG mask component that reveals content with hover and mo
 ::ComponentLoader{label="Preview" componentName="SvgMaskDemo" type="examples" id="svg-mask"}
 ::
 
-## API
+## Install using CLI
 
-| Prop Name    | Type     | Default | Description                                |
-| ------------ | -------- | ------- | ------------------------------------------ |
-| `class`      | `string` | `""`    | Additional CSS classes for custom styling. |
-| `size`       | `number` | `10`    | Initial size of the mask in pixels.        |
-| `revealSize` | `number` | `600`   | Size of the mask during hover in pixels.   |
+::InstallationCli{componentId="svg-mask"}
+::
 
-## Component Code
+## Install Manually
 
-You can copy and paste the following code to create this component:
+#### Copy and paste the following code in the same folder
 
 ::code-group
 
-::CodeViewerTab{label="SVGMask.vue" language="vue" componentName="SVGMask" type="ui" id="svg-mask"}
-::
+:CodeViewerTab{label="SVGMask.vue" language="vue" componentName="SVGMask" type="ui" id="svg-mask"}
 
 ```html [mask.svg]
 <svg
@@ -41,6 +37,14 @@ You can copy and paste the following code to create this component:
 ```
 
 ::
+
+## API
+
+| Prop Name    | Type     | Default | Description                                |
+| ------------ | -------- | ------- | ------------------------------------------ |
+| `class`      | `string` | `""`    | Additional CSS classes for custom styling. |
+| `size`       | `number` | `10`    | Initial size of the mask in pixels.        |
+| `revealSize` | `number` | `600`   | Size of the mask during hover in pixels.   |
 
 ## Features
 

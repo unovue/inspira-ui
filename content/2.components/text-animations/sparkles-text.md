@@ -6,6 +6,18 @@ description: A dynamic text that generates continuous sparkles with smooth trans
 ::ComponentLoader{label="Preview" componentName="SparklesTextDemo" type="examples" id="sparkles-text"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="sparkles-text"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="SparklesText.vue" language="vue" componentName="SparklesText" type="ui" id="sparkles-text"}
+::
+
 ## API
 
 | Prop Name       | Type     | Default                                  | Description                                   |
@@ -14,13 +26,6 @@ description: A dynamic text that generates continuous sparkles with smooth trans
 | `text`          | `string` | ``                                       | The text to display.                          |
 | `sparklesCount` | `number` | `10`                                     | sparkles count that appears on the text.      |
 | `colors`        | `object` | `{first: '#A07CFE'; second: '#FE8FB5';}` | The sparkles colors.                          |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="SparklesText.vue" language="vue" componentName="SparklesText" type="ui" id="sparkles-text"}
-::
 
 ## Credits
 

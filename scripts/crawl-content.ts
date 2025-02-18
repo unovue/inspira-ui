@@ -22,6 +22,13 @@ const DEPENDENCIES = new Map<string, string[]>([
   ["theme-colors", []],
   ["simplex-noise", []],
   ["qss", []],
+  ["motion-v", []],
+  ["@number-flow/vue", []],
+]);
+
+// This map is used when a basic Inspira UI component internally uses another Inspira component.
+const COMPONENT_DEPENDENCIES = new Map<string, string[]>([
+  ["scroll-island", ["animated-circular-progressbar"]],
 ]);
 
 const REGISTRY_URL = process.env.REGISTRY_URL ?? "https://inspira-ui.com/r";
@@ -35,18 +42,18 @@ export async function buildRegistry() {
   const registry: Registry = [];
 
   const uiPath = resolve(registryRootPath, "ui");
-  const examplesPath = resolve(registryRootPath, "examples");
+  // const examplesPath = resolve(registryRootPath, "examples");
   const blocksPath = resolve(registryRootPath, "blocks");
   const composablesPath = resolve("composables");
 
-  const [ui, example, block, hooks] = await Promise.all([
+  const [ui, block, hooks] = await Promise.all([
     crawlUI(uiPath),
-    crawlExample(examplesPath),
+    // crawlExample(examplesPath),
     crawlBlock(blocksPath),
     crawlHook(composablesPath),
   ]);
 
-  registry.push(...ui, ...example, ...block, ...hooks);
+  registry.push(...ui, ...block, ...hooks);
 
   return registry;
 }
@@ -237,6 +244,14 @@ async function buildUIRegistry(componentPath: string, componentName: string) {
 
     deps.dependencies.forEach((dep) => dependencies.add(dep));
     deps.registryDependencies.forEach((dep) => registryDependencies.add(dep));
+  }
+
+  // Add component dependencies if they exist in the map
+  const componentDeps = COMPONENT_DEPENDENCIES.get(componentName);
+  if (componentDeps) {
+    componentDeps.forEach((dep) => {
+      registryDependencies.add(`${REGISTRY_URL}/${dep}.json`);
+    });
   }
 
   return {

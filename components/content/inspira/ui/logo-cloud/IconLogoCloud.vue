@@ -8,7 +8,7 @@
         {{ props.title }}
       </div>
       <div :class="cn('grid grid-cols-3 lg:grid-cols-8 md:grid-cols-8', props.class)">
-        <NuxtImg
+        <img
           v-for="(logo, key) in props.logos"
           :key="key"
           :src="logo.path"

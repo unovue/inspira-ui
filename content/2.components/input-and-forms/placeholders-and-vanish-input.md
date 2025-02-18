@@ -6,6 +6,18 @@ description: Sliding in placeholders and vanish effect of input on submit
 ::ComponentLoader{label="Preview" componentName="VanishingInputDemo" type="examples"}  
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="vanishing-input"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="VanishingInput.vue" language="vue" componentName="VanishingInput" type="ui" id="vanishing-input"}
+::
+
 ## API
 
 | Prop Name      | Type            | Default                                               | Description                                                                     |
@@ -18,13 +30,6 @@ This component listens to the following events emitted by the `VanishingInput` c
 | ---------- | ---------- | --------------------------------------- |
 | `change`   | `Event`    | Triggered when the input value changes. |
 | `submit`   | `string`   | Triggered when the input is submitted.  |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="VanishingInput.vue" language="vue" componentName="VanishingInput" type="ui" id="vanishing-input"}
-::
 
 ## Credits
 

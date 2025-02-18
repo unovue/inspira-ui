@@ -9,79 +9,21 @@ navBadges:
 ::ComponentLoader{label="Preview" componentName="FileTreeDemo" type="examples"}
 ::
 
-## API
+## Install using CLI
 
-::steps
-
-### `Tree`
-
-The `Tree` component serves as a container for displaying a hierarchical file/folder structure.
-
-#### Props
-
-| Prop Name              | Type                | Default                | Description                                        |
-| ---------------------- | ------------------- | ---------------------- | -------------------------------------------------- |
-| `class`                | `string`            | -                      | Additional classes for styling the tree container. |
-| `initialSelectedId`    | `string`            | -                      | ID of the initially selected item.                 |
-| `indicator`            | `boolean`           | `true`                 | Whether to show the tree indicator line.           |
-| `elements`             | `TreeViewElement[]` | -                      | Array of tree elements to display.                 |
-| `initialExpandedItems` | `string[]`          | -                      | Array of IDs of initially expanded folders.        |
-| `openIcon`             | `string`            | `"lucide:folder-open"` | Icon to show for open folders.                     |
-| `closeIcon`            | `string`            | `"lucide:folder"`      | Icon to show for closed folders.                   |
-| `fileIcon`             | `string`            | `"lucide:file"`        | Icon to show for files.                            |
-| `direction`            | `"rtl" \| "ltr"`    | `"ltr"`                | Text direction of the tree.                        |
-
-#### Usage
-
-```vue [MyComponent.vue]
-<Tree initialSelectedId="1" :initial-expanded-items="['1', '2']" :elements="ELEMENTS">
-  <!-- Your structure here -->
-</Tree>
-```
-
-### `Folder` and `File`
-
-The `Folder` and `File` components represent folders and files in the file tree. Folders can contain other `Folder` and `File` components.
-
-#### Props
-
-| Prop Name      | Type      | Default | Description                             |
-| -------------- | --------- | ------- | --------------------------------------- |
-| `class`        | `string`  | -       | Additional classes for custom styling.  |
-| `id`           | `string`  | -       | Unique identifier for the item.         |
-| `name`         | `string`  | -       | Display name of the folder/file.        |
-| `isSelectable` | `boolean` | `true`  | Whether the item can be selected.       |
-| `isSelect`     | `boolean` | `false` | Whether the item is currently selected. |
-
-#### Usage
-
-```vue [MyComponent.vue]
-<Folder id="1" name="root">
-  <Folder id="2" name="components">
-    <File id="3" name="Button.vue" />
-    <File id="4" name="Card.vue" />
-  </Folder>
-</Folder>
-```
-
+::InstallationCli{componentId="file-tree"}
 ::
 
-## Component Code
+## Install Manually
 
-You can copy and paste the following code to create these components:
+#### Copy and paste the following code in the same folder
 
 ::code-group
-::CodeViewerTab{label="Tree.vue" icon="vscode-icons:file-type-vue" componentName="Tree" type="ui" id="file-tree"}
-::
 
-::CodeViewerTab{label="Folder.vue" icon="vscode-icons:file-type-vue" componentName="Folder" type="ui" id="file-tree"}
-::
-
-::CodeViewerTab{label="File.vue" icon="vscode-icons:file-type-vue" componentName="File" type="ui" id="file-tree"}
-::
-
-::CodeViewerTab{label="TreeIndicator.vue" icon="vscode-icons:file-type-vue" componentName="TreeIndicator" type="ui" id="file-tree"}
-::
+:CodeViewerTab{label="Tree.vue" language="vue" componentName="Tree" type="ui" id="file-tree"}
+:CodeViewerTab{label="Folder.vue" language="vue" componentName="Folder" type="ui" id="file-tree"}
+:CodeViewerTab{label="File.vue" language="vue" componentName="File" type="ui" id="file-tree"}
+:CodeViewerTab{label="TreeIndicator.vue" language="vue" componentName="TreeIndicator" type="ui" id="file-tree"}
 
 ```ts [index.ts]
 import type { HTMLAttributes } from "vue";
@@ -135,6 +77,63 @@ export const TREE_CONTEXT_SYMBOL = Symbol("TREE_CONTEXT_SYMBOL");
 export { default as Tree } from "./Tree.vue";
 export { default as Folder } from "./Folder.vue";
 export { default as File } from "./File.vue";
+```
+
+::
+
+## API
+
+::steps
+
+### `Tree`
+
+The `Tree` component serves as a container for displaying a hierarchical file/folder structure.
+
+#### Props
+
+| Prop Name              | Type                | Default                | Description                                        |
+| ---------------------- | ------------------- | ---------------------- | -------------------------------------------------- |
+| `class`                | `string`            | -                      | Additional classes for styling the tree container. |
+| `initialSelectedId`    | `string`            | -                      | ID of the initially selected item.                 |
+| `indicator`            | `boolean`           | `true`                 | Whether to show the tree indicator line.           |
+| `elements`             | `TreeViewElement[]` | -                      | Array of tree elements to display.                 |
+| `initialExpandedItems` | `string[]`          | -                      | Array of IDs of initially expanded folders.        |
+| `openIcon`             | `string`            | `"lucide:folder-open"` | Icon to show for open folders.                     |
+| `closeIcon`            | `string`            | `"lucide:folder"`      | Icon to show for closed folders.                   |
+| `fileIcon`             | `string`            | `"lucide:file"`        | Icon to show for files.                            |
+| `direction`            | `"rtl" \| "ltr"`    | `"ltr"`                | Text direction of the tree.                        |
+
+#### Usage
+
+```vue [MyComponent.vue]
+<Tree initialSelectedId="1" :initial-expanded-items="['1', '2']" :elements="ELEMENTS">
+  <!-- Your structure here -->
+</Tree>
+```
+
+### `Folder` and `File`
+
+The `Folder` and `File` components represent folders and files in the file tree. Folders can contain other `Folder` and `File` components.
+
+#### Props
+
+| Prop Name      | Type      | Default | Description                             |
+| -------------- | --------- | ------- | --------------------------------------- |
+| `class`        | `string`  | -       | Additional classes for custom styling.  |
+| `id`           | `string`  | -       | Unique identifier for the item.         |
+| `name`         | `string`  | -       | Display name of the folder/file.        |
+| `isSelectable` | `boolean` | `true`  | Whether the item can be selected.       |
+| `isSelect`     | `boolean` | `false` | Whether the item is currently selected. |
+
+#### Usage
+
+```vue [MyComponent.vue]
+<Folder id="1" name="root">
+  <Folder id="2" name="components">
+    <File id="3" name="Button.vue" />
+    <File id="4" name="Card.vue" />
+  </Folder>
+</Folder>
 ```
 
 ::

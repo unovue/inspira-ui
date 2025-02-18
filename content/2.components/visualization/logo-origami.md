@@ -6,6 +6,21 @@ description: Animated flipping logo with origami effect.
 ::ComponentLoader{label="Preview" componentName="LogoOrigamiDemo" type="examples"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="logo-origami"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="LogoOrigami.vue" language="vue" componentName="LogoOrigami" type="ui" id="logo-origami"}
+:CodeViewerTab{filename="LogoOrigamiItem.vue" language="vue" componentName="LogoOrigamiItem" type="ui" id="logo-origami"}
+::
+
 ## API
 
 | Prop Name  | Type     | Default | Description                                |
@@ -13,20 +28,6 @@ description: Animated flipping logo with origami effect.
 | `class`    | `string` | `""`    | Additional CSS classes for custom styling. |
 | `duration` | `number` | `1.5`   | Duration of the flip animation in seconds. |
 | `delay`    | `number` | `2.5`   | Delay between flip animations in seconds.  |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::code-group
-
-    ::CodeViewerTab{label="LogoOrigami.vue" language="vue" componentName="LogoOrigami" type="ui" id="logo-origami"}
-    ::
-
-    :CodeViewerTab{label="LogoOrigamiItem.vue" language="vue" componentName="LogoOrigamiItem" type="ui" id="logo-origami"}
-    ::
-
-::
 
 ## Features
 

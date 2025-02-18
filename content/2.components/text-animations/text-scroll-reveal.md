@@ -10,25 +10,27 @@ description: A component that reveals text word by word as you scroll, with cust
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="text-scroll-reveal"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="TextScrollReveal.vue" language="vue" componentName="TextScrollReveal" type="ui" id="text-scroll-reveal"}
+:CodeViewerTab{filename="ScrollWord.vue" language="vue" componentName="ScrollWord" type="ui" id="text-scroll-reveal"}
+::
+
 ## API
 
 | Prop Name | Type     | Default | Description                                                         |
 | --------- | -------- | ------- | ------------------------------------------------------------------- |
 | `text`    | `string` | N/A     | The text content to display and reveal word by word during scroll.  |
 | `class`   | `string` | `""`    | Additional CSS classes to apply to the component for customization. |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::code-group
-::CodeViewerTab{label="TextScrollReveal.vue" language="vue" componentName="TextScrollReveal" type="ui" id="text-scroll-reveal"}
-::
-
-::CodeViewerTab{label="ScrollWord.vue" language="vue" componentName="ScrollWord" type="ui" id="text-scroll-reveal"}
-::
-
-::
 
 ## Features
 

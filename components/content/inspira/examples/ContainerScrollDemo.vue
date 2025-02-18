@@ -10,14 +10,13 @@
         </h1>
       </template>
       <template #card>
-        <NuxtImg
+        <img
           src="/linear.webp"
           class="mx-auto h-full rounded-2xl object-cover object-left-top"
           alt="hero"
           height="720"
           width="1400"
-        >
-        </NuxtImg>
+        />
       </template>
     </ContainerScroll>
   </div>

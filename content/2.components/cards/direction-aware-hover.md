@@ -6,6 +6,18 @@ description: A direction aware hover card, that displays an image with dynamic h
 ::ComponentLoader{label="Preview" componentName="DirectionAwareHoverDemo" type="examples"}  
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="direction-aware-hover"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="DirectionAwareHover.vue" language="vue" componentName="DirectionAwareHover" type="ui" id="direction-aware-hover"}
+::
+
 ## API
 
 | Prop Name       | Type     | Default     | Description                                     |
@@ -14,13 +26,6 @@ description: A direction aware hover card, that displays an image with dynamic h
 | `class`         | `string` | `undefined` | Additional CSS classes for the card container.  |
 | `imageClass`    | `string` | `undefined` | Additional CSS classes for the image element.   |
 | `childrenClass` | `string` | `undefined` | Additional CSS classes for the content overlay. |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="DirectionAwareHover.vue" language="vue" componentName="DirectionAwareHover" type="ui" id="direction-aware-hover"}
-::
 
 ## Credits
 

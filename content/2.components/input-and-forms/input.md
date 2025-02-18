@@ -6,6 +6,18 @@ description: A versatile and visually dynamic input field with radial hover effe
 ::ComponentLoader{label="Preview" componentName="InputDemo" type="examples" id="input"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="input"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="IInput.vue" language="vue" componentName="IInput" type="ui" id="input"}
+::
+
 ## API
 
 | Prop Name        | Type                | Default | Description                                                 |
@@ -13,13 +25,6 @@ description: A versatile and visually dynamic input field with radial hover effe
 | `defaultValue`   | `string  \| number` | `""`    | Default value of the input field.                           |
 | `class`          | `string`            | `""`    | Additional CSS classes for custom styling.                  |
 | `containerClass` | `string`            | `""`    | Additional CSS classes for custom styling of the container. |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="IInput.vue" language="vue" componentName="IInput" type="ui" id="input"}
-::
 
 ## Features
 

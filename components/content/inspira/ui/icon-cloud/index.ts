@@ -13,3 +13,5 @@ export interface IconCloudProps {
   class?: HTMLAttributes["class"];
   images?: string[];
 }
+
+export { default as IconCloud } from "./IconCloud.vue";

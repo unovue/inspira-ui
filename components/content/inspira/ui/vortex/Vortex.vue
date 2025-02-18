@@ -17,22 +17,20 @@
 </template>
 
 <script setup lang="ts">
-import { cn } from "@/lib/utils";
 import { createNoise3D } from "simplex-noise";
 import { onMounted, onUnmounted } from "vue";
 import { templateRef } from "@vueuse/core";
+import { cn } from "@/lib/utils";
 
-// All constants
 const TAU = 2 * Math.PI;
-const baseTTL = 50;
-const rangeTTL = 150;
-const particlePropCount = 9;
-const rangeHue = 100;
-const noiseSteps = 3;
-const xOff = 0.00125;
-const yOff = 0.00125;
-const zOff = 0.0005;
-let tick = 0;
+const BASE_TTL = 50;
+const RANGE_TTL = 150;
+const PARTICLE_PROP_COUNT = 9;
+const RANGE_HUE = 100;
+const NOISE_STEPS = 3;
+const X_OFF = 0.00125;
+const Y_OFF = 0.00125;
+const Z_OFF = 0.0005;
 
 interface VortexProps {
   class?: string;
@@ -58,192 +56,199 @@ const props = withDefaults(defineProps<VortexProps>(), {
   backgroundColor: "#000000",
 });
 
+const tick = ref<number>(0);
+const animationFrame = ref<number | null>(null);
+const particleProps = shallowRef<Float32Array | null>(null);
+const center = ref<[number, number]>([0, 0]);
+const ctx = shallowRef<CanvasRenderingContext2D | null>(null);
+
 const canvasRef = templateRef<HTMLCanvasElement | null>("canvasRef");
 const containerRef = templateRef<HTMLElement | null>("containerRef");
 
-const particlePropsLength = props.particleCount * particlePropCount;
+const particleCache = {
+  x: 0,
+  y: 0,
+  vx: 0,
+  vy: 0,
+  life: 0,
+  ttl: 0,
+  speed: 0,
+  radius: 0,
+  hue: 0,
+};
 
 const noise3D = createNoise3D();
-let particleProps = new Float32Array(particlePropsLength);
-let center: [number, number] = [0, 0];
 
-function rand(n: number): number {
+function rand(n: number) {
   return n * Math.random();
 }
-
 function randRange(n: number): number {
   return n - rand(2 * n);
 }
-
 function fadeInOut(t: number, m: number): number {
   const hm = 0.5 * m;
   return Math.abs(((t + hm) % m) - hm) / hm;
 }
-
 function lerp(n1: number, n2: number, speed: number): number {
   return (1 - speed) * n1 + speed * n2;
 }
 
-function setup() {
-  const canvas = canvasRef.value;
-  const container = containerRef.value;
-  if (canvas && container) {
-    const ctx = canvas.getContext("2d");
-    if (ctx) {
-      resize(canvas, ctx);
-      initParticles();
-      draw(canvas, ctx);
-    }
-  }
-}
-
-function initParticles() {
-  tick = 0;
-  particleProps = new Float32Array(particlePropsLength);
-  for (let i = 0; i < particlePropsLength; i += particlePropCount) {
-    initParticle(i);
-  }
-}
-
 function initParticle(i: number) {
+  if (!particleProps.value || !canvasRef.value) return;
+
   const canvas = canvasRef.value;
-  if (!canvas) return;
+  particleCache.x = rand(canvas.width);
+  particleCache.y = center.value[1] + randRange(props.rangeY);
+  particleCache.vx = 0;
+  particleCache.vy = 0;
+  particleCache.life = 0;
+  particleCache.ttl = BASE_TTL + rand(RANGE_TTL);
+  particleCache.speed = props.baseSpeed + rand(props.rangeSpeed);
+  particleCache.radius = props.baseRadius + rand(props.rangeRadius);
+  particleCache.hue = props.baseHue + rand(RANGE_HUE);
 
-  let x, y, vx, vy, life, ttl, speed, radius, hue;
-  x = rand(canvas.width);
-  y = center[1] + randRange(props.rangeY);
-  vx = 0;
-  vy = 0;
-  life = 0;
-  ttl = baseTTL + rand(rangeTTL);
-  speed = props.baseSpeed + rand(props.rangeSpeed);
-  radius = props.baseRadius + rand(props.rangeRadius);
-  hue = props.baseHue + rand(rangeHue);
-
-  particleProps.set([x, y, vx, vy, life, ttl, speed, radius, hue], i);
+  particleProps.value.set(
+    [
+      particleCache.x,
+      particleCache.y,
+      particleCache.vx,
+      particleCache.vy,
+      particleCache.life,
+      particleCache.ttl,
+      particleCache.speed,
+      particleCache.radius,
+      particleCache.hue,
+    ],
+    i,
+  );
 }
 
-function draw(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
-  tick++;
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+function updateParticle(i: number) {
+  if (!particleProps.value || !canvasRef.value || !ctx.value) return;
 
-  ctx.fillStyle = props.backgroundColor;
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-  drawParticles(ctx);
-  renderGlow(canvas, ctx);
-  renderToScreen(canvas, ctx);
-
-  requestAnimationFrame(() => draw(canvas, ctx));
-}
-
-function drawParticles(ctx: CanvasRenderingContext2D) {
-  for (let i = 0; i < particlePropsLength; i += particlePropCount) {
-    updateParticle(i, ctx);
-  }
-}
-
-function updateParticle(i: number, ctx: CanvasRenderingContext2D) {
   const canvas = canvasRef.value;
-  if (!canvas) return;
+  const props = particleProps.value;
+  const context = ctx.value;
 
-  const [x, y, vx, vy, life, ttl, speed, radius, hue] = [
-    particleProps[i],
-    particleProps[i + 1],
-    particleProps[i + 2],
-    particleProps[i + 3],
-    particleProps[i + 4],
-    particleProps[i + 5],
-    particleProps[i + 6],
-    particleProps[i + 7],
-    particleProps[i + 8],
-  ];
+  particleCache.x = props[i];
+  particleCache.y = props[i + 1];
+  particleCache.vx = props[i + 2];
+  particleCache.vy = props[i + 3];
+  particleCache.life = props[i + 4];
+  particleCache.ttl = props[i + 5];
+  particleCache.speed = props[i + 6];
+  particleCache.radius = props[i + 7];
+  particleCache.hue = props[i + 8];
 
-  const n = noise3D(x * xOff, y * yOff, tick * zOff) * noiseSteps * TAU;
-  const nextVx = lerp(vx, Math.cos(n), 0.5);
-  const nextVy = lerp(vy, Math.sin(n), 0.5);
+  const n =
+    noise3D(particleCache.x * X_OFF, particleCache.y * Y_OFF, tick.value * Z_OFF) *
+    NOISE_STEPS *
+    TAU;
 
-  drawParticle(x, y, x + nextVx * speed, y + nextVy * speed, life, ttl, radius, hue, ctx);
+  const nextVx = lerp(particleCache.vx, Math.cos(n), 0.5);
+  const nextVy = lerp(particleCache.vy, Math.sin(n), 0.5);
+  const nextX = particleCache.x + nextVx * particleCache.speed;
+  const nextY = particleCache.y + nextVy * particleCache.speed;
 
-  particleProps[i] = x + nextVx * speed;
-  particleProps[i + 1] = y + nextVy * speed;
-  particleProps[i + 2] = nextVx;
-  particleProps[i + 3] = nextVy;
-  particleProps[i + 4] = life + 1;
+  context.save();
+  context.lineCap = "round";
+  context.lineWidth = particleCache.radius;
+  context.strokeStyle = `hsla(${particleCache.hue},100%,60%,${fadeInOut(
+    particleCache.life,
+    particleCache.ttl,
+  )})`;
+  context.beginPath();
+  context.moveTo(particleCache.x, particleCache.y);
+  context.lineTo(nextX, nextY);
+  context.stroke();
+  context.restore();
 
-  if (checkBounds(x, y, canvas) || life > ttl) {
+  props[i] = nextX;
+  props[i + 1] = nextY;
+  props[i + 2] = nextVx;
+  props[i + 3] = nextVy;
+  props[i + 4] = particleCache.life + 1;
+
+  if (
+    nextX > canvas.width ||
+    nextX < 0 ||
+    nextY > canvas.height ||
+    nextY < 0 ||
+    particleCache.life > particleCache.ttl
+  ) {
     initParticle(i);
   }
 }
 
-function drawParticle(
-  x: number,
-  y: number,
-  x2: number,
-  y2: number,
-  life: number,
-  ttl: number,
-  radius: number,
-  hue: number,
-  ctx: CanvasRenderingContext2D,
-) {
-  ctx.save();
-  ctx.lineCap = "round";
-  ctx.lineWidth = radius;
-  ctx.strokeStyle = `hsla(${hue},100%,60%,${fadeInOut(life, ttl)})`;
-  ctx.beginPath();
-  ctx.moveTo(x, y);
-  ctx.lineTo(x2, y2);
-  ctx.stroke();
-  ctx.closePath();
-  ctx.restore();
+function draw() {
+  if (!canvasRef.value || !ctx.value || !particleProps.value) return;
+
+  const canvas = canvasRef.value;
+  const context = ctx.value;
+
+  tick.value++;
+
+  context.fillStyle = props.backgroundColor;
+  context.fillRect(0, 0, canvas.width, canvas.height);
+
+  for (let i = 0; i < particleProps.value.length; i += PARTICLE_PROP_COUNT) {
+    updateParticle(i);
+  }
+
+  context.save();
+  context.filter = "blur(8px) brightness(200%)";
+  context.globalCompositeOperation = "lighter";
+  context.drawImage(canvas, 0, 0);
+  context.restore();
+
+  context.save();
+  context.filter = "blur(4px) brightness(200%)";
+  context.globalCompositeOperation = "lighter";
+  context.drawImage(canvas, 0, 0);
+  context.restore();
+
+  animationFrame.value = requestAnimationFrame(draw);
 }
 
-function checkBounds(x: number, y: number, canvas: HTMLCanvasElement) {
-  return x > canvas.width || x < 0 || y > canvas.height || y < 0;
-}
+const handleResize = useDebounceFn(() => {
+  if (!canvasRef.value) return;
 
-function resize(canvas: HTMLCanvasElement, ctx?: CanvasRenderingContext2D) {
+  const canvas = canvasRef.value;
   const { innerWidth, innerHeight } = window;
   canvas.width = innerWidth;
   canvas.height = innerHeight;
-  center[0] = 0.5 * canvas.width;
-  center[1] = 0.5 * canvas.height;
-}
-
-function renderGlow(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
-  ctx.save();
-  ctx.filter = "blur(8px) brightness(200%)";
-  ctx.globalCompositeOperation = "lighter";
-  ctx.drawImage(canvas, 0, 0);
-  ctx.restore();
-
-  ctx.save();
-  ctx.filter = "blur(4px) brightness(200%)";
-  ctx.globalCompositeOperation = "lighter";
-  ctx.drawImage(canvas, 0, 0);
-  ctx.restore();
-}
-
-function renderToScreen(canvas: HTMLCanvasElement, ctx: CanvasRenderingContext2D) {
-  ctx.save();
-  ctx.globalCompositeOperation = "lighter";
-  ctx.drawImage(canvas, 0, 0);
-  ctx.restore();
-}
+  center.value = [0.5 * canvas.width, 0.5 * canvas.height];
+}, 150);
 
 onMounted(() => {
-  setup();
-  window.addEventListener("resize", () => {
-    const canvas = canvasRef.value;
-    const ctx = canvas?.getContext("2d");
-    if (canvas && ctx) {
-      resize(canvas, ctx);
-    }
-  });
+  const canvas = canvasRef.value;
+  if (!canvas) return;
+
+  ctx.value = canvas.getContext("2d");
+  if (!ctx.value) return;
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  center.value = [0.5 * canvas.width, 0.5 * canvas.height];
+
+  const particlePropsLength = props.particleCount * PARTICLE_PROP_COUNT;
+  particleProps.value = new Float32Array(particlePropsLength);
+
+  for (let i = 0; i < particlePropsLength; i += PARTICLE_PROP_COUNT) {
+    initParticle(i);
+  }
+
+  draw();
+  window.addEventListener("resize", handleResize);
 });
 
 onUnmounted(() => {
-  window.removeEventListener("resize", () => {});
+  if (animationFrame.value) {
+    cancelAnimationFrame(animationFrame.value);
+  }
+  window.removeEventListener("resize", handleResize);
+
+  ctx.value = null;
+  particleProps.value = null;
 });
 </script>

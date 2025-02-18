@@ -7,9 +7,11 @@
           :key="`content-${index}`"
           class="mb-10"
         >
-          <Badge class="mb-4 w-fit rounded-full bg-black px-4 py-1 text-sm text-white">
+          <div
+            class="mb-4 w-fit rounded-full bg-black px-2 text-sm text-white dark:bg-white dark:text-black"
+          >
             {{ item.badge }}
-          </Badge>
+          </div>
 
           <p :class="['mb-4 text-xl']">
             {{ item.title }}

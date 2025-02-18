@@ -2,7 +2,6 @@
   <svg
     :width="gridWidth"
     :height="gridHeight"
-    v-bind="restProps"
     :class="svgClass"
   >
     <rect

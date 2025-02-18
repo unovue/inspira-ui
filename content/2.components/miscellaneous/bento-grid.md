@@ -6,6 +6,30 @@ description: A cool grid layout with different child component.
 ::ComponentLoader{label="Preview" componentName="BentoGridDemo" type="examples"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="bento-grid"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="BentoGrid.vue" language="vue" componentName="BentoGrid" type="ui" id="bento-grid"}
+:CodeViewerTab{label="BentoGridCard.vue" language="vue" componentName="BentoGridCard" type="ui" id="bento-grid"}
+:CodeViewerTab{label="BentoGridItem.vue" language="vue" componentName="BentoGridItem" type="ui" id="bento-grid"}
+
+::
+
+## Examples
+
+`BentoGrid` in MagicUI style.
+
+::ComponentLoader{label="Preview" componentName="BentoGridDemo2" type="examples"}
+::
+
 ## API
 
 #### `BentoGridItem`
@@ -30,27 +54,6 @@ description: A cool grid layout with different child component.
 | `description` | `string`  | Description content to show on card. |
 | `href`        | `string`  | Link to the url for CTA.             |
 | `cta`         | `string`  | Text to show on CTA.                 |
-
-## Examples
-
-`BentoGrid` in MagicUI style.
-
-::ComponentLoader{label="Preview" componentName="BentoGridDemo2" type="examples"}
-::
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeGroup
-::CodeViewerTab{label="BentoGrid.vue" language="vue" componentName="BentoGrid" type="ui" id="bento-grid"}
-::
-::CodeViewerTab{label="BentoGridItem.vue" language="vue" componentName="BentoGridItem" type="ui" id="bento-grid"}
-::
-
-::CodeViewerTab{label="BentoGridCard.vue" language="vue" componentName="BentoGridCard" type="ui" id="bento-grid"}
-::
-::
 
 ## Credits
 

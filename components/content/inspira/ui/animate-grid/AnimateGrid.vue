@@ -1,5 +1,5 @@
 <template>
-  <div :class="cn('relative hidden xl:block', props.class)">
+  <div :class="cn('relative', props.class)">
     <div
       :class="
         cn(

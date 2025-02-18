@@ -6,18 +6,23 @@ description: A component that renders a tracing beam effect with dynamic scrolli
 ::ComponentLoader{label="Preview" componentName="TracingBeamDemo" type="examples"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="tracing-beam"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="TracingBeam.vue" language="vue" componentName="TracingBeam" type="ui" id="tracing-beam"}
+::
+
 ## API
 
 | Prop Name | Type     | Default | Description                                |
 | --------- | -------- | ------- | ------------------------------------------ |
 | `class`   | `string` | `""`    | Additional CSS classes for custom styling. |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="TracingBeam.vue" language="vue" componentName="TracingBeam" type="ui" id="tracing-beam"}
-::
 
 ## Features
 

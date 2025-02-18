@@ -6,14 +6,24 @@ description: A lens component to zoom into images, videos, or practically anythi
 ::ComponentLoader{label="Preview" componentName="LensDemo" type="examples" id="lens"}
 ::
 
-## Examples
+## Install using CLI
 
-### Basic
-
-::ComponentLoader{label="Preview" componentName="LensDemo" type="examples" id="lens"}
+::InstallationCli{componentId="lens"}
 ::
 
-### Static
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="Lens.vue" language="vue" componentName="Lens" type="ui" id="lens"}
+:CodeViewerTab{label="Rays.vue" language="vue" componentName="Rays" type="examples" id="lens"}
+:CodeViewerTab{label="Beams.vue" language="vue" componentName="Beams" type="examples" id="lens"}
+
+::
+
+## Examples
 
 Lens are static in center
 
@@ -29,20 +39,6 @@ Lens are static in center
 | `position`   | `{ x: number, y: number }` | `{ x: 200, y: 150 }` | The static position of the lens (when isStatic is true).                     |
 | `isStatic`   | `boolean`                  | `false`              | If true, the lens stays in a fixed position; if false, it follows the mouse. |
 | `hovering`   | `boolean`                  | `"false"`            | External control for the hover state.                                        |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::code-group
-::CodeViewerTab{label="Lens.vue" icon="vscode-icons:file-type-vue" componentName="Lens" type="ui" id="lens"}
-::
-
-::CodeViewerTab{label="Rays.vue" icon="vscode-icons:file-type-vue" componentName="Rays" type="examples" id="lens"}
-::
-
-::CodeViewerTab{label="Beams.vue" icon="vscode-icons:file-type-vue" componentName="Beams" type="examples" id="lens"}
-::
 
 ## Features
 

@@ -36,6 +36,7 @@
 </template>
 
 <script lang="ts" setup>
+import { Motion } from "motion-v";
 import { computed, onMounted, ref, useSlots } from "vue";
 import { cn } from "@/lib/utils";
 
@@ -45,7 +46,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  delay: 1,
+  delay: 1000,
 });
 
 const slots = useSlots();

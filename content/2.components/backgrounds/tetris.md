@@ -13,28 +13,52 @@ navBadges:
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
-::alert
-**Note:** This component requires `theme-colors` as a dependency. Please install these using following commands.
+::alert{type="info"}
+**Note:** This component requires `theme-colors` as a dependency.
+::
 
-    ::code-group
+## Install using CLI
 
-    ```bash [npm]
-    npm install theme-colors
-    ```
+::InstallationCli{componentId="tetris"}
+::
 
-    ```bash [pnpm]
-    pnpm install theme-colors
-    ```
+## Install Manually
 
-    ```bash [bun]
-    bun add theme-colors
-    ```
+::steps{level=4}
 
-    ```bash [yarn]
-    yarn add theme-colors
-    ```
-    ::
+#### Install the dependencies
 
+::code-group
+
+```bash [npm]
+npm install theme-colors
+```
+
+```bash [pnpm]
+pnpm install theme-colors
+```
+
+```bash [bun]
+bun add theme-colors
+```
+
+```bash [yarn]
+yarn add theme-colors
+```
+
+::
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="Tetris.vue" language="vue" componentName="Tetris" type="ui" id="tetris"}  
+::
+::
+
+## Example
+
+Without Blur or overlay
+
+::ComponentLoader{label="Preview" componentName="BubblesBgDemo" type="examples" id="backgrounds"}
 ::
 
 ## API
@@ -44,13 +68,6 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 | `class`        | `string` | `""`    | Additional class names to style the component. |
 | `base`         | `number` | `10`    | How many blocks do you have in a row.          |
 | `square-color` | `string` | `""`    | Square color.                                  |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="Tetris.vue" language="vue" componentName="Tetris" type="ui" id="tetris"}
-::
 
 ## Credits
 

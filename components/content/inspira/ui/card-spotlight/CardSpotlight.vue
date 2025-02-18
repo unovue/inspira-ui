@@ -21,16 +21,25 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, type HTMLAttributes } from "vue";
 import { cn } from "@/lib/utils";
 
-const props = defineProps({
-  gradientSize: { type: Number, default: 200 },
-  gradientColor: { type: String, default: "#262626" },
-  gradientOpacity: { type: Number, default: 0.8 },
-  class: { type: String, default: "" },
-  slotClass: String,
-});
+const props = withDefaults(
+  defineProps<{
+    class: HTMLAttributes["class"];
+    slotClass: HTMLAttributes["class"];
+    gradientSize: number;
+    gradientColor: string;
+    gradientOpacity: number;
+  }>(),
+  {
+    class: "",
+    slotClass: "",
+    gradientSize: 200,
+    gradientColor: "#262626",
+    gradientOpacity: 0.8,
+  },
+);
 
 const mouseX = ref(-props.gradientSize * 10);
 const mouseY = ref(-props.gradientSize * 10);

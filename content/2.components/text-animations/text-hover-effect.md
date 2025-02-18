@@ -10,6 +10,18 @@ description: A text hover effect that animates and outlines gradient on hover, a
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="text-hover-effect"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="TextHoverEffect.vue" language="vue" componentName="TextHoverEffect" type="ui" id="text-hover-effect"}
+::
+
 ## API
 
 | Prop Name     | Type     | Default  | Description                                               |
@@ -18,10 +30,3 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 | `duration`    | `number` | `200`    | The duration of the mask transition animation in seconds. |
 | `strokeWidth` | `number` | `0.75`   | The width of the text stroke.                             |
 | `opacity`     | `number` | `null`   | The opacity of the text.                                  |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="TextHoverEffect.vue" language="vue" componentName="TextHoverEffect" type="ui" id="text-hover-effect"}
-::

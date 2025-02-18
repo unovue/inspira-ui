@@ -6,6 +6,51 @@ description: An animated background with swirling particles.
 ::ComponentLoader{label="Preview" componentName="ParticleWhirlpoolBgDemo" type="examples" id="backgrounds"}
 ::
 
+::alert{type="info"}
+**Note:** This component uses Three.js & requires `three` & `postprocessing` npm package as a dependency.
+::
+
+## Install using CLI
+
+::InstallationCli{componentId="bg-particle-whirlpool"}
+::
+
+## Install Manually
+
+::steps{level=4}
+
+#### Install the dependencies
+
+::code-group
+
+```bash [npm]
+npm install three postprocessing
+npm install -D @types/three
+```
+
+```bash [pnpm]
+pnpm install three postprocessing
+pnpm install -D @types/three
+```
+
+```bash [bun]
+bun add three postprocessing
+bun add -d @types/three
+```
+
+```bash [yarn]
+yarn add three postprocessing
+yarn add --dev @types/three
+```
+
+::
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="ParticleWhirlpoolBg.vue" language="vue" componentName="ParticleWhirlpoolBg" type="ui" id="bg-particle-whirlpool"}
+::
+::
+
 ## Examples
 
 Without blur and overlay
@@ -18,36 +63,6 @@ With `particleCount` 500
 ::ComponentLoader{label="Preview" componentName="ParticleWhirlpoolBgDemo3" type="examples" id="backgrounds"}
 ::
 
-::alert{type="info"}
-**Note:** This component uses Three.js & requires `three` & `postprocessing` npm package as a dependency.
-
-Please install Three.js using following commands.
-
-    ::code-group
-
-    ```bash [npm]
-    npm install three postprocessing
-    npm install -D @types/three
-    ```
-
-    ```bash [pnpm]
-    pnpm install three postprocessing
-    pnpm install -D @types/three
-    ```
-
-    ```bash [bun]
-    bun add three postprocessing
-    bun add -d @types/three
-    ```
-
-    ```bash [yarn]
-    yarn add three postprocessing
-    yarn add --dev @types/three
-    ```
-    ::
-
-::
-
 ## API
 
 | Prop Name       | Type     | Default | Description                                                     |
@@ -55,13 +70,6 @@ Please install Three.js using following commands.
 | `class`         | `string` | `""`    | Additional CSS classes for custom styling.                      |
 | `blur`          | `number` | `0`     | Amount of blur to apply to the background, specified in pixels. |
 | `particleCount` | `number` | `2000`  | Number of particles in the whirlpool animation.                 |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="ParticleWhirlpoolBg.vue" language="vue" componentName="ParticleWhirlpoolBg" type="ui" id="bg-particle-whirlpool"}
-::
 
 ## Features
 

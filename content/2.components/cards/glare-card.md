@@ -6,6 +6,18 @@ description: A glare effect that happens on hover, as seen on Linear's website.
 ::ComponentLoader{label="Preview" componentName="GlareCardDemo" type="examples" id="glare-card"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="glare-card"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="GlareCard.vue" language="vue" componentName="GlareCard" type="ui" id="glare-card"}
+::
+
 ## Examples
 
 ### Multiple Cards
@@ -18,13 +30,6 @@ description: A glare effect that happens on hover, as seen on Linear's website.
 | Prop Name | Type     | Default | Description                                               |
 | --------- | -------- | ------- | --------------------------------------------------------- |
 | `class`   | `string` | `-`     | Additional Tailwind CSS class names to apply to the card. |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="GlareCard.vue" language="vue" componentName="GlareCard" type="ui" id="glare-card"}
-::
 
 ## Features
 
