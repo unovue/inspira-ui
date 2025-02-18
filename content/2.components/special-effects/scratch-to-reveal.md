@@ -18,7 +18,7 @@ description: The ScratchToReveal component creates an interactive scratch-off ef
 
 | Event Name | Payload | Description                                        |
 | ---------- | ------- | -------------------------------------------------- |
-| `compete`  | `-`     | Callback function called when scratch is completed |
+| `complete`  | `-`     | Callback function called when scratch is completed |
 
 | Slot Name | Default Content | Description                            |
 | --------- | --------------- | -------------------------------------- |
