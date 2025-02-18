@@ -9,8 +9,7 @@
     <div
       :class="
         cn(
-          'fixed left-1/2 top-12 z-[999] -translate-x-1/2 bg-primary/90 backdrop-blur-lg',
-          open && isSlotAvailable ? 'rounded-lg' : 'rounded-full',
+          'fixed left-1/2 top-12 z-[999] -translate-x-1/2 bg-primary/90 backdrop-blur-lg border-radius',
           $props.class,
         )
       "
@@ -20,11 +19,11 @@
         id="motion-id"
         layout
         :initial="{
-          height: 44,
+          height: props.height,
           width: 0,
         }"
         :animate="{
-          height: open && isSlotAvailable ? 'auto' : 44,
+          height: open && isSlotAvailable ? 'auto' : props.height,
           width: open && isSlotAvailable ? 320 : 260,
         }"
         class="bg-natural-900 relative cursor-pointer overflow-hidden text-secondary"
@@ -67,11 +66,13 @@ import { cn } from "@/lib/utils";
 interface Props {
   class?: string;
   title?: string;
+  height?: number;
 }
 
-withDefaults(defineProps<Props>(), {
+const props = withDefaults(defineProps<Props>(), {
   class: "",
   title: "Progress",
+  height: 44,
 });
 
 const open = ref(false);
@@ -81,6 +82,7 @@ const scrollPercentage = ref(0);
 
 const isDark = computed(() => useColorMode().value == "dark");
 const isSlotAvailable = computed(() => !!slots.default);
+const borderRadius = computed(() => `${props.height / 2}px`);
 
 onMounted(() => {
   if (window === undefined) return;
@@ -97,3 +99,9 @@ onUnmounted(() => {
   window.removeEventListener("scroll", updatePageScroll);
 });
 </script>
+
+<style scoped>
+.border-radius {
+  border-radius: v-bind(borderRadius);
+}
+</style>
