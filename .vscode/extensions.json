@@ -4,7 +4,6 @@
     "esbenp.prettier-vscode",
     "christian-kohler.path-intellisense",
     "christian-kohler.npm-intellisense",
-    "mrmlnc.vscode-duplicate",
     "pascalreitermann93.vscode-yaml-sort"
   ],
   "unwantedRecommendations": [

@@ -1,10 +1,6 @@
 ---
 title: Flickering Grid
 description: A flickering grid background made with Canvas, fully customizable using Tailwind CSS.
-
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="FlickeringGridDemo" type="examples" id="flickering-grid"}

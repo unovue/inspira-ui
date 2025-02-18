@@ -1,10 +1,6 @@
 ---
 title: Interactive Hover Button
 description: A visually engaging button component that responds to hover with dynamic transitions, adapting smoothly between light and dark modes for enhanced user interactivity.
-
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="InteractiveHoverButtonDemo" type="examples" id="interactive-hover-button"}

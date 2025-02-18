@@ -1,10 +1,6 @@
 ---
 title: Morphing Text
 description: This MorphingText component dynamically transitions between an array of text strings, creating a smooth, engaging visual effect.
-
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="MorphingTextDemo" type="examples" id="morphing-text"}
