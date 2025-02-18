@@ -38,6 +38,7 @@ Please install NumberFlow using following commands.
 | --------- | -------- | ------------ | ----------------------------------------------- |
 | `class`   | `string` | `""`         | Additional CSS classes for custom styling.      |
 | `title`   | `string` | `"Progress"` | Title displayed in the header of the component. |
+| `height`  | `string` | `44`         | Height of the component.                        |
 
 ## Component Code
 
