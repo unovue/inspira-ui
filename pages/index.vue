@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-col items-center justify-center px-4 py-6 font-heading md:px-8">
+    <FluidCursor />
     <HeroSection />
     <div class="mb-16 flex w-full flex-col items-center">
       <a
