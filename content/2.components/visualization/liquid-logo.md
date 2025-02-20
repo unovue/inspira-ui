@@ -1,6 +1,9 @@
 ---
 title: Liquid Logo
 description: An advanced WebGL-based component that applies a dynamic, liquid effect to logos or images using custom shaders.
+navBadges:
+  - value: New
+    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="LiquidLogoDemo" type="examples" id="liquid-logo"}
