@@ -1,5 +1,5 @@
 <template>
-  <div :class="cn('relative', props.class)">
+  <div :class="cn('relative block', props.class)">
     <div
       :class="
         cn(
@@ -175,11 +175,11 @@ onMounted(() => {
 
 @keyframes text-glow {
   0% {
-    filter: drop-shadow(0px 0px 2px v-bind(props.textGlowStartColor));
+    filter: drop-shadow(0px 0px 2px v-bind(textGlowStartColor));
   }
 
   100% {
-    filter: drop-shadow(0px 1px 8px v-bind(props.textGlowEndColor));
+    filter: drop-shadow(0px 1px 8px v-bind(textGlowEndColor));
   }
 }
 
