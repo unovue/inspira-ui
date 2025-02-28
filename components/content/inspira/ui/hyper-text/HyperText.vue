@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex scale-100 cursor-default overflow-hidden py-2"
+    :class="cn('flex scale-100 cursor-default overflow-hidden py-2', $props.class)"
     @mouseenter="triggerAnimation"
   >
     <div class="flex">
