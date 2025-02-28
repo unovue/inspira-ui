@@ -17,6 +17,9 @@ importers:
       '@nuxt/scripts':
         specifier: ^0.10.1
         version: 0.10.1(@types/google.maps@3.58.1)(@types/vimeo__player@2.18.3)(@types/youtube@0.1.0)(@unhead/vue@1.11.18(vue@3.5.13(typescript@5.7.3)))(db0@0.2.4)(ioredis@5.5.0)(magicast@0.3.5)(typescript@5.7.3)
+      '@types/lodash.template':
+        specifier: ^4.5.3
+        version: 4.5.3
       '@vueuse/core':
         specifier: ^12.5.0
         version: 12.5.0(typescript@5.7.3)
