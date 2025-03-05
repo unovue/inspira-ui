@@ -20,6 +20,14 @@
   </a>  
 </p>
 
+<p align="center">🌐 可用语言</p>
+
+<p align="center">
+  <a href="README.md">🇺🇸 英文</a> |
+  <a href="README_CN.md">🇨🇳 中文</a> |
+  <a href="README_IT.md">🇮🇹 意大利文</a>
+</p>
+
 ---
 
 欢迎光临 [**Inspira UI**](https://inspira-ui.com), 这是一个将 [Aceternity UI](https://ui.aceternity.com) 与 [Magic UI](https://magicui.design) 的美观性与功能性相互结合并带到 [Vue](https://vuejs.org) & [Nuxt](https://nuxt.com) 生态之中的社区性项目。 这个项目不仅从上述资源中吸收了优秀灵感，也包含了由社区贡献并由我们创建的独特定制组件。
