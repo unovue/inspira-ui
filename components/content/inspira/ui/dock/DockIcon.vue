@@ -17,25 +17,44 @@
 
 <script setup lang="ts">
 import { ref, inject, computed } from "vue";
+import {
+  MOUSE_X_INJECTION_KEY,
+  MOUSE_Y_INJECTION_KEY,
+  MAGNIFICATION_INJECTION_KEY,
+  DISTANCE_INJECTION_KEY,
+  ORIENTATION_INJECTION_KEY,
+} from "./injectionKeys";
 
 const iconRef = ref<HTMLDivElement | null>(null);
 
-const mouseX = inject("mouseX", ref(Infinity));
-const magnification = inject("magnification", 60);
-const distance = inject("distance", 140);
+const mouseX = inject(MOUSE_X_INJECTION_KEY, ref(Infinity));
+const mouseY = inject(MOUSE_Y_INJECTION_KEY, ref(Infinity));
+const distance = inject(DISTANCE_INJECTION_KEY);
+const orientation = inject(ORIENTATION_INJECTION_KEY, "vertical");
+const magnification = inject(MAGNIFICATION_INJECTION_KEY);
+const isVertical = computed(() => orientation === "vertical");
 
 const margin = ref(0);
 
 function calculateDistance(val: number) {
+  if (isVertical.value) {
+    const bounds = iconRef.value?.getBoundingClientRect() || {
+      y: 0,
+      height: 0,
+    };
+    return val - bounds.y - bounds.height / 2;
+  }
   const bounds = iconRef.value?.getBoundingClientRect() || { x: 0, width: 0 };
   return val - bounds.x - bounds.width / 2;
 }
 
 const iconWidth = computed(() => {
-  const distanceCalc = calculateDistance(mouseX.value);
-
-  if (Math.abs(distanceCalc) < distance) {
-    return (1 - Math.abs(distanceCalc) / distance) * magnification + 40;
+  const distanceCalc = isVertical.value
+    ? calculateDistance(mouseY.value)
+    : calculateDistance(mouseX.value);
+  if (!distance?.value || !magnification?.value) return 40;
+  if (Math.abs(distanceCalc) < distance?.value) {
+    return (1 - Math.abs(distanceCalc) / distance?.value) * magnification?.value + 40;
   }
 
   return 40;

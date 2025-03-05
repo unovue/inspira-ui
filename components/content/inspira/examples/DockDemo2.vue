@@ -1,5 +1,5 @@
 <template>
-  <Dock class="mb-6">
+  <Dock orientation="vertical">
     <DockIcon>
       <GitHubIcon />
     </DockIcon>
