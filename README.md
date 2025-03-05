@@ -23,6 +23,7 @@
 ---
 
 Welcome to [**Inspira UI**](https://inspira-ui.com), a community-driven project that brings the beauty and functionality of both [Aceternity UI](https://ui.aceternity.com) and [Magic UI](https://magicui.design) to the [Vue](https://vuejs.org) & [Nuxt](https://nuxt.com) ecosystem! While this project draws inspiration from these sources, it also includes unique custom components contributed by the community and created by us.
+For **Chinese version** visit [here](README_CN.md).
 
 ## ✨ About Inspira UI
 
