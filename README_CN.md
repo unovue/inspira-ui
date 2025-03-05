@@ -34,7 +34,7 @@ Inspira UI 的出道旨在填补 Vue 社区生态的一个空白，它提供了�
 
 ## 🎯 关键特性
 
-- **免费且开源**: 完全于MIT协议开源于： [此处](https://github.com/unovue/inspira-ui) 
+- **免费且开源**: 完全于MIT协议开源于： [此处](https://github.com/unovue/inspira-ui)
 - **高度个性化**: 根据您的具体设计需求设计组件。可参考我们的 [设计指南](/api/configuration).
 - **组件多样化**: 我们有来自于 Aceternity UI，Magic UI与社区贡献的许多 [组件](/components) 来帮助你实现你想呈现的内容
 - **移动端支持**: 我们的设计在移动端设备上依旧美观
