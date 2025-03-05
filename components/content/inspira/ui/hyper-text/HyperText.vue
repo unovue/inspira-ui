@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex scale-100 cursor-default overflow-hidden py-2"
+    :class="cn('flex scale-100 cursor-default overflow-hidden py-2', $props.class)"
     @mouseenter="triggerAnimation"
   >
     <div class="flex">
@@ -21,29 +21,22 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from "vue";
+import { ref, computed, watch, type HTMLAttributes } from "vue";
 import { useIntervalFn } from "@vueuse/core";
 import { cn } from "@/lib/utils";
 import { Motion } from "motion-v";
 
-const props = defineProps({
-  text: {
-    type: String,
-    required: true,
+const props = withDefaults(
+  defineProps<{
+    class?: HTMLAttributes["class"];
+    text: string;
+    duration: number;
+    animateOnLoad: boolean;
+  }>(),
+  {
+    duration: 800,
   },
-  duration: {
-    type: Number,
-    default: 0.8,
-  },
-  class: {
-    type: String,
-    default: "",
-  },
-  animateOnLoad: {
-    type: Boolean,
-    default: true,
-  },
-});
+);
 
 const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const displayText = ref(props.text.split(""));
