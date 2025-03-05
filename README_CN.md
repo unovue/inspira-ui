@@ -53,7 +53,7 @@ Inspira UI 的出道旨在填补 Vue 社区生态的一个空白，它提供了�
 - [shadcn-vue](https://www.shadcn-vue.com) 感谢您提供 shadcn-ui 的 Vue 端口与其他必要组件。
 - [shadcn-docs-nuxt](https://github.com/ZTL-UwU/shadcn-docs-nuxt) 感谢您提供精心制作的 Nuxt 文档网站。
 
-## 作者的话
+## 👤 作者的话
 
 你好呀，这里是作者 [Rahul Vashishtha](https://rahulv.dev)。受Aceternity UI、Magic UI和社区贡献的启发，我创建了Inspira UI项目，为Vue生态系统带来类似的体验。 为了让这个项目越来越好，我正在努力地完善项目内容。如果你感兴趣的话，你可以在 [GitHub](https://github.com/rahul-vashishtha) 这里查看我的进度。有能力的话，你还可以选择在 [这里](https://github.com/unovue/inspira-ui) 加入我们共同的旅途。海内存知己，天涯若比邻。Coding的路上有你便不孤单。
 
