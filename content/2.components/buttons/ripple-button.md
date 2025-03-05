@@ -9,6 +9,18 @@ navBadges:
 ::ComponentLoader{label="Preview" componentName="RippleButtonDemo" type="examples"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="ripple-button"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="RippleButton.vue" language="vue" componentName="RippleButton" type="ui" id="ripple-button"}
+::
+
 ## API
 
 | Prop Name     | Type     | Default     | Description                                       |
@@ -22,13 +34,6 @@ navBadges:
 | Event Name | Type    | Description |
 | ---------- | ------- | ----------- |
 | `click`    | `event` | Click event |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="RippleButton.vue" language="vue" componentName="RippleButton" type="ui" id="ripple-button"}
-::
 
 ## Credits
 

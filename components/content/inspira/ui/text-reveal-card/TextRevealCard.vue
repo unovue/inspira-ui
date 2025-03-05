@@ -42,7 +42,7 @@
         <slot name="revealText"></slot>
 
         <TextRevealStars
-          :stars-count
+          :stars-count="starsCount"
           :class="starsClass"
         />
       </div>
@@ -51,13 +51,15 @@
 </template>
 
 <script setup lang="ts">
+import { ref, computed, onMounted } from "vue";
+import type { HTMLAttributes } from "vue";
+
 interface Props {
-  class?: string;
+  class?: HTMLAttributes["class"];
   starsCount?: number;
-  starsClass?: string;
+  starsClass?: HTMLAttributes["class"];
 }
 const props = withDefaults(defineProps<Props>(), {
-  class: "",
   starsCount: 130,
 });
 

@@ -6,6 +6,54 @@ description: A Vue component for confetti animations.
 ::ComponentLoader{label="Preview" componentName="ConfettiDemo" type="examples" id="confetti"}
 ::
 
+::alert{type="info"}
+**Note:** This component uses `canvas-confetti` npm package as a dependency.
+::
+
+## Install using CLI
+
+::InstallationCli{componentId="confetti"}
+::
+
+## Install Manually
+
+::steps{level=4}
+
+#### Install the dependencies
+
+::code-group
+
+```bash [npm]
+npm install canvas-confetti
+npm install -D @types/canvas-confetti
+```
+
+```bash [pnpm]
+pnpm install canvas-confetti
+pnpm install -D @types/canvas-confetti
+```
+
+```bash [bun]
+bun add canvas-confetti
+bun add -d @types/canvas-confetti
+```
+
+```bash [yarn]
+yarn add canvas-confetti
+yarn add --dev @types/canvas-confetti
+```
+
+::
+
+#### Copy and paste the following code
+
+::code-group
+
+:CodeViewerTab{label="Confetti.vue" language="vue" componentName="Confetti" type="ui" id="confetti"}
+:CodeViewerTab{label="ConfettiButton.vue" language="vue" componentName="ConfettiButton" type="ui" id="confetti"}
+::
+::
+
 ## Examples
 
 ### Basic
@@ -28,41 +76,13 @@ description: A Vue component for confetti animations.
 ::ComponentLoader{label="Preview" componentName="ConfettiCannonsDemo" type="examples" id="confetti"}
 ::
 
-::alert{type="info"}
-**Note:** This component uses `canvas-confetti` npm package as a dependency.
-
-Install package using following commands.
-
-    ::code-group
-
-    ```bash [npm]
-    npm install canvas-confetti
-    npm install -D @types/canvas-confetti
-    ```
-
-    ```bash [pnpm]
-    pnpm install canvas-confetti
-    pnpm install -D @types/canvas-confetti
-    ```
-
-    ```bash [bun]
-    bun add canvas-confetti
-    bun add -d @types/canvas-confetti
-    ```
-
-    ```bash [yarn]
-    yarn add canvas-confetti
-    yarn add --dev @types/canvas-confetti
-    ```
-    ::
-
-::
-
 ## API
 
-::steps
+### Components props
 
-### Confetti
+::steps{level=4}
+
+#### `Confetti`
 
 | Prop Name       | Type                    | Default | Description                                                       |
 | --------------- | ----------------------- | ------- | ----------------------------------------------------------------- |
@@ -70,7 +90,7 @@ Install package using following commands.
 | `globalOptions` | `ConfettiGlobalOptions` | `{}`    | Global options for the confetti instance (e.g., resize behavior). |
 | `manualstart`   | `boolean`               | `false` | If `true`, confetti won't start automatically on mount.           |
 
-#### `ConfettiOptions` Properties
+#### `ConfettiOptions`
 
 | Property                  | Type                        | Default                                                                         | Description                                                            |
 | ------------------------- | --------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -95,24 +115,11 @@ Install package using following commands.
 | `drift`                   | `number`                    | `0`                                                                             | The horizontal drift applied to particles.                             |
 | `flat`                    | `boolean`                   | `false`                                                                         | If `true`, confetti particles will be flat (no rotation or 3D effect). |
 
-### Confetti Button
+#### `ConfettiButton`
 
 | Prop Name | Type                                               | Default | Description                                      |
 | --------- | -------------------------------------------------- | ------- | ------------------------------------------------ |
 | `options` | `ConfettiOptions & { canvas?: HTMLCanvasElement }` | `{}`    | Options for confetti when the button is clicked. |
-
-::
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::code-group
-
-    ::CodeViewerTab{label="Confetti.vue" language="vue" componentName="Confetti" type="ui" id="confetti"}
-    ::
-    ::CodeViewerTab{label="ConfettiButton.vue" language="vue" componentName="ConfettiButton" type="ui" id="confetti"}
-    ::
 
 ::
 

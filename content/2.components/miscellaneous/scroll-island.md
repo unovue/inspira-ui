@@ -7,29 +7,44 @@ description: A dynamic and interactive component that displays scroll progress w
 ::
 
 ::alert{type="info"}
-**Note:** This component uses NumberFlow & requires `@number-flow/vue` npm package as a dependency.
+**Note:** This component requires `@number-flow/vue` as a dependency.
+::
 
-Please install NumberFlow using following commands.
+## Install using CLI
 
-    ::code-group
+::InstallationCli{componentId="scroll-island"}
+::
 
-    ```bash [npm]
-    npm install @number-flow/vue
-    ```
+## Install Manually
 
-    ```bash [pnpm]
-    pnpm install @number-flow/vue
-    ```
+::steps{level=4}
 
-    ```bash [bun]
-    bun add @number-flow/vue
-    ```
+#### Install the dependencies
 
-    ```bash [yarn]
-    yarn add @number-flow/vue
-    ```
-    ::
+::code-group
 
+```bash [npm]
+npm install @number-flow/vue
+```
+
+```bash [pnpm]
+pnpm install @number-flow/vue
+```
+
+```bash [bun]
+bun add @number-flow/vue
+```
+
+```bash [yarn]
+yarn add @number-flow/vue
+```
+
+::
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="ScrollIsland.vue" language="vue" componentName="ScrollIsland" type="ui" id="scroll-island"}  
+::
 ::
 
 ## API
@@ -39,17 +54,6 @@ Please install NumberFlow using following commands.
 | `class`   | `string` | `""`         | Additional CSS classes for custom styling.      |
 | `title`   | `string` | `"Progress"` | Title displayed in the header of the component. |
 | `height`  | `string` | `44`         | Height of the component.                        |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::code-group
-
-    ::CodeViewerTab{label="ScrollIsland.vue" language="vue" componentName="ScrollIsland" type="ui" id="scroll-island"}
-    ::
-
-::
 
 ## Features
 

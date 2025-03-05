@@ -6,6 +6,18 @@ description: This is a morphing tabs interaction, recreated by Preet's work and 
 ::ComponentLoader{label="Preview" componentName="MorphingTabsDemo" type="examples" id="morphing-tabs"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="morphing-tabs"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="MorphingTabs.vue" language="vue" componentName="MorphingTabs" type="ui" id="morphing-tabs"}
+::
+
 ## API
 
 | Prop Name          | Type       | Default | Description                                    |
@@ -15,13 +27,6 @@ description: This is a morphing tabs interaction, recreated by Preet's work and 
 | `activeTab`        | `string`   | `""`    | Current active Tab.                            |
 | `margin`           | `number`   | `20`    | Active tab margin left and right.              |
 | `blurStdDeviation` | `number`   | `6`     | Svg blur stdDeviation, tab rounded use it.     |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="MorphingTabs.vue" language="vue" componentName="MorphingTabs" type="ui" id="morphing-tabs"}
-::
 
 ## Credits
 

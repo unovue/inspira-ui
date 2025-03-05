@@ -18,6 +18,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
+
 const confettiRef = ref(null);
 
 // Function to trigger confetti

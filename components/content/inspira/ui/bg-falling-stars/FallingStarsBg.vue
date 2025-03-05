@@ -7,7 +7,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 
 interface Star {
   x: number;

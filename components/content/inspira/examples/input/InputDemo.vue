@@ -1,9 +1,9 @@
 <template>
   <div class="flex h-56 w-full flex-col items-center justify-center gap-2">
-    <UiLabel
+    <label
       for="inputDemo"
-      class="ml-4 w-full max-w-sm"
-      >Hover over below input</UiLabel
+      class="ml-4 w-full max-w-sm text-sm font-medium text-gray-700 dark:text-gray-200"
+      >Hover over below input</label
     >
     <IInput
       id="inputDemo"

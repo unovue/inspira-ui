@@ -12,7 +12,10 @@
       :radius="80"
       :direction="ORBIT_DIRECTION.CounterClockwise"
     >
-      <WhatsAppIcon />
+      <Icon
+        name="logos:whatsapp-icon"
+        size="24"
+      />
     </Orbit>
     <Orbit
       class="size-[30px] items-center justify-center border-none bg-transparent"
@@ -22,7 +25,10 @@
       path
       :direction="ORBIT_DIRECTION.CounterClockwise"
     >
-      <NotionIcon />
+      <Icon
+        name="logos:notion-icon"
+        size="24"
+      />
     </Orbit>
 
     <!-- Outer Circles (reverse) -->
@@ -32,7 +38,10 @@
       :duration="20"
       path
     >
-      <GoogleDriveIcon />
+      <Icon
+        name="logos:google-drive"
+        size="50"
+      />
     </Orbit>
     <Orbit
       class="size-[50px] items-center justify-center border-none bg-transparent"
@@ -41,7 +50,10 @@
       :delay="200"
       :direction="ORBIT_DIRECTION.CounterClockwise"
     >
-      <GitHubIcon />
+      <Icon
+        name="mdi:github"
+        size="50"
+      />
     </Orbit>
     <Orbit
       class="items-center justify-center border-none bg-transparent text-4xl"

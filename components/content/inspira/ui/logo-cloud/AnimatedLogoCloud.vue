@@ -17,7 +17,7 @@
           :key="index"
           class="animate-logo-cloud flex shrink-0 flex-row justify-around gap-6"
         >
-          <NuxtImg
+          <img
             v-for="(logo, key) in props.logos"
             :key="key"
             :src="logo.path"
@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 import type { AnimateLogoCloudProps } from "./index";
 
 const props = defineProps<AnimateLogoCloudProps>();

@@ -20,8 +20,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from "vue";
-import { cn } from "~/lib/utils";
+import { ref, computed, onMounted, onUnmounted } from "vue";
+import { cn } from "@/lib/utils";
 
 interface Props {
   class?: string;

@@ -22,11 +22,12 @@
 </template>
 
 <script lang="ts" setup>
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 import {
   inspiraImageParticles,
   type InspiraImageParticle as ImageParticle,
 } from "./inspiraImageParticles";
+import { ref, onMounted } from "vue";
 
 type ParticleImageProps = {
   imageSrc: string;

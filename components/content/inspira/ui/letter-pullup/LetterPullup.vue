@@ -27,7 +27,7 @@
 
 <script setup lang="ts">
 import { Motion } from "motion-v";
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 
 interface LetterPullupProps {
   class?: string;

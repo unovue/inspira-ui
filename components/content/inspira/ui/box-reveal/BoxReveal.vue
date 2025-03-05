@@ -26,7 +26,7 @@
 <script lang="ts" setup>
 import { Motion } from "motion-v";
 import type { HTMLAttributes } from "vue";
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 
 interface BoxRevealProps {
   color?: string;

@@ -12,13 +12,13 @@
     @mousemove="onMouseMove"
     @mouseleave="onMouseLeave"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed, type HTMLAttributes } from "vue";
-import { cn } from "~/lib/utils";
+import { ref, computed, provide, type HTMLAttributes } from "vue";
+import { cn } from "@/lib/utils";
 import type { DataOrientation, Direction } from "./types";
 import {
   MOUSE_X_INJECTION_KEY,

@@ -1,4 +1,4 @@
-import type { ObjectValues } from "@/lib/utils";
+type ObjectValues<T> = T[keyof T];
 
 export const ORBIT_DIRECTION = {
   Clockwise: "normal",
@@ -15,3 +15,5 @@ export interface Props {
   radius?: number;
   path?: boolean;
 }
+
+export { default as Orbit } from "./Orbit.vue";

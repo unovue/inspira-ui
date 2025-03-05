@@ -18,7 +18,9 @@
 
 <script setup lang="ts">
 import { createNoise3D } from "simplex-noise";
-import { cn } from "~/lib/utils";
+import { onMounted, onUnmounted } from "vue";
+import { templateRef } from "@vueuse/core";
+import { cn } from "@/lib/utils";
 
 const TAU = 2 * Math.PI;
 const BASE_TTL = 50;
@@ -60,8 +62,8 @@ const particleProps = shallowRef<Float32Array | null>(null);
 const center = ref<[number, number]>([0, 0]);
 const ctx = shallowRef<CanvasRenderingContext2D | null>(null);
 
-const canvasRef = useTemplateRef<HTMLCanvasElement | null>("canvasRef");
-const containerRef = useTemplateRef<HTMLElement | null>("containerRef");
+const canvasRef = templateRef<HTMLCanvasElement | null>("canvasRef");
+const containerRef = templateRef<HTMLElement | null>("containerRef");
 
 const particleCache = {
   x: 0,

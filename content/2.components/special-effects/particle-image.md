@@ -6,6 +6,23 @@ description: Visually appealing particle animation applied to images as seen on 
 ::ComponentLoader{label="Preview" componentName="ParticleImageDemo" type="examples"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="particle-image"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="ParticleImage.vue" language="vue" componentName="ParticleImage" type="ui" id="particle-image"}
+:CodeViewerTab{label="inspiraImageParticles.js" icon="vscode-icons:file-type-js" componentName="inspiraImageParticles" type="ui" id="particle-image" extension="js"}
+:CodeViewerTab{label="inspiraImageParticles.d.ts" icon="vscode-icons:file-type-typescriptdef" componentName="inspiraImageParticles" type="ui" id="particle-image" extension="d.ts"}
+
+::
+
 ## API
 
 | Prop Name         | Type                                                                          | Default  | Description                                                                     |
@@ -27,22 +44,6 @@ description: Visually appealing particle animation applied to images as seen on 
 | `fadeDirection`   | `"random" \| "top" \| "left" \| "bottom" \| "right" \| "none"`                | `none`   | Direction in which the particles fade out.                                      |
 | `noise`           | `number`                                                                      | `null`   | Noise of the particles.                                                         |
 | `responsiveWidth` | `boolean`                                                                     | `false`  | Should the canvas be responsive.                                                |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::code-group
-::CodeViewerTab{label="ParticleImage.vue" icon="vscode-icons:file-type-vue" componentName="ParticleImage" type="ui" id="particle-image"}
-::
-
-::CodeViewerTab{label="inspiraImageParticles.js" icon="vscode-icons:file-type-js" componentName="inspiraImageParticles" type="ui" id="particle-image" extension="js"}
-::
-
-::CodeViewerTab{label="inspiraImageParticles.d.ts" icon="vscode-icons:file-type-typescriptdef" componentName="inspiraImageParticles" type="ui" id="particle-image" extension="d.ts"}
-::
-
-::
 
 ## Credits
 

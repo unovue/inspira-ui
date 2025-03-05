@@ -19,5 +19,8 @@
 </template>
 
 <script setup lang="ts">
+import { computed } from "vue";
+import { useColorMode } from "@vueuse/core";
+
 const isDark = computed(() => useColorMode().value == "dark");
 </script>

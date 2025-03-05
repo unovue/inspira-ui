@@ -6,28 +6,26 @@ description: A sequentially animated list that introduces each item with a timed
 ::ComponentLoader{label="Preview" componentName="AnimatedListDemo" type="examples"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="animated-list"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="AnimatedList.vue" language="vue" componentName="AnimatedList" type="ui" id="animated-list"}
+:CodeViewerTab{label="Notification.vue" language="vue" componentName="Notification" type="ui" id="animated-list"}
+::
+
 ## API
 
 | Prop Name | Type     | Default | Description                                                    |
 | --------- | -------- | ------- | -------------------------------------------------------------- |
 | `delay`   | `number` | `1`     | The delay in milliseconds before adding each item to the list. |
-
-::alert{type="warning"}
-This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
-::
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeGroup
-::CodeViewerTab{label="AnimatedList.vue" language="vue" componentName="AnimatedList" type="ui" id="animated-list"}
-::
-
-    ::CodeViewerTab{label="Notification.vue" language="vue" componentName="Notification" type="ui" id="notification"}
-    ::
-
-::
 
 ## Features
 

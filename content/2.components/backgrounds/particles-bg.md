@@ -6,6 +6,18 @@ description: Particles can add a dynamic and engaging element to your website's 
 ::ComponentLoader{label="Preview" componentName="ParticlesBgDemo" type="examples"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="particles-bg"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="ParticlesBg.vue" language="vue" componentName="ParticlesBg" type="ui" id="particles-bg"}
+::
+
 ## API
 
 | Prop Name   | Type     | Default | Description                                                                                                 |
@@ -14,13 +26,6 @@ description: Particles can add a dynamic and engaging element to your website's 
 | `quantity`  | `number` | `100`   | The number of particles to generate and display on the canvas.                                              |
 | `staticity` | `number` | `50`    | Determines how much the particles move based on the mouse's proximity. Higher values reduce movement.       |
 | `ease`      | `number` | `50`    | Controls the easing effect of particle movement; lower values make particles follow the mouse more closely. |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="ParticlesBg.vue" language="vue" componentName="ParticlesBg" type="ui" id="particles-bg"}
-::
 
 ## Credits
 

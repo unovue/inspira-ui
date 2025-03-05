@@ -30,6 +30,7 @@ import {
   patternBackgroundMaskVariants,
   patternBackgroundVariants,
 } from ".";
+import { computed } from "vue";
 
 const props = withDefaults(defineProps<Props>(), {
   direction: () => PATTERN_BACKGROUND_DIRECTION.Top,

@@ -6,6 +6,18 @@ description: A visually engaging button component that responds to hover with dy
 ::ComponentLoader{label="Preview" componentName="InteractiveHoverButtonDemo" type="examples" id="interactive-hover-button"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="interactive-hover-button"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="InteractiveHoverButton.vue" language="vue" componentName="InteractiveHoverButton" type="ui" id="interactive-hover-button"}
+::
+
 ## Example
 
 Very long text
@@ -21,13 +33,6 @@ If your button text is very long, you need change button width🤣.
 | --------- | -------- | -------- | ---------------------------------------------- |
 | `text`    | `string` | `Button` | The text to be displayed inside the button.    |
 | `class`   | `string` | `""`     | Additional class names to style the component. |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="InteractiveHoverButton.vue" language="vue" componentName="InteractiveHoverButton" type="ui" id="interactive-hover-button"}
-::
 
 ## Credits
 

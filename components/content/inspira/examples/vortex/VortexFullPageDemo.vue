@@ -13,13 +13,16 @@
         you&apos;ll have a scar.
       </p>
       <div class="mt-6 flex flex-col items-center gap-4 sm:flex-row">
-        <UiButton
-          variant="outline"
-          class="bg-blue-600 hover:bg-blue-600"
+        <button
+          class="rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700"
         >
           Order now
-        </UiButton>
-        <UiButton>Watch trailer</UiButton>
+        </button>
+        <button
+          class="rounded-md bg-white px-4 py-2 text-sm font-medium text-black transition-colors hover:bg-gray-100"
+        >
+          Watch trailer
+        </button>
       </div>
     </Vortex>
   </div>

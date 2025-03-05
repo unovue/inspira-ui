@@ -6,6 +6,18 @@ description: Showcase your team with pride using our stunning Photo Gallery Comp
 ::ComponentLoader{label="Preview" componentName="PhotoGalleryDemo" type="examples" id="photo-gallery"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="photo-gallery"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="PhotoGallery.vue" language="vue" componentName="PhotoGallery" type="ui" id="photo-gallery"}
+::
+
 ## API
 
 | Prop Name        | Type                | Default | Description                                            |
@@ -13,13 +25,6 @@ description: Showcase your team with pride using our stunning Photo Gallery Comp
 | `items`          | `"[{src: string}]"` | `[]`    | Pass items / image src to animate                      |
 | `containerClass` | `string`            | `""`    | Additional tailwind CSS classes for container styling. |
 | `class`          | `string`            | `""`    | Additional tailwind CSS classes for custom styling.    |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="PhotoGallery.vue" language="vue" componentName="PhotoGallery" type="ui" id="photo-gallery"}
-::
 
 ## Credits
 

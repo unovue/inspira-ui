@@ -9,106 +9,21 @@ navBadges:
 ::ComponentLoader{label="Preview" componentName="BookDemo" type="examples"}
 ::
 
-## API
+## Install using CLI
 
-::steps
-
-### `Book`
-
-The `Book` component serves as a wrapper for creating an interactive 3D book effect.
-
-#### Props
-
-| Prop Name    | Type    | Default | Description                                   |
-| ------------ | ------- | ------- | --------------------------------------------- |
-| `class`      | String  | -       | Additional classes for styling the component. |
-| `duration`   | Number  | 1000    | Animation duration in milliseconds.           |
-| `color`      | String  | "zinc"  | Color theme for the book gradient.            |
-| `isStatic`   | Boolean | false   | Disables hover animations when true.          |
-| `size`       | String  | "md"    | Size variant of the book.                     |
-| `radius`     | String  | "md"    | Border radius variant of the book.            |
-| `shadowSize` | String  | "lg"    | Shadow size variant of the book.              |
-
-#### Usage
-
-```vue [MyBookComponent.vue]
-<Book class="additional-class">
-  <!-- Your content here -->
-</Book>
-```
-
-### `BookHeader`
-
-The `BookHeader` component is a flexible container with preserved 3D styling. It is intended to be used within a `Book` to hold content with a 3D transformation effect.
-
-#### Props
-
-| Prop Name | Type   | Default | Description                            |
-| --------- | ------ | ------- | -------------------------------------- |
-| `class`   | String | -       | Additional classes for custom styling. |
-
-#### Usage
-
-```vue [MyBookComponent.vue]
-<BookHeader class="additional-class">
-  <!-- Your content here -->
-</BookHeader>
-```
-
-### `BookTitle`
-
-The `BookTitle` component is a flexible container with preserved 3D styling. It is intended to be used within a `Book` to hold content with a 3D transformation effect.
-
-#### Props
-
-| Prop Name | Type   | Default | Description                            |
-| --------- | ------ | ------- | -------------------------------------- |
-| `class`   | String | -       | Additional classes for custom styling. |
-
-#### Usage
-
-```vue [MyBookComponent.vue]
-<BookTitle class="additional-class">
-  <!-- Your text here -->
-</BookTitle>
-```
-
-### `BookDescription`
-
-The `BookDescription` component is a flexible container with preserved 3D styling. It is intended to be used within a `Book` to hold content with a 3D transformation effect.
-
-#### Props
-
-| Prop Name | Type   | Default | Description                            |
-| --------- | ------ | ------- | -------------------------------------- |
-| `class`   | String | -       | Additional classes for custom styling. |
-
-#### Usage
-
-```vue [MyBookComponent.vue]
-<BookDescription class="additional-class">
-  <!-- Your text here -->
-</BookDescription>
-```
-
+::InstallationCli{componentId="book"}
 ::
 
-## Component Code
+## Install Manually
 
-You can copy and paste the following code to create these components:
+#### Copy and paste the following code in the same folder
 
 ::code-group
-::CodeViewerTab{label="Book.vue" icon="vscode-icons:file-type-vue" componentName="Book" type="ui" id="book"}
-::
 
-::CodeViewerTab{label="BookHeader.vue" icon="vscode-icons:file-type-vue" componentName="BookHeader" type="ui" id="book"}
-::
-
-::CodeViewerTab{label="BookTitle.vue" icon="vscode-icons:file-type-vue" componentName="BookTitle" type="ui" id="book"}
-::
-
-::CodeViewerTab{label="BookDescription.vue" icon="vscode-icons:file-type-vue" componentName="BookDescription" type="ui" id="book"}
-::
+:CodeViewerTab{label="Book.vue" language="vue" componentName="Book" type="ui" id="book"}
+:CodeViewerTab{label="BookHeader.vue" language="vue" componentName="BookHeader" type="ui" id="book"}
+:CodeViewerTab{label="BookTitle.vue" language="vue" componentName="BookTitle" type="ui" id="book"}
+:CodeViewerTab{label="BookDescription.vue" language="vue" componentName="BookDescription" type="ui" id="book"}
 
 ```ts [index.ts]
 export const BOOK_RADIUS_MAP = {
@@ -167,6 +82,44 @@ export { default as BookHeader } from "./BookHeader.vue";
 export { default as BookTitle } from "./BookTitle.vue";
 export { default as BookDescription } from "./BookDescription.vue";
 ```
+
+::
+
+## API
+
+### Components props
+
+::steps{level=4}
+
+#### `Book`
+
+| Prop Name    | Type    | Default | Description                                   |
+| ------------ | ------- | ------- | --------------------------------------------- |
+| `class`      | String  | -       | Additional classes for styling the component. |
+| `duration`   | Number  | 1000    | Animation duration in milliseconds.           |
+| `color`      | String  | "zinc"  | Color theme for the book gradient.            |
+| `isStatic`   | Boolean | false   | Disables hover animations when true.          |
+| `size`       | String  | "md"    | Size variant of the book.                     |
+| `radius`     | String  | "md"    | Border radius variant of the book.            |
+| `shadowSize` | String  | "lg"    | Shadow size variant of the book.              |
+
+#### `BookHeader`
+
+| Prop Name | Type   | Default | Description                            |
+| --------- | ------ | ------- | -------------------------------------- |
+| `class`   | String | -       | Additional classes for custom styling. |
+
+#### `BookTitle`
+
+| Prop Name | Type   | Default | Description                            |
+| --------- | ------ | ------- | -------------------------------------- |
+| `class`   | String | -       | Additional classes for custom styling. |
+
+#### `BookDescription`
+
+| Prop Name | Type   | Default | Description                            |
+| --------- | ------ | ------- | -------------------------------------- |
+| `class`   | String | -       | Additional classes for custom styling. |
 
 ::
 

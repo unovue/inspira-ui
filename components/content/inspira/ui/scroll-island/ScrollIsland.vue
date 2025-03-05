@@ -59,9 +59,11 @@
 </template>
 
 <script lang="ts" setup>
-import { MotionConfig, motion } from "motion-v";
-import NumberFlow from "@number-flow/vue";
 import { cn } from "@/lib/utils";
+import NumberFlow from "@number-flow/vue";
+import { useColorMode } from "@vueuse/core";
+import { motion, MotionConfig } from "motion-v";
+import { computed, onMounted, onUnmounted, ref, useSlots } from "vue";
 
 interface Props {
   class?: string;

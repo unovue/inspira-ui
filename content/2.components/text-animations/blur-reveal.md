@@ -10,6 +10,18 @@ description: A component to smoothly blur fade in content.
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="blur-reveal"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="BlurReveal.vue" language="vue" componentName="BlurReveal" type="ui" id="blur-reveal"}
+::
+
 ## API
 
 | Prop Name  | Type     | Default | Description                                                                  |
@@ -18,13 +30,6 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 | `delay`    | `number` | `1`     | Delay between child components to reveal                                     |
 | `blur`     | `string` | `10px`  | Amount of blur to apply to the child components.                             |
 | `yOffset`  | `number` | `20`    | Specifies the vertical offset distance (yOffset) for the entrance animation. |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="BlurReveal.vue" language="vue" componentName="BlurReveal" type="ui" id="blur-reveal"}
-::
 
 ## Credits
 

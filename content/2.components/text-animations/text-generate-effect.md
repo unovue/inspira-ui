@@ -6,6 +6,18 @@ description: A cool text effect that fades in text on page load, one by one.
 ::ComponentLoader{label="Preview" componentName="TextGenerateDemo" type="examples"}  
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="text-generate-effect"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="TextGenerateEffect.vue" language="vue" componentName="TextGenerateEffect" type="ui" id="text-generate-effect"}
+::
+
 ## Examples
 
 Two text with different delay
@@ -25,13 +37,6 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 | `duration` | `number`  | `0.7`    | The duration of the text generation animation in seconds.              |
 | `delay`    | `number`  | `0`      | The delay before the text generation animation starts in milliseconds. |
 | `filter`   | `boolean` | `true`   | The blur of the text.                                                  |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="TextGenerateEffect.vue" language="vue" componentName="TextGenerateEffect" type="ui" id="text-generate-effect"}
-::
 
 ## Credits
 

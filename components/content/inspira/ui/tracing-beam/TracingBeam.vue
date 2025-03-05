@@ -72,9 +72,10 @@
 </template>
 
 <script lang="ts" setup>
-import { cn } from "~/lib/utils";
 import { Motion } from "motion-v";
+import { cn } from "@/lib/utils";
 import { useSpring } from "vue-use-spring";
+import { ref, computed, onMounted, onUnmounted, watch } from "vue";
 
 defineProps({
   class: String,

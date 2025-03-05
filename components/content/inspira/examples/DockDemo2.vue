@@ -1,17 +1,29 @@
 <template>
   <Dock orientation="vertical">
     <DockIcon>
-      <GitHubIcon />
+      <Icon
+        name="mdi:github"
+        class="size-full"
+      />
     </DockIcon>
     <DockSeparator />
     <DockIcon>
-      <GoogleDriveIcon />
+      <Icon
+        name="logos:google-drive"
+        class="size-full"
+      />
     </DockIcon>
     <DockIcon>
-      <NotionIcon />
+      <Icon
+        name="logos:notion-icon"
+        class="size-full"
+      />
     </DockIcon>
     <DockIcon>
-      <WhatsAppIcon />
+      <Icon
+        name="logos:whatsapp-icon"
+        class="size-full"
+      />
     </DockIcon>
   </Dock>
 </template>

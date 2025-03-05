@@ -9,6 +9,18 @@ navBadges:
 ::ComponentLoader{label="Preview" componentName="LineShadowTextDemo" type="examples" id="line-shadow-text"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="line-shadow-text"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="LineShadowText.vue" language="vue" componentName="LineShadowText" type="ui" id="line-shadow-text"}
+::
+
 ## API
 
 | Prop Name     | Type     | Default   | Description                                |
@@ -16,13 +28,6 @@ navBadges:
 | `shadowColor` | `string` | `"black"` | The color of the shadow effect             |
 | `class`       | `string` | `""`      | Additional CSS classes for custom styling. |
 | `as`          | `string` | `"span"`  | The HTML element to render the text as.    |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="LineShadowText.vue" language="vue" componentName="LineShadowText" type="ui" id="line-shadow-text"}
-::
 
 ## Features
 

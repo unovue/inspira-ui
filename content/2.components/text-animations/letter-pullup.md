@@ -6,6 +6,18 @@ description: Staggered letter pull up text animation.
 ::ComponentLoader{label="Preview" componentName="LetterPullupDemo" type="examples" id="letter-pullup"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="letter-pullup"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="LetterPullup.vue" language="vue" componentName="LetterPullup" type="ui" id="letter-pullup"}
+::
+
 ## API
 
 | Prop Name | Type     | Default                    | Description                                        |
@@ -13,13 +25,6 @@ description: Staggered letter pull up text animation.
 | `class`   | `string` | `-`                        | The class to be applied to the component.          |
 | `words`   | `string` | `Staggered Letter Pull Up` | Text to animate.                                   |
 | `delay`   | `number` | `0.05`                     | Delay each letter's animation by this many seconds |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="LetterPullup.vue" language="vue" componentName="LetterPullup" type="ui" id="letter-pullup"}
-::
 
 ## Credits
 

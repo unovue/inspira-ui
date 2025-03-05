@@ -6,6 +6,44 @@ description: A card perspective effect, hover over the card to elevate card elem
 ::ComponentLoader{label="Preview" componentName="CardDemo" type="examples"}
 ::
 
+::alert{type="warning"}
+This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
+::
+
+## Install using CLI
+
+::InstallationCli{componentId="card-3d"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{filename="CardContainer.vue" language="vue" componentName="CardContainer" type="ui" id="card-3d"}
+:CodeViewerTab{filename="CardBody.vue" language="vue" componentName="CardBody" type="ui" id="card-3d"}
+:CodeViewerTab{filename="CardItem.vue" language="vue" componentName="CardItem" type="ui" id="card-3d"}
+
+```ts [useMouseState.ts]
+import { ref, readonly } from "vue";
+
+export function useMouseState() {
+  const isMouseEntered = ref(false);
+
+  function setMouseEntered(value: boolean) {
+    isMouseEntered.value = value;
+  }
+
+  return {
+    isMouseEntered: readonly(isMouseEntered),
+    setMouseEntered,
+  };
+}
+```
+
+::
+
 ## Examples
 
 With rotation
@@ -13,13 +51,7 @@ With rotation
 ::ComponentLoader{label="Preview" componentName="CardDemo2" type="examples"}
 ::
 
-::alert{type="warning"}
-This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
-::
-
 ## API
-
-::steps
 
 ### `CardContainer`
 
@@ -82,38 +114,3 @@ The `CardItem` component represents individual items within the 3D card. It supp
   Your text or content here
 </CardItem>
 ```
-
-::
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::code-group
-::CodeViewerTab{label="CardContainer.vue" icon="vscode-icons:file-type-vue" componentName="CardContainer" type="ui" id="card-3d"}
-::
-
-::CodeViewerTab{label="CardBody.vue" icon="vscode-icons:file-type-vue" componentName="CardBody" type="ui" id="card-3d"}
-::
-
-::CodeViewerTab{label="CardItem.vue" icon="vscode-icons:file-type-vue" componentName="CardItem" type="ui" id="card-3d"}
-::
-
-```ts [useMouseState.ts]
-import { ref, readonly } from "vue";
-
-export function useMouseState() {
-  const isMouseEntered = ref(false);
-
-  function setMouseEntered(value: boolean) {
-    isMouseEntered.value = value;
-  }
-
-  return {
-    isMouseEntered: readonly(isMouseEntered),
-    setMouseEntered,
-  };
-}
-```
-
-::

@@ -36,7 +36,9 @@
 </template>
 
 <script lang="ts" setup>
-import { cn } from "~/lib/utils";
+import { Motion } from "motion-v";
+import { computed, onMounted, ref, useSlots } from "vue";
+import { cn } from "@/lib/utils";
 
 interface Props {
   class?: string;

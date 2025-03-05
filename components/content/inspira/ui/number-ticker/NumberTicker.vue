@@ -8,8 +8,9 @@
 </template>
 
 <script setup lang="ts">
-import { TransitionPresets } from "@vueuse/core";
-import { cn } from "~/lib/utils";
+import { TransitionPresets, useElementVisibility, useTransition } from "@vueuse/core";
+import { cn } from "@/lib/utils";
+import { ref, watch, computed } from "vue";
 
 type TransitionsPresetsKeys = keyof typeof TransitionPresets;
 

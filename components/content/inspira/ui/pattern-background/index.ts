@@ -1,7 +1,7 @@
 import { cva, type VariantProps } from "class-variance-authority";
 import type { HTMLAttributes } from "vue";
 
-import type { ObjectValues } from "@/lib/utils";
+type ObjectValues<T> = T[keyof T];
 
 export const PATTERN_BACKGROUND_DIRECTION = {
   Top: "top",
@@ -25,8 +25,6 @@ export interface BaseProps {
   mask?: PatternBackgroundMaskVariants["mask"];
   speed?: ObjectValues<typeof PATTERN_BACKGROUND_SPEED>;
 }
-
-export { default as PatternBackground } from "./PatternBackground.vue";
 
 export const PATTERN_BACKGROUND_VARIANT = {
   Grid: "grid",
@@ -85,3 +83,5 @@ export const patternBackgroundMaskVariants = cva("bg-background", {
 });
 
 export type PatternBackgroundMaskVariants = VariantProps<typeof patternBackgroundMaskVariants>;
+
+export { default as PatternBackground } from "./PatternBackground.vue";

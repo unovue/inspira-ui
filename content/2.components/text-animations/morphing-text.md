@@ -10,6 +10,18 @@ description: This MorphingText component dynamically transitions between an arra
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="morphing-text"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="MorphingText.vue" language="vue" componentName="MorphingText" type="ui" id="morphing-text"}
+::
+
 ## API
 
 | Prop Name      | Type       | Default | Description                           |
@@ -18,13 +30,6 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 | `class`        | `string`   | `""`    | Additional classes for the container. |
 | `morphTime`    | `number`   | `1.5`   | Animation execution time.             |
 | `coolDownTime` | `number`   | `0.5`   | Animation dwell time.                 |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="MorphingText.vue" language="vue" componentName="MorphingText" type="ui" id="morphing-text"}
-::
 
 ## Credits
 

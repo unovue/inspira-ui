@@ -10,6 +10,18 @@ description: A flickering grid background made with Canvas, fully customizable u
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="flickering-grid"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="FlickeringGrid.vue" language="vue" componentName="FlickeringGrid" type="ui" id="flickering-grid"}
+::
+
 ## API
 
 | Prop Name       | Type     | Default        | Description                            |
@@ -22,13 +34,6 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 | `height`        | `number` | `-`            | Height of the canvas.                  |
 | `class`         | `string` | `-`            | Additional CSS classes for the canvas. |
 | `maxOpacity`    | `number` | `0.2`          | Maximum opacity of the squares.        |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="FlickeringGrid.vue" language="vue" componentName="FlickeringGrid" type="ui" id="flickering-grid"}
-::
 
 ## Credits
 

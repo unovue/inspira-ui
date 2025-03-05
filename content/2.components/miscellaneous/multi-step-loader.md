@@ -6,6 +6,18 @@ description: A step loader for screens that works with async conditions too.
 ::ComponentLoader{label="Preview" componentName="MultiStepLoaderDemo" type="examples"}  
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="multi-step-loader"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="MultiStepLoader.vue" language="vue" componentName="MultiStepLoader" type="ui" id="multi-step-loader"}
+::
+
 ## API
 
 | Prop Name         | Type      | Default | Description                                                                  |
@@ -20,13 +32,6 @@ description: A step loader for screens that works with async conditions too.
 | `state-change` | `number`     | Emitted when the current step changes, providing the new step index. |
 | `complete`     | `void`       | Emitted when all steps have been completed.                          |
 | `close`        | `void`       | Emitted when the loader is closed by button.                         |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::CodeViewer{filename="MultiStepLoader.vue" language="vue" componentName="MultiStepLoader" type="ui" id="multi-step-loader"}
-::
 
 ## Credits
 

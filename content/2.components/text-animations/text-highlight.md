@@ -6,6 +6,18 @@ description: A text effect that fill background of a text to highlight it.
 ::ComponentLoader{label="Preview" componentName="TextHighlightDemo" type="examples" id="text-highlight"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="text-highlight"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="TextHighlight.vue" language="vue" componentName="TextHighlight" type="ui" id="text-highlight"}
+::
+
 ## Examples
 
 With 3s delay
@@ -35,13 +47,6 @@ With text color change.
 | `delay`          | `number` | `0`       | Delay before the animation starts, in `ms`.                                |
 | `duration`       | `number` | `2000`    | Duration of the animation, in `ms`.                                        |
 | `text-end-color` | `string` | `inherit` | Color of the text at the end of the animation. Match WCAG recommendations. |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="TextHighlight.vue" language="vue" componentName="TextHighlight" type="ui" id="text-highlight"}
-::
 
 ## Credits
 

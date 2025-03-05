@@ -6,6 +6,22 @@ description: A component that animates content in a circular orbit, with customi
 ::ComponentLoader{label="Preview" componentName="OrbitDemo" type="examples"}  
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="orbit"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="Orbit.vue" language="vue" componentName="Orbit" type="ui" id="orbit"}
+:CodeViewerTab{filename="index.ts" language="typescript" componentName="index" type="ui" id="orbit" extension="ts"}
+
+::
+
 ## Examples
 
 Synchronized orbit
@@ -22,20 +38,6 @@ Synchronized orbit
 | `delay`     | `?number`             | `10`     | Delay in seconds before the animation starts.                         |
 | `radius`    | `?number`             | `50`     | Radius of the orbit path in pixels.                                   |
 | `path`      | `?boolean`            | `false`  | Displays a circle path for the orbit if `true`.                       |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::code-group
-
-::CodeViewerTab{filename="Orbit.vue" language="vue" componentName="Orbit" type="ui" id="orbit"}
-::
-
-::CodeViewerTab{filename="index.ts" language="typescript" componentName="index" type="ui" id="orbit" extension="ts"}
-::
-
-::
 
 ## Features
 

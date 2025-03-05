@@ -6,6 +6,18 @@ description: A full page slider with images that can be navigated with the keybo
 ::ComponentLoader{label="Preview" componentName="ImagesSliderDemo" type="examples" id="images-slider"}  
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="images-slider"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="ImagesSlider.vue" language="vue" componentName="ImagesSlider" type="ui" id="images-slider"}
+::
+
 ## API
 
 | Prop Name          | Type                       | Default                                           | Description                                                                    |
@@ -21,13 +33,6 @@ description: A full page slider with images that can be navigated with the keybo
 | `direction`        | `'vertical'\|'horizontal'` | `'vertical'`                                      | The axis on which the slider should operate.                                   |
 | `perspective`      | `string`                   | `'1000px'`                                        | The perspective to apply to the slider container.                              |
 | `modelValue`       | `number`                   | `0`                                               | Two-way binding for the current slide image index.                             |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{label="ImagesSlider.vue" language="vue" componentName="ImagesSlider" type="ui" id="images-slider"}
-::
 
 ## Features
 

@@ -6,28 +6,45 @@ description: An interactive rotating globe component.
 ::ComponentLoader{label="Preview" componentName="GlobeDemo" type="examples" id="globe"}
 ::
 
-::alert
-**Note:** This component requires `cobe` and `vue-use-spring` as a dependency. Please install these using following commands.
+::alert{type="info"}
+**Note:** This component uses `cobe` and `vue-use-spring` as a dependency.
+::
 
-    ::code-group
+## Install using CLI
 
-    ```bash [npm]
-    npm install cobe vue-use-spring
-    ```
+::InstallationCli{componentId="globe"}
+::
 
-    ```bash [pnpm]
-    pnpm install cobe vue-use-spring
-    ```
+## Install Manually
 
-    ```bash [bun]
-    bun add cobe vue-use-spring
-    ```
+::steps{level=4}
 
-    ```bash [yarn]
-    yarn add cobe vue-use-spring
-    ```
-    ::
+#### Install the dependencies
 
+::code-group
+
+```bash [npm]
+npm install cobe vue-use-spring
+```
+
+```bash [pnpm]
+pnpm install cobe vue-use-spring
+```
+
+```bash [bun]
+bun add cobe vue-use-spring
+```
+
+```bash [yarn]
+yarn add cobe vue-use-spring
+```
+
+::
+
+#### Copy and paste the following code
+
+::CodeViewer{filename="Globe.vue" language="vue" componentName="Globe" type="ui" id="globe"}  
+::
 ::
 
 ## API
@@ -40,13 +57,6 @@ description: An interactive rotating globe component.
 | `tension`   | `number`      | `280`   | Tension parameter for the spring animation, affecting responsiveness.                                       |
 | `friction`  | `number`      | `100`   | Friction parameter for the spring animation, affecting damping.                                             |
 | `precision` | `number`      | `0.001` | Precision parameter for the spring animation calculations.                                                  |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="Globe.vue" language="vue" componentName="Globe" type="ui" id="globe"}
-::
 
 ## Features
 

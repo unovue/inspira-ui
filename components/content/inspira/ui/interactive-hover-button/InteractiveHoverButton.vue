@@ -42,6 +42,7 @@
 
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
+import { ref } from "vue";
 
 interface Props {
   text?: string;

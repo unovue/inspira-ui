@@ -20,6 +20,8 @@
   </div>
 </template>
 <script setup lang="ts">
-const mode = useColorMode();
-const particlesColor = computed(() => (mode.value === "dark" ? "#FFFFFF" : "#000000"));
+import { computed } from "vue";
+import { useColorMode } from "@vueuse/core";
+
+const particlesColor = computed(() => (useColorMode().value === "dark" ? "#FFFFFF" : "#000000"));
 </script>

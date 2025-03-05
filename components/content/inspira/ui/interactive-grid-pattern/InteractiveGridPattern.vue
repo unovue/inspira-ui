@@ -2,7 +2,6 @@
   <svg
     :width="gridWidth"
     :height="gridHeight"
-    v-bind="restProps"
     :class="svgClass"
   >
     <rect
@@ -21,7 +20,7 @@
 
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
-import type { HTMLAttributes } from "vue";
+import { ref, computed, type HTMLAttributes } from "vue";
 
 interface InteractiveGridPatternProps {
   className?: HTMLAttributes["class"];
@@ -37,35 +36,33 @@ const props = withDefaults(defineProps<InteractiveGridPatternProps>(), {
   squares: () => [24, 24],
 });
 
-const { width, height, squares, className, squaresClassName, ...restProps } = props;
-
-const horizontal = computed(() => squares[0]);
-const vertical = computed(() => squares[1]);
+const horizontal = computed(() => props.squares[0]);
+const vertical = computed(() => props.squares[1]);
 
 const totalSquares = computed(() => horizontal.value * vertical.value);
 
 const hoveredSquare = ref<number | null>(null);
 
-const gridWidth = computed(() => width * horizontal.value);
-const gridHeight = computed(() => height * vertical.value);
+const gridWidth = computed(() => props.width * horizontal.value);
+const gridHeight = computed(() => props.height * vertical.value);
 
 function getX(index: number) {
-  return (index % horizontal.value) * width;
+  return (index % horizontal.value) * props.width;
 }
 
 function getY(index: number) {
-  return Math.floor(index / horizontal.value) * height;
+  return Math.floor(index / horizontal.value) * props.height;
 }
 
 const svgClass = computed(() =>
-  cn("absolute inset-0 h-full w-full border border-gray-400/30", className),
+  cn("absolute inset-0 h-full w-full border border-gray-400/30", props.className),
 );
 
 function getRectClass(index: number) {
   return cn(
     "stroke-gray-400/30 transition-all duration-100 ease-in-out [&:not(:hover)]:duration-1000",
     hoveredSquare.value === index ? "fill-gray-300/30" : "fill-transparent",
-    squaresClassName,
+    props.squaresClassName,
   );
 }
 

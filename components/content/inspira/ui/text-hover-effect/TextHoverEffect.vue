@@ -122,25 +122,18 @@
 
 <script setup lang="ts">
 import { ref, reactive, computed } from "vue";
-import { cn } from "~/lib/utils";
 
-const props = defineProps({
-  strokeWidth: {
-    type: Number,
-    default: 0.75,
-  },
-  text: {
-    type: String,
-    required: true,
-  },
-  duration: {
-    type: Number,
-    default: 200,
-  },
-  opacity: {
-    type: Number,
-    default: 0.75,
-  },
+interface Props {
+  strokeWidth?: number;
+  text: string;
+  duration?: number;
+  opacity?: number;
+}
+
+const props = withDefaults(defineProps<Props>(), {
+  strokeWidth: 0.75,
+  duration: 200,
+  opacity: 0.75,
 });
 
 const svgRef = ref<SVGSVGElement | null>(null);

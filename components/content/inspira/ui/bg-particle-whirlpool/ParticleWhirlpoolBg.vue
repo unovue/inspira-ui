@@ -38,12 +38,13 @@ import {
   MeshBasicMaterial,
   InstancedBufferAttribute,
 } from "three";
+import { onMounted, onUnmounted, ref } from "vue";
 
 import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
 
 const { randFloat: rnd, randFloatSpread: rndFS } = MathUtils;
 

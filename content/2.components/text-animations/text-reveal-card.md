@@ -6,6 +6,21 @@ description: Mousemove effect to reveal text content at the bottom of the card.
 ::ComponentLoader{label="Preview" componentName="TextRevealDemo" type="examples"}  
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="text-reveal-card"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="TextRevealCard.vue" language="vue" componentName="TextRevealCard" type="ui" id="text-reveal-card"}
+:CodeViewerTab{filename="TextRevealStars.vue" language="vue" componentName="TextRevealStars" type="ui" id="text-reveal-card"}
+::
+
 ## API
 
 | Prop Name  | Type     | Description                                                      |
@@ -19,19 +34,6 @@ description: Mousemove effect to reveal text content at the bottom of the card.
 | header     | `String`                                                |
 | text       | Display default text when the card is not hovered over. |
 | revealText | Text to be revealed when hovered over the card.         |
-
-## Component Code
-
-You can copy and paste the following code to create these components:
-
-::code-group
-
-    ::CodeViewerTab{label="TextRevealCard.vue" language="vue" componentName="TextRevealCard" type="ui" id="text-reveal-card"}
-    ::
-    ::CodeViewerTab{label="TextRevealStars.vue" language="vue" componentName="TextRevealStars" type="ui" id="text-reveal-card"}
-    ::
-
-::
 
 ## Credits
 

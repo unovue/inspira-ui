@@ -22,3 +22,7 @@ logs
 .env
 .env.*
 !.env.example
+
+# Registry files
+public/r
+__registry__

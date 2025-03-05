@@ -21,7 +21,8 @@ import {
   WebGLRenderer,
 } from "three";
 import contries from "./globe.json";
-import { cn } from "~/lib/utils";
+import { cn } from "@/lib/utils";
+import { ref, onMounted, onBeforeUnmount, watch } from "vue";
 
 type Position = {
   order: number;

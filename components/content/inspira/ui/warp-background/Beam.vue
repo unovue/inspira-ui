@@ -26,6 +26,7 @@
 
 <script lang="ts" setup>
 import { Motion } from "motion-v";
+import { computed } from "vue";
 
 interface Props {
   width: string | number;

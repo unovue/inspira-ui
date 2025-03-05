@@ -6,6 +6,22 @@ description: Slide to compare any two pieces of content - images, designs, code,
 ::ComponentLoader{label="Preview" componentName="CompareDemo" type="examples" id="compare"}
 ::
 
+## Install using CLI
+
+::InstallationCli{componentId="compare"}
+::
+
+## Install Manually
+
+#### Copy and paste the following code in the same folder
+
+::code-group
+
+:CodeViewerTab{label="Compare.vue" language="vue" componentName="Compare" type="ui" id="compare"}
+:CodeViewerTab{label="StarField.vue" language="vue" componentName="StarField" type="ui" id="compare"}
+
+::
+
 ## Examples
 
 Drag handle with custom content
@@ -25,6 +41,8 @@ Custom Content with AutoPlay
 
 ## API
 
+### Props
+
 | Prop Name                 | Type                | Default          | Description                               |
 | ------------------------- | ------------------- | ---------------- | ----------------------------------------- |
 | `firstImage`              | `string`            | `""`             | URL of the first image                    |
@@ -40,6 +58,8 @@ Custom Content with AutoPlay
 | `autoplay`                | `boolean`           | `false`          | Enable/disable autoplay                   |
 | `autoplayDuration`        | `number`            | `5000`           | Duration of autoplay cycle in ms          |
 
+### Events
+
 | Event Name          | Payload  | Description                                  |
 | ------------------- | -------- | -------------------------------------------- |
 | `update:percentage` | `number` | Emitted when slider position changes (0-100) |
@@ -48,25 +68,13 @@ Custom Content with AutoPlay
 | `hover:enter`       | -        | Emitted when mouse enters component          |
 | `hover:leave`       | -        | Emitted when mouse leaves component          |
 
+### Slots
+
 | Slot Name        | Default Content                                   | Description                                                                                                                       |
 | ---------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | `first-content`  | `<img>` element if `firstImage` prop is provided  | Content shown on the left/first side of the comparison. Has full access to component width/height.                                |
 | `second-content` | `<img>` element if `secondImage` prop is provided | Content shown on the right/second side of the comparison. Has full access to component width/height.                              |
 | `handle`         | Default slider handle with dots icon              | Custom handle for the slider. Automatically positioned at the dividing line. Should handle positioning with absolute positioning. |
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::code-group
-
-::CodeViewerTab{filename="Compare.vue" language="vue" componentName="Compare" type="ui" id="compare"}
-::
-
-::CodeViewerTab{filename="StarField.vue" language="vue" componentName="StarField" type="ui" id="compare"}
-::
-
-::
 
 ## Credits
 

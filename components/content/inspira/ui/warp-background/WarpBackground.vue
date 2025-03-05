@@ -71,6 +71,7 @@
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
 import Beam from "./Beam.vue";
+import { computed } from "vue";
 
 interface Props {
   perspective?: number;
