@@ -29,6 +29,11 @@ Double-sided beam.
 ::ComponentLoader{label="Preview" componentName="AnimatedBeamDemo2" type="examples"}
 ::
 
+Vertical beam.
+
+::ComponentLoader{label="Preview" componentName="AnimatedBeamDemo3" type="examples"}
+::
+
 ## API
 
 | Prop Name            | Type          | Default                | Description                                                                  |
