@@ -45,6 +45,7 @@
           stop-opacity="0"
         />
         <animate
+          v-if="!isVertical"
           attributeName="x1"
           :values="x1"
           :dur="`${duration}s`"
@@ -54,8 +55,29 @@
           repeatCount="indefinite"
         />
         <animate
+          v-if="!isVertical"
           attributeName="x2"
           :values="x2"
+          :dur="`${duration}s`"
+          keyTimes="0; 1"
+          keySplines="0.16 1 0.3 1"
+          calcMode="spline"
+          repeatCount="indefinite"
+        />
+        <animate
+          v-if="isVertical"
+          attributeName="y1"
+          :values="y1"
+          :dur="`${duration}s`"
+          keyTimes="0; 1"
+          keySplines="0.16 1 0.3 1"
+          calcMode="spline"
+          repeatCount="indefinite"
+        />
+        <animate
+          v-if="isVertical"
+          attributeName="y2"
+          :values="y2"
           :dur="`${duration}s`"
           keyTimes="0; 1"
           keySplines="0.16 1 0.3 1"
@@ -108,8 +130,11 @@ const props = withDefaults(defineProps<AnimatedBeamProps>(), {
 });
 
 const id = "beam-" + Math.random().toString(36).substring(2, 10);
+const isVertical = ref(false);
 const x1 = props.reverse ? "90%; -10%;" : "10%; 110%;";
 const x2 = props.reverse ? "100%; 0%;" : "0%; 100%;";
+const y1 = props.reverse ? "90%; -10%;" : "10%; 110%;";
+const y2 = props.reverse ? "100%; 0%;" : "0%; 100%;";
 
 const pathD = ref("");
 const svgDimensions = ref<{ width: number; height: number }>({
@@ -147,6 +172,9 @@ function updatePath() {
     const startY = rectA.top - containerRect.top + rectA.height / 2 + (props.startYOffset ?? 0);
     const endX = rectB.left - containerRect.left + rectB.width / 2 + (props.endXOffset ?? 0);
     const endY = rectB.top - containerRect.top + rectB.height / 2 + (props.endYOffset ?? 0);
+
+    // Check if the light beam is in a vertical direction (the distance in the y-direction is greater than the distance in the x-direction).
+    isVertical.value = Math.abs(endY - startY) > Math.abs(endX - startX);
 
     const controlY = startY - (props.curvature ?? 0);
     const d = `M ${startX},${startY} Q ${(startX + endX) / 2},${controlY} ${endX},${endY}`;
