@@ -66,5 +66,6 @@
     "prettier": "^3.5.1",
     "tailwind-merge": "^3.0.1",
     "typescript-eslint": "^8.24.0"
-  }
+  },
+  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3"
 }
