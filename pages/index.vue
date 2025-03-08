@@ -20,6 +20,7 @@
     <FeatureSection />
     <HomePageExamples />
     <Testimonials />
+    <FluidCursor />
   </div>
 </template>
 
