@@ -28,7 +28,7 @@
     "eslint-plugin-nuxt": "^4.0.0",
     "highlight.js": "^11.11.1",
     "motion-v": "0.11.2",
-    "nuxt": "^3.16.0",
+    "nuxt": "^3.15.4",
     "nuxt-gtag": "^3.0.2",
     "postprocessing": "^6.37.1",
     "qss": "^3.0.0",
