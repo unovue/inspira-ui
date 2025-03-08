@@ -19,7 +19,7 @@
   "dependencies": {
     "@number-flow/vue": "^0.4.5",
     "@nuxt/image": "^1.9.0",
-    "@nuxt/scripts": "^0.11.0",
+    "@nuxt/scripts": "0.10.5",
     "@types/lodash.template": "^4.5.3",
     "@vueuse/core": "^12.8.2",
     "canvas-confetti": "^1.9.3",
@@ -28,7 +28,7 @@
     "eslint-plugin-nuxt": "^4.0.0",
     "highlight.js": "^11.11.1",
     "motion-v": "0.11.2",
-    "nuxt": "^3.15.4",
+    "nuxt": "3.15.4",
     "nuxt-gtag": "^3.0.2",
     "postprocessing": "^6.37.1",
     "qss": "^3.0.0",
