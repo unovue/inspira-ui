@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="processing"
+    v-if="processing && showProcessing"
     class="flex size-full items-center justify-center text-2xl font-bold text-primary/50"
   >
     <span> Processing Logo </span>
@@ -26,6 +26,7 @@ interface Props {
   patternBlur?: number;
   liquid?: number;
   speed?: number;
+  showProcessing?: boolean;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -35,6 +36,7 @@ const props = withDefaults(defineProps<Props>(), {
   patternBlur: 0.005,
   liquid: 0.07,
   speed: 0.3,
+  showProcessing: true,
 });
 
 const imageData = ref<ImageData | null>(null);

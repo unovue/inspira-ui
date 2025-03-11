@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col items-center justify-center px-4 py-6 font-heading md:px-8">
-    <HeroSection />
+    <HeroSectionV2 />
     <div class="mb-16 flex w-full flex-col items-center">
       <a
         href="https://github.com/sponsors/rahul-vashishtha"
@@ -17,6 +17,7 @@
 
     <InspiraCarbonAds :is-home-page="true" />
 
+    <IntegrationSection />
     <FeatureSection />
     <HomePageExamples />
     <Testimonials />
