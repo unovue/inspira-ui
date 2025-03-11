@@ -131,10 +131,24 @@ const props = withDefaults(defineProps<AnimatedBeamProps>(), {
 
 const id = "beam-" + Math.random().toString(36).substring(2, 10);
 const isVertical = ref(false);
-const x1 = props.reverse ? "90%; -10%;" : "10%; 110%;";
-const x2 = props.reverse ? "100%; 0%;" : "0%; 100%;";
-const y1 = props.reverse ? "90%; -10%;" : "10%; 110%;";
-const y2 = props.reverse ? "100%; 0%;" : "0%; 100%;";
+const isRightToLeft = ref(false);
+const isBottomToTop = ref(false);
+const x1 = computed(() => {
+  const direction = props.reverse ? !isRightToLeft.value : isRightToLeft.value;
+  return direction ? "90%; -10%;" : "10%; 110%;";
+});
+const x2 = computed(() => {
+  const direction = props.reverse ? !isRightToLeft.value : isRightToLeft.value;
+  return direction ? "100%; 0%;" : "0%; 100%;";
+});
+const y1 = computed(() => {
+  const direction = props.reverse ? !isBottomToTop.value : isBottomToTop.value;
+  return direction ? "90%; -10%;" : "10%; 110%;";
+});
+const y2 = computed(() => {
+  const direction = props.reverse ? !isBottomToTop.value : isBottomToTop.value;
+  return direction ? "100%; 0%;" : "0%; 100%;";
+});
 
 const pathD = ref("");
 const svgDimensions = ref<{ width: number; height: number }>({
@@ -175,6 +189,10 @@ function updatePath() {
 
     // Check if the light beam is in a vertical direction (the distance in the y-direction is greater than the distance in the x-direction).
     isVertical.value = Math.abs(endY - startY) > Math.abs(endX - startX);
+
+    // Determine the animation direction based on the position relationship between the starting point and the endpoint
+    isRightToLeft.value = endX < startX;
+    isBottomToTop.value = endY < startY;
 
     const controlY = startY - (props.curvature ?? 0);
     const d = `M ${startX},${startY} Q ${(startX + endX) / 2},${controlY} ${endX},${endY}`;
