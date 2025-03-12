@@ -4,13 +4,13 @@
 
 <script setup lang="ts">
 const items = [
-  "https://res.cloudinary.com/dn5zxeevu/image/upload/v1721044567/carousel1_llkb68.webp",
-  "https://res.cloudinary.com/dn5zxeevu/image/upload/v1721044553/carousel2_tqvvnp.webp",
-  "https://res.cloudinary.com/dn5zxeevu/image/upload/v1721044560/carousel3_vtqdf5.webp",
-  "https://res.cloudinary.com/dn5zxeevu/image/upload/v1721044562/carousel4_vg9ed0.webp",
-  "https://res.cloudinary.com/dn5zxeevu/image/upload/v1721044565/carousel5_hgexcv.webp",
-  "https://res.cloudinary.com/dn5zxeevu/image/upload/v1721044558/carousel6_dovd8t.webp",
-  "https://res.cloudinary.com/dn5zxeevu/image/upload/v1721044556/carousel7_x1gdsf.webp",
-  "https://res.cloudinary.com/dn5zxeevu/image/upload/v1721044554/carousel8_kybaxu.webp",
+  "https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/16245254/pexels-photo-16245254/free-photo-of-chatgpt-a-chatbot-for-your-website.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/1910236/pexels-photo-1910236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/2832382/pexels-photo-2832382.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/2333293/pexels-photo-2333293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/3308588/pexels-photo-3308588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+  "https://images.pexels.com/photos/2860807/pexels-photo-2860807.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
 ];
 </script>
