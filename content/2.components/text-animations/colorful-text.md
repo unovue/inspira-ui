@@ -1,9 +1,6 @@
 ---
 title: Colourful Text
 description: A text component with various colours, filter and scale effects.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="ColourfulTextDemo" type="examples" id="colourful-text"}

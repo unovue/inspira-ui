@@ -1,9 +1,6 @@
 ---
 title: Icon Cloud
 description: An interactive 3D tag cloud component
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="IconCloudDemo" type="examples"}

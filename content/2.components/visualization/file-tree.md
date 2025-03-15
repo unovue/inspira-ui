@@ -1,9 +1,6 @@
 ---
 title: File Tree
 description: A component used to showcase the folder and file structure of a directory.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="FileTreeDemo" type="examples"}

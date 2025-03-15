@@ -1,9 +1,6 @@
 ---
 title: Ripple Button
 description: A stylish ripple button component with customizable colors and animation duration.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="RippleButtonDemo" type="examples"}

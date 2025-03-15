@@ -1,9 +1,6 @@
 ---
 title: File Upload
 description: A modern file upload component with a 3D card effect, drag-and-drop functionality, and a responsive grid background pattern.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="FileUploadDemo" type="examples"}

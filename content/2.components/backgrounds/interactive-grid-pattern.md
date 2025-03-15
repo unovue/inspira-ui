@@ -1,9 +1,6 @@
 ---
 title: Interactive Grid Pattern
 description: A interactive background grid pattern made with SVGs, fully customizable.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="InteractiveGridPatternDemo" type="examples" id="interactive-grid-pattern"}

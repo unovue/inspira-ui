@@ -1,9 +1,6 @@
 ---
 title: Book
 description: A 3D book component featuring customizable sizes and color gradients.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="BookDemo" type="examples"}
