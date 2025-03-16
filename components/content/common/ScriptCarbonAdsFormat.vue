@@ -20,7 +20,6 @@
 
 <script setup lang="ts">
 import { withQuery } from "ufo";
-import { type ElementScriptTrigger } from "#nuxt-scripts";
 
 const props = defineProps<{
   serve: string;
