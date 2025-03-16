@@ -32,7 +32,14 @@ export default withNuxt(
       "check-file": checkFile,
     },
   },
-  { languageOptions: { globals: globals.node } },
+  {
+    languageOptions: {
+      globals: {
+        ...globals.node,
+        ...globals.browser,
+      },
+    },
+  },
   importPlugin.flatConfigs.recommended,
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
