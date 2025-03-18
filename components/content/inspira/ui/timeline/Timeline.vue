@@ -14,7 +14,7 @@
 
     <div
       ref="timelineRef"
-      class="relative mx-auto max-w-7xl pb-20"
+      class="relative z-0 mx-auto max-w-7xl pb-20"
     >
       <div
         v-for="(item, index) in props.items"
