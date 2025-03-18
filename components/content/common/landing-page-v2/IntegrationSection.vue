@@ -121,13 +121,11 @@
           :to-ref="div4Ref"
           :curvature="-75"
           :end-y-offset="-10"
-          :reverse="true"
         />
         <AnimatedBeam
           :container-ref="containerRef"
           :from-ref="div6Ref"
           :to-ref="div4Ref"
-          :reverse="true"
         />
         <AnimatedBeam
           :container-ref="containerRef"
@@ -135,7 +133,6 @@
           :to-ref="div4Ref"
           :curvature="75"
           :end-y-offset="10"
-          :reverse="true"
         />
       </div>
     </ClientOnly>
