@@ -18,15 +18,6 @@ description: A visually engaging button component that responds to hover with dy
 ::CodeViewer{filename="InteractiveHoverButton.vue" language="vue" componentName="InteractiveHoverButton" type="ui" id="interactive-hover-button"}
 ::
 
-## Example
-
-Very long text
-
-If your button text is very long, you need change button width🤣.
-
-::ComponentLoader{label="Preview" componentName="VeryLongTextInteractiveHoverButtonDemo" type="examples" id="interactive-hover-button"}
-::
-
 ## API
 
 | Prop Name | Type     | Default  | Description                                    |
