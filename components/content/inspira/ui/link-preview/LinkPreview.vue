@@ -165,6 +165,7 @@ function handleImageLoad() {
 
 <style scoped>
 .transform-gpu {
+  transform: scale3d(0, 0, 1);
   transform-origin: center bottom;
   will-change: transform;
   backface-visibility: hidden;
