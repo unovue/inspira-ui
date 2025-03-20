@@ -27,14 +27,15 @@ description: A dynamic flip card with smooth 180-degree flipping animations alon
 
 ## API
 
-| Prop Name       | Type     | Default | Description                                |
-| --------------- | -------- | ------- | ------------------------------------------ |
-| `class`         | `string` | `-`     | The class to be applied to the component.  |
-| `image`\*       | `string` | `-`     | Pass the image URL to display the image.   |
-| `title`\*       | `string` | `-`     | You can pass the title as you want.        |
-| `subtitle` \*   | `string` | `-`     | You can pass the sub title as you want.    |
-| `description`\* | `string` | `-`     | You can pass the description as you want.  |
-| `rotate`        | `x \| y` | `y`     | You can pass the rotate value as you want. |
+| Prop Name | Type     | Default | Description                                |
+| --------- | -------- | ------- | ------------------------------------------ |
+| `class`   | `string` | `-`     | The class to be applied to the component.  |
+| `rotate`  | `x \| y` | `y`     | You can pass the rotate value as you want. |
+
+| Slot Name | Description                 |
+| --------- | --------------------------- |
+| `default` | Component to show as front. |
+| `back`    | Component to show as back.  |
 
 ## Credits
 

@@ -9,34 +9,22 @@
       "
     >
       <!-- Front -->
-      <div class="absolute size-full [backface-visibility:hidden]">
-        <img
-          :src="props.image"
-          alt="image"
-          class="size-full rounded-2xl object-cover shadow-2xl shadow-black/40"
-        />
-        <div class="absolute bottom-4 left-4 text-xl font-bold text-white">
-          {{ props.title }}
-        </div>
+      <div
+        class="absolute size-full overflow-hidden rounded-2xl border [backface-visibility:hidden]"
+      >
+        <slot />
       </div>
 
       <!-- Back -->
       <div
         :class="
           cn(
-            'absolute h-full w-full rounded-2xl bg-black/80 p-4 text-slate-200 [backface-visibility:hidden]',
+            'absolute h-full w-full overflow-hidden rounded-2xl border bg-black/80 p-4 text-slate-200 [backface-visibility:hidden]',
             rotation[1],
           )
         "
       >
-        <div class="flex min-h-full flex-col gap-2">
-          <h1 class="text-xl font-bold text-white">{{ props.subtitle }}</h1>
-          <p
-            class="mt-1 border-t border-t-gray-200 py-4 text-base font-medium leading-normal text-gray-100"
-          >
-            {{ props.description }}
-          </p>
-        </div>
+        <slot name="back" />
       </div>
     </div>
   </div>
@@ -47,10 +35,6 @@ import { cn } from "@/lib/utils";
 import { computed } from "vue";
 
 interface FlipCardProps {
-  image: string;
-  title: string;
-  subtitle?: string;
-  description: string;
   rotate?: "x" | "y";
   class?: string;
 }
