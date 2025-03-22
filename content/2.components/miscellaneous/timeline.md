@@ -19,7 +19,12 @@ navBadges:
 | `title`          | `string`                           | `""`    | Title of the timeline section.                     |
 | `description`    | `string`                           | `""`    | Description text displayed below the title.        |
 
-## Component Code
+## Install using CLI
+
+::InstallationCli{componentId="timeline"}
+::
+
+## Install Manually
 
 You can copy and paste the following code to create this component:
 
