@@ -17,9 +17,10 @@
     "build:registry": "tsx ./scripts/build-registry.mts"
   },
   "dependencies": {
-    "@number-flow/vue": "^0.4.5",
-    "@nuxt/image": "^1.9.0",
+    "@number-flow/vue": "^0.4.6",
+    "@nuxt/image": "^1.10.0",
     "@nuxt/scripts": "0.11.2",
+    "@splinetool/runtime": "^1.9.80",
     "@types/lodash.template": "^4.5.3",
     "@vueuse/core": "^13.0.0",
     "canvas-confetti": "^1.9.3",
@@ -28,8 +29,8 @@
     "eslint-plugin-nuxt": "^4.0.0",
     "highlight.js": "^11.11.1",
     "lenis": "^1.2.3",
-    "motion-v": "0.13.0",
-    "nuxt": "3.16.0",
+    "motion-v": "0.13.1",
+    "nuxt": "3.16.1",
     "nuxt-gtag": "^3.0.2",
     "postprocessing": "^6.37.1",
     "qss": "^3.0.0",
@@ -44,7 +45,7 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
-    "@eslint/js": "^9.22.0",
+    "@eslint/js": "^9.23.0",
     "@eslint/markdown": "^6.3.0",
     "@iconify-json/vscode-icons": "^1.2.16",
     "@inspira-ui/plugins": "0.0.1",
@@ -53,7 +54,7 @@
     "@types/lodash-es": "^4.17.12",
     "@types/three": "^0.174.0",
     "clsx": "^2.1.1",
-    "eslint": "^9.22.0",
+    "eslint": "^9.23.0",
     "eslint-config-prettier": "^10.1.1",
     "eslint-plugin-check-file": "^3.1.0",
     "eslint-plugin-import": "^2.31.0",
@@ -68,7 +69,7 @@
     "tailwind-merge": "^3.0.2",
     "tsx": "^4.19.3",
     "typescript": "^5.8.2",
-    "typescript-eslint": "^8.26.1"
+    "typescript-eslint": "^8.27.0"
   },
-  "packageManager": "pnpm@10.6.3+sha512.bb45e34d50a9a76e858a95837301bfb6bd6d35aea2c5d52094fa497a467c43f5c440103ce2511e9e0a2f89c3d6071baac3358fc68ac6fb75e2ceb3d2736065e6"
+  "packageManager": "pnpm@10.6.5+sha512.cdf928fca20832cd59ec53826492b7dc25dc524d4370b6b4adbf65803d32efaa6c1c88147c0ae4e8d579a6c9eec715757b50d4fa35eea179d868eada4ed043af"
 }
