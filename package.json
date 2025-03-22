@@ -27,6 +27,7 @@
     "cobe": "^0.6.3",
     "eslint-plugin-nuxt": "^4.0.0",
     "highlight.js": "^11.11.1",
+    "lenis": "^1.2.3",
     "motion-v": "0.13.0",
     "nuxt": "3.16.0",
     "nuxt-gtag": "^3.0.2",
