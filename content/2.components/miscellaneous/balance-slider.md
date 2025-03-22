@@ -13,7 +13,7 @@ description: A dynamic balance slider with adjustable colors, limits, and intera
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="BalanceSlider.vue" language="vue" componentName="BalanceSlider" type="ui" id="balance-slider"}
 ::

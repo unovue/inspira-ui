@@ -13,7 +13,7 @@ description: A interactive background grid pattern made with SVGs, fully customi
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="InteractiveGridPattern.vue" language="vue" componentName="InteractiveGridPattern" type="ui" id="interactive-grid-pattern"}
 ::

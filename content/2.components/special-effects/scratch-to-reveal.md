@@ -13,7 +13,7 @@ description: The ScratchToReveal component creates an interactive scratch-off ef
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="ScratchToReveal.vue" language="vue" componentName="ScratchToReveal" type="ui" id="scratch-to-reveal"}
 ::

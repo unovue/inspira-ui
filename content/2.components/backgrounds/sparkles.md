@@ -13,7 +13,7 @@ description: A configurable sparkles component that can be used as a background 
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="Sparkles.vue" language="vue" componentName="Sparkles" type="ui" id="sparkles"}
 ::

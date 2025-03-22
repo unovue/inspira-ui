@@ -45,7 +45,7 @@ yarn add --dev @types/canvas-confetti
 
 ::
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::code-group
 

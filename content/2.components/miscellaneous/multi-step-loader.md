@@ -13,7 +13,7 @@ description: A step loader for screens that works with async conditions too.
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="MultiStepLoader.vue" language="vue" componentName="MultiStepLoader" type="ui" id="multi-step-loader"}
 ::

@@ -50,7 +50,7 @@ yarn add --dev @types/three
 
 ::
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="GithubGlobe.vue" language="vue" componentName="GithubGlobe" type="ui" id="github-globe"}  
 ::

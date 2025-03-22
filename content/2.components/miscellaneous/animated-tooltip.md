@@ -13,7 +13,7 @@ description: A cool tooltip that reveals on hover, follows mouse pointer
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="AnimatedTooltip.vue" language="vue" componentName="AnimatedTooltip" type="ui" id="animated-tooltip"}
 ::

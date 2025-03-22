@@ -13,7 +13,7 @@ description: A captivating lamp lighting effect with conic gradients, spotlights
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="LampEffect.vue" language="vue" componentName="LampEffect" type="ui" id="lamp-effect"}
 ::

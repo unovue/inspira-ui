@@ -13,7 +13,7 @@ description: A customizable scrolling component that loops its content horizonta
 
 ## Install Manually
 
-#### Copy and paste the following code in the same folder
+Copy and paste the following code in the same folder
 
 ::code-group
 

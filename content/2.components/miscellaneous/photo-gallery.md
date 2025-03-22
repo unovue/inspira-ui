@@ -13,7 +13,7 @@ description: Showcase your team with pride using our stunning Photo Gallery Comp
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="PhotoGallery.vue" language="vue" componentName="PhotoGallery" type="ui" id="photo-gallery"}
 ::

@@ -13,7 +13,7 @@ description: A component that flips through a list of words.
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="FlipWords.vue" language="vue" componentName="FlipWords" type="ui" id="flip-words"}
 ::

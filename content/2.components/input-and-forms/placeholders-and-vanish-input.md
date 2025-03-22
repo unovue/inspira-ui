@@ -13,7 +13,7 @@ description: Sliding in placeholders and vanish effect of input on submit
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="VanishingInput.vue" language="vue" componentName="VanishingInput" type="ui" id="vanishing-input"}
 ::

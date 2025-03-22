@@ -45,7 +45,7 @@ yarn add theme-colors
 
 ::
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="Tetris.vue" language="vue" componentName="Tetris" type="ui" id="tetris"}  
 ::

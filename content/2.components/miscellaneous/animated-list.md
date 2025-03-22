@@ -13,7 +13,7 @@ description: A sequentially animated list that introduces each item with a timed
 
 ## Install Manually
 
-#### Copy and paste the following code in the same folder
+Copy and paste the following code in the same folder
 
 ::code-group
 

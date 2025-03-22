@@ -45,7 +45,7 @@ yarn add --dev @types/three
 
 ::
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="ParticleWhirlpoolBg.vue" language="vue" componentName="ParticleWhirlpoolBg" type="ui" id="bg-particle-whirlpool"}
 ::

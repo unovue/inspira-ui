@@ -41,7 +41,7 @@ yarn add qss
 
 ::
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="LinkPreview.vue" language="vue" componentName="LinkPreview" type="ui" id="link-preview"}  
 ::

@@ -13,7 +13,7 @@ description: A cool grid layout with different child component.
 
 ## Install Manually
 
-#### Copy and paste the following code in the same folder
+Copy and paste the following code in the same folder
 
 ::code-group
 

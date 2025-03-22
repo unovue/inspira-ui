@@ -13,7 +13,7 @@ description: A card component with a dynamic spotlight effect that follows the m
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="CardSpotlight.vue" language="vue" componentName="CardSpotlight" type="ui" id="card-spotlight"}
 ::

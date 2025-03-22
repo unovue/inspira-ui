@@ -13,7 +13,7 @@ description: A glare effect on text.
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="RadiantText.vue" language="vue" componentName="RadiantText" type="ui" id="radiant-text"}
 ::

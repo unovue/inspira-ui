@@ -45,7 +45,7 @@ yarn add --dev @types/three
 
 ::
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="BubblesBg.vue" language="vue" componentName="BubblesBg" type="ui" id="bg-bubbles"}  
 ::

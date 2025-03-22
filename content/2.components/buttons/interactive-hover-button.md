@@ -13,7 +13,7 @@ description: A visually engaging button component that responds to hover with dy
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="InteractiveHoverButton.vue" language="vue" componentName="InteractiveHoverButton" type="ui" id="interactive-hover-button"}
 ::

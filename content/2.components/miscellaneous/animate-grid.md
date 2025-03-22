@@ -15,7 +15,7 @@ description: Skew Animation grid with box shadow.
 
 ::steps{level=4}
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="AnimateGrid.vue" language="vue" componentName="AnimateGrid" type="ui" id="animate-grid"}
 ::

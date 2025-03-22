@@ -13,7 +13,7 @@ description: A container scrolling effect that transforms the content inside bas
 
 ## Install Manually
 
-#### Copy and paste the following code in the same folder
+Copy and paste the following code in the same folder
 
 ::code-group
 

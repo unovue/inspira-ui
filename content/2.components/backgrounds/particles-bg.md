@@ -13,7 +13,7 @@ description: Particles can add a dynamic and engaging element to your website's 
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="ParticlesBg.vue" language="vue" componentName="ParticlesBg" type="ui" id="particles-bg"}
 ::

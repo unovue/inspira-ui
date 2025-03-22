@@ -13,7 +13,7 @@ description: A line shadow text component for Magic UI that adds a shadow effect
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="LineShadowText.vue" language="vue" componentName="LineShadowText" type="ui" id="line-shadow-text"}
 ::

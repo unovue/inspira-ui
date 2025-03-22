@@ -41,7 +41,7 @@ yarn add cobe vue-use-spring
 
 ::
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="Globe.vue" language="vue" componentName="Globe" type="ui" id="globe"}  
 ::

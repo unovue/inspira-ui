@@ -41,7 +41,7 @@ yarn add @number-flow/vue
 
 ::
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="ScrollIsland.vue" language="vue" componentName="ScrollIsland" type="ui" id="scroll-island"}  
 ::

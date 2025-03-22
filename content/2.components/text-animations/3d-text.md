@@ -13,7 +13,7 @@ description: A stylish 3D text component with customizable colors, shadows, and 
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="Text3d.vue" language="vue" componentName="Text3d" type="ui" id="text-3d"}
 ::

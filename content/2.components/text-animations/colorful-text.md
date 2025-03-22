@@ -13,7 +13,7 @@ description: A text component with various colours, filter and scale effects.
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="ColourfulText.vue" language="vue" componentName="ColourfulText" type="ui" id="colourful-text"}
 ::

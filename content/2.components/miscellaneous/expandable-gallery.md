@@ -13,7 +13,7 @@ description: A responsive image gallery with an interactive hover effect that ex
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="ExpandableGallery.vue" language="vue" componentName="ExpandableGallery" type="ui" id="expandable-gallery"}
 ::

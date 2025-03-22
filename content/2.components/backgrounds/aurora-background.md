@@ -13,7 +13,7 @@ description: A subtle Aurora or Southern Lights background for your website.
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="AuroraBackground.vue" language="vue" componentName="AuroraBackground" type="ui" id="aurora-background"}
 ::

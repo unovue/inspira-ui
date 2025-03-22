@@ -13,7 +13,7 @@ description: A versatile and visually dynamic input field with radial hover effe
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="IInput.vue" language="vue" componentName="IInput" type="ui" id="input"}
 ::

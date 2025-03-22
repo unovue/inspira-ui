@@ -13,7 +13,7 @@ description: An SVG mockup of an iPhone.
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="iPhone15ProMockup.vue" language="vue" componentName="iPhone15ProMockup" type="ui" id="iphone-mockup"}
 ::

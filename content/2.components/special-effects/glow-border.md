@@ -17,7 +17,7 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="GlowBorder.vue" language="vue" componentName="GlowBorder" type="ui" id="glow-border"}
 ::

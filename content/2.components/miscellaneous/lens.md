@@ -13,7 +13,7 @@ description: A lens component to zoom into images, videos, or practically anythi
 
 ## Install Manually
 
-#### Copy and paste the following code in the same folder
+Copy and paste the following code in the same folder
 
 ::code-group
 

@@ -13,7 +13,7 @@ description: A glare effect that happens on hover, as seen on Linear's website.
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="GlareCard.vue" language="vue" componentName="GlareCard" type="ui" id="glare-card"}
 ::

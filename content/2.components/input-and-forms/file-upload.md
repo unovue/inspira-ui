@@ -17,7 +17,7 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ## Install Manually
 
-#### Copy and paste the following code in the same folder
+Copy and paste the following code in the same folder
 
 ::code-group
 

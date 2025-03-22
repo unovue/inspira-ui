@@ -13,7 +13,7 @@ description: Animate numbers to count up or down to a target number
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="NumberTicker.vue" language="vue" componentName="NumberTicker" type="ui" id="number-ticker"}
 ::

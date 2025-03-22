@@ -13,7 +13,7 @@ description: A dynamic text that generates continuous sparkles with smooth trans
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="SparklesText.vue" language="vue" componentName="SparklesText" type="ui" id="sparkles-text"}
 ::

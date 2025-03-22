@@ -13,7 +13,7 @@ description: An animated box reveal effect with customizable colors, duration, a
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="BoxReveal.vue" language="vue" componentName="BoxReveal" type="ui" id="box-reveal"}
 ::

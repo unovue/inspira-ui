@@ -13,7 +13,7 @@ description: A stylish ripple button component with customizable colors and anim
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="RippleButton.vue" language="vue" componentName="RippleButton" type="ui" id="ripple-button"}
 ::

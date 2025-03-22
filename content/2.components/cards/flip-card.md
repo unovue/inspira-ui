@@ -13,7 +13,7 @@ description: A dynamic flip card with smooth 180-degree flipping animations alon
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="FlipCard.vue" language="vue" componentName="FlipCard" type="ui" id="flip-card"}
 ::

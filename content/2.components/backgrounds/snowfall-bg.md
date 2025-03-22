@@ -13,7 +13,7 @@ description: A beautifully animated snowfall effect applied as a background.
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="SnowfallBg.vue" language="vue" componentName="SnowfallBg" type="ui" id="snowfall-bg"}
 ::

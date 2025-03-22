@@ -13,7 +13,7 @@ description: Staggered letter pull up text animation.
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="LetterPullup.vue" language="vue" componentName="LetterPullup" type="ui" id="letter-pullup"}
 ::

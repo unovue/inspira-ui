@@ -13,7 +13,7 @@ description: Visually appealing particle animation applied to images as seen on 
 
 ## Install Manually
 
-#### Copy and paste the following code in the same folder
+Copy and paste the following code in the same folder
 
 ::code-group
 

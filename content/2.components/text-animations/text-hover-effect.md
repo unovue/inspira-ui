@@ -17,7 +17,7 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="TextHoverEffect.vue" language="vue" componentName="TextHoverEffect" type="ui" id="text-hover-effect"}
 ::

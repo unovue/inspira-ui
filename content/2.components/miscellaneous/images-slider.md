@@ -13,7 +13,7 @@ description: A full page slider with images that can be navigated with the keybo
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="ImagesSlider.vue" language="vue" componentName="ImagesSlider" type="ui" id="images-slider"}
 ::

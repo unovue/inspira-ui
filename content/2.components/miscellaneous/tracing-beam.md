@@ -13,7 +13,7 @@ description: A component that renders a tracing beam effect with dynamic scrolli
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="TracingBeam.vue" language="vue" componentName="TracingBeam" type="ui" id="tracing-beam"}
 ::

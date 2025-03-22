@@ -13,7 +13,7 @@ description: This is a morphing tabs interaction, recreated by Preet's work and 
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="MorphingTabs.vue" language="vue" componentName="MorphingTabs" type="ui" id="morphing-tabs"}
 ::

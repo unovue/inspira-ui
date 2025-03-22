@@ -13,7 +13,7 @@ description: A component used to showcase the folder and file structure of a dir
 
 ## Install Manually
 
-#### Copy and paste the following code in the same folder
+Copy and paste the following code in the same folder
 
 ::code-group
 

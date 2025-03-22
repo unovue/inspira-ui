@@ -13,7 +13,7 @@ description: A dynamic SVG mask component that reveals content with hover and mo
 
 ## Install Manually
 
-#### Copy and paste the following code in the same folder
+Copy and paste the following code in the same folder
 
 ::code-group
 

@@ -13,7 +13,7 @@ description: A rainbow effect on button.
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="RainbowButton.vue" language="vue" componentName="RainbowButton" type="ui" id="rainbow-button"}
 ::

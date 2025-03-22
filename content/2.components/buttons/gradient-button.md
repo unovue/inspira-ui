@@ -13,7 +13,7 @@ description: A stylish animated button with a rotating conic gradient border and
 
 ## Install Manually
 
-#### Copy and paste the following code
+Copy and paste the following code
 
 ::CodeViewer{filename="GradientButton.vue" language="vue" componentName="GradientButton" type="ui" id="gradient-button"}
 ::
