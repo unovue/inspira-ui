@@ -10,6 +10,7 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "motion-v/nuxt",
     "lenis/nuxt",
+    "nuxt-llms",
   ],
 
   components: [
@@ -42,7 +43,16 @@ export default defineNuxtConfig({
       ],
     },
   },
-
+  llms: {
+    domain: "https://inspira-ui.com",
+    title: "Inspira UI",
+    description:
+      "Inspira UI is a free and open-source Vue.js component library that provides a collection of beautiful and customizable components for building modern web applications.",
+    full: {
+      title: "Inspira UI Documentation",
+      description: "The complete Inspira UI documentation.",
+    },
+  },
   extends: ["shadcn-docs-nuxt"],
   compatibilityDate: "2024-07-06",
 });

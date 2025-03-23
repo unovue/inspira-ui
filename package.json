@@ -32,6 +32,7 @@
     "motion-v": "0.13.1",
     "nuxt": "3.16.1",
     "nuxt-gtag": "^3.0.2",
+    "nuxt-llms": "^0.1.1",
     "postprocessing": "^6.37.1",
     "qss": "^3.0.0",
     "shadcn-docs-nuxt": "^0.8.21",
