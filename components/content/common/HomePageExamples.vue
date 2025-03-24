@@ -20,9 +20,11 @@
       <h3
         class="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-3xl font-bold text-transparent"
       >
-        3D Card Hover Effect
+        Spline
       </h3>
-      <CardDemo2 />
+      <ClientOnly>
+        <Spline scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" />
+      </ClientOnly>
     </PatternBackground>
 
     <PatternBackground
@@ -35,10 +37,9 @@
       <h3
         class="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-3xl font-bold text-transparent"
       >
-        Text Hover Effect
+        3D Card Hover Effect
       </h3>
-      <p>Hover below to reveal text</p>
-      <TextHoverEffectDemo />
+      <CardDemo2 />
     </PatternBackground>
 
     <PatternBackground
