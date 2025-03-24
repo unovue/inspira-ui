@@ -26,6 +26,7 @@
     "canvas-confetti": "^1.9.3",
     "class-variance-authority": "^0.7.1",
     "cobe": "^0.6.3",
+    "dotted-map": "^2.2.3",
     "eslint-plugin-nuxt": "^4.0.0",
     "highlight.js": "^11.11.1",
     "lenis": "^1.2.3",
