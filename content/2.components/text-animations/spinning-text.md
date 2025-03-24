@@ -31,6 +31,11 @@ reverse
 | `variants`   | `{container: motion-v Variant, item: motion-v Variant}` | ``      | Variants for container and item animations.             |
 | `class`      | `string`                                                | `""`    | A custom class name for the text container.             |
 
+## Install using CLI
+
+::InstallationCli{componentId="spinning-text"}
+::
+
 ## Component Code
 
 You can copy and paste the following code to create this component:
