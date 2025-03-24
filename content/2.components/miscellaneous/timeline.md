@@ -1,9 +1,6 @@
 ---
 title: Timeline
 description: A visually appealing and interactive timeline component with smooth animations, sticky labels, and a gradient scrolling effect.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="TimelineDemo" type="examples" id="timeline"}

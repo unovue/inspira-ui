@@ -5,6 +5,7 @@
     :debounce-time="50"
     v-bind="$attrs"
   >
+    <!-- eslint-disable-next-line vue/no-unused-vars -->
     <template #default="{ width, height }">
       <canvas
         ref="canvasRef"

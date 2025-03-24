@@ -1,37 +1,41 @@
 <template>
-  <Motion
+  <div
     v-if="visibility"
-    v-for="(char, index) in props.text"
-    :key="`${char}-${count}-${index}`"
     class="inline-block whitespace-pre font-sans tracking-tight"
-    :initial="{
-      y: -3,
-      opacity: 0.2,
-      color: props.startColor,
-      scale: 1,
-      filter: 'blur(5px)',
-    }"
-    :transition="{
-      duration: props.duration,
-      delay: index * 0.05,
-    }"
-    :animate="{
-      y: 0,
-      opacity: 1,
-      scale: 1.01,
-      filter: 'blur(0px)',
-      color: currentColors[index % currentColors.length],
-    }"
-    :exit="{
-      y: -3,
-      opacity: 1,
-      scale: 1,
-      filter: 'blur(5px)',
-      color: props.startColor,
-    }"
   >
-    {{ char }}
-  </Motion>
+    <Motion
+      v-for="(char, index) in props.text"
+      :key="`${char}-${count}-${index}`"
+      as-child
+      :initial="{
+        y: -3,
+        opacity: 0.2,
+        color: props.startColor,
+        scale: 1,
+        filter: 'blur(5px)',
+      }"
+      :transition="{
+        duration: props.duration,
+        delay: index * 0.05,
+      }"
+      :animate="{
+        y: 0,
+        opacity: 1,
+        scale: 1.01,
+        filter: 'blur(0px)',
+        color: currentColors[index % currentColors.length],
+      }"
+      :exit="{
+        y: -3,
+        opacity: 1,
+        scale: 1,
+        filter: 'blur(5px)',
+        color: props.startColor,
+      }"
+    >
+      {{ char }}
+    </Motion>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -79,10 +83,9 @@ onMounted(() => {
   }, 5000);
 });
 
-const handleVisibilityChange = () => {
-  console.log(document.visibilityState);
+function handleVisibilityChange() {
   visibility.value = document.visibilityState === "visible";
-};
+}
 
 onUnmounted(() => {
   document.removeEventListener("visibilitychange", handleVisibilityChange);
