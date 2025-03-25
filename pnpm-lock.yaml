@@ -56,6 +56,9 @@ importers:
       nuxt-gtag:
         specifier: ^3.0.2
         version: 3.0.2(magicast@0.3.5)
+      nuxt-llms:
+        specifier: ^0.1.1
+        version: 0.1.1(magicast@0.3.5)
       postprocessing:
         specifier: ^6.37.1
         version: 6.37.1(three@0.174.0)
@@ -4247,6 +4250,9 @@ packages:
 
   nuxt-gtag@3.0.2:
     resolution: {integrity: sha512-0Spu/rffPxW7REebkjE22qQOuVZIQuyIuvd61InDdJU+d+gRIqWhrUuKBWdk43N/J1elj+cTK2kEdk5FQX7vdQ==}
+
+  nuxt-llms@0.1.1:
+    resolution: {integrity: sha512-fRx7y9KiNdHwA8jyEI+DlZBlNPYULYuvu5SbnwaQMmxgQIujHWLJGMc9iNmcy5IBrqocBs1tc/tmgdTvmAci7g==}
 
   nuxt-og-image@5.0.5:
     resolution: {integrity: sha512-MS2w3k3lqrukrB/p712aiyk0FrJjUALTtIerfRBneBpirYKLsKPRQZdDUfIH461CKl4nRA4b1fHy+cyCHE2Y8A==}
@@ -11277,6 +11283,12 @@ snapshots:
       defu: 6.1.4
       pathe: 1.1.2
       ufo: 1.5.4
+    transitivePeerDependencies:
+      - magicast
+
+  nuxt-llms@0.1.1(magicast@0.3.5):
+    dependencies:
+      '@nuxt/kit': 3.16.1(magicast@0.3.5)
     transitivePeerDependencies:
       - magicast
 
