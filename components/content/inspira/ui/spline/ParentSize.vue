@@ -3,19 +3,20 @@
   <div
     ref="target"
     :style="mergedStyles"
-    :class="mergedClass"
+    :class="cn('w-full h-full', props.class)"
     v-bind="attrsWithoutClassAndStyle"
   >
-    <slot v-bind="{ width, height, top, left }" />
+    <slot />
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref, reactive, computed, useAttrs } from "vue";
 import { useDebounceFn, useResizeObserver } from "@vueuse/core";
+import { cn } from "@/lib/utils";
 
 const props = defineProps({
-  className: String,
+  class: String,
   debounceTime: {
     type: Number,
     default: 300,
@@ -41,13 +42,11 @@ const state = reactive({
 });
 
 const mergedStyles = computed(() => ({
-  width: "100%",
-  height: "100%",
   ...props.parentSizeStyles,
   ...(attrs.style as object),
 }));
 
-const mergedClass = computed(() => [props.className, attrs.class]);
+const mergedClass = computed(() => ["w-full h-full", props.class]);
 
 const attrsWithoutClassAndStyle = computed(() => {
   const { class: _, style: __, ...rest } = attrs;

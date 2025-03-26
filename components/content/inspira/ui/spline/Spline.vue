@@ -5,8 +5,7 @@
     :debounce-time="50"
     v-bind="$attrs"
   >
-    <!-- eslint-disable-next-line vue/no-unused-vars -->
-    <template #default="{ width, height }">
+    <template #default>
       <canvas
         ref="canvasRef"
         :style="canvasStyle"
@@ -35,6 +34,8 @@ const props = defineProps({
   },
   style: Object,
 });
+
+let cleanUpFns: any[] = [];
 
 const emit = defineEmits([
   "error",
@@ -85,7 +86,7 @@ onMounted(async () => {
 
     await splineApp.value.load(props.scene);
 
-    const cleanupFns = [
+    cleanUpFns = [
       eventHandler("mouseDown", (e: any) => emit("spline-mouse-down", e)),
       eventHandler("mouseUp", (e: any) => emit("spline-mouse-up", e)),
       eventHandler("mouseHover", (e: any) => emit("spline-mouse-hover", e)),
@@ -99,13 +100,13 @@ onMounted(async () => {
 
     isLoading.value = false;
     props.onLoad?.(splineApp.value);
-
-    onUnmounted(() => {
-      cleanupFns.forEach((fn) => fn?.());
-      splineApp.value?.dispose();
-    });
   } catch (err) {
     emit("error", err);
   }
+});
+
+onUnmounted(() => {
+  cleanUpFns.forEach((fn) => fn?.());
+  splineApp.value?.dispose();
 });
 </script>
