@@ -139,6 +139,7 @@ onMounted(() => {
     const isWebGL2 = "drawBuffers" in gl;
 
     let supportLinearFiltering = false;
+    // eslint-disable-next-line no-undef
     let halfFloat: OES_texture_half_float | null = null;
 
     if (isWebGL2) {
@@ -843,7 +844,8 @@ onMounted(() => {
 
     // Check if format objects are null, if so, return early
     if (!rgba || !rg || !r) {
-      console.error('WebGL formats not supported, cannot initialize framebuffers');
+      // eslint-disable-next-line no-console
+      console.error("WebGL formats not supported, cannot initialize framebuffers");
       return;
     }
 
