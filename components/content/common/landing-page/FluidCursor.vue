@@ -139,7 +139,7 @@ onMounted(() => {
     const isWebGL2 = "drawBuffers" in gl;
 
     let supportLinearFiltering = false;
-    let halfFloat = null;
+    let halfFloat: OES_texture_half_float | null = null;
 
     if (isWebGL2) {
       (gl as WebGL2RenderingContext).getExtension("EXT_color_buffer_float");
@@ -155,11 +155,11 @@ onMounted(() => {
 
     const halfFloatTexType = isWebGL2
       ? (gl as WebGL2RenderingContext).HALF_FLOAT
-      : (halfFloat && (halfFloat as never).HALF_FLOAT_OES) || 0;
+      : (halfFloat && halfFloat.HALF_FLOAT_OES) || 0;
 
-    let formatRGBA: unknown;
-    let formatRG: unknown;
-    let formatR: unknown;
+    let formatRGBA: ReturnType<typeof getSupportedFormat> | null = null;
+    let formatRG: ReturnType<typeof getSupportedFormat> | null = null;
+    let formatR: ReturnType<typeof getSupportedFormat> | null = null;
 
     if (isWebGL2) {
       formatRGBA = getSupportedFormat(
@@ -840,6 +840,12 @@ onMounted(() => {
     const r = ext.formatR;
     const filtering = ext.supportLinearFiltering ? gl.LINEAR : gl.NEAREST;
     gl.disable(gl.BLEND);
+
+    // Check if format objects are null, if so, return early
+    if (!rgba || !rg || !r) {
+      console.error('WebGL formats not supported, cannot initialize framebuffers');
+      return;
+    }
 
     if (!dye) {
       dye = createDoubleFBO(
