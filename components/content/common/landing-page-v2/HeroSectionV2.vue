@@ -65,16 +65,10 @@
         <UiButton> All Components </UiButton>
       </NuxtLink>
       <NuxtLink
-        to="https://github.com/unovue/inspira-ui"
+        to="https://pro.inspira-ui.com"
         target="_blank"
       >
-        <UiButton variant="outline">
-          <SmartIcon
-            name="lucide:github"
-            class="mr-1"
-          />
-          Github
-        </UiButton>
+        <UiButton variant="outline"> Inspira UI Pro </UiButton>
       </NuxtLink>
     </div>
   </section>
