@@ -25,7 +25,7 @@ pnpm dlx shadcn-vue@latest add "${url}"
 \`\`\`
 
 \`\`\`bash [bun]
-bun dlx shadcn-vue@latest add "${url}"
+bunx shadcn-vue@latest add "${url}"
 \`\`\`
 
 \`\`\`bash [yarn]
