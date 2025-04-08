@@ -20,6 +20,14 @@
   </a>  
 </p>
 
+<p align="center">🌐 Available Languages</h2>
+
+<p align="center">
+  <a href="README.md">🇺🇸 English</a> |
+  <a href="README_CN.md">🇨🇳 Chinese</a> |
+  <a href="README_IT.md">🇮🇹 Italian</a>
+</p>
+
 ---
 
 Welcome to [**Inspira UI**](https://inspira-ui.com), a community-driven project that brings the beauty and functionality of both [Aceternity UI](https://ui.aceternity.com) and [Magic UI](https://magicui.design) to the [Vue](https://vuejs.org) & [Nuxt](https://nuxt.com) ecosystem! While this project draws inspiration from these sources, it also includes unique custom components contributed by the community and created by us.
@@ -54,7 +62,7 @@ A special thanks to:
 - [shadcn-vue](https://www.shadcn-vue.com) for the Vue port of shadcn-ui and contributions to some components.
 - [shadcn-docs-nuxt](https://github.com/ZTL-UwU/shadcn-docs-nuxt) for the beautifully crafted Nuxt documentation site.
 
-## Author
+## 👤 Author
 
 Hi, I'm [Rahul Vashishtha](https://rahulv.dev). I started Inspira UI to bring a similar experience to the Vue ecosystem, inspired by Aceternity UI, Magic UI, and community contributions. I'm continuously working on it to make it better. Feel free to check out my work on [GitHub](https://github.com/rahul-vashishtha) and join me on this journey [here](https://github.com/unovue/inspira-ui)!
 
