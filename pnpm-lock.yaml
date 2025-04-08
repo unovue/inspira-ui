@@ -59,6 +59,9 @@ importers:
       nuxt-llms:
         specifier: ^0.1.1
         version: 0.1.1(magicast@0.3.5)
+      ogl:
+        specifier: ^1.0.11
+        version: 1.0.11
       postprocessing:
         specifier: ^6.37.1
         version: 6.37.1(three@0.174.0)
@@ -4319,6 +4322,9 @@ packages:
 
   ofetch@1.4.1:
     resolution: {integrity: sha512-QZj2DfGplQAr2oj9KzceK9Hwz6Whxazmn85yYeVuS3u9XTMOGMRx0kO95MQ+vLsj/S/NwBDMMLU5hpxvI6Tklw==}
+
+  ogl@1.0.11:
+    resolution: {integrity: sha512-kUpC154AFfxi16pmZUK4jk3J+8zxwTWGPo03EoYA8QPbzikHoaC82n6pNTbd+oEaJonaE8aPWBlX7ad9zrqLsA==}
 
   ohash@1.1.6:
     resolution: {integrity: sha512-TBu7PtV8YkAZn0tSxobKY2n2aAQva936lhRrj6957aDaCf9IEtqsKbgMzXE/F/sjqYOwmrukeORHNLe5glk7Cg==}
@@ -11527,6 +11533,8 @@ snapshots:
       destr: 2.0.3
       node-fetch-native: 1.6.6
       ufo: 1.5.4
+
+  ogl@1.0.11: {}
 
   ohash@1.1.6: {}
 
