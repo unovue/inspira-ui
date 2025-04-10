@@ -6,13 +6,6 @@ description: A macOS-style dock with magnifying icons as you hover over them.
 ::ComponentLoader{label="Preview" componentName="DockDemo" type="examples"}  
 ::
 
-## Examples
-
-Vertical Dock
-
-::ComponentLoader{label="Preview" componentName="DockDemo2" type="examples"}  
-::
-
 ## Install using CLI
 
 ::InstallationCli{componentId="dock"}
@@ -24,8 +17,12 @@ Copy and paste the following code in the same folder
 
 ::code-group
 
-:CodeViewerTab{label="Dock.vue" language="vue" componentName="Dock" type="ui" id="dock"}
-:CodeViewerTab{label="DockIcon.vue" language="vue" componentName="DockIcon" type="ui" id="dock"}
+:CodeViewerTab{filename="Dock.vue" language="vue" componentName="Dock" type="ui" id="dock"}
+:CodeViewerTab{filename="DockIcon.vue" language="vue" componentName="DockIcon" type="ui" id="dock"}
+:CodeViewerTab{filename="DockSeparator.vue" language="vue" componentName="DockSeparator" type="ui" id="dock"}
+:CodeViewerTab{filename="index.ts" language="ts" componentName="index" extension="ts" type="ui" id="dock"}
+:CodeViewerTab{filename="types.ts" language="ts" componentName="types" extension="ts" type="ui" id="dock"}  
+:CodeViewerTab{filename="injectionKeys.ts" language="ts" componentName="injectionKeys" extension="ts" type="ui" id="dock"}
 
 ::
 
@@ -41,7 +38,7 @@ Copy and paste the following code in the same folder
 | `magnification` | `number` | Magnification factor for the dock icons on hover (default: 60).        |
 | `distance`      | `number` | Distance from the icon center where magnification applies.             |
 | `direction`     | `string` | Alignment of icons (`top`, `middle`, `bottom`) (default: middle).      |
-| `orientation`   | `string` | Orientation of Dock (`'vertical`, `horizontal`) (default: horizontal). |
+| `orientation`   | `string` | Orientation of Dock (`vertical`, `horizontal`) (default: horizontal). |
 
 | Slot Name | Description                                          |
 | --------- | ---------------------------------------------------- |
