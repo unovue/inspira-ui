@@ -32,12 +32,12 @@ Copy and paste the following code in the same folder
 
 ### `Dock`
 
-| Prop Name       | Type     | Description                                                            |
-| --------------- | -------- | ---------------------------------------------------------------------- |
-| `class`         | `string` | Additional classes to apply to the dock container.                     |
-| `magnification` | `number` | Magnification factor for the dock icons on hover (default: 60).        |
-| `distance`      | `number` | Distance from the icon center where magnification applies.             |
-| `direction`     | `string` | Alignment of icons (`top`, `middle`, `bottom`) (default: middle).      |
+| Prop Name       | Type     | Description                                                           |
+| --------------- | -------- | --------------------------------------------------------------------- |
+| `class`         | `string` | Additional classes to apply to the dock container.                    |
+| `magnification` | `number` | Magnification factor for the dock icons on hover (default: 60).       |
+| `distance`      | `number` | Distance from the icon center where magnification applies.            |
+| `direction`     | `string` | Alignment of icons (`top`, `middle`, `bottom`) (default: middle).     |
 | `orientation`   | `string` | Orientation of Dock (`vertical`, `horizontal`) (default: horizontal). |
 
 | Slot Name | Description                                          |
