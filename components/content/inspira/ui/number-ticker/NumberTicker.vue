@@ -54,13 +54,26 @@ const isInView = useElementVisibility(spanRef, {
   threshold: 0,
 });
 
+const hasBeenInView = ref(false);
+
 watch(
   isInView,
   (isVisible) => {
-    if (isVisible) {
+    if (isVisible && !hasBeenInView.value) {
+      hasBeenInView.value = true;
       transitionValue.value = props.direction === "down" ? 0 : props.value;
     }
   },
   { immediate: true },
+);
+
+
+watch(
+  () => props.value,
+  (newVal) => {
+    if (hasBeenInView.value) {
+      transitionValue.value = props.direction === 'down' ? 0 : newVal;
+    }
+  }
 );
 </script>
