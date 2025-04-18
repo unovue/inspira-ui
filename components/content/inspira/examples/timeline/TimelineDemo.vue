@@ -17,7 +17,7 @@
             {{ `Section ${index + 1}` }}
           </h3>
         </div>
-        <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+        <p class="mb-8 text-xs font-normal text-neutral-800 md:text-sm dark:text-neutral-200">
           Inspira UI gives you the freedom to design awesome website, in less time.
         </p>
       </template>

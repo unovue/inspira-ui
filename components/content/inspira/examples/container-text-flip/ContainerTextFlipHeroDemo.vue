@@ -15,7 +15,7 @@
       "
       layout
     >
-      <div className="inline-block">
+      <div class="inline-block">
         Make your websites look 10x
         <ContainerTextFlip :words="['better', 'modern', 'beautiful', 'awesome']" />
       </div>

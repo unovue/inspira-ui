@@ -22,17 +22,17 @@
         class="flex justify-start pt-10 md:gap-10 md:pt-40"
       >
         <div
-          className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full"
+          class="sticky top-40 z-40 flex max-w-xs flex-col items-center self-start lg:max-w-sm md:w-full md:flex-row"
         >
           <div
-            className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center"
+            class="absolute left-3 flex size-10 items-center justify-center rounded-full bg-white md:left-3 dark:bg-black"
           >
             <div
-              className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2"
+              class="size-4 rounded-full border border-neutral-300 bg-neutral-200 p-2 dark:border-neutral-700 dark:bg-neutral-800"
             />
           </div>
           <h3
-            className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-neutral-500 dark:text-neutral-500 "
+            class="hidden text-xl font-bold text-neutral-500 md:block md:pl-20 md:text-5xl dark:text-neutral-500"
           >
             {{ item.label }}
           </h3>
@@ -66,7 +66,7 @@ import type { HTMLAttributes } from "vue";
 interface Props {
   containerClass?: HTMLAttributes["class"];
   class?: HTMLAttributes["class"];
-  items: {
+  items?: {
     id: string;
     label: string;
   }[];
