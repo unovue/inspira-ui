@@ -1,9 +1,6 @@
 ---
 title: Neon Border
 description: A visually appealing neon border component with customizable animations and colors.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="NeonBorderDemo" type="examples" id="neon-border"}
