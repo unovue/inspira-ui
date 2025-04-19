@@ -10,6 +10,10 @@ description: A card perspective effect, hover over the card to elevate card elem
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
+::alert{type="info"}
+If you are using `CardItem` inside a `div`, add `style="transform-style: preserve-3d;"` to the div to make `translate-z` prop to work.
+::
+
 ## Install using CLI
 
 ::InstallationCli{componentId="card-3d"}
