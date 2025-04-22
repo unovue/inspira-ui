@@ -1,9 +1,6 @@
 ---
 title: Glowing Effect
 description: A dynamic proximity-based glow effect that reacts to mouse movements and scroll events, perfect for highlighting interactive elements.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="GlowingEffectDemo" type="examples" id="glowing-effect"}

@@ -1,9 +1,6 @@
 ---
 title: Animated Testimonials
 description: An engaging and animated testimonial component showcasing user feedback with transitions and auto-play functionality.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="AnimatedTestimonialsDemo" type="examples" id="animated-testimonials"}
