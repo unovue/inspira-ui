@@ -3,7 +3,7 @@
     <Motion
       as="div"
       :initial="{ opacity: 0, y: 40, filter: 'blur(10px)' }"
-      :in-view="{
+      :while-in-view="{
         opacity: 1,
         y: 0,
         filter: 'blur(0px)',

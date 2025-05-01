@@ -9,7 +9,7 @@
       ref="childElements"
       as="div"
       :initial="getInitial()"
-      :in-view="getAnimate()"
+      :while-in-view="getAnimate()"
       :transition="{
         duration: props.duration,
         easing: 'easeInOut',

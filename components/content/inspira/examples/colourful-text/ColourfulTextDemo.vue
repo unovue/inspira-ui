@@ -5,7 +5,7 @@
       src="https://assets.aceternity.com/linear-demo.webp"
       class="pointer-events-none absolute inset-0 size-full object-cover [mask-image:radial-gradient(circle,transparent,black_80%)]"
       :initial="{ opacity: 0 }"
-      :in-view="{
+      :while-in-view="{
         opacity: 0.5,
       }"
       :transition="{

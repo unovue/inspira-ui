@@ -2,7 +2,7 @@
   <div :class="cn('relative', $props.class)">
     <Motion
       :initial="initialMainVariants"
-      :in-view="visibleMainVariants"
+      :while-in-view="visibleMainVariants"
       :transition="{
         duration: props.duration,
         delay: props.delay * 2,
@@ -13,7 +13,7 @@
     <Motion
       class="box-background absolute inset-0 z-20"
       :initial="initialSlideVariants"
-      :in-view="visibleSlideVariants"
+      :while-in-view="visibleSlideVariants"
       :transition="{
         duration: props.duration,
         ease: 'easeIn',
