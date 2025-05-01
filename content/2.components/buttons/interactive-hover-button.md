@@ -3,7 +3,7 @@ title: Interactive Hover Button
 description: A visually engaging button component that responds to hover with dynamic transitions, adapting smoothly between light and dark modes for enhanced user interactivity.
 ---
 
-::ComponentLoader{label="Preview" componentName="InteractiveHoverButtonDemo" type="examples" id="interactive-hover-button"}
+::ComponentLoader{label="Preview" componentName="InteractiveHoverButtonDemo" type="examples"}
 ::
 
 ## Install using CLI
