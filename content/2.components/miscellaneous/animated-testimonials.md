@@ -34,11 +34,7 @@ Each testimonial object must contain the following fields:
 
 You can copy and paste the following code to create this component:
 
-::code-group
-
-::CodeViewerTab{label="AnimatedTestimonials.vue" language="vue" componentName="AnimatedTestimonials" type="ui" id="animated-testimonials"}
-::
-
+::CodeViewer{filename="AnimatedTestimonials.vue" language="vue" componentName="AnimatedTestimonials" type="ui" id="animated-testimonials"}
 ::
 
 ## Features
