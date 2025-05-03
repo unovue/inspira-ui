@@ -30,7 +30,7 @@ const props = withDefaults(
   defineProps<{
     class?: HTMLAttributes["class"];
     text: string;
-    duration: number;
+    duration?: number;
     animateOnLoad: boolean;
   }>(),
   {
