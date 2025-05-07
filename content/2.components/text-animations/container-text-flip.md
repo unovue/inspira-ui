@@ -1,9 +1,6 @@
 ---
 title: Container Text Flip
 description: A container that flips through words, animating the width.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="ContainerTextFlipDemo" type="examples" id="container-text-flip"}

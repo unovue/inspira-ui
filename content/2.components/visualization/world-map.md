@@ -1,9 +1,6 @@
 ---
 title: World Map
 description: Displays a customizable world map with animated arcs and pulse effects for geographical points.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="WorldMapDemo" type="examples" id="world-map"}

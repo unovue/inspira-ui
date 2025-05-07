@@ -22,7 +22,14 @@ navBadges:
 | -------------------- | -------- | ------------------------------------------------------------------ |
 | `update:activeIndex` | `number` | Fires when a day button is clicked, emitting the new active index. |
 
-## Component Code
+## Install using CLI
+
+::InstallationCli{componentId="spring-calendar"}
+::
+
+## Install Manually
+
+Copy and paste the following code
 
 ::code-group
 
