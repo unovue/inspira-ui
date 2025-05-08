@@ -6,7 +6,7 @@
     :code="rawString"
   >
     <CodeCopy
-      class="absolute right-0 top-0"
+      class="absolute -top-10 right-0"
       :code="rawString"
     />
     <code class="min-w-full overflow-auto px-2 leading-4">
