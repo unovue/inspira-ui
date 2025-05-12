@@ -228,6 +228,7 @@ function animate(start: number = 0): void {
 }
 
 function handleKeyDown(e: KeyboardEvent): void {
+  if (vanishingText.value === "") return;
   if (e.key === "Enter" && !animating.value) {
     vanishAndSubmit();
   }
