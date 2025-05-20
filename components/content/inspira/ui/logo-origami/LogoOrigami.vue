@@ -15,7 +15,7 @@
     <div
       :style="{
         clipPath: 'polygon(0 0, 100% 0, 100% 50%, 0 50%)',
-        zIndex: -1,
+        zIndex: -999,
         backfaceVisibility: 'hidden',
       }"
       class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
@@ -27,7 +27,7 @@
     <div
       :style="{
         clipPath: 'polygon(0 50%, 100% 50%, 100% 100%, 0 100%)',
-        zIndex: -1,
+        zIndex: -999,
         backfaceVisibility: 'hidden',
       }"
       class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
