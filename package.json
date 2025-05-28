@@ -20,9 +20,9 @@
     "@number-flow/vue": "^0.4.7",
     "@nuxt/image": "^1.10.0",
     "@nuxt/scripts": "0.11.7",
-    "@splinetool/runtime": "^1.9.96",
+    "@splinetool/runtime": "^1.9.97",
     "@types/lodash.template": "^4.5.3",
-    "@vueuse/core": "^13.2.0",
+    "@vueuse/core": "^13.3.0",
     "canvas-confetti": "^1.9.3",
     "class-variance-authority": "^0.7.1",
     "cobe": "^0.6.3",
@@ -37,15 +37,15 @@
     "ogl": "^1.0.11",
     "postprocessing": "^6.37.3",
     "qss": "^3.0.0",
-    "shadcn-docs-nuxt": "^0.8.21",
+    "shadcn-docs-nuxt": "^1.0.0",
     "simplex-noise": "^4.0.3",
     "theme-colors": "^0.1.0",
     "three": "^0.176.0",
-    "three-globe": "^2.42.4",
-    "vue": "^3.5.14",
+    "three-globe": "^2.42.7",
+    "vue": "^3.5.15",
     "vue-router": "^4.5.1",
     "vue-use-spring": "^0.3.3",
-    "zod": "^3.25.28"
+    "zod": "^3.25.32"
   },
   "devDependencies": {
     "@eslint/js": "^9.27.0",
@@ -62,17 +62,16 @@
     "eslint-plugin-check-file": "^3.2.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-prettier": "^5.4.0",
-    "eslint-plugin-tailwindcss": "^3.18.0",
     "eslint-plugin-unicorn": "^59.0.1",
     "eslint-plugin-vue": "^10.1.0",
-    "globals": "^16.1.0",
+    "globals": "^16.2.0",
     "husky": "^9.1.7",
-    "lint-staged": "^16.0.0",
+    "lint-staged": "^16.1.0",
     "prettier": "^3.5.3",
     "tailwind-merge": "^3.3.0",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.32.1"
+    "typescript-eslint": "^8.33.0"
   },
   "packageManager": "pnpm@10.8.0+sha512.0e82714d1b5b43c74610193cb20734897c1d00de89d0e18420aebc5977fa13d780a9cb05734624e81ebd81cc876cd464794850641c48b9544326b5622ca29971"
 }

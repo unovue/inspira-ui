@@ -13,6 +13,17 @@ export default defineNuxtConfig({
     "nuxt-llms",
   ],
 
+  i18n: {
+    defaultLocale: "en",
+    locales: [
+      {
+        code: "en",
+        name: "English",
+        language: "en-US",
+      },
+    ],
+  },
+
   components: [
     {
       path: "~/components",
