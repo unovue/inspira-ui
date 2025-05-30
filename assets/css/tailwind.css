@@ -1,9 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@config '../../tailwind.config.js';
+/* If you are using shadcn-docs-nuxt in a monorepo, change the amount of .. to match the node_modules directory */
+@source '../../node_modules/shadcn-docs-nuxt';
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility step {
+  counter-increment: step;
+
+  &:before {
+    @apply absolute w-9 h-9 bg-muted rounded-full font-mono font-medium text-center text-base inline-flex items-center justify-center -indent-px border-4 border-background;
+    @apply -ml-[50px] -mt-1;
+    content: counter(step);
+  }
+}
 
 @layer base {
   :root {
@@ -68,21 +90,9 @@
   }
 }
 
-@layer utilities {
-  .step {
-    counter-increment: step;
-  }
-
-  .step:before {
-    @apply absolute w-9 h-9 bg-muted rounded-full font-mono font-medium text-center text-base inline-flex items-center justify-center -indent-px border-4 border-background;
-    @apply -ml-[50px] -mt-1;
-    content: counter(step);
-  }
-}
-
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border outline-ring/50;
   }
 
   body {

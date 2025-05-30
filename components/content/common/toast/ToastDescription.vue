@@ -9,7 +9,7 @@
 
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import { ToastDescription, type ToastDescriptionProps } from "radix-vue";
+import { ToastDescription, type ToastDescriptionProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
 const props = defineProps<ToastDescriptionProps & { class?: HTMLAttributes["class"] }>();
