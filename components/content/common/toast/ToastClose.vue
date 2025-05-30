@@ -17,7 +17,7 @@
 
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
-import { ToastClose, type ToastCloseProps } from "radix-vue";
+import { ToastClose, type ToastCloseProps } from "reka-ui";
 import { computed, type HTMLAttributes } from "vue";
 
 const props = defineProps<

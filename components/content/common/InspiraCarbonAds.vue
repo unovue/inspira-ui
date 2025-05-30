@@ -27,7 +27,7 @@ const props = defineProps({
 const isDesktop = useMediaQuery("(min-width: 768px)");
 </script>
 
-<style>
+<style lang="postcss">
 #carbon-responsive .carbon-poweredby {
   @apply text-sm dark:text-zinc-200 dark:hover:text-zinc-50 text-zinc-800 hover:text-zinc-950;
 }
