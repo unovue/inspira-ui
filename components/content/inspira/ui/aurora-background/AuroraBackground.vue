@@ -44,7 +44,9 @@ const props = withDefaults(defineProps<AuroraBackgroundProps>(), {
 });
 </script>
 
-<style lang="postcss" scoped>
+<style scoped>
+@reference "../../../../../assets/css/tailwind.css";
+
 .aurora-background-gradient-after {
   @apply after:content-[""] 
           after:absolute 
