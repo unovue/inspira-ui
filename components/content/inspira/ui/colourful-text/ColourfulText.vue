@@ -64,6 +64,7 @@ const props = withDefaults(defineProps<Props>(), {
 
 const currentColors = ref(props.colors);
 const count = ref(0);
+const lastHidden = ref(0);
 
 // eslint-disable-next-line no-undef
 let intervalId: undefined | NodeJS.Timeout = undefined;
@@ -71,10 +72,20 @@ onMounted(() => {
   intervalId = setInterval(() => {
     const shuffled = [...props.colors].sort(() => 0.5 - Math.random());
     currentColors.value = shuffled;
-    count.value++;
-  }, 5000);
+
+    if (document.visibilityState === "visible") {
+      if (Date.now() - lastHidden.value > 500) {
+        count.value++;
+      }
+    } else {
+      lastHidden.value = Date.now();
+    }
+  }, 1000);
 });
 
+onUnmounted(() => {
+  clearInterval(intervalId);
+});
 onUnmounted(() => {
   clearInterval(intervalId);
 });
