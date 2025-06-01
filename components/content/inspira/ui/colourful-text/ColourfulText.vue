@@ -1,8 +1,5 @@
 <template>
-  <div
-    v-if="visibility"
-    class="inline-block whitespace-pre font-sans tracking-tight"
-  >
+  <div class="inline-block whitespace-pre font-sans tracking-tight">
     <Motion
       v-for="(char, index) in props.text"
       :key="`${char}-${count}-${index}`"
@@ -68,28 +65,15 @@ const props = withDefaults(defineProps<Props>(), {
 
 const currentColors = ref(props.colors);
 const count = ref(0);
-const visibility = ref(true);
 
 // eslint-disable-next-line no-undef
 let intervalId: undefined | NodeJS.Timeout = undefined;
 onMounted(() => {
-  document.addEventListener("visibilitychange", handleVisibilityChange);
-  handleVisibilityChange();
-
   intervalId = setInterval(() => {
     const shuffled = [...props.colors].sort(() => 0.5 - Math.random());
     currentColors.value = shuffled;
     count.value++;
   }, 5000);
-});
-
-function handleVisibilityChange() {
-  visibility.value = document.visibilityState === "visible";
-}
-
-onUnmounted(() => {
-  document.removeEventListener("visibilitychange", handleVisibilityChange);
-  clearInterval(intervalId);
 });
 </script>
 
