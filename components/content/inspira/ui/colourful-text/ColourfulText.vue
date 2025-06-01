@@ -19,7 +19,8 @@
       opacity: 1,
       scale: 1.01,
       filter: 'blur(0px)',
-      color: currentColors[index % currentColors.length],
+      color:
+        currentColors.length > 0 ? currentColors[index % currentColors.length] : props.startColor,
     }"
     :exit="{
       y: -3,
