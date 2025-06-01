@@ -14,6 +14,14 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 **Note:** This component requires `theme-colors` as a dependency.
 ::
 
+## API
+
+| Prop Name      | Type     | Default | Description                                    |
+| -------------- | -------- | ------- | ---------------------------------------------- |
+| `class`        | `string` | `""`    | Additional class names to style the component. |
+| `base`         | `number` | `10`    | How many blocks do you have in a row.          |
+| `square-color` | `string` | `""`    | Square color.                                  |
+
 ## Install using CLI
 
 ::InstallationCli{componentId="tetris"}
@@ -27,21 +35,21 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ::code-group
 
-```bash [npm]
-npm install theme-colors
-```
+    ```bash [npm]
+    npm install theme-colors
+    ```
 
-```bash [pnpm]
-pnpm install theme-colors
-```
+    ```bash [pnpm]
+    pnpm install theme-colors
+    ```
 
-```bash [bun]
-bun add theme-colors
-```
+    ```bash [bun]
+    bun add theme-colors
+    ```
 
-```bash [yarn]
-yarn add theme-colors
-```
+    ```bash [yarn]
+    yarn add theme-colors
+    ```
 
 ::
 
@@ -49,22 +57,8 @@ Copy and paste the following code
 
 ::CodeViewer{filename="Tetris.vue" language="vue" componentName="Tetris" type="ui" id="tetris"}  
 ::
+
 ::
-
-## Example
-
-Without Blur or overlay
-
-::ComponentLoader{label="Preview" componentName="BubblesBgDemo" type="examples" id="backgrounds"}
-::
-
-## API
-
-| Prop Name      | Type     | Default | Description                                    |
-| -------------- | -------- | ------- | ---------------------------------------------- |
-| `class`        | `string` | `""`    | Additional class names to style the component. |
-| `base`         | `number` | `10`    | How many blocks do you have in a row.          |
-| `square-color` | `string` | `""`    | Square color.                                  |
 
 ## Credits
 

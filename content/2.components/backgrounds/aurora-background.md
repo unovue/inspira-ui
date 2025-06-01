@@ -6,6 +6,38 @@ description: A subtle Aurora or Southern Lights background for your website.
 ::ComponentLoader{label="Preview" componentName="AuroraBackgroundDemo" type="examples" id="aurora-background"}
 ::
 
+## API
+
+| Prop Name        | Type      | Default | Description                                                               |
+| ---------------- | --------- | ------- | ------------------------------------------------------------------------- |
+| `class`          | `string`  | `-`     | Additional CSS classes to apply to the component for styling.             |
+| `radialGradient` | `boolean` | `true`  | Determines whether a radial gradient effect is applied to the background. |
+
+## Installation
+
+::alert
+Add following entry to inline theme in your `tailwind.css` file.
+
+```css
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
+}
+```
+
+::
+
 ## Install using CLI
 
 ::InstallationCli{componentId="aurora-background"}
@@ -17,13 +49,6 @@ Copy and paste the following code
 
 ::CodeViewer{filename="AuroraBackground.vue" language="vue" componentName="AuroraBackground" type="ui" id="aurora-background"}
 ::
-
-## API
-
-| Prop Name        | Type      | Default | Description                                                               |
-| ---------------- | --------- | ------- | ------------------------------------------------------------------------- |
-| `class`          | `string`  | `-`     | Additional CSS classes to apply to the component for styling.             |
-| `radialGradient` | `boolean` | `true`  | Determines whether a radial gradient effect is applied to the background. |
 
 ## Features
 

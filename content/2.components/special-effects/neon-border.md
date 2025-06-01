@@ -16,6 +16,27 @@ description: A visually appealing neon border component with customizable animat
 | `duration`      | `number`                     | `6`         | Duration of the animation effect in seconds.    |
 | `class`         | `string`                     | `""`        | Additional CSS classes for styling.             |
 
+## Installation
+
+::alert
+Add following entry to inline theme in your `tailwind.css` file.
+
+```css
+@theme inline {
+  --animate-neon-border: neon-border var(--neon-border-duration) linear infinite;
+  @keyframes neon-border {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+```
+
+::
+
 ## Install using CLI
 
 ::InstallationCli{componentId="neon-border"}

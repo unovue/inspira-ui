@@ -1,10 +1,9 @@
 <template>
-  <Motion
+  <motion.span
     v-for="(char, index) in props.text"
     :key="`${char}-${count}-${index}`"
-    class="inline-block whitespace-pre font-sans tracking-tight"
     :initial="{
-      y: -3,
+      y: 0,
       opacity: 0.2,
       color: props.startColor,
       scale: 1,
@@ -15,12 +14,11 @@
       delay: index * 0.05,
     }"
     :animate="{
-      y: 0,
-      opacity: 1,
-      scale: 1.01,
-      filter: 'blur(0px)',
-      color:
-        currentColors.length > 0 ? currentColors[index % currentColors.length] : props.startColor,
+      y: [0, -3, 0],
+      opacity: [1, 0.8, 1],
+      scale: [1, 1.01, 1],
+      filter: ['blur(0px)', 'blur(5px)', 'blur(0px)'],
+      color: currentColors[index % currentColors.length],
     }"
     :exit="{
       y: -3,
@@ -31,11 +29,11 @@
     }"
   >
     {{ char }}
-  </Motion>
+  </motion.span>
 </template>
 
 <script setup lang="ts">
-import { Motion } from "motion-v";
+import { motion } from "motion-v";
 import { ref, onMounted, onUnmounted } from "vue";
 
 interface Props {

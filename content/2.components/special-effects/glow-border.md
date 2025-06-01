@@ -10,6 +10,30 @@ description: An animated border effect.
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
+## Installation
+
+::alert
+Add following entry to inline theme in your `tailwind.css` file.
+
+```css
+@theme inline {
+  --animate-glow: glow var(--duration) infinite linear;
+  @keyframes glow {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    to {
+      background-position: 0% 0%;
+    }
+  }
+}
+```
+
+::
+
 ## Install using CLI
 
 ::InstallationCli{componentId="glow-border"}
