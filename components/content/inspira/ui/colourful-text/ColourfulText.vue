@@ -1,41 +1,37 @@
 <template>
-  <div
-    v-if="visibility"
+  <Motion
+    v-for="(char, index) in props.text"
+    :key="`${char}-${count}-${index}`"
     class="inline-block whitespace-pre font-sans tracking-tight"
+    :initial="{
+      y: -3,
+      opacity: 0.2,
+      color: props.startColor,
+      scale: 1,
+      filter: 'blur(5px)',
+    }"
+    :transition="{
+      duration: props.duration,
+      delay: index * 0.05,
+    }"
+    :animate="{
+      y: 0,
+      opacity: 1,
+      scale: 1.01,
+      filter: 'blur(0px)',
+      color:
+        currentColors.length > 0 ? currentColors[index % currentColors.length] : props.startColor,
+    }"
+    :exit="{
+      y: -3,
+      opacity: 1,
+      scale: 1,
+      filter: 'blur(5px)',
+      color: props.startColor,
+    }"
   >
-    <Motion
-      v-for="(char, index) in props.text"
-      :key="`${char}-${count}-${index}`"
-      as-child
-      :initial="{
-        y: -3,
-        opacity: 0.2,
-        color: props.startColor,
-        scale: 1,
-        filter: 'blur(5px)',
-      }"
-      :transition="{
-        duration: props.duration,
-        delay: index * 0.05,
-      }"
-      :animate="{
-        y: 0,
-        opacity: 1,
-        scale: 1.01,
-        filter: 'blur(0px)',
-        color: currentColors[index % currentColors.length],
-      }"
-      :exit="{
-        y: -3,
-        opacity: 1,
-        scale: 1,
-        filter: 'blur(5px)',
-        color: props.startColor,
-      }"
-    >
-      {{ char }}
-    </Motion>
-  </div>
+    {{ char }}
+  </Motion>
 </template>
 
 <script setup lang="ts">
@@ -68,27 +64,26 @@ const props = withDefaults(defineProps<Props>(), {
 
 const currentColors = ref(props.colors);
 const count = ref(0);
-const visibility = ref(true);
+const lastHidden = ref(0);
 
 // eslint-disable-next-line no-undef
 let intervalId: undefined | NodeJS.Timeout = undefined;
 onMounted(() => {
-  document.addEventListener("visibilitychange", handleVisibilityChange);
-  handleVisibilityChange();
-
   intervalId = setInterval(() => {
     const shuffled = [...props.colors].sort(() => 0.5 - Math.random());
     currentColors.value = shuffled;
-    count.value++;
+
+    if (document.visibilityState === "visible") {
+      if (Date.now() - lastHidden.value > 500) {
+        count.value++;
+      }
+    } else {
+      lastHidden.value = Date.now();
+    }
   }, 5000);
 });
 
-function handleVisibilityChange() {
-  visibility.value = document.visibilityState === "visible";
-}
-
 onUnmounted(() => {
-  document.removeEventListener("visibilitychange", handleVisibilityChange);
   clearInterval(intervalId);
 });
 </script>
