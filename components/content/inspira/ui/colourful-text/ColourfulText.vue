@@ -80,12 +80,9 @@ onMounted(() => {
     } else {
       lastHidden.value = Date.now();
     }
-  }, 1000);
+  }, 5000);
 });
 
-onUnmounted(() => {
-  clearInterval(intervalId);
-});
 onUnmounted(() => {
   clearInterval(intervalId);
 });
