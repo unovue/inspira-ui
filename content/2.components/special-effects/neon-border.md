@@ -19,7 +19,7 @@ description: A visually appealing neon border component with customizable animat
 ## Installation
 
 ::alert
-Add following entry to inline theme in your `tailwind.css` file.
+Add following entry to inline theme in your `main.css` file.
 
 ```css
 @theme inline {

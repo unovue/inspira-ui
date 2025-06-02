@@ -16,7 +16,7 @@ description: A subtle Aurora or Southern Lights background for your website.
 ## Installation
 
 ::alert
-Add following entry to inline theme in your `tailwind.css` file.
+Add following entry to inline theme in your `main.css` file.
 
 ```css
 @theme inline {
