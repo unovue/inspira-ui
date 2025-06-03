@@ -6,12 +6,19 @@
         props.class,
       )
     "
+    :style="{
+      '--neon-border-duration': durationInSeconds,
+    }"
   >
     <div
-      :class="cn('neon-border-one rounded-lg', animationType != 'none' ? 'animate-border' : '')"
+      :class="
+        cn('neon-border-one rounded-lg', animationType != 'none' ? 'animate-neon-border' : '')
+      "
     ></div>
     <div
-      :class="cn('neon-border-two rounded-lg', animationType != 'none' ? 'animate-border' : '')"
+      :class="
+        cn('neon-border-two rounded-lg', animationType != 'none' ? 'animate-neon-border' : '')
+      "
     ></div>
     <slot> </slot>
   </div>
@@ -111,18 +118,5 @@ function getWidth(animationType: "none" | "half" | "full") {
     v-bind(colorType2),
     v-bind(colorType2)
   );
-}
-
-.animate-border {
-  animation: rotate v-bind(durationInSeconds) linear infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 </style>

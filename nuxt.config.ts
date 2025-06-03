@@ -53,6 +53,16 @@ export default defineNuxtConfig({
       description: "The complete Inspira UI documentation.",
     },
   },
+  i18n: {
+    defaultLocale: "en",
+    locales: [
+      {
+        code: "en",
+        name: "English",
+        language: "en-US",
+      },
+    ],
+  },
   extends: ["shadcn-docs-nuxt"],
   compatibilityDate: "2024-07-06",
 });
