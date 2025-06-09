@@ -10,6 +10,14 @@ export default defineAppConfig({
       color: "zinc",
       radius: 0.75,
     },
+    banner: {
+      enable: true,
+      showClose: false,
+      content: "For Tailwind CSS v3 docs, [**click here**](https://v1.inspira-ui.com).",
+      to: "https://v1.inspira-ui.com",
+      target: "_blank",
+      border: true,
+    },
     header: {
       title: "Inspira UI",
       showTitle: true,
@@ -37,6 +45,12 @@ export default defineAppConfig({
               to: "/components",
               description: "Explore all available components and their usage.",
               target: "_self",
+            },
+            {
+              title: "Inspira UI v1",
+              to: "https://v1.inspira-ui.com",
+              description: "Docs for using Inspira UI with Tailwind CSS v3.",
+              target: "_blank",
             },
           ],
         },

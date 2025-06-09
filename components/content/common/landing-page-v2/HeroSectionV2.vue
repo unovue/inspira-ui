@@ -46,7 +46,7 @@
       </h1>
     </BlurReveal>
 
-    <span class="mt-4 text-center text-lg text-gray-600 sm:text-xl dark:text-gray-200">
+    <span class="text-center text-lg text-gray-600 sm:text-xl dark:text-gray-200">
       Open source components to build
       <TextHighlight
         class="rounded-xl bg-gradient-to-r from-pink-500 to-violet-500 px-4 py-1"
@@ -62,13 +62,19 @@
 
     <div class="mt-4 flex w-full items-center justify-center space-x-4 py-4 md:pb-10">
       <NuxtLink to="/components">
-        <UiButton> All Components </UiButton>
+        <UiButton variant="secondary"> All Components </UiButton>
       </NuxtLink>
       <NuxtLink
         to="https://pro.inspira-ui.com"
         target="_blank"
       >
-        <UiButton variant="outline"> Inspira UI Pro </UiButton>
+        <UiButton>
+          Inspira UI Pro
+          <Icon
+            name="ix:arrow-diagonal-top-right"
+            size="20"
+          />
+        </UiButton>
       </NuxtLink>
     </div>
   </section>

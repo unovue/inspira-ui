@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col items-center justify-center px-4 py-6 font-heading md:px-8">
     <HeroSectionV2 />
-    <div class="mb-16 flex w-full flex-col items-center">
+    <div class="mb-16 flex w-full flex-col items-center -mt-20">
       <a
         href="https://github.com/sponsors/rahul-vashishtha"
         target="_blank"
@@ -10,7 +10,7 @@
           variant="secondary"
           class="gap-2 py-6 text-base"
         >
-          Become a Sponsor <span class="text-red-500">♥️</span>
+          Support Us <span class="text-red-500">♥️</span>
         </UiButton>
       </a>
     </div>
