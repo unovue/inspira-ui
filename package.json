@@ -37,7 +37,7 @@
     "ogl": "^1.0.11",
     "postprocessing": "^6.37.4",
     "qss": "^3.0.0",
-    "shadcn-docs-nuxt": "^1.0.2",
+    "shadcn-docs-nuxt": "^1.0.1",
     "simplex-noise": "^4.0.3",
     "theme-colors": "^0.1.0",
     "three": "^0.177.0",

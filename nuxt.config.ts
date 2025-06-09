@@ -64,5 +64,5 @@ export default defineNuxtConfig({
     ],
   },
   extends: ["shadcn-docs-nuxt"],
-  compatibilityDate: "2024-07-06",
+  compatibilityDate: "2025-06-10",
 });
