@@ -10,6 +10,39 @@ description: A component that displays a meteor shower animation with customizab
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
+## API
+
+| Prop Name | Type     | Default | Description                                                       |
+| --------- | -------- | ------- | ----------------------------------------------------------------- |
+| `count`   | `number` | `20`    | The number of meteors to display in the animation.                |
+| `class`   | `string` | `""`    | Additional CSS classes to apply to the meteors for customization. |
+
+## Installation
+
+::alert
+Add following entry to inline theme in your `main.css` file.
+
+```css
+@theme inline {
+  --animate-meteor-effect: meteor 5s linear infinite;
+  @keyframes meteor {
+    0% {
+      transform: rotate(215deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(215deg) translateX(-500px);
+      opacity: 0;
+    }
+  }
+}
+```
+
+::
+
 ## Install using CLI
 
 ::InstallationCli{componentId="meteors"}
@@ -21,13 +54,6 @@ Copy and paste the following code
 
 ::CodeViewer{filename="Meteors.vue" language="vue" componentName="Meteors" type="ui" id="meteors"}
 ::
-
-## API
-
-| Prop Name | Type     | Default | Description                                                       |
-| --------- | -------- | ------- | ----------------------------------------------------------------- |
-| `count`   | `number` | `20`    | The number of meteors to display in the animation.                |
-| `class`   | `string` | `""`    | Additional CSS classes to apply to the meteors for customization. |
 
 ## Features
 

@@ -5,37 +5,37 @@
   >
     <div
       :style="{
-        '--cell': `${width / cols}px`,
-        '--rows': rows - 1,
+        '--cell-size': `${width / cols}px`,
+        '--grid-rows': rows - 1,
       }"
-      :class="cn('relative w-full ', props.class)"
+      :class="cn('relative w-full', props.class)"
     >
       <div
         ref="el"
-        class="absolute inset-0 grid auto-rows-[--cell] justify-center -space-y-px"
+        class="absolute inset-0 grid justify-center -space-y-px"
+        :style="{ gridTemplateRows: `repeat(var(--grid-rows), var(--cell-size))` }"
       >
         <div
           v-for="(row, rowIndex) in grid"
           :key="rowIndex"
-          class="grid flex-1 auto-cols-[--cell] grid-flow-col -space-x-px"
+          class="grid flex-1 grid-flow-col -space-x-px"
+          :style="{ gridTemplateColumns: `repeat(${cols}, var(--cell-size))` }"
         >
           <div
             v-for="(cell, cellIndex) in row"
             :key="cellIndex"
             :style="{
-              '--border-color': theme[100],
-              '--dark-border-color': theme[900],
+              '--border-light': theme[100],
+              '--border-dark': theme[900],
+              '--square-light': theme[500],
+              '--square-hover-light': theme[400],
+              '--square-dark': theme[700],
+              '--square-hover-dark': theme[600],
             }"
-            class="relative border border-[--border-color] dark:border-[--dark-border-color]"
+            class="relative border border-[color:var(--border-light)] dark:border-[color:var(--border-dark)]"
           >
             <div
-              :style="{
-                '--square-color': theme[500],
-                '--square-hover-color': theme[400],
-                '--dark-square-color': theme[700],
-                '--dark-square-hover-color': theme[600],
-              }"
-              class="absolute inset-0 bg-[--square-color] opacity-0 transition-opacity duration-1000 will-change-[opacity] hover:bg-[--square-hover-color] dark:bg-[--dark-square-color] dark:hover:bg-[--dark-square-hover-color]"
+              class="absolute inset-0 bg-[color:var(--square-light)] opacity-0 transition-opacity duration-1000 will-change-[opacity] hover:bg-[color:var(--square-hover-light)] dark:bg-[color:var(--square-dark)] dark:hover:bg-[color:var(--square-hover-dark)]"
               :class="[cell && 'cursor-pointer opacity-60']"
               @click="cell && removeCell(rowIndex, cellIndex)"
             />
@@ -55,7 +55,7 @@ import { ref, onMounted, onUnmounted, watch } from "vue";
 interface Props {
   class?: string;
   squareColor: string;
-  base: number;
+  base?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
