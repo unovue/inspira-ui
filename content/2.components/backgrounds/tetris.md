@@ -63,4 +63,4 @@ Copy and paste the following code
 ## Credits
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
-- Inspired and ported from [Nuxt UI Home](https://ui.nuxt.com/).
+- Inspired and ported from [Nuxt UI Home](https://ui2.nuxt.com/).
