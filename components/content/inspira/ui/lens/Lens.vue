@@ -54,6 +54,7 @@ const props = withDefaults(defineProps<LensProps>(), {
   zoomFactor: 1.5,
   lensSize: 170,
   isStatic: false,
+  hovering: undefined,
   position: () => ({ x: 200, y: 150 }),
 });
 
