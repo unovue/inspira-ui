@@ -20,6 +20,7 @@
     "@number-flow/vue": "^0.4.8",
     "@nuxt/image": "^1.10.0",
     "@nuxt/scripts": "0.11.8",
+    "@nuxtjs/i18n": "^9.5.6",
     "@splinetool/runtime": "^1.10.2",
     "@types/lodash.template": "^4.5.3",
     "@vueuse/core": "^13.3.0",

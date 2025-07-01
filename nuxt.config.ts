@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     "motion-v/nuxt",
     "lenis/nuxt",
     "nuxt-llms",
+    "@nuxtjs/i18n",
   ],
 
   components: [
@@ -60,6 +61,11 @@ export default defineNuxtConfig({
         code: "en",
         name: "English",
         language: "en-US",
+      },
+      {
+        code: "cn",
+        name: "简体中文",
+        language: "zh-CN",
       },
     ],
   },
