@@ -10,12 +10,12 @@ description: A cool background effect with waves that move.
 **Note:** This component requires `simplex-noise` as a dependency.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="wavy-background"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -41,7 +41,7 @@ yarn add simplex-noise
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="WavyBackground.vue" language="vue" componentName="WavyBackground" type="ui" id="wavy-background"}  
 ::
@@ -49,7 +49,7 @@ Copy and paste the following code
 
 ## API
 
-| Prop Name        | Type               | Default                                                   | Description                                                |
+| Prop Name        | 类型               | 默认值                                                    | 说明                                                       |
 | ---------------- | ------------------ | --------------------------------------------------------- | ---------------------------------------------------------- |
 | `class`          | `string`           | `-`                                                       | The content to be displayed on top of the wavy background. |
 | `containerClass` | `string`           | `-`                                                       | The CSS class to apply to the content container.           |
@@ -65,7 +65,7 @@ Copy and paste the following code
 
 - **Slot Support**: Easily add any content inside the component using the default slot.
 
-## Credits
+## 致谢
 
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/wavy-background).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.

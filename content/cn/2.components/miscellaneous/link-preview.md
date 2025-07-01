@@ -10,12 +10,12 @@ description: Dynamic link previews for your anchor tags
 **Note:** This component uses `qss` npm package as a dependency.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="link-preview"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -41,7 +41,7 @@ yarn add qss
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="LinkPreview.vue" language="vue" componentName="LinkPreview" type="ui" id="link-preview"}  
 ::
@@ -49,7 +49,7 @@ Copy and paste the following code
 
 ## API
 
-| Prop Name   | Type      | Default | Description                                                                                 |
+| Prop Name   | 类型      | 默认值  | 说明                                                                                        |
 | ----------- | --------- | ------- | ------------------------------------------------------------------------------------------- |
 | `class`     | `string`  | `""`    | Custom class applied to the main element.                                                   |
 | `linkClass` | `string`  | `""`    | Custom class applied to the link element.                                                   |
@@ -59,7 +59,7 @@ Copy and paste the following code
 | `imageSrc`  | `string`  | `""`    | The source of the image to display (required if `isStatic` is `true`).                      |
 | `url`       | `string`  | `""`    | URL for the link and for generating the preview image (required if `isStatic` is `false`).  |
 
-## Credits
+## 致谢
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
 

@@ -12,10 +12,10 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ## API
 
-| Prop Name | Type     | Default | Description                                                       |
-| --------- | -------- | ------- | ----------------------------------------------------------------- |
-| `count`   | `number` | `20`    | The number of meteors to display in the animation.                |
-| `class`   | `string` | `""`    | Additional CSS classes to apply to the meteors for customization. |
+| Prop Name | 类型     | 默认值 | 说明                                                              |
+| --------- | -------- | ------ | ----------------------------------------------------------------- |
+| `count`   | `number` | `20`   | The number of meteors to display in the animation.                |
+| `class`   | `string` | `""`   | Additional CSS classes to apply to the meteors for customization. |
 
 ## Installation
 
@@ -43,14 +43,14 @@ Add following entry to inline theme in your `main.css` file.
 
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="meteors"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="Meteors.vue" language="vue" componentName="Meteors" type="ui" id="meteors"}
 ::
@@ -67,6 +67,6 @@ Copy and paste the following code
 
 - **Responsive Design**: The component adapts to different screen sizes and uses Vue’s reactivity for smooth animations.
 
-## Credits
+## 致谢
 
 - Ported from [Aceternity UI's Meteor Effect](https://ui.aceternity.com/components/meteors)

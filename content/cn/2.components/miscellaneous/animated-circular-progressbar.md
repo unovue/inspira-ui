@@ -6,21 +6,21 @@ description: Animated Circular Progress Bar is a component that displays a circu
 ::ComponentLoader{label="Preview" componentName="AnimatedCircularProgressBarDemo" type="examples" id="animated-circular-progressbar"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="animated-circular-progressbar"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="AnimatedCircularProgressBar.vue" language="vue" componentName="AnimatedCircularProgressBar" type="ui" id="animated-circular-progressbar"}
 ::
 
 ## API
 
-| Prop Name             | Type      | Default              | Description                                 |
+| Prop Name             | 类型      | 默认值               | 说明                                        |
 | --------------------- | --------- | -------------------- | ------------------------------------------- |
 | `class`               | `string`  | `-`                  | The class to be applied to the component.   |
 | `max`                 | `number`  | `100`                | The maximum value of the gauge.             |
@@ -32,7 +32,7 @@ Copy and paste the following code
 | `showPercentage`      | `boolean` | `true`               | Show the value inside the circle            |
 | `duration`            | `number`  | `1`                  | The duration of the animation (in seconds). |
 
-## Credits
+## 致谢
 
 - Credits to [Magic UI](https://magicui.design/docs/components/animated-circular-progress-bar).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.

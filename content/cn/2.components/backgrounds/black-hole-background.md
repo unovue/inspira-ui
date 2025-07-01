@@ -11,7 +11,7 @@ navBadges:
 
 ## API
 
-| Prop Name          | Type                       | Default         | Description                                                   |
+| Prop Name          | 类型                       | 默认值          | 说明                                                          |
 | ------------------ | -------------------------- | --------------- | ------------------------------------------------------------- |
 | `strokeColor`      | `string`                   | `"#737373"`     | Stroke colour for the concentric discs and radial lines.      |
 | `numberOfLines`    | `number`                   | `50`            | Total radial lines emanating from the centre.                 |
@@ -19,14 +19,14 @@ navBadges:
 | `particleRGBColor` | `[number, number, number]` | `[255,255,255]` | RGB colour used for the tiny particles flowing into the hole. |
 | `class`            | `string`                   | `""`            | Extra utility classes merged onto the root wrapper.           |
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="bg-black-hole"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="BlackHoleBackground.vue" language="vue" componentName="BlackHoleBackground" type="ui" id="bg-black-hole"}
 ::
@@ -41,7 +41,7 @@ Copy and paste the following code
 - **Dark-Mode Friendly** – Radial backgrounds automatically invert in dark theme.
 - **Responsive** – Re-computes geometry and re-renders on window resize.
 
-## Credits
+## 致谢
 
 - Custom generative art logic inspired by tunnel / warp animations.
 - Utilises **Motion-V** for gradient drift and Vue 3 Composition API for lifecycle control.

@@ -6,14 +6,14 @@ description: A cool grid layout with different child component.
 ::ComponentLoader{label="Preview" componentName="BentoGridDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="bento-grid"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -34,7 +34,7 @@ Copy and paste the following code in the same folder
 
 #### `BentoGridItem`
 
-| Slot Name     | Description                       |
+| Slot Name     | 说明                              |
 | ------------- | --------------------------------- |
 | `title`       | Component to show as title.       |
 | `description` | Component to show as description. |
@@ -43,11 +43,11 @@ Copy and paste the following code in the same folder
 
 #### `BentoGridCard`
 
-| Slot Name    | Description                      |
+| Slot Name    | 说明                             |
 | ------------ | -------------------------------- |
 | `background` | Component to show in background. |
 
-| Props Name    | Type      | Description                          |
+| Props Name    | 类型      | 说明                                 |
 | ------------- | --------- | ------------------------------------ |
 | `name`        | `string`  | Name or title to show on card.       |
 | `icon`        | `?string` | Icon component to show on card.      |
@@ -55,6 +55,6 @@ Copy and paste the following code in the same folder
 | `href`        | `string`  | Link to the url for CTA.             |
 | `cta`         | `string`  | Text to show on CTA.                 |
 
-## Credits
+## 致谢
 
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/bento-grid) and [Magic UI](https://magicui.design/docs/components/bento-grid) for this fantastic component.

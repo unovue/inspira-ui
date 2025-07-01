@@ -6,25 +6,25 @@ description: A versatile and visually dynamic input field with radial hover effe
 ::ComponentLoader{label="Preview" componentName="InputDemo" type="examples" id="input"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="input"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="IInput.vue" language="vue" componentName="IInput" type="ui" id="input"}
 ::
 
 ## API
 
-| Prop Name        | Type                | Default | Description                                                 |
-| ---------------- | ------------------- | ------- | ----------------------------------------------------------- |
-| `defaultValue`   | `string  \| number` | `""`    | Default value of the input field.                           |
-| `class`          | `string`            | `""`    | Additional CSS classes for custom styling.                  |
-| `containerClass` | `string`            | `""`    | Additional CSS classes for custom styling of the container. |
+| Prop Name        | 类型                | 默认值 | 说明                                                        |
+| ---------------- | ------------------- | ------ | ----------------------------------------------------------- |
+| `defaultValue`   | `string  \| number` | `""`   | Default value of the input field.                           |
+| `class`          | `string`            | `""`   | Additional CSS classes for custom styling.                  |
+| `containerClass` | `string`            | `""`   | Additional CSS classes for custom styling of the container. |
 
 ## Features
 
@@ -39,7 +39,7 @@ Copy and paste the following code
 
 This component inherits base styles from ShadCN Vue’s Input component and applies additional functionality, including hover effects and shadow styling.
 
-## Credits
+## 致谢
 
 - Built on ShadCN Vue's Input component foundation, with extended functionality for modern UI/UX needs.
 - Ported from [Aceternity UI's Signup Form Input Component](https://ui.aceternity.com/components/signup-form)

@@ -8,10 +8,10 @@ description: A subtle Aurora or Southern Lights background for your website.
 
 ## API
 
-| Prop Name        | Type      | Default | Description                                                               |
-| ---------------- | --------- | ------- | ------------------------------------------------------------------------- |
-| `class`          | `string`  | `-`     | Additional CSS classes to apply to the component for styling.             |
-| `radialGradient` | `boolean` | `true`  | Determines whether a radial gradient effect is applied to the background. |
+| Prop Name        | 类型      | 默认值 | 说明                                                                      |
+| ---------------- | --------- | ------ | ------------------------------------------------------------------------- |
+| `class`          | `string`  | `-`    | Additional CSS classes to apply to the component for styling.             |
+| `radialGradient` | `boolean` | `true` | Determines whether a radial gradient effect is applied to the background. |
 
 ## Installation
 
@@ -38,14 +38,14 @@ Add following entry to inline theme in your `main.css` file.
 
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="aurora-background"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="AuroraBackground.vue" language="vue" componentName="AuroraBackground" type="ui" id="aurora-background"}
 ::
@@ -54,7 +54,7 @@ Copy and paste the following code
 
 - **Slot Support**: Easily add any content inside the component using the default slot.
 
-## Credits
+## 致谢
 
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/aurora-background).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.

@@ -6,21 +6,21 @@ description: A stylish 3D text component with customizable colors, shadows, and 
 ::ComponentLoader{label="Preview" componentName="Text3dDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="text-3d"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="Text3d.vue" language="vue" componentName="Text3d" type="ui" id="text-3d"}
 ::
 
 ## API
 
-| Prop Name           | Type      | Default    | Description                                        |
+| Prop Name           | 类型      | 默认值     | 说明                                               |
 | ------------------- | --------- | ---------- | -------------------------------------------------- |
 | `textColor`         | `string`  | `"white"`  | Color of the main text.                            |
 | `letterSpacing`     | `number`  | `-0.1`     | Adjusts the spacing between letters in `ch` units. |

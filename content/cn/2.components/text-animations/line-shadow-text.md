@@ -6,21 +6,21 @@ description: A line shadow text component for Magic UI that adds a shadow effect
 ::ComponentLoader{label="Preview" componentName="LineShadowTextDemo" type="examples" id="line-shadow-text"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="line-shadow-text"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="LineShadowText.vue" language="vue" componentName="LineShadowText" type="ui" id="line-shadow-text"}
 ::
 
 ## API
 
-| Prop Name     | Type     | Default   | Description                                |
+| Prop Name     | 类型     | 默认值    | 说明                                       |
 | ------------- | -------- | --------- | ------------------------------------------ |
 | `shadowColor` | `string` | `"black"` | The color of the shadow effect             |
 | `class`       | `string` | `""`      | Additional CSS classes for custom styling. |
@@ -30,7 +30,7 @@ Copy and paste the following code
 
 - **Slot-Based Content**: Supports default slots for dynamic content, making it flexible for various use cases.
 
-## Credits
+## 致谢
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.
 - Ported from [Magic UI's Line Shadow Text](https://magicui.design/docs/components/line-shadow-text)

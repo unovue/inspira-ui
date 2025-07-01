@@ -6,14 +6,14 @@ description: Visually appealing particle animation applied to images as seen on 
 ::ComponentLoader{label="Preview" componentName="ParticleImageDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="particle-image"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -25,7 +25,7 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name         | Type                                                                          | Default  | Description                                                                     |
+| Prop Name         | 类型                                                                          | 默认值   | 说明                                                                            |
 | ----------------- | ----------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------- |
 | `imageSrc`        | `string`                                                                      | `null`   | Source URL for the image to which the particle effect is applied.               |
 | `class`           | `string`                                                                      | `null`   | Additional CSS classes to apply to the image element.                           |
@@ -45,7 +45,7 @@ Copy and paste the following code in the same folder
 | `noise`           | `number`                                                                      | `null`   | Noise of the particles.                                                         |
 | `responsiveWidth` | `boolean`                                                                     | `false`  | Should the canvas be responsive.                                                |
 
-## Credits
+## 致谢
 
 - Credits to [Nuxt Labs](https://nuxtlabs.com) for this inspiration.
 - Credits to [NextParticles](https://nextparticle.nextco.de) for the base of the animation library.

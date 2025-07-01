@@ -6,14 +6,14 @@ description: A component that animates content in a circular orbit, with customi
 ::ComponentLoader{label="Preview" componentName="OrbitDemo" type="examples"}  
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="orbit"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -31,7 +31,7 @@ Synchronized orbit
 
 ## API
 
-| Prop Name   | Type                  | Default  | Description                                                           |
+| Prop Name   | 类型                  | 默认值   | 说明                                                                  |
 | ----------- | --------------------- | -------- | --------------------------------------------------------------------- |
 | `direction` | `normal` \| `reverse` | `normal` | The direction of the orbit. You can use the constant ORBIT_DIRECTION. |
 | `duration`  | `?number`             | `20`     | The duration of the orbit animation in seconds.                       |
@@ -50,7 +50,7 @@ Synchronized orbit
 
 - **Responsive and Efficient**: The component handles different container sizes and uses Vue’s reactivity to ensure efficient animation.
 
-## Credits
+## 致谢
 
 - Inspired by [Magic UI](https://magicui.design/docs/components/orbiting-circles).
 - Credits to [Nathan De Pachtere](https://nathandepachtere.com/) for updating this component.

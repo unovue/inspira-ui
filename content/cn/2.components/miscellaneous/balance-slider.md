@@ -6,21 +6,21 @@ description: A dynamic balance slider with adjustable colors, limits, and intera
 ::ComponentLoader{label="Preview" componentName="BalanceSliderDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="balance-slider"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="BalanceSlider.vue" language="vue" componentName="BalanceSlider" type="ui" id="balance-slider"}
 ::
 
 ## API
 
-| Prop Name        | Type     | Default     | Description                                         |
+| Prop Name        | 类型     | 默认值      | 说明                                                |
 | ---------------- | -------- | ----------- | --------------------------------------------------- |
 | `initialValue`   | `number` | `50`        | Initial position of the slider (0-100).             |
 | `leftColor`      | `string` | `"#e68a00"` | Background color for the left side of the slider.   |
@@ -39,7 +39,7 @@ Copy and paste the following code
 - **Responsive Indicator**: Central indicator adjusts its color based on active state, enhancing interactivity.
 - **Accessible Controls**: Works with keyboard and touch interactions for seamless accessibility.
 
-## Credits
+## 致谢
 
 - Inspired and ported from code shared in [Jhey's CSS only version of Balance Slider](https://x.com/jh3yy/status/1748809599598399792?s=46)
 - Original concept by [Malay Vasa](https://x.com/MalayVasa/status/1748726374079381930).

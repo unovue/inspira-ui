@@ -10,12 +10,12 @@ description: An interactive rotating globe component.
 **Note:** This component uses `cobe` and `vue-use-spring` as a dependency.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="globe"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -41,7 +41,7 @@ yarn add cobe vue-use-spring
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="Globe.vue" language="vue" componentName="Globe" type="ui" id="globe"}  
 ::
@@ -49,7 +49,7 @@ Copy and paste the following code
 
 ## API
 
-| Prop Name   | Type          | Default | Description                                                                                                 |
+| Prop Name   | 类型          | 默认值  | 说明                                                                                                        |
 | ----------- | ------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
 | `class`     | `string`      | `""`    | Additional CSS classes for custom styling.                                                                  |
 | `config`    | `COBEOptions` | N/A     | Configuration object for the globe, following **[COBE]**(https://cobe.vercel.app/docs/api) library options. |
@@ -70,7 +70,7 @@ Copy and paste the following code
 
 - **Responsive Design**: Automatically adjusts to different screen sizes and resolutions.
 
-## Credits
+## 致谢
 
 - Built using the [cobe](https://github.com/shuding/cobe) library for WebGL globe visualization.
 

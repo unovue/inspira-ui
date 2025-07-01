@@ -6,14 +6,14 @@ description: A container component that applies a warp animation effect to its c
 ::ComponentLoader{label="Preview" componentName="WarpBackgroundDemo" type="examples" id="warp-background"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="warp-background"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -24,7 +24,7 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name      | Type     | Default                | Description                               |
+| Prop Name      | 类型     | 默认值                 | 说明                                      |
 | -------------- | -------- | ---------------------- | ----------------------------------------- |
 | `perspective`  | `number` | `100`                  | The perspective of the warp animation     |
 | `beamsPerSide` | `number` | `3`                    | The number of beams per side              |
@@ -34,7 +34,7 @@ Copy and paste the following code in the same folder
 | `beamDuration` | `number` | `3`                    | The duration of the beams                 |
 | `gridColor`    | `string` | `"hsl(var(--border))"` | The color of the grid lines               |
 
-## Credits
+## 致谢
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Inspired and ported from [Magic UI WarpBackground](https://magicui.design/docs/components/warp-background).

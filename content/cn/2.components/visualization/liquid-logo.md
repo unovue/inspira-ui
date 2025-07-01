@@ -8,7 +8,7 @@ description: An advanced WebGL-based component that applies a dynamic, liquid ef
 
 ## API
 
-| Prop Name      | Type     | Default | Description                                  |
+| Prop Name      | 类型     | 默认值  | 说明                                         |
 | -------------- | -------- | ------- | -------------------------------------------- |
 | `class`        | `string` | `""`    | Additional CSS classes for custom styling.   |
 | `imageUrl`     | `string` | `""`    | URL of the image to apply the liquid effect. |
@@ -21,7 +21,7 @@ description: An advanced WebGL-based component that applies a dynamic, liquid ef
 
 ## Component Code
 
-You can copy and paste the following code to create this component:
+你可以复制并粘贴以下代码来创建此组件：
 
 ::code-group
 
@@ -44,7 +44,7 @@ You can copy and paste the following code to create this component:
 - **Responsive Scaling**: Automatically adjusts to different screen sizes and resolutions.
 - **Configurable Parameters**: Offers a wide range of props to control effects like refraction, speed, and edge sharpness.
 
-## Credits
+## 致谢
 
 - Inspired by the Apple Fluid Motion design.
 - Ported and enhaced from [Paper Design Concept](https://github.com/paper-design/liquid-logo).

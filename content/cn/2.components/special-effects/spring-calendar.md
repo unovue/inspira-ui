@@ -11,25 +11,25 @@ navBadges:
 
 ## API
 
-| Prop Name      | Type                                                                                                           | Default | Description                                                           |
-| -------------- | -------------------------------------------------------------------------------------------------------------- | ------- | --------------------------------------------------------------------- |
-| `calendarData` | `Array<{ month: string; date: number; day: string; events?: { title: string; day: string; time: string }[] }>` | **—**   | Array defining each calendar day and its optional events. _Required_. |
-| `initialIndex` | `number`                                                                                                       | `0`     | Day index initially selected.                                         |
+| Prop Name      | 类型                                                                                                           | 默认值 | 说明                                                                  |
+| -------------- | -------------------------------------------------------------------------------------------------------------- | ------ | --------------------------------------------------------------------- |
+| `calendarData` | `Array<{ month: string; date: number; day: string; events?: { title: string; day: string; time: string }[] }>` | **—**  | Array defining each calendar day and its optional events. _Required_. |
+| `initialIndex` | `number`                                                                                                       | `0`    | Day index initially selected.                                         |
 
 ### Emits
 
-| Event                | Payload  | Description                                                        |
+| Event                | Payload  | 说明                                                               |
 | -------------------- | -------- | ------------------------------------------------------------------ |
 | `update:activeIndex` | `number` | Fires when a day button is clicked, emitting the new active index. |
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="spring-calendar"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::code-group
 
@@ -48,6 +48,6 @@ Copy and paste the following code
 - **Interactive Day Picker** — Clickable day chips with hover/press scale effects.
 - **Responsive Layout** — Flexbox layout that wraps chips and events neatly.
 
-## Credits
+## 致谢
 
 - Inspired from the work of [sekachov](https://x.com/sekachov)

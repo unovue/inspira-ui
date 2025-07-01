@@ -6,14 +6,14 @@ description: Animated flipping logo with origami effect.
 ::ComponentLoader{label="Preview" componentName="LogoOrigamiDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="logo-origami"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -23,11 +23,11 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name  | Type     | Default | Description                                |
-| ---------- | -------- | ------- | ------------------------------------------ |
-| `class`    | `string` | `""`    | Additional CSS classes for custom styling. |
-| `duration` | `number` | `1.5`   | Duration of the flip animation in seconds. |
-| `delay`    | `number` | `2.5`   | Delay between flip animations in seconds.  |
+| Prop Name  | 类型     | 默认值 | 说明                                       |
+| ---------- | -------- | ------ | ------------------------------------------ |
+| `class`    | `string` | `""`   | Additional CSS classes for custom styling. |
+| `duration` | `number` | `1.5`  | Duration of the flip animation in seconds. |
+| `delay`    | `number` | `2.5`  | Delay between flip animations in seconds.  |
 
 ## Features
 
@@ -41,6 +41,6 @@ Copy and paste the following code in the same folder
 
 - **Easy Integration**: Simple to include in your Vue projects with minimal setup.
 
-## Credits
+## 致谢
 
 - Inspired by origami animations and flip effects at [hover.dev](www.hover.dev/components/other#logo-origami)

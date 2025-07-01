@@ -6,14 +6,14 @@ description: Animated company cloud logs. Usually we can use to show company log
 ::ComponentLoader{label="Preview" componentName="StaticLogoCloudDemo" type="examples" id="logo-cloud"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="logo-cloud"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -42,12 +42,12 @@ Company logo icons
 
 ## API
 
-| Prop Name | Type     | Default                     | Description                                                    |
+| Prop Name | 类型     | 默认值                      | 说明                                                           |
 | --------- | -------- | --------------------------- | -------------------------------------------------------------- |
 | `class`   | `string` | `-`                         | The delay in milliseconds before adding each item to the list. |
 | `title`   | `string` | `Trusted by Companies like` | Title of animated logs.                                        |
 | `logos`   | `[]`     | `[{name: "", path: ""}]`    | Array of items(logos) with name & path fields.                 |
 
-## Credits
+## 致谢
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.

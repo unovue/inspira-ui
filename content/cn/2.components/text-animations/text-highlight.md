@@ -6,14 +6,14 @@ description: A text effect that fill background of a text to highlight it.
 ::ComponentLoader{label="Preview" componentName="TextHighlightDemo" type="examples" id="text-highlight"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="text-highlight"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="TextHighlight.vue" language="vue" componentName="TextHighlight" type="ui" id="text-highlight"}
 ::
@@ -42,13 +42,13 @@ With text color change.
 
 ## API
 
-| Prop Name        | Type     | Default   | Description                                                                |
+| Prop Name        | 类型     | 默认值    | 说明                                                                       |
 | ---------------- | -------- | --------- | -------------------------------------------------------------------------- |
 | `delay`          | `number` | `0`       | Delay before the animation starts, in `ms`.                                |
 | `duration`       | `number` | `2000`    | Duration of the animation, in `ms`.                                        |
 | `text-end-color` | `string` | `inherit` | Color of the text at the end of the animation. Match WCAG recommendations. |
 
-## Credits
+## 致谢
 
 - Inspired by [Aceternity UI](https://ui.aceternity.com/components/hero-highlight)
 - Credits to [Nathan De Pachtere](https://nathandepachtere.com) for porting this component.

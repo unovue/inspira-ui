@@ -8,7 +8,7 @@ description: Displays a customizable world map with animated arcs and pulse effe
 
 ## API
 
-| Prop Name    | Type                                                                                                                 | Default     | Description                                                                             |
+| Prop Name    | 类型                                                                                                                 | 默认值      | 说明                                                                                    |
 | ------------ | -------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------------------------------- |
 | `dots`       | `Array<{ start: { lat: number; lng: number; label?: string }, end: { lat: number; lng: number; label?: string } }> ` | `[]`        | Array of dot objects, each containing a start and end coordinate (latitude, longitude). |
 | `class`      | `string`                                                                                                             | `""`        | Additional CSS classes for custom styling.                                              |
@@ -20,12 +20,12 @@ description: Displays a customizable world map with animated arcs and pulse effe
 **Note:** This component uses Spline & requires `dotted-map` npm package as a dependency.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="world-map"}
 ::
 
-## Install Manually
+## 手动安装
 
 ### Install the dependencies
 
@@ -51,7 +51,7 @@ yarn add dotted-map
 
 ## Component Code
 
-You can copy and paste the following code to create this component:
+你可以复制并粘贴以下代码来创建此组件：
 
 ::code-group
 
@@ -68,6 +68,6 @@ You can copy and paste the following code to create this component:
 - **Dynamic Projection**: Projects latitude/longitude to an 800x400 coordinate plane.
 - **Customizable Colors**: Control lineColor, mapColor, and mapBgColor.
 
-## Credits
+## 致谢
 
 - Ported from (World Map by Aceternity UI)[https://ui.aceternity.com/components/world-map].

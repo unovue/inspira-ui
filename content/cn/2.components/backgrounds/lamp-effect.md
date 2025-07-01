@@ -6,25 +6,25 @@ description: A captivating lamp lighting effect with conic gradients, spotlights
 ::ComponentLoader{label="Preview" componentName="LampEffectDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="lamp-effect"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="LampEffect.vue" language="vue" componentName="LampEffect" type="ui" id="lamp-effect"}
 ::
 
 ## API
 
-| Prop Name  | Type     | Default | Description                                    |
-| ---------- | -------- | ------- | ---------------------------------------------- |
-| `delay`    | `number` | `0.5`   | Delay before the animation starts, in seconds. |
-| `duration` | `number` | `0.8`   | Duration of the animation, in seconds.         |
-| `class`    | `string` | `""`    | Additional CSS classes for custom styling.     |
+| Prop Name  | 类型     | 默认值 | 说明                                           |
+| ---------- | -------- | ------ | ---------------------------------------------- |
+| `delay`    | `number` | `0.5`  | Delay before the animation starts, in seconds. |
+| `duration` | `number` | `0.8`  | Duration of the animation, in seconds.         |
+| `class`    | `string` | `""`   | Additional CSS classes for custom styling.     |
 
 ## Features
 
@@ -34,6 +34,6 @@ Copy and paste the following code
 - **Customizable Timing**: The `delay` and `duration` props allow for precise control of animation timings.
 - **Slot-Based Content**: Supports default slot content, making it easy to overlay text or other components.
 
-## Credits
+## 致谢
 
 - Ported from [Aceternity UI](https://ui.aceternity.com/components/lamp-effect)

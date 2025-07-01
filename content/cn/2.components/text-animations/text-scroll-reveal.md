@@ -10,14 +10,14 @@ description: A component that reveals text word by word as you scroll, with cust
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="text-scroll-reveal"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -27,10 +27,10 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name | Type     | Default | Description                                                         |
-| --------- | -------- | ------- | ------------------------------------------------------------------- |
-| `text`    | `string` | N/A     | The text content to display and reveal word by word during scroll.  |
-| `class`   | `string` | `""`    | Additional CSS classes to apply to the component for customization. |
+| Prop Name | 类型     | 默认值 | 说明                                                                |
+| --------- | -------- | ------ | ------------------------------------------------------------------- |
+| `text`    | `string` | N/A    | The text content to display and reveal word by word during scroll.  |
+| `class`   | `string` | `""`   | Additional CSS classes to apply to the component for customization. |
 
 ## Features
 
@@ -44,6 +44,6 @@ Copy and paste the following code in the same folder
 
 - **Reactive Design**: The component uses Vue's reactivity system to update the scroll progress and word visibility in real-time.
 
-## Credits
+## 致谢
 
 - Ported from [Magic UI Text Reveal](https://magicui.design/docs/components/text-reveal).

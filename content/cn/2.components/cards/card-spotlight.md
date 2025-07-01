@@ -6,21 +6,21 @@ description: A card component with a dynamic spotlight effect that follows the m
 ::ComponentLoader{label="Preview" componentName="CardSpotlightDemo" type="examples"}  
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="card-spotlight"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="CardSpotlight.vue" language="vue" componentName="CardSpotlight" type="ui" id="card-spotlight"}
 ::
 
 ## API
 
-| Prop Name         | Type     | Default     | Description                                                 |
+| Prop Name         | 类型     | 默认值      | 说明                                                        |
 | ----------------- | -------- | ----------- | ----------------------------------------------------------- |
 | `gradientSize`    | `number` | `200`       | Radius in pixels of the spotlight effect.                   |
 | `gradientColor`   | `string` | `'#262626'` | The color of the spotlight gradient.                        |
@@ -39,6 +39,6 @@ Copy and paste the following code
 
 - **Performance Optimized**: Utilizes Vue's reactivity for efficient updates, ensuring smooth animations without compromising application performance.
 
-## Credits
+## 致谢
 
 - Inspired by Magic Card component from [Magic UI](https://magicui.design/docs/components/magic-card).

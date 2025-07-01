@@ -6,14 +6,14 @@ description: A container that flips through words, animating the width.
 ::ComponentLoader{label="Preview" componentName="ContainerTextFlipDemo" type="examples" id="container-text-flip"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="container-text-flip"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="ContainerTextFlip.vue" language="vue" componentName="ContainerTextFlip" type="ui" id="container-text-flip"}
 ::
@@ -32,7 +32,7 @@ Hero section with animation
 
 ## API
 
-| Prop Name           | Type       | Default                                        | Description                                          |
+| Prop Name           | 类型       | 默认值                                         | 说明                                                 |
 | ------------------- | ---------- | ---------------------------------------------- | ---------------------------------------------------- |
 | `words`             | `string[]` | `["better", "modern", "beautiful", "awesome"]` | Array of words to cycle through in the animation     |
 | `interval`          | `number`   | `3000`                                         | Time in milliseconds between word transitions        |
@@ -40,7 +40,7 @@ Hero section with animation
 | `class`             | `string`   | ``                                             | Additional CSS classes to apply to the container     |
 | `textClass`         | `string`   | ``                                             | Additional CSS classes to apply to the text          |
 
-## Credits
+## 致谢
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Ported from [Aceternity UI Container Text Flip](https://ui.aceternity.com/components/container-text-flip).

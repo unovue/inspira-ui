@@ -10,21 +10,21 @@ description: A stylish animated border beam effect with customizable size, durat
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="border-beam"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="BorderBeam.vue" language="vue" componentName="BorderBeam" type="ui" id="border-beam"}
 ::
 
 ## API
 
-| Prop Name     | Type     | Default     | Description                                                           |
+| Prop Name     | 类型     | 默认值      | 说明                                                                  |
 | ------------- | -------- | ----------- | --------------------------------------------------------------------- |
 | `class`       | `string` | `""`        | Additional CSS classes for custom styling.                            |
 | `size`        | `number` | `200`       | Size of the animated border beam effect.                              |
@@ -42,6 +42,6 @@ Copy and paste the following code
 - **Flexible Animation Settings**: Control the size, duration, and delay of the animation to fine-tune the visual experience.
 - **Anchor Positioning**: Use the `anchor` prop to set the starting position of the beam along the border.
 
-## Credits
+## 致谢
 
 - Ported from [Magic UI](https://magicui.design/docs/components/border-beam).

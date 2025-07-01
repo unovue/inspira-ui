@@ -10,12 +10,12 @@ description: A wavy, swirly, vortex background ideal for CTAs and backgrounds.
 **Note:** This component requires `simplex-noise` as a dependency.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="vortex"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -41,7 +41,7 @@ yarn add simplex-noise
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="Vortex.vue" language="vue" componentName="Vortex" type="ui" id="vortex"}  
 ::
@@ -56,7 +56,7 @@ Full page demo usage
 
 ## API
 
-| Prop Name         | Type     | Default     | Description                                          |
+| Prop Name         | 类型     | 默认值      | 说明                                                 |
 | ----------------- | -------- | ----------- | ---------------------------------------------------- |
 | `class`           | `string` |             | Optional className for styling the children wrapper. |
 | `containerClass`  | `string` |             | Optional className for styling the container.        |
@@ -73,7 +73,7 @@ Full page demo usage
 
 - **Slot Support**: Easily add any content inside the component using the default slot.
 
-## Credits
+## 致谢
 
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/vortex).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.

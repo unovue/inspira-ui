@@ -15,12 +15,12 @@ description: A 3D interactive globe visualization with customizable arcs, points
 Use `<ClientOnly>` tag to wrap this component to avoid `window is not defined` error.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="github-globe"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -50,7 +50,7 @@ yarn add --dev @types/three
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="GithubGlobe.vue" language="vue" componentName="GithubGlobe" type="ui" id="github-globe"}  
 ::
@@ -63,15 +63,15 @@ Download a GeoJSON file containing the globe's geographical data from [GeoJSON M
 
 ## API
 
-| Prop Name     | Type         | Default | Description                                                                                         |
-| ------------- | ------------ | ------- | --------------------------------------------------------------------------------------------------- |
-| `globeConfig` | `object`     | `{}`    | Configuration options for the globe, including colors, atmosphere, rotation speed, and lighting.    |
-| `data`        | `Position[]` | `[]`    | Array of positions representing arcs and points on the globe, with latitude, longitude, color, etc. |
-| `class`       | `string`     | `""`    | Additional CSS classes for custom styling.                                                          |
+| Prop Name     | 类型         | 默认值 | 说明                                                                                                |
+| ------------- | ------------ | ------ | --------------------------------------------------------------------------------------------------- |
+| `globeConfig` | `object`     | `{}`   | Configuration options for the globe, including colors, atmosphere, rotation speed, and lighting.    |
+| `data`        | `Position[]` | `[]`   | Array of positions representing arcs and points on the globe, with latitude, longitude, color, etc. |
+| `class`       | `string`     | `""`   | Additional CSS classes for custom styling.                                                          |
 
 ### `globeConfig` Properties
 
-| Property             | Type      | Default                 | Description                                              |
+| Property             | 类型      | 默认值                  | 说明                                                     |
 | -------------------- | --------- | ----------------------- | -------------------------------------------------------- |
 | `pointSize`          | `number`  | `1`                     | Size of individual points on the globe.                  |
 | `globeColor`         | `string`  | `"#1d072e"`             | Color of the globe surface.                              |
@@ -92,7 +92,7 @@ Download a GeoJSON file containing the globe's geographical data from [GeoJSON M
 
 ### `data` Structure (Position)
 
-| Field      | Type     | Description                                     |
+| Field      | 类型     | 说明                                            |
 | ---------- | -------- | ----------------------------------------------- |
 | `order`    | `number` | Order of the point or arc for sequencing.       |
 | `startLat` | `number` | Starting latitude for an arc.                   |
@@ -110,7 +110,7 @@ Download a GeoJSON file containing the globe's geographical data from [GeoJSON M
 - **Auto-Rotate and Zoom**: Supports auto-rotation, zoom, and customizable controls for a dynamic experience.
 - **Responsive Design**: Adapts to container size and maintains performance with WebGL rendering.
 
-## Credits
+## 致谢
 
 - Built with Three.js and Three Globe libraries, designed for global data visualizations and dynamic effects.
 - Ported from [Aceternity UI](https://ui.aceternity.com/components/github-globe).

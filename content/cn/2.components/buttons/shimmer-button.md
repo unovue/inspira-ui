@@ -6,21 +6,21 @@ description: A button with a shimmering animated effect.
 ::ComponentLoader{label="Preview" componentName="ShimmerButtonDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="shimmer-button"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="ShimmerButton.vue" language="vue" componentName="ShimmerButton" type="ui" id="shimmer-button"}
 ::
 
 ## API
 
-| Prop Name         | Type     | Default              | Description                                             |
+| Prop Name         | 类型     | 默认值               | 说明                                                    |
 | ----------------- | -------- | -------------------- | ------------------------------------------------------- |
 | `class`           | `string` | `""`                 | Additional CSS classes to apply to the button.          |
 | `shimmerColor`    | `string` | `"#ffffff"`          | Color of the shimmer effect.                            |
@@ -37,6 +37,6 @@ Copy and paste the following code
 - **Interactive States**: Includes hover and active states for enhanced user interaction.
 - **Responsive Design**: Adapts to different screen sizes and resolutions seamlessly.
 
-## Credits
+## 致谢
 
 - Ported from [Magic UI Shimmer Button](https://magicui.design/docs/components/shimmer-button).

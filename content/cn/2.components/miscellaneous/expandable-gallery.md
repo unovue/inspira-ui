@@ -6,23 +6,23 @@ description: A responsive image gallery with an interactive hover effect that ex
 ::ComponentLoader{label="Preview" componentName="ExpandableGalleryDemo" type="examples" id="expandable-gallery"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="expandable-gallery"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="ExpandableGallery.vue" language="vue" componentName="ExpandableGallery" type="ui" id="expandable-gallery"}
 ::
 
 ## API
 
-| Prop Name | Type       | Default | Description                                    |
-| --------- | ---------- | ------- | ---------------------------------------------- |
-| `images`  | `string[]` | `[]`    | Array of image URLs to display in the gallery. |
+| Prop Name | 类型       | 默认值 | 说明                                           |
+| --------- | ---------- | ------ | ---------------------------------------------- |
+| `images`  | `string[]` | `[]`   | Array of image URLs to display in the gallery. |
 
 ## Features
 
@@ -31,6 +31,6 @@ Copy and paste the following code
 - **Smooth Transitions**: Includes smooth scaling animations for a polished visual effect.
 - **Customizable Content**: Easily update the `images` array to change the gallery's content.
 
-## Credits
+## 致谢
 
 - Inspired from [Expandable Gallery Component by David Mráz](https://x.com/davidm_ml/status/1872319793124282653)

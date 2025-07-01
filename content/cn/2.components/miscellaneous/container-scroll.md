@@ -6,14 +6,14 @@ description: A container scrolling effect that transforms the content inside bas
 ::ComponentLoader{label="Preview" componentName="ContainerScrollDemo" type="examples"}  
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="container-scroll"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -33,11 +33,11 @@ The `ContainerScroll` component creates a 3D scroll effect. As the user scrolls,
 
 #### Props
 
-| Prop Name    | Type   | Default | Description                                                                   |
-| ------------ | ------ | ------- | ----------------------------------------------------------------------------- |
-| `rotate`     | Number | `0`     | Controls the rotation of the inner content based on the scroll progress.      |
-| `scale`      | Number | `1`     | Controls the scaling transformation applied to the content during the scroll. |
-| `translateY` | Number | `0`     | Controls the vertical translation of the title during the scroll.             |
+| Prop Name    | 类型   | 默认值 | 说明                                                                          |
+| ------------ | ------ | ------ | ----------------------------------------------------------------------------- |
+| `rotate`     | Number | `0`    | Controls the rotation of the inner content based on the scroll progress.      |
+| `scale`      | Number | `1`    | Controls the scaling transformation applied to the content during the scroll. |
+| `translateY` | Number | `0`    | Controls the vertical translation of the title during the scroll.             |
 
 #### Usage
 
@@ -58,9 +58,9 @@ The `ContainerScrollTitle` component handles the title's transformation as the u
 
 #### Props
 
-| Prop Name   | Type   | Default | Description                                     |
-| ----------- | ------ | ------- | ----------------------------------------------- |
-| `translate` | Number | `0`     | Controls the vertical translation of the title. |
+| Prop Name   | 类型   | 默认值 | 说明                                            |
+| ----------- | ------ | ------ | ----------------------------------------------- |
+| `translate` | Number | `0`    | Controls the vertical translation of the title. |
 
 #### Usage
 
@@ -76,10 +76,10 @@ The `ContainerScrollCard` component applies scale and rotation effects to the ca
 
 #### Props
 
-| Prop Name | Type   | Default | Description                                      |
-| --------- | ------ | ------- | ------------------------------------------------ |
-| `rotate`  | Number | `0`     | Controls the rotation effect of the card.        |
-| `scale`   | Number | `1`     | Controls the scaling effect applied to the card. |
+| Prop Name | 类型   | 默认值 | 说明                                             |
+| --------- | ------ | ------ | ------------------------------------------------ |
+| `rotate`  | Number | `0`    | Controls the rotation effect of the card.        |
+| `scale`   | Number | `1`    | Controls the scaling effect applied to the card. |
 
 #### Usage
 
@@ -112,6 +112,6 @@ To customize the scroll animations and responsiveness, you can set the following
 - **Flexible Content**: Place any custom content inside the title and card slots.
 - **Responsive**: Adjusts for mobile and desktop, providing a consistent experience across devices.
 
-## Credits
+## 致谢
 
 - Inspired by [Aceternity UI Container Scroll Animation](https://ui.aceternity.com/components/container-scroll-animation).

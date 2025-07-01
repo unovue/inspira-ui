@@ -6,14 +6,14 @@ description: Slide to compare any two pieces of content - images, designs, code,
 ::ComponentLoader{label="Preview" componentName="CompareDemo" type="examples" id="compare"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="compare"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -43,7 +43,7 @@ Custom Content with AutoPlay
 
 ### Props
 
-| Prop Name                 | Type                | Default          | Description                               |
+| Prop Name                 | 类型                | 默认值           | 说明                                      |
 | ------------------------- | ------------------- | ---------------- | ----------------------------------------- |
 | `firstImage`              | `string`            | `""`             | URL of the first image                    |
 | `secondImage`             | `string`            | `""`             | URL of the second image                   |
@@ -60,7 +60,7 @@ Custom Content with AutoPlay
 
 ### Events
 
-| Event Name          | Payload  | Description                                  |
+| Event Name          | Payload  | 说明                                         |
 | ------------------- | -------- | -------------------------------------------- |
 | `update:percentage` | `number` | Emitted when slider position changes (0-100) |
 | `drag:start`        | -        | Emitted when dragging starts                 |
@@ -76,7 +76,7 @@ Custom Content with AutoPlay
 | `second-content` | `<img>` element if `secondImage` prop is provided | Content shown on the right/second side of the comparison. Has full access to component width/height.                              |
 | `handle`         | Default slider handle with dots icon              | Custom handle for the slider. Automatically positioned at the dividing line. Should handle positioning with absolute positioning. |
 
-## Credits
+## 致谢
 
 - Credits to [M Atif](https://github.com/atif0075) for this component.
 

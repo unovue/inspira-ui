@@ -6,29 +6,29 @@ description: This is a morphing tabs interaction, recreated by Preet's work and 
 ::ComponentLoader{label="Preview" componentName="MorphingTabsDemo" type="examples" id="morphing-tabs"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="morphing-tabs"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="MorphingTabs.vue" language="vue" componentName="MorphingTabs" type="ui" id="morphing-tabs"}
 ::
 
 ## API
 
-| Prop Name          | Type       | Default | Description                                    |
-| ------------------ | ---------- | ------- | ---------------------------------------------- |
-| `class`            | `string`   | `""`    | Additional class names to style the component. |
-| `tabs`             | `string[]` | `[]`    | Tabs.                                          |
-| `activeTab`        | `string`   | `""`    | Current active Tab.                            |
-| `margin`           | `number`   | `20`    | Active tab margin left and right.              |
-| `blurStdDeviation` | `number`   | `6`     | Svg blur stdDeviation, tab rounded use it.     |
+| Prop Name          | 类型       | 默认值 | 说明                                           |
+| ------------------ | ---------- | ------ | ---------------------------------------------- |
+| `class`            | `string`   | `""`   | Additional class names to style the component. |
+| `tabs`             | `string[]` | `[]`   | Tabs.                                          |
+| `activeTab`        | `string`   | `""`   | Current active Tab.                            |
+| `margin`           | `number`   | `20`   | Active tab margin left and right.              |
+| `blurStdDeviation` | `number`   | `6`    | Svg blur stdDeviation, tab rounded use it.     |
 
-## Credits
+## 致谢
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Inspired and ported from [@Preet "Exclusion tabs"](https://x.com/wickedmishra/status/1823026659894940124).

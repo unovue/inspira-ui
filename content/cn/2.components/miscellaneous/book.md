@@ -6,14 +6,14 @@ description: A 3D book component featuring customizable sizes and color gradient
 ::ComponentLoader{label="Preview" componentName="BookDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="book"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -90,37 +90,37 @@ export { default as BookDescription } from "./BookDescription.vue";
 
 #### `Book`
 
-| Prop Name    | Type    | Default | Description                                   |
-| ------------ | ------- | ------- | --------------------------------------------- |
-| `class`      | String  | -       | Additional classes for styling the component. |
-| `duration`   | Number  | 1000    | Animation duration in milliseconds.           |
-| `color`      | String  | "zinc"  | Color theme for the book gradient.            |
-| `isStatic`   | Boolean | false   | Disables hover animations when true.          |
-| `size`       | String  | "md"    | Size variant of the book.                     |
-| `radius`     | String  | "md"    | Border radius variant of the book.            |
-| `shadowSize` | String  | "lg"    | Shadow size variant of the book.              |
+| Prop Name    | 类型    | 默认值 | 说明                                          |
+| ------------ | ------- | ------ | --------------------------------------------- |
+| `class`      | String  | -      | Additional classes for styling the component. |
+| `duration`   | Number  | 1000   | Animation duration in milliseconds.           |
+| `color`      | String  | "zinc" | Color theme for the book gradient.            |
+| `isStatic`   | Boolean | false  | Disables hover animations when true.          |
+| `size`       | String  | "md"   | Size variant of the book.                     |
+| `radius`     | String  | "md"   | Border radius variant of the book.            |
+| `shadowSize` | String  | "lg"   | Shadow size variant of the book.              |
 
 #### `BookHeader`
 
-| Prop Name | Type   | Default | Description                            |
-| --------- | ------ | ------- | -------------------------------------- |
-| `class`   | String | -       | Additional classes for custom styling. |
+| Prop Name | 类型   | 默认值 | 说明                                   |
+| --------- | ------ | ------ | -------------------------------------- |
+| `class`   | String | -      | Additional classes for custom styling. |
 
 #### `BookTitle`
 
-| Prop Name | Type   | Default | Description                            |
-| --------- | ------ | ------- | -------------------------------------- |
-| `class`   | String | -       | Additional classes for custom styling. |
+| Prop Name | 类型   | 默认值 | 说明                                   |
+| --------- | ------ | ------ | -------------------------------------- |
+| `class`   | String | -      | Additional classes for custom styling. |
 
 #### `BookDescription`
 
-| Prop Name | Type   | Default | Description                            |
-| --------- | ------ | ------- | -------------------------------------- |
-| `class`   | String | -       | Additional classes for custom styling. |
+| Prop Name | 类型   | 默认值 | 说明                                   |
+| --------- | ------ | ------ | -------------------------------------- |
+| `class`   | String | -      | Additional classes for custom styling. |
 
 ::
 
-## Credits
+## 致谢
 
 - Credits to [x/UI](https://ui.3x.gl/docs/book) for inspiring this component.
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.

@@ -6,14 +6,14 @@ description: A cool text effect that fades in text on page load, one by one.
 ::ComponentLoader{label="Preview" componentName="TextGenerateDemo" type="examples"}  
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="text-generate-effect"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="TextGenerateEffect.vue" language="vue" componentName="TextGenerateEffect" type="ui" id="text-generate-effect"}
 ::
@@ -31,14 +31,14 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ## API
 
-| Prop Name  | Type      | Default  | Description                                                            |
+| Prop Name  | 类型      | 默认值   | 说明                                                                   |
 | ---------- | --------- | -------- | ---------------------------------------------------------------------- |
 | `words`    | `string`  | Required | The text to be displayed with the generating effect.                   |
 | `duration` | `number`  | `0.7`    | The duration of the text generation animation in seconds.              |
 | `delay`    | `number`  | `0`      | The delay before the text generation animation starts in milliseconds. |
 | `filter`   | `boolean` | `true`   | The blur of the text.                                                  |
 
-## Credits
+## 致谢
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
 

@@ -34,27 +34,27 @@ Add following entry to inline theme in your `main.css` file.
 
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="glow-border"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="GlowBorder.vue" language="vue" componentName="GlowBorder" type="ui" id="glow-border"}
 ::
 
 ## API
 
-| Prop Name      | Type                 | Default | Description                                                |
-| -------------- | -------------------- | ------- | ---------------------------------------------------------- |
-| `duration`     | `number`             | `10`    | Duration of the glowing border animation.                  |
-| `color`        | `string \| string[]` | `#FFF`  | Color or array of colors to applied on the glowing border. |
-| `borderRadius` | `number`             | `10`    | Radius of the border.                                      |
-| `borderWidth`  | `number`             | `2`     | Width of the border.                                       |
+| Prop Name      | 类型                 | 默认值 | 说明                                                       |
+| -------------- | -------------------- | ------ | ---------------------------------------------------------- |
+| `duration`     | `number`             | `10`   | Duration of the glowing border animation.                  |
+| `color`        | `string \| string[]` | `#FFF` | Color or array of colors to applied on the glowing border. |
+| `borderRadius` | `number`             | `10`   | Radius of the border.                                      |
+| `borderWidth`  | `number`             | `2`    | Width of the border.                                       |
 
-## Credits
+## 致谢
 
 - Credits to [Magic UI](https://magicui.design/docs/components/shine-border) for this fantastic component.

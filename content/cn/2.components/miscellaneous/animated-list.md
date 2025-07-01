@@ -6,14 +6,14 @@ description: A sequentially animated list that introduces each item with a timed
 ::ComponentLoader{label="Preview" componentName="AnimatedListDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="animated-list"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -23,9 +23,9 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name | Type     | Default | Description                                                    |
-| --------- | -------- | ------- | -------------------------------------------------------------- |
-| `delay`   | `number` | `1`     | The delay in milliseconds before adding each item to the list. |
+| Prop Name | 类型     | 默认值 | 说明                                                           |
+| --------- | -------- | ------ | -------------------------------------------------------------- |
+| `delay`   | `number` | `1`    | The delay in milliseconds before adding each item to the list. |
 
 ## Features
 
@@ -34,6 +34,6 @@ Copy and paste the following code in the same folder
 - **Reverse Order**: Items are displayed in reverse order (newest at the top) for a dynamic, engaging user experience.
 - **Flexibility**: You can pass different components as items, making it highly versatile.
 
-## Credits
+## 致谢
 
 - Inspired by [Magic UI](https://magicui.design/docs/components/animated-list).

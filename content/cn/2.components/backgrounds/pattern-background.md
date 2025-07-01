@@ -7,14 +7,14 @@ Grid background with dot
 ::ComponentLoader{label="Preview" componentName="PatternBackgroundDotDemo" type="examples" id="pattern-background"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="pattern-background"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -39,7 +39,7 @@ Small grid background with animation
 
 ## API
 
-| Prop Name   | Type                                                                                                   | Default   | Description                                                                                                                                                    |
+| Prop Name   | 类型                                                                                                   | 默认值    | 说明                                                                                                                                                           |
 | ----------- | ------------------------------------------------------------------------------------------------------ | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `animate`   | `boolean`                                                                                              | `false`   | Set `true` if you want to animate the background.                                                                                                              |
 | `direction` | `top` \| `bottom` \| `left` \| `right` \| `top-left` \| `top-right` \| `bottom-left` \| `bottom-right` | `top`     | Direction of the animation movement. You can use the const `PATTERN_BACKGROUND_DIRECTION.`                                                                     |
@@ -52,7 +52,7 @@ Small grid background with animation
 
 You can customize your needs directly within the `index.ts` file. See code below.
 
-## Credits
+## 致谢
 
 - Inspired by [Magic UI's Dot Pattern](https://magicui.design/docs/components/dot-pattern) component.
 - Inspired by [Magic UI's Grid Pattern](https://magicui.design/docs/components/grid-pattern) component.

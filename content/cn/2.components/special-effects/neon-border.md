@@ -8,7 +8,7 @@ description: A visually appealing neon border component with customizable animat
 
 ## API
 
-| Prop Name       | Type                         | Default     | Description                                     |
+| Prop Name       | 类型                         | 默认值      | 说明                                            |
 | --------------- | ---------------------------- | ----------- | ----------------------------------------------- |
 | `color1`        | `string`                     | `"#0496ff"` | Primary color of the neon border.               |
 | `color2`        | `string`                     | `"#ff0a54"` | Secondary color of the neon border.             |
@@ -37,14 +37,14 @@ Add following entry to inline theme in your `main.css` file.
 
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="neon-border"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 ::CodeViewerTab{label="NeonBorder.vue" language="vue" componentName="NeonBorder" type="ui" id="neon-border"}
@@ -59,6 +59,6 @@ Copy and paste the following code in the same folder
 - **Reactive Design**: Uses Vue’s reactivity system for dynamic updates.
 - **Scoped Styles**: Ensures styles do not interfere with other components.
 
-## Credits
+## 致谢
 
 - Inspired by modern neon border effects.

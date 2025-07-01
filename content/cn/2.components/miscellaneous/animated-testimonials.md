@@ -8,7 +8,7 @@ description: An engaging and animated testimonial component showcasing user feed
 
 ## API
 
-| Prop Name      | Type            | Default | Description                                                                                    |
+| Prop Name      | 类型            | 默认值  | 说明                                                                                           |
 | -------------- | --------------- | ------- | ---------------------------------------------------------------------------------------------- |
 | `testimonials` | `Testimonial[]` | `[]`    | An array of testimonial objects containing quote, name, image, and designation.                |
 | `autoplay`     | `boolean`       | `false` | Whether to cycle through testimonials automatically.                                           |
@@ -18,21 +18,21 @@ description: An engaging and animated testimonial component showcasing user feed
 
 Each testimonial object must contain the following fields:
 
-| Property      | Type     | Description                                                       |
+| Property      | 类型     | 说明                                                              |
 | ------------- | -------- | ----------------------------------------------------------------- |
 | `quote`       | `string` | The testimonial text.                                             |
 | `name`        | `string` | The name of the person or entity providing the testimonial.       |
 | `designation` | `string` | The position or role of the testimonial author (e.g., CEO, user). |
 | `image`       | `string` | URL of the image or avatar for the testimonial author.            |
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="animated-testimonials"}
 ::
 
-## Install Manually
+## 手动安装
 
-You can copy and paste the following code to create this component:
+你可以复制并粘贴以下代码来创建此组件：
 
 ::CodeViewer{filename="AnimatedTestimonials.vue" language="vue" componentName="AnimatedTestimonials" type="ui" id="animated-testimonials"}
 ::
@@ -45,6 +45,6 @@ You can copy and paste the following code to create this component:
 - **Navigation Buttons**: Manually cycle through testimonials using previous and next controls.
 - **Responsive and Modular**: Adapts well to different screen sizes, allowing easy integration into various layouts.
 
-## Credits
+## 致谢
 
 - Ported from (Aceternity UI Animated Testimonials)[https://ui.aceternity.com/components/animated-testimonials].

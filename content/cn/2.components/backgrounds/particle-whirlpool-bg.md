@@ -10,12 +10,12 @@ description: An animated background with swirling particles.
 **Note:** This component uses Three.js & requires `three` & `postprocessing` npm package as a dependency.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="bg-particle-whirlpool"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -45,7 +45,7 @@ yarn add --dev @types/three
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="ParticleWhirlpoolBg.vue" language="vue" componentName="ParticleWhirlpoolBg" type="ui" id="bg-particle-whirlpool"}
 ::
@@ -65,11 +65,11 @@ With `particleCount` 500
 
 ## API
 
-| Prop Name       | Type     | Default | Description                                                     |
-| --------------- | -------- | ------- | --------------------------------------------------------------- |
-| `class`         | `string` | `""`    | Additional CSS classes for custom styling.                      |
-| `blur`          | `number` | `0`     | Amount of blur to apply to the background, specified in pixels. |
-| `particleCount` | `number` | `2000`  | Number of particles in the whirlpool animation.                 |
+| Prop Name       | 类型     | 默认值 | 说明                                                            |
+| --------------- | -------- | ------ | --------------------------------------------------------------- |
+| `class`         | `string` | `""`   | Additional CSS classes for custom styling.                      |
+| `blur`          | `number` | `0`    | Amount of blur to apply to the background, specified in pixels. |
+| `particleCount` | `number` | `2000` | Number of particles in the whirlpool animation.                 |
 
 ## Features
 
@@ -83,7 +83,7 @@ With `particleCount` 500
 
 - **Responsive Design**: The component adjusts to fit the width and height of its parent container, ensuring compatibility across different screen sizes.
 
-## Credits
+## 致谢
 
 - Built with the [Three.js](https://threejs.org/) library for 3D rendering and animations.
 

@@ -10,12 +10,12 @@ description: An animated background with floating bubbles.
 **Note:** This component uses Three.js & requires `three` npm package as a dependency.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="bubbles-bg"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -45,7 +45,7 @@ yarn add --dev @types/three
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="BubblesBg.vue" language="vue" componentName="BubblesBg" type="ui" id="bg-bubbles"}  
 ::
@@ -60,9 +60,9 @@ Without Blur or overlay
 
 ## API
 
-| Prop Name | Type     | Default | Description                                                     |
-| --------- | -------- | ------- | --------------------------------------------------------------- |
-| `blur`    | `number` | `0`     | Amount of blur to apply to the background, specified in pixels. |
+| Prop Name | 类型     | 默认值 | 说明                                                            |
+| --------- | -------- | ------ | --------------------------------------------------------------- |
+| `blur`    | `number` | `0`    | Amount of blur to apply to the background, specified in pixels. |
 
 ## Features
 
@@ -76,7 +76,7 @@ Without Blur or overlay
 
 - **Responsive Design**: The component adjusts to fit the width and height of its parent container, ensuring compatibility across different screen sizes.
 
-## Credits
+## 致谢
 
 - Built with the [Three.js](https://threejs.org/) library for 3D rendering and animations.
 - Inspired from [Tresjs Experiment](https://lab.tresjs.org/experiments/overlay).

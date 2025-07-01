@@ -6,14 +6,14 @@ description: A interactive background grid pattern made with SVGs, fully customi
 ::ComponentLoader{label="Preview" componentName="InteractiveGridPatternDemo" type="examples" id="interactive-grid-pattern"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="interactive-grid-pattern"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="InteractiveGridPattern.vue" language="vue" componentName="InteractiveGridPattern" type="ui" id="interactive-grid-pattern"}
 ::
@@ -27,7 +27,7 @@ Copy and paste the following code
 
 #### Props
 
-| Prop Name          | Type               | Default    | Description                                   |
+| Prop Name          | 类型               | 默认值     | 说明                                          |
 | ------------------ | ------------------ | ---------- | --------------------------------------------- |
 | `className`        | `string`           | -          | Additional classes for styling the component. |
 | `squaresClassName` | `string`           | -          | Additional classes for styling the squares.   |
@@ -35,7 +35,7 @@ Copy and paste the following code
 | `height`           | `number`           | `40`       | Height of the square in pixels.               |
 | `squares`          | `[number, number]` | `[24, 24]` | Number of squares in the grid pattern.        |
 
-## Credits
+## 致谢
 
 - Inspired by [MagicUI](https://magicui.design/docs/components/interactive-grid-pattern).
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.

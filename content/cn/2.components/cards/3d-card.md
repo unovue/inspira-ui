@@ -14,14 +14,14 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 If you are using `CardItem` inside a `div`, add `style="transform-style: preserve-3d;"` to the div to make `translate-z` prop to work.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="card-3d"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -63,10 +63,10 @@ The `CardContainer` component serves as a wrapper for the 3D card effect. It man
 
 #### Props
 
-| Prop Name        | Type   | Default | Description                                                 |
-| ---------------- | ------ | ------- | ----------------------------------------------------------- |
-| `class`          | String | `null`  | Additional classes for styling the inner container element. |
-| `containerClass` | String | `null`  | Additional classes for styling the outer container element. |
+| Prop Name        | 类型   | 默认值 | 说明                                                        |
+| ---------------- | ------ | ------ | ----------------------------------------------------------- |
+| `class`          | String | `null` | Additional classes for styling the inner container element. |
+| `containerClass` | String | `null` | Additional classes for styling the outer container element. |
 
 #### Usage
 
@@ -82,9 +82,9 @@ The `CardBody` component is a flexible container with preserved 3D styling. It i
 
 #### Props
 
-| Prop Name | Type   | Default | Description                            |
-| --------- | ------ | ------- | -------------------------------------- |
-| `class`   | String | `null`  | Additional classes for custom styling. |
+| Prop Name | 类型   | 默认值 | 说明                                   |
+| --------- | ------ | ------ | -------------------------------------- |
+| `class`   | String | `null` | Additional classes for custom styling. |
 
 #### Usage
 
@@ -100,7 +100,7 @@ The `CardItem` component represents individual items within the 3D card. It supp
 
 #### Props
 
-| Prop Name    | Type          | Default | Description                                                     |
+| Prop Name    | 类型          | 默认值  | 说明                                                            |
 | ------------ | ------------- | ------- | --------------------------------------------------------------- |
 | `as`         | String        | `"div"` | The HTML tag or component to use for the item.                  |
 | `class`      | String        | `null`  | Additional classes for styling the item.                        |

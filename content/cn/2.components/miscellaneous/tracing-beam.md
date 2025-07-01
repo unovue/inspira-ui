@@ -6,23 +6,23 @@ description: A component that renders a tracing beam effect with dynamic scrolli
 ::ComponentLoader{label="Preview" componentName="TracingBeamDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="tracing-beam"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="TracingBeam.vue" language="vue" componentName="TracingBeam" type="ui" id="tracing-beam"}
 ::
 
 ## API
 
-| Prop Name | Type     | Default | Description                                |
-| --------- | -------- | ------- | ------------------------------------------ |
-| `class`   | `string` | `""`    | Additional CSS classes for custom styling. |
+| Prop Name | 类型     | 默认值 | 说明                                       |
+| --------- | -------- | ------ | ------------------------------------------ |
+| `class`   | `string` | `""`   | Additional CSS classes for custom styling. |
 
 ## Features
 
@@ -31,6 +31,6 @@ Copy and paste the following code
 - **Gradient Transition**: Smoothly transitions colors along the beam from cyan to purple with fading edges for a subtle effect.
 - **Slot-Based Content**: Supports a default slot to add content inside the tracing beam container.
 
-## Credits
+## 致谢
 
 - Ported from [Aceternity UI](https://ui.aceternity.com/components/tracing-beam);

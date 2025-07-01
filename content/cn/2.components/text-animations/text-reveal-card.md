@@ -6,14 +6,14 @@ description: Mousemove effect to reveal text content at the bottom of the card.
 ::ComponentLoader{label="Preview" componentName="TextRevealDemo" type="examples"}  
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="text-reveal-card"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -23,19 +23,19 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name  | Type     | Description                                                      |
+| Prop Name  | 类型     | 说明                                                             |
 | ---------- | -------- | ---------------------------------------------------------------- |
 | class      | `String` | Additional classes to be added to the card.                      |
 | starsCount | `Number` | Control the number of stars that are generated                   |
 | starsClass | `String` | Additional classes to be added to the stars floating on content. |
 
-| Slot Name  | Description                                             |
+| Slot Name  | 说明                                                    |
 | ---------- | ------------------------------------------------------- |
 | header     | `String`                                                |
 | text       | Display default text when the card is not hovered over. |
 | revealText | Text to be revealed when hovered over the card.         |
 
-## Credits
+## 致谢
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
 

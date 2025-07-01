@@ -6,21 +6,21 @@ description: A full page slider with images that can be navigated with the keybo
 ::ComponentLoader{label="Preview" componentName="ImagesSliderDemo" type="examples" id="images-slider"}  
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="images-slider"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="ImagesSlider.vue" language="vue" componentName="ImagesSlider" type="ui" id="images-slider"}
 ::
 
 ## API
 
-| Prop Name          | Type                       | Default                                           | Description                                                                    |
+| Prop Name          | 类型                       | 默认值                                            | 说明                                                                           |
 | ------------------ | -------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------ |
 | `images`           | `string[]`                 | `[]`                                              | An array of image URLs to show in the slider.                                  |
 | `hideOverlay`      | `boolean`                  | `false`                                           | Don't create an overlay for the image slider. Slot won't be rendered.          |
@@ -41,7 +41,7 @@ Copy and paste the following code
 - **Customisable Autoplay**: Automatically transition through your slides, or allow your users to navigate manually.
 - **Overlay Anything**: The default slot allows you to overlay whatever content you wish overlay slider.
 
-## Credits
+## 致谢
 
 - Component by [Craig Riley](https://github.com/craigrileyuk) for porting this component.
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/images-slider) for inspiring this component.

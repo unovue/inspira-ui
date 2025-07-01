@@ -10,14 +10,14 @@ description: A modern file upload component with a 3D card effect, drag-and-drop
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="file-upload"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -34,13 +34,13 @@ The `FileUpload` component serves as a wrapper for the file upload effect. It ma
 
 #### Props
 
-| Prop Name | Type   | Default | Description                                           |
-| --------- | ------ | ------- | ----------------------------------------------------- |
-| `class`   | String | -       | Additional classes for styling the container element. |
+| Prop Name | 类型   | 默认值 | 说明                                                  |
+| --------- | ------ | ------ | ----------------------------------------------------- |
+| `class`   | String | -      | Additional classes for styling the container element. |
 
 #### Emits
 
-| Event Name | Type                      | Description                                                |
+| Event Name | 类型                      | 说明                                                       |
 | ---------- | ------------------------- | ---------------------------------------------------------- |
 | `onChange` | `(files: File[]) => void` | Callback function triggered when files are added/uploaded. |
 
@@ -58,9 +58,9 @@ The `FileUploadGrid` component provides the background grid pattern for the file
 
 #### Props
 
-| Prop Name | Type   | Default | Description                            |
-| --------- | ------ | ------- | -------------------------------------- |
-| `class`   | String | -       | Additional classes for custom styling. |
+| Prop Name | 类型   | 默认值 | 说明                                   |
+| --------- | ------ | ------ | -------------------------------------- |
+| `class`   | String | -      | Additional classes for custom styling. |
 
 #### Usage
 
@@ -68,7 +68,7 @@ The `FileUploadGrid` component provides the background grid pattern for the file
 <FileUploadGrid class="custom-class" />
 ```
 
-## Credits
+## 致谢
 
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.
 - Inspired by [AcernityUI](https://ui.aceternity.com/components/file-upload).

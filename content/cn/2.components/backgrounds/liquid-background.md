@@ -17,14 +17,14 @@ This component does not require external props to function, as it dynamically re
 **Note:** This component uses OGL Web Renderer & requires `ogl` npm package as a dependency.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="liquid-background"}
 ::
 
-## Install Manually
+## 手动安装
 
-You can copy and paste the following code to create this component:
+你可以复制并粘贴以下代码来创建此组件:
 
 ::code-group
 
@@ -51,7 +51,7 @@ You can copy and paste the following code to create this component:
    - `uColor`: An example color uniform (slightly purple) used in the shader.
 5. **Animation Loop**: Schedules updates via `requestAnimationFrame`, updates `uTime`, and renders the scene.
 
-## Credits
+## 致谢
 
 - Built with the [OGL](https://github.com/oframe/ogl) library for 3D rendering.
 - Inspired by generative art patterns.

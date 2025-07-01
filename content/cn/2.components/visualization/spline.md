@@ -8,7 +8,7 @@ description: A Vue wrapper component for the Spline 3D tool, providing events an
 
 ## API
 
-| Prop Name        | Type       | Default     | Description                                                   |
+| Prop Name        | 类型       | 默认值      | 说明                                                          |
 | ---------------- | ---------- | ----------- | ------------------------------------------------------------- |
 | `scene`          | `string`   | —           | The URL or path to the Spline scene file. **Required**.       |
 | `onLoad`         | `Function` | `undefined` | Callback that fires when the Spline scene loads successfully. |
@@ -17,7 +17,7 @@ description: A Vue wrapper component for the Spline 3D tool, providing events an
 
 **Emits**
 
-| Event Name           | Payload | Description                                                   |
+| Event Name           | Payload | 说明                                                          |
 | -------------------- | ------- | ------------------------------------------------------------- |
 | `error`              | `Error` | Emits if there's an error while loading the Spline scene.     |
 | `spline-mouse-down`  | `any`   | Emits when a mouseDown event is detected in the Spline scene. |
@@ -34,12 +34,12 @@ description: A Vue wrapper component for the Spline 3D tool, providing events an
 **Note:** This component uses Spline & requires `@splinetool/runtime` npm package as a dependency.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="spline"}
 ::
 
-## Install Manually
+## 手动安装
 
 ### Install the dependencies
 
@@ -65,7 +65,7 @@ yarn add @splinetool/runtime
 
 ### Component Code
 
-You can copy and paste the following code to create this component:
+你可以复制并粘贴以下代码来创建此组件：
 
 ::code-group
 
@@ -85,7 +85,7 @@ You can copy and paste the following code to create this component:
 - **Easy Integration**: Load a Spline 3D scene by simply passing the `scene` prop.
 - **Cleanup & Disposal**: Manages resource disposal on unmount to avoid memory leaks.
 
-## Credits
+## 致谢
 
 - Utilizes Spline’s runtime behind the scenes.
 - Inspired by various 3D web experiences using Spline.

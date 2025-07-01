@@ -6,14 +6,14 @@ description: A macOS-style dock with magnifying icons as you hover over them.
 ::ComponentLoader{label="Preview" componentName="DockDemo" type="examples"}  
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="dock"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -32,7 +32,7 @@ Copy and paste the following code in the same folder
 
 ### `Dock`
 
-| Prop Name       | Type     | Description                                                           |
+| Prop Name       | 类型     | 说明                                                                  |
 | --------------- | -------- | --------------------------------------------------------------------- |
 | `class`         | `string` | Additional classes to apply to the dock container.                    |
 | `magnification` | `number` | Magnification factor for the dock icons on hover (default: 60).       |
@@ -40,18 +40,18 @@ Copy and paste the following code in the same folder
 | `direction`     | `string` | Alignment of icons (`top`, `middle`, `bottom`) (default: middle).     |
 | `orientation`   | `string` | Orientation of Dock (`vertical`, `horizontal`) (default: horizontal). |
 
-| Slot Name | Description                                          |
+| Slot Name | 说明                                                 |
 | --------- | ---------------------------------------------------- |
 | `default` | Dock Dock or other child components to be displayed. |
 
 ### `DockIcon`
 
-| Slot Name | Description                                             |
+| Slot Name | 说明                                                    |
 | --------- | ------------------------------------------------------- |
 | `default` | Component or icon to be displayed inside the dock icon. |
 
 ::
 
-## Credits
+## 致谢
 
 - Credits to macOS Dock for the design inspiration and the fantastic hover magnification effect.

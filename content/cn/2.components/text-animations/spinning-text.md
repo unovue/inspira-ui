@@ -19,7 +19,7 @@ reverse
 
 ## API
 
-| Prop Name    | Type                                                    | Default | Description                                             |
+| Prop Name    | 类型                                                    | 默认值  | 说明                                                    |
 | ------------ | ------------------------------------------------------- | ------- | ------------------------------------------------------- |
 | `duration`   | `number`                                                | `10`    | The duration of the full circular rotation animation.   |
 | `reverse`    | `boolean`                                               | `false` | Determines if the animation should rotate in reverse.   |
@@ -28,19 +28,19 @@ reverse
 | `variants`   | `{container: motion-v Variant, item: motion-v Variant}` | ``      | Variants for container and item animations.             |
 | `class`      | `string`                                                | `""`    | A custom class name for the text container.             |
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="spinning-text"}
 ::
 
 ## Component Code
 
-You can copy and paste the following code to create this component:
+你可以复制并粘贴以下代码来创建此组件：
 
 ::CodeViewer{filename="SpinningText.vue" language="vue" componentName="SpinningText" type="ui" id="spinning-text"}
 ::
 
-## Credits
+## 致谢
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Ported from [Magic UI Spinning Text](https://magicui.design/docs/components/spinning-text).

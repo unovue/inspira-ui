@@ -6,21 +6,21 @@ description: A stylish animated button with a rotating conic gradient border and
 ::ComponentLoader{label="Preview" componentName="GradientButtonDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="gradient-button"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="GradientButton.vue" language="vue" componentName="GradientButton" type="ui" id="gradient-button"}
 ::
 
 ## API
 
-| Prop Name      | Type       | Default              | Description                                                  |
+| Prop Name      | 类型       | 默认值               | 说明                                                         |
 | -------------- | ---------- | -------------------- | ------------------------------------------------------------ |
 | `borderWidth`  | `number`   | `2`                  | Width of the gradient border in pixels.                      |
 | `colors`       | `string[]` | Rainbow Colors Array | Array of colors used in the conic gradient border.           |

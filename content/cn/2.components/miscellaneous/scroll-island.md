@@ -10,12 +10,12 @@ description: A dynamic and interactive component that displays scroll progress w
 **Note:** This component requires `@number-flow/vue` as a dependency.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="scroll-island"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -41,7 +41,7 @@ yarn add @number-flow/vue
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="ScrollIsland.vue" language="vue" componentName="ScrollIsland" type="ui" id="scroll-island"}  
 ::
@@ -49,7 +49,7 @@ Copy and paste the following code
 
 ## API
 
-| Prop Name | Type     | Default      | Description                                     |
+| Prop Name | 类型     | 默认值       | 说明                                            |
 | --------- | -------- | ------------ | ----------------------------------------------- |
 | `class`   | `string` | `""`         | Additional CSS classes for custom styling.      |
 | `title`   | `string` | `"Progress"` | Title displayed in the header of the component. |
@@ -63,7 +63,7 @@ Copy and paste the following code
 - **Dynamic Content Slot**: Supports additional content in the expandable section.
 - **Dark Mode Support**: Adapts to the dark or light mode of the user's system preferences.
 
-## Credits
+## 致谢
 
 - Inspired by the work of [Ali Samadi](https://x.com/alisamadi__/status/1854312982559502556) & [Nitish Khagwal](https://x.com/nitishkmrk)
 - [NumberFlow by Maxwell Barvian](https://number-flow.barvian.me/vue) for number formatting and animations.

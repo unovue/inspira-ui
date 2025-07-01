@@ -10,12 +10,12 @@ description: A Vue component for confetti animations.
 **Note:** This component uses `canvas-confetti` npm package as a dependency.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="confetti"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -45,7 +45,7 @@ yarn add --dev @types/canvas-confetti
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::code-group
 
@@ -84,7 +84,7 @@ Copy and paste the following code
 
 #### `Confetti`
 
-| Prop Name       | Type                    | Default | Description                                                       |
+| Prop Name       | 类型                    | 默认值  | 说明                                                              |
 | --------------- | ----------------------- | ------- | ----------------------------------------------------------------- |
 | `options`       | `ConfettiOptions`       | `{}`    | Options for individual confetti bursts.                           |
 | `globalOptions` | `ConfettiGlobalOptions` | `{}`    | Global options for the confetti instance (e.g., resize behavior). |
@@ -92,7 +92,7 @@ Copy and paste the following code
 
 #### `ConfettiOptions`
 
-| Property                  | Type                        | Default                                                                         | Description                                                            |
+| Property                  | 类型                        | 默认值                                                                          | 说明                                                                   |
 | ------------------------- | --------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | `particleCount`           | `number`                    | `50`                                                                            | The number of confetti particles to launch.                            |
 | `angle`                   | `number`                    | `90`                                                                            | The angle in degrees at which to launch the confetti.                  |
@@ -117,9 +117,9 @@ Copy and paste the following code
 
 #### `ConfettiButton`
 
-| Prop Name | Type                                               | Default | Description                                      |
-| --------- | -------------------------------------------------- | ------- | ------------------------------------------------ |
-| `options` | `ConfettiOptions & { canvas?: HTMLCanvasElement }` | `{}`    | Options for confetti when the button is clicked. |
+| Prop Name | 类型                                               | 默认值 | 说明                                             |
+| --------- | -------------------------------------------------- | ------ | ------------------------------------------------ |
+| `options` | `ConfettiOptions & { canvas?: HTMLCanvasElement }` | `{}`   | Options for confetti when the button is clicked. |
 
 ::
 
@@ -130,7 +130,7 @@ Copy and paste the following code
 - **Manual Control**: Choose whether to start confetti automatically or manually trigger it.
 - **Button Integration**: Use the `ConfettiButton` component to trigger confetti on button clicks.
 
-## Credits
+## 致谢
 
 - Built using the [canvas-confetti](https://www.npmjs.com/package/canvas-confetti) library.
 - Ported from [Magic UI Confetti](https://magicui.design/docs/components/confetti).

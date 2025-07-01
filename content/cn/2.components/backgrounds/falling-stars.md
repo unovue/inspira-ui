@@ -6,21 +6,21 @@ description: A stunning animated starfield background with glowing and sharp tra
 ::ComponentLoader{label="Preview" componentName="FallingStarsBgDemo" type="examples" id="backgrounds"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="bg-falling-stars"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="FallingStarsBg.vue" language="vue" componentName="FallingStarsBg" type="ui" id="bg-falling-stars"}
 ::
 
 ## API
 
-| Prop Name | Type     | Default  | Description                                 |
+| Prop Name | 类型     | 默认值   | 说明                                        |
 | --------- | -------- | -------- | ------------------------------------------- |
 | `color`   | `string` | `"#FFF"` | Color of the stars in the starfield.        |
 | `count`   | `number` | `200`    | Number of stars displayed in the animation. |
@@ -32,7 +32,7 @@ Copy and paste the following code
 - **Customizable**: Adjust the `color` of the stars and control the number of stars using the `count` prop.
 - **Responsive Design**: Automatically adapts to the size of the canvas, ensuring a full-screen starfield effect.
 
-## Credits
+## 致谢
 
 - Inspired by 3D starfield simulations and trail effects in modern canvas animations.
 - Credit to [Prodromos Pantos](https://github.com/prpanto) for porting the original component to Vue & Nuxt.

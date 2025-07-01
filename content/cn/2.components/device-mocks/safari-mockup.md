@@ -6,26 +6,26 @@ description: An SVG mockup of the Safari browser.
 ::ComponentLoader{label="Preview" componentName="SafariMockupDemo" type="examples" id="mockups"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="safari-mockup"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="SafariMockup.vue" language="vue" componentName="SafariMockup" type="ui" id="safari-mockup"}
 ::
 
 ## API
 
-| Prop Name | Type     | Default | Description                                    |
-| --------- | -------- | ------- | ---------------------------------------------- |
-| `url`     | `string` | `null`  | URL displayed in the mockup's address bar.     |
-| `src`     | `string` | `null`  | URL of the image to display inside the mockup. |
-| `width`   | `number` | `1203`  | Width of the mockup SVG in pixels.             |
-| `height`  | `number` | `753`   | Height of the mockup SVG in pixels.            |
+| Prop Name | 类型     | 默认值 | 说明                                           |
+| --------- | -------- | ------ | ---------------------------------------------- |
+| `url`     | `string` | `null` | URL displayed in the mockup's address bar.     |
+| `src`     | `string` | `null` | URL of the image to display inside the mockup. |
+| `width`   | `number` | `1203` | Width of the mockup SVG in pixels.             |
+| `height`  | `number` | `753`  | Height of the mockup SVG in pixels.            |
 
 ## Features
 
@@ -35,6 +35,6 @@ Copy and paste the following code
 - **Image Display Support**: Use the `src` prop to insert any image into the mockup's content area.
 - **Light and Dark Mode Compatibility**: The mockup adapts its colors based on the theme.
 
-## Credits
+## 致谢
 
 - Ported from [Magic UI](https://magicui.design/docs/components/safari).

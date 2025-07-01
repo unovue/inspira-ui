@@ -6,14 +6,14 @@ description: An animated ripple effect typically used behind elements to emphasi
 ::ComponentLoader{label="Preview" componentName="RippleDemo" type="examples" id="ripple"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="ripple"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -41,7 +41,7 @@ Blobed
 
 ## API
 
-| Prop Name                     | Type     | Default     | Description                                                            |
+| Prop Name                     | 类型     | 默认值      | 说明                                                                   |
 | ----------------------------- | -------- | ----------- | ---------------------------------------------------------------------- |
 | `baseCircleSize`              | `number` | `210`       | The size of the main circle in pixels.                                 |
 | `baseCircleOpacity`           | `number` | `0.24`      | The opacity of the main circle.                                        |
@@ -51,7 +51,7 @@ Blobed
 | `waveSpeed`                   | `number` | `80`        | The animation speed for the wave effect, measured in ms.               |
 | `numberOfCircles`             | `number` | `7`         | The number of ripple circles to render.                                |
 
-## Credits
+## 致谢
 
 - Credits to [Magic UI](https://magicui.design/docs/components/ripple).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.

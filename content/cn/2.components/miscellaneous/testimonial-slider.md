@@ -11,20 +11,20 @@ navBadges:
 
 ## API
 
-| Prop Name      | Type                                                                | Default | Description                                                            |
-| -------------- | ------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------- |
-| `testimonials` | `Array<{ img: string; quote: string; name: string; role: string }>` | `[]`    | Array of testimonial objects displayed by the slider.                  |
-| `autoRotate`   | `boolean`                                                           | `true`  | If `true`, the slider advances automatically every `duration` seconds. |
-| `duration`     | `number`                                                            | `5`     | Interval in seconds between slides when auto‑rotation is enabled.      |
+| Prop Name      | 类型                                                                | 默认值 | 说明                                                                   |
+| -------------- | ------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------- |
+| `testimonials` | `Array<{ img: string; quote: string; name: string; role: string }>` | `[]`   | Array of testimonial objects displayed by the slider.                  |
+| `autoRotate`   | `boolean`                                                           | `true` | If `true`, the slider advances automatically every `duration` seconds. |
+| `duration`     | `number`                                                            | `5`    | Interval in seconds between slides when auto‑rotation is enabled.      |
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="spinning-text"}
 ::
 
-## Install Manually
+## 手动安装
 
-You can copy and paste the following code to create this component:
+你可以复制并粘贴以下代码来创建此组件：
 
 ::code-group
 

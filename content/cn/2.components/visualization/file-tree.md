@@ -1,19 +1,19 @@
 ---
-title: File Tree
-description: A component used to showcase the folder and file structure of a directory.
+title: 文件树
+description: 用于展示目录的文件夹和文件结构的组件。
 ---
 
 ::ComponentLoader{label="Preview" componentName="FileTreeDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="file-tree"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -88,7 +88,7 @@ The `Tree` component serves as a container for displaying a hierarchical file/fo
 
 #### Props
 
-| Prop Name              | Type                | Default                | Description                                        |
+| Prop Name              | 类型                | 默认值                 | 说明                                               |
 | ---------------------- | ------------------- | ---------------------- | -------------------------------------------------- |
 | `class`                | `string`            | -                      | Additional classes for styling the tree container. |
 | `initialSelectedId`    | `string`            | -                      | ID of the initially selected item.                 |
@@ -114,7 +114,7 @@ The `Folder` and `File` components represent folders and files in the file tree.
 
 #### Props
 
-| Prop Name      | Type      | Default | Description                             |
+| Prop Name      | 类型      | 默认值  | 说明                                    |
 | -------------- | --------- | ------- | --------------------------------------- |
 | `class`        | `string`  | -       | Additional classes for custom styling.  |
 | `id`           | `string`  | -       | Unique identifier for the item.         |
@@ -135,7 +135,7 @@ The `Folder` and `File` components represent folders and files in the file tree.
 
 ::
 
-## Credits
+## 致谢
 
 - Inspired by [Magic UI](https://magicui.design/docs/components/file-tree).
 - Credit to [kalix127](https://github.com/kalix127) for porting this component.

@@ -6,16 +6,16 @@ description: Skew Animation grid with box shadow.
 ::ComponentLoader{label="Preview" componentName="AnimateGridDemo" type="examples" id="animate-grid"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="animate-grid"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="AnimateGrid.vue" language="vue" componentName="AnimateGrid" type="ui" id="animate-grid"}
 ::
@@ -28,7 +28,7 @@ Add at least one SVG file to the same folder as your component and update the im
 
 ## API
 
-| Prop Name            | Type     | Default             | Description                                         |
+| Prop Name            | 类型     | 默认值              | 说明                                                |
 | -------------------- | -------- | ------------------- | --------------------------------------------------- |
 | `textGlowStartColor` | `string` | `"#38ef7d80"`       | Color of the box shadow start.                      |
 | `textGlowEndColor`   | `string` | `"#38ef7d"`         | Color of the box shadow end.                        |
@@ -42,6 +42,6 @@ Add at least one SVG file to the same folder as your component and update the im
 
 - **Slot-Based Content**: Supports a default slot to add content inside the Animate Grid container.
 
-## Credits
+## 致谢
 
 - Thanks to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for providing this component.

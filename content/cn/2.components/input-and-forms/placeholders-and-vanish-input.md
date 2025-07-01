@@ -6,32 +6,32 @@ description: Sliding in placeholders and vanish effect of input on submit
 ::ComponentLoader{label="Preview" componentName="VanishingInputDemo" type="examples"}  
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="vanishing-input"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="VanishingInput.vue" language="vue" componentName="VanishingInput" type="ui" id="vanishing-input"}
 ::
 
 ## API
 
-| Prop Name      | Type            | Default                                               | Description                                                                     |
+| Prop Name      | 类型            | 默认值                                                | 说明                                                                            |
 | -------------- | --------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------- |
 | `placeholders` | `Array<string>` | `["Placeholder 1", "Placeholder 2", "Placeholder 3"]` | An array of placeholder texts that cycle through as prompts in the input field. |
 
 This component listens to the following events emitted by the `VanishingInput` component:
 
-| Event Name | Parameters | Description                             |
+| Event Name | Parameters | 说明                                    |
 | ---------- | ---------- | --------------------------------------- |
 | `change`   | `Event`    | Triggered when the input value changes. |
 | `submit`   | `string`   | Triggered when the input is submitted.  |
 
-## Credits
+## 致谢
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
 

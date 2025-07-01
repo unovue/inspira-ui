@@ -9,21 +9,21 @@ navBadges:
 ::ComponentLoader{label="Preview" componentName="VideoTextDemo" type="examples" id="video-text"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="video-text"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="VideoText.vue" language="vue" componentName="VideoText" type="ui" id="video-text"}
 ::
 
 ## API
 
-| Prop Name          | Type                             | Default        | Description                           |
+| Prop Name          | 类型                             | 默认值         | 说明                                  |
 | ------------------ | -------------------------------- | -------------- | ------------------------------------- |
 | `src`              | `string`                         | `Required`     | The video source URL.                 |
 | `class`            | `string`                         | `""`           | Additional classes for the container. |
@@ -37,7 +37,7 @@ Copy and paste the following code
 | `dominantBaseline` | `string`                         | `"middle"`     | Dominant baseline for the text mask.  |
 | `fontFamily`       | `string`                         | `"sans-serif"` | Font family for the text mask.        |
 
-## Credits
+## 致谢
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.
 - Ported from [Magic UI's Video Text](https://magicui.design/docs/components/video-text).

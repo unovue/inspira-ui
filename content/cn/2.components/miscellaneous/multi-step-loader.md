@@ -6,34 +6,34 @@ description: A step loader for screens that works with async conditions too.
 ::ComponentLoader{label="Preview" componentName="MultiStepLoaderDemo" type="examples"}  
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="multi-step-loader"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="MultiStepLoader.vue" language="vue" componentName="MultiStepLoader" type="ui" id="multi-step-loader"}
 ::
 
 ## API
 
-| Prop Name         | Type      | Default | Description                                                                  |
+| Prop Name         | 类型      | 默认值  | 说明                                                                         |
 | ----------------- | --------- | ------- | ---------------------------------------------------------------------------- |
 | `loading`         | `boolean` | `false` | Controls the visibility of the loader. When `true`, the loader is displayed. |
 | `steps`           | `Step[]`  | `[]`    | Array of step objects defining the loading sequence.                         |
 | `defaultDuration` | `number`  | `1500`  | The duration of each step in milliseconds.                                   |
 | `preventClose`    | `boolean` | `false` | If `true`, the close button will not be shown.                               |
 
-| Event Name     | Payload Type | Description                                                          |
+| Event Name     | Payload Type | 说明                                                                 |
 | -------------- | ------------ | -------------------------------------------------------------------- |
 | `state-change` | `number`     | Emitted when the current step changes, providing the new step index. |
 | `complete`     | `void`       | Emitted when all steps have been completed.                          |
 | `close`        | `void`       | Emitted when the loader is closed by button.                         |
 
-## Credits
+## 致谢
 
 - Credits to [M Atif](https://github.com/atif0075) for this component.
 

@@ -13,14 +13,14 @@ navBadges:
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="smooth-cursor"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::code-group
 
@@ -34,7 +34,7 @@ Copy and paste the following code
 
 ## API
 
-| Prop Name      | Type           | Default         | Description                                             |
+| Prop Name      | 类型           | 默认值          | 说明                                                    |
 | -------------- | -------------- | --------------- | ------------------------------------------------------- |
 | `cursor`       | `Component`    | `DefaultCursor` | Custom cursor component to replace the default cursor   |
 | `springConfig` | `SpringConfig` | `See below`     | Configuration object for the spring animation behavior. |
@@ -85,7 +85,7 @@ When using this component, consider that:
 - 🎨 Fully customizable cursor design
 - 📦 Lightweight and easy to implement
 
-## Credits
+## 致谢
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Ported from [Magic UI Smooth Cursor](https://magicui.design/docs/components/smooth-cursor).

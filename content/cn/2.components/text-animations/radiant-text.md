@@ -6,25 +6,25 @@ description: A glare effect on text.
 ::ComponentLoader{label="Preview" componentName="RadiantTextDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="radiant-text"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="RadiantText.vue" language="vue" componentName="RadiantText" type="ui" id="radiant-text"}
 ::
 
 ## API
 
-| Prop Name      | Type     | Default | Description                           |
-| -------------- | -------- | ------- | ------------------------------------- |
-| `duration`     | `number` | `10`    | Duration of the animation in seconds. |
-| `radiantWidth` | `number` | `100`   | Width of the radiant animation.       |
+| Prop Name      | 类型     | 默认值 | 说明                                  |
+| -------------- | -------- | ------ | ------------------------------------- |
+| `duration`     | `number` | `10`   | Duration of the animation in seconds. |
+| `radiantWidth` | `number` | `100`  | Width of the radiant animation.       |
 
-## Credits
+## 致谢
 
 - Credits to [Magic UI](https://magicui.design/docs/components/animated-shiny-text) for this fantastic component.

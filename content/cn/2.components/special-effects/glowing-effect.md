@@ -8,7 +8,7 @@ description: A dynamic proximity-based glow effect that reacts to mouse movement
 
 ## API
 
-| Prop Name          | Type                   | Default     | Description                                                                                           |
+| Prop Name          | 类型                   | 默认值      | 说明                                                                                                  |
 | ------------------ | ---------------------- | ----------- | ----------------------------------------------------------------------------------------------------- |
 | `blur`             | `number`               | `0`         | The blur radius applied to the glow layer.                                                            |
 | `inactiveZone`     | `number`               | `0.7`       | Defines the inner radius (as a fraction of the smallest dimension) within which the glow is inactive. |
@@ -21,14 +21,14 @@ description: A dynamic proximity-based glow effect that reacts to mouse movement
 | `movementDuration` | `number`               | `2`         | Duration (in seconds) of the smooth rotation animation.                                               |
 | `borderWidth`      | `number`               | `1`         | Width (in pixels) of the border applied to the glow effect.                                           |
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="glowing-effect"}
 ::
 
-## Install Manually
+## 手动安装
 
-You can copy and paste the following code to create this component:
+你可以复制并粘贴以下代码来创建此组件：
 
 ::code-group
 
@@ -45,6 +45,6 @@ You can copy and paste the following code to create this component:
 - **Variant Support**: Choose between default or white glow styling.
 - **Performance Optimizations**: Event listeners and animation frames are managed efficiently.
 
-## Credits
+## 致谢
 
 - Ported from (Aceternity UI Glowing Effect)[https://ui.aceternity.com/components/glowing-effect]

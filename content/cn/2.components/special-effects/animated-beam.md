@@ -10,14 +10,14 @@ description: An SVG beam connecting elements with animation.
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="animated-beam"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="AnimatedBeam.vue" language="vue" componentName="AnimatedBeam" type="ui" id="animated-beam"}
 ::
@@ -36,7 +36,7 @@ Vertical beam.
 
 ## API
 
-| Prop Name            | Type          | Default                | Description                                                                  |
+| Prop Name            | 类型          | 默认值                 | 说明                                                                         |
 | -------------------- | ------------- | ---------------------- | ---------------------------------------------------------------------------- |
 | `class`              | `string`      | `""`                   | Additional CSS classes to apply to the component for customization.          |
 | `containerRef`       | `HTMLElement` | N/A                    | Reference to the container element where the beam is rendered.               |
@@ -64,6 +64,6 @@ Vertical beam.
 - **Responsive Updates**: The beam adjusts its position and size in response to window resizing and element repositioning.
 - **Flexible Animation Control**: Customize the animation's duration, delay, and direction for precise timing.
 
-## Credits
+## 致谢
 
 - Inspired and ported from [Magic UI Animated Beam](https://magicui.design/docs/components/animated-beam).

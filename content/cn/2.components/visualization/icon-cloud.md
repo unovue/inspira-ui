@@ -6,14 +6,14 @@ description: An interactive 3D tag cloud component
 ::ComponentLoader{label="Preview" componentName="IconCloudDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="icon-cloud"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -24,12 +24,12 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name | Type     | Default | Description                                   |
-| --------- | -------- | ------- | --------------------------------------------- |
-| `class`   | `string` | -       | Additional classes for styling the component. |
-| `images`  | `array`  | `[]`    | Array of image URLs to render in the cloud    |
+| Prop Name | 类型     | 默认值 | 说明                                          |
+| --------- | -------- | ------ | --------------------------------------------- |
+| `class`   | `string` | -      | Additional classes for styling the component. |
+| `images`  | `array`  | `[]`   | Array of image URLs to render in the cloud    |
 
-## Credits
+## 致谢
 
 - Inspired by [MagicUI](https://magicui.design/docs/components/icon-cloud).
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.

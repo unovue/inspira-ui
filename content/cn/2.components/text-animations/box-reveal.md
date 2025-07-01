@@ -6,21 +6,21 @@ description: An animated box reveal effect with customizable colors, duration, a
 ::ComponentLoader{label="Preview" componentName="BoxRevealDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="box-reveal"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="BoxReveal.vue" language="vue" componentName="BoxReveal" type="ui" id="box-reveal"}
 ::
 
 ## API
 
-| Prop Name  | Type     | Default     | Description                                          |
+| Prop Name  | 类型     | 默认值      | 说明                                                 |
 | ---------- | -------- | ----------- | ---------------------------------------------------- |
 | `color`    | `string` | `"#5046e6"` | Background color of the reveal box.                  |
 | `duration` | `number` | `0.5`       | Duration of the reveal animation in seconds.         |
@@ -34,6 +34,6 @@ Copy and paste the following code
 - **Slot-Based Content**: Supports default slot content that appears once the reveal animation completes.
 - **Custom Background Color**: Easily customize the box's background color using the `color` prop.
 
-## Credits
+## 致谢
 
 - Ported from [Magic UI Box Reveal](https://magicui.design/docs/components/box-reveal).

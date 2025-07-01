@@ -6,14 +6,14 @@ description: A dynamic SVG mask component that reveals content with hover and mo
 ::ComponentLoader{label="Preview" componentName="SvgMaskDemo" type="examples" id="svg-mask"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="svg-mask"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+将以下代码复制并粘贴到同一文件夹中
 
 ::code-group
 
@@ -40,11 +40,11 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name    | Type     | Default | Description                                |
-| ------------ | -------- | ------- | ------------------------------------------ |
-| `class`      | `string` | `""`    | Additional CSS classes for custom styling. |
-| `size`       | `number` | `10`    | Initial size of the mask in pixels.        |
-| `revealSize` | `number` | `600`   | Size of the mask during hover in pixels.   |
+| Prop Name    | 类型     | 默认值 | 说明                                       |
+| ------------ | -------- | ------ | ------------------------------------------ |
+| `class`      | `string` | `""`   | Additional CSS classes for custom styling. |
+| `size`       | `number` | `10`   | Initial size of the mask in pixels.        |
+| `revealSize` | `number` | `600`  | Size of the mask during hover in pixels.   |
 
 ## Features
 
@@ -54,6 +54,6 @@ Copy and paste the following code in the same folder
 - **Slot-Based Content**: Supports named slots for base and reveal content, making it flexible for various use cases.
 - **Responsive Background**: Includes hover-based background color transitions for added visual appeal.
 
-## Credits
+## 致谢
 
 - Ported from [Aceternity UI's SVG Mask Effect](https://ui.aceternity.com/components/text-generate-effect).

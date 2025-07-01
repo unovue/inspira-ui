@@ -6,14 +6,14 @@ description: A dynamic flip card with smooth 180-degree flipping animations alon
 ::ComponentLoader{label="Preview" componentName="FlipCardDemo" type="examples" id="flip-card"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="flip-card"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="FlipCard.vue" language="vue" componentName="FlipCard" type="ui" id="flip-card"}
 ::
@@ -27,16 +27,16 @@ Copy and paste the following code
 
 ## API
 
-| Prop Name | Type     | Default | Description                                |
-| --------- | -------- | ------- | ------------------------------------------ |
-| `class`   | `string` | `-`     | The class to be applied to the component.  |
-| `rotate`  | `x \| y` | `y`     | You can pass the rotate value as you want. |
+| Prop Name | 类型     | 默认值 | 说明                                       |
+| --------- | -------- | ------ | ------------------------------------------ |
+| `class`   | `string` | `-`    | The class to be applied to the component.  |
+| `rotate`  | `x \| y` | `y`    | You can pass the rotate value as you want. |
 
-| Slot Name | Description                 |
+| Slot Name | 说明                        |
 | --------- | --------------------------- |
 | `default` | Component to show as front. |
 | `back`    | Component to show as back.  |
 
-## Credits
+## 致谢
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.

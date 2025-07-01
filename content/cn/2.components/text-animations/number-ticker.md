@@ -6,14 +6,14 @@ description: Animate numbers to count up or down to a target number
 ::ComponentLoader{label="Preview" componentName="NumberTickerDemo" type="examples"}
 ::
 
-## Install using CLI
+## 使用 CLI 安装
 
 ::InstallationCli{componentId="number-ticker"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码
 
 ::CodeViewer{filename="NumberTicker.vue" language="vue" componentName="NumberTicker" type="ui" id="number-ticker"}
 ::
@@ -22,7 +22,7 @@ Copy and paste the following code
 
 ## API
 
-| Prop Name       | Type                | Default        | Description                                                       |
+| Prop Name       | 类型                | 默认值         | 说明                                                              |
 | --------------- | ------------------- | -------------- | ----------------------------------------------------------------- |
 | `value`         | `int`               | `0`            | Value to count to                                                 |
 | `direction`     | `up \| down`        | `up`           | Direction to count in                                             |
@@ -31,7 +31,7 @@ Copy and paste the following code
 | `duration`      | `number`            | `1000`         | Total duration for the entire animation (in milliseconds).        |
 | `transition`    | `TransitionPresets` | `easeOutCubic` | Name of transition preset (https://vueuse.org/core/useTransition) |
 
-## Credits
+## 致谢
 
 - Credits to [Grzegorz Krol](https://github.com/Grzechu335) for porting this component.
 - Ported from [Magic UI NumberTicker](https://magicui.design/docs/components/number-ticker).
