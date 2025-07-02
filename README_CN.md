@@ -71,6 +71,53 @@ Inspira UI 的出道旨在填补 Vue 社区生态的一个空白，它提供了�
 
 为了保证项目的合理运行，请您在发布贡献时参照我们的 [贡献手册](https://inspira-ui.com/getting-started/contribution).
 
+### 中文翻译
+
+- 页面翻译
+
+需要修改 `i18n\locales` 目录下 `en.json` `zh-cn.json` 两个文件响应内容。格式大致如下：
+
+```json
+// en.json
+{
+  // 其他翻译...
+  "common": {
+    "InspiraUIPro": "Inspira UI Pro" // 英译显示的内容
+  },
+  // 其他翻译...
+}
+
+```
+
+```json
+// zh-cn.json
+{
+  // 其他翻译...
+  "common": {
+    "InspiraUIPro": "Inspira UI 专业版" // 中文显示的内容
+  },
+  // 其他翻译...
+}
+
+```
+
+在对应的页面 vue 文件中使用
+
+```vue
+<template>
+<!-- template 需要双花括号来解析 -->
+  {{ $t("common.InspiraUIPro") }}
+</template>
+
+<script setup lang="ts">
+
+</script>
+```
+
+- 文档翻译
+
+在 `content\zh-cn` 目录下创建或修改对应文件内容即可。
+
 ## 赞助我们
 
 如果您想支持我们的开发进程，您可以请我们喝杯咖啡：

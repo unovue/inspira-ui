@@ -10,11 +10,11 @@
           variant="secondary"
           class="gap-2 py-6 text-base"
         >
-          Support Us <span class="text-red-500">♥️</span>
+          {{ $t("page.home.SupportUs") }}<span class="text-red-500">♥️</span>
         </UiButton>
       </a>
     </div>
-
+    <!-- {{ $t("common.InspiraUIPro") }} -->
     <InspiraCarbonAds :is-home-page="true" />
 
     <IntegrationSection />
@@ -29,8 +29,8 @@
 const config = useConfig();
 
 useSeoMeta({
-  title: `Inspira UI: Build beautiful websites using Vue & Nuxt`,
-  ogTitle: `Inspira UI: Build beautiful websites using Vue & Nuxt`,
+  title: `Inspira UI: 使用 Vue & Nuxt 构建漂亮的网站`,
+  ogTitle: `Inspira UI:使用 Vue & Nuxt 构建漂亮的网站`,
   description:
     "Open Source components to build stunning animated interfaces effortlessly using Vue & Nuxt.",
   ogDescription:
