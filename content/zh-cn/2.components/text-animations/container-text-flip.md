@@ -3,17 +3,17 @@ title: Container Text Flip
 description: A container that flips through words, animating the width.
 ---
 
-::ComponentLoader{label="Preview" componentName="ContainerTextFlipDemo" type="examples" id="container-text-flip"}
+::ComponentLoader{label="预览" componentName="ContainerTextFlipDemo" type="examples" id="container-text-flip"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="container-text-flip"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="ContainerTextFlip.vue" language="vue" componentName="ContainerTextFlip" type="ui" id="container-text-flip"}
 ::
@@ -22,17 +22,17 @@ Copy and paste the following code
 
 Standard
 
-::ComponentLoader{label="Preview" componentName="ContainerTextFlipStandardDemo" type="examples" id="container-text-flip"}
+::ComponentLoader{label="预览" componentName="ContainerTextFlipStandardDemo" type="examples" id="container-text-flip"}
 ::
 
 Hero section with animation
 
-::ComponentLoader{label="Preview" componentName="ContainerTextFlipHeroDemo" type="examples" id="container-text-flip"}
+::ComponentLoader{label="预览" componentName="ContainerTextFlipHeroDemo" type="examples" id="container-text-flip"}
 ::
 
 ## API
 
-| Prop Name           | Type       | Default                                        | Description                                          |
+| Prop 名称           | Type       | Default                                        | 描述                                                 |
 | ------------------- | ---------- | ---------------------------------------------- | ---------------------------------------------------- |
 | `words`             | `string[]` | `["better", "modern", "beautiful", "awesome"]` | Array of words to cycle through in the animation     |
 | `interval`          | `number`   | `3000`                                         | Time in milliseconds between word transitions        |

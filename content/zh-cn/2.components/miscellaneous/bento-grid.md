@@ -3,17 +3,17 @@ title: Bento Grid
 description: A cool grid layout with different child component.
 ---
 
-::ComponentLoader{label="Preview" componentName="BentoGridDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="BentoGridDemo" type="examples"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="bento-grid"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -23,18 +23,18 @@ Copy and paste the following code in the same folder
 
 ::
 
-## Examples
+## 示例
 
 `BentoGrid` in MagicUI style.
 
-::ComponentLoader{label="Preview" componentName="BentoGridDemo2" type="examples"}
+::ComponentLoader{label="预览" componentName="BentoGridDemo2" type="examples"}
 ::
 
 ## API
 
 #### `BentoGridItem`
 
-| Slot Name     | Description                       |
+| Slot Name     | 描述                              |
 | ------------- | --------------------------------- |
 | `title`       | Component to show as title.       |
 | `description` | Component to show as description. |
@@ -43,11 +43,11 @@ Copy and paste the following code in the same folder
 
 #### `BentoGridCard`
 
-| Slot Name    | Description                      |
+| Slot Name    | 描述                             |
 | ------------ | -------------------------------- |
 | `background` | Component to show in background. |
 
-| Props Name    | Type      | Description                          |
+| Props Name    | Type      | 描述                                 |
 | ------------- | --------- | ------------------------------------ |
 | `name`        | `string`  | Name or title to show on card.       |
 | `icon`        | `?string` | Icon component to show on card.      |

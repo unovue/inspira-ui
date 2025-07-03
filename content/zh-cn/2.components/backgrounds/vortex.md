@@ -3,19 +3,19 @@ title: Vortex Background
 description: A wavy, swirly, vortex background ideal for CTAs and backgrounds.
 ---
 
-::ComponentLoader{label="Preview" componentName="VortexDemo" type="examples" id="vortex"}
+::ComponentLoader{label="预览" componentName="VortexDemo" type="examples" id="vortex"}
 ::
 
 ::alert{type="info"}
-**Note:** This component requires `simplex-noise` as a dependency.
+**注意:** This component requires `simplex-noise` as a dependency.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="vortex"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -41,7 +41,7 @@ yarn add simplex-noise
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="Vortex.vue" language="vue" componentName="Vortex" type="ui" id="vortex"}  
 ::
@@ -51,12 +51,12 @@ Copy and paste the following code
 
 Full page demo usage
 
-::ComponentLoader{label="Preview" componentName="VortexFullPageDemo" type="examples" id="vortex"}
+::ComponentLoader{label="预览" componentName="VortexFullPageDemo" type="examples" id="vortex"}
 ::
 
 ## API
 
-| Prop Name         | Type     | Default     | Description                                          |
+| Prop 名称         | 类型     | Default     | 描述                                                 |
 | ----------------- | -------- | ----------- | ---------------------------------------------------- |
 | `class`           | `string` |             | Optional className for styling the children wrapper. |
 | `containerClass`  | `string` |             | Optional className for styling the container.        |
@@ -69,7 +69,7 @@ Full page demo usage
 | `rangeRadius`     | `number` | `2`         | Range of radius variation for particles.             |
 | `backgroundColor` | `string` | `"#000000"` | Background color of the canvas.                      |
 
-## Features
+## 功能特性
 
 - **Slot Support**: Easily add any content inside the component using the default slot.
 

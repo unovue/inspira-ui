@@ -3,7 +3,7 @@ title: Glow Border
 description: An animated border effect.
 ---
 
-::ComponentLoader{label="Preview" componentName="GlowBorderDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="GlowBorderDemo" type="examples"}
 ::
 
 ::alert{type="warning"}
@@ -34,26 +34,26 @@ Add following entry to inline theme in your `main.css` file.
 
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="glow-border"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="GlowBorder.vue" language="vue" componentName="GlowBorder" type="ui" id="glow-border"}
 ::
 
 ## API
 
-| Prop Name      | Type                 | Default | Description                                                |
-| -------------- | -------------------- | ------- | ---------------------------------------------------------- |
-| `duration`     | `number`             | `10`    | Duration of the glowing border animation.                  |
-| `color`        | `string \| string[]` | `#FFF`  | Color or array of colors to applied on the glowing border. |
-| `borderRadius` | `number`             | `10`    | Radius of the border.                                      |
-| `borderWidth`  | `number`             | `2`     | Width of the border.                                       |
+| Prop 名称      | Type                 | 默认值 | 描述                                                       |
+| -------------- | -------------------- | ------ | ---------------------------------------------------------- |
+| `duration`     | `number`             | `10`   | Duration of the glowing border animation.                  |
+| `color`        | `string \| string[]` | `#FFF` | Color or array of colors to applied on the glowing border. |
+| `borderRadius` | `number`             | `10`   | Radius of the border.                                      |
+| `borderWidth`  | `number`             | `2`    | Width of the border.                                       |
 
 ## Credits
 

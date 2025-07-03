@@ -1,19 +1,19 @@
 ---
-title: Aurora Background
-description: A subtle Aurora or Southern Lights background for your website.
+title: 极光背景
+description: 为您的网站提供一个微妙的极光或南极光背景。
 ---
 
-::ComponentLoader{label="Preview" componentName="AuroraBackgroundDemo" type="examples" id="aurora-background"}
+::ComponentLoader{label="预览" componentName="AuroraBackgroundDemo" type="examples" id="aurora-background"}
 ::
 
 ## API
 
-| Prop Name        | Type      | Default | Description                                                               |
-| ---------------- | --------- | ------- | ------------------------------------------------------------------------- |
-| `class`          | `string`  | `-`     | Additional CSS classes to apply to the component for styling.             |
-| `radialGradient` | `boolean` | `true`  | Determines whether a radial gradient effect is applied to the background. |
+| Prop 名称        | 类型      | 默认值 | 描述                                                                      |
+| ---------------- | --------- | :----: | ------------------------------------------------------------------------- |
+| `class`          | `string`  |  `-`   | Additional CSS classes to apply to the component for styling.             |
+| `radialGradient` | `boolean` | `true` | Determines whether a radial gradient effect is applied to the background. |
 
-## Installation
+## 安装
 
 ::alert
 Add following entry to inline theme in your `main.css` file.
@@ -38,21 +38,21 @@ Add following entry to inline theme in your `main.css` file.
 
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="aurora-background"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="AuroraBackground.vue" language="vue" componentName="AuroraBackground" type="ui" id="aurora-background"}
 ::
 
-## Features
+## 功能特性
 
-- **Slot Support**: Easily add any content inside the component using the default slot.
+- **支持插槽**: 使用默认插槽轻松地在组件中添加任何内容。
 
 ## Credits
 

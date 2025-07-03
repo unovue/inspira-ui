@@ -3,30 +3,30 @@ title: Input
 description: A versatile and visually dynamic input field with radial hover effects, styled for modern web applications.
 ---
 
-::ComponentLoader{label="Preview" componentName="InputDemo" type="examples" id="input"}
+::ComponentLoader{label="预览" componentName="InputDemo" type="examples" id="input"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="input"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="IInput.vue" language="vue" componentName="IInput" type="ui" id="input"}
 ::
 
 ## API
 
-| Prop Name        | Type                | Default | Description                                                 |
-| ---------------- | ------------------- | ------- | ----------------------------------------------------------- |
-| `defaultValue`   | `string  \| number` | `""`    | Default value of the input field.                           |
-| `class`          | `string`            | `""`    | Additional CSS classes for custom styling.                  |
-| `containerClass` | `string`            | `""`    | Additional CSS classes for custom styling of the container. |
+| Prop 名称        | Type                | 默认值 | 描述                                                        |
+| ---------------- | ------------------- | ------ | ----------------------------------------------------------- |
+| `defaultValue`   | `string  \| number` | `""`   | Default value of the input field.                           |
+| `class`          | `string`            | `""`   | Additional CSS classes for custom styling.                  |
+| `containerClass` | `string`            | `""`   | Additional CSS classes for custom styling of the container. |
 
-## Features
+## 功能特性
 
 - **Radial Hover Effect**: Displays a dynamic radial gradient background that follows mouse movements when hovering over the input container.
 - **Two-Way Binding**: Supports `v-model` for seamless integration with Vue's two-way data binding.

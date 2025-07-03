@@ -3,12 +3,12 @@ title: Spline
 description: A Vue wrapper component for the Spline 3D tool, providing events and auto-resizing.
 ---
 
-::ComponentLoader{label="Preview" componentName="SplineDemo" type="examples" id="spline"}
+::ComponentLoader{label="预览" componentName="SplineDemo" type="examples" id="spline"}
 ::
 
 ## API
 
-| Prop Name        | Type       | Default     | Description                                                   |
+| Prop 名称        | Type       | Default     | 描述                                                          |
 | ---------------- | ---------- | ----------- | ------------------------------------------------------------- |
 | `scene`          | `string`   | —           | The URL or path to the Spline scene file. **Required**.       |
 | `onLoad`         | `Function` | `undefined` | Callback that fires when the Spline scene loads successfully. |
@@ -17,7 +17,7 @@ description: A Vue wrapper component for the Spline 3D tool, providing events an
 
 **Emits**
 
-| Event Name           | Payload | Description                                                   |
+| Event Name           | Payload | 描述                                                          |
 | -------------------- | ------- | ------------------------------------------------------------- |
 | `error`              | `Error` | Emits if there's an error while loading the Spline scene.     |
 | `spline-mouse-down`  | `any`   | Emits when a mouseDown event is detected in the Spline scene. |
@@ -31,15 +31,15 @@ description: A Vue wrapper component for the Spline 3D tool, providing events an
 | `spline-scroll`      | `any`   | Emits on scroll interactions.                                 |
 
 ::alert{type="info"}
-**Note:** This component uses Spline & requires `@splinetool/runtime` npm package as a dependency.
+**注意:** This component uses Spline & requires `@splinetool/runtime` npm package as a dependency.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="spline"}
 ::
 
-## Install Manually
+## 手动安装
 
 ### Install the dependencies
 
@@ -65,7 +65,7 @@ yarn add @splinetool/runtime
 
 ### Component Code
 
-You can copy and paste the following code to create this component:
+You can 复制并粘贴以下代码： to create this component:
 
 ::code-group
 
@@ -77,7 +77,7 @@ You can copy and paste the following code to create this component:
 
 ::
 
-## Features
+## 功能特性
 
 - **Responsive Canvas**: Uses a `ParentSize` wrapper to adjust to the parent container size.
 - **Event Bindings**: Exposes Spline’s mouse, keyboard, and scrolling events via Vue emits.

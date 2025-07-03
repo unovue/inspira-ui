@@ -1,33 +1,33 @@
 ---
-title: Interactive Grid Pattern
+title: 交互网格背景
 description: A interactive background grid pattern made with SVGs, fully customizable.
 ---
 
-::ComponentLoader{label="Preview" componentName="InteractiveGridPatternDemo" type="examples" id="interactive-grid-pattern"}
+::ComponentLoader{label="预览" componentName="InteractiveGridPatternDemo" type="examples" id="interactive-grid-pattern"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="interactive-grid-pattern"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="InteractiveGridPattern.vue" language="vue" componentName="InteractiveGridPattern" type="ui" id="interactive-grid-pattern"}
 ::
 
-## Examples
+## 示例
 
-::ComponentLoader{label="Preview" componentName="InteractiveGridPatternColoredDemo" type="examples" id="interactive-grid-pattern"}
+::ComponentLoader{label="预览" componentName="InteractiveGridPatternColoredDemo" type="examples" id="interactive-grid-pattern"}
 ::
 
 ## API
 
 #### Props
 
-| Prop Name          | Type               | Default    | Description                                   |
+| Prop 名称          | Type               | Default    | 描述                                          |
 | ------------------ | ------------------ | ---------- | --------------------------------------------- |
 | `className`        | `string`           | -          | Additional classes for styling the component. |
 | `squaresClassName` | `string`           | -          | Additional classes for styling the squares.   |

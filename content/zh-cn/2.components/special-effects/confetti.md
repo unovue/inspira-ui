@@ -3,19 +3,19 @@ title: Confetti
 description: A Vue component for confetti animations.
 ---
 
-::ComponentLoader{label="Preview" componentName="ConfettiDemo" type="examples" id="confetti"}
+::ComponentLoader{label="预览" componentName="ConfettiDemo" type="examples" id="confetti"}
 ::
 
 ::alert{type="info"}
-**Note:** This component uses `canvas-confetti` npm package as a dependency.
+**注意:** This component uses `canvas-confetti` npm package as a dependency.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="confetti"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -45,7 +45,7 @@ yarn add --dev @types/canvas-confetti
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::code-group
 
@@ -54,26 +54,26 @@ Copy and paste the following code
 ::
 ::
 
-## Examples
+## 示例
 
 ### Basic
 
-::ComponentLoader{label="Preview" componentName="ConfettiBasicDemo" type="examples" id="confetti"}
+::ComponentLoader{label="预览" componentName="ConfettiBasicDemo" type="examples" id="confetti"}
 ::
 
 ### Random Direction
 
-::ComponentLoader{label="Preview" componentName="ConfettiRandomDirectionDemo" type="examples" id="confetti"}
+::ComponentLoader{label="预览" componentName="ConfettiRandomDirectionDemo" type="examples" id="confetti"}
 ::
 
 ### Fireworks
 
-::ComponentLoader{label="Preview" componentName="ConfettiFireworksDemo" type="examples" id="confetti"}
+::ComponentLoader{label="预览" componentName="ConfettiFireworksDemo" type="examples" id="confetti"}
 ::
 
 ### Side Cannons
 
-::ComponentLoader{label="Preview" componentName="ConfettiCannonsDemo" type="examples" id="confetti"}
+::ComponentLoader{label="预览" componentName="ConfettiCannonsDemo" type="examples" id="confetti"}
 ::
 
 ## API
@@ -84,7 +84,7 @@ Copy and paste the following code
 
 #### `Confetti`
 
-| Prop Name       | Type                    | Default | Description                                                       |
+| Prop 名称       | Type                    | 默认值  | 描述                                                              |
 | --------------- | ----------------------- | ------- | ----------------------------------------------------------------- |
 | `options`       | `ConfettiOptions`       | `{}`    | Options for individual confetti bursts.                           |
 | `globalOptions` | `ConfettiGlobalOptions` | `{}`    | Global options for the confetti instance (e.g., resize behavior). |
@@ -92,7 +92,7 @@ Copy and paste the following code
 
 #### `ConfettiOptions`
 
-| Property                  | Type                        | Default                                                                         | Description                                                            |
+| Property                  | Type                        | Default                                                                         | 描述                                                                   |
 | ------------------------- | --------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | `particleCount`           | `number`                    | `50`                                                                            | The number of confetti particles to launch.                            |
 | `angle`                   | `number`                    | `90`                                                                            | The angle in degrees at which to launch the confetti.                  |
@@ -117,13 +117,13 @@ Copy and paste the following code
 
 #### `ConfettiButton`
 
-| Prop Name | Type                                               | Default | Description                                      |
-| --------- | -------------------------------------------------- | ------- | ------------------------------------------------ |
-| `options` | `ConfettiOptions & { canvas?: HTMLCanvasElement }` | `{}`    | Options for confetti when the button is clicked. |
+| Prop 名称 | Type                                               | 默认值 | 描述                                             |
+| --------- | -------------------------------------------------- | ------ | ------------------------------------------------ |
+| `options` | `ConfettiOptions & { canvas?: HTMLCanvasElement }` | `{}`   | Options for confetti when the button is clicked. |
 
 ::
 
-## Features
+## 功能特性
 
 - **Confetti Animation**: Easily add confetti animations to your Vue application.
 - **Customizable Options**: Configure both global and individual options for confetti behavior.

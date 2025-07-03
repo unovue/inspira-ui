@@ -3,31 +3,31 @@ title: Safari Mockup
 description: An SVG mockup of the Safari browser.
 ---
 
-::ComponentLoader{label="Preview" componentName="SafariMockupDemo" type="examples" id="mockups"}
+::ComponentLoader{label="预览" componentName="SafariMockupDemo" type="examples" id="mockups"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="safari-mockup"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="SafariMockup.vue" language="vue" componentName="SafariMockup" type="ui" id="safari-mockup"}
 ::
 
 ## API
 
-| Prop Name | Type     | Default | Description                                    |
-| --------- | -------- | ------- | ---------------------------------------------- |
-| `url`     | `string` | `null`  | URL displayed in the mockup's address bar.     |
-| `src`     | `string` | `null`  | URL of the image to display inside the mockup. |
-| `width`   | `number` | `1203`  | Width of the mockup SVG in pixels.             |
-| `height`  | `number` | `753`   | Height of the mockup SVG in pixels.            |
+| Prop 名称 | 类型     | 默认值 | 描述                                           |
+| --------- | -------- | ------ | ---------------------------------------------- |
+| `url`     | `string` | `null` | URL displayed in the mockup's address bar.     |
+| `src`     | `string` | `null` | URL of the image to display inside the mockup. |
+| `width`   | `number` | `1203` | Width of the mockup SVG in pixels.             |
+| `height`  | `number` | `753`  | Height of the mockup SVG in pixels.            |
 
-## Features
+## 功能特性
 
 - **Realistic Safari Browser Mockup**: Provides an SVG representation of the Safari browser window, ideal for showcasing website designs.
 - **Customizable Dimensions**: Adjust the `width` and `height` props to fit your specific needs.

@@ -3,7 +3,7 @@ title: Meteor
 description: A component that displays a meteor shower animation with customizable meteor count and styling.
 ---
 
-::ComponentLoader{label="Preview" componentName="MeteorsDemo" type="examples"}  
+::ComponentLoader{label="预览" componentName="MeteorsDemo" type="examples"}  
 ::
 
 ::alert{type="warning"}
@@ -12,10 +12,10 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ## API
 
-| Prop Name | Type     | Default | Description                                                       |
-| --------- | -------- | ------- | ----------------------------------------------------------------- |
-| `count`   | `number` | `20`    | The number of meteors to display in the animation.                |
-| `class`   | `string` | `""`    | Additional CSS classes to apply to the meteors for customization. |
+| Prop 名称 | 类型     | 默认值 | 描述                                                              |
+| --------- | -------- | ------ | ----------------------------------------------------------------- |
+| `count`   | `number` | `20`   | The number of meteors to display in the animation.                |
+| `class`   | `string` | `""`   | Additional CSS classes to apply to the meteors for customization. |
 
 ## Installation
 
@@ -43,19 +43,19 @@ Add following entry to inline theme in your `main.css` file.
 
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="meteors"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="Meteors.vue" language="vue" componentName="Meteors" type="ui" id="meteors"}
 ::
 
-## Features
+## 功能特性
 
 - **Meteor Shower Animation**: The component renders an animated meteor shower effect, adding a dynamic visual element to your application.
 

@@ -3,24 +3,24 @@ title: Interactive Hover Button
 description: A visually engaging button component that responds to hover with dynamic transitions, adapting smoothly between light and dark modes for enhanced user interactivity.
 ---
 
-::ComponentLoader{label="Preview" componentName="InteractiveHoverButtonDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="InteractiveHoverButtonDemo" type="examples"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="interactive-hover-button"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="InteractiveHoverButton.vue" language="vue" componentName="InteractiveHoverButton" type="ui" id="interactive-hover-button"}
 ::
 
 ## API
 
-| Prop Name | Type     | Default  | Description                                    |
+| Prop 名称 | 类型     | Default  | 描述                                           |
 | --------- | -------- | -------- | ---------------------------------------------- |
 | `text`    | `string` | `Button` | The text to be displayed inside the button.    |
 | `class`   | `string` | `""`     | Additional class names to style the component. |

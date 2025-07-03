@@ -3,17 +3,17 @@ title: Animated List
 description: A sequentially animated list that introduces each item with a timed delay, perfect for displaying notifications or events on your landing page.
 ---
 
-::ComponentLoader{label="Preview" componentName="AnimatedListDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="AnimatedListDemo" type="examples"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="animated-list"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -23,11 +23,11 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name | Type     | Default | Description                                                    |
-| --------- | -------- | ------- | -------------------------------------------------------------- |
-| `delay`   | `number` | `1`     | The delay in milliseconds before adding each item to the list. |
+| Prop 名称 | 类型     | 默认值 | 描述                                                           |
+| --------- | -------- | ------ | -------------------------------------------------------------- |
+| `delay`   | `number` | `1`    | The delay in milliseconds before adding each item to the list. |
 
-## Features
+## 功能特性
 
 - **Animated Item Loading**: Items are added to the list one by one with a configurable delay.
 - **Smooth Transitions**: Each item animates in with a spring effect on entry and a smooth scale and opacity animation on exit.

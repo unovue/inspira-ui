@@ -6,21 +6,21 @@ navBadges:
     type: lime
 ---
 
-::ComponentLoader{label="Preview" componentName="SmoothCursorDemo" type="examples" id="smooth-cursor"}
+::ComponentLoader{label="预览" componentName="SmoothCursorDemo" type="examples" id="smooth-cursor"}
 ::
 
 ::alert{type="warning"}
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="smooth-cursor"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::code-group
 
@@ -34,7 +34,7 @@ Copy and paste the following code
 
 ## API
 
-| Prop Name      | Type           | Default         | Description                                             |
+| Prop 名称      | Type           | Default         | 描述                                                    |
 | -------------- | -------------- | --------------- | ------------------------------------------------------- |
 | `cursor`       | `Component`    | `DefaultCursor` | Custom cursor component to replace the default cursor   |
 | `springConfig` | `SpringConfig` | `See below`     | Configuration object for the spring animation behavior. |
@@ -77,7 +77,7 @@ When using this component, consider that:
 - You may want to provide alternative visual cues for interactive elements
 - Some users may have motion sensitivity, so consider providing a way to disable the animation
 
-## Features
+## 功能特性
 
 - 🎯 Smooth physics-based cursor animations
 - 🔄 Rotation effects based on movement direction

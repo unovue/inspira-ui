@@ -3,31 +3,31 @@ title: Box Reveal
 description: An animated box reveal effect with customizable colors, duration, and delay.
 ---
 
-::ComponentLoader{label="Preview" componentName="BoxRevealDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="BoxRevealDemo" type="examples"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="box-reveal"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="BoxReveal.vue" language="vue" componentName="BoxReveal" type="ui" id="box-reveal"}
 ::
 
 ## API
 
-| Prop Name  | Type     | Default     | Description                                          |
+| Prop 名称  | 类型     | Default     | 描述                                                 |
 | ---------- | -------- | ----------- | ---------------------------------------------------- |
 | `color`    | `string` | `"#5046e6"` | Background color of the reveal box.                  |
 | `duration` | `number` | `0.5`       | Duration of the reveal animation in seconds.         |
 | `delay`    | `number` | `0.25`      | Delay before the reveal animation starts in seconds. |
 | `class`    | `string` | `""`        | Additional CSS classes for custom styling.           |
 
-## Features
+## 功能特性
 
 - **Box Reveal Animation**: Creates a sliding box reveal effect with smooth transitions.
 - **Customizable Animation**: Control the animation timing with the `duration` and `delay` props.

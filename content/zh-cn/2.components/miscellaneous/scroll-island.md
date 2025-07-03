@@ -3,19 +3,19 @@ title: Scroll Island
 description: A dynamic and interactive component that displays scroll progress with animated visuals and an expandable area for additional content.
 ---
 
-::ComponentLoader{label="Preview" componentName="ScrollIslandDemo" type="examples" id="scroll-island"}
+::ComponentLoader{label="预览" componentName="ScrollIslandDemo" type="examples" id="scroll-island"}
 ::
 
 ::alert{type="info"}
-**Note:** This component requires `@number-flow/vue` as a dependency.
+**注意:** This component requires `@number-flow/vue` as a dependency.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="scroll-island"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -41,7 +41,7 @@ yarn add @number-flow/vue
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="ScrollIsland.vue" language="vue" componentName="ScrollIsland" type="ui" id="scroll-island"}  
 ::
@@ -49,13 +49,13 @@ Copy and paste the following code
 
 ## API
 
-| Prop Name | Type     | Default      | Description                                     |
+| Prop 名称 | 类型     | Default      | 描述                                            |
 | --------- | -------- | ------------ | ----------------------------------------------- |
 | `class`   | `string` | `""`         | Additional CSS classes for custom styling.      |
 | `title`   | `string` | `"Progress"` | Title displayed in the header of the component. |
 | `height`  | `string` | `44`         | Height of the component.                        |
 
-## Features
+## 功能特性
 
 - **Scroll Progress Tracking**: Dynamically displays the scroll progress of the page as a percentage.
 - **Expandable Layout**: Transforms between a circular and a rectangular layout based on user interaction.

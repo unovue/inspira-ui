@@ -3,17 +3,17 @@ title: File Tree
 description: A component used to showcase the folder and file structure of a directory.
 ---
 
-::ComponentLoader{label="Preview" componentName="FileTreeDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="FileTreeDemo" type="examples"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="file-tree"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -88,7 +88,7 @@ The `Tree` component serves as a container for displaying a hierarchical file/fo
 
 #### Props
 
-| Prop Name              | Type                | Default                | Description                                        |
+| Prop 名称              | Type                | Default                | 描述                                               |
 | ---------------------- | ------------------- | ---------------------- | -------------------------------------------------- |
 | `class`                | `string`            | -                      | Additional classes for styling the tree container. |
 | `initialSelectedId`    | `string`            | -                      | ID of the initially selected item.                 |
@@ -114,7 +114,7 @@ The `Folder` and `File` components represent folders and files in the file tree.
 
 #### Props
 
-| Prop Name      | Type      | Default | Description                             |
+| Prop 名称      | Type      | 默认值  | 描述                                    |
 | -------------- | --------- | ------- | --------------------------------------- |
 | `class`        | `string`  | -       | Additional classes for custom styling.  |
 | `id`           | `string`  | -       | Unique identifier for the item.         |

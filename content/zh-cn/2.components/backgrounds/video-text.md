@@ -6,24 +6,24 @@ navBadges:
     type: lime
 ---
 
-::ComponentLoader{label="Preview" componentName="VideoTextDemo" type="examples" id="video-text"}
+::ComponentLoader{label="预览" componentName="VideoTextDemo" type="examples" id="video-text"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="video-text"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="VideoText.vue" language="vue" componentName="VideoText" type="ui" id="video-text"}
 ::
 
 ## API
 
-| Prop Name          | Type                             | Default        | Description                           |
+| Prop 名称          | Type                             | Default        | 描述                                  |
 | ------------------ | -------------------------------- | -------------- | ------------------------------------- |
 | `src`              | `string`                         | `Required`     | The video source URL.                 |
 | `class`            | `string`                         | `""`           | Additional classes for the container. |

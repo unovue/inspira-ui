@@ -3,17 +3,17 @@ title: Warp Background
 description: A container component that applies a warp animation effect to its children
 ---
 
-::ComponentLoader{label="Preview" componentName="WarpBackgroundDemo" type="examples" id="warp-background"}
+::ComponentLoader{label="预览" componentName="WarpBackgroundDemo" type="examples" id="warp-background"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="warp-background"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -24,7 +24,7 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name      | Type     | Default                | Description                               |
+| Prop 名称      | 类型     | Default                | 描述                                      |
 | -------------- | -------- | ---------------------- | ----------------------------------------- |
 | `perspective`  | `number` | `100`                  | The perspective of the warp animation     |
 | `beamsPerSide` | `number` | `3`                    | The number of beams per side              |

@@ -3,24 +3,24 @@ title: Ripple Button
 description: A stylish ripple button component with customizable colors and animation duration.
 ---
 
-::ComponentLoader{label="Preview" componentName="RippleButtonDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="RippleButtonDemo" type="examples"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="ripple-button"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="RippleButton.vue" language="vue" componentName="RippleButton" type="ui" id="ripple-button"}
 ::
 
 ## API
 
-| Prop Name     | Type     | Default     | Description                                       |
+| Prop 名称     | 类型     | Default     | 描述                                              |
 | ------------- | -------- | ----------- | ------------------------------------------------- |
 | `class`       | `string` | -           | Additional CSS classes for custom styling.        |
 | `rippleColor` | `string` | `"#ADD8E6"` | Color of the ripple effect.                       |

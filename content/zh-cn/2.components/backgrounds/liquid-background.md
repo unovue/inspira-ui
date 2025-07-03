@@ -6,7 +6,7 @@ navBadges:
     type: lime
 ---
 
-::ComponentLoader{label="Preview" componentName="LiquidBackgroundDemo" type="examples" id="liquid-background"}
+::ComponentLoader{label="预览" componentName="LiquidBackgroundDemo" type="examples" id="liquid-background"}
 ::
 
 ## API
@@ -14,17 +14,17 @@ navBadges:
 This component does not require external props to function, as it dynamically renders the liquid background effect on mount.
 
 ::alert{type="info"}
-**Note:** This component uses OGL Web Renderer & requires `ogl` npm package as a dependency.
+**注意:** This component uses OGL Web Renderer & requires `ogl` npm package as a dependency.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="liquid-background"}
 ::
 
-## Install Manually
+## 手动安装
 
-You can copy and paste the following code to create this component:
+You can 复制并粘贴以下代码： to create this component:
 
 ::code-group
 
@@ -33,7 +33,7 @@ You can copy and paste the following code to create this component:
 
 ::
 
-## Features
+## 功能特性
 
 - **WebGL Rendering**: Utilizes the OGL library to provide hardware-accelerated background effects.
 - **Animated Shader**: Runs a custom fragment and vertex shader to generate a liquid-like visual animation.

@@ -3,7 +3,7 @@ title: Tetris
 description: Tetris background component, you can even click on a block to eliminate it.
 ---
 
-::ComponentLoader{label="Preview" componentName="TetrisDemo" type="examples" id="tetris"}
+::ComponentLoader{label="预览" componentName="TetrisDemo" type="examples" id="tetris"}
 ::
 
 ::alert{type="warning"}
@@ -11,23 +11,23 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 ::
 
 ::alert{type="info"}
-**Note:** This component requires `theme-colors` as a dependency.
+**注意:** This component requires `theme-colors` as a dependency.
 ::
 
 ## API
 
-| Prop Name      | Type     | Default | Description                                    |
-| -------------- | -------- | ------- | ---------------------------------------------- |
-| `class`        | `string` | `""`    | Additional class names to style the component. |
-| `base`         | `number` | `10`    | How many blocks do you have in a row.          |
-| `square-color` | `string` | `""`    | Square color.                                  |
+| Prop 名称      | 类型     | 默认值 | 描述                                           |
+| -------------- | -------- | ------ | ---------------------------------------------- |
+| `class`        | `string` | `""`   | Additional class names to style the component. |
+| `base`         | `number` | `10`   | How many blocks do you have in a row.          |
+| `square-color` | `string` | `""`   | Square color.                                  |
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="tetris"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -53,7 +53,7 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="Tetris.vue" language="vue" componentName="Tetris" type="ui" id="tetris"}  
 ::

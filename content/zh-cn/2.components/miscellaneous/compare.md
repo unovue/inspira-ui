@@ -3,17 +3,17 @@ title: Compare
 description: Slide to compare any two pieces of content - images, designs, code, or custom elements
 ---
 
-::ComponentLoader{label="Preview" componentName="CompareDemo" type="examples" id="compare"}
+::ComponentLoader{label="预览" componentName="CompareDemo" type="examples" id="compare"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="compare"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -22,28 +22,28 @@ Copy and paste the following code in the same folder
 
 ::
 
-## Examples
+## 示例
 
 Drag handle with custom content
 
-::ComponentLoader{label="Preview" componentName="CompareDragDemo" type="examples" id="compare"}
+::ComponentLoader{label="预览" componentName="CompareDragDemo" type="examples" id="compare"}
 ::
 
 AutoPlay
 
-::ComponentLoader{label="Preview" componentName="CompareAutoplayDemo" type="examples" id="compare"}
+::ComponentLoader{label="预览" componentName="CompareAutoplayDemo" type="examples" id="compare"}
 ::
 
 Custom Content with AutoPlay
 
-::ComponentLoader{label="Preview" componentName="CompareCustomContentDemo" type="examples" id="compare"}
+::ComponentLoader{label="预览" componentName="CompareCustomContentDemo" type="examples" id="compare"}
 ::
 
 ## API
 
 ### Props
 
-| Prop Name                 | Type                | Default          | Description                               |
+| Prop 名称                 | Type                | Default          | 描述                                      |
 | ------------------------- | ------------------- | ---------------- | ----------------------------------------- |
 | `firstImage`              | `string`            | `""`             | URL of the first image                    |
 | `secondImage`             | `string`            | `""`             | URL of the second image                   |
@@ -60,7 +60,7 @@ Custom Content with AutoPlay
 
 ### Events
 
-| Event Name          | Payload  | Description                                  |
+| Event Name          | Payload  | 描述                                         |
 | ------------------- | -------- | -------------------------------------------- |
 | `update:percentage` | `number` | Emitted when slider position changes (0-100) |
 | `drag:start`        | -        | Emitted when dragging starts                 |
@@ -70,7 +70,7 @@ Custom Content with AutoPlay
 
 ### Slots
 
-| Slot Name        | Default Content                                   | Description                                                                                                                       |
+| Slot Name        | Default Content                                   | 描述                                                                                                                              |
 | ---------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | `first-content`  | `<img>` element if `firstImage` prop is provided  | Content shown on the left/first side of the comparison. Has full access to component width/height.                                |
 | `second-content` | `<img>` element if `secondImage` prop is provided | Content shown on the right/second side of the comparison. Has full access to component width/height.                              |

@@ -3,42 +3,42 @@ title: Scratch To Reveal
 description: The ScratchToReveal component creates an interactive scratch-off effect with customizable dimensions and animations, revealing hidden content beneath.
 ---
 
-::ComponentLoader{label="Preview" componentName="ScratchToRevealDemo" type="examples" id="scratch-to-reveal"}
+::ComponentLoader{label="预览" componentName="ScratchToRevealDemo" type="examples" id="scratch-to-reveal"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="scratch-to-reveal"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="ScratchToReveal.vue" language="vue" componentName="ScratchToReveal" type="ui" id="scratch-to-reveal"}
 ::
 
 ## API
 
-| Prop Name              | Type                     | Default | Description                                                                                   |
-| ---------------------- | ------------------------ | ------- | --------------------------------------------------------------------------------------------- |
-| `class`                | `string`                 | `""`    | The class name to apply to the component.                                                     |
-| `width`                | `number`                 | `""`    | Width of the scratch container.                                                               |
-| `height`               | `number`                 | `""`    | Height of the scratch container.                                                              |
-| `minScratchPercentage` | `number`                 | `50`    | Minimum percentage of scratched area to be considered as completed (Value between 0 and 100). |
-| `gradientColors`       | `[string,string,string]` | `-`     | Gradient colors for the scratch effect.                                                       |
+| Prop 名称              | Type                     | 默认值 | 描述                                                                                          |
+| ---------------------- | ------------------------ | ------ | --------------------------------------------------------------------------------------------- |
+| `class`                | `string`                 | `""`   | The class name to apply to the component.                                                     |
+| `width`                | `number`                 | `""`   | Width of the scratch container.                                                               |
+| `height`               | `number`                 | `""`   | Height of the scratch container.                                                              |
+| `minScratchPercentage` | `number`                 | `50`   | Minimum percentage of scratched area to be considered as completed (Value between 0 and 100). |
+| `gradientColors`       | `[string,string,string]` | `-`    | Gradient colors for the scratch effect.                                                       |
 
-| Event Name | Payload | Description                                        |
+| Event Name | Payload | 描述                                               |
 | ---------- | ------- | -------------------------------------------------- |
 | `complete` | `-`     | Callback function called when scratch is completed |
 
-| Slot Name | Default Content | Description                            |
+| Slot Name | Default Content | 描述                                   |
 | --------- | --------------- | -------------------------------------- |
 | `default` | `-`             | The text below the scratch-off ticket. |
 
 ## Component Code
 
-You can copy and paste the following code to create this component:
+You can 复制并粘贴以下代码： to create this component:
 
 ::CodeViewer{filename="ScratchToReveal.vue" language="vue" componentName="ScratchToReveal" type="ui" id="scratch-to-reveal"}
 ::

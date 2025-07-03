@@ -3,12 +3,12 @@ title: Liquid Logo
 description: An advanced WebGL-based component that applies a dynamic, liquid effect to logos or images using custom shaders.
 ---
 
-::ComponentLoader{label="Preview" componentName="LiquidLogoDemo" type="examples" id="liquid-logo"}
+::ComponentLoader{label="预览" componentName="LiquidLogoDemo" type="examples" id="liquid-logo"}
 ::
 
 ## API
 
-| Prop Name      | Type     | Default | Description                                  |
+| Prop 名称      | 类型     | 默认值  | 描述                                         |
 | -------------- | -------- | ------- | -------------------------------------------- |
 | `class`        | `string` | `""`    | Additional CSS classes for custom styling.   |
 | `imageUrl`     | `string` | `""`    | URL of the image to apply the liquid effect. |
@@ -21,7 +21,7 @@ description: An advanced WebGL-based component that applies a dynamic, liquid ef
 
 ## Component Code
 
-You can copy and paste the following code to create this component:
+You can 复制并粘贴以下代码： to create this component:
 
 ::code-group
 
@@ -36,7 +36,7 @@ You can copy and paste the following code to create this component:
 
 ::
 
-## Features
+## 功能特性
 
 - **Dynamic Liquid Effect**: Transforms logos or images with a fluid, liquid-like motion.
 - **Custom Shader Utilization**: Built with WebGL2 and GLSL shaders for real-time rendering.

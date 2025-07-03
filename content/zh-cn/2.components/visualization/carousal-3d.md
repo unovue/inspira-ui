@@ -3,22 +3,22 @@ title: 3D Carousel
 description: A dynamic and interactive 3D carousel component using Three.js and Motion-V, allowing smooth infinite rotation and user-controlled interactions.
 ---
 
-::ComponentLoader{label="Preview" componentName="Carousel3dDemo" type="examples" id="carousel-3d"}
+::ComponentLoader{label="预览" componentName="Carousel3dDemo" type="examples" id="carousel-3d"}
 ::
 
 ## API
 
-| Prop Name        | Type        | Default | Description                                                 |
-| ---------------- | ----------- | ------- | ----------------------------------------------------------- |
-| `items`          | `unknown[]` | `[]`    | List of images or elements to be displayed in the carousel. |
-| `class`          | `string`    | `""`    | Additional CSS classes for styling the carousel overlay.    |
-| `containerClass` | `string`    | `""`    | CSS classes for styling the carousel container.             |
-| `width`          | `number`    | `450`   | Width of individual carousel items.                         |
-| `height`         | `number`    | `600`   | Height of individual carousel items.                        |
+| Prop 名称        | Type        | 默认值 | 描述                                                        |
+| ---------------- | ----------- | ------ | ----------------------------------------------------------- |
+| `items`          | `unknown[]` | `[]`   | List of images or elements to be displayed in the carousel. |
+| `class`          | `string`    | `""`   | Additional CSS classes for styling the carousel overlay.    |
+| `containerClass` | `string`    | `""`   | CSS classes for styling the carousel container.             |
+| `width`          | `number`    | `450`  | Width of individual carousel items.                         |
+| `height`         | `number`    | `600`  | Height of individual carousel items.                        |
 
 ## Component Code
 
-You can copy and paste the following code to create this component:
+You can 复制并粘贴以下代码： to create this component:
 
 ::code-group
 
@@ -27,7 +27,7 @@ You can copy and paste the following code to create this component:
 
 ::
 
-## Features
+## 功能特性
 
 - **3D Rotating Carousel**: Displays a rotating 3D carousel using Three.js.
 - **Smooth Infinite Rotation**: The carousel continuously rotates smoothly.

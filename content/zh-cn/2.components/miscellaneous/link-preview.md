@@ -3,19 +3,19 @@ title: Link Preview
 description: Dynamic link previews for your anchor tags
 ---
 
-::ComponentLoader{label="Preview" componentName="LinkPreviewDemo" type="examples"}  
+::ComponentLoader{label="预览" componentName="LinkPreviewDemo" type="examples"}  
 ::
 
 ::alert{type="info"}
-**Note:** This component uses `qss` npm package as a dependency.
+**注意:** This component uses `qss` npm package as a dependency.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="link-preview"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -41,7 +41,7 @@ yarn add qss
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="LinkPreview.vue" language="vue" componentName="LinkPreview" type="ui" id="link-preview"}  
 ::
@@ -49,7 +49,7 @@ Copy and paste the following code
 
 ## API
 
-| Prop Name   | Type      | Default | Description                                                                                 |
+| Prop 名称   | Type      | 默认值  | 描述                                                                                        |
 | ----------- | --------- | ------- | ------------------------------------------------------------------------------------------- |
 | `class`     | `string`  | `""`    | Custom class applied to the main element.                                                   |
 | `linkClass` | `string`  | `""`    | Custom class applied to the link element.                                                   |

@@ -3,35 +3,35 @@ title: Glare Card
 description: A glare effect that happens on hover, as seen on Linear's website.
 ---
 
-::ComponentLoader{label="Preview" componentName="GlareCardDemo" type="examples" id="glare-card"}
+::ComponentLoader{label="预览" componentName="GlareCardDemo" type="examples" id="glare-card"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="glare-card"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="GlareCard.vue" language="vue" componentName="GlareCard" type="ui" id="glare-card"}
 ::
 
-## Examples
+## 示例
 
 ### Multiple Cards
 
-::ComponentLoader{label="Preview" componentName="GlareMultiCardDemo" type="examples" id="glare-card"}
+::ComponentLoader{label="预览" componentName="GlareMultiCardDemo" type="examples" id="glare-card"}
 ::
 
 ## API
 
-| Prop Name | Type     | Default | Description                                               |
-| --------- | -------- | ------- | --------------------------------------------------------- |
-| `class`   | `string` | `-`     | Additional Tailwind CSS class names to apply to the card. |
+| Prop 名称 | 类型     | 默认值 | 描述                                                      |
+| --------- | -------- | ------ | --------------------------------------------------------- |
+| `class`   | `string` | `-`    | Additional Tailwind CSS class names to apply to the card. |
 
-## Features
+## 功能特性
 
 - **Slot Support**: Easily add any content inside the component using the default slot.
 

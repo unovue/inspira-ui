@@ -3,30 +3,30 @@ title: Morphing Tabs
 description: This is a morphing tabs interaction, recreated by Preet's work and featuring the gooey effect component.
 ---
 
-::ComponentLoader{label="Preview" componentName="MorphingTabsDemo" type="examples" id="morphing-tabs"}
+::ComponentLoader{label="预览" componentName="MorphingTabsDemo" type="examples" id="morphing-tabs"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="morphing-tabs"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="MorphingTabs.vue" language="vue" componentName="MorphingTabs" type="ui" id="morphing-tabs"}
 ::
 
 ## API
 
-| Prop Name          | Type       | Default | Description                                    |
-| ------------------ | ---------- | ------- | ---------------------------------------------- |
-| `class`            | `string`   | `""`    | Additional class names to style the component. |
-| `tabs`             | `string[]` | `[]`    | Tabs.                                          |
-| `activeTab`        | `string`   | `""`    | Current active Tab.                            |
-| `margin`           | `number`   | `20`    | Active tab margin left and right.              |
-| `blurStdDeviation` | `number`   | `6`     | Svg blur stdDeviation, tab rounded use it.     |
+| Prop 名称          | Type       | 默认值 | 描述                                           |
+| ------------------ | ---------- | ------ | ---------------------------------------------- |
+| `class`            | `string`   | `""`   | Additional class names to style the component. |
+| `tabs`             | `string[]` | `[]`   | Tabs.                                          |
+| `activeTab`        | `string`   | `""`   | Current active Tab.                            |
+| `margin`           | `number`   | `20`   | Active tab margin left and right.              |
+| `blurStdDeviation` | `number`   | `6`    | Svg blur stdDeviation, tab rounded use it.     |
 
 ## Credits
 

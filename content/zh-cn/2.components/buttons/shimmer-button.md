@@ -3,24 +3,24 @@ title: Shimmer Button
 description: A button with a shimmering animated effect.
 ---
 
-::ComponentLoader{label="Preview" componentName="ShimmerButtonDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="ShimmerButtonDemo" type="examples"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="shimmer-button"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="ShimmerButton.vue" language="vue" componentName="ShimmerButton" type="ui" id="shimmer-button"}
 ::
 
 ## API
 
-| Prop Name         | Type     | Default              | Description                                             |
+| Prop 名称         | 类型     | Default              | 描述                                                    |
 | ----------------- | -------- | -------------------- | ------------------------------------------------------- |
 | `class`           | `string` | `""`                 | Additional CSS classes to apply to the button.          |
 | `shimmerColor`    | `string` | `"#ffffff"`          | Color of the shimmer effect.                            |
@@ -29,7 +29,7 @@ Copy and paste the following code
 | `shimmerDuration` | `string` | `"3s"`               | Duration of the shimmer animation.                      |
 | `background`      | `string` | `"rgba(0, 0, 0, 1)"` | Background color of the button. Can be rgb or hex code. |
 
-## Features
+## 功能特性
 
 - **Shimmering Effect**: Displays a continuous shimmering animation on the button.
 - **Customizable Appearance**: Adjust shimmer color, size, duration, border radius, and background color.

@@ -3,17 +3,17 @@ title: Icon Cloud
 description: An interactive 3D tag cloud component
 ---
 
-::ComponentLoader{label="Preview" componentName="IconCloudDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="IconCloudDemo" type="examples"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="icon-cloud"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -24,10 +24,10 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name | Type     | Default | Description                                   |
-| --------- | -------- | ------- | --------------------------------------------- |
-| `class`   | `string` | -       | Additional classes for styling the component. |
-| `images`  | `array`  | `[]`    | Array of image URLs to render in the cloud    |
+| Prop 名称 | 类型     | 默认值 | 描述                                          |
+| --------- | -------- | ------ | --------------------------------------------- |
+| `class`   | `string` | -      | Additional classes for styling the component. |
+| `images`  | `array`  | `[]`   | Array of image URLs to render in the cloud    |
 
 ## Credits
 

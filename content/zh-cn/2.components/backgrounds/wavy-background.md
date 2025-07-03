@@ -3,19 +3,19 @@ title: Wavy Background
 description: A cool background effect with waves that move.
 ---
 
-::ComponentLoader{label="Preview" componentName="WavyBackgroundDemo" type="examples" id="wavy-background"}
+::ComponentLoader{label="预览" componentName="WavyBackgroundDemo" type="examples" id="wavy-background"}
 ::
 
 ::alert{type="info"}
-**Note:** This component requires `simplex-noise` as a dependency.
+**注意:** This component requires `simplex-noise` as a dependency.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="wavy-background"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -41,7 +41,7 @@ yarn add simplex-noise
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="WavyBackground.vue" language="vue" componentName="WavyBackground" type="ui" id="wavy-background"}  
 ::
@@ -49,7 +49,7 @@ Copy and paste the following code
 
 ## API
 
-| Prop Name        | Type               | Default                                                   | Description                                                |
+| Prop 名称        | Type               | Default                                                   | 描述                                                       |
 | ---------------- | ------------------ | --------------------------------------------------------- | ---------------------------------------------------------- |
 | `class`          | `string`           | `-`                                                       | The content to be displayed on top of the wavy background. |
 | `containerClass` | `string`           | `-`                                                       | The CSS class to apply to the content container.           |
@@ -61,7 +61,7 @@ Copy and paste the following code
 | `waveOpacity`    | `number`           | `0.5`                                                     | Base radius of particles.                                  |
 | `[key: string]`  | `any`              | `-`                                                       | Range of radius variation for particles.                   |
 
-## Features
+## 功能特性
 
 - **Slot Support**: Easily add any content inside the component using the default slot.
 

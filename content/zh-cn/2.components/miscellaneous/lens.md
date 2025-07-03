@@ -3,17 +3,17 @@ title: Lens
 description: A lens component to zoom into images, videos, or practically anything.
 ---
 
-::ComponentLoader{label="Preview" componentName="LensDemo" type="examples" id="lens"}
+::ComponentLoader{label="预览" componentName="LensDemo" type="examples" id="lens"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="lens"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -23,16 +23,16 @@ Copy and paste the following code in the same folder
 
 ::
 
-## Examples
+## 示例
 
 Lens are static in center
 
-::ComponentLoader{label="Preview" componentName="StaticLensDemo" type="examples" id="lens"}
+::ComponentLoader{label="预览" componentName="StaticLensDemo" type="examples" id="lens"}
 ::
 
 ## API
 
-| Prop Name    | Type                       | Default              | Description                                                                  |
+| Prop 名称    | Type                       | Default              | 描述                                                                         |
 | ------------ | -------------------------- | -------------------- | ---------------------------------------------------------------------------- |
 | `zoomFactor` | `number`                   | `1.5`                | The magnification factor for the lens.                                       |
 | `lensSize`   | `number`                   | `170`                | The diameter of the lens in pixels.                                          |
@@ -40,7 +40,7 @@ Lens are static in center
 | `isStatic`   | `boolean`                  | `false`              | If true, the lens stays in a fixed position; if false, it follows the mouse. |
 | `hovering`   | `boolean`                  | `"false"`            | External control for the hover state.                                        |
 
-## Features
+## 功能特性
 
 - **Slot Support**: Easily add any content inside the component using the default slot.
 

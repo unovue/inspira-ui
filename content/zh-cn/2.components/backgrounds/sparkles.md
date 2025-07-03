@@ -3,31 +3,31 @@ title: Sparkles
 description: A configurable sparkles component that can be used as a background or as a standalone component.
 ---
 
-::ComponentLoader{label="Preview" componentName="SparklesDemo" type="examples" id="sparkles"}
+::ComponentLoader{label="预览" componentName="SparklesDemo" type="examples" id="sparkles"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="sparkles"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="Sparkles.vue" language="vue" componentName="Sparkles" type="ui" id="sparkles"}
 ::
 
-## Examples
+## 示例
 
 Sparkles Full Page
 
-::ComponentLoader{label="Preview" componentName="SparklesFullPageDemo" type="examples" id="sparkles"}
+::ComponentLoader{label="预览" componentName="SparklesFullPageDemo" type="examples" id="sparkles"}
 ::
 
 ## API
 
-| Prop Name         | Type     | Default     | Description                                                                            |
+| Prop 名称         | 类型     | Default     | 描述                                                                                   |
 | ----------------- | -------- | ----------- | -------------------------------------------------------------------------------------- |
 | `background`      | `string` | `'#0d47a1'` | Background color of the container. Use 'transparent' to see through to parent element. |
 | `particleColor`   | `string` | `'#ffffff'` | Color of the particles. Accepts any valid CSS color value.                             |

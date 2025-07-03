@@ -3,30 +3,30 @@ title: iPhone Mockup
 description: An SVG mockup of an iPhone.
 ---
 
-::ComponentLoader{label="Preview" componentName="iPhone15ProMockupDemo" type="examples" id="mockups"}
+::ComponentLoader{label="预览" componentName="iPhone15ProMockupDemo" type="examples" id="mockups"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="iphone-mockup"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="iPhone15ProMockup.vue" language="vue" componentName="iPhone15ProMockup" type="ui" id="iphone-mockup"}
 ::
 
 ## API
 
-| Prop Name | Type     | Default | Description                                    |
-| --------- | -------- | ------- | ---------------------------------------------- |
-| `width`   | `number` | `433`   | Width of the mockup SVG in pixels.             |
-| `height`  | `number` | `882`   | Height of the mockup SVG in pixels.            |
-| `src`     | `string` | `null`  | URL of the image to display inside the mockup. |
+| Prop 名称 | 类型     | 默认值 | 描述                                           |
+| --------- | -------- | ------ | ---------------------------------------------- |
+| `width`   | `number` | `433`  | Width of the mockup SVG in pixels.             |
+| `height`  | `number` | `882`  | Height of the mockup SVG in pixels.            |
+| `src`     | `string` | `null` | URL of the image to display inside the mockup. |
 
-## Features
+## 功能特性
 
 - **Realistic iPhone 15 Pro Mockup**: Provides an accurate SVG representation of the iPhone 15 Pro, perfect for showcasing mobile app designs or website previews.
 - **Customizable Dimensions**: Adjust the `width` and `height` props to fit your specific design requirements.

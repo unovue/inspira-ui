@@ -1,31 +1,31 @@
 ---
-title: Falling Stars Background
+title: 流星背景
 description: A stunning animated starfield background with glowing and sharp trail effects.
 ---
 
-::ComponentLoader{label="Preview" componentName="FallingStarsBgDemo" type="examples" id="backgrounds"}
+::ComponentLoader{label="预览" componentName="FallingStarsBgDemo" type="examples" id="backgrounds"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="bg-falling-stars"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="FallingStarsBg.vue" language="vue" componentName="FallingStarsBg" type="ui" id="bg-falling-stars"}
 ::
 
 ## API
 
-| Prop Name | Type     | Default  | Description                                 |
+| Prop 名称 | 类型     | Default  | 描述                                        |
 | --------- | -------- | -------- | ------------------------------------------- |
 | `color`   | `string` | `"#FFF"` | Color of the stars in the starfield.        |
 | `count`   | `number` | `200`    | Number of stars displayed in the animation. |
 
-## Features
+## 功能特性
 
 - **Dynamic Starfield**: Creates a 3D starfield effect with stars moving toward the viewer.
 - **Glowing and Sharp Trail Effects**: Each star has a sharp line and a blurred, glowing trail.

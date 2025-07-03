@@ -1,21 +1,21 @@
 ---
-title: Bubbles Background
+title: 泡泡背景
 description: An animated background with floating bubbles.
 ---
 
-::ComponentLoader{label="Preview" componentName="BubblesBgDemo2" type="examples" id="backgrounds"}
+::ComponentLoader{label="预览" componentName="BubblesBgDemo2" type="examples" id="backgrounds"}
 ::
 
 ::alert{type="info"}
-**Note:** This component uses Three.js & requires `three` npm package as a dependency.
+**注意:** This component uses Three.js & requires `three` npm package as a dependency.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="bubbles-bg"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -45,7 +45,7 @@ yarn add --dev @types/three
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="BubblesBg.vue" language="vue" componentName="BubblesBg" type="ui" id="bg-bubbles"}  
 ::
@@ -55,16 +55,16 @@ Copy and paste the following code
 
 Without Blur or overlay
 
-::ComponentLoader{label="Preview" componentName="BubblesBgDemo" type="examples" id="backgrounds"}
+::ComponentLoader{label="预览" componentName="BubblesBgDemo" type="examples" id="backgrounds"}
 ::
 
 ## API
 
-| Prop Name | Type     | Default | Description                                                     |
-| --------- | -------- | ------- | --------------------------------------------------------------- |
-| `blur`    | `number` | `0`     | Amount of blur to apply to the background, specified in pixels. |
+| Prop 名称 | 类型     | 默认值 | 描述                                                            |
+| --------- | -------- | ------ | --------------------------------------------------------------- |
+| `blur`    | `number` | `0`    | Amount of blur to apply to the background, specified in pixels. |
 
-## Features
+## 功能特性
 
 - **Animated Bubble Background**: Renders a captivating background with animated, floating bubbles using 3D graphics.
 

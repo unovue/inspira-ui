@@ -6,25 +6,25 @@ navBadges:
     type: lime
 ---
 
-::ComponentLoader{label="Preview" componentName="TestimonialSliderDemo" type="examples" id="testimonial-slider"}
+::ComponentLoader{label="预览" componentName="TestimonialSliderDemo" type="examples" id="testimonial-slider"}
 ::
 
 ## API
 
-| Prop Name      | Type                                                                | Default | Description                                                            |
-| -------------- | ------------------------------------------------------------------- | ------- | ---------------------------------------------------------------------- |
-| `testimonials` | `Array<{ img: string; quote: string; name: string; role: string }>` | `[]`    | Array of testimonial objects displayed by the slider.                  |
-| `autoRotate`   | `boolean`                                                           | `true`  | If `true`, the slider advances automatically every `duration` seconds. |
-| `duration`     | `number`                                                            | `5`     | Interval in seconds between slides when auto‑rotation is enabled.      |
+| Prop 名称      | Type                                                                | 默认值 | 描述                                                                   |
+| -------------- | ------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------- |
+| `testimonials` | `Array<{ img: string; quote: string; name: string; role: string }>` | `[]`   | Array of testimonial objects displayed by the slider.                  |
+| `autoRotate`   | `boolean`                                                           | `true` | If `true`, the slider advances automatically every `duration` seconds. |
+| `duration`     | `number`                                                            | `5`    | Interval in seconds between slides when auto‑rotation is enabled.      |
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="spinning-text"}
 ::
 
-## Install Manually
+## 手动安装
 
-You can copy and paste the following code to create this component:
+You can 复制并粘贴以下代码： to create this component:
 
 ::code-group
 
@@ -33,7 +33,7 @@ You can copy and paste the following code to create this component:
 
 ::
 
-## Features
+## 功能特性
 
 - **Avatar & Quote Pairing** — Images animate with a subtle rotation while quotes fade/slide in.
 - **Auto‑Rotation** — Enable continuous cycling with the `autoRotate` prop.

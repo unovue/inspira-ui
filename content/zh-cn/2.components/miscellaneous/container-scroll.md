@@ -3,17 +3,17 @@ title: Container Scroll
 description: A container scrolling effect that transforms the content inside based on scroll progress. Features smooth transitions with scaling and rotating effects on scroll.
 ---
 
-::ComponentLoader{label="Preview" componentName="ContainerScrollDemo" type="examples"}  
+::ComponentLoader{label="预览" componentName="ContainerScrollDemo" type="examples"}  
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="container-scroll"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -33,11 +33,11 @@ The `ContainerScroll` component creates a 3D scroll effect. As the user scrolls,
 
 #### Props
 
-| Prop Name    | Type   | Default | Description                                                                   |
-| ------------ | ------ | ------- | ----------------------------------------------------------------------------- |
-| `rotate`     | Number | `0`     | Controls the rotation of the inner content based on the scroll progress.      |
-| `scale`      | Number | `1`     | Controls the scaling transformation applied to the content during the scroll. |
-| `translateY` | Number | `0`     | Controls the vertical translation of the title during the scroll.             |
+| Prop 名称    | Type   | 默认值 | 描述                                                                          |
+| ------------ | ------ | ------ | ----------------------------------------------------------------------------- |
+| `rotate`     | Number | `0`    | Controls the rotation of the inner content based on the scroll progress.      |
+| `scale`      | Number | `1`    | Controls the scaling transformation applied to the content during the scroll. |
+| `translateY` | Number | `0`    | Controls the vertical translation of the title during the scroll.             |
 
 #### Usage
 
@@ -58,9 +58,9 @@ The `ContainerScrollTitle` component handles the title's transformation as the u
 
 #### Props
 
-| Prop Name   | Type   | Default | Description                                     |
-| ----------- | ------ | ------- | ----------------------------------------------- |
-| `translate` | Number | `0`     | Controls the vertical translation of the title. |
+| Prop 名称   | Type   | 默认值 | 描述                                            |
+| ----------- | ------ | ------ | ----------------------------------------------- |
+| `translate` | Number | `0`    | Controls the vertical translation of the title. |
 
 #### Usage
 
@@ -76,10 +76,10 @@ The `ContainerScrollCard` component applies scale and rotation effects to the ca
 
 #### Props
 
-| Prop Name | Type   | Default | Description                                      |
-| --------- | ------ | ------- | ------------------------------------------------ |
-| `rotate`  | Number | `0`     | Controls the rotation effect of the card.        |
-| `scale`   | Number | `1`     | Controls the scaling effect applied to the card. |
+| Prop 名称 | Type   | 默认值 | 描述                                             |
+| --------- | ------ | ------ | ------------------------------------------------ |
+| `rotate`  | Number | `0`    | Controls the rotation effect of the card.        |
+| `scale`   | Number | `1`    | Controls the scaling effect applied to the card. |
 
 #### Usage
 
@@ -91,7 +91,7 @@ The `ContainerScrollCard` component applies scale and rotation effects to the ca
 
 ::
 
-## Features
+## 功能特性
 
 - **3D Scroll Effects**: The content transforms based on scroll progress, including rotation, scaling, and translation.
 - **Responsive Design**: Adjusts behavior dynamically for mobile and desktop views.
@@ -106,7 +106,7 @@ To customize the scroll animations and responsiveness, you can set the following
 - **`--rotate-start`**: Initial rotation value for the card.
 - **`--rotate-end`**: Final rotation value for the card as the scroll progresses.
 
-## Features
+## 功能特性
 
 - **Dynamic Transformations**: Based on scroll position, the content scales, rotates, and translates for a 3D effect.
 - **Flexible Content**: Place any custom content inside the title and card slots.

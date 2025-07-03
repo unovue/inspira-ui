@@ -4,17 +4,17 @@ description: Simple animated pattern background to make your sections stand out.
 ---
 
 Grid background with dot
-::ComponentLoader{label="Preview" componentName="PatternBackgroundDotDemo" type="examples" id="pattern-background"}
+::ComponentLoader{label="预览" componentName="PatternBackgroundDotDemo" type="examples" id="pattern-background"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="pattern-background"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -23,23 +23,23 @@ Copy and paste the following code in the same folder
 
 ::
 
-## Examples
+## 示例
 
 Grid background with big dot and ellipse on top
-::ComponentLoader{label="Preview" componentName="PatternBackgroundBigDotDemo" type="examples" id="pattern-background"}
+::ComponentLoader{label="预览" componentName="PatternBackgroundBigDotDemo" type="examples" id="pattern-background"}
 ::
 
 Grid background without animation
-::ComponentLoader{label="Preview" componentName="PatternBackgroundGridDemo" type="examples" id="pattern-background"}
+::ComponentLoader{label="预览" componentName="PatternBackgroundGridDemo" type="examples" id="pattern-background"}
 ::
 
 Small grid background with animation
-::ComponentLoader{label="Preview" componentName="PatternBackgroundGridSmallDemo" type="examples" id="pattern-background"}
+::ComponentLoader{label="预览" componentName="PatternBackgroundGridSmallDemo" type="examples" id="pattern-background"}
 ::
 
 ## API
 
-| Prop Name   | Type                                                                                                   | Default   | Description                                                                                                                                                    |
+| Prop 名称   | Type                                                                                                   | Default   | 描述                                                                                                                                                           |
 | ----------- | ------------------------------------------------------------------------------------------------------ | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `animate`   | `boolean`                                                                                              | `false`   | Set `true` if you want to animate the background.                                                                                                              |
 | `direction` | `top` \| `bottom` \| `left` \| `right` \| `top-left` \| `top-right` \| `bottom-left` \| `bottom-right` | `top`     | Direction of the animation movement. You can use the const `PATTERN_BACKGROUND_DIRECTION.`                                                                     |

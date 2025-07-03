@@ -3,17 +3,17 @@ title: Logo Origami
 description: Animated flipping logo with origami effect.
 ---
 
-::ComponentLoader{label="Preview" componentName="LogoOrigamiDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="LogoOrigamiDemo" type="examples"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="logo-origami"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -23,13 +23,13 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name  | Type     | Default | Description                                |
-| ---------- | -------- | ------- | ------------------------------------------ |
-| `class`    | `string` | `""`    | Additional CSS classes for custom styling. |
-| `duration` | `number` | `1.5`   | Duration of the flip animation in seconds. |
-| `delay`    | `number` | `2.5`   | Delay between flip animations in seconds.  |
+| Prop 名称  | 类型     | 默认值 | 描述                                       |
+| ---------- | -------- | ------ | ------------------------------------------ |
+| `class`    | `string` | `""`   | Additional CSS classes for custom styling. |
+| `duration` | `number` | `1.5`  | Duration of the flip animation in seconds. |
+| `delay`    | `number` | `2.5`  | Delay between flip animations in seconds.  |
 
-## Features
+## 功能特性
 
 - **Origami Flip Animation**: Animates flipping between multiple child components with an origami-style effect.
 

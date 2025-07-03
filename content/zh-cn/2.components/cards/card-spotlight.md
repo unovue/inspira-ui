@@ -3,31 +3,31 @@ title: Card Spotlight
 description: A card component with a dynamic spotlight effect that follows the mouse cursor, enhancing visual interactivity.
 ---
 
-::ComponentLoader{label="Preview" componentName="CardSpotlightDemo" type="examples"}  
+::ComponentLoader{label="预览" componentName="CardSpotlightDemo" type="examples"}  
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="card-spotlight"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="CardSpotlight.vue" language="vue" componentName="CardSpotlight" type="ui" id="card-spotlight"}
 ::
 
 ## API
 
-| Prop Name         | Type     | Default     | Description                                                 |
+| Prop 名称         | 类型     | Default     | 描述                                                        |
 | ----------------- | -------- | ----------- | ----------------------------------------------------------- |
 | `gradientSize`    | `number` | `200`       | Radius in pixels of the spotlight effect.                   |
 | `gradientColor`   | `string` | `'#262626'` | The color of the spotlight gradient.                        |
 | `gradientOpacity` | `number` | `0.8`       | The opacity level of the spotlight gradient effect.         |
 | `slotClass`       | `string` | `undefined` | Class to apply to the parent container containing the slot. |
 
-## Features
+## 功能特性
 
 - **Interactive Spotlight Effect**: Displays a dynamic spotlight that follows the user's mouse cursor, enhancing user engagement and visual appeal.
 

@@ -3,17 +3,17 @@ title: Book
 description: A 3D book component featuring customizable sizes and color gradients.
 ---
 
-::ComponentLoader{label="Preview" componentName="BookDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="BookDemo" type="examples"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="book"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -90,33 +90,33 @@ export { default as BookDescription } from "./BookDescription.vue";
 
 #### `Book`
 
-| Prop Name    | Type    | Default | Description                                   |
-| ------------ | ------- | ------- | --------------------------------------------- |
-| `class`      | String  | -       | Additional classes for styling the component. |
-| `duration`   | Number  | 1000    | Animation duration in milliseconds.           |
-| `color`      | String  | "zinc"  | Color theme for the book gradient.            |
-| `isStatic`   | Boolean | false   | Disables hover animations when true.          |
-| `size`       | String  | "md"    | Size variant of the book.                     |
-| `radius`     | String  | "md"    | Border radius variant of the book.            |
-| `shadowSize` | String  | "lg"    | Shadow size variant of the book.              |
+| Prop 名称    | Type    | 默认值 | 描述                                          |
+| ------------ | ------- | ------ | --------------------------------------------- |
+| `class`      | String  | -      | Additional classes for styling the component. |
+| `duration`   | Number  | 1000   | Animation duration in milliseconds.           |
+| `color`      | String  | "zinc" | Color theme for the book gradient.            |
+| `isStatic`   | Boolean | false  | Disables hover animations when true.          |
+| `size`       | String  | "md"   | Size variant of the book.                     |
+| `radius`     | String  | "md"   | Border radius variant of the book.            |
+| `shadowSize` | String  | "lg"   | Shadow size variant of the book.              |
 
 #### `BookHeader`
 
-| Prop Name | Type   | Default | Description                            |
-| --------- | ------ | ------- | -------------------------------------- |
-| `class`   | String | -       | Additional classes for custom styling. |
+| Prop 名称 | Type   | 默认值 | 描述                                   |
+| --------- | ------ | ------ | -------------------------------------- |
+| `class`   | String | -      | Additional classes for custom styling. |
 
 #### `BookTitle`
 
-| Prop Name | Type   | Default | Description                            |
-| --------- | ------ | ------- | -------------------------------------- |
-| `class`   | String | -       | Additional classes for custom styling. |
+| Prop 名称 | Type   | 默认值 | 描述                                   |
+| --------- | ------ | ------ | -------------------------------------- |
+| `class`   | String | -      | Additional classes for custom styling. |
 
 #### `BookDescription`
 
-| Prop Name | Type   | Default | Description                            |
-| --------- | ------ | ------- | -------------------------------------- |
-| `class`   | String | -       | Additional classes for custom styling. |
+| Prop 名称 | Type   | 默认值 | 描述                                   |
+| --------- | ------ | ------ | -------------------------------------- |
+| `class`   | String | -      | Additional classes for custom styling. |
 
 ::
 

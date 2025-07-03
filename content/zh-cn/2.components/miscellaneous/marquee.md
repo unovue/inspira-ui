@@ -3,17 +3,17 @@ title: Marquee
 description: A customizable scrolling component that loops its content horizontally or vertically, with configurable direction, hover pause, and repeat options.
 ---
 
-::ComponentLoader{label="Preview" componentName="MarqueeDemo" type="examples" id="marquee"}  
+::ComponentLoader{label="预览" componentName="MarqueeDemo" type="examples" id="marquee"}  
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="marquee"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -24,7 +24,7 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name      | Type      | Default | Description                                                               |
+| Prop 名称      | Type      | 默认值  | 描述                                                                      |
 | -------------- | --------- | ------- | ------------------------------------------------------------------------- |
 | `class`        | `string`  | `''`    | Custom CSS classes to apply to the outermost container of the marquee.    |
 | `reverse`      | `boolean` | `false` | Sets the scrolling direction to reverse (right to left or bottom to top). |
@@ -32,7 +32,7 @@ Copy and paste the following code in the same folder
 | `vertical`     | `boolean` | `false` | Sets the scrolling direction to vertical instead of horizontal.           |
 | `repeat`       | `number`  | `4`     | Number of times the content inside the marquee should be repeated.        |
 
-## Features
+## 功能特性
 
 - **Horizontal & Vertical Scrolling**: You can scroll the content horizontally (default) or vertically with the `vertical` prop.
 - **Reverse Direction**: Enable reverse scrolling for dynamic effects using the `reverse` prop.
@@ -47,7 +47,7 @@ You can customize the speed and gap between the items by setting the following C
 - **`--duration`**: Controls the speed of the marquee animation.
 - **`--gap`**: Sets the space between repeated items in the marquee.
 
-## Features
+## 功能特性
 
 - **Fully Customizable**: Easily adjust the duration, gap, direction, and hover behavior to suit your needs.
 - **Smooth Transitions**: The component uses CSS keyframes to achieve smooth scrolling and transitions.

@@ -3,24 +3,24 @@ title: Balance Slider
 description: A dynamic balance slider with adjustable colors, limits, and interactive tooltip.
 ---
 
-::ComponentLoader{label="Preview" componentName="BalanceSliderDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="BalanceSliderDemo" type="examples"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="balance-slider"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="BalanceSlider.vue" language="vue" componentName="BalanceSlider" type="ui" id="balance-slider"}
 ::
 
 ## API
 
-| Prop Name        | Type     | Default     | Description                                         |
+| Prop 名称        | 类型     | Default     | 描述                                                |
 | ---------------- | -------- | ----------- | --------------------------------------------------- |
 | `initialValue`   | `number` | `50`        | Initial position of the slider (0-100).             |
 | `leftColor`      | `string` | `"#e68a00"` | Background color for the left side of the slider.   |
@@ -31,7 +31,7 @@ Copy and paste the following code
 | `rightContent`   | `string` | `"RIGHT"`   | Text displayed in the tooltip for the right side.   |
 | `indicatorColor` | `string` | `"#FFFFFF"` | Color of the central indicator on the slider.       |
 
-## Features
+## 功能特性
 
 - **Dual-Sided Color Control**: Customize the left and right side colors of the slider to create a distinct balance effect.
 - **Interactive Tooltip**: Displays real-time percentage values for both sides, with customizable content for left and right labels.

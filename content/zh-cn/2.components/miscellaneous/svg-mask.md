@@ -3,17 +3,17 @@ title: SVG Mask
 description: A dynamic SVG mask component that reveals content with hover and mouse movement.
 ---
 
-::ComponentLoader{label="Preview" componentName="SvgMaskDemo" type="examples" id="svg-mask"}
+::ComponentLoader{label="预览" componentName="SvgMaskDemo" type="examples" id="svg-mask"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="svg-mask"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -40,13 +40,13 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name    | Type     | Default | Description                                |
-| ------------ | -------- | ------- | ------------------------------------------ |
-| `class`      | `string` | `""`    | Additional CSS classes for custom styling. |
-| `size`       | `number` | `10`    | Initial size of the mask in pixels.        |
-| `revealSize` | `number` | `600`   | Size of the mask during hover in pixels.   |
+| Prop 名称    | 类型     | 默认值 | 描述                                       |
+| ------------ | -------- | ------ | ------------------------------------------ |
+| `class`      | `string` | `""`   | Additional CSS classes for custom styling. |
+| `size`       | `number` | `10`   | Initial size of the mask in pixels.        |
+| `revealSize` | `number` | `600`  | Size of the mask during hover in pixels.   |
 
-## Features
+## 功能特性
 
 - **Hover-Activated Mask**: The SVG mask dynamically enlarges when hovered, revealing the content beneath.
 - **Mouse Tracking**: The mask follows the cursor, creating an engaging and interactive effect.

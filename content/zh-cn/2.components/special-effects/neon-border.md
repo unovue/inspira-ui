@@ -3,12 +3,12 @@ title: Neon Border
 description: A visually appealing neon border component with customizable animations and colors.
 ---
 
-::ComponentLoader{label="Preview" componentName="NeonBorderDemo" type="examples" id="neon-border"}
+::ComponentLoader{label="预览" componentName="NeonBorderDemo" type="examples" id="neon-border"}
 ::
 
 ## API
 
-| Prop Name       | Type                         | Default     | Description                                     |
+| Prop 名称       | Type                         | Default     | 描述                                            |
 | --------------- | ---------------------------- | ----------- | ----------------------------------------------- |
 | `color1`        | `string`                     | `"#0496ff"` | Primary color of the neon border.               |
 | `color2`        | `string`                     | `"#ff0a54"` | Secondary color of the neon border.             |
@@ -37,21 +37,21 @@ Add following entry to inline theme in your `main.css` file.
 
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="neon-border"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 ::CodeViewerTab{label="NeonBorder.vue" language="vue" componentName="NeonBorder" type="ui" id="neon-border"}
 ::
 ::
 
-## Features
+## 功能特性
 
 - **Customizable Colors**: Allows setting primary and secondary neon colors.
 - **Three Animation Modes**: Supports `none`, `half`, and `full` animation effects.

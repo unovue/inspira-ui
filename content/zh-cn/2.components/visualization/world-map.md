@@ -3,12 +3,12 @@ title: World Map
 description: Displays a customizable world map with animated arcs and pulse effects for geographical points.
 ---
 
-::ComponentLoader{label="Preview" componentName="WorldMapDemo" type="examples" id="world-map"}
+::ComponentLoader{label="预览" componentName="WorldMapDemo" type="examples" id="world-map"}
 ::
 
 ## API
 
-| Prop Name    | Type                                                                                                                 | Default     | Description                                                                             |
+| Prop 名称    | Type                                                                                                                 | Default     | 描述                                                                                    |
 | ------------ | -------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------------------------------- |
 | `dots`       | `Array<{ start: { lat: number; lng: number; label?: string }, end: { lat: number; lng: number; label?: string } }> ` | `[]`        | Array of dot objects, each containing a start and end coordinate (latitude, longitude). |
 | `class`      | `string`                                                                                                             | `""`        | Additional CSS classes for custom styling.                                              |
@@ -17,15 +17,15 @@ description: Displays a customizable world map with animated arcs and pulse effe
 | `mapBgColor` | `string`                                                                                                             | —           | Background color of the map. (**Required**)                                             |
 
 ::alert{type="info"}
-**Note:** This component uses Spline & requires `dotted-map` npm package as a dependency.
+**注意:** This component uses Spline & requires `dotted-map` npm package as a dependency.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="world-map"}
 ::
 
-## Install Manually
+## 手动安装
 
 ### Install the dependencies
 
@@ -51,7 +51,7 @@ yarn add dotted-map
 
 ## Component Code
 
-You can copy and paste the following code to create this component:
+You can 复制并粘贴以下代码： to create this component:
 
 ::code-group
 
@@ -60,7 +60,7 @@ You can copy and paste the following code to create this component:
 
 ::
 
-## Features
+## 功能特性
 
 - **Animated Arcs**: Smooth arcs between two geographical points using an SVG `path`.
 - **Dotted Background**: Renders a dotted map using the DottedMap library.

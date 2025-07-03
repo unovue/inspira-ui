@@ -3,24 +3,24 @@ title: Images Slider
 description: A full page slider with images that can be navigated with the keyboard.
 ---
 
-::ComponentLoader{label="Preview" componentName="ImagesSliderDemo" type="examples" id="images-slider"}  
+::ComponentLoader{label="预览" componentName="ImagesSliderDemo" type="examples" id="images-slider"}  
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="images-slider"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="ImagesSlider.vue" language="vue" componentName="ImagesSlider" type="ui" id="images-slider"}
 ::
 
 ## API
 
-| Prop Name          | Type                       | Default                                           | Description                                                                    |
+| Prop 名称          | Type                       | Default                                           | 描述                                                                           |
 | ------------------ | -------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------ |
 | `images`           | `string[]`                 | `[]`                                              | An array of image URLs to show in the slider.                                  |
 | `hideOverlay`      | `boolean`                  | `false`                                           | Don't create an overlay for the image slider. Slot won't be rendered.          |
@@ -34,7 +34,7 @@ Copy and paste the following code
 | `perspective`      | `string`                   | `'1000px'`                                        | The perspective to apply to the slider container.                              |
 | `modelValue`       | `number`                   | `0`                                               | Two-way binding for the current slide image index.                             |
 
-## Features
+## 功能特性
 
 - **Horizontal & Vertical Animations**: You can animate the images horizontally (default) or vertically with the `direction` prop.
 - **Preloaded Images**: Images are preloaded before showing, preventing flickering loading animation.

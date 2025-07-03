@@ -14,7 +14,6 @@
         </UiButton>
       </a>
     </div>
-    <!-- {{ $t("common.InspiraUIPro") }} -->
     <InspiraCarbonAds :is-home-page="true" />
 
     <IntegrationSection />
@@ -29,8 +28,8 @@
 const config = useConfig();
 
 useSeoMeta({
-  title: `Inspira UI: 使用 Vue & Nuxt 构建漂亮的网站`,
-  ogTitle: `Inspira UI:使用 Vue & Nuxt 构建漂亮的网站`,
+  title: `Inspira UI: Build beautiful websites using Vue & Nuxt`,
+  ogTitle: `Inspira UI: Build beautiful websites using Vue & Nuxt`,
   description:
     "Open Source components to build stunning animated interfaces effortlessly using Vue & Nuxt.",
   ogDescription:

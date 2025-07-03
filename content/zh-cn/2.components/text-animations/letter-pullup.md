@@ -3,24 +3,24 @@ title: Letter Pullup
 description: Staggered letter pull up text animation.
 ---
 
-::ComponentLoader{label="Preview" componentName="LetterPullupDemo" type="examples" id="letter-pullup"}
+::ComponentLoader{label="预览" componentName="LetterPullupDemo" type="examples" id="letter-pullup"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="letter-pullup"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="LetterPullup.vue" language="vue" componentName="LetterPullup" type="ui" id="letter-pullup"}
 ::
 
 ## API
 
-| Prop Name | Type     | Default                    | Description                                        |
+| Prop 名称 | 类型     | Default                    | 描述                                               |
 | --------- | -------- | -------------------------- | -------------------------------------------------- |
 | `class`   | `string` | `-`                        | The class to be applied to the component.          |
 | `words`   | `string` | `Staggered Letter Pull Up` | Text to animate.                                   |

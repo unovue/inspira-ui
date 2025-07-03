@@ -1,21 +1,21 @@
 ---
-title: Particle Whirlpool
-description: An animated background with swirling particles.
+title: 粒子漩涡
+description: 一个带有粒子旋转的动画背景。
 ---
 
-::ComponentLoader{label="Preview" componentName="ParticleWhirlpoolBgDemo" type="examples" id="backgrounds"}
+::ComponentLoader{label="预览" componentName="ParticleWhirlpoolBgDemo" type="examples" id="backgrounds"}
 ::
 
 ::alert{type="info"}
-**Note:** This component uses Three.js & requires `three` & `postprocessing` npm package as a dependency.
+**注意:** This component uses Three.js & requires `three` & `postprocessing` npm package as a dependency.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="bg-particle-whirlpool"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -45,33 +45,33 @@ yarn add --dev @types/three
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="ParticleWhirlpoolBg.vue" language="vue" componentName="ParticleWhirlpoolBg" type="ui" id="bg-particle-whirlpool"}
 ::
 ::
 
-## Examples
+## 示例
 
 Without blur and overlay
 
-::ComponentLoader{label="Preview" componentName="ParticleWhirlpoolBgDemo2" type="examples" id="backgrounds"}
+::ComponentLoader{label="预览" componentName="ParticleWhirlpoolBgDemo2" type="examples" id="backgrounds"}
 ::
 
 With `particleCount` 500
 
-::ComponentLoader{label="Preview" componentName="ParticleWhirlpoolBgDemo3" type="examples" id="backgrounds"}
+::ComponentLoader{label="预览" componentName="ParticleWhirlpoolBgDemo3" type="examples" id="backgrounds"}
 ::
 
 ## API
 
-| Prop Name       | Type     | Default | Description                                                     |
-| --------------- | -------- | ------- | --------------------------------------------------------------- |
-| `class`         | `string` | `""`    | Additional CSS classes for custom styling.                      |
-| `blur`          | `number` | `0`     | Amount of blur to apply to the background, specified in pixels. |
-| `particleCount` | `number` | `2000`  | Number of particles in the whirlpool animation.                 |
+| Prop 名称       | 类型     | 默认值 | 描述                                                            |
+| --------------- | -------- | ------ | --------------------------------------------------------------- |
+| `class`         | `string` | `""`   | Additional CSS classes for custom styling.                      |
+| `blur`          | `number` | `0`    | Amount of blur to apply to the background, specified in pixels. |
+| `particleCount` | `number` | `2000` | Number of particles in the whirlpool animation.                 |
 
-## Features
+## 功能特性
 
 - **Interactive Whirlpool Animation**: Renders a captivating whirlpool effect with particles that respond to mouse and touch interactions.
 

@@ -1,17 +1,17 @@
 ---
-title: Black Hole Background
+title: 黑洞背景
 description: A mesmerizing, canvas-driven background effect that simulates a warped “black-hole” tunnel with animated discs, radial lines, and particles.
 navBadges:
   - value: New
     type: lime
 ---
 
-::ComponentLoader{label="Preview" componentName="BlackHoleBackgroundDemo" type="examples" id="bg-black-hole"}
+::ComponentLoader{label="预览" componentName="BlackHoleBackgroundDemo" type="examples" id="bg-black-hole"}
 ::
 
 ## API
 
-| Prop Name          | Type                       | Default         | Description                                                   |
+| Prop 名称          | Type                       | Default         | 描述                                                          |
 | ------------------ | -------------------------- | --------------- | ------------------------------------------------------------- |
 | `strokeColor`      | `string`                   | `"#737373"`     | Stroke colour for the concentric discs and radial lines.      |
 | `numberOfLines`    | `number`                   | `50`            | Total radial lines emanating from the centre.                 |
@@ -19,19 +19,19 @@ navBadges:
 | `particleRGBColor` | `[number, number, number]` | `[255,255,255]` | RGB colour used for the tiny particles flowing into the hole. |
 | `class`            | `string`                   | `""`            | Extra utility classes merged onto the root wrapper.           |
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="bg-black-hole"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="BlackHoleBackground.vue" language="vue" componentName="BlackHoleBackground" type="ui" id="bg-black-hole"}
 ::
 
-## Features
+## 功能特性
 
 - **Dynamic Canvas Rendering** – Draws concentric discs, radiating lines, and moving particles each frame.
 - **Radial Gradient Layers** – Uses pseudo-elements and Motion-V to overlay colourful gradients that slowly drift.

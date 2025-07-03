@@ -3,17 +3,17 @@ title: Animated Logo Cloud
 description: Animated company cloud logs. Usually we can use to show company logos.
 ---
 
-::ComponentLoader{label="Preview" componentName="StaticLogoCloudDemo" type="examples" id="logo-cloud"}
+::ComponentLoader{label="预览" componentName="StaticLogoCloudDemo" type="examples" id="logo-cloud"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="logo-cloud"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -24,25 +24,25 @@ Copy and paste the following code in the same folder
 
 ::
 
-## Examples
+## 示例
 
 ### Animated logs
 
 Animated company logos.
 
-::ComponentLoader{label="Preview" componentName="AnimatedLogoCloudDemo" type="examples" id="logo-cloud"}
+::ComponentLoader{label="预览" componentName="AnimatedLogoCloudDemo" type="examples" id="logo-cloud"}
 ::
 
 ### Icon Logo
 
 Company logo icons
 
-::ComponentLoader{label="Preview" componentName="IconLogoCloudDemo" type="examples" id="logo-cloud"}
+::ComponentLoader{label="预览" componentName="IconLogoCloudDemo" type="examples" id="logo-cloud"}
 ::
 
 ## API
 
-| Prop Name | Type     | Default                     | Description                                                    |
+| Prop 名称 | 类型     | Default                     | 描述                                                           |
 | --------- | -------- | --------------------------- | -------------------------------------------------------------- |
 | `class`   | `string` | `-`                         | The delay in milliseconds before adding each item to the list. |
 | `title`   | `string` | `Trusted by Companies like` | Title of animated logs.                                        |

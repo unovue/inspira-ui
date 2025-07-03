@@ -3,24 +3,24 @@ title: Hyper Text
 description: A hyper changing text animation as you hover..
 ---
 
-::ComponentLoader{label="Preview" componentName="HyperTextDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="HyperTextDemo" type="examples"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="hyper-text"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="HyperText.vue" language="vue" componentName="HyperText" type="ui" id="hyper-text"}
 ::
 
 ## API
 
-| Prop Name       | Type      | Default  | Description                                               |
+| Prop 名称       | Type      | Default  | 描述                                                      |
 | --------------- | --------- | -------- | --------------------------------------------------------- |
 | `class`         | `string`  | `""`     | Additional CSS classes to apply to the component.         |
 | `text`          | `string`  | Required | Text to animate                                           |

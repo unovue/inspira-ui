@@ -3,21 +3,21 @@ title: File Upload
 description: A modern file upload component with a 3D card effect, drag-and-drop functionality, and a responsive grid background pattern.
 ---
 
-::ComponentLoader{label="Preview" componentName="FileUploadDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="FileUploadDemo" type="examples"}
 ::
 
 ::alert{type="warning"}
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="file-upload"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -34,13 +34,13 @@ The `FileUpload` component serves as a wrapper for the file upload effect. It ma
 
 #### Props
 
-| Prop Name | Type   | Default | Description                                           |
-| --------- | ------ | ------- | ----------------------------------------------------- |
-| `class`   | String | -       | Additional classes for styling the container element. |
+| Prop 名称 | Type   | 默认值 | 描述                                                  |
+| --------- | ------ | ------ | ----------------------------------------------------- |
+| `class`   | String | -      | Additional classes for styling the container element. |
 
 #### Emits
 
-| Event Name | Type                      | Description                                                |
+| Event Name | Type                      | 描述                                                       |
 | ---------- | ------------------------- | ---------------------------------------------------------- |
 | `onChange` | `(files: File[]) => void` | Callback function triggered when files are added/uploaded. |
 
@@ -58,9 +58,9 @@ The `FileUploadGrid` component provides the background grid pattern for the file
 
 #### Props
 
-| Prop Name | Type   | Default | Description                            |
-| --------- | ------ | ------- | -------------------------------------- |
-| `class`   | String | -       | Additional classes for custom styling. |
+| Prop 名称 | Type   | 默认值 | 描述                                   |
+| --------- | ------ | ------ | -------------------------------------- |
+| `class`   | String | -      | Additional classes for custom styling. |
 
 #### Usage
 

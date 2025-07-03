@@ -6,7 +6,7 @@ navBadges:
     type: lime
 ---
 
-::ComponentLoader{label="Preview" componentName="AppleCardCarouselDemo" type="examples" id="apple-card-carousel"}
+::ComponentLoader{label="预览" componentName="AppleCardCarouselDemo" type="examples" id="apple-card-carousel"}
 ::
 
 ## Overview
@@ -26,9 +26,9 @@ Together they reproduce the interactive “App Store / Apple TV” browsing ex
 
 ## `AppleCardCarousel`
 
-| Prop            | Type     | Default | Description                                        |
-| --------------- | -------- | ------- | -------------------------------------------------- |
-| `initialScroll` | `number` | `0`     | Horizontal scroll offset applied on mount (in px). |
+| Prop            | 类型     | 默认值 | 描述                                               |
+| --------------- | -------- | ------ | -------------------------------------------------- |
+| `initialScroll` | `number` | `0`    | Horizontal scroll offset applied on mount (in px). |
 
 ### Slots
 
@@ -42,7 +42,7 @@ _No custom events._
 
 ## `AppleCarouselItem`
 
-| Prop    | Type     | Required | Description                                             |
+| Prop    | 类型     | Required | 描述                                                    |
 | ------- | -------- | -------- | ------------------------------------------------------- |
 | `index` | `number` | ✓        | Zero‑based index; used to stagger the appear animation. |
 
@@ -54,7 +54,7 @@ Default slot — place an **`AppleCard`** here.
 
 ## `AppleCard`
 
-| Prop     | Type                                               | Required | Default | Description                           |
+| Prop     | Type                                               | Required | 默认值  | 描述                                  |
 | -------- | -------------------------------------------------- | -------- | ------- | ------------------------------------- |
 | `card`   | `{ src: string; title: string; category: string }` | ✓        | —       | Data object for the card.             |
 | `index`  | `number`                                           | ✓        | —       | Position within the carousel.         |
@@ -72,7 +72,7 @@ _No custom events (relies on injected `CarouselKey` context)._
 
 ## `AppleBlurImage`
 
-| Prop     | Type               | Default                          | Description                                                    |
+| Prop     | Type               | Default                          | 描述                                                           |
 | -------- | ------------------ | -------------------------------- | -------------------------------------------------------------- |
 | `src`    | `string`           | **—**                            | Image source URL. _Required._                                  |
 | `alt`    | `string`           | "Background of a beautiful view" | Alt text.                                                      |
@@ -85,14 +85,14 @@ When the image fires the native `load` event it gracefully transitions from `blu
 
 ---
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="apple-card-carousel"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -106,7 +106,7 @@ Copy and paste the following code in the same folder
 
 ---
 
-## Features
+## 功能特性
 
 - **Blur‑Up Images** &mdash; Pleasant loading for card thumbnails.
 - **Shared Layout Animation** &mdash; Optional FLIP animation between thumbnail and modal using `layoutId`.

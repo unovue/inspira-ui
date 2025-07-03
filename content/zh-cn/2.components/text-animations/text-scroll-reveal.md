@@ -3,21 +3,21 @@ title: Text Scroll Reveal
 description: A component that reveals text word by word as you scroll, with customizable text and styling.
 ---
 
-::ComponentLoader{label="Preview" componentName="TextScrollRevealDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="TextScrollRevealDemo" type="examples"}
 ::
 
 ::alert{type="warning"}
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="text-scroll-reveal"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -27,12 +27,12 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name | Type     | Default | Description                                                         |
-| --------- | -------- | ------- | ------------------------------------------------------------------- |
-| `text`    | `string` | N/A     | The text content to display and reveal word by word during scroll.  |
-| `class`   | `string` | `""`    | Additional CSS classes to apply to the component for customization. |
+| Prop 名称 | 类型     | 默认值 | 描述                                                                |
+| --------- | -------- | ------ | ------------------------------------------------------------------- |
+| `text`    | `string` | N/A    | The text content to display and reveal word by word during scroll.  |
+| `class`   | `string` | `""`   | Additional CSS classes to apply to the component for customization. |
 
-## Features
+## 功能特性
 
 - **Scroll-Activated Text Reveal**: The component reveals the provided text word by word as the user scrolls, creating an engaging visual effect.
 

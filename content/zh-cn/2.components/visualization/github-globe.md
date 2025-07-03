@@ -3,11 +3,11 @@ title: Github Globe
 description: A 3D interactive globe visualization with customizable arcs, points, and animation options inspired from Github.
 ---
 
-::ComponentLoader{label="Preview" componentName="GithubGlobeDemo" type="examples" id="globe"}
+::ComponentLoader{label="预览" componentName="GithubGlobeDemo" type="examples" id="globe"}
 ::
 
 ::alert{type="info"}
-**Note:** This component uses Three.js & requires `three`, `three-globe` & `postprocessing` npm package as a dependency.
+**注意:** This component uses Three.js & requires `three`, `three-globe` & `postprocessing` npm package as a dependency.
 ::
 
 ::alert{type="warning"}
@@ -15,12 +15,12 @@ description: A 3D interactive globe visualization with customizable arcs, points
 Use `<ClientOnly>` tag to wrap this component to avoid `window is not defined` error.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="github-globe"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -50,7 +50,7 @@ yarn add --dev @types/three
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="GithubGlobe.vue" language="vue" componentName="GithubGlobe" type="ui" id="github-globe"}  
 ::
@@ -63,15 +63,15 @@ Download a GeoJSON file containing the globe's geographical data from [GeoJSON M
 
 ## API
 
-| Prop Name     | Type         | Default | Description                                                                                         |
-| ------------- | ------------ | ------- | --------------------------------------------------------------------------------------------------- |
-| `globeConfig` | `object`     | `{}`    | Configuration options for the globe, including colors, atmosphere, rotation speed, and lighting.    |
-| `data`        | `Position[]` | `[]`    | Array of positions representing arcs and points on the globe, with latitude, longitude, color, etc. |
-| `class`       | `string`     | `""`    | Additional CSS classes for custom styling.                                                          |
+| Prop 名称     | Type         | 默认值 | 描述                                                                                                |
+| ------------- | ------------ | ------ | --------------------------------------------------------------------------------------------------- |
+| `globeConfig` | `object`     | `{}`   | Configuration options for the globe, including colors, atmosphere, rotation speed, and lighting.    |
+| `data`        | `Position[]` | `[]`   | Array of positions representing arcs and points on the globe, with latitude, longitude, color, etc. |
+| `class`       | `string`     | `""`   | Additional CSS classes for custom styling.                                                          |
 
 ### `globeConfig` Properties
 
-| Property             | Type      | Default                 | Description                                              |
+| Property             | Type      | Default                 | 描述                                                     |
 | -------------------- | --------- | ----------------------- | -------------------------------------------------------- |
 | `pointSize`          | `number`  | `1`                     | Size of individual points on the globe.                  |
 | `globeColor`         | `string`  | `"#1d072e"`             | Color of the globe surface.                              |
@@ -92,7 +92,7 @@ Download a GeoJSON file containing the globe's geographical data from [GeoJSON M
 
 ### `data` Structure (Position)
 
-| Field      | Type     | Description                                     |
+| Field      | 类型     | 描述                                            |
 | ---------- | -------- | ----------------------------------------------- |
 | `order`    | `number` | Order of the point or arc for sequencing.       |
 | `startLat` | `number` | Starting latitude for an arc.                   |
@@ -102,7 +102,7 @@ Download a GeoJSON file containing the globe's geographical data from [GeoJSON M
 | `arcAlt`   | `number` | Altitude of the arc (determines arc height).    |
 | `color`    | `string` | Color of the arc or point in hex or RGB format. |
 
-## Features
+## 功能特性
 
 - **3D Interactive Globe**: A Three.js-based globe with interactive controls and orbit support.
 - **Customizable Globe & Atmosphere**: Allows configuration of globe color, atmosphere visibility, and colors.

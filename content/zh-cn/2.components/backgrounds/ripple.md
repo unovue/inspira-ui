@@ -1,19 +1,19 @@
 ---
-title: Ripple
-description: An animated ripple effect typically used behind elements to emphasize them.
+title: 涟漪
+description: 一种动画涟漪效应，通常用于元素后面以强调它们。
 ---
 
-::ComponentLoader{label="Preview" componentName="RippleDemo" type="examples" id="ripple"}
+::ComponentLoader{label="预览" componentName="RippleDemo" type="examples" id="ripple"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="ripple"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -22,26 +22,26 @@ Copy and paste the following code in the same folder
 :CodeViewerTab{filename="RippleContainer.vue" language="vue" componentName="RippleContainer" type="ui" id="ripple"}
 ::
 
-## Examples
+## 示例
 
 Only lines
 
-::ComponentLoader{label="Preview" componentName="RippleDemoLinesOnly" type="examples" id="ripple"}
+::ComponentLoader{label="预览" componentName="RippleDemoLinesOnly" type="examples" id="ripple"}
 ::
 
 Squared
 
-::ComponentLoader{label="Preview" componentName="RippleDemoSquared" type="examples" id="ripple"}
+::ComponentLoader{label="预览" componentName="RippleDemoSquared" type="examples" id="ripple"}
 ::
 
 Blobed
 
-::ComponentLoader{label="Preview" componentName="RippleDemoBlobed" type="examples" id="ripple"}
+::ComponentLoader{label="预览" componentName="RippleDemoBlobed" type="examples" id="ripple"}
 ::
 
 ## API
 
-| Prop Name                     | Type     | Default     | Description                                                            |
+| Prop 名称                     | 类型     | Default     | 描述                                                                   |
 | ----------------------------- | -------- | ----------- | ---------------------------------------------------------------------- |
 | `baseCircleSize`              | `number` | `210`       | The size of the main circle in pixels.                                 |
 | `baseCircleOpacity`           | `number` | `0.24`      | The opacity of the main circle.                                        |

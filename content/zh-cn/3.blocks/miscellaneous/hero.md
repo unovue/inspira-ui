@@ -5,7 +5,7 @@ description: Elevate website experience with unique hero blocks.
 
 ### Hero Section 1
 
-::ComponentLoader{label="Preview" componentName="HeroSection1" type="blocks" id="hero"}
+::ComponentLoader{label="预览" componentName="HeroSection1" type="blocks" id="hero"}
 ::
 
 #### Components used:
@@ -17,7 +17,7 @@ description: Elevate website experience with unique hero blocks.
 
 ### Hero Section 2
 
-::ComponentLoader{label="Preview" componentName="HeroSection2" type="blocks" id="hero"}
+::ComponentLoader{label="预览" componentName="HeroSection2" type="blocks" id="hero"}
 ::
 
 #### Components used:

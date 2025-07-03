@@ -3,24 +3,24 @@ title: Sparkles Text
 description: A dynamic text that generates continuous sparkles with smooth transitions, perfect for highlighting text with animated stars.
 ---
 
-::ComponentLoader{label="Preview" componentName="SparklesTextDemo" type="examples" id="sparkles-text"}
+::ComponentLoader{label="预览" componentName="SparklesTextDemo" type="examples" id="sparkles-text"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="sparkles-text"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="SparklesText.vue" language="vue" componentName="SparklesText" type="ui" id="sparkles-text"}
 ::
 
 ## API
 
-| Prop Name       | Type     | Default                                  | Description                                   |
+| Prop 名称       | 类型     | Default                                  | 描述                                          |
 | --------------- | -------- | ---------------------------------------- | --------------------------------------------- |
 | `class`         | `string` | `-`                                      | The class to be applied to the sparkles text. |
 | `text`          | `string` | ``                                       | The text to display.                          |

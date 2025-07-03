@@ -3,27 +3,27 @@ title: Radiant Text
 description: A glare effect on text.
 ---
 
-::ComponentLoader{label="Preview" componentName="RadiantTextDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="RadiantTextDemo" type="examples"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="radiant-text"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="RadiantText.vue" language="vue" componentName="RadiantText" type="ui" id="radiant-text"}
 ::
 
 ## API
 
-| Prop Name      | Type     | Default | Description                           |
-| -------------- | -------- | ------- | ------------------------------------- |
-| `duration`     | `number` | `10`    | Duration of the animation in seconds. |
-| `radiantWidth` | `number` | `100`   | Width of the radiant animation.       |
+| Prop 名称      | 类型     | 默认值 | 描述                                  |
+| -------------- | -------- | ------ | ------------------------------------- |
+| `duration`     | `number` | `10`   | Duration of the animation in seconds. |
+| `radiantWidth` | `number` | `100`  | Width of the radiant animation.       |
 
 ## Credits
 

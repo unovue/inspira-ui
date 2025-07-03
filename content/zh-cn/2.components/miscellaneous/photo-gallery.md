@@ -3,28 +3,28 @@ title: Photo Gallery
 description: Showcase your team with pride using our stunning Photo Gallery Component.
 ---
 
-::ComponentLoader{label="Preview" componentName="PhotoGalleryDemo" type="examples" id="photo-gallery"}
+::ComponentLoader{label="预览" componentName="PhotoGalleryDemo" type="examples" id="photo-gallery"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="photo-gallery"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="PhotoGallery.vue" language="vue" componentName="PhotoGallery" type="ui" id="photo-gallery"}
 ::
 
 ## API
 
-| Prop Name        | Type                | Default | Description                                            |
-| ---------------- | ------------------- | ------- | ------------------------------------------------------ |
-| `items`          | `"[{src: string}]"` | `[]`    | Pass items / image src to animate                      |
-| `containerClass` | `string`            | `""`    | Additional tailwind CSS classes for container styling. |
-| `class`          | `string`            | `""`    | Additional tailwind CSS classes for custom styling.    |
+| Prop 名称        | Type                | 默认值 | 描述                                                   |
+| ---------------- | ------------------- | ------ | ------------------------------------------------------ |
+| `items`          | `"[{src: string}]"` | `[]`   | Pass items / image src to animate                      |
+| `containerClass` | `string`            | `""`   | Additional tailwind CSS classes for container styling. |
+| `class`          | `string`            | `""`   | Additional tailwind CSS classes for custom styling.    |
 
 ## Credits
 

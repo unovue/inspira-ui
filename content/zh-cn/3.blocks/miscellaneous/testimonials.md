@@ -5,12 +5,12 @@ description: Show testimonials in style
 
 ### With skewed marquee
 
-::ComponentLoader{label="Preview" componentName="SkewedMarqueeTestimonials" type="blocks" id="testimonials"}
+::ComponentLoader{label="预览" componentName="SkewedMarqueeTestimonials" type="blocks" id="testimonials"}
 ::
 
 ### With linear marquee
 
-::ComponentLoader{label="Preview" componentName="LinearMarqueeTestimonials" type="blocks" id="testimonials"}
+::ComponentLoader{label="预览" componentName="LinearMarqueeTestimonials" type="blocks" id="testimonials"}
 ::
 
 #### Components used

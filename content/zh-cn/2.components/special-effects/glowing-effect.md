@@ -3,12 +3,12 @@ title: Glowing Effect
 description: A dynamic proximity-based glow effect that reacts to mouse movements and scroll events, perfect for highlighting interactive elements.
 ---
 
-::ComponentLoader{label="Preview" componentName="GlowingEffectDemo" type="examples" id="glowing-effect"}
+::ComponentLoader{label="预览" componentName="GlowingEffectDemo" type="examples" id="glowing-effect"}
 ::
 
 ## API
 
-| Prop Name          | Type                   | Default     | Description                                                                                           |
+| Prop 名称          | Type                   | Default     | 描述                                                                                                  |
 | ------------------ | ---------------------- | ----------- | ----------------------------------------------------------------------------------------------------- |
 | `blur`             | `number`               | `0`         | The blur radius applied to the glow layer.                                                            |
 | `inactiveZone`     | `number`               | `0.7`       | Defines the inner radius (as a fraction of the smallest dimension) within which the glow is inactive. |
@@ -21,14 +21,14 @@ description: A dynamic proximity-based glow effect that reacts to mouse movement
 | `movementDuration` | `number`               | `2`         | Duration (in seconds) of the smooth rotation animation.                                               |
 | `borderWidth`      | `number`               | `1`         | Width (in pixels) of the border applied to the glow effect.                                           |
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="glowing-effect"}
 ::
 
-## Install Manually
+## 手动安装
 
-You can copy and paste the following code to create this component:
+You can 复制并粘贴以下代码： to create this component:
 
 ::code-group
 
@@ -37,7 +37,7 @@ You can copy and paste the following code to create this component:
 
 ::
 
-## Features
+## 功能特性
 
 - **Proximity-Based Activation**: The glow effect is only active when the cursor is within a certain distance of the element.
 - **Smooth Angle Animation**: Gradually animates rotation based on pointer movement for an appealing dynamic glow.

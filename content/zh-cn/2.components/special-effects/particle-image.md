@@ -3,17 +3,17 @@ title: Particle Image
 description: Visually appealing particle animation applied to images as seen on NuxtLabs.com
 ---
 
-::ComponentLoader{label="Preview" componentName="ParticleImageDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="ParticleImageDemo" type="examples"}
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="particle-image"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -25,7 +25,7 @@ Copy and paste the following code in the same folder
 
 ## API
 
-| Prop Name         | Type                                                                          | Default  | Description                                                                     |
+| Prop 名称         | Type                                                                          | Default  | 描述                                                                            |
 | ----------------- | ----------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------- |
 | `imageSrc`        | `string`                                                                      | `null`   | Source URL for the image to which the particle effect is applied.               |
 | `class`           | `string`                                                                      | `null`   | Additional CSS classes to apply to the image element.                           |

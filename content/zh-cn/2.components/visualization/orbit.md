@@ -3,17 +3,17 @@ title: Orbit
 description: A component that animates content in a circular orbit, with customizable duration, delay, and radius. It also offers an optional orbit path display.
 ---
 
-::ComponentLoader{label="Preview" componentName="OrbitDemo" type="examples"}  
+::ComponentLoader{label="预览" componentName="OrbitDemo" type="examples"}  
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="orbit"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code in the same folder
+复制并粘贴以下代码： in the same folder
 
 ::code-group
 
@@ -22,16 +22,16 @@ Copy and paste the following code in the same folder
 
 ::
 
-## Examples
+## 示例
 
 Synchronized orbit
 
-::ComponentLoader{label="Preview" componentName="OrbitDemoSynchronized" type="examples"}  
+::ComponentLoader{label="预览" componentName="OrbitDemoSynchronized" type="examples"}  
 ::
 
 ## API
 
-| Prop Name   | Type                  | Default  | Description                                                           |
+| Prop 名称   | Type                  | Default  | 描述                                                                  |
 | ----------- | --------------------- | -------- | --------------------------------------------------------------------- |
 | `direction` | `normal` \| `reverse` | `normal` | The direction of the orbit. You can use the constant ORBIT_DIRECTION. |
 | `duration`  | `?number`             | `20`     | The duration of the orbit animation in seconds.                       |
@@ -39,7 +39,7 @@ Synchronized orbit
 | `radius`    | `?number`             | `50`     | Radius of the orbit path in pixels.                                   |
 | `path`      | `?boolean`            | `false`  | Displays a circle path for the orbit if `true`.                       |
 
-## Features
+## 功能特性
 
 - **Circular Orbit Animation**: The component animates its content in a smooth circular orbit around the center point.
 - **Customizable Animation**: The orbit’s duration, delay, and radius are fully adjustable, providing flexibility in animation behavior.

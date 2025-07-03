@@ -3,19 +3,19 @@ title: Globe
 description: An interactive rotating globe component.
 ---
 
-::ComponentLoader{label="Preview" componentName="GlobeDemo" type="examples" id="globe"}
+::ComponentLoader{label="预览" componentName="GlobeDemo" type="examples" id="globe"}
 ::
 
 ::alert{type="info"}
-**Note:** This component uses `cobe` and `vue-use-spring` as a dependency.
+**注意:** This component uses `cobe` and `vue-use-spring` as a dependency.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="globe"}
 ::
 
-## Install Manually
+## 手动安装
 
 ::steps{level=4}
 
@@ -41,7 +41,7 @@ yarn add cobe vue-use-spring
 
 ::
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="Globe.vue" language="vue" componentName="Globe" type="ui" id="globe"}  
 ::
@@ -49,7 +49,7 @@ Copy and paste the following code
 
 ## API
 
-| Prop Name   | Type          | Default | Description                                                                                                 |
+| Prop 名称   | Type          | 默认值  | 描述                                                                                                        |
 | ----------- | ------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
 | `class`     | `string`      | `""`    | Additional CSS classes for custom styling.                                                                  |
 | `config`    | `COBEOptions` | N/A     | Configuration object for the globe, following **[COBE]**(https://cobe.vercel.app/docs/api) library options. |
@@ -58,7 +58,7 @@ Copy and paste the following code
 | `friction`  | `number`      | `100`   | Friction parameter for the spring animation, affecting damping.                                             |
 | `precision` | `number`      | `0.001` | Precision parameter for the spring animation calculations.                                                  |
 
-## Features
+## 功能特性
 
 - **Interactive 3D Globe**: Provides an interactive 3D globe visualization that users can rotate with mouse or touch interactions.
 

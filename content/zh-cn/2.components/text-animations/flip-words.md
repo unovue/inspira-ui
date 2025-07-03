@@ -3,24 +3,24 @@ title: Flip Words
 description: A component that flips through a list of words.
 ---
 
-::ComponentLoader{label="Preview" componentName="FlipWordsDemo" type="examples"}  
+::ComponentLoader{label="预览" componentName="FlipWordsDemo" type="examples"}  
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="flip-words"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="FlipWords.vue" language="vue" componentName="FlipWords" type="ui" id="flip-words"}
 ::
 
 ## API
 
-| Prop Name  | Type     | Description                                                                                |
+| Prop 名称  | 类型     | 描述                                                                                       |
 | ---------- | -------- | ------------------------------------------------------------------------------------------ |
 | `words`    | `Array`  | An array of words to be displayed and animated.                                            |
 | `duration` | `number` | Duration (in milliseconds) for each word to be displayed before flipping to the next word. |

@@ -3,21 +3,21 @@ title: Animated Beam
 description: An SVG beam connecting elements with animation.
 ---
 
-::ComponentLoader{label="Preview" componentName="AnimatedBeamDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="AnimatedBeamDemo" type="examples"}
 ::
 
 ::alert{type="warning"}
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="animated-beam"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="AnimatedBeam.vue" language="vue" componentName="AnimatedBeam" type="ui" id="animated-beam"}
 ::
@@ -26,17 +26,17 @@ Copy and paste the following code
 
 Double-sided beam.
 
-::ComponentLoader{label="Preview" componentName="AnimatedBeamDemo2" type="examples"}
+::ComponentLoader{label="预览" componentName="AnimatedBeamDemo2" type="examples"}
 ::
 
 Vertical beam.
 
-::ComponentLoader{label="Preview" componentName="AnimatedBeamDemo3" type="examples"}
+::ComponentLoader{label="预览" componentName="AnimatedBeamDemo3" type="examples"}
 ::
 
 ## API
 
-| Prop Name            | Type          | Default                | Description                                                                  |
+| Prop 名称            | Type          | Default                | 描述                                                                         |
 | -------------------- | ------------- | ---------------------- | ---------------------------------------------------------------------------- |
 | `class`              | `string`      | `""`                   | Additional CSS classes to apply to the component for customization.          |
 | `containerRef`       | `HTMLElement` | N/A                    | Reference to the container element where the beam is rendered.               |
@@ -56,7 +56,7 @@ Vertical beam.
 | `endXOffset`         | `number`      | `0`                    | Horizontal offset for the beam's ending point.                               |
 | `endYOffset`         | `number`      | `0`                    | Vertical offset for the beam's ending point.                                 |
 
-## Features
+## 功能特性
 
 - **Dynamic Beam Drawing**: Automatically renders a beam between two specified elements on the page.
 - **Smooth Animation**: Features a gradient animation that flows along the beam's path for a visually engaging effect.

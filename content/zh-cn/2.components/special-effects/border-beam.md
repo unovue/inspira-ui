@@ -3,28 +3,28 @@ title: Border Beam
 description: A stylish animated border beam effect with customizable size, duration, colors, and delay.
 ---
 
-::ComponentLoader{label="Preview" componentName="BorderBeamDemo" type="examples"}
+::ComponentLoader{label="预览" componentName="BorderBeamDemo" type="examples"}
 ::
 
 ::alert{type="warning"}
 This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
 ::
 
-## Install using CLI
+## 通过 CLI 安装
 
 ::InstallationCli{componentId="border-beam"}
 ::
 
-## Install Manually
+## 手动安装
 
-Copy and paste the following code
+复制并粘贴以下代码：
 
 ::CodeViewer{filename="BorderBeam.vue" language="vue" componentName="BorderBeam" type="ui" id="border-beam"}
 ::
 
 ## API
 
-| Prop Name     | Type     | Default     | Description                                                           |
+| Prop 名称     | 类型     | Default     | 描述                                                                  |
 | ------------- | -------- | ----------- | --------------------------------------------------------------------- |
 | `class`       | `string` | `""`        | Additional CSS classes for custom styling.                            |
 | `size`        | `number` | `200`       | Size of the animated border beam effect.                              |
@@ -35,7 +35,7 @@ Copy and paste the following code
 | `colorTo`     | `string` | `"#9c40ff"` | Ending color for the gradient of the beam.                            |
 | `delay`       | `number` | `0`         | Delay before the animation starts, in seconds.                        |
 
-## Features
+## 功能特性
 
 - **Animated Border Beam**: Adds a dynamic border beam effect that animates around the border.
 - **Customizable Gradient Colors**: Adjust the `colorFrom` and `colorTo` props to create a gradient effect that suits your design.
