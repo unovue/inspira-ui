@@ -13,7 +13,7 @@ description: A component that animates content in a circular orbit, with customi
 
 ## 手动安装
 
-在同一个文件中，复制并粘贴以下代码： 
+在同一个文件中，复制并粘贴以下代码：
 
 ::code-group
 

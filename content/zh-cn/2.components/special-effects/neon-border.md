@@ -44,7 +44,7 @@ Add following entry to inline theme in your `main.css` file.
 
 ## 手动安装
 
-在同一个文件中，复制并粘贴以下代码： 
+在同一个文件中，复制并粘贴以下代码：
 
 ::code-group
 ::CodeViewerTab{label="NeonBorder.vue" language="vue" componentName="NeonBorder" type="ui" id="neon-border"}

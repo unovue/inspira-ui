@@ -13,7 +13,7 @@ description: Mousemove effect to reveal text content at the bottom of the card.
 
 ## 手动安装
 
-在同一个文件中，复制并粘贴以下代码： 
+在同一个文件中，复制并粘贴以下代码：
 
 ::code-group
 

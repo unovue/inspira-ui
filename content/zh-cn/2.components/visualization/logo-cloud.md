@@ -13,7 +13,7 @@ description: Animated company cloud logs. Usually we can use to show company log
 
 ## 手动安装
 
-在同一个文件中，复制并粘贴以下代码： 
+在同一个文件中，复制并粘贴以下代码：
 
 ::code-group
 

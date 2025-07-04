@@ -13,7 +13,7 @@ description: A 3D book component featuring customizable sizes and color gradient
 
 ## 手动安装
 
-在同一个文件中，复制并粘贴以下代码： 
+在同一个文件中，复制并粘贴以下代码：
 
 ::code-group
 
