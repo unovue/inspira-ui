@@ -13,7 +13,7 @@ description: A customizable scrolling component that loops its content horizonta
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -24,7 +24,7 @@ description: A customizable scrolling component that loops its content horizonta
 
 ## API
 
-| Prop 名称      | Type      | 默认值  | 描述                                                                      |
+| Prop 名称      | 类型      | 默认值  | 描述                                                                      |
 | -------------- | --------- | ------- | ------------------------------------------------------------------------- |
 | `class`        | `string`  | `''`    | Custom CSS classes to apply to the outermost container of the marquee.    |
 | `reverse`      | `boolean` | `false` | Sets the scrolling direction to reverse (right to left or bottom to top). |
@@ -54,6 +54,6 @@ You can customize the speed and gap between the items by setting the following C
 - **Multi-Directional**: Scroll content either horizontally or vertically with a simple prop change.
 - **Content Flexibility**: Place any Vue components or HTML elements inside the marquee slot for dynamic content scrolling.
 
-## Credits
+## 感谢
 
 - Inspired by [Magic UI](https://magicui.design/docs/components/marquee).

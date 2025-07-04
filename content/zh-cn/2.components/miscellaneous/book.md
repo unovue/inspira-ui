@@ -13,7 +13,7 @@ description: A 3D book component featuring customizable sizes and color gradient
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -90,7 +90,7 @@ export { default as BookDescription } from "./BookDescription.vue";
 
 #### `Book`
 
-| Prop 名称    | Type    | 默认值 | 描述                                          |
+| Prop 名称    | 类型    | 默认值 | 描述                                          |
 | ------------ | ------- | ------ | --------------------------------------------- |
 | `class`      | String  | -      | Additional classes for styling the component. |
 | `duration`   | Number  | 1000   | Animation duration in milliseconds.           |
@@ -102,25 +102,25 @@ export { default as BookDescription } from "./BookDescription.vue";
 
 #### `BookHeader`
 
-| Prop 名称 | Type   | 默认值 | 描述                                   |
+| Prop 名称 | 类型   | 默认值 | 描述                                   |
 | --------- | ------ | ------ | -------------------------------------- |
 | `class`   | String | -      | Additional classes for custom styling. |
 
 #### `BookTitle`
 
-| Prop 名称 | Type   | 默认值 | 描述                                   |
+| Prop 名称 | 类型   | 默认值 | 描述                                   |
 | --------- | ------ | ------ | -------------------------------------- |
 | `class`   | String | -      | Additional classes for custom styling. |
 
 #### `BookDescription`
 
-| Prop 名称 | Type   | 默认值 | 描述                                   |
+| Prop 名称 | 类型   | 默认值 | 描述                                   |
 | --------- | ------ | ------ | -------------------------------------- |
 | `class`   | String | -      | Additional classes for custom styling. |
 
 ::
 
-## Credits
+## 感谢
 
 - Credits to [x/UI](https://ui.3x.gl/docs/book) for inspiring this component.
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.

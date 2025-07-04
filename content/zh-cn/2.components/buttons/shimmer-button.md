@@ -20,7 +20,7 @@ description: A button with a shimmering animated effect.
 
 ## API
 
-| Prop 名称         | 类型     | Default              | 描述                                                    |
+| Prop 名称         | 类型     | 默认值               | 描述                                                    |
 | ----------------- | -------- | -------------------- | ------------------------------------------------------- |
 | `class`           | `string` | `""`                 | Additional CSS classes to apply to the button.          |
 | `shimmerColor`    | `string` | `"#ffffff"`          | Color of the shimmer effect.                            |
@@ -37,6 +37,6 @@ description: A button with a shimmering animated effect.
 - **Interactive States**: Includes hover and active states for enhanced user interaction.
 - **Responsive Design**: Adapts to different screen sizes and resolutions seamlessly.
 
-## Credits
+## 感谢
 
 - Ported from [Magic UI Shimmer Button](https://magicui.design/docs/components/shimmer-button).

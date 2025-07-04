@@ -13,7 +13,7 @@ description: An interactive 3D tag cloud component
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -29,7 +29,7 @@ description: An interactive 3D tag cloud component
 | `class`   | `string` | -      | Additional classes for styling the component. |
 | `images`  | `array`  | `[]`   | Array of image URLs to render in the cloud    |
 
-## Credits
+## 感谢
 
 - Inspired by [MagicUI](https://magicui.design/docs/components/icon-cloud).
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.

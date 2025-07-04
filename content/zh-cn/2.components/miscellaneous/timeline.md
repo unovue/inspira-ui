@@ -8,7 +8,7 @@ description: A visually appealing and interactive timeline component with smooth
 
 ## API
 
-| Prop 名称        | Type                               | 默认值 | 描述                                               |
+| Prop 名称        | 类型                               | 默认值 | 描述                                               |
 | ---------------- | ---------------------------------- | ------ | -------------------------------------------------- |
 | `containerClass` | `string`                           | `""`   | Additional CSS classes for the timeline container. |
 | `class`          | `string`                           | `""`   | Additional CSS classes for styling.                |
@@ -41,6 +41,6 @@ You can 复制并粘贴以下代码： to create this component:
 - **Responsive Design**: Adapts seamlessly to different screen sizes.
 - **Dark Mode Support**: Automatically adjusts to light or dark themes.
 
-## Credits
+## 感谢
 
 - Inspired and ported from [Aceternity UI's Timeline](https://ui.aceternity.com/components/timeline).

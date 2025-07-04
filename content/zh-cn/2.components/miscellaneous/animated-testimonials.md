@@ -8,7 +8,7 @@ description: An engaging and animated testimonial component showcasing user feed
 
 ## API
 
-| Prop 名称      | Type            | 默认值  | 描述                                                                                           |
+| Prop 名称      | 类型            | 默认值  | 描述                                                                                           |
 | -------------- | --------------- | ------- | ---------------------------------------------------------------------------------------------- |
 | `testimonials` | `Testimonial[]` | `[]`    | An array of testimonial objects containing quote, name, image, and designation.                |
 | `autoplay`     | `boolean`       | `false` | Whether to cycle through testimonials automatically.                                           |
@@ -45,6 +45,6 @@ You can 复制并粘贴以下代码： to create this component:
 - **Navigation Buttons**: Manually cycle through testimonials using previous and next controls.
 - **Responsive and Modular**: Adapts well to different screen sizes, allowing easy integration into various layouts.
 
-## Credits
+## 感谢
 
 - Ported from (Aceternity UI Animated Testimonials)[https://ui.aceternity.com/components/animated-testimonials].

@@ -67,6 +67,6 @@ Add following entry to inline theme in your `main.css` file.
 
 - **Responsive Design**: The component adapts to different screen sizes and uses Vue’s reactivity for smooth animations.
 
-## Credits
+## 感谢
 
 - Ported from [Aceternity UI's Meteor Effect](https://ui.aceternity.com/components/meteors)

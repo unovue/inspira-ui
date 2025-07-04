@@ -11,7 +11,7 @@ navBadges:
 
 ## API
 
-| Prop 名称      | Type                                                                                                           | 默认值 | 描述                                                                  |
+| Prop 名称      | 类型                                                                                                           | 默认值 | 描述                                                                  |
 | -------------- | -------------------------------------------------------------------------------------------------------------- | ------ | --------------------------------------------------------------------- |
 | `calendarData` | `Array<{ month: string; date: number; day: string; events?: { title: string; day: string; time: string }[] }>` | **—**  | Array defining each calendar day and its optional events. _Required_. |
 | `initialIndex` | `number`                                                                                                       | `0`    | Day index initially selected.                                         |
@@ -48,6 +48,6 @@ navBadges:
 - **Interactive Day Picker** — Clickable day chips with hover/press scale effects.
 - **Responsive Layout** — Flexbox layout that wraps chips and events neatly.
 
-## Credits
+## 感谢
 
 - Inspired from the work of [sekachov](https://x.com/sekachov)

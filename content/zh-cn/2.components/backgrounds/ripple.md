@@ -13,7 +13,7 @@ description: 一种动画涟漪效应，通常用于元素后面以强调它们�
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -41,7 +41,7 @@ Blobed
 
 ## API
 
-| Prop 名称                     | 类型     | Default     | 描述                                                                   |
+| Prop 名称                     | 类型     | 默认值      | 描述                                                                   |
 | ----------------------------- | -------- | ----------- | ---------------------------------------------------------------------- |
 | `baseCircleSize`              | `number` | `210`       | The size of the main circle in pixels.                                 |
 | `baseCircleOpacity`           | `number` | `0.24`      | The opacity of the main circle.                                        |
@@ -51,7 +51,7 @@ Blobed
 | `waveSpeed`                   | `number` | `80`        | The animation speed for the wave effect, measured in ms.               |
 | `numberOfCircles`             | `number` | `7`         | The number of ripple circles to render.                                |
 
-## Credits
+## 感谢
 
 - Credits to [Magic UI](https://magicui.design/docs/components/ripple).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.

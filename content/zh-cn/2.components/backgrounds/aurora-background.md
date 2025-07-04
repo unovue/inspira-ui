@@ -54,7 +54,7 @@ Add following entry to inline theme in your `main.css` file.
 
 - **支持插槽**: 使用默认插槽轻松地在组件中添加任何内容。
 
-## Credits
+## 感谢
 
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/aurora-background).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.

@@ -27,7 +27,7 @@ description: 粒子背景效果可以为你的网站增加一个动态和引人�
 | `staticity` | `number` | `50`   | Determines how much the particles move based on the mouse's proximity. Higher values reduce movement.       |
 | `ease`      | `number` | `50`   | Controls the easing effect of particle movement; lower values make particles follow the mouse more closely. |
 
-## Credits
+## 感谢
 
 - Credits to [Magic UI](https://magicui.design/docs/components/particles) for this fantastic component.
 - Credit to [Prodromos Pantos](https://github.com/prpanto) for porting the original component to Vue & Nuxt.

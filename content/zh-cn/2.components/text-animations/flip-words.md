@@ -26,7 +26,7 @@ description: A component that flips through a list of words.
 | `duration` | `number` | Duration (in milliseconds) for each word to be displayed before flipping to the next word. |
 | `class`    | `string` | Additional CSS classes to apply to the component.                                          |
 
-## Credits
+## 感谢
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
 

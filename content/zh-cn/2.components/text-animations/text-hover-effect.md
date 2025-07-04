@@ -24,7 +24,7 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ## API
 
-| Prop 名称     | 类型     | Default  | 描述                                                      |
+| Prop 名称     | 类型     | 默认值   | 描述                                                      |
 | ------------- | -------- | -------- | --------------------------------------------------------- |
 | `text`        | `string` | Required | The text to be displayed with the hover effect.           |
 | `duration`    | `number` | `200`    | The duration of the mask transition animation in seconds. |

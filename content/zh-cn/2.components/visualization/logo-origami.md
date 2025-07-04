@@ -13,7 +13,7 @@ description: Animated flipping logo with origami effect.
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -41,6 +41,6 @@ description: Animated flipping logo with origami effect.
 
 - **Easy Integration**: Simple to include in your Vue projects with minimal setup.
 
-## Credits
+## 感谢
 
 - Inspired by origami animations and flip effects at [hover.dev](www.hover.dev/components/other#logo-origami)

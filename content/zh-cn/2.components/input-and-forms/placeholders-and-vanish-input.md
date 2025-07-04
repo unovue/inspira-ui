@@ -20,7 +20,7 @@ description: Sliding in placeholders and vanish effect of input on submit
 
 ## API
 
-| Prop 名称      | Type            | Default                                               | 描述                                                                            |
+| Prop 名称      | 类型            | 默认值                                                | 描述                                                                            |
 | -------------- | --------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------- |
 | `placeholders` | `Array<string>` | `["Placeholder 1", "Placeholder 2", "Placeholder 3"]` | An array of placeholder texts that cycle through as prompts in the input field. |
 
@@ -31,7 +31,7 @@ This component listens to the following events emitted by the `VanishingInput` c
 | `change`   | `Event`    | Triggered when the input value changes. |
 | `submit`   | `string`   | Triggered when the input is submitted.  |
 
-## Credits
+## 感谢
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
 

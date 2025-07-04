@@ -13,7 +13,7 @@ description: Visually appealing particle animation applied to images as seen on 
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -25,7 +25,7 @@ description: Visually appealing particle animation applied to images as seen on 
 
 ## API
 
-| Prop 名称         | Type                                                                          | Default  | 描述                                                                            |
+| Prop 名称         | 类型                                                                          | 默认值   | 描述                                                                            |
 | ----------------- | ----------------------------------------------------------------------------- | -------- | ------------------------------------------------------------------------------- |
 | `imageSrc`        | `string`                                                                      | `null`   | Source URL for the image to which the particle effect is applied.               |
 | `class`           | `string`                                                                      | `null`   | Additional CSS classes to apply to the image element.                           |
@@ -45,7 +45,7 @@ description: Visually appealing particle animation applied to images as seen on 
 | `noise`           | `number`                                                                      | `null`   | Noise of the particles.                                                         |
 | `responsiveWidth` | `boolean`                                                                     | `false`  | Should the canvas be responsive.                                                |
 
-## Credits
+## 感谢
 
 - Credits to [Nuxt Labs](https://nuxtlabs.com) for this inspiration.
 - Credits to [NextParticles](https://nextparticle.nextco.de) for the base of the animation library.

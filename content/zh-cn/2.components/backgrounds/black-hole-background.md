@@ -11,7 +11,7 @@ navBadges:
 
 ## API
 
-| Prop 名称          | Type                       | Default         | 描述                                                          |
+| Prop 名称          | 类型                       | 默认值          | 描述                                                          |
 | ------------------ | -------------------------- | --------------- | ------------------------------------------------------------- |
 | `strokeColor`      | `string`                   | `"#737373"`     | Stroke colour for the concentric discs and radial lines.      |
 | `numberOfLines`    | `number`                   | `50`            | Total radial lines emanating from the centre.                 |
@@ -41,7 +41,7 @@ navBadges:
 - **Dark-Mode Friendly** – Radial backgrounds automatically invert in dark theme.
 - **Responsive** – Re-computes geometry and re-renders on window resize.
 
-## Credits
+## 感谢
 
 - Custom generative art logic inspired by tunnel / warp animations.
 - Utilises **Motion-V** for gradient drift and Vue 3 Composition API for lifecycle control.

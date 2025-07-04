@@ -13,7 +13,7 @@ description: A cool grid layout with different child component.
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -47,7 +47,7 @@ description: A cool grid layout with different child component.
 | ------------ | -------------------------------- |
 | `background` | Component to show in background. |
 
-| Props Name    | Type      | 描述                                 |
+| Props Name    | 类型      | 描述                                 |
 | ------------- | --------- | ------------------------------------ |
 | `name`        | `string`  | Name or title to show on card.       |
 | `icon`        | `?string` | Icon component to show on card.      |
@@ -55,6 +55,6 @@ description: A cool grid layout with different child component.
 | `href`        | `string`  | Link to the url for CTA.             |
 | `cta`         | `string`  | Text to show on CTA.                 |
 
-## Credits
+## 感谢
 
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/bento-grid) and [Magic UI](https://magicui.design/docs/components/bento-grid) for this fantastic component.

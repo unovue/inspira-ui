@@ -20,7 +20,7 @@ description: A stylish animated button with a rotating conic gradient border and
 
 ## API
 
-| Prop 名称      | Type       | Default              | 描述                                                         |
+| Prop 名称      | 类型       | 默认值               | 描述                                                         |
 | -------------- | ---------- | -------------------- | ------------------------------------------------------------ |
 | `borderWidth`  | `number`   | `2`                  | Width of the gradient border in pixels.                      |
 | `colors`       | `string[]` | Rainbow Colors Array | Array of colors used in the conic gradient border.           |

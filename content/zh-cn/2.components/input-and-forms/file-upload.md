@@ -17,7 +17,7 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -34,13 +34,13 @@ The `FileUpload` component serves as a wrapper for the file upload effect. It ma
 
 #### Props
 
-| Prop 名称 | Type   | 默认值 | 描述                                                  |
+| Prop 名称 | 类型   | 默认值 | 描述                                                  |
 | --------- | ------ | ------ | ----------------------------------------------------- |
 | `class`   | String | -      | Additional classes for styling the container element. |
 
 #### Emits
 
-| Event Name | Type                      | 描述                                                       |
+| Event Name | 类型                      | 描述                                                       |
 | ---------- | ------------------------- | ---------------------------------------------------------- |
 | `onChange` | `(files: File[]) => void` | Callback function triggered when files are added/uploaded. |
 
@@ -58,7 +58,7 @@ The `FileUploadGrid` component provides the background grid pattern for the file
 
 #### Props
 
-| Prop 名称 | Type   | 默认值 | 描述                                   |
+| Prop 名称 | 类型   | 默认值 | 描述                                   |
 | --------- | ------ | ------ | -------------------------------------- |
 | `class`   | String | -      | Additional classes for custom styling. |
 
@@ -68,7 +68,7 @@ The `FileUploadGrid` component provides the background grid pattern for the file
 <FileUploadGrid class="custom-class" />
 ```
 
-## Credits
+## 感谢
 
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.
 - Inspired by [AcernityUI](https://ui.aceternity.com/components/file-upload).

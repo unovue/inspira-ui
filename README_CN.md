@@ -83,10 +83,9 @@ Inspira UI 的出道旨在填补 Vue 社区生态的一个空白，它提供了�
   // 其他翻译...
   "common": {
     "InspiraUIPro": "Inspira UI Pro" // 英译显示的内容
-  },
+  }
   // 其他翻译...
 }
-
 ```
 
 ```json
@@ -95,23 +94,20 @@ Inspira UI 的出道旨在填补 Vue 社区生态的一个空白，它提供了�
   // 其他翻译...
   "common": {
     "InspiraUIPro": "Inspira UI 专业版" // 中文显示的内容
-  },
+  }
   // 其他翻译...
 }
-
 ```
 
 在对应的页面 vue 文件中使用
 
 ```vue
 <template>
-<!-- template 需要双花括号来解析 -->
+  <!-- template 需要双花括号来解析 -->
   {{ $t("common.InspiraUIPro") }}
 </template>
 
-<script setup lang="ts">
-
-</script>
+<script setup lang="ts"></script>
 ```
 
 - 文档翻译

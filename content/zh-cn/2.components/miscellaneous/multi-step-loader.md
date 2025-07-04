@@ -20,7 +20,7 @@ description: A step loader for screens that works with async conditions too.
 
 ## API
 
-| Prop 名称         | Type      | 默认值  | 描述                                                                         |
+| Prop 名称         | 类型      | 默认值  | 描述                                                                         |
 | ----------------- | --------- | ------- | ---------------------------------------------------------------------------- |
 | `loading`         | `boolean` | `false` | Controls the visibility of the loader. When `true`, the loader is displayed. |
 | `steps`           | `Step[]`  | `[]`    | Array of step objects defining the loading sequence.                         |
@@ -33,7 +33,7 @@ description: A step loader for screens that works with async conditions too.
 | `complete`     | `void`       | Emitted when all steps have been completed.                          |
 | `close`        | `void`       | Emitted when the loader is closed by button.                         |
 
-## Credits
+## 感谢
 
 - Credits to [M Atif](https://github.com/atif0075) for this component.
 

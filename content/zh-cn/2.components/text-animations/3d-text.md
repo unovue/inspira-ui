@@ -20,7 +20,7 @@ description: A stylish 3D text component with customizable colors, shadows, and 
 
 ## API
 
-| Prop 名称           | Type      | Default    | 描述                                               |
+| Prop 名称           | 类型      | 默认值     | 描述                                               |
 | ------------------- | --------- | ---------- | -------------------------------------------------- |
 | `textColor`         | `string`  | `"white"`  | Color of the main text.                            |
 | `letterSpacing`     | `number`  | `-0.1`     | Adjusts the spacing between letters in `ch` units. |

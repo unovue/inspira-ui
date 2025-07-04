@@ -35,7 +35,7 @@ description: A glare effect that happens on hover, as seen on Linear's website.
 
 - **Slot Support**: Easily add any content inside the component using the default slot.
 
-## Credits
+## 感谢
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.
 - Inspired from [Aceternity UI](https://ui.aceternity.com/components/glare-card).

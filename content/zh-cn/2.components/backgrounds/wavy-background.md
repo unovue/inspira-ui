@@ -49,7 +49,7 @@ yarn add simplex-noise
 
 ## API
 
-| Prop 名称        | Type               | Default                                                   | 描述                                                       |
+| Prop 名称        | 类型               | 默认值                                                    | 描述                                                       |
 | ---------------- | ------------------ | --------------------------------------------------------- | ---------------------------------------------------------- |
 | `class`          | `string`           | `-`                                                       | The content to be displayed on top of the wavy background. |
 | `containerClass` | `string`           | `-`                                                       | The CSS class to apply to the content container.           |
@@ -65,7 +65,7 @@ yarn add simplex-noise
 
 - **Slot Support**: Easily add any content inside the component using the default slot.
 
-## Credits
+## 感谢
 
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/wavy-background).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.

@@ -76,7 +76,7 @@ Without Blur or overlay
 
 - **Responsive Design**: The component adjusts to fit the width and height of its parent container, ensuring compatibility across different screen sizes.
 
-## Credits
+## 感谢
 
 - Built with the [Three.js](https://threejs.org/) library for 3D rendering and animations.
 - Inspired from [Tresjs Experiment](https://lab.tresjs.org/experiments/overlay).

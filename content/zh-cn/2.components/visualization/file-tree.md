@@ -13,7 +13,7 @@ description: A component used to showcase the folder and file structure of a dir
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -88,7 +88,7 @@ The `Tree` component serves as a container for displaying a hierarchical file/fo
 
 #### Props
 
-| Prop 名称              | Type                | Default                | 描述                                               |
+| Prop 名称              | 类型                | 默认值                 | 描述                                               |
 | ---------------------- | ------------------- | ---------------------- | -------------------------------------------------- |
 | `class`                | `string`            | -                      | Additional classes for styling the tree container. |
 | `initialSelectedId`    | `string`            | -                      | ID of the initially selected item.                 |
@@ -114,7 +114,7 @@ The `Folder` and `File` components represent folders and files in the file tree.
 
 #### Props
 
-| Prop 名称      | Type      | 默认值  | 描述                                    |
+| Prop 名称      | 类型      | 默认值  | 描述                                    |
 | -------------- | --------- | ------- | --------------------------------------- |
 | `class`        | `string`  | -       | Additional classes for custom styling.  |
 | `id`           | `string`  | -       | Unique identifier for the item.         |
@@ -135,7 +135,7 @@ The `Folder` and `File` components represent folders and files in the file tree.
 
 ::
 
-## Credits
+## 感谢
 
 - Inspired by [Magic UI](https://magicui.design/docs/components/file-tree).
 - Credit to [kalix127](https://github.com/kalix127) for porting this component.

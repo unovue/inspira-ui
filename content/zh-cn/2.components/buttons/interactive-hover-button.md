@@ -20,12 +20,12 @@ description: A visually engaging button component that responds to hover with dy
 
 ## API
 
-| Prop 名称 | 类型     | Default  | 描述                                           |
+| Prop 名称 | 类型     | 默认值   | 描述                                           |
 | --------- | -------- | -------- | ---------------------------------------------- |
 | `text`    | `string` | `Button` | The text to be displayed inside the button.    |
 | `class`   | `string` | `""`     | Additional class names to style the component. |
 
-## Credits
+## 感谢
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Inspired and ported from [Magic UI Interactive Hover Button](https://magicui.design/docs/components/interactive-hover-button).

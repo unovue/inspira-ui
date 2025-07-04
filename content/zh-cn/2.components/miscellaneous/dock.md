@@ -13,7 +13,7 @@ description: A macOS-style dock with magnifying icons as you hover over them.
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -52,6 +52,6 @@ description: A macOS-style dock with magnifying icons as you hover over them.
 
 ::
 
-## Credits
+## 感谢
 
 - Credits to macOS Dock for the design inspiration and the fantastic hover magnification effect.

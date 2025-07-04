@@ -20,11 +20,11 @@ description: A cool tooltip that reveals on hover, follows mouse pointer
 
 ## API
 
-| Prop 名称 | Type                                                                    | 默认值 | 描述                                                                                                                                        |
+| Prop 名称 | 类型                                                                    | 默认值 | 描述                                                                                                                                        |
 | --------- | ----------------------------------------------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `items`   | `Array<{id: number, name: string, designation: string, image: string}>` | `[]`   | An array of objects, each representing an item. Each object in the array should have the following properties: id, name, designation, image |
 
-## Credits
+## 感谢
 
 - Credits to [M Atif](https://github.com/atif0075) for this component.
 

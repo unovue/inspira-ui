@@ -63,7 +63,7 @@ Download a GeoJSON file containing the globe's geographical data from [GeoJSON M
 
 ## API
 
-| Prop 名称     | Type         | 默认值 | 描述                                                                                                |
+| Prop 名称     | 类型         | 默认值 | 描述                                                                                                |
 | ------------- | ------------ | ------ | --------------------------------------------------------------------------------------------------- |
 | `globeConfig` | `object`     | `{}`   | Configuration options for the globe, including colors, atmosphere, rotation speed, and lighting.    |
 | `data`        | `Position[]` | `[]`   | Array of positions representing arcs and points on the globe, with latitude, longitude, color, etc. |
@@ -71,7 +71,7 @@ Download a GeoJSON file containing the globe's geographical data from [GeoJSON M
 
 ### `globeConfig` Properties
 
-| Property             | Type      | Default                 | 描述                                                     |
+| Property             | 类型      | 默认值                  | 描述                                                     |
 | -------------------- | --------- | ----------------------- | -------------------------------------------------------- |
 | `pointSize`          | `number`  | `1`                     | Size of individual points on the globe.                  |
 | `globeColor`         | `string`  | `"#1d072e"`             | Color of the globe surface.                              |
@@ -110,7 +110,7 @@ Download a GeoJSON file containing the globe's geographical data from [GeoJSON M
 - **Auto-Rotate and Zoom**: Supports auto-rotation, zoom, and customizable controls for a dynamic experience.
 - **Responsive Design**: Adapts to container size and maintains performance with WebGL rendering.
 
-## Credits
+## 感谢
 
 - Built with Three.js and Three Globe libraries, designed for global data visualizations and dynamic effects.
 - Ported from [Aceternity UI](https://ui.aceternity.com/components/github-globe).

@@ -36,7 +36,7 @@ Vertical beam.
 
 ## API
 
-| Prop 名称            | Type          | Default                | 描述                                                                         |
+| Prop 名称            | 类型          | 默认值                 | 描述                                                                         |
 | -------------------- | ------------- | ---------------------- | ---------------------------------------------------------------------------- |
 | `class`              | `string`      | `""`                   | Additional CSS classes to apply to the component for customization.          |
 | `containerRef`       | `HTMLElement` | N/A                    | Reference to the container element where the beam is rendered.               |
@@ -64,6 +64,6 @@ Vertical beam.
 - **Responsive Updates**: The beam adjusts its position and size in response to window resizing and element repositioning.
 - **Flexible Animation Control**: Customize the animation's duration, delay, and direction for precise timing.
 
-## Credits
+## 感谢
 
 - Inspired and ported from [Magic UI Animated Beam](https://magicui.design/docs/components/animated-beam).

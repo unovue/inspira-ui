@@ -28,7 +28,7 @@ Add at least one SVG file to the same folder as your component and update the im
 
 ## API
 
-| Prop 名称            | 类型     | Default             | 描述                                                |
+| Prop 名称            | 类型     | 默认值              | 描述                                                |
 | -------------------- | -------- | ------------------- | --------------------------------------------------- |
 | `textGlowStartColor` | `string` | `"#38ef7d80"`       | Color of the box shadow start.                      |
 | `textGlowEndColor`   | `string` | `"#38ef7d"`         | Color of the box shadow end.                        |
@@ -42,6 +42,6 @@ Add at least one SVG file to the same folder as your component and update the im
 
 - **Slot-Based Content**: Supports a default slot to add content inside the Animate Grid container.
 
-## Credits
+## 感谢
 
 - Thanks to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for providing this component.

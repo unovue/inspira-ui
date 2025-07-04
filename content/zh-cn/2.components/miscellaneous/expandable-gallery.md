@@ -20,7 +20,7 @@ description: A responsive image gallery with an interactive hover effect that ex
 
 ## API
 
-| Prop 名称 | Type       | 默认值 | 描述                                           |
+| Prop 名称 | 类型       | 默认值 | 描述                                           |
 | --------- | ---------- | ------ | ---------------------------------------------- |
 | `images`  | `string[]` | `[]`   | Array of image URLs to display in the gallery. |
 
@@ -31,6 +31,6 @@ description: A responsive image gallery with an interactive hover effect that ex
 - **Smooth Transitions**: Includes smooth scaling animations for a polished visual effect.
 - **Customizable Content**: Easily update the `images` array to change the gallery's content.
 
-## Credits
+## 感谢
 
 - Inspired from [Expandable Gallery Component by David Mráz](https://x.com/davidm_ml/status/1872319793124282653)

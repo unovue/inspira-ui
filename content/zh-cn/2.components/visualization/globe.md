@@ -49,7 +49,7 @@ yarn add cobe vue-use-spring
 
 ## API
 
-| Prop 名称   | Type          | 默认值  | 描述                                                                                                        |
+| Prop 名称   | 类型          | 默认值  | 描述                                                                                                        |
 | ----------- | ------------- | ------- | ----------------------------------------------------------------------------------------------------------- |
 | `class`     | `string`      | `""`    | Additional CSS classes for custom styling.                                                                  |
 | `config`    | `COBEOptions` | N/A     | Configuration object for the globe, following **[COBE]**(https://cobe.vercel.app/docs/api) library options. |
@@ -70,7 +70,7 @@ yarn add cobe vue-use-spring
 
 - **Responsive Design**: Automatically adjusts to different screen sizes and resolutions.
 
-## Credits
+## 感谢
 
 - Built using the [cobe](https://github.com/shuding/cobe) library for WebGL globe visualization.
 

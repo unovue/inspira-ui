@@ -13,7 +13,7 @@ description: Slide to compare any two pieces of content - images, designs, code,
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -43,7 +43,7 @@ Custom Content with AutoPlay
 
 ### Props
 
-| Prop 名称                 | Type                | Default          | 描述                                      |
+| Prop 名称                 | 类型                | 默认值           | 描述                                      |
 | ------------------------- | ------------------- | ---------------- | ----------------------------------------- |
 | `firstImage`              | `string`            | `""`             | URL of the first image                    |
 | `secondImage`             | `string`            | `""`             | URL of the second image                   |
@@ -70,13 +70,13 @@ Custom Content with AutoPlay
 
 ### Slots
 
-| Slot Name        | Default Content                                   | 描述                                                                                                                              |
+| Slot Name        | 默认值 Content                                    | 描述                                                                                                                              |
 | ---------------- | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | `first-content`  | `<img>` element if `firstImage` prop is provided  | Content shown on the left/first side of the comparison. Has full access to component width/height.                                |
 | `second-content` | `<img>` element if `secondImage` prop is provided | Content shown on the right/second side of the comparison. Has full access to component width/height.                              |
-| `handle`         | Default slider handle with dots icon              | Custom handle for the slider. Automatically positioned at the dividing line. Should handle positioning with absolute positioning. |
+| `handle`         | 默认值 slider handle with dots icon               | Custom handle for the slider. Automatically positioned at the dividing line. Should handle positioning with absolute positioning. |
 
-## Credits
+## 感谢
 
 - Credits to [M Atif](https://github.com/atif0075) for this component.
 

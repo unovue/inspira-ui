@@ -20,7 +20,7 @@ description: An animated box reveal effect with customizable colors, duration, a
 
 ## API
 
-| Prop 名称  | 类型     | Default     | 描述                                                 |
+| Prop 名称  | 类型     | 默认值      | 描述                                                 |
 | ---------- | -------- | ----------- | ---------------------------------------------------- |
 | `color`    | `string` | `"#5046e6"` | Background color of the reveal box.                  |
 | `duration` | `number` | `0.5`       | Duration of the reveal animation in seconds.         |
@@ -34,6 +34,6 @@ description: An animated box reveal effect with customizable colors, duration, a
 - **Slot-Based Content**: Supports default slot content that appears once the reveal animation completes.
 - **Custom Background Color**: Easily customize the box's background color using the `color` prop.
 
-## Credits
+## 感谢
 
 - Ported from [Magic UI Box Reveal](https://magicui.design/docs/components/box-reveal).

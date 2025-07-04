@@ -13,7 +13,7 @@ description: Mousemove effect to reveal text content at the bottom of the card.
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -35,7 +35,7 @@ description: Mousemove effect to reveal text content at the bottom of the card.
 | text       | Display default text when the card is not hovered over. |
 | revealText | Text to be revealed when hovered over the card.         |
 
-## Credits
+## 感谢
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
 

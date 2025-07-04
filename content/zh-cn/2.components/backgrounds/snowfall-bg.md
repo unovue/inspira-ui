@@ -29,6 +29,6 @@ description: A beautifully animated snowfall effect applied as a background.
 | `minRadius` | `number` | `1`    | Minimum radius of snowflakes.                             |
 | `class`     | `string` | `null` | Additional CSS classes to apply to the container element. |
 
-## Credits
+## 感谢
 
 - Inspired by natural snowfall effects.

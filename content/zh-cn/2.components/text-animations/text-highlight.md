@@ -42,13 +42,13 @@ With text color change.
 
 ## API
 
-| Prop 名称        | 类型     | Default   | 描述                                                                       |
+| Prop 名称        | 类型     | 默认值    | 描述                                                                       |
 | ---------------- | -------- | --------- | -------------------------------------------------------------------------- |
 | `delay`          | `number` | `0`       | Delay before the animation starts, in `ms`.                                |
 | `duration`       | `number` | `2000`    | Duration of the animation, in `ms`.                                        |
 | `text-end-color` | `string` | `inherit` | Color of the text at the end of the animation. Match WCAG recommendations. |
 
-## Credits
+## 感谢
 
 - Inspired by [Aceternity UI](https://ui.aceternity.com/components/hero-highlight)
 - Credits to [Nathan De Pachtere](https://nathandepachtere.com) for porting this component.

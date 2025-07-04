@@ -8,7 +8,7 @@ description: A Vue wrapper component for the Spline 3D tool, providing events an
 
 ## API
 
-| Prop 名称        | Type       | Default     | 描述                                                          |
+| Prop 名称        | 类型       | 默认值      | 描述                                                          |
 | ---------------- | ---------- | ----------- | ------------------------------------------------------------- |
 | `scene`          | `string`   | —           | The URL or path to the Spline scene file. **Required**.       |
 | `onLoad`         | `Function` | `undefined` | Callback that fires when the Spline scene loads successfully. |
@@ -85,7 +85,7 @@ You can 复制并粘贴以下代码： to create this component:
 - **Easy Integration**: Load a Spline 3D scene by simply passing the `scene` prop.
 - **Cleanup & Disposal**: Manages resource disposal on unmount to avoid memory leaks.
 
-## Credits
+## 感谢
 
 - Utilizes Spline’s runtime behind the scenes.
 - Inspired by various 3D web experiences using Spline.

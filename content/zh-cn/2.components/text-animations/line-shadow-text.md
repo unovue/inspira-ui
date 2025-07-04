@@ -20,7 +20,7 @@ description: A line shadow text component for Magic UI that adds a shadow effect
 
 ## API
 
-| Prop 名称     | 类型     | Default   | 描述                                       |
+| Prop 名称     | 类型     | 默认值    | 描述                                       |
 | ------------- | -------- | --------- | ------------------------------------------ |
 | `shadowColor` | `string` | `"black"` | The color of the shadow effect             |
 | `class`       | `string` | `""`      | Additional CSS classes for custom styling. |
@@ -30,7 +30,7 @@ description: A line shadow text component for Magic UI that adds a shadow effect
 
 - **Slot-Based Content**: Supports default slots for dynamic content, making it flexible for various use cases.
 
-## Credits
+## 感谢
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.
 - Ported from [Magic UI's Line Shadow Text](https://magicui.design/docs/components/line-shadow-text)

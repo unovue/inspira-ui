@@ -13,7 +13,7 @@ description: A sequentially animated list that introduces each item with a timed
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -34,6 +34,6 @@ description: A sequentially animated list that introduces each item with a timed
 - **Reverse Order**: Items are displayed in reverse order (newest at the top) for a dynamic, engaging user experience.
 - **Flexibility**: You can pass different components as items, making it highly versatile.
 
-## Credits
+## 感谢
 
 - Inspired by [Magic UI](https://magicui.design/docs/components/animated-list).

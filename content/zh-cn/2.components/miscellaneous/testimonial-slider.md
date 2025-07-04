@@ -11,7 +11,7 @@ navBadges:
 
 ## API
 
-| Prop 名称      | Type                                                                | 默认值 | 描述                                                                   |
+| Prop 名称      | 类型                                                                | 默认值 | 描述                                                                   |
 | -------------- | ------------------------------------------------------------------- | ------ | ---------------------------------------------------------------------- |
 | `testimonials` | `Array<{ img: string; quote: string; name: string; role: string }>` | `[]`   | Array of testimonial objects displayed by the slider.                  |
 | `autoRotate`   | `boolean`                                                           | `true` | If `true`, the slider advances automatically every `duration` seconds. |

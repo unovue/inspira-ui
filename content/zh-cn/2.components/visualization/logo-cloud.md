@@ -13,7 +13,7 @@ description: Animated company cloud logs. Usually we can use to show company log
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -42,12 +42,12 @@ Company logo icons
 
 ## API
 
-| Prop 名称 | 类型     | Default                     | 描述                                                           |
+| Prop 名称 | 类型     | 默认值                      | 描述                                                           |
 | --------- | -------- | --------------------------- | -------------------------------------------------------------- |
 | `class`   | `string` | `-`                         | The delay in milliseconds before adding each item to the list. |
 | `title`   | `string` | `Trusted by Companies like` | Title of animated logs.                                        |
 | `logos`   | `[]`     | `[{name: "", path: ""}]`    | Array of items(logos) with name & path fields.                 |
 
-## Credits
+## 感谢
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.

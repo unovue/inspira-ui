@@ -56,7 +56,7 @@ Full page demo usage
 
 ## API
 
-| Prop 名称         | 类型     | Default     | 描述                                                 |
+| Prop 名称         | 类型     | 默认值      | 描述                                                 |
 | ----------------- | -------- | ----------- | ---------------------------------------------------- |
 | `class`           | `string` |             | Optional className for styling the children wrapper. |
 | `containerClass`  | `string` |             | Optional className for styling the container.        |
@@ -73,7 +73,7 @@ Full page demo usage
 
 - **Slot Support**: Easily add any content inside the component using the default slot.
 
-## Credits
+## 感谢
 
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/vortex).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.

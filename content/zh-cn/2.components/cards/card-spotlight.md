@@ -20,7 +20,7 @@ description: A card component with a dynamic spotlight effect that follows the m
 
 ## API
 
-| Prop 名称         | 类型     | Default     | 描述                                                        |
+| Prop 名称         | 类型     | 默认值      | 描述                                                        |
 | ----------------- | -------- | ----------- | ----------------------------------------------------------- |
 | `gradientSize`    | `number` | `200`       | Radius in pixels of the spotlight effect.                   |
 | `gradientColor`   | `string` | `'#262626'` | The color of the spotlight gradient.                        |
@@ -39,6 +39,6 @@ description: A card component with a dynamic spotlight effect that follows the m
 
 - **Performance Optimized**: Utilizes Vue's reactivity for efficient updates, ensuring smooth animations without compromising application performance.
 
-## Credits
+## 感谢
 
 - Inspired by Magic Card component from [Magic UI](https://magicui.design/docs/components/magic-card).

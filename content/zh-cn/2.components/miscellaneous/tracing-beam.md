@@ -31,6 +31,6 @@ description: A component that renders a tracing beam effect with dynamic scrolli
 - **Gradient Transition**: Smoothly transitions colors along the beam from cyan to purple with fading edges for a subtle effect.
 - **Slot-Based Content**: Supports a default slot to add content inside the tracing beam container.
 
-## Credits
+## 感谢
 
 - Ported from [Aceternity UI](https://ui.aceternity.com/components/tracing-beam);

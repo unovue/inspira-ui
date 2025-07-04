@@ -54,7 +54,7 @@ Default slot — place an **`AppleCard`** here.
 
 ## `AppleCard`
 
-| Prop     | Type                                               | Required | 默认值  | 描述                                  |
+| Prop     | 类型                                               | Required | 默认值  | 描述                                  |
 | -------- | -------------------------------------------------- | -------- | ------- | ------------------------------------- |
 | `card`   | `{ src: string; title: string; category: string }` | ✓        | —       | Data object for the card.             |
 | `index`  | `number`                                           | ✓        | —       | Position within the carousel.         |
@@ -72,7 +72,7 @@ _No custom events (relies on injected `CarouselKey` context)._
 
 ## `AppleBlurImage`
 
-| Prop     | Type               | Default                          | 描述                                                           |
+| Prop     | 类型               | 默认值                           | 描述                                                           |
 | -------- | ------------------ | -------------------------------- | -------------------------------------------------------------- |
 | `src`    | `string`           | **—**                            | Image source URL. _Required._                                  |
 | `alt`    | `string`           | "Background of a beautiful view" | Alt text.                                                      |
@@ -92,7 +92,7 @@ When the image fires the native `load` event it gracefully transitions from `blu
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -114,6 +114,6 @@ When the image fires the native `load` event it gracefully transitions from `blu
 - **Accessible Scrolling Controls** &mdash; Prev / next buttons with disabled state.
 - **Mobile‑Aware Scroll Calculations** &mdash; Ensures cards recentre correctly when closed on small screens.
 
-## Credits
+## 感谢
 
 - Ported from [Aceternity UI Apple Card Carousel](https://ui.aceternity.com/components/apple-cards-carousel).

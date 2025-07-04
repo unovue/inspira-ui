@@ -27,7 +27,7 @@ description: A interactive background grid pattern made with SVGs, fully customi
 
 #### Props
 
-| Prop 名称          | Type               | Default    | 描述                                          |
+| Prop 名称          | 类型               | 默认值     | 描述                                          |
 | ------------------ | ------------------ | ---------- | --------------------------------------------- |
 | `className`        | `string`           | -          | Additional classes for styling the component. |
 | `squaresClassName` | `string`           | -          | Additional classes for styling the squares.   |
@@ -35,7 +35,7 @@ description: A interactive background grid pattern made with SVGs, fully customi
 | `height`           | `number`           | `40`       | Height of the square in pixels.               |
 | `squares`          | `[number, number]` | `[24, 24]` | Number of squares in the grid pattern.        |
 
-## Credits
+## 感谢
 
 - Inspired by [MagicUI](https://magicui.design/docs/components/interactive-grid-pattern).
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.

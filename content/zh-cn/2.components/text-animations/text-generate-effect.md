@@ -31,14 +31,14 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ## API
 
-| Prop 名称  | Type      | Default  | 描述                                                                   |
+| Prop 名称  | 类型      | 默认值   | 描述                                                                   |
 | ---------- | --------- | -------- | ---------------------------------------------------------------------- |
 | `words`    | `string`  | Required | The text to be displayed with the generating effect.                   |
 | `duration` | `number`  | `0.7`    | The duration of the text generation animation in seconds.              |
 | `delay`    | `number`  | `0`      | The delay before the text generation animation starts in milliseconds. |
 | `filter`   | `boolean` | `true`   | The blur of the text.                                                  |
 
-## Credits
+## 感谢
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
 

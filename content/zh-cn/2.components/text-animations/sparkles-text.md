@@ -20,14 +20,14 @@ description: A dynamic text that generates continuous sparkles with smooth trans
 
 ## API
 
-| Prop 名称       | 类型     | Default                                  | 描述                                          |
+| Prop 名称       | 类型     | 默认值                                   | 描述                                          |
 | --------------- | -------- | ---------------------------------------- | --------------------------------------------- |
 | `class`         | `string` | `-`                                      | The class to be applied to the sparkles text. |
 | `text`          | `string` | ``                                       | The text to display.                          |
 | `sparklesCount` | `number` | `10`                                     | sparkles count that appears on the text.      |
 | `colors`        | `object` | `{first: '#A07CFE'; second: '#FE8FB5';}` | The sparkles colors.                          |
 
-## Credits
+## 感谢
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.
 - Inspired from [Magic UI](https://magicui.design/docs/components/sparkles-text).

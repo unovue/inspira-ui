@@ -20,7 +20,7 @@ description: A full page slider with images that can be navigated with the keybo
 
 ## API
 
-| Prop 名称          | Type                       | Default                                           | 描述                                                                           |
+| Prop 名称          | 类型                       | 默认值                                            | 描述                                                                           |
 | ------------------ | -------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------ |
 | `images`           | `string[]`                 | `[]`                                              | An array of image URLs to show in the slider.                                  |
 | `hideOverlay`      | `boolean`                  | `false`                                           | Don't create an overlay for the image slider. Slot won't be rendered.          |
@@ -41,7 +41,7 @@ description: A full page slider with images that can be navigated with the keybo
 - **Customisable Autoplay**: Automatically transition through your slides, or allow your users to navigate manually.
 - **Overlay Anything**: The default slot allows you to overlay whatever content you wish overlay slider.
 
-## Credits
+## 感谢
 
 - Component by [Craig Riley](https://github.com/craigrileyuk) for porting this component.
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/images-slider) for inspiring this component.

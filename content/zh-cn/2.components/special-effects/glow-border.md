@@ -48,13 +48,13 @@ Add following entry to inline theme in your `main.css` file.
 
 ## API
 
-| Prop 名称      | Type                 | 默认值 | 描述                                                       |
+| Prop 名称      | 类型                 | 默认值 | 描述                                                       |
 | -------------- | -------------------- | ------ | ---------------------------------------------------------- |
 | `duration`     | `number`             | `10`   | Duration of the glowing border animation.                  |
 | `color`        | `string \| string[]` | `#FFF` | Color or array of colors to applied on the glowing border. |
 | `borderRadius` | `number`             | `10`   | Radius of the border.                                      |
 | `borderWidth`  | `number`             | `2`    | Width of the border.                                       |
 
-## Credits
+## 感谢
 
 - Credits to [Magic UI](https://magicui.design/docs/components/shine-border) for this fantastic component.

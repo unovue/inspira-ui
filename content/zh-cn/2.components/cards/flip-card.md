@@ -37,6 +37,6 @@ description: A dynamic flip card with smooth 180-degree flipping animations alon
 | `default` | Component to show as front. |
 | `back`    | Component to show as back.  |
 
-## Credits
+## 感谢
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.

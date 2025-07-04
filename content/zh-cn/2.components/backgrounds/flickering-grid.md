@@ -24,7 +24,7 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ## API
 
-| Prop 名称       | 类型     | Default        | 描述                                   |
+| Prop 名称       | 类型     | 默认值         | 描述                                   |
 | --------------- | -------- | -------------- | -------------------------------------- |
 | `squareSize`    | `number` | `4`            | Size of each square in the grid.       |
 | `gridGap`       | `number` | `6`            | Gap between squares in the grid.       |
@@ -35,6 +35,6 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 | `class`         | `string` | `-`            | Additional CSS classes for the canvas. |
 | `maxOpacity`    | `number` | `0.2`          | Maximum opacity of the squares.        |
 
-## Credits
+## 感谢
 
 - Credits to [magicui flickering-grid](https://magicui.design/docs/components/flickering-grid) for this component.

@@ -32,7 +32,7 @@ Hero section with animation
 
 ## API
 
-| Prop 名称           | Type       | Default                                        | 描述                                                 |
+| Prop 名称           | 类型       | 默认值                                         | 描述                                                 |
 | ------------------- | ---------- | ---------------------------------------------- | ---------------------------------------------------- |
 | `words`             | `string[]` | `["better", "modern", "beautiful", "awesome"]` | Array of words to cycle through in the animation     |
 | `interval`          | `number`   | `3000`                                         | Time in milliseconds between word transitions        |
@@ -40,7 +40,7 @@ Hero section with animation
 | `class`             | `string`   | ``                                             | Additional CSS classes to apply to the container     |
 | `textClass`         | `string`   | ``                                             | Additional CSS classes to apply to the text          |
 
-## Credits
+## 感谢
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Ported from [Aceternity UI Container Text Flip](https://ui.aceternity.com/components/container-text-flip).

@@ -84,7 +84,7 @@ yarn add --dev @types/canvas-confetti
 
 #### `Confetti`
 
-| Prop 名称       | Type                    | 默认值  | 描述                                                              |
+| Prop 名称       | 类型                    | 默认值  | 描述                                                              |
 | --------------- | ----------------------- | ------- | ----------------------------------------------------------------- |
 | `options`       | `ConfettiOptions`       | `{}`    | Options for individual confetti bursts.                           |
 | `globalOptions` | `ConfettiGlobalOptions` | `{}`    | Global options for the confetti instance (e.g., resize behavior). |
@@ -92,7 +92,7 @@ yarn add --dev @types/canvas-confetti
 
 #### `ConfettiOptions`
 
-| Property                  | Type                        | Default                                                                         | 描述                                                                   |
+| Property                  | 类型                        | 默认值                                                                          | 描述                                                                   |
 | ------------------------- | --------------------------- | ------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | `particleCount`           | `number`                    | `50`                                                                            | The number of confetti particles to launch.                            |
 | `angle`                   | `number`                    | `90`                                                                            | The angle in degrees at which to launch the confetti.                  |
@@ -117,7 +117,7 @@ yarn add --dev @types/canvas-confetti
 
 #### `ConfettiButton`
 
-| Prop 名称 | Type                                               | 默认值 | 描述                                             |
+| Prop 名称 | 类型                                               | 默认值 | 描述                                             |
 | --------- | -------------------------------------------------- | ------ | ------------------------------------------------ |
 | `options` | `ConfettiOptions & { canvas?: HTMLCanvasElement }` | `{}`   | Options for confetti when the button is clicked. |
 
@@ -130,7 +130,7 @@ yarn add --dev @types/canvas-confetti
 - **Manual Control**: Choose whether to start confetti automatically or manually trigger it.
 - **Button Integration**: Use the `ConfettiButton` component to trigger confetti on button clicks.
 
-## Credits
+## 感谢
 
 - Built using the [canvas-confetti](https://www.npmjs.com/package/canvas-confetti) library.
 - Ported from [Magic UI Confetti](https://magicui.design/docs/components/confetti).

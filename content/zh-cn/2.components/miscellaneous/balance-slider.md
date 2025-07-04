@@ -20,7 +20,7 @@ description: A dynamic balance slider with adjustable colors, limits, and intera
 
 ## API
 
-| Prop 名称        | 类型     | Default     | 描述                                                |
+| Prop 名称        | 类型     | 默认值      | 描述                                                |
 | ---------------- | -------- | ----------- | --------------------------------------------------- |
 | `initialValue`   | `number` | `50`        | Initial position of the slider (0-100).             |
 | `leftColor`      | `string` | `"#e68a00"` | Background color for the left side of the slider.   |
@@ -39,7 +39,7 @@ description: A dynamic balance slider with adjustable colors, limits, and intera
 - **Responsive Indicator**: Central indicator adjusts its color based on active state, enhancing interactivity.
 - **Accessible Controls**: Works with keyboard and touch interactions for seamless accessibility.
 
-## Credits
+## 感谢
 
 - Inspired and ported from code shared in [Jhey's CSS only version of Balance Slider](https://x.com/jh3yy/status/1748809599598399792?s=46)
 - Original concept by [Malay Vasa](https://x.com/MalayVasa/status/1748726374079381930).

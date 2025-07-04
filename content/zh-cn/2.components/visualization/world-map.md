@@ -8,7 +8,7 @@ description: Displays a customizable world map with animated arcs and pulse effe
 
 ## API
 
-| Prop 名称    | Type                                                                                                                 | Default     | 描述                                                                                    |
+| Prop 名称    | 类型                                                                                                                 | 默认值      | 描述                                                                                    |
 | ------------ | -------------------------------------------------------------------------------------------------------------------- | ----------- | --------------------------------------------------------------------------------------- |
 | `dots`       | `Array<{ start: { lat: number; lng: number; label?: string }, end: { lat: number; lng: number; label?: string } }> ` | `[]`        | Array of dot objects, each containing a start and end coordinate (latitude, longitude). |
 | `class`      | `string`                                                                                                             | `""`        | Additional CSS classes for custom styling.                                              |
@@ -68,6 +68,6 @@ You can 复制并粘贴以下代码： to create this component:
 - **Dynamic Projection**: Projects latitude/longitude to an 800x400 coordinate plane.
 - **Customizable Colors**: Control lineColor, mapColor, and mapBgColor.
 
-## Credits
+## 感谢
 
 - Ported from (World Map by Aceternity UI)[https://ui.aceternity.com/components/world-map].

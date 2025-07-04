@@ -20,14 +20,14 @@ description: A direction aware hover card, that displays an image with dynamic h
 
 ## API
 
-| Prop 名称       | 类型     | Default     | 描述                                            |
+| Prop 名称       | 类型     | 默认值      | 描述                                            |
 | --------------- | -------- | ----------- | ----------------------------------------------- |
 | `imageUrl`      | `string` | Required    | The URL of the image to be displayed.           |
 | `class`         | `string` | `undefined` | Additional CSS classes for the card container.  |
 | `imageClass`    | `string` | `undefined` | Additional CSS classes for the image element.   |
 | `childrenClass` | `string` | `undefined` | Additional CSS classes for the content overlay. |
 
-## Credits
+## 感谢
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
 

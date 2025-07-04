@@ -20,9 +20,9 @@ description: A versatile and visually dynamic input field with radial hover effe
 
 ## API
 
-| Prop 名称        | Type                | 默认值 | 描述                                                        |
+| Prop 名称        | 类型                | 默认值 | 描述                                                        |
 | ---------------- | ------------------- | ------ | ----------------------------------------------------------- |
-| `defaultValue`   | `string  \| number` | `""`   | Default value of the input field.                           |
+| `defaultValue`   | `string  \| number` | `""`   | 默认值 value of the input field.                            |
 | `class`          | `string`            | `""`   | Additional CSS classes for custom styling.                  |
 | `containerClass` | `string`            | `""`   | Additional CSS classes for custom styling of the container. |
 
@@ -39,7 +39,7 @@ description: A versatile and visually dynamic input field with radial hover effe
 
 This component inherits base styles from ShadCN Vue’s Input component and applies additional functionality, including hover effects and shadow styling.
 
-## Credits
+## 感谢
 
 - Built on ShadCN Vue's Input component foundation, with extended functionality for modern UI/UX needs.
 - Ported from [Aceternity UI's Signup Form Input Component](https://ui.aceternity.com/components/signup-form)

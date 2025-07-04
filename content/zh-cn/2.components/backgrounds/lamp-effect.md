@@ -34,6 +34,6 @@ description: A captivating lamp lighting effect with conic gradients, spotlights
 - **Customizable Timing**: The `delay` and `duration` props allow for precise control of animation timings.
 - **Slot-Based Content**: Supports default slot content, making it easy to overlay text or other components.
 
-## Credits
+## 感谢
 
 - Ported from [Aceternity UI](https://ui.aceternity.com/components/lamp-effect)

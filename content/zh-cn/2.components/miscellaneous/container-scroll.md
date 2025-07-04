@@ -13,7 +13,7 @@ description: A container scrolling effect that transforms the content inside bas
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -33,7 +33,7 @@ The `ContainerScroll` component creates a 3D scroll effect. As the user scrolls,
 
 #### Props
 
-| Prop 名称    | Type   | 默认值 | 描述                                                                          |
+| Prop 名称    | 类型   | 默认值 | 描述                                                                          |
 | ------------ | ------ | ------ | ----------------------------------------------------------------------------- |
 | `rotate`     | Number | `0`    | Controls the rotation of the inner content based on the scroll progress.      |
 | `scale`      | Number | `1`    | Controls the scaling transformation applied to the content during the scroll. |
@@ -58,7 +58,7 @@ The `ContainerScrollTitle` component handles the title's transformation as the u
 
 #### Props
 
-| Prop 名称   | Type   | 默认值 | 描述                                            |
+| Prop 名称   | 类型   | 默认值 | 描述                                            |
 | ----------- | ------ | ------ | ----------------------------------------------- |
 | `translate` | Number | `0`    | Controls the vertical translation of the title. |
 
@@ -76,7 +76,7 @@ The `ContainerScrollCard` component applies scale and rotation effects to the ca
 
 #### Props
 
-| Prop 名称 | Type   | 默认值 | 描述                                             |
+| Prop 名称 | 类型   | 默认值 | 描述                                             |
 | --------- | ------ | ------ | ------------------------------------------------ |
 | `rotate`  | Number | `0`    | Controls the rotation effect of the card.        |
 | `scale`   | Number | `1`    | Controls the scaling effect applied to the card. |
@@ -112,6 +112,6 @@ To customize the scroll animations and responsiveness, you can set the following
 - **Flexible Content**: Place any custom content inside the title and card slots.
 - **Responsive**: Adjusts for mobile and desktop, providing a consistent experience across devices.
 
-## Credits
+## 感谢
 
 - Inspired by [Aceternity UI Container Scroll Animation](https://ui.aceternity.com/components/container-scroll-animation).

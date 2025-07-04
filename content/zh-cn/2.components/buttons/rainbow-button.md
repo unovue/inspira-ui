@@ -20,13 +20,13 @@ description: A rainbow effect on button.
 
 ## API
 
-| Prop 名称 | 类型     | Default    | 描述                                           |
+| Prop 名称 | 类型     | 默认值     | 描述                                           |
 | --------- | -------- | ---------- | ---------------------------------------------- |
 | `class`   | `string` | `""`       | Additional CSS classes to apply to the button. |
 | `is`      | `string` | `"button"` | The HTML tag to render for the component.      |
 | `speed`   | `number` | `2`        | Duration of the animation in seconds.          |
 
-## Credits
+## 感谢
 
 - Credits to [Grzegorz Krol](https://github.com/Grzechu335) for porting this component.
 - Credits to [Magic UI](https://magicui.design/docs/components/rainbow-button).

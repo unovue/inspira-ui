@@ -19,7 +19,7 @@ reverse
 
 ## API
 
-| Prop 名称    | Type                                                    | 默认值  | 描述                                                    |
+| Prop 名称    | 类型                                                    | 默认值  | 描述                                                    |
 | ------------ | ------------------------------------------------------- | ------- | ------------------------------------------------------- |
 | `duration`   | `number`                                                | `10`    | The duration of the full circular rotation animation.   |
 | `reverse`    | `boolean`                                               | `false` | Determines if the animation should rotate in reverse.   |
@@ -40,7 +40,7 @@ You can 复制并粘贴以下代码： to create this component:
 ::CodeViewer{filename="SpinningText.vue" language="vue" componentName="SpinningText" type="ui" id="spinning-text"}
 ::
 
-## Credits
+## 感谢
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Ported from [Magic UI Spinning Text](https://magicui.design/docs/components/spinning-text).

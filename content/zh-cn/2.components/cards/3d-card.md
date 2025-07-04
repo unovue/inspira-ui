@@ -21,7 +21,7 @@ If you are using `CardItem` inside a `div`, add `style="transform-style: preserv
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -63,7 +63,7 @@ The `CardContainer` component serves as a wrapper for the 3D card effect. It man
 
 #### Props
 
-| Prop 名称        | Type   | 默认值 | 描述                                                        |
+| Prop 名称        | 类型   | 默认值 | 描述                                                        |
 | ---------------- | ------ | ------ | ----------------------------------------------------------- |
 | `class`          | String | `null` | Additional classes for styling the inner container element. |
 | `containerClass` | String | `null` | Additional classes for styling the outer container element. |
@@ -82,7 +82,7 @@ The `CardBody` component is a flexible container with preserved 3D styling. It i
 
 #### Props
 
-| Prop 名称 | Type   | 默认值 | 描述                                   |
+| Prop 名称 | 类型   | 默认值 | 描述                                   |
 | --------- | ------ | ------ | -------------------------------------- |
 | `class`   | String | `null` | Additional classes for custom styling. |
 
@@ -100,7 +100,7 @@ The `CardItem` component represents individual items within the 3D card. It supp
 
 #### Props
 
-| Prop 名称    | Type          | 默认值  | 描述                                                            |
+| Prop 名称    | 类型          | 默认值  | 描述                                                            |
 | ------------ | ------------- | ------- | --------------------------------------------------------------- |
 | `as`         | String        | `"div"` | The HTML tag or component to use for the item.                  |
 | `class`      | String        | `null`  | Additional classes for styling the item.                        |

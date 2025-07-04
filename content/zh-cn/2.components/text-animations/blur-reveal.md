@@ -31,6 +31,6 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 | `blur`     | `string` | `10px` | Amount of blur to apply to the child components.                             |
 | `yOffset`  | `number` | `20`   | Specifies the vertical offset distance (yOffset) for the entrance animation. |
 
-## Credits
+## 感谢
 
 - Credits to [Magic UI](https://magicui.design/docs/components/blur-fade) for this fantastic component.

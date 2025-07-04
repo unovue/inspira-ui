@@ -27,7 +27,7 @@ Sparkles Full Page
 
 ## API
 
-| Prop 名称         | 类型     | Default     | 描述                                                                                   |
+| Prop 名称         | 类型     | 默认值      | 描述                                                                                   |
 | ----------------- | -------- | ----------- | -------------------------------------------------------------------------------------- |
 | `background`      | `string` | `'#0d47a1'` | Background color of the container. Use 'transparent' to see through to parent element. |
 | `particleColor`   | `string` | `'#ffffff'` | Color of the particles. Accepts any valid CSS color value.                             |
@@ -36,7 +36,7 @@ Sparkles Full Page
 | `speed`           | `number` | `4`         | Movement speed multiplier. Higher values create faster movement.                       |
 | `particleDensity` | `number` | `120`       | Number of particles to render. Higher values create denser particle fields.            |
 
-## Credits
+## 感谢
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
 

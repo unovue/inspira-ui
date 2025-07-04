@@ -13,7 +13,7 @@ description: A dynamic SVG mask component that reveals content with hover and mo
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -54,6 +54,6 @@ description: A dynamic SVG mask component that reveals content with hover and mo
 - **Slot-Based Content**: Supports named slots for base and reveal content, making it flexible for various use cases.
 - **Responsive Background**: Includes hover-based background color transitions for added visual appeal.
 
-## Credits
+## 感谢
 
 - Ported from [Aceternity UI's SVG Mask Effect](https://ui.aceternity.com/components/text-generate-effect).

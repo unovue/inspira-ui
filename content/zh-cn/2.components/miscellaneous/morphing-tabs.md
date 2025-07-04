@@ -20,7 +20,7 @@ description: This is a morphing tabs interaction, recreated by Preet's work and 
 
 ## API
 
-| Prop 名称          | Type       | 默认值 | 描述                                           |
+| Prop 名称          | 类型       | 默认值 | 描述                                           |
 | ------------------ | ---------- | ------ | ---------------------------------------------- |
 | `class`            | `string`   | `""`   | Additional class names to style the component. |
 | `tabs`             | `string[]` | `[]`   | Tabs.                                          |
@@ -28,7 +28,7 @@ description: This is a morphing tabs interaction, recreated by Preet's work and 
 | `margin`           | `number`   | `20`   | Active tab margin left and right.              |
 | `blurStdDeviation` | `number`   | `6`    | Svg blur stdDeviation, tab rounded use it.     |
 
-## Credits
+## 感谢
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Inspired and ported from [@Preet "Exclusion tabs"](https://x.com/wickedmishra/status/1823026659894940124).

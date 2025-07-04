@@ -25,6 +25,6 @@ description: A glare effect on text.
 | `duration`     | `number` | `10`   | Duration of the animation in seconds. |
 | `radiantWidth` | `number` | `100`  | Width of the radiant animation.       |
 
-## Credits
+## 感谢
 
 - Credits to [Magic UI](https://magicui.design/docs/components/animated-shiny-text) for this fantastic component.

@@ -17,7 +17,7 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ## 手动安装
 
-复制并粘贴以下代码： in the same folder
+在同一个文件中，复制并粘贴以下代码： 
 
 ::code-group
 
@@ -44,6 +44,6 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 - **Reactive Design**: The component uses Vue's reactivity system to update the scroll progress and word visibility in real-time.
 
-## Credits
+## 感谢
 
 - Ported from [Magic UI Text Reveal](https://magicui.design/docs/components/text-reveal).

@@ -51,7 +51,7 @@ You can 复制并粘贴以下代码： to create this component:
    - `uColor`: An example color uniform (slightly purple) used in the shader.
 5. **Animation Loop**: Schedules updates via `requestAnimationFrame`, updates `uTime`, and renders the scene.
 
-## Credits
+## 感谢
 
 - Built with the [OGL](https://github.com/oframe/ogl) library for 3D rendering.
 - Inspired by generative art patterns.

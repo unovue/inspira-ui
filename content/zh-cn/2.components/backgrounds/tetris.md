@@ -60,7 +60,7 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ::
 
-## Credits
+## 感谢
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Inspired and ported from [Nuxt UI Home](https://ui2.nuxt.com/).

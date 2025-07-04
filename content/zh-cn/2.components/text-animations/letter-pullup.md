@@ -20,13 +20,13 @@ description: Staggered letter pull up text animation.
 
 ## API
 
-| Prop 名称 | 类型     | Default                    | 描述                                               |
+| Prop 名称 | 类型     | 默认值                     | 描述                                               |
 | --------- | -------- | -------------------------- | -------------------------------------------------- |
 | `class`   | `string` | `-`                        | The class to be applied to the component.          |
 | `words`   | `string` | `Staggered Letter Pull Up` | Text to animate.                                   |
 | `delay`   | `number` | `0.05`                     | Delay each letter's animation by this many seconds |
 
-## Credits
+## 感谢
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.
 - Inspired from [Magic UI](https://magicui.design/docs/components/letter-pullup).

@@ -44,7 +44,7 @@ You can 复制并粘贴以下代码： to create this component:
 - **Responsive Scaling**: Automatically adjusts to different screen sizes and resolutions.
 - **Configurable Parameters**: Offers a wide range of props to control effects like refraction, speed, and edge sharpness.
 
-## Credits
+## 感谢
 
 - Inspired by the Apple Fluid Motion design.
 - Ported and enhaced from [Paper Design Concept](https://github.com/paper-design/liquid-logo).

@@ -20,7 +20,7 @@ description: A stunning animated starfield background with glowing and sharp tra
 
 ## API
 
-| Prop 名称 | 类型     | Default  | 描述                                        |
+| Prop 名称 | 类型     | 默认值   | 描述                                        |
 | --------- | -------- | -------- | ------------------------------------------- |
 | `color`   | `string` | `"#FFF"` | Color of the stars in the starfield.        |
 | `count`   | `number` | `200`    | Number of stars displayed in the animation. |
@@ -32,7 +32,7 @@ description: A stunning animated starfield background with glowing and sharp tra
 - **Customizable**: Adjust the `color` of the stars and control the number of stars using the `count` prop.
 - **Responsive Design**: Automatically adapts to the size of the canvas, ensuring a full-screen starfield effect.
 
-## Credits
+## 感谢
 
 - Inspired by 3D starfield simulations and trail effects in modern canvas animations.
 - Credit to [Prodromos Pantos](https://github.com/prpanto) for porting the original component to Vue & Nuxt.

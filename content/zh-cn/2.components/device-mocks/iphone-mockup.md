@@ -34,6 +34,6 @@ description: An SVG mockup of an iPhone.
 - **Light and Dark Mode Compatibility**: The mockup adapts its colors based on the theme, ensuring consistency in both light and dark modes.
 - **Easy Integration**: Simple to include in your Vue projects with minimal setup.
 
-## Credits
+## 感谢
 
 - Ported from [Magic UI](https://magicui.design/docs/components/iphone-15-pro).

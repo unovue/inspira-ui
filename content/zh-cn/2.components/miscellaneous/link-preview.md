@@ -49,7 +49,7 @@ yarn add qss
 
 ## API
 
-| Prop 名称   | Type      | 默认值  | 描述                                                                                        |
+| Prop 名称   | 类型      | 默认值  | 描述                                                                                        |
 | ----------- | --------- | ------- | ------------------------------------------------------------------------------------------- |
 | `class`     | `string`  | `""`    | Custom class applied to the main element.                                                   |
 | `linkClass` | `string`  | `""`    | Custom class applied to the link element.                                                   |
@@ -59,7 +59,7 @@ yarn add qss
 | `imageSrc`  | `string`  | `""`    | The source of the image to display (required if `isStatic` is `true`).                      |
 | `url`       | `string`  | `""`    | URL for the link and for generating the preview image (required if `isStatic` is `false`).  |
 
-## Credits
+## 感谢
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
 

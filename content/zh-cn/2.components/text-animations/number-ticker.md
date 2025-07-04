@@ -22,7 +22,7 @@ description: Animate numbers to count up or down to a target number
 
 ## API
 
-| Prop 名称       | Type                | Default        | 描述                                                              |
+| Prop 名称       | 类型                | 默认值         | 描述                                                              |
 | --------------- | ------------------- | -------------- | ----------------------------------------------------------------- |
 | `value`         | `int`               | `0`            | Value to count to                                                 |
 | `direction`     | `up \| down`        | `up`           | Direction to count in                                             |
@@ -31,7 +31,7 @@ description: Animate numbers to count up or down to a target number
 | `duration`      | `number`            | `1000`         | Total duration for the entire animation (in milliseconds).        |
 | `transition`    | `TransitionPresets` | `easeOutCubic` | Name of transition preset (https://vueuse.org/core/useTransition) |
 
-## Credits
+## 感谢
 
 - Credits to [Grzegorz Krol](https://github.com/Grzechu335) for porting this component.
 - Ported from [Magic UI NumberTicker](https://magicui.design/docs/components/number-ticker).

@@ -35,6 +35,6 @@ description: An SVG mockup of the Safari browser.
 - **Image Display Support**: Use the `src` prop to insert any image into the mockup's content area.
 - **Light and Dark Mode Compatibility**: The mockup adapts its colors based on the theme.
 
-## Credits
+## 感谢
 
 - Ported from [Magic UI](https://magicui.design/docs/components/safari).

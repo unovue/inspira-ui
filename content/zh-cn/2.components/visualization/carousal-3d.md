@@ -8,7 +8,7 @@ description: A dynamic and interactive 3D carousel component using Three.js and 
 
 ## API
 
-| Prop 名称        | Type        | 默认值 | 描述                                                        |
+| Prop 名称        | 类型        | 默认值 | 描述                                                        |
 | ---------------- | ----------- | ------ | ----------------------------------------------------------- |
 | `items`          | `unknown[]` | `[]`   | List of images or elements to be displayed in the carousel. |
 | `class`          | `string`    | `""`   | Additional CSS classes for styling the carousel overlay.    |
@@ -37,7 +37,7 @@ You can 复制并粘贴以下代码： to create this component:
 - **Dynamic Item Rendering**: Accepts an array of items to render in the carousel dynamically.
 - **Dark Mode Support**: Adaptable to dark and light themes for better UI consistency.
 
-## Credits
+## 感谢
 
 - Built using Three.js for 3D rendering.
 - Utilizes Motion-V for seamless animations.

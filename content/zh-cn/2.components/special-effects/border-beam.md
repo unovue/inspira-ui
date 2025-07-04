@@ -24,7 +24,7 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ## API
 
-| Prop 名称     | 类型     | Default     | 描述                                                                  |
+| Prop 名称     | 类型     | 默认值      | 描述                                                                  |
 | ------------- | -------- | ----------- | --------------------------------------------------------------------- |
 | `class`       | `string` | `""`        | Additional CSS classes for custom styling.                            |
 | `size`        | `number` | `200`       | Size of the animated border beam effect.                              |
@@ -42,6 +42,6 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 - **Flexible Animation Settings**: Control the size, duration, and delay of the animation to fine-tune the visual experience.
 - **Anchor Positioning**: Use the `anchor` prop to set the starting position of the beam along the border.
 
-## Credits
+## 感谢
 
 - Ported from [Magic UI](https://magicui.design/docs/components/border-beam).

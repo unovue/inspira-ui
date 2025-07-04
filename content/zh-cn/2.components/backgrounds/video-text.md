@@ -23,7 +23,7 @@ navBadges:
 
 ## API
 
-| Prop 名称          | Type                             | Default        | 描述                                  |
+| Prop 名称          | 类型                             | 默认值         | 描述                                  |
 | ------------------ | -------------------------------- | -------------- | ------------------------------------- |
 | `src`              | `string`                         | `Required`     | The video source URL.                 |
 | `class`            | `string`                         | `""`           | Additional classes for the container. |
@@ -37,7 +37,7 @@ navBadges:
 | `dominantBaseline` | `string`                         | `"middle"`     | Dominant baseline for the text mask.  |
 | `fontFamily`       | `string`                         | `"sans-serif"` | Font family for the text mask.        |
 
-## Credits
+## 感谢
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.
 - Ported from [Magic UI's Video Text](https://magicui.design/docs/components/video-text).

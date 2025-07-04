@@ -20,7 +20,7 @@ description: The ScratchToReveal component creates an interactive scratch-off ef
 
 ## API
 
-| Prop 名称              | Type                     | 默认值 | 描述                                                                                          |
+| Prop 名称              | 类型                     | 默认值 | 描述                                                                                          |
 | ---------------------- | ------------------------ | ------ | --------------------------------------------------------------------------------------------- |
 | `class`                | `string`                 | `""`   | The class name to apply to the component.                                                     |
 | `width`                | `number`                 | `""`   | Width of the scratch container.                                                               |
@@ -32,9 +32,9 @@ description: The ScratchToReveal component creates an interactive scratch-off ef
 | ---------- | ------- | -------------------------------------------------- |
 | `complete` | `-`     | Callback function called when scratch is completed |
 
-| Slot Name | Default Content | 描述                                   |
-| --------- | --------------- | -------------------------------------- |
-| `default` | `-`             | The text below the scratch-off ticket. |
+| Slot Name | 默认值 Content | 描述                                   |
+| --------- | -------------- | -------------------------------------- |
+| `default` | `-`            | The text below the scratch-off ticket. |
 
 ## Component Code
 
@@ -43,7 +43,7 @@ You can 复制并粘贴以下代码： to create this component:
 ::CodeViewer{filename="ScratchToReveal.vue" language="vue" componentName="ScratchToReveal" type="ui" id="scratch-to-reveal"}
 ::
 
-## Credits
+## 感谢
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Inspired by [MagicUI Scratch To Reveal](https://magicui.design/docs/components/scratch-to-reveal).

@@ -34,7 +34,7 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 
 ## API
 
-| Prop 名称      | Type           | Default         | 描述                                                    |
+| Prop 名称      | 类型           | 默认值          | 描述                                                    |
 | -------------- | -------------- | --------------- | ------------------------------------------------------- |
 | `cursor`       | `Component`    | `DefaultCursor` | Custom cursor component to replace the default cursor   |
 | `springConfig` | `SpringConfig` | `See below`     | Configuration object for the spring animation behavior. |
@@ -85,7 +85,7 @@ When using this component, consider that:
 - 🎨 Fully customizable cursor design
 - 📦 Lightweight and easy to implement
 
-## Credits
+## 感谢
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Ported from [Magic UI Smooth Cursor](https://magicui.design/docs/components/smooth-cursor).

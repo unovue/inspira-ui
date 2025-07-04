@@ -49,7 +49,7 @@ yarn add @number-flow/vue
 
 ## API
 
-| Prop 名称 | 类型     | Default      | 描述                                            |
+| Prop 名称 | 类型     | 默认值       | 描述                                            |
 | --------- | -------- | ------------ | ----------------------------------------------- |
 | `class`   | `string` | `""`         | Additional CSS classes for custom styling.      |
 | `title`   | `string` | `"Progress"` | Title displayed in the header of the component. |
@@ -63,7 +63,7 @@ yarn add @number-flow/vue
 - **Dynamic Content Slot**: Supports additional content in the expandable section.
 - **Dark Mode Support**: Adapts to the dark or light mode of the user's system preferences.
 
-## Credits
+## 感谢
 
 - Inspired by the work of [Ali Samadi](https://x.com/alisamadi__/status/1854312982559502556) & [Nitish Khagwal](https://x.com/nitishkmrk)
 - [NumberFlow by Maxwell Barvian](https://number-flow.barvian.me/vue) for number formatting and animations.
