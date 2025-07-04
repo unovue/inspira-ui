@@ -1,0 +1,51 @@
+{
+  "common": {
+    "InspiraUIPro": "Inspira UI Pro"
+  },
+  "banner": {
+    "Content": "For Tailwind CSS v3 docs, [**click here**](https://v1.inspira-ui.com)."
+  },
+  "nav": {
+    "Docs": "Docs",
+    "GettingStarted": "Getting Started",
+    "GettingStartedDescription": "Introduction to Inspira UI and its core concepts.",
+    "Installation": "Installation",
+    "InstallationDescription": "Follow the step-by-step guide to install Inspira UI in your project.",
+    "Components": "Components",
+    "ComponentsDescription": "Explore all available components and their usage.",
+    "V1DocsDescription": "Docs for using Inspira UI with Tailwind CSS v3.",
+    "Community": "Community",
+    "GitHubDescription": "Source code for Inspira UI.",
+    "DiscordDescription": "Connect with community on Discord",
+    "Forum": "Forum",
+    "ForumDiscord": "Join the forum"
+  },
+  "toc": {
+    "title": "On This Page",
+    "StarOnGitHub": "Star on GitHub",
+    "CreateIssues": "Create Issues",
+    "JoinDiscord": "Join Discord",
+    "Forum": "Forum",
+    "FollowOnX": "Follow on X",
+    "FollowOnBluesky": "Follow on Bluesky"
+  },
+  "page": {
+    "home": {
+      "SupportUs": "Support Us",
+      "AllComponents": "All Components",
+      "OpenSourceComponentsToBuild": "Open source components to build",
+      "Stunning": "stunning",
+      "Beautiful": "beautiful",
+      "WebsitesUsingVueAndNuxt": "websites using Vue & Nuxt",
+      "IntegrateWithYourFavouriteUIframework": "Integrate with your favourite UI framework",
+      "Features": "Features",
+      "CheckOutSomeExamples": "Check out some examples!",
+      "3DCardHoverEffect": "3D Card Hover Effect",
+      "RadiantText": "Radiant Text",
+      "LovedByCommunity": "Loved by community",
+      "WhatAreYouWaitingFor": "What are you waiting for?",
+      "GetStartedAndStartBuildingAwesomeUI": "Get started and start building awesome UI",
+      "GetStarted": "Get Started"
+    }
+  }
+}

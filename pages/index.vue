@@ -10,11 +10,10 @@
           variant="secondary"
           class="gap-2 py-6 text-base"
         >
-          Support Us <span class="text-red-500">♥️</span>
+          {{ $t("page.home.SupportUs") }}<span class="text-red-500">♥️</span>
         </UiButton>
       </a>
     </div>
-
     <InspiraCarbonAds :is-home-page="true" />
 
     <IntegrationSection />

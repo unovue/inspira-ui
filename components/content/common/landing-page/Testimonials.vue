@@ -1,7 +1,7 @@
 <template>
   <div class="flex w-full max-w-7xl flex-col items-center justify-center p-4">
     <div class="py-12 text-5xl font-semibold">
-      Loved by community <span class="text-4xl"> ❤️</span>
+      {{ $t("page.home.LovedByCommunity") }} <span class="text-4xl"> ❤️</span>
     </div>
     <div
       class="relative h-[430px] w-full overflow-hidden rounded-xl border bg-white shadow-lg dark:bg-background"
@@ -26,10 +26,14 @@
       <div
         class="absolute inset-0 z-10 mt-20 flex flex-col items-center justify-center px-4 text-center"
       >
-        <h3 class="mb-2 text-4xl font-bold sm:text-5xl">What are you waiting for?</h3>
-        <p class="m-4 text-base sm:text-lg">Get started and start building awesome UI 😄</p>
+        <h3 class="mb-2 text-4xl font-bold sm:text-5xl">
+          {{ $t("page.home.WhatAreYouWaitingFor") }}
+        </h3>
+        <p class="m-4 text-base sm:text-lg">
+          {{ $t("page.home.GetStartedAndStartBuildingAwesomeUI") }} 😄
+        </p>
         <NuxtLink to="getting-started/installation">
-          <UiButton variant="default"> Get Started → </UiButton>
+          <UiButton variant="default"> {{ $t("page.home.GetStarted") }} → </UiButton>
         </NuxtLink>
       </div>
 

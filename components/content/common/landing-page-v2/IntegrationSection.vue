@@ -1,7 +1,7 @@
 <template>
   <section class="mx-auto mt-36 flex max-w-7xl flex-col items-center justify-center">
     <div class="text-center text-5xl font-semibold max-md:text-4xl">
-      Integrate with your favourite UI framework
+      {{ $t("page.home.IntegrateWithYourFavouriteUIframework") }}
     </div>
     <ClientOnly>
       <div

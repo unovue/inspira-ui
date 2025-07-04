@@ -1,6 +1,6 @@
 <template>
   <section class="mx-auto flex max-w-7xl flex-col items-center justify-center">
-    <div class="mb-6 py-12 text-5xl font-semibold">Features</div>
+    <div class="mb-6 py-12 text-5xl font-semibold">{{ $t("page.home.Features") }}</div>
     <span class="flex flex-row flex-wrap items-center justify-center gap-6">
       <ClientOnly>
         <CardSpotlight
