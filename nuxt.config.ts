@@ -42,6 +42,7 @@ export default defineNuxtConfig({
         },
       ],
     },
+    baseURL: "/docs/",
   },
   llms: {
     domain: "https://inspira-ui.com",
@@ -60,6 +61,26 @@ export default defineNuxtConfig({
         code: "en",
         name: "English",
         language: "en-US",
+      },
+    ],
+  },
+  fonts: {
+    processCSSVariables: true,
+    families: [
+      {
+        name: "Plus Jakarta Sans",
+        provider: "google",
+        global: true,
+      },
+      {
+        name: "Space Grotesk",
+        provider: "google",
+        global: true,
+      },
+      {
+        name: "JetBrains Mono",
+        provider: "google",
+        global: true,
       },
     ],
   },

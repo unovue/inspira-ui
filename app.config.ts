@@ -134,11 +134,13 @@ export default defineAppConfig({
     aside: {
       useLevel: true,
       collapse: false,
-      folderStyle: "group",
+      folderStyle: "tree",
     },
     main: {
       breadCrumb: true,
       showTitle: true,
+      padded: true,
+      codeCopyToast: true,
     },
     footer: {
       credits: "Copyright © 2024 - 2025",
@@ -160,6 +162,7 @@ export default defineAppConfig({
     toc: {
       enable: true,
       title: "On This Page",
+      enableInHomepage: true,
       carbonAds: {
         enable: true,
         code: "CW7DEK37",
@@ -206,7 +209,6 @@ export default defineAppConfig({
     },
     search: {
       enable: true,
-      inAside: true,
     },
   },
 });
