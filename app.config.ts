@@ -3,7 +3,7 @@ export default defineAppConfig({
     site: {
       name: "Inspira UI",
       description: "Build beautiful websites using Vue & Nuxt.",
-      ogImage: "https://inspira-ui.com/docs/og-image.png",
+      ogImage: "https://cdn.inspira-ui.com/og-image.png",
     },
     theme: {
       customizable: true,
@@ -23,8 +23,8 @@ export default defineAppConfig({
       showTitle: true,
       darkModeToggle: true,
       logo: {
-        light: "/docs/logo.svg",
-        dark: "/docs/logo-dark.svg",
+        light: "https://cdn.inspira-ui.com/logo.svg",
+        dark: "https://cdn.inspira-ui.com/logo-dark.svg",
       },
       nav: [
         {

@@ -5,5 +5,5 @@
 </template>
 
 <script lang="ts" setup>
-const imageUrl = "/docs/images/apple-logo.svg";
+const imageUrl = "https://cdn.inspira-ui.com/images/apple-logo.svg";
 </script>

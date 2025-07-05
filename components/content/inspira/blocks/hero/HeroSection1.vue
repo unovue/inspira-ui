@@ -39,7 +39,7 @@
           class="relative flex h-fit w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-background p-px md:shadow-xl"
         >
           <img
-            src="/images/Inspira-dark.png"
+            src="https://cdn.inspira-ui.com/images/Inspira-dark.png"
             class="w-full rounded-md"
           />
           <BorderBeam
