@@ -42,9 +42,10 @@ export default defineNuxtConfig({
         },
       ],
     },
+    baseURL: process.env.NODE_ENV === "development" ? "/" : "/docs/",
   },
   llms: {
-    domain: "https://inspira-ui.com",
+    domain: "https://inspira-ui.com/",
     title: "Inspira UI",
     description:
       "Inspira UI is a free and open-source Vue.js component library that provides a collection of beautiful and customizable components for building modern web applications.",
@@ -60,6 +61,26 @@ export default defineNuxtConfig({
         code: "en",
         name: "English",
         language: "en-US",
+      },
+    ],
+  },
+  fonts: {
+    processCSSVariables: true,
+    families: [
+      {
+        name: "Plus Jakarta Sans",
+        provider: "google",
+        global: true,
+      },
+      {
+        name: "Space Grotesk",
+        provider: "google",
+        global: true,
+      },
+      {
+        name: "JetBrains Mono",
+        provider: "google",
+        global: true,
       },
     ],
   },

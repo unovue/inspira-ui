@@ -159,7 +159,7 @@ function buildContent(dir: string, contentRoot: string, accumulated: DirConfig[]
         return clean;
       });
       const urlPath = urlParts.join("/");
-      const url = `https://inspira-ui.com/${urlPath}`;
+      const url = `https://inspira-ui.com/docs/${urlPath}`;
 
       // Read and process the Markdown content.
       const rawContent = readFileSync(fullPath, "utf-8");

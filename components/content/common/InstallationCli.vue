@@ -12,7 +12,7 @@ interface Props {
 
 const { componentId } = defineProps<Props>();
 
-const url = `https://inspira-ui.com/r/${componentId}.json`;
+const url = `https://inspira-ui.com/docs/r/${componentId}.json`;
 
 const commands = `
 ::code-group

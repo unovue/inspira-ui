@@ -29,7 +29,7 @@
 import type { Component } from "vue";
 import DefaultCursor from "./DefaultCursor.vue";
 import { useSpring, Motion } from "motion-v";
-import { useEventListener, useTimeout } from '@vueuse/core';
+import { useEventListener, useTimeout } from "@vueuse/core";
 
 interface Position {
   x: number;

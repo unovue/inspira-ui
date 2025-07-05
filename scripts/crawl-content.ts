@@ -31,7 +31,7 @@ const COMPONENT_DEPENDENCIES = new Map<string, string[]>([
   ["scroll-island", ["animated-circular-progressbar"]],
 ]);
 
-const REGISTRY_URL = process.env.REGISTRY_URL ?? "https://inspira-ui.com/r";
+const REGISTRY_URL = process.env.REGISTRY_URL ?? "https://inspira-ui.com/docs/r";
 const REGISTRY_DEPENDENCY = "@/";
 
 type ArrayItem<T> = T extends Array<infer X> ? X : never;
