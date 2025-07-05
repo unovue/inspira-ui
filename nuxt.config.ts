@@ -42,7 +42,7 @@ export default defineNuxtConfig({
         },
       ],
     },
-    baseURL: "/docs/",
+    baseURL: process.env.NODE_ENV === "development" ? "/" : "/docs/",
   },
   llms: {
     domain: "https://inspira-ui.com/",
