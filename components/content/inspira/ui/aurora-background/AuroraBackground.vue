@@ -31,6 +31,7 @@
 <script setup lang="ts">
 import { cn } from "@/lib/utils";
 import { computed } from "vue";
+
 interface AuroraBackgroundProps {
   radialGradient?: boolean;
   class?: string;
