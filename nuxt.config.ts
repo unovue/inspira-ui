@@ -45,7 +45,7 @@ export default defineNuxtConfig({
     baseURL: "/docs/",
   },
   llms: {
-    domain: "https://inspira-ui.com",
+    domain: "https://inspira-ui.com/",
     title: "Inspira UI",
     description:
       "Inspira UI is a free and open-source Vue.js component library that provides a collection of beautiful and customizable components for building modern web applications.",
