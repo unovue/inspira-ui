@@ -1,9 +1,6 @@
 ---
 title: Video Text
 description: A text component with a video background.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="VideoTextDemo" type="examples" id="video-text"}
