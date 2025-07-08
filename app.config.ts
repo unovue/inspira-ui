@@ -3,7 +3,7 @@ export default defineAppConfig({
     site: {
       name: "Inspira UI",
       description: "Build beautiful websites using Vue & Nuxt.",
-      ogImage: "https://cdn.inspira-ui.com/og-image.png",
+      ogImage: "https://cdn.inspira-ui.com/og-image-v2.1.png",
     },
     theme: {
       customizable: true,
