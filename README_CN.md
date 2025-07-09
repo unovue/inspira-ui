@@ -119,3 +119,9 @@ Inspira UI 的出道旨在填补 Vue 社区生态的一个空白，它提供了�
 如果您想支持我们的开发进程，您可以请我们喝杯咖啡：
 
 支持与赞助请访问 [此链接](https://github.com/sponsors/rahul-vashishtha) 。
+
+## 感谢所有当前贡献者 🙏
+
+<a href="https://github.com/unovue/inspira-ui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=unovue/inspira-ui" />
+</a>
