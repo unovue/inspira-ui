@@ -1,3 +1,8 @@
+import { useI18n } from "vue-i18n";
+
+// const { t } = useI18n();
+import { $t } from "./i18n/locales";
+
 export default defineAppConfig({
   shadcnDocs: {
     site: {
@@ -28,28 +33,28 @@ export default defineAppConfig({
       },
       nav: [
         {
-          title: "Docs",
+          title: $t("nav.Docs"),
           links: [
             {
-              title: "Getting Started",
+              title: $t("nav.GettingStarted"),
               to: "/getting-started/introduction",
-              description: "Introduction to Inspira UI and its core concepts.",
+              description: $t("nav.GettingStartedDescription"),
             },
             {
-              title: "Installation",
+              title: $t("nav.Installation"),
               to: "/getting-started/installation",
-              description: "Follow the step-by-step guide to install Inspira UI in your project.",
+              description: $t("nav.InstallationDescription"),
             },
             {
-              title: "Components",
+              title: $t("nav.Components"),
               to: "/components",
-              description: "Explore all available components and their usage.",
+              description: $t("nav.ComponentsDescription"),
               target: "_self",
             },
             {
               title: "Inspira UI v1",
               to: "https://v1.inspira-ui.com",
-              description: "Docs for using Inspira UI with Tailwind CSS v3.",
+              description: $t("nav.V1DocsDescription"),
               target: "_blank",
             },
           ],
@@ -85,25 +90,25 @@ export default defineAppConfig({
           ],
         },
         {
-          title: "Community",
+          title: $t("nav.Community"),
           links: [
             {
               title: "GitHub",
               to: "https://github.com/unovue/inspira-ui",
-              description: "Source code for Inspira UI.",
+              description: $t("nav.GitHubDescription"),
               target: "_blank",
             },
             {
               title: "Discord",
               to: "https://discord.gg/Xbh5DwJRc9",
-              description: "Connect with community on Discord",
+              description: $t("nav.DiscordDescription"),
               target: "_blank",
             },
             {
-              title: "Forum",
+              title: $t("nav.Forum"),
               to: "https://github.com/unovue/inspira-ui/discussions",
               target: "_blank",
-              description: "Join the forum",
+              description: $t("nav.ForumDiscord"),
             },
           ],
         },
@@ -161,7 +166,7 @@ export default defineAppConfig({
     },
     toc: {
       enable: true,
-      title: "On This Page",
+      title: $t("toc.title"),
       enableInHomepage: true,
       carbonAds: {
         enable: true,
@@ -170,37 +175,37 @@ export default defineAppConfig({
       },
       links: [
         {
-          title: "Star on GitHub",
+          title: $t("toc.StarOnGitHub"),
           icon: "lucide:star",
           to: "https://github.com/unovue/inspira-ui",
           target: "_blank",
         },
         {
-          title: "Create Issues",
+          title: $t("toc.CreateIssues"),
           icon: "lucide:circle-dot",
           to: "https://github.com/unovue/inspira-ui/issues",
           target: "_blank",
         },
         {
-          title: "Join Discord",
+          title: $t("toc.JoinDiscord"),
           icon: "ri:discord-line",
           to: "https://discord.gg/Xbh5DwJRc9",
           target: "_blank",
         },
         {
-          title: "Forum",
+          title: $t("toc.Forum"),
           icon: "lucide:newspaper",
           to: "https://github.com/unovue/inspira-ui/discussions",
           target: "_blank",
         },
         {
-          title: "Follow on X",
+          title: $t("toc.FollowOnX"),
           icon: "prime:twitter",
           to: "https://x.com/rahulv_dev",
           target: "_blank",
         },
         {
-          title: "Follow on Bluesky",
+          title: $t("toc.FollowOnBluesky"),
           icon: "ri:bluesky-line",
           to: "http://bsky.app/profile/inspira-ui.com",
           target: "_blank",

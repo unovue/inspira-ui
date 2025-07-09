@@ -78,6 +78,7 @@ let clock: THREE.Clock;
 // Portal objects
 let meshes: THREE.Object3D[] = [];
 let materials: THREE.Material[] = [];
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let portalMaterials: any[] = [];
 let portalLights: THREE.Light[] = [];
 let animationId: number;
@@ -164,7 +165,9 @@ function initThreeJS() {
   clock = new THREE.Clock();
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 function addPortalShader(material: any) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   material.onBeforeCompile = (shader: any) => {
     shader.uniforms.time = { value: 0 };
     shader.uniforms.pulseTime = { value: -1000 };

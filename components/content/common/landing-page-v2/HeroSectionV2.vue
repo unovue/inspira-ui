@@ -47,29 +47,29 @@
     </BlurReveal>
 
     <span class="text-center text-lg text-gray-600 sm:text-xl dark:text-gray-200">
-      Open source components to build
+      {{ $t("page.home.OpenSourceComponentsToBuild") }}
       <TextHighlight
         class="rounded-xl bg-gradient-to-r from-pink-500 to-violet-500 px-4 py-1"
         text-end-color="hsl(var(--accent))"
       >
         <FlipWords
-          :words="['beautiful', 'stunning']"
+          :words="[$t('page.home.Beautiful'), $t('page.home.Stunning')]"
           :duration="2000"
         />
       </TextHighlight>
-      websites using Vue & Nuxt
+      {{ $t("page.home.WebsitesUsingVueAndNuxt") }}
     </span>
 
     <div class="mt-4 flex w-full items-center justify-center space-x-4 py-4 md:pb-10">
       <NuxtLink to="/components">
-        <UiButton variant="secondary"> All Components </UiButton>
+        <UiButton variant="secondary"> {{ $t("page.home.AllComponents") }} </UiButton>
       </NuxtLink>
       <NuxtLink
         to="https://pro.inspira-ui.com"
         target="_blank"
       >
         <UiButton>
-          Inspira UI Pro
+          {{ $t("common.InspiraUIPro") }}
           <Icon
             name="ix:arrow-diagonal-top-right"
             size="20"

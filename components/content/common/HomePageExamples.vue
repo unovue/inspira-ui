@@ -4,7 +4,7 @@
       :delay="0"
       :duration="1"
     >
-      <div class="text-5xl font-semibold">Check out some examples!</div>
+      <div class="text-5xl font-semibold">{{ $t("page.home.CheckOutSomeExamples") }}</div>
     </BlurReveal>
   </div>
   <div
@@ -37,7 +37,7 @@
       <h3
         class="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-3xl font-bold text-transparent"
       >
-        3D Card Hover Effect
+        {{ $t("page.home.3DCardHoverEffect") }}
       </h3>
       <CardDemo2 />
     </PatternBackground>
@@ -52,7 +52,7 @@
       <h3
         class="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-3xl font-bold text-transparent"
       >
-        Radiant Text
+        {{ $t("page.home.RadiantText") }}
       </h3>
       <RadiantTextDemo />
     </PatternBackground>

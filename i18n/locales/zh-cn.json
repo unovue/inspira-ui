@@ -1,0 +1,51 @@
+{
+  "common": {
+    "InspiraUIPro": "Inspira UI 专业版"
+  },
+  "banner": {
+    "Content": "Tailwind CSS v3 文档, [**点击这里**](https://v1.inspira-ui.com)."
+  },
+  "nav": {
+    "Docs": "文档",
+    "GettingStarted": "快速开始",
+    "GettingStartedDescription": "介绍 Inspira UI 及其核心概念。",
+    "Installation": "安装",
+    "InstallationDescription": "按照指南一步一步地在您的项目中安装 Inspira UI。",
+    "Components": "组件",
+    "ComponentsDescription": "探讨所有可用的组件及其用法。",
+    "V1DocsDescription": "使用 Tailwind CSS v3 的 Inspira UI 的文档。",
+    "Community": "社区",
+    "GitHubDescription": "Inspira UI 的源代码",
+    "DiscordDescription": "连接 Discord 社区",
+    "Forum": "论坛",
+    "ForumDiscord": "加入论坛"
+  },
+  "toc": {
+    "title": "本页",
+    "StarOnGitHub": "GitHub 收藏",
+    "CreateIssues": "创建问题",
+    "JoinDiscord": "加入 Discord",
+    "Forum": "社区",
+    "FollowOnX": "关注 X",
+    "FollowOnBluesky": "关注 Bluesky"
+  },
+  "page": {
+    "home": {
+      "SupportUs": "支持我们",
+      "AllComponents": "所有组件",
+      "OpenSourceComponentsToBuild": "开源组件构建",
+      "Stunning": "惊人的",
+      "Beautiful": "漂亮的",
+      "WebsitesUsingVueAndNuxt": "Vue 和 Nuxt 的网站",
+      "IntegrateWithYourFavouriteUIframework": "与您最喜欢的UI框架集成",
+      "Features": "功能特性",
+      "CheckOutSomeExamples": "案例展示",
+      "3DCardHoverEffect": "鼠标悬停3D效果卡片",
+      "RadiantText": "镭射字",
+      "LovedByCommunity": "深受喜爱的社区",
+      "WhatAreYouWaitingFor": "你还在等什么?",
+      "GetStartedAndStartBuildingAwesomeUI": "开始构建出色的 UI 吧",
+      "GetStarted": "开始"
+    }
+  }
+}
