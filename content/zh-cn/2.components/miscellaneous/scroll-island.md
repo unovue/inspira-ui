@@ -1,5 +1,5 @@
 ---
-title: Scroll Island
+title: 滚动岛
 description: A dynamic and interactive component that displays scroll progress with animated visuals and an expandable area for additional content.
 ---
 

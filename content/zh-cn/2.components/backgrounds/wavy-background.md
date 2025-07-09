@@ -1,6 +1,6 @@
 ---
-title: Wavy Background
-description: A cool background effect with waves that move.
+title: 波浪背景
+description: 一个酷炫的波浪背景效果。
 ---
 
 ::ComponentLoader{label="预览" componentName="WavyBackgroundDemo" type="examples" id="wavy-background"}

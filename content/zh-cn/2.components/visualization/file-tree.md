@@ -1,6 +1,6 @@
 ---
-title: File Tree
-description: A component used to showcase the folder and file structure of a directory.
+title: 文件树
+description: 用于显示目录的文件夹和文件结构的组件。
 ---
 
 ::ComponentLoader{label="预览" componentName="FileTreeDemo" type="examples"}
@@ -100,7 +100,7 @@ The `Tree` component serves as a container for displaying a hierarchical file/fo
 | `fileIcon`             | `string`            | `"lucide:file"`        | Icon to show for files.                            |
 | `direction`            | `"rtl" \| "ltr"`    | `"ltr"`                | Text direction of the tree.                        |
 
-#### Usage
+#### 用例
 
 ```vue [MyComponent.vue]
 <Tree initialSelectedId="1" :initial-expanded-items="['1', '2']" :elements="ELEMENTS">
@@ -122,7 +122,7 @@ The `Folder` and `File` components represent folders and files in the file tree.
 | `isSelectable` | `boolean` | `true`  | Whether the item can be selected.       |
 | `isSelect`     | `boolean` | `false` | Whether the item is currently selected. |
 
-#### Usage
+#### 用例
 
 ```vue [MyComponent.vue]
 <Folder id="1" name="root">

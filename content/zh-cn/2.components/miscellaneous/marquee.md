@@ -1,5 +1,5 @@
 ---
-title: Marquee
+title: 走马灯
 description: A customizable scrolling component that loops its content horizontally or vertically, with configurable direction, hover pause, and repeat options.
 ---
 

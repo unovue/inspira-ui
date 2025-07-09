@@ -1,6 +1,6 @@
 ---
-title: Link Preview
-description: Dynamic link previews for your anchor tags
+title: 链接预览
+description: 鼠标放置到链接上可动态预览该链接。
 ---
 
 ::ComponentLoader{label="预览" componentName="LinkPreviewDemo" type="examples"}  

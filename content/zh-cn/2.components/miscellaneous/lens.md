@@ -1,5 +1,5 @@
 ---
-title: Lens
+title: 放大镜
 description: A lens component to zoom into images, videos, or practically anything.
 ---
 

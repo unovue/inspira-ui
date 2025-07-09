@@ -1,5 +1,5 @@
 ---
-title: Photo Gallery
+title: 照片墙
 description: Showcase your team with pride using our stunning Photo Gallery Component.
 ---
 

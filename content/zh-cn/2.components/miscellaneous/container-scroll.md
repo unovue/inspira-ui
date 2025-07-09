@@ -39,7 +39,7 @@ The `ContainerScroll` component creates a 3D scroll effect. As the user scrolls,
 | `scale`      | Number | `1`    | Controls the scaling transformation applied to the content during the scroll. |
 | `translateY` | Number | `0`    | Controls the vertical translation of the title during the scroll.             |
 
-#### Usage
+#### 用例
 
 ```vue [ContainerScroll.vue]
 <ContainerScroll :rotate="rotateValue" :scale="scaleValue" :translateY="translateYValue">
@@ -62,7 +62,7 @@ The `ContainerScrollTitle` component handles the title's transformation as the u
 | ----------- | ------ | ------ | ----------------------------------------------- |
 | `translate` | Number | `0`    | Controls the vertical translation of the title. |
 
-#### Usage
+#### 用例
 
 ```vue [ContainerScrollTitle.vue]
 <ContainerScrollTitle :translate="translateYValue">
@@ -81,7 +81,7 @@ The `ContainerScrollCard` component applies scale and rotation effects to the ca
 | `rotate`  | Number | `0`    | Controls the rotation effect of the card.        |
 | `scale`   | Number | `1`    | Controls the scaling effect applied to the card. |
 
-#### Usage
+#### 用例
 
 ```vue [ContainerScrollCard.vue]
 <ContainerScrollCard :rotate="rotateValue" :scale="scaleValue">

@@ -1,6 +1,6 @@
 ---
-title: Number Ticker
-description: Animate numbers to count up or down to a target number
+title: 数字增长
+description: 向上或向下计数到目标数字的数字动画。
 ---
 
 ::ComponentLoader{label="预览" componentName="NumberTickerDemo" type="examples"}

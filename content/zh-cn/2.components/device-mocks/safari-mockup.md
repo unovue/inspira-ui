@@ -1,6 +1,6 @@
 ---
-title: Safari Mockup
-description: An SVG mockup of the Safari browser.
+title: Safari 模拟
+description: Safari浏览器的SVG模型。
 ---
 
 ::ComponentLoader{label="预览" componentName="SafariMockupDemo" type="examples" id="mockups"}

@@ -1,6 +1,6 @@
 ---
-title: Tetris
-description: Tetris background component, you can even click on a block to eliminate it.
+title: 俄罗斯方块
+description: 俄罗斯方块的背景组件，你甚至可以点击一个方块来消除它。
 ---
 
 ::ComponentLoader{label="预览" componentName="TetrisDemo" type="examples" id="tetris"}

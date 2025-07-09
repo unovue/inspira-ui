@@ -1,5 +1,5 @@
 ---
-title: Card Spotlight
+title: 聚光灯卡片
 description: A card component with a dynamic spotlight effect that follows the mouse cursor, enhancing visual interactivity.
 ---
 

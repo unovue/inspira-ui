@@ -1,6 +1,6 @@
 ---
-title: Text Highlight
-description: A text effect that fill background of a text to highlight it.
+title: 文本高亮
+description: 填充文本背景以突显文本的效果。
 ---
 
 ::ComponentLoader{label="预览" componentName="TextHighlightDemo" type="examples" id="text-highlight"}

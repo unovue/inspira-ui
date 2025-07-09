@@ -1,5 +1,5 @@
 ---
-title: Github Globe
+title: 旋转地球
 description: A 3D interactive globe visualization with customizable arcs, points, and animation options inspired from Github.
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Sparkles Text
+title: 闪烁字
 description: A dynamic text that generates continuous sparkles with smooth transitions, perfect for highlighting text with animated stars.
 ---
 

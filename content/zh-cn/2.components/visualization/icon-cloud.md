@@ -1,6 +1,6 @@
 ---
-title: Icon Cloud
-description: An interactive 3D tag cloud component
+title: 图标云
+description: 一个3D交互式球形环绕组件。
 ---
 
 ::ComponentLoader{label="预览" componentName="IconCloudDemo" type="examples"}

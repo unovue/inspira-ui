@@ -1,6 +1,6 @@
 ---
-title: Letter Pullup
-description: Staggered letter pull up text animation.
+title: 文字上弹
+description: 文字依序向上弹出。
 ---
 
 ::ComponentLoader{label="预览" componentName="LetterPullupDemo" type="examples" id="letter-pullup"}

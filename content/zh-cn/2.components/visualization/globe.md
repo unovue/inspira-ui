@@ -1,5 +1,5 @@
 ---
-title: Globe
+title: 旋转半球
 description: An interactive rotating globe component.
 ---
 

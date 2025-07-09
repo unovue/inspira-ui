@@ -1,6 +1,6 @@
 ---
-title: Confetti
-description: A Vue component for confetti animations.
+title: 五彩纸屑
+description: 一个五彩纸屑动画的Vue组件。
 ---
 
 ::ComponentLoader{label="预览" componentName="ConfettiDemo" type="examples" id="confetti"}

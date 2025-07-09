@@ -1,5 +1,5 @@
 ---
-title: Meteor
+title: 流星
 description: A component that displays a meteor shower animation with customizable meteor count and styling.
 ---
 

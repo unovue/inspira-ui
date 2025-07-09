@@ -57,6 +57,10 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
     --radius: 0.5rem;
+
+    --heading: "Space Grotesk", "Plus Jakarta Sans";
+    --sans: "Plus Jakarta Sans";
+    --mono: "JetBrains Mono";
   }
 
   .dark {
@@ -101,6 +105,10 @@
 }
 
 @theme inline {
+  --font-heading: var(--heading);
+  --font-sans: var(--sans);
+  --font-mono: var(--mono);
+
   --animate-aurora: aurora 60s linear infinite;
   @keyframes aurora {
     from {

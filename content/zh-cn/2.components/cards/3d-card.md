@@ -1,6 +1,6 @@
 ---
-title: 3D Card Effect
-description: A card perspective effect, hover over the card to elevate card elements.
+title: 3D效果卡片
+description: 一个3D透视效果卡片，将鼠标悬停在卡片上以提升卡片元素。
 ---
 
 ::ComponentLoader{label="预览" componentName="CardDemo" type="examples"}
@@ -68,7 +68,7 @@ The `CardContainer` component serves as a wrapper for the 3D card effect. It man
 | `class`          | String | `null` | Additional classes for styling the inner container element. |
 | `containerClass` | String | `null` | Additional classes for styling the outer container element. |
 
-#### Usage
+#### 用例
 
 ```vue [MyCardComponent.vue]
 <CardContainer containerClass="additional-class">
@@ -86,7 +86,7 @@ The `CardBody` component is a flexible container with preserved 3D styling. It i
 | --------- | ------ | ------ | -------------------------------------- |
 | `class`   | String | `null` | Additional classes for custom styling. |
 
-#### Usage
+#### 用例
 
 ```vue [MyCardComponent.vue]
 <CardBody class="custom-class">
@@ -111,7 +111,7 @@ The `CardItem` component represents individual items within the 3D card. It supp
 | `rotateY`    | Number/String | `0`     | Y-axis rotation in degrees.                                     |
 | `rotateZ`    | Number/String | `0`     | Z-axis rotation in degrees.                                     |
 
-#### Usage
+#### 用例
 
 ```vue [MyCardComponent.vue]
 <CardItem as="p" translateZ="50" class="custom-item-class">

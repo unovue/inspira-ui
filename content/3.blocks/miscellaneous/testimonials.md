@@ -15,4 +15,4 @@ description: Show testimonials in style
 
 #### Components used
 
-- [Marquee & Review](https://inspira-ui.com/components/miscellaneous/marquee) component.
+- [Marquee & Review](https://inspira-ui.com/docs/components/miscellaneous/marquee) component.

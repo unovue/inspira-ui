@@ -8,7 +8,7 @@ export default defineAppConfig({
     site: {
       name: "Inspira UI",
       description: "Build beautiful websites using Vue & Nuxt.",
-      ogImage: "https://inspira-ui.com/og-image.png",
+      ogImage: "https://cdn.inspira-ui.com/og-image-v2.1.png",
     },
     theme: {
       customizable: true,
@@ -28,8 +28,8 @@ export default defineAppConfig({
       showTitle: true,
       darkModeToggle: true,
       logo: {
-        light: "/logo.svg",
-        dark: "/logo-dark.svg",
+        light: "https://cdn.inspira-ui.com/logo.svg",
+        dark: "https://cdn.inspira-ui.com/logo-dark.svg",
       },
       nav: [
         {
@@ -139,11 +139,13 @@ export default defineAppConfig({
     aside: {
       useLevel: true,
       collapse: false,
-      folderStyle: "group",
+      folderStyle: "tree",
     },
     main: {
       breadCrumb: true,
       showTitle: true,
+      padded: true,
+      codeCopyToast: true,
     },
     footer: {
       credits: "Copyright © 2024 - 2025",
@@ -165,6 +167,7 @@ export default defineAppConfig({
     toc: {
       enable: true,
       title: $t("toc.title"),
+      enableInHomepage: true,
       carbonAds: {
         enable: true,
         code: "CW7DEK37",
@@ -211,7 +214,6 @@ export default defineAppConfig({
     },
     search: {
       enable: true,
-      inAside: true,
     },
   },
 });

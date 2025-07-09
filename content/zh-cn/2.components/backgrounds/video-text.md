@@ -1,6 +1,6 @@
 ---
-title: Video Text
-description: A text component with a video background.
+title: 视频文字
+description: 一个带有视频背景的文本组件。
 navBadges:
   - value: New
     type: lime

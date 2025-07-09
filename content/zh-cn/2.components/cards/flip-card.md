@@ -1,5 +1,5 @@
 ---
-title: Flip Card
+title: 翻转卡片
 description: A dynamic flip card with smooth 180-degree flipping animations along both the X and Y axes, providing an engaging and interactive visual effect.
 ---
 

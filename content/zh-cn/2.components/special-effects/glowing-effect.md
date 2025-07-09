@@ -1,5 +1,5 @@
 ---
-title: Glowing Effect
+title: 光效
 description: A dynamic proximity-based glow effect that reacts to mouse movements and scroll events, perfect for highlighting interactive elements.
 ---
 

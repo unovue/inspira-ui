@@ -1,5 +1,5 @@
 ---
-title: Input
+title: 输入
 description: A versatile and visually dynamic input field with radial hover effects, styled for modern web applications.
 ---
 

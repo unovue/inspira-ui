@@ -1,5 +1,5 @@
 ---
-title: Border Beam
+title: 光线边框
 description: A stylish animated border beam effect with customizable size, duration, colors, and delay.
 ---
 

@@ -26,11 +26,11 @@ import { cn } from "@/lib/utils";
 
 const props = withDefaults(
   defineProps<{
-    class: HTMLAttributes["class"];
-    slotClass: HTMLAttributes["class"];
-    gradientSize: number;
-    gradientColor: string;
-    gradientOpacity: number;
+    class?: HTMLAttributes["class"];
+    slotClass?: HTMLAttributes["class"];
+    gradientSize?: number;
+    gradientColor?: string;
+    gradientOpacity?: number;
   }>(),
   {
     class: "",

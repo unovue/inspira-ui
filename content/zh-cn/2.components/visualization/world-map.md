@@ -1,6 +1,6 @@
 ---
-title: World Map
-description: Displays a customizable world map with animated arcs and pulse effects for geographical points.
+title: 世界地图
+description: 显示可定制的世界地图，具有动画弧线和地理点的脉冲效果。
 ---
 
 ::ComponentLoader{label="预览" componentName="WorldMapDemo" type="examples" id="world-map"}

@@ -1,5 +1,5 @@
 ---
-title: Book
+title: 3D书本
 description: A 3D book component featuring customizable sizes and color gradients.
 ---
 

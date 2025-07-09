@@ -1,5 +1,5 @@
 ---
-title: Compare
+title: 左右对比
 description: Slide to compare any two pieces of content - images, designs, code, or custom elements
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: Vortex Background
+title: 炫彩涡流
 description: A wavy, swirly, vortex background ideal for CTAs and backgrounds.
 ---
 

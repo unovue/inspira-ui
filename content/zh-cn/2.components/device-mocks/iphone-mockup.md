@@ -1,6 +1,6 @@
 ---
-title: iPhone Mockup
-description: An SVG mockup of an iPhone.
+title: iPhone 模拟
+description: iPhone手机的SVG模型。
 ---
 
 ::ComponentLoader{label="预览" componentName="iPhone15ProMockupDemo" type="examples" id="mockups"}

@@ -1,5 +1,5 @@
 ---
-title: Glow Border
+title: 彩光边框
 description: An animated border effect.
 ---
 

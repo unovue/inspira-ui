@@ -1,6 +1,6 @@
 ---
-title: Text Generate Effect
-description: A cool text effect that fades in text on page load, one by one.
+title: 文字生成效果
+description: 一个酷炫的文本效果，在页面加载时文本一个接一个淡入。
 ---
 
 ::ComponentLoader{label="预览" componentName="TextGenerateDemo" type="examples"}  

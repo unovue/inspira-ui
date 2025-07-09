@@ -1,5 +1,5 @@
 ---
-title: File Upload
+title: 文件上传
 description: A modern file upload component with a 3D card effect, drag-and-drop functionality, and a responsive grid background pattern.
 ---
 
@@ -44,7 +44,7 @@ The `FileUpload` component serves as a wrapper for the file upload effect. It ma
 | ---------- | ------------------------- | ---------------------------------------------------------- |
 | `onChange` | `(files: File[]) => void` | Callback function triggered when files are added/uploaded. |
 
-#### Usage
+#### 用例
 
 ```vue [MyComponent.vue]
 <FileUpload class="additional-class">
@@ -62,7 +62,7 @@ The `FileUploadGrid` component provides the background grid pattern for the file
 | --------- | ------ | ------ | -------------------------------------- |
 | `class`   | String | -      | Additional classes for custom styling. |
 
-#### Usage
+#### 用例
 
 ```vue [MyComponent.vue]
 <FileUploadGrid class="custom-class" />
