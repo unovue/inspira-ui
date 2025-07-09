@@ -78,7 +78,11 @@ You can also support the development of the project by sponsoring the developer.
 
 Support and sponsor the maintainer here: [Support Inspira UI](https://github.com/sponsors/rahul-vashishtha)
 
-## Thanks to all current contributors 🙏
+## Repo Stats
+
+![Alt](https://repobeats.axiom.co/api/embed/da99e5e9c8ddaaff68b7f57b56ae21d5e0ea2ed2.svg "Repobeats analytics image")
+
+## Thanks to all the contributors 🙏
 
 <a href="https://github.com/unovue/inspira-ui/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=unovue/inspira-ui" />
