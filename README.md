@@ -77,3 +77,9 @@ You can also follow this [Contribution Guide](https://inspira-ui.com/getting-sta
 You can also support the development of the project by sponsoring the developer.
 
 Support and sponsor the maintainer here: [Support Inspira UI](https://github.com/sponsors/rahul-vashishtha)
+
+## Thanks to all current contributors 🙏
+
+<a href="https://github.com/unovue/inspira-ui/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=unovue/inspira-ui" />
+</a>
