@@ -119,13 +119,11 @@ Proper documentation is crucial for users to understand and effectively use the 
 ### Steps to Add a New Component
 
 1. **Create the Component**
-
    - Place the main component in `components/content/inspira/ui/<component-folder-name>/`.
    - Follow the [Component Format](#component-format) specified above.
    - If the component requires examples or demos, add demo components to `components/content/inspira/examples/<component-folder-name>/`.
 
 2. **Write Documentation**
-
    - Add a new Markdown file in `content/2.components/` for your component's documentation.
    - Use the appropriate template based on whether your component is single-file or multi-file (see below).
    - Mention the **Credits** and source if the component is ported from any other UI library or taken inspiration from any other source.
