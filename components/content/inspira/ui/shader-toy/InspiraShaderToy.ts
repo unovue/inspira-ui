@@ -112,7 +112,7 @@ export class InspiraShaderToy {
       width: container.clientWidth,
       height: container.clientHeight,
       dpr: window.devicePixelRatio,
-      alpha: false,
+      alpha: true,
       depth: false,
       stencil: false,
       antialias: true,
@@ -235,7 +235,19 @@ export class InspiraShaderToy {
 
     if (container) {
       const resizeObserver = new ResizeObserver(() => {
-        this.renderer.setSize(container.clientWidth, container.clientHeight);
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+
+        // Update renderer size
+        this.renderer.setSize(width, height);
+
+        // Make sure canvas matches
+        canvas.width = width;
+        canvas.height = height;
+
+        // Update viewport
+        this.renderer.gl.viewport(0, 0, width, height);
+
         this.updateRenderTargets();
       });
 
