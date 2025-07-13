@@ -3,7 +3,7 @@ title: Text Reveal Card
 description: Mousemove effect to reveal text content at the bottom of the card.
 ---
 
-::ComponentLoader{label="Preview" componentName="TextRevealDemo" type="examples"}  
+::ComponentLoader{label="Preview" componentName="TextRevealCardDemo" type="examples"}  
 ::
 
 ## Install using CLI

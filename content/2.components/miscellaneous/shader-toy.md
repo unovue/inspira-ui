@@ -21,7 +21,8 @@ navBadges:
 
 Make sure to include and install `ogl` (for rendering) in your project.
 
-:pm-install{name="ogl"}
+::pm-install{name="ogl"}
+::
 
 ## Install using CLI
 
