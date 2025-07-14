@@ -1,9 +1,6 @@
 ---
 title: Liquid Background
 description: A reactive and dynamic background effect using OGL for WebGL-based visuals.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="预览" componentName="LiquidBackgroundDemo" type="examples" id="liquid-background"}

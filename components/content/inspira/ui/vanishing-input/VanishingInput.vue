@@ -91,7 +91,7 @@ import { templateRef } from "@vueuse/core";
 
 // Define interfaces for props and data structures
 interface Props {
-  placeholders: string[];
+  placeholders?: string[];
 }
 
 interface PixelData {

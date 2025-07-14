@@ -15,7 +15,7 @@ import { ref, watch, computed } from "vue";
 type TransitionsPresetsKeys = keyof typeof TransitionPresets;
 
 interface NumberTickerProps {
-  value: number;
+  value?: number;
   direction?: "up" | "down";
   duration?: number;
   delay?: number;

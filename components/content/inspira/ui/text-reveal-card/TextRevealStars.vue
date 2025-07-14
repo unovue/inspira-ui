@@ -21,7 +21,7 @@ import { cn } from "@/lib/utils";
 import type { HTMLAttributes } from "vue";
 
 interface Props {
-  starsCount: number;
+  starsCount?: number;
   class?: HTMLAttributes["class"];
 }
 

@@ -1,9 +1,6 @@
 ---
 title: 视频文字
 description: 一个带有视频背景的文本组件。
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="预览" componentName="VideoTextDemo" type="examples" id="video-text"}

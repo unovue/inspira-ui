@@ -53,8 +53,8 @@ interface BaseProps {
 
 // Props for static image mode
 interface StaticImageProps extends BaseProps {
-  isStatic: true;
-  imageSrc: string;
+  isStatic?: true;
+  imageSrc?: string;
   url?: string; // optional in static mode
 }
 
@@ -62,7 +62,7 @@ interface StaticImageProps extends BaseProps {
 interface URLPreviewProps extends BaseProps {
   isStatic?: false; // optional but must be false if specified
   imageSrc?: string; // optional in URL mode
-  url: string;
+  url?: string;
 }
 
 // Combined type that enforces the requirements
