@@ -1,9 +1,6 @@
 ---
 title: Apple Card Carousel
 description: A sleek, Apple‑style card carousel with blur‑loading images, modal expansion, and smooth scrolling controls.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="预览" componentName="AppleCardCarouselDemo" type="examples" id="apple-card-carousel"}

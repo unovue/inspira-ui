@@ -1,9 +1,6 @@
 ---
 title: Spring Calendar
 description: An animated calendar widget that expands to reveal events and features smooth, spring‑based Motion‑V transitions.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="预览" componentName="SpringCalendarDemo" type="examples" id="spring-calendar"}

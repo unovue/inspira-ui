@@ -1,9 +1,6 @@
 ---
 title: Testimonial Slider
 description: A lightweight testimonial slider with image rotation, text transitions, and optional auto‑rotation.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="预览" componentName="TestimonialSliderDemo" type="examples" id="testimonial-slider"}

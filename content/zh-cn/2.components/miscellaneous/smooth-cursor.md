@@ -1,9 +1,6 @@
 ---
 title: Smooth Cursor
 description: A customizable, physics-based smooth cursor animation component for Vue applications.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="预览" componentName="SmoothCursorDemo" type="examples" id="smooth-cursor"}

@@ -1,9 +1,6 @@
 ---
 title: Black Hole Background
 description: A mesmerizing, canvas-driven background effect that simulates a warped “black-hole” tunnel with animated discs, radial lines, and particles.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="BlackHoleBackgroundDemo" type="examples" id="bg-black-hole"}
