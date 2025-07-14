@@ -35,11 +35,11 @@
 import { cn } from "@/lib/utils";
 
 type NotificationProps = {
-  name: string;
-  description: string;
-  time: string;
-  icon: string;
-  color: string;
+  name?: string;
+  description?: string;
+  time?: string;
+  icon?: string;
+  color?: string;
 };
 
 withDefaults(defineProps<NotificationProps>(), {

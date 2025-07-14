@@ -26,7 +26,7 @@ import type { HTMLAttributes } from "vue";
 import { animate, type AnimationPlaybackControls } from "motion-v";
 
 interface Props {
-  items: unknown[];
+  items?: unknown[];
   class?: HTMLAttributes["class"];
   containerClass?: HTMLAttributes["class"];
   width?: number;
