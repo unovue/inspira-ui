@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "include": [
+    "/*"
+  ],
+  "exclude": [
+    "/docs/_fonts/*",
+    "/docs/_nuxt/*",
+    "/docs/_scripts/*",
+    "/docs/200",
+    "/docs/404",
+    "/docs/favicon.ico",
+    "/docs/linear.webp",
+    "/docs/llms-full.txt",
+    "/docs/llms.txt",
+    "/docs/logo-dark.svg",
+    "/docs/logo.svg",
+    "/docs/og-image.png",
+    "/docs/_r/*"
+  ]
+}
