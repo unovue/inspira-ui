@@ -15,7 +15,7 @@
     "prepare": "husky",
     "dev:registry": "REGISTRY_URL=http://localhost:5173/r tsx ./scripts/build-registry.mts",
     "build:registry": "tsx ./scripts/build-registry.mts",
-    "build:copy": "cp public/_routes.json dist/docs/_routes.json"
+    "build:copy": "cp public/_routes.json dist/_routes.json"
   },
   "dependencies": {
     "@number-flow/vue": "^0.4.8",
