@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "type": "module",
   "scripts": {
-    "build": "pnpm build:registry && nuxt build",
+    "build": "pnpm build:registry && nuxt build && pnpm build:copy",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
@@ -14,13 +14,14 @@
     "lint:fix": "eslint . --fix",
     "prepare": "husky",
     "dev:registry": "REGISTRY_URL=http://localhost:5173/r tsx ./scripts/build-registry.mts",
-    "build:registry": "tsx ./scripts/build-registry.mts"
+    "build:registry": "tsx ./scripts/build-registry.mts",
+    "build:copy": "cp public/_routes.json dist/docs/_routes.json"
   },
   "dependencies": {
     "@number-flow/vue": "^0.4.8",
     "@nuxt/image": "^1.10.0",
     "@nuxt/scripts": "0.11.8",
-    "@splinetool/runtime": "^1.10.22",
+    "@splinetool/runtime": "^1.10.32",
     "@types/lodash.template": "^4.5.3",
     "@vueuse/core": "^13.5.0",
     "canvas-confetti": "^1.9.3",
@@ -30,7 +31,7 @@
     "eslint-plugin-nuxt": "^4.0.0",
     "gsap": "^3.13.0",
     "highlight.js": "^11.11.1",
-    "lenis": "^1.3.4",
+    "lenis": "^1.3.7",
     "motion-v": "1.4.0",
     "nuxt": "3.17.6",
     "nuxt-gtag": "^3.0.3",
@@ -46,19 +47,19 @@
     "vue": "^3.5.17",
     "vue-router": "^4.5.1",
     "vue-use-spring": "^0.3.3",
-    "zod": "^3.25.74"
+    "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@eslint/js": "^9.30.1",
+    "@eslint/js": "^9.31.0",
     "@eslint/markdown": "^6.6.0",
     "@iconify-json/vscode-icons": "^1.2.23",
     "@inspira-ui/plugins": "0.0.1",
-    "@nuxt/eslint": "^1.5.2",
+    "@nuxt/eslint": "^1.6.0",
     "@types/canvas-confetti": "^1.9.0",
     "@types/lodash-es": "^4.17.12",
-    "@types/three": "^0.178.0",
+    "@types/three": "^0.178.1",
     "clsx": "^2.1.1",
-    "eslint": "^9.30.1",
+    "eslint": "^9.31.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-check-file": "^3.3.0",
     "eslint-plugin-import": "^2.32.0",
@@ -72,7 +73,7 @@
     "tailwind-merge": "^3.3.1",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3",
-    "typescript-eslint": "^8.35.1"
+    "typescript-eslint": "^8.37.0"
   },
   "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac"
 }
