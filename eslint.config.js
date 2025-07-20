@@ -51,7 +51,7 @@ export default withNuxt(
   },
   {
     rules: {
-      "no-console": "error",
+      "no-console": ["error", { allow: ["warn", "error"] }],
       "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
       "import/no-default-export": "off",
       "import/first": "error",
