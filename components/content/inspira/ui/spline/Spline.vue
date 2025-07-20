@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-console */
+
 import { ref, onMounted, onUnmounted, computed, watch, nextTick } from "vue";
 import { Application, type SplineEventName } from "@splinetool/runtime";
 import { useDebounceFn, useIntersectionObserver } from "@vueuse/core";
