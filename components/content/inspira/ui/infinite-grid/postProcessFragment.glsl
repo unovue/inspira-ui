@@ -5,19 +5,8 @@ uniform float vignetteDarkness;
 
 varying vec2 vUv;
 
-// convert uv range from 0 -> 1 to -1 -> 1
-vec2 getShiftedUv(vec2 uv) {
-    return 2. * (uv - .5);
-}
-
-// convert uv range from -1 -> 1 to 0 -> 1
-vec2 getUnshiftedUv(vec2 shiftedUv) {
-    return shiftedUv * 0.5 + 0.5;
-}
-
-
 void main() {
-    vec2 shiftedUv = getShiftedUv(vUv);
+    vec2 shiftedUv = 2.0 * (vUv - 0.5);
     float distanceToCenter = length(shiftedUv);
 
     // Lens distortion effect
@@ -28,7 +17,7 @@ void main() {
     // For now, I'll keep the dot product as it was in your provided shader,
     // which applies uniform distortion based on radial distance.
     shiftedUv *= (0.88 + distortion.x * dot(shiftedUv, shiftedUv)); // Assuming distortion.x controls the scalar distortion factor
-    vec2 transformedUv = getUnshiftedUv(shiftedUv);
+    vec2 transformedUv = shiftedUv * 0.5 + 0.5;
 
     // Vignette effect
     // Corrected `vignetteOffset * 0.799` and `(vignetteDarkness + vignetteOffset)` if that was the intent.
