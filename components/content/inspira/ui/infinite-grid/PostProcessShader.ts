@@ -2,8 +2,7 @@ import * as THREE from "three";
 import { gsap } from "gsap";
 
 // Import shaders as raw strings
-import postProcessVertexShader from "./postProcessVertex.glsl?raw";
-import postProcessFragmentShader from "./postProcessFragment.glsl?raw";
+import { postProcessVertexShader, postProcessFragmentShader } from "./shaders";
 
 /**
  * @interface CustomPostProcessShaderParameters

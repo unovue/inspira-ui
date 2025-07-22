@@ -36,10 +36,7 @@ import { ShaderPass } from "three/examples/jsm/postprocessing/ShaderPass.js";
 import { OutputPass } from "three/examples/jsm/postprocessing/OutputPass.js";
 
 import { CustomPostProcessShader } from "./PostProcessShader.js";
-
-// Import shaders as raw strings
-import gaussianBlurVertexShader from "./gaussianBlurVertex.glsl?raw";
-import gaussianBlurFragmentShader from "./gaussianBlurFragment.glsl?raw";
+import { gaussianBlurVertexShader, gaussianBlurFragmentShader } from "./shaders";
 
 gsap.registerPlugin(InertiaPlugin);
 
