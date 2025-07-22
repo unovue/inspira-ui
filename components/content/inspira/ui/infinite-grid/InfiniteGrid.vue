@@ -13,6 +13,7 @@ import type { InfiniteGridOptions, CardData } from "./InfiniteGridClass";
 interface Props {
   cardData: CardData[];
   options?: Partial<InfiniteGridOptions>;
+  onTilesLoaded?: () => void;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -63,6 +64,8 @@ onMounted(async () => {
     );
     await infiniteGridInstance.init();
 
+    props.onTilesLoaded?.();
+
     infiniteGridContainer.value.addEventListener("tileClicked", handleTileClicked);
   }
 });
@@ -102,8 +105,8 @@ watch(
 <style scoped>
 .infinite-grid-container {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   overflow: hidden;

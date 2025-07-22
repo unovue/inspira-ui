@@ -152,9 +152,6 @@ export async function generateForegroundTexture(data: CardData): Promise<THREE.C
 
   const headerHeight = 24; // Assuming 24px font height is a good approximation for header height
 
-  // No badge implementation as it was commented out in your Konva code.
-  // If you need it, we'd add similar logic here for a rectangle and text.
-
   currentY += headerHeight + 30; // Move Y cursor down
 
   const topElementsMaxY = currentY;
@@ -164,7 +161,7 @@ export async function generateForegroundTexture(data: CardData): Promise<THREE.C
 
   // Image Loading and Placement
   const imageObj = new Image();
-  imageObj.crossOrigin = "Anonymous";
+  imageObj.crossOrigin = "anonymous";
   imageObj.src = data.image || "/photo.png"; // Fallback image
 
   const loadImagePromise = new Promise<void>((resolve) => {
