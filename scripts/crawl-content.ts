@@ -24,6 +24,7 @@ const DEPENDENCIES = new Map<string, string[]>([
   ["qss", []],
   ["motion-v", []],
   ["@number-flow/vue", []],
+  ["gsap", []],
 ]);
 
 // This map is used when a basic Inspira UI component internally uses another Inspira component.
@@ -237,7 +238,7 @@ async function buildUIRegistry(componentPath: string, componentName: string) {
     files.push({ content: source, path: relativePath, type, target });
 
     // only grab deps from the vue files
-    if (!dirent.name.endsWith(".vue")) continue;
+    if (!dirent.name.endsWith(".vue") && !dirent.name.endsWith(".ts")) continue;
 
     const deps = await getFileDependencies(filepath, source);
     if (!deps) continue;

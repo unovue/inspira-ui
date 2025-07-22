@@ -291,7 +291,6 @@ export class InspiraShaderToy {
 
       return program;
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.error(`Failed to compile program for ${key}:`, error);
       return null;
     }
@@ -306,7 +305,6 @@ export class InspiraShaderToy {
           this.programs[key] = program;
           this.meshes[key] = new Mesh(this.renderer.gl, { geometry: this.geometry, program });
         } else {
-          // eslint-disable-next-line no-console
           console.error(`Failed to compile ${key}`);
         }
       }
