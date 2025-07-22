@@ -28,7 +28,7 @@ const cardData = [
   {
     title: "Visionary Insights",
     badge: "New",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Next-gen AI system delivering business intelligence in real-time",
     tags: ["AI", "Big Data", "BI"],
     date: "2025",
@@ -36,7 +36,7 @@ const cardData = [
   {
     title: "UI Framework",
     badge: "Updated",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Robust design framework featuring sleek and responsive components",
     tags: ["UI", "React", "Toolkit"],
     date: "2025",
@@ -44,7 +44,7 @@ const cardData = [
   {
     title: "NextGen App",
     badge: "Beta",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Progressive mobile-first app optimized for speed and usability",
     tags: ["Mobile", "Flutter", "UX"],
     date: "2025",
@@ -52,7 +52,7 @@ const cardData = [
   {
     title: "Edge Gateway",
     badge: "Stable",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Smart API gateway enabling distributed edge routing",
     tags: ["API", "Edge", "Infrastructure"],
     date: "2025",
@@ -60,7 +60,7 @@ const cardData = [
   {
     title: "Insight Panel",
     badge: "Live",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Customizable analytics panel for performance monitoring",
     tags: ["Dashboard", "Vue", "Insights"],
     date: "2025",
@@ -68,7 +68,7 @@ const cardData = [
   {
     title: "DataCore",
     badge: "Optimized",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Reliable database solution with advanced indexing",
     tags: ["SQL", "Database", "Indexing"],
     date: "2025",
@@ -76,7 +76,7 @@ const cardData = [
   {
     title: "Fortress Auth",
     badge: "Critical",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Advanced identity platform with biometric authentication",
     tags: ["Security", "OAuth2", "Biometrics"],
     date: "2024",
@@ -84,7 +84,7 @@ const cardData = [
   {
     title: "OpsHub",
     badge: "Automated",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Infrastructure as code with seamless deployment pipelines",
     tags: ["DevOps", "Terraform", "CI/CD"],
     date: "2024",
@@ -92,7 +92,7 @@ const cardData = [
   {
     title: "TestBench",
     badge: "Complete",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Unified testing platform supporting unit and E2E tests",
     tags: ["QA", "Testing", "Mocha"],
     date: "2024",
@@ -100,7 +100,7 @@ const cardData = [
   {
     title: "AI Metrics",
     badge: "New",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Cloud-native platform analyzing ML model performance",
     tags: ["ML", "AI", "Monitoring"],
     date: "2025",
@@ -108,7 +108,7 @@ const cardData = [
   {
     title: "Component Forge",
     badge: "Updated",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Reusable UI components with seamless design integration",
     tags: ["React", "UI Kit", "Figma"],
     date: "2025",
@@ -116,7 +116,7 @@ const cardData = [
   {
     title: "Hybrid Mobile",
     badge: "Beta",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Unified codebase for building apps across all platforms",
     tags: ["Ionic", "Mobile", "Cross-platform"],
     date: "2025",
@@ -124,7 +124,7 @@ const cardData = [
   {
     title: "Micro API Hub",
     badge: "Stable",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Lightweight microservices API router for distributed systems",
     tags: ["Microservices", "API", "Express"],
     date: "2025",
@@ -132,7 +132,7 @@ const cardData = [
   {
     title: "Live Metrics",
     badge: "Live",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Streaming dashboard with real-time data visualization",
     tags: ["Monitoring", "Charts", "D3.js"],
     date: "2025",
@@ -140,7 +140,7 @@ const cardData = [
   {
     title: "DataVault",
     badge: "Optimized",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Secure and scalable data storage with automated backups",
     tags: ["PostgreSQL", "Cloud", "Storage"],
     date: "2025",
@@ -148,7 +148,7 @@ const cardData = [
   {
     title: "ShieldWall",
     badge: "Critical",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Enterprise-grade security with threat detection engine",
     tags: ["Security", "Firewall", "Zero Trust"],
     date: "2024",
@@ -156,7 +156,7 @@ const cardData = [
   {
     title: "Pipeline Master",
     badge: "Automated",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "Containerized deployment pipeline with monitoring hooks",
     tags: ["CI/CD", "Kubernetes", "Docker"],
     date: "2024",
@@ -164,7 +164,7 @@ const cardData = [
   {
     title: "AssureTest",
     badge: "Complete",
-    image: "https://picsum.photos/300/300.webp",
+    image: "https://inspira-ui.com/docs/og-image.png",
     description: "End-to-end test framework with smart coverage analysis",
     tags: ["Cypress", "QA", "Automation"],
     date: "2024",
