@@ -1,5 +1,5 @@
 /**
- * @fileoverview Card Texture Generation Utilities for Three.js
+ * @fileoverview Card Texture Generation Utilities for OGL
  *
  * This module provides utilities for generating Canvas-based textures used
  * in the InfiniteGridClass system. Each card requires two textures:
@@ -8,7 +8,7 @@
  * 2. Background Texture: Contains a blurred, darkened version of the card image
  *
  * The textures are generated using HTML5 Canvas 2D API and converted to
- * Three.js CanvasTextures with proper sRGB color space configuration.
+ * OGL Textures with proper configuration.
  *
  * Key Features:
  * - Automatic text truncation with ellipsis
@@ -25,18 +25,18 @@
  * const cardData = {
  *   title: "Project Title",
  *   image: "/path/to/image.jpg",
- *   tags: ["web", "three.js"],
+ *   tags: ["web", "ogl"],
  *   date: "2024"
  * };
  *
- * const foregroundTexture = await generateForegroundTexture(cardData);
- * const backgroundTexture = await generateBackgroundTexture(cardData);
+ * const foregroundTexture = await generateForegroundTexture(cardData, gl);
+ * const backgroundTexture = await generateBackgroundTexture(cardData, gl);
  * ```
  */
 
-// Card Texture Generation Utilities for Three.js
+// Card Texture Generation Utilities for OGL
 
-import * as THREE from "three"; // Required for CanvasTexture and SRGBColorSpace
+import { Texture, Renderer } from "ogl"; // Required for OGL Texture
 
 /**
  * Represents the data structure for a single card/tile
@@ -85,6 +85,9 @@ function createCanvasContext(): { canvas: HTMLCanvasElement; ctx: CanvasRenderin
   return { canvas, ctx };
 }
 
+// Option 1: Pre-generate textures once, reuse them
+const textureCache = new Map<string, Texture>();
+
 /**
  * Generates the foreground texture for a card using Canvas 2D API
  *
@@ -99,22 +102,31 @@ function createCanvasContext(): { canvas: HTMLCanvasElement; ctx: CanvasRenderin
  * can interact with (hover and click).
  *
  * @param data - Card data containing title, image, tags, date, etc.
- * @returns Promise resolving to a Three.js CanvasTexture with sRGB color space
+ * @param renderer - OGL Renderer for texture creation
+ * @returns Promise resolving to an OGL Texture
  *
  * @example
  * ```typescript
  * const cardData = {
  *   title: "Amazing Project",
  *   image: "/images/project.jpg",
- *   tags: ["web", "three.js"],
+ *   tags: ["web", "ogl"],
  *   date: "2024",
  *   badge: "NEW",
  *   description: "A cool project"
  * };
- * const texture = await generateForegroundTexture(cardData);
+ * const texture = await generateForegroundTexture(cardData, renderer);
  * ```
  */
-export async function generateForegroundTexture(data: CardData): Promise<THREE.CanvasTexture> {
+export async function generateForegroundTexture(
+  data: CardData,
+  renderer: Renderer,
+): Promise<Texture> {
+  const cacheKey = `${data.title}-${data.tags?.join("-")}`;
+  if (textureCache.has(cacheKey)) {
+    return textureCache.get(cacheKey)!;
+  }
+
   const { canvas, ctx } = createCanvasContext();
 
   // Set default styles
@@ -243,11 +255,14 @@ export async function generateForegroundTexture(data: CardData): Promise<THREE.C
   ctx.textBaseline = "bottom"; // Align text to the bottom of its bounding box
   ctx.fillText(data.date, cardWidth - padding, cardHeight - padding);
 
-  const foregroundTexture = new THREE.CanvasTexture(canvas);
-  foregroundTexture.needsUpdate = true;
-  foregroundTexture.colorSpace = THREE.SRGBColorSpace;
+  const texture = new Texture(renderer.gl, {
+    image: canvas,
+    generateMipmaps: false,
+    flipY: false,
+  });
 
-  return foregroundTexture;
+  textureCache.set(cacheKey, texture);
+  return texture;
 }
 
 /**
@@ -266,15 +281,19 @@ export async function generateForegroundTexture(data: CardData): Promise<THREE.C
  * 5. Falls back to solid color if image loading fails
  *
  * @param data - Card data containing the image URL
- * @returns Promise resolving to a Three.js CanvasTexture for background layer
+ * @param renderer - OGL Renderer for texture creation
+ * @returns Promise resolving to an OGL Texture for background layer
  *
  * @example
  * ```typescript
- * const backgroundTexture = await generateBackgroundTexture(cardData);
+ * const backgroundTexture = await generateBackgroundTexture(cardData, renderer);
  * // Use this texture for the background mesh with shader material
  * ```
  */
-export async function generateBackgroundTexture(data: CardData): Promise<THREE.CanvasTexture> {
+export async function generateBackgroundTexture(
+  data: CardData,
+  renderer: Renderer,
+): Promise<Texture> {
   const { canvas, ctx } = createCanvasContext();
 
   // Start with transparent background - image will fill the canvas
@@ -325,9 +344,11 @@ export async function generateBackgroundTexture(data: CardData): Promise<THREE.C
 
   await loadBackgroundImagePromise; // Wait for background image to load or fail
 
-  const backgroundTexture = new THREE.CanvasTexture(canvas);
-  backgroundTexture.needsUpdate = true;
-  backgroundTexture.colorSpace = THREE.SRGBColorSpace;
+  const backgroundTexture = new Texture(renderer.gl, {
+    image: canvas,
+    generateMipmaps: false,
+    flipY: false,
+  });
 
   return backgroundTexture;
 }
@@ -376,21 +397,25 @@ function drawRoundedRect(
  * simpler use cases.
  *
  * @param data - Card data for texture generation
+ * @param renderer - OGL Renderer for texture creation
  * @returns Promise resolving to an object with both texture types
  *
  * @example
  * ```typescript
- * const { foreground, background } = await generateCardTextures(cardData);
+ * const { foreground, background } = await generateCardTextures(cardData, renderer);
  * // Use foreground for main mesh, background for hover effect
  * ```
  */
-export async function generateCardTextures(data: CardData): Promise<{
-  foreground: THREE.CanvasTexture;
-  background: THREE.CanvasTexture;
+export async function generateCardTextures(
+  data: CardData,
+  renderer: Renderer,
+): Promise<{
+  foreground: Texture;
+  background: Texture;
 }> {
   const [foreground, background] = await Promise.all([
-    generateForegroundTexture(data),
-    generateBackgroundTexture(data),
+    generateForegroundTexture(data, renderer),
+    generateBackgroundTexture(data, renderer),
   ]);
   return { foreground, background };
 }
