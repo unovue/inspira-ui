@@ -8,7 +8,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount, watch, computed } from "vue";
 import { InfiniteGridClass } from "./InfiniteGridClass";
-import type { InfiniteGridOptions, CardData } from "./InfiniteGridClass";
+import type { InfiniteGridOptions, CardData } from "./types";
 
 interface Props {
   cardData: CardData[];

@@ -29,15 +29,25 @@ void main() {
     gl_FragColor = vec4(sum.rgb, sum.a * uOpacity); // sum.a is usually 1.0 from texture, so multiply by uOpacity
 }`;
 
-export const gaussianBlurVertexShader = /* glsl */ `// Corrected GLSL for the vertex shader
-varying vec2 vUv; // <-- Declare varying BEFORE main
-
-void main() {
+export const gaussianBlurVertexShader = `
+  attribute vec2 uv;
+  attribute vec3 position;
+  
+  uniform mat4 modelViewMatrix;
+  uniform mat4 projectionMatrix;
+  
+  varying vec2 vUv;
+  
+  void main() {
+    // Flip UV coordinates 180 degrees (both X and Y)
+    vUv = vec2(uv.x, 1.0 - uv.y);
     gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-    vUv = uv; // built-in attribute 'uv'
-}`;
+  }
+`;
 
-export const postProcessFragmentShader = /* glsl */ `uniform sampler2D tDiffuse;
+export const postProcessFragmentShader = /* glsl */ `precision highp float;
+
+uniform sampler2D tDiffuse;
 uniform vec2 distortion;
 uniform float vignetteOffset;
 uniform float vignetteDarkness;
@@ -67,13 +77,20 @@ void main() {
     // this would be a more complex interaction. Let's start with a standard vignette.
 
     // Sample render texture and output fragment
-    vec3 color = texture2D( tDiffuse, transformedUv ).rgb * (1.0 - vignetteIntensity); // Apply darkening based on intensity
+    vec3 color = texture2D(tDiffuse, transformedUv).rgb * (1.0 - vignetteIntensity); // Apply darkening based on intensity
     // The original '* vignetteIntensity' would brighten. Vignettes usually darken.
     // If you want a more subtle darkening, adjust the '(1.0 - vignetteIntensity)''.
     gl_FragColor = vec4(color, 1.);
 }`;
 
-export const postProcessVertexShader = /* glsl */ `varying vec2 vUv;
+export const postProcessVertexShader = /* glsl */ `
+attribute vec2 uv;
+attribute vec3 position;
+
+uniform mat4 modelViewMatrix;
+uniform mat4 projectionMatrix;
+
+varying vec2 vUv;
 
 void main() {
     vUv = uv;
