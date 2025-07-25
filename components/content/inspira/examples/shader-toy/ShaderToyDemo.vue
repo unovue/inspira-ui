@@ -252,7 +252,7 @@ vec3 emission(vec3 color, float strength) {
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
     // Normalized pixel coordinates (from 0 to 1) and (from -1 to 1)
-    vec2 uv = (fragCoord * 2.0 - iResolution.xy) / iResolution.y;
+    vec2 uv = (fragCoord - iResolution.xy) / iResolution.y;
     
 
     vec3 color = vec3(uv.xy, 0.0);
