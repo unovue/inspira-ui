@@ -101,16 +101,18 @@ export class InspiraShaderToy {
     }
     `;
 
-  constructor(container: HTMLElement, mouseMode?: MouseMode) {
+  constructor(
+    private container: HTMLElement,
+    mouseMode?: MouseMode,
+  ) {
     if (mouseMode) {
       this._mouseMode = mouseMode;
     }
 
     // Create renderer with WebGL 2 context
     this.renderer = new Renderer({
-      canvas: document.createElement("canvas"),
-      width: container.clientWidth,
-      height: container.clientHeight,
+      width: this.container.clientWidth,
+      height: this.container.clientHeight,
       dpr: window.devicePixelRatio,
       alpha: true,
       depth: false,
@@ -125,7 +127,7 @@ export class InspiraShaderToy {
     }
 
     // Append canvas to container
-    container.appendChild(this.renderer.gl.canvas);
+    this.container.appendChild(this.renderer.gl.canvas);
 
     // Setup camera (orthographic for full-screen quad)
     this.camera = new Camera(this.renderer.gl);
@@ -154,8 +156,8 @@ export class InspiraShaderToy {
         const bufferKey = key as Exclude<BufferKey, "Image">;
         this.renderTargets[bufferKey] = [
           new RenderTarget(this.renderer.gl, {
-            width: this.renderer.width,
-            height: this.renderer.height,
+            width: this.container.clientWidth,
+            height: this.container.clientHeight,
             type: this.renderer.gl.FLOAT,
             format: this.renderer.gl.RGBA,
             internalFormat: (this.renderer.gl as WebGL2RenderingContext).RGBA32F,
@@ -165,8 +167,8 @@ export class InspiraShaderToy {
             wrapT: this.renderer.gl.CLAMP_TO_EDGE,
           }),
           new RenderTarget(this.renderer.gl, {
-            width: this.renderer.width,
-            height: this.renderer.height,
+            width: this.container.clientWidth,
+            height: this.container.clientHeight,
             type: this.renderer.gl.FLOAT,
             format: this.renderer.gl.RGBA,
             internalFormat: (this.renderer.gl as WebGL2RenderingContext).RGBA32F,
@@ -191,22 +193,33 @@ export class InspiraShaderToy {
     const canvas = this.renderer.gl.canvas;
     let isMouseDown = false;
 
-    canvas.addEventListener("mousemove", (event: MouseEvent) => {
+    function getScaledMousePos(event: MouseEvent) {
       const rect = canvas.getBoundingClientRect();
-      const newX = event.clientX - rect.left;
-      const newY = canvas.height - (event.clientY - rect.top);
+      const dpr = window.devicePixelRatio;
 
-      // Add damping/smoothing to reduce sensitivity
+      // Get mouse position relative to canvas
+      const x = event.clientX - rect.left;
+      const y = event.clientY - rect.top;
+
+      // Scale by DPR and flip Y-axis
+      return {
+        x: x * dpr,
+        y: canvas.height - y * dpr, // Flip Y to match GLSL coordinates
+      };
+    }
+
+    canvas.addEventListener("mousemove", (event: MouseEvent) => {
+      const { x: newX, y: newY } = getScaledMousePos(event);
+
+      // Smoothing/damping
       this.iMouse.x = this.iMouse.x * 0.9 + newX * 0.1;
       this.iMouse.y = this.iMouse.y * 0.9 + newY * 0.1;
 
       // Handle click coordinates based on mode
       if (this._mouseMode === "hover" && !isMouseDown) {
-        // For hover mode or auto mode when not clicking
         this.iMouse.clickX = this.iMouse.x;
         this.iMouse.clickY = this.iMouse.y;
       } else if (isMouseDown) {
-        // For click mode when mouse is down
         this.iMouse.clickX = newX;
         this.iMouse.clickY = newY;
       }
@@ -214,9 +227,7 @@ export class InspiraShaderToy {
 
     canvas.addEventListener("mousedown", (event: MouseEvent) => {
       isMouseDown = true;
-      const rect = canvas.getBoundingClientRect();
-      const clickX = event.clientX - rect.left;
-      const clickY = canvas.height - (event.clientY - rect.top);
+      const { x: clickX, y: clickY } = getScaledMousePos(event);
 
       if (this._mouseMode === "click") {
         this.iMouse.clickX = clickX;
@@ -227,38 +238,62 @@ export class InspiraShaderToy {
     canvas.addEventListener("mouseup", () => {
       isMouseDown = false;
     });
+
+    // Handle touch events for mobile
+    canvas.addEventListener("touchmove", (event: TouchEvent) => {
+      event.preventDefault();
+      const touch = event.touches[0];
+      const { x: newX, y: newY } = getScaledMousePos(touch as unknown as MouseEvent);
+
+      this.iMouse.x = newX;
+      this.iMouse.y = newY;
+
+      if (this._mouseMode === "hover") {
+        this.iMouse.clickX = newX;
+        this.iMouse.clickY = newY;
+      }
+    });
+
+    canvas.addEventListener("touchstart", (event: TouchEvent) => {
+      event.preventDefault();
+      isMouseDown = true;
+      const touch = event.touches[0];
+      const { x: clickX, y: clickY } = getScaledMousePos(touch as unknown as MouseEvent);
+
+      if (this._mouseMode === "click") {
+        this.iMouse.clickX = clickX;
+        this.iMouse.clickY = clickY;
+      }
+    });
+
+    canvas.addEventListener("touchend", () => {
+      isMouseDown = false;
+    });
   }
 
   private setupResizeHandler(): void {
-    const canvas = this.renderer.gl.canvas;
-    const container = canvas.parentElement;
-
-    if (container) {
+    if (this.container) {
       const resizeObserver = new ResizeObserver(() => {
-        const width = container.clientWidth;
-        const height = container.clientHeight;
+        const width = this.container.clientWidth;
+        const height = this.container.clientHeight;
 
         // Update renderer size
         this.renderer.setSize(width, height);
 
-        // Make sure canvas matches
-        canvas.width = width;
-        canvas.height = height;
-
         // Update viewport
-        this.renderer.gl.viewport(0, 0, width, height);
+        this.renderer.gl.viewport(0, 0, width * window.devicePixelRatio, height * devicePixelRatio);
 
         this.updateRenderTargets();
       });
 
-      resizeObserver.observe(container);
+      resizeObserver.observe(this.container);
     }
   }
 
   private updateRenderTargets(): void {
     (["A", "B", "C", "D"] as Exclude<BufferKey, "Image">[]).forEach((key) => {
-      this.renderTargets[key][0].setSize(this.renderer.width, this.renderer.height);
-      this.renderTargets[key][1].setSize(this.renderer.width, this.renderer.height);
+      this.renderTargets[key][0].setSize(this.container.clientWidth, this.container.clientHeight);
+      this.renderTargets[key][1].setSize(this.container.clientWidth, this.container.clientHeight);
     });
   }
 
@@ -272,7 +307,13 @@ export class InspiraShaderToy {
         vertex: this.basicVertexShader,
         fragment: source,
         uniforms: {
-          iResolution: { value: [this.renderer.width, this.renderer.height, 1.0] },
+          iResolution: {
+            value: [
+              this.container.clientWidth * window.devicePixelRatio,
+              this.container.clientHeight * window.devicePixelRatio,
+              window.devicePixelRatio,
+            ],
+          },
           iTime: { value: 0 },
           iTimeDelta: { value: 0 },
           iFrameRate: { value: 60 },
@@ -341,18 +382,18 @@ export class InspiraShaderToy {
 
     const iChannelTimes = [iTime, iTime, iTime, iTime];
     const iChannelResolutions = new Float32Array([
-      this.renderer.width,
-      this.renderer.height,
-      0,
-      this.renderer.width,
-      this.renderer.height,
-      0,
-      this.renderer.width,
-      this.renderer.height,
-      0,
-      this.renderer.width,
-      this.renderer.height,
-      0,
+      this.container.clientWidth * window.devicePixelRatio,
+      this.container.clientHeight * window.devicePixelRatio,
+      window.devicePixelRatio,
+      this.container.clientWidth * window.devicePixelRatio,
+      this.container.clientHeight * window.devicePixelRatio,
+      window.devicePixelRatio,
+      this.container.clientWidth * window.devicePixelRatio,
+      this.container.clientHeight * window.devicePixelRatio,
+      window.devicePixelRatio,
+      this.container.clientWidth * window.devicePixelRatio,
+      this.container.clientHeight * window.devicePixelRatio,
+      window.devicePixelRatio,
     ]);
 
     (["A", "B", "C", "D", "Image"] as BufferKey[]).forEach((key) => {
@@ -382,7 +423,11 @@ export class InspiraShaderToy {
         }
 
         // Update uniforms
-        program.uniforms.iResolution.value = [this.renderer.width, this.renderer.height, 1.0];
+        program.uniforms.iResolution.value = [
+          this.container.clientWidth * window.devicePixelRatio,
+          this.container.clientHeight * window.devicePixelRatio,
+          window.devicePixelRatio,
+        ];
         program.uniforms.iTime.value = iTime;
         program.uniforms.iTimeDelta.value = iTimeDelta;
         program.uniforms.iFrameRate.value = 60;
@@ -399,7 +444,11 @@ export class InspiraShaderToy {
         program.uniforms.iSampleRate.value = 44100;
 
         // Render
-        this.renderer.render({ scene: mesh, camera: this.camera });
+        if (target) {
+          this.renderer.render({ scene: mesh, camera: this.camera, target });
+        } else {
+          this.renderer.render({ scene: mesh, camera: this.camera });
+        }
 
         // Flip buffer
         if (key !== "Image") {
