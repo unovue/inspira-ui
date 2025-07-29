@@ -17,8 +17,11 @@ export default defineNuxtConfig({
     {
       path: "~/components",
       pathPrefix: false,
+      ignore: ["**/index.ts", "**/shaders.ts"],
     },
   ],
+
+  ignore: ["components/**/index.ts", "components/**/shaders.ts"],
 
   runtimeConfig: {
     public: {
