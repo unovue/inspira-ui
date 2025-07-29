@@ -52,6 +52,7 @@
   "devDependencies": {
     "@eslint/js": "^9.31.0",
     "@eslint/markdown": "^6.6.0",
+    "@iconify-json/lucide": "^1.2.58",
     "@iconify-json/vscode-icons": "^1.2.23",
     "@inspira-ui/plugins": "0.0.1",
     "@nuxt/eslint": "^1.6.0",
