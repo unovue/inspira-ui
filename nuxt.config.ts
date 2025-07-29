@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   plugins: [{ src: "~/plugins/clarity.js", mode: "client" }],
 
   modules: [
+    "@nuxt/fonts",
     "@nuxt/image",
     "nuxt-gtag",
     "@nuxt/eslint",
@@ -79,16 +80,19 @@ export default defineNuxtConfig({
         name: "Plus Jakarta Sans",
         provider: "google",
         global: true,
+        weights: [300, 400, 500, 600, 700],
       },
       {
         name: "Space Grotesk",
         provider: "google",
         global: true,
+        weights: [300, 400, 500, 600, 700],
       },
       {
         name: "JetBrains Mono",
         provider: "google",
         global: true,
+        weights: [300, 400, 500, 600, 700],
       },
     ],
   },

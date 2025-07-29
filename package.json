@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@number-flow/vue": "^0.4.8",
+    "@nuxt/fonts": "^0.11.4",
     "@nuxt/image": "^1.10.0",
     "@nuxt/scripts": "0.11.8",
     "@splinetool/runtime": "^1.10.32",
