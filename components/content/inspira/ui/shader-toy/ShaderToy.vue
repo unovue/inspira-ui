@@ -25,7 +25,7 @@ let shader: InspiraShaderToy | undefined = undefined;
 onMounted(() => {
   if (!containerRef.value) return;
 
-  shader = new InspiraShaderToy(containerRef.value);
+  shader = new InspiraShaderToy(containerRef.value, props.mouseMode);
 
   shader.setImage({
     source: props.shaderCode,

@@ -12,7 +12,10 @@
         :value="category.category"
       >
         <UiAccordionTrigger>
-          <span>{{ index + 1 + ". " + category.name.replaceAll("-", " ") }}</span>
+          <span class="flex items-center gap-2 w-full">
+            {{ index + 1 + ". " + category.name.replaceAll("-", " ") }}
+            <span class="text-muted-foreground text-sm"> ({{ category.components.length }}) </span>
+          </span>
         </UiAccordionTrigger>
         <UiAccordionContent>
           <ClientOnly>
@@ -107,6 +110,8 @@ const isDark = computed(() => useColorMode().value == "dark");
 const gradientColor = computed(() => (isDark.value ? "#363636" : "#C9C9C9"));
 const openCategories = ref<Array<string>>([]);
 
+const { locale } = useI18nDocs();
+
 onMounted(() => {
   groupByCategory();
 });
@@ -118,6 +123,8 @@ async function groupByCategory() {
 
   data.forEach((item) => {
     if (item._dir === "") return;
+    if (locale.value === "en" && !item._path.startsWith("/components")) return;
+    if (locale.value !== "en" && item._path.startsWith("/components")) return;
 
     const category = item._dir || "root";
     if (!categoryMap[category]) {
