@@ -25,6 +25,7 @@ const DEPENDENCIES = new Map<string, string[]>([
   ["motion-v", []],
   ["@number-flow/vue", []],
   ["gsap", []],
+  ["ogl", []],
 ]);
 
 // This map is used when a basic Inspira UI component internally uses another Inspira component.
