@@ -24,6 +24,7 @@
     "@nuxt/scripts": "0.11.8",
     "@splinetool/runtime": "^1.10.32",
     "@types/lodash.template": "^4.5.3",
+    "@uiw/color-convert": "^2.7.3",
     "@vueuse/core": "^13.5.0",
     "canvas-confetti": "^1.9.3",
     "class-variance-authority": "^0.7.1",
