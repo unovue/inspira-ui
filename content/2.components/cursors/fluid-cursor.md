@@ -1,9 +1,6 @@
 ---
 title: Fluid Cursor
 description: A GPU-accelerated animated cursor trail that simulates fluid motion.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="FluidCursorDemo" type="examples" id="fluid-cursor"}
