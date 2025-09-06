@@ -17,12 +17,18 @@ function handleIncrement(prev: number) {
   return prev === 100 ? 0 : prev + 10;
 }
 
+let interval: ReturnType<typeof setInterval>;
+
 onMounted(() => {
   value.value = handleIncrement(value.value);
-  const interval = setInterval(() => {
+  interval = setInterval(() => {
     value.value = handleIncrement(value.value);
   }, 2000);
+});
 
-  onBeforeUnmount(() => clearInterval(interval));
+onBeforeUnmount(() => {
+  if (interval) {
+    clearInterval(interval);
+  }
 });
 </script>
