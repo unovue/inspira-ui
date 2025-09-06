@@ -15,6 +15,7 @@ description: 一个强大且灵活的组件，可在浏览器中渲染来自 Sha
 | `hue`        | `number`             | `0`       | 调整着色器输出的色相（Hue）。           |
 | `saturation` | `number`             | `1`       | 调整着色器输出的饱和度（Saturation）。  |
 | `brightness` | `number`             | `1`       | 调整着色器输出的亮度（Brightness）。    |
+| `speed`      | `number`             | `1`       |                                         |
 | `class`      | `string`             | `-`       | 应用于容器的自定义类名。                |
 
 ## 安装

@@ -15,6 +15,7 @@ description: A powerful and flexible component to render interactive GLSL shader
 | `hue`        | `number`             | `0`       | Adjust the hue of the shader output.                      |
 | `saturation` | `number`             | `1`       | Adjust the saturation of the shader output.               |
 | `brightness` | `number`             | `1`       | Adjust the brightness of the shader output.               |
+| `speed`      | `number`             | `1`       | Adjust the speed of the shader output.                    |
 | `class`      | `string`             | `-`       | Custom classes to apply to the container.                 |
 
 ## Installation
