@@ -17,6 +17,8 @@ interface Props {
   saturation?: number;
   brightness?: number;
   speed?: number;
+  mouseSensitivity?: number;
+  damping?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -25,6 +27,8 @@ const props = withDefaults(defineProps<Props>(), {
   saturation: 1,
   brightness: 1,
   speed: 1,
+  mouseSensitivity: 1,
+  damping: 0,
 });
 
 const containerRef = ref<HTMLElement>();
@@ -51,6 +55,9 @@ onMounted(() => {
   });
 
   shader.setSpeed(props.speed);
+
+  shader.setMouseSensitivity(props.mouseSensitivity);
+  shader.setMouseDamping(props.damping);
 
   shader.play();
 });
@@ -91,6 +98,24 @@ watch(
   (v) => {
     if (v !== undefined && shader) {
       shader.setSpeed(v);
+    }
+  },
+);
+
+watch(
+  () => props.mouseSensitivity,
+  (v) => {
+    if (v !== undefined && shader) {
+      shader.setMouseSensitivity(v);
+    }
+  },
+);
+
+watch(
+  () => props.damping,
+  (v) => {
+    if (v !== undefined && shader) {
+      shader.setMouseDamping(v);
     }
   },
 );

@@ -32,6 +32,8 @@ const DEPENDENCIES = new Map<string, string[]>([
 // This map is used when a basic Inspira UI component internally uses another Inspira component.
 const COMPONENT_DEPENDENCIES = new Map<string, string[]>([
   ["scroll-island", ["animated-circular-progressbar"]],
+  ["bg-silk", ["shader-toy"]],
+  ["bg-stractium", ["shader-toy"]],
 ]);
 
 const REGISTRY_URL = process.env.REGISTRY_URL ?? "https://inspira-ui.com/docs/r";

@@ -43,6 +43,9 @@ export class InspiraShaderToy {
   private iMouse: MouseState = { x: 0, y: 0, clickX: 0, clickY: 0 };
   private hsv: HSVControls = { hue: 0, saturation: 1, brightness: 1 };
   private _mouseMode: MouseMode = "click";
+  private _mouseSensitivity: number = 1.0; // New: mouse sensitivity multiplier
+  private _mouseDamping: number = 0.9; // New: mouse movement damping factor (0-1)
+
   private _speed: number = 1; // Speed multiplier
 
   // Shader source
@@ -177,7 +180,6 @@ export class InspiraShaderToy {
     const canvas = this.renderer.gl.canvas;
     let isMouseDown = false;
 
-    // eslint-disable-next-line func-style
     const getScaledMousePos = (event: MouseEvent | Touch) => {
       const rect = canvas.getBoundingClientRect();
       const dpr = window.devicePixelRatio;
@@ -186,19 +188,19 @@ export class InspiraShaderToy {
       const x = event.clientX - rect.left;
       const y = event.clientY - rect.top;
 
-      // Scale by DPR and flip Y-axis
+      // Scale by DPR, apply sensitivity, and flip Y-axis
       return {
-        x: x * dpr,
-        y: canvas.height - y * dpr, // Flip Y to match GLSL coordinates
+        x: x * dpr * this._mouseSensitivity,
+        y: (canvas.height - y * dpr) * this._mouseSensitivity, // Flip Y to match GLSL coordinates
       };
     };
 
     canvas.addEventListener("mousemove", (event: MouseEvent) => {
       const { x: newX, y: newY } = getScaledMousePos(event);
 
-      // Smoothing/damping
-      this.iMouse.x = this.iMouse.x * 0.9 + newX * 0.1;
-      this.iMouse.y = this.iMouse.y * 0.9 + newY * 0.1;
+      // Apply damping with configurable factor
+      this.iMouse.x = this.iMouse.x * this._mouseDamping + newX * (1 - this._mouseDamping);
+      this.iMouse.y = this.iMouse.y * this._mouseDamping + newY * (1 - this._mouseDamping);
 
       // Handle click coordinates based on mode
       if (this._mouseMode === "hover" && !isMouseDown) {
@@ -529,5 +531,23 @@ export class InspiraShaderToy {
 
   public set speed(val: number) {
     this.setSpeed(val);
+  }
+
+  // New mouse sensitivity methods
+  public setMouseSensitivity(sensitivity: number): void {
+    this._mouseSensitivity = Math.max(0.1, Math.min(5.0, sensitivity)); // Clamp between 0.1 and 5.0
+  }
+
+  public getMouseSensitivity(): number {
+    return this._mouseSensitivity;
+  }
+
+  // New mouse damping methods
+  public setMouseDamping(damping: number): void {
+    this._mouseDamping = Math.max(0, Math.min(0.99, damping)); // Clamp between 0 and 0.99
+  }
+
+  public getMouseDamping(): number {
+    return this._mouseDamping;
   }
 }
