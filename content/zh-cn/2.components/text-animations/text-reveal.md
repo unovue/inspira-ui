@@ -1,9 +1,6 @@
 ---
 title: Text Reveal
 description: Animate text line-by-line using GSAP's SplitText for smooth word or line entrance effects.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="TextRevealDemo" type="examples" id="text-reveal"}

@@ -1,9 +1,6 @@
 ---
 title: Infinite Grid
 description: A high-performance, interactive 3D infinite grid component built with OGL as seen on phantom.land
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="InfiniteGridDemo" type="examples" id="infinite-grid"}

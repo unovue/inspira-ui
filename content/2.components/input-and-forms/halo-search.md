@@ -1,9 +1,6 @@
 ---
 title: Halo Search
 description: A futuristic search input component featuring multiple glowing rings and subtle animated halos for a vibrant, immersive UI experience.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="HaloSearchDemo" type="examples" id="halo-search"}

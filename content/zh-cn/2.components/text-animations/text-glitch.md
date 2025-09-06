@@ -1,9 +1,6 @@
 ---
 title: Text Glitch
 description: Creates a vibrant glitch effect on text with customizable speed, shadow colors, and optional hover-triggered animation.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="TextGlitchDemo" type="examples" id="text-glitch"}

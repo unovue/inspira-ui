@@ -1,9 +1,6 @@
 ---
 title: Halo 搜索
 description: 一款未来感十足的搜索输入组件，拥有多重发光环与细腻的动态光晕，为界面带来炫彩、沉浸式体验。
-navBadges:
-  - value: 新品
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="HaloSearchDemo" type="examples" id="halo-search"}

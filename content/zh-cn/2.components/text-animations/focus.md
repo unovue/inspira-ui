@@ -1,9 +1,6 @@
 ---
 title: Focus
 description: Highlight words in a sentence with a dynamic blurred effect and animated focus frame. Supports auto-cycling or manual hover focus mode.
-navBadges:
-  - value: New
-    type: lime
 ---
 
 ::ComponentLoader{label="Preview" componentName="FocusDemo" type="examples" id="focus"}
