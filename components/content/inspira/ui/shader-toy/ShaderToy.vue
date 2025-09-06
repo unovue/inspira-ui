@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, type HTMLAttributes } from "vue";
+import { ref, onMounted, onUnmounted, watch, type HTMLAttributes } from "vue";
 import { InspiraShaderToy, type MouseMode } from "./InspiraShaderToy";
 
 interface Props {
@@ -16,6 +16,7 @@ interface Props {
   hue?: number;
   saturation?: number;
   brightness?: number;
+  speed?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -23,6 +24,7 @@ const props = withDefaults(defineProps<Props>(), {
   hue: 0,
   saturation: 1,
   brightness: 1,
+  speed: 1,
 });
 
 const containerRef = ref<HTMLElement>();
@@ -33,15 +35,22 @@ onMounted(() => {
 
   shader = new InspiraShaderToy(containerRef.value, props.mouseMode);
 
-  shader.setShader({
+  const success = shader.setShader({
     source: props.shaderCode,
   });
+
+  if (!success) {
+    console.error("Failed to compile shader");
+    return;
+  }
 
   shader.setHSV({
     hue: props.hue,
     saturation: props.saturation,
     brightness: props.brightness,
   });
+
+  shader.setSpeed(props.speed);
 
   shader.play();
 });
@@ -53,8 +62,8 @@ onUnmounted(() => {
 watch(
   () => props.hue,
   (v) => {
-    if (v) {
-      shader?.setHue(v);
+    if (v !== undefined && shader) {
+      shader.setHue(v);
     }
   },
 );
@@ -62,8 +71,8 @@ watch(
 watch(
   () => props.saturation,
   (v) => {
-    if (v) {
-      shader?.setSaturation(v);
+    if (v !== undefined && shader) {
+      shader.setSaturation(v);
     }
   },
 );
@@ -71,8 +80,17 @@ watch(
 watch(
   () => props.brightness,
   (v) => {
-    if (v) {
-      shader?.setBrightness(v);
+    if (v !== undefined && shader) {
+      shader.setBrightness(v);
+    }
+  },
+);
+
+watch(
+  () => props.speed,
+  (v) => {
+    if (v !== undefined && shader) {
+      shader.setSpeed(v);
     }
   },
 );

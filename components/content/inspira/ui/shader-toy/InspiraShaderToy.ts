@@ -43,6 +43,7 @@ export class InspiraShaderToy {
   private iMouse: MouseState = { x: 0, y: 0, clickX: 0, clickY: 0 };
   private hsv: HSVControls = { hue: 0, saturation: 1, brightness: 1 };
   private _mouseMode: MouseMode = "click";
+  private _speed: number = 1; // Speed multiplier
 
   // Shader source
   private shaderSource: string = "";
@@ -72,6 +73,7 @@ export class InspiraShaderToy {
     uniform vec4      iMouse;          // mouse pixel coords. xy: current, zw: click
     uniform vec4      iDate;           // (year, month, day, unixtime in seconds)
     uniform vec3      iHSV;            // HSV controls (hue, saturation, brightness)
+    uniform float     iSpeed;          // speed multiplier
     
     out vec4 fragColor;
     
@@ -307,6 +309,7 @@ export class InspiraShaderToy {
           iMouse: { value: [0, 0, 0, 0] },
           iDate: { value: [0, 0, 0, 0] },
           iHSV: { value: [this.hsv.hue, this.hsv.saturation, this.hsv.brightness] },
+          iSpeed: { value: this._speed },
         },
       });
 
@@ -324,6 +327,11 @@ export class InspiraShaderToy {
   }
 
   private draw(): void {
+    if (!this.program || !this.mesh) {
+      console.warn("Program or mesh not initialized");
+      return;
+    }
+
     const now = this.isPlaying ? Date.now() : this.prevDrawTime;
 
     // Frame rate limiting
@@ -346,8 +354,8 @@ export class InspiraShaderToy {
       this.onDrawCallback();
     }
 
-    const iTimeDelta = (now - this.prevDrawTime) * 0.001;
-    const iTime = (now - this.firstDrawTime) * 0.001;
+    const iTimeDelta = (now - this.prevDrawTime) * 0.001 * this._speed;
+    const iTime = (now - this.firstDrawTime) * 0.001 * this._speed;
     const iDate = [date.getFullYear(), date.getMonth(), date.getDate(), date.getTime() * 0.001];
 
     if (this.program && this.mesh) {
@@ -369,6 +377,7 @@ export class InspiraShaderToy {
       ];
       this.program.uniforms.iDate.value = iDate;
       this.program.uniforms.iHSV.value = [this.hsv.hue, this.hsv.saturation, this.hsv.brightness];
+      this.program.uniforms.iSpeed.value = this._speed;
 
       // Render
       this.renderer.render({ scene: this.mesh, camera: this.camera });
@@ -439,6 +448,19 @@ export class InspiraShaderToy {
   public getHSV(): HSVControls {
     return { ...this.hsv };
   }
+  // New speed methods
+  public setSpeed(val: number): void {
+    this._speed = Math.max(0, val);
+
+    // Update immediately if not playing
+    if (!this.isPlaying && this.program && this.mesh) {
+      this.draw();
+    }
+  }
+
+  public getSpeed(): number {
+    return this._speed;
+  }
 
   public setFrameRate(fps: number): void {
     this.targetFPS = Math.max(1, Math.min(60, fps));
@@ -454,7 +476,7 @@ export class InspiraShaderToy {
   }
 
   public time(): number {
-    return (this.prevDrawTime - this.firstDrawTime) * 0.001;
+    return (this.prevDrawTime - this.firstDrawTime) * 0.001 * this._speed;
   }
 
   public isPlayingState(): boolean {
@@ -493,7 +515,7 @@ export class InspiraShaderToy {
     }
   }
 
-  // Getter Setter
+  // Getters and Setters
   public get mouseMode(): MouseMode {
     return this._mouseMode;
   }
@@ -501,34 +523,11 @@ export class InspiraShaderToy {
   public set mouseMode(val: MouseMode) {
     this._mouseMode = val;
   }
+  public get speed(): number {
+    return this._speed;
+  }
+
+  public set speed(val: number) {
+    this.setSpeed(val);
+  }
 }
-
-// Example usage:
-/*
-const container = document.getElementById('shader-container');
-const renderer = new SimpleShaderRenderer(container, 'click', 60);
-
-// Set a shader
-renderer.setShader({
-  source: `
-    void mainImage(out vec4 fragColor, in vec2 fragCoord) {
-      vec2 uv = fragCoord / iResolution.xy;
-      vec3 col = 0.5 + 0.5 * cos(iTime + uv.xyx + vec3(0, 2, 4));
-      fragColor = vec4(col, 1.0);
-    }
-  `
-});
-
-// Adjust HSV in real-time
-renderer.setHSV({ 
-  hue: 30,        // Shift hue by 30 degrees
-  saturation: 0.8, // Reduce saturation to 80%
-  brightness: 0.9  // Reduce brightness to 90%
-});
-
-// Change frame rate
-renderer.setFrameRate(30);
-
-// Start rendering
-renderer.play();
-*/
