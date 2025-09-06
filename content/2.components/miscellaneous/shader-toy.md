@@ -12,6 +12,9 @@ description: A powerful and flexible component to render interactive GLSL shader
 | ------------ | -------------------- | --------- | --------------------------------------------------------- |
 | `shaderCode` | `string`             | `-`       | GLSL fragment shader source code from ShaderToy.          |
 | `mouseMode`  | `'click' \| 'hover'` | `'click'` | Mouse tracking mode: either on click or continuous hover. |
+| `hue`        | `number`             | `0`       | Adjust the hue of the shader output.                      |
+| `saturation` | `number`             | `1`       | Adjust the saturation of the shader output.               |
+| `brightness` | `number`             | `1`       | Adjust the brightness of the shader output.               |
 | `class`      | `string`             | `-`       | Custom classes to apply to the container.                 |
 
 ## Installation
@@ -39,16 +42,17 @@ Copy and paste the following code:
 
 ## Features
 
-- **Shadertoy-Compatible**: Supports Shadertoy-style `mainImage`, `iTime`, `iResolution`, and `iMouse` variables.
+- **Shadertoy-Compatible**: Supports Shadertoy-style `mainImage`, `iTime`, `iResolution`, `iMouse`, and more.
 - **GLSL Shader Rendering**: Render full-featured ShaderToy-like fragment shaders.
 - **iMouse Support**: Interactive shaders with real-time mouse input (click or hover).
-- **iDate, iTime, iResolution**: Full compatibility with ShaderToy uniform standards.
-- **Resize Support**: Automatically adjusts canvas size with container.
+- **HSV Color Control**: Dynamically adjust shader hue, saturation, and brightness.
+- **Responsive Design**: Automatically adjusts canvas size with container resizing.
 - **Runtime Control**: Play, pause, and reset shaders dynamically.
 
 ## Notes
 
 - Converts and wraps Shadertoy-style shaders to work in a WebGL2 environment.
+- Color control (`hue`, `saturation`, `brightness`) is applied as a post-processing step to simulate HSV adjustments.
 
 ## Credits
 
