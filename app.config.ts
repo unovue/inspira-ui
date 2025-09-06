@@ -140,6 +140,7 @@ export default defineAppConfig({
       useLevel: true,
       collapse: false,
       folderStyle: "tree",
+      levelStyle: "aside",
     },
     main: {
       breadCrumb: true,
@@ -167,7 +168,7 @@ export default defineAppConfig({
     toc: {
       enable: true,
       title: $t("toc.title"),
-      enableInHomepage: true,
+      enableInHomepage: false,
       carbonAds: {
         enable: true,
         code: "CW7DEK37",
