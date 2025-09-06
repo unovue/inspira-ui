@@ -1,11 +1,7 @@
-import { Renderer, Camera, Transform, Geometry, Program, Mesh, RenderTarget, Texture } from "ogl";
+import { Renderer, Camera, Transform, Geometry, Program, Mesh } from "ogl";
 
 export interface ShaderConfig {
-  source?: string;
-  iChannel0?: string;
-  iChannel1?: string;
-  iChannel2?: string;
-  iChannel3?: string;
+  source: string;
 }
 
 export interface MouseState {
@@ -15,20 +11,29 @@ export interface MouseState {
   clickY: number;
 }
 
-export type MouseMode = "click" | "hover";
+export interface HSVControls {
+  hue: number; // 0-360
+  saturation: number; // 0-1
+  brightness: number; // 0-1
+}
 
-export type BufferKey = "A" | "B" | "C" | "D" | "Image";
+export type MouseMode = "click" | "hover";
 
 export class InspiraShaderToy {
   private renderer: Renderer;
   private camera: Camera;
   private scene: Transform;
   private geometry: Geometry;
+  private program: Program | null = null;
+  private mesh: Mesh | null = null;
 
   // Timing
   private isPlaying: boolean = false;
   private firstDrawTime: number = 0;
   private prevDrawTime: number = 0;
+  private targetFPS: number = 60;
+  private frameInterval: number = 1000 / 60;
+  private lastFrameTime: number = 0;
 
   // Callback
   private onDrawCallback?: () => void;
@@ -36,77 +41,91 @@ export class InspiraShaderToy {
   // Uniforms
   private iFrame: number = 0;
   private iMouse: MouseState = { x: 0, y: 0, clickX: 0, clickY: 0 };
-
+  private hsv: HSVControls = { hue: 0, saturation: 1, brightness: 1 };
   private _mouseMode: MouseMode = "click";
 
-  // Shader common source
-  private common: string = "";
+  // Shader source
+  private shaderSource: string = "";
 
-  // Render passes variables
-  private sourcecode: Record<BufferKey, string> = {} as Record<BufferKey, string>;
-  private ichannels: Record<BufferKey, Record<number, string>> = {} as Record<
-    BufferKey,
-    Record<number, string>
-  >;
-  private renderTargets: Record<Exclude<BufferKey, "Image">, [RenderTarget, RenderTarget]> =
-    {} as Record<Exclude<BufferKey, "Image">, [RenderTarget, RenderTarget]>;
-  private programs: Record<BufferKey, Program | null> = {} as Record<BufferKey, Program | null>;
-  private meshes: Record<BufferKey, Mesh | null> = {} as Record<BufferKey, Mesh | null>;
-  private flip: Record<Exclude<BufferKey, "Image">, boolean> = {} as Record<
-    Exclude<BufferKey, "Image">,
-    boolean
-  >;
-  private textures: Record<string, Texture> = {};
-
-  private readonly hdr = `#version 300 es
+  private readonly vertexShader = `#version 300 es
     #ifdef GL_ES
     precision highp float;
     precision highp int;
-    precision mediump sampler3D;
-    #endif
-    #define texture2D texture
-    uniform vec3      iResolution;           // viewport resolution (in pixels)
-    uniform float     iTime;                 // shader playback time (in seconds)
-    uniform float     iTimeDelta;            // render time (in seconds)
-    uniform float     iFrameRate;            // shader frame rate
-    uniform int       iFrame;                // shader playback frame
-    uniform float     iChannelTime[4];       // channel playback time (in seconds)
-    uniform vec3      iChannelResolution[4]; // channel resolution (in pixels)
-    uniform vec4      iMouse;                // mouse pixel coords. xy: current (if MLB down), zw: click
-    uniform sampler2D iChannel0;             // input channel 0
-    uniform sampler2D iChannel1;             // input channel 1
-    uniform sampler2D iChannel2;             // input channel 2
-    uniform sampler2D iChannel3;             // input channel 3
-    uniform vec4      iDate;                 // (year, month, day, unixtime in seconds)
-    uniform float     iSampleRate;           // sound sample rate (i.e., 44100)
-    out vec4          frag_out_color;
-    void mainImage( out vec4 c, in vec2 f );
-    void main( void )
-    {
-        vec4 color = vec4(0.0,0.0,0.0,0.0);
-        mainImage( color, gl_FragCoord.xy );
-        frag_out_color = vec4(color);
-    }
-    `;
-
-  private readonly basicVertexShader = `#version 300 es
-    #ifdef GL_ES
-    precision highp float;
-    precision highp int;
-    precision mediump sampler3D;
     #endif
     in vec2 position;
     void main() {
         gl_Position = vec4(position, 0.0, 1.0);
     }
-    `;
+  `;
+
+  private readonly fragmentShaderHeader = `#version 300 es
+    #ifdef GL_ES
+    precision highp float;
+    precision highp int;
+    #endif
+    
+    uniform vec3      iResolution;     // viewport resolution (in pixels)
+    uniform float     iTime;           // shader playback time (in seconds)
+    uniform float     iTimeDelta;      // render time (in seconds)
+    uniform float     iFrameRate;      // shader frame rate
+    uniform int       iFrame;          // shader playback frame
+    uniform vec4      iMouse;          // mouse pixel coords. xy: current, zw: click
+    uniform vec4      iDate;           // (year, month, day, unixtime in seconds)
+    uniform vec3      iHSV;            // HSV controls (hue, saturation, brightness)
+    
+    out vec4 fragColor;
+    
+    // HSV to RGB conversion
+    vec3 hsv2rgb(vec3 c) {
+        vec4 K = vec4(1.0, 2.0 / 3.0, 1.0 / 3.0, 3.0);
+        vec3 p = abs(fract(c.xxx + K.xyz) * 6.0 - K.www);
+        return c.z * mix(K.xxx, clamp(p - K.xxx, 0.0, 1.0), c.y);
+    }
+    
+    // RGB to HSV conversion
+    vec3 rgb2hsv(vec3 c) {
+        vec4 K = vec4(0.0, -1.0 / 3.0, 2.0 / 3.0, -1.0);
+        vec4 p = mix(vec4(c.bg, K.wz), vec4(c.gb, K.xy), step(c.b, c.g));
+        vec4 q = mix(vec4(p.xyw, c.r), vec4(c.r, p.yzx), step(p.x, c.r));
+        float d = q.x - min(q.w, q.y);
+        float e = 1.0e-10;
+        return vec3(abs(q.z + (q.w - q.y) / (6.0 * d + e)), d / (q.x + e), q.x);
+    }
+    
+    // Apply HSV adjustments
+    vec3 applyHSV(vec3 color, vec3 hsvAdjust) {
+        vec3 hsv = rgb2hsv(color);
+        hsv.x = fract(hsv.x + hsvAdjust.x / 360.0);
+        hsv.y = clamp(hsv.y * hsvAdjust.y, 0.0, 1.0);
+        hsv.z = clamp(hsv.z * hsvAdjust.z, 0.0, 1.0);
+        return hsv2rgb(hsv);
+    }
+    
+    void mainImage(out vec4 c, in vec2 f);
+    
+    void main() {
+        vec4 color = vec4(0.0, 0.0, 0.0, 1.0);
+        mainImage(color, gl_FragCoord.xy);
+        
+        // Apply HSV adjustments if not default
+        if (iHSV.x != 0.0 || iHSV.y != 1.0 || iHSV.z != 1.0) {
+            color.rgb = applyHSV(color.rgb, iHSV);
+        }
+        
+        fragColor = color;
+    }
+  `;
 
   constructor(
     private container: HTMLElement,
     mouseMode?: MouseMode,
+    fps?: number,
   ) {
     if (mouseMode) {
       this._mouseMode = mouseMode;
+    }
+    if (fps) {
+      this.setFrameRate(fps);
     }
 
     // Create renderer with WebGL 2 context
@@ -138,54 +157,17 @@ export class InspiraShaderToy {
 
     // Setup geometry (full-screen quad)
     this.geometry = new Geometry(this.renderer.gl, {
-      position: { size: 2, data: new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1]) },
+      position: {
+        size: 2,
+        data: new Float32Array([-1, -1, 1, -1, -1, 1, 1, 1, -1, 1, 1, -1]),
+      },
     });
 
     this.setup();
   }
 
   private setup(): void {
-    // Initialize all buffer keys
-    (["A", "B", "C", "D", "Image"] as BufferKey[]).forEach((key) => {
-      this.sourcecode[key] = "";
-      this.ichannels[key] = {};
-      this.programs[key] = null;
-      this.meshes[key] = null;
-
-      if (key !== "Image") {
-        const bufferKey = key as Exclude<BufferKey, "Image">;
-        this.renderTargets[bufferKey] = [
-          new RenderTarget(this.renderer.gl, {
-            width: this.container.clientWidth,
-            height: this.container.clientHeight,
-            type: this.renderer.gl.FLOAT,
-            format: this.renderer.gl.RGBA,
-            internalFormat: (this.renderer.gl as WebGL2RenderingContext).RGBA32F,
-            minFilter: this.renderer.gl.LINEAR,
-            magFilter: this.renderer.gl.LINEAR,
-            wrapS: this.renderer.gl.CLAMP_TO_EDGE,
-            wrapT: this.renderer.gl.CLAMP_TO_EDGE,
-          }),
-          new RenderTarget(this.renderer.gl, {
-            width: this.container.clientWidth,
-            height: this.container.clientHeight,
-            type: this.renderer.gl.FLOAT,
-            format: this.renderer.gl.RGBA,
-            internalFormat: (this.renderer.gl as WebGL2RenderingContext).RGBA32F,
-            minFilter: this.renderer.gl.LINEAR,
-            magFilter: this.renderer.gl.LINEAR,
-            wrapS: this.renderer.gl.CLAMP_TO_EDGE,
-            wrapT: this.renderer.gl.CLAMP_TO_EDGE,
-          }),
-        ];
-        this.flip[bufferKey] = false;
-      }
-    });
-
-    // Setup mouse events
     this.setupMouseEvents();
-
-    // Setup resize handler
     this.setupResizeHandler();
   }
 
@@ -193,7 +175,8 @@ export class InspiraShaderToy {
     const canvas = this.renderer.gl.canvas;
     let isMouseDown = false;
 
-    function getScaledMousePos(event: MouseEvent) {
+    // eslint-disable-next-line func-style
+    const getScaledMousePos = (event: MouseEvent | Touch) => {
       const rect = canvas.getBoundingClientRect();
       const dpr = window.devicePixelRatio;
 
@@ -206,7 +189,7 @@ export class InspiraShaderToy {
         x: x * dpr,
         y: canvas.height - y * dpr, // Flip Y to match GLSL coordinates
       };
-    }
+    };
 
     canvas.addEventListener("mousemove", (event: MouseEvent) => {
       const { x: newX, y: newY } = getScaledMousePos(event);
@@ -243,7 +226,7 @@ export class InspiraShaderToy {
     canvas.addEventListener("touchmove", (event: TouchEvent) => {
       event.preventDefault();
       const touch = event.touches[0];
-      const { x: newX, y: newY } = getScaledMousePos(touch as unknown as MouseEvent);
+      const { x: newX, y: newY } = getScaledMousePos(touch);
 
       this.iMouse.x = newX;
       this.iMouse.y = newY;
@@ -258,7 +241,7 @@ export class InspiraShaderToy {
       event.preventDefault();
       isMouseDown = true;
       const touch = event.touches[0];
-      const { x: clickX, y: clickY } = getScaledMousePos(touch as unknown as MouseEvent);
+      const { x: clickX, y: clickY } = getScaledMousePos(touch);
 
       if (this._mouseMode === "click") {
         this.iMouse.clickX = clickX;
@@ -272,40 +255,43 @@ export class InspiraShaderToy {
   }
 
   private setupResizeHandler(): void {
-    if (this.container) {
-      const resizeObserver = new ResizeObserver(() => {
-        const width = this.container.clientWidth;
-        const height = this.container.clientHeight;
+    const resizeObserver = new ResizeObserver(() => {
+      const width = this.container.clientWidth;
+      const height = this.container.clientHeight;
 
-        // Update renderer size
-        this.renderer.setSize(width, height);
+      // Update renderer size
+      this.renderer.setSize(width, height);
 
-        // Update viewport
-        this.renderer.gl.viewport(0, 0, width * window.devicePixelRatio, height * devicePixelRatio);
+      // Update viewport
+      this.renderer.gl.viewport(
+        0,
+        0,
+        width * window.devicePixelRatio,
+        height * window.devicePixelRatio,
+      );
 
-        this.updateRenderTargets();
-      });
-
-      resizeObserver.observe(this.container);
-    }
-  }
-
-  private updateRenderTargets(): void {
-    (["A", "B", "C", "D"] as Exclude<BufferKey, "Image">[]).forEach((key) => {
-      this.renderTargets[key][0].setSize(this.container.clientWidth, this.container.clientHeight);
-      this.renderTargets[key][1].setSize(this.container.clientWidth, this.container.clientHeight);
+      // Update resolution uniform if program exists
+      if (this.program) {
+        this.program.uniforms.iResolution.value = [
+          width * window.devicePixelRatio,
+          height * window.devicePixelRatio,
+          window.devicePixelRatio,
+        ];
+      }
     });
+
+    resizeObserver.observe(this.container);
   }
 
-  private compileProgram(key: BufferKey): Program | null {
-    if (!this.sourcecode[key]) return null;
+  private compileProgram(): boolean {
+    if (!this.shaderSource) return false;
 
-    const source = this.hdr + this.common + this.sourcecode[key];
+    const fullFragmentShader = this.fragmentShaderHeader + this.shaderSource;
 
     try {
       const program = new Program(this.renderer.gl, {
-        vertex: this.basicVertexShader,
-        fragment: source,
+        vertex: this.vertexShader,
+        fragment: fullFragmentShader,
         uniforms: {
           iResolution: {
             value: [
@@ -316,56 +302,40 @@ export class InspiraShaderToy {
           },
           iTime: { value: 0 },
           iTimeDelta: { value: 0 },
-          iFrameRate: { value: 60 },
+          iFrameRate: { value: this.targetFPS },
           iFrame: { value: 0 },
-          iChannelTime: { value: [0, 0, 0, 0] },
-          iChannelResolution: { value: new Float32Array(12) },
-          iChannel0: { value: null },
-          iChannel1: { value: null },
-          iChannel2: { value: null },
-          iChannel3: { value: null },
           iMouse: { value: [0, 0, 0, 0] },
           iDate: { value: [0, 0, 0, 0] },
-          iSampleRate: { value: 44100 },
+          iHSV: { value: [this.hsv.hue, this.hsv.saturation, this.hsv.brightness] },
         },
       });
 
-      return program;
+      this.program = program;
+      this.mesh = new Mesh(this.renderer.gl, {
+        geometry: this.geometry,
+        program,
+      });
+
+      return true;
     } catch (error) {
-      console.error(`Failed to compile program for ${key}:`, error);
-      return null;
-    }
-  }
-
-  private setShader(config: ShaderConfig | null, key: BufferKey): void {
-    if (config) {
-      if (config.source) {
-        this.sourcecode[key] = config.source;
-        const program = this.compileProgram(key);
-        if (program) {
-          this.programs[key] = program;
-          this.meshes[key] = new Mesh(this.renderer.gl, { geometry: this.geometry, program });
-        } else {
-          console.error(`Failed to compile ${key}`);
-        }
-      }
-
-      for (let i = 0; i < 4; i++) {
-        const channelKey = `iChannel${i}` as keyof ShaderConfig;
-        const s = config[channelKey];
-        if (s === "A" || s === "B" || s === "C" || s === "D") {
-          this.ichannels[key][i] = s;
-        }
-      }
-    } else {
-      this.sourcecode[key] = "";
-      this.programs[key] = null;
-      this.meshes[key] = null;
+      console.error("Failed to compile shader:", error);
+      return false;
     }
   }
 
   private draw(): void {
     const now = this.isPlaying ? Date.now() : this.prevDrawTime;
+
+    // Frame rate limiting
+    if (this.isPlaying && this.targetFPS < 60) {
+      const elapsed = now - this.lastFrameTime;
+      if (elapsed < this.frameInterval) {
+        requestAnimationFrame(() => this.animate());
+        return;
+      }
+      this.lastFrameTime = now - (elapsed % this.frameInterval);
+    }
+
     const date = new Date(now);
 
     if (this.firstDrawTime === 0) {
@@ -380,83 +350,29 @@ export class InspiraShaderToy {
     const iTime = (now - this.firstDrawTime) * 0.001;
     const iDate = [date.getFullYear(), date.getMonth(), date.getDate(), date.getTime() * 0.001];
 
-    const iChannelTimes = [iTime, iTime, iTime, iTime];
-    const iChannelResolutions = new Float32Array([
-      this.container.clientWidth * window.devicePixelRatio,
-      this.container.clientHeight * window.devicePixelRatio,
-      window.devicePixelRatio,
-      this.container.clientWidth * window.devicePixelRatio,
-      this.container.clientHeight * window.devicePixelRatio,
-      window.devicePixelRatio,
-      this.container.clientWidth * window.devicePixelRatio,
-      this.container.clientHeight * window.devicePixelRatio,
-      window.devicePixelRatio,
-      this.container.clientWidth * window.devicePixelRatio,
-      this.container.clientHeight * window.devicePixelRatio,
-      window.devicePixelRatio,
-    ]);
+    if (this.program && this.mesh) {
+      // Update uniforms
+      this.program.uniforms.iResolution.value = [
+        this.container.clientWidth * window.devicePixelRatio,
+        this.container.clientHeight * window.devicePixelRatio,
+        window.devicePixelRatio,
+      ];
+      this.program.uniforms.iTime.value = iTime;
+      this.program.uniforms.iTimeDelta.value = iTimeDelta;
+      this.program.uniforms.iFrameRate.value = this.targetFPS;
+      this.program.uniforms.iFrame.value = this.iFrame;
+      this.program.uniforms.iMouse.value = [
+        this.iMouse.x,
+        this.iMouse.y,
+        this.iMouse.clickX,
+        this.iMouse.clickY,
+      ];
+      this.program.uniforms.iDate.value = iDate;
+      this.program.uniforms.iHSV.value = [this.hsv.hue, this.hsv.saturation, this.hsv.brightness];
 
-    (["A", "B", "C", "D", "Image"] as BufferKey[]).forEach((key) => {
-      const program = this.programs[key];
-      const mesh = this.meshes[key];
-
-      if (program && mesh) {
-        // Set render target
-        let target: RenderTarget | null = null;
-        if (key !== "Image") {
-          const bufferKey = key as Exclude<BufferKey, "Image">;
-          target = this.flip[bufferKey]
-            ? this.renderTargets[bufferKey][1]
-            : this.renderTargets[bufferKey][0];
-        }
-
-        // Set input textures
-        for (let i = 0; i < 4; i++) {
-          const chkey = this.ichannels[key][i];
-          if (chkey && chkey !== "Image") {
-            const bufferKey = chkey as Exclude<BufferKey, "Image">;
-            const texture = this.flip[bufferKey]
-              ? this.renderTargets[bufferKey][0].texture
-              : this.renderTargets[bufferKey][1].texture;
-            program.uniforms[`iChannel${i}`].value = texture;
-          }
-        }
-
-        // Update uniforms
-        program.uniforms.iResolution.value = [
-          this.container.clientWidth * window.devicePixelRatio,
-          this.container.clientHeight * window.devicePixelRatio,
-          window.devicePixelRatio,
-        ];
-        program.uniforms.iTime.value = iTime;
-        program.uniforms.iTimeDelta.value = iTimeDelta;
-        program.uniforms.iFrameRate.value = 60;
-        program.uniforms.iFrame.value = this.iFrame;
-        program.uniforms.iChannelTime.value = iChannelTimes;
-        program.uniforms.iChannelResolution.value = iChannelResolutions;
-        program.uniforms.iMouse.value = [
-          this.iMouse.x,
-          this.iMouse.y,
-          this.iMouse.clickX,
-          this.iMouse.clickY,
-        ];
-        program.uniforms.iDate.value = iDate;
-        program.uniforms.iSampleRate.value = 44100;
-
-        // Render
-        if (target) {
-          this.renderer.render({ scene: mesh, camera: this.camera, target });
-        } else {
-          this.renderer.render({ scene: mesh, camera: this.camera });
-        }
-
-        // Flip buffer
-        if (key !== "Image") {
-          const bufferKey = key as Exclude<BufferKey, "Image">;
-          this.flip[bufferKey] = !this.flip[bufferKey];
-        }
-      }
-    });
+      // Render
+      this.renderer.render({ scene: this.mesh, camera: this.camera });
+    }
 
     this.prevDrawTime = now;
     this.iFrame++;
@@ -470,45 +386,71 @@ export class InspiraShaderToy {
   };
 
   // Public methods
-  public setCommon(source?: string): void {
-    this.common = source || "";
-    (["A", "B", "C", "D", "Image"] as BufferKey[]).forEach((key) => {
-      if (this.programs[key]) {
-        const program = this.compileProgram(key);
-        if (program) {
-          this.programs[key] = program;
-          this.meshes[key] = new Mesh(this.renderer.gl, { geometry: this.geometry, program });
-        }
-      }
-    });
+  public setShader(config: ShaderConfig): boolean {
+    this.shaderSource = config.source;
+    const success = this.compileProgram();
+
+    // If playing, trigger a redraw
+    if (success && this.isPlaying) {
+      this.draw();
+    }
+
+    return success;
   }
 
-  public setBufferA(config: ShaderConfig | null): void {
-    this.setShader(config, "A");
+  public setHSV(hsv: Partial<HSVControls>): void {
+    if (hsv.hue !== undefined) this.hsv.hue = hsv.hue;
+    if (hsv.saturation !== undefined) this.hsv.saturation = hsv.saturation;
+    if (hsv.brightness !== undefined) this.hsv.brightness = hsv.brightness;
+
+    // Update immediately if not playing
+    if (!this.isPlaying && this.program && this.mesh) {
+      this.draw();
+    }
   }
 
-  public setBufferB(config: ShaderConfig | null): void {
-    this.setShader(config, "B");
+  public setHue(val: number) {
+    this.hsv.hue = val;
+
+    // Update immediately if not playing
+    if (!this.isPlaying && this.program && this.mesh) {
+      this.draw();
+    }
   }
 
-  public setBufferC(config: ShaderConfig | null): void {
-    this.setShader(config, "C");
+  public setSaturation(val: number) {
+    this.hsv.saturation = val;
+
+    // Update immediately if not playing
+    if (!this.isPlaying && this.program && this.mesh) {
+      this.draw();
+    }
   }
 
-  public setBufferD(config: ShaderConfig | null): void {
-    this.setShader(config, "D");
+  public setBrightness(val: number) {
+    this.hsv.brightness = val;
+
+    // Update immediately if not playing
+    if (!this.isPlaying && this.program && this.mesh) {
+      this.draw();
+    }
   }
 
-  public setImage(config: ShaderConfig | null): void {
-    this.setShader(config, "Image");
+  public getHSV(): HSVControls {
+    return { ...this.hsv };
+  }
+
+  public setFrameRate(fps: number): void {
+    this.targetFPS = Math.max(1, Math.min(60, fps));
+    this.frameInterval = 1000 / this.targetFPS;
+  }
+
+  public getFrameRate(): number {
+    return this.targetFPS;
   }
 
   public setOnDraw(callback: () => void): void {
     this.onDrawCallback = callback;
-  }
-
-  public addTexture(texture: Texture, key: string): void {
-    this.textures[key] = texture;
   }
 
   public time(): number {
@@ -523,6 +465,7 @@ export class InspiraShaderToy {
     const now = Date.now();
     this.firstDrawTime = now;
     this.prevDrawTime = now;
+    this.lastFrameTime = now;
     this.iFrame = 0;
     this.draw();
   }
@@ -538,12 +481,16 @@ export class InspiraShaderToy {
       const elapsed = this.prevDrawTime - this.firstDrawTime;
       this.firstDrawTime = now - elapsed;
       this.prevDrawTime = now;
+      this.lastFrameTime = now;
       this.animate();
     }
   }
 
   public dispose(): void {
     this.pause();
+    if (this.renderer.gl.canvas.parentElement) {
+      this.renderer.gl.canvas.parentElement.removeChild(this.renderer.gl.canvas);
+    }
   }
 
   // Getter Setter
@@ -555,3 +502,33 @@ export class InspiraShaderToy {
     this._mouseMode = val;
   }
 }
+
+// Example usage:
+/*
+const container = document.getElementById('shader-container');
+const renderer = new SimpleShaderRenderer(container, 'click', 60);
+
+// Set a shader
+renderer.setShader({
+  source: `
+    void mainImage(out vec4 fragColor, in vec2 fragCoord) {
+      vec2 uv = fragCoord / iResolution.xy;
+      vec3 col = 0.5 + 0.5 * cos(iTime + uv.xyx + vec3(0, 2, 4));
+      fragColor = vec4(col, 1.0);
+    }
+  `
+});
+
+// Adjust HSV in real-time
+renderer.setHSV({ 
+  hue: 30,        // Shift hue by 30 degrees
+  saturation: 0.8, // Reduce saturation to 80%
+  brightness: 0.9  // Reduce brightness to 90%
+});
+
+// Change frame rate
+renderer.setFrameRate(30);
+
+// Start rendering
+renderer.play();
+*/

@@ -7,16 +7,22 @@
 
 <script setup lang="ts">
 import { ref, onMounted, type HTMLAttributes } from "vue";
-import { InspiraShaderToy, type MouseMode, type ShaderConfig } from "./InspiraShaderToy";
+import { InspiraShaderToy, type MouseMode } from "./InspiraShaderToy";
 
-interface Props extends ShaderConfig {
+interface Props {
   mouseMode?: MouseMode;
   class?: HTMLAttributes["class"];
-  shaderCode?: string;
+  shaderCode: string;
+  hue?: number;
+  saturation?: number;
+  brightness?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   mouseMode: "click",
+  hue: 0,
+  saturation: 1,
+  brightness: 1,
 });
 
 const containerRef = ref<HTMLElement>();
@@ -27,8 +33,14 @@ onMounted(() => {
 
   shader = new InspiraShaderToy(containerRef.value, props.mouseMode);
 
-  shader.setImage({
+  shader.setShader({
     source: props.shaderCode,
+  });
+
+  shader.setHSV({
+    hue: props.hue,
+    saturation: props.saturation,
+    brightness: props.brightness,
   });
 
   shader.play();
@@ -37,6 +49,33 @@ onMounted(() => {
 onUnmounted(() => {
   shader?.dispose();
 });
+
+watch(
+  () => props.hue,
+  (v) => {
+    if (v) {
+      shader?.setHue(v);
+    }
+  },
+);
+
+watch(
+  () => props.saturation,
+  (v) => {
+    if (v) {
+      shader?.setSaturation(v);
+    }
+  },
+);
+
+watch(
+  () => props.brightness,
+  (v) => {
+    if (v) {
+      shader?.setBrightness(v);
+    }
+  },
+);
 </script>
 
 <style scoped>
