@@ -22,7 +22,7 @@ navBadges:
 
 ## Install using CLI
 
-::InstallationCli{componentId="neural-background"}
+::InstallationCli{componentId="bg-neural"}
 ::
 
 ## Install Manually
