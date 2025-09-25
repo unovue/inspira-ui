@@ -1,53 +1,53 @@
 ---
-title: Fluid Cursor
-description: A GPU-accelerated animated cursor trail that simulates fluid motion.
+title: 流体光标
+description: 一个模拟流体运动的GPU加速动画光标轨迹。
 ---
 
 ::ComponentLoader{label="Preview" componentName="FluidCursorDemo" type="examples" id="fluid-cursor"}
 ::
 
-## API
+## API 接口
 
-| Prop Name             | Type      | Default                  | Description                                                                        |
+| 属性名                 | 类型      | 默认值                    | 描述                                                                               |
 | --------------------- | --------- | ------------------------ | ---------------------------------------------------------------------------------- |
-| `simResolution`       | `number`  | `128`                    | Resolution for the simulation grid affecting fluid detail and performance.         |
-| `dyeResolution`       | `number`  | `1440`                   | Resolution for the fluid dye (color) texture.                                      |
-| `captureResolution`   | `number`  | `512`                    | Resolution for capturing input events.                                             |
-| `densityDissipation`  | `number`  | `3.5`                    | Rate at which color density dissipates over time.                                  |
-| `velocityDissipation` | `number`  | `2`                      | Rate at which velocity dissipates over time, affecting fluid momentum persistence. |
-| `pressure`            | `number`  | `0.1`                    | Pressure factor used in fluid physics calculations.                                |
-| `pressureIterations`  | `number`  | `20`                     | Number of iterations for pressure solver accuracy.                                 |
-| `curl`                | `number`  | `3`                      | Intensity of curl/vorticity effect to enhance swirling motions.                    |
-| `splatRadius`         | `number`  | `0.2`                    | Radius of the pointer's splat effect in the fluid.                                 |
-| `splatForce`          | `number`  | `6000`                   | Force applied by the pointer to the fluid on interaction.                          |
-| `shading`             | `boolean` | `true`                   | Enable or disable shading effects for depth and light on fluid colors.             |
-| `colorUpdateSpeed`    | `number`  | `10`                     | Speed at which pointer colors update dynamically.                                  |
-| `backColor`           | `object`  | `{ r: 0.5, g: 0, b: 0 }` | Background color of the fluid in RGB format.                                       |
-| `transparent`         | `boolean` | `true`                   | Whether the canvas background is transparent.                                      |
-| `class`               | `string`  | `undefined`              | Additional CSS classes for the outer container div.                                |
+| `simResolution`       | `number`  | `128`                    | 模拟网格的分辨率，影响流体细节和性能。                                                   |
+| `dyeResolution`       | `number`  | `1440`                   | 流体染料（颜色）纹理的分辨率。                                                          |
+| `captureResolution`   | `number`  | `512`                    | 捕获输入事件的分辨率。                                                                 |
+| `densityDissipation`  | `number`  | `3.5`                    | 颜色密度随时间消散的速率。                                                             |
+| `velocityDissipation` | `number`  | `2`                      | 速度随时间衰减的速率，影响流体动量保持性。                                                |
+| `pressure`            | `number`  | `0.1`                    | 流体物理计算中使用的压力系数。                                                          |
+| `pressureIterations`  | `number`  | `20`                     | 压力求解器精度的迭代次数。                                                              |
+| `curl`                | `number`  | `3`                      | 增强涡旋运动的涡量/旋度效应强度。                                                        |
+| `splatRadius`         | `number`  | `0.2`                    | 指针在流体中的溅射效果半径。                                                            |
+| `splatForce`          | `number`  | `6000`                   | 指针在交互时对流体施加的力。                                                            |
+| `shading`             | `boolean` | `true`                   | 启用或禁用流体颜色上深度和光照的阴影效果。                                                 |
+| `colorUpdateSpeed`    | `number`  | `10`                     | 指针颜色动态更新的速度。                                                                |
+| `backColor`           | `object`  | `{ r: 0.5, g: 0, b: 0 }` | 流体的背景颜色，以RGB格式表示。                                                          |
+| `transparent`         | `boolean` | `true`                   | 画布背景是否透明。                                                                     |
+| `class`               | `string`  | `undefined`              | 外部容器div的额外CSS类。                                                               |
 
-## Install using CLI
+## 使用CLI安装
 
 ::InstallationCli{componentId="fluid-cursor"}
 ::
 
-## Install Manually
+## 手动安装
 
 Copy and paste the following code:
 
 ::CodeViewer{filename="FluidCursor.vue" language="vue" componentName="FluidCursor" type="ui" id="fluid-cursor"}
 ::
 
-## Features
+## 特性
 
-- **GPU-powered fluid simulation**: Smooth and performant fluid dynamics using WebGL shaders.
-- **Pointer interaction**: Fluid responds dynamically to mouse and touch input with colorful splats.
-- **Customizable physics**: Adjustable simulation resolution, pressure, curl, and dissipation parameters.
-- **Shading effects**: Optional lighting/shading for enhanced 3D fluid appearance.
-- **Responsive canvas**: Automatically resizes and adapts to device pixel ratio for crisp visuals.
-- **Background control**: Support for transparent or solid colored backgrounds.
+- **基于GPU的流体模拟**：使用WebGL着色器实现平滑且性能优异的流体动力学。
+- **指针交互**：流体能够动态响应鼠标和触摸输入，产生五彩斑斓的溅射效果。
+- **自定义物理**：可调节模拟分辨率、压力、卷曲和耗散参数。
+- **阴影效果**：可选的照明/阴影，以增强3D流体外观。
+- **响应式画布**：自动调整大小并适应设备像素比，以获得清晰的视觉效果。
+- **背景控制**：支持透明或纯色背景。
 
-## Credits
+## 致谢
 
-- Inspired from [Fluid Cursor by Cursify](https://cursify.vercel.app/components/fluid-cursor)
-- Utilizes WebGL 1/2 context and custom GLSL shaders for fluid physics and rendering.
+- 灵感来自 [Fluid Cursor by Cursify](https://cursify.vercel.app/components/fluid-cursor)
+- 利用 WebGL 1/2 上下文和自定义 GLSL 着色器进行流体物理和渲染。
