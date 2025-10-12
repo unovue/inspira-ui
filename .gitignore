@@ -16,13 +16,22 @@ logs
 # Misc
 .DS_Store
 .fleet
-.idea/workspace.xml
+.idea
+.eslintcache
 
 # Local env files
 .env
 .env.*
 !.env.example
 
-# Registry files
-public/r
-__registry__
+# npm pack
+*.tgz
+
+# Temp files
+.tmp
+.profile
+*.0x
+
+#VSC
+.history
+.wrangler

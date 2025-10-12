@@ -1,7 +1,9 @@
-onlyBuiltDependencies:
-  - "@parcel/watcher"
-  - "@tailwindcss/oxide"
-  - esbuild
+ignoredBuiltDependencies:
+  - '@parcel/watcher'
   - sharp
-  - unrs-resolver
   - vue-demi
+
+onlyBuiltDependencies:
+  - '@tailwindcss/oxide'
+  - better-sqlite3
+  - esbuild

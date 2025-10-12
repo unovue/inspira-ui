@@ -1,3 +1,0 @@
-{
-  "*.{js,jsx,ts,vue,html,css}": ["pnpm format:fix", "pnpm lint:fix"]
-}
