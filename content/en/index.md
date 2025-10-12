@@ -1,123 +1,53 @@
 ---
-seo:
-  title: Write beautiful docs with Markdown
-  description: Ship fast, flexible, and SEO-optimized documentation with beautiful
-    design out of the box. Docus brings together the best of the Nuxt ecosystem.
-    Powered by Nuxt UI.
+title: Home
+description: Built beautiful websites using Nuxt & Vue
+icon: "lucide:home"
 ---
 
-::u-page-hero
-#title
-Write beautiful docs with Markdown
+# Welcome to Inspira UI
 
-#description
-Ship fast, flexible, and SEO-optimized documentation with beautiful design out of the box.
+Build beautiful websites using Nuxt & Vue.
 
-Docus brings the best of the Nuxt ecosystem into one CLI.
+---
 
-#links
-  :::u-button
-  ---
-  color: neutral
-  size: xl
-  to: /en/getting-started/installation
-  trailing-icon: i-lucide-arrow-right
-  ---
-  Get started
-  :::
+Inspira UI is a collection of reusable, animated components powered by [TailwindCSS](https://tailwindcss.com/), [motion-v](https://motion.dev/docs/vue), [gsap](https://gsap.com/) & [threejs](https://threejs.org/) — crafted to help you ship faster and better.
 
-  :::u-button
-  ---
-  color: neutral
-  icon: simple-icons-github
-  size: xl
-  to: https://github.com/nuxt-content/docus
-  variant: outline
-  ---
-  Star on GitHub
-  :::
+Whether you're starting a new project or refining a current one, this is the place to begin.
+
+## Quick Links
+
+::card-group
+::card{ icon="lucide:rocket" title="Getting Started" description="Kick off your journey with installation, setup, and usage guides." to="/getting-started"}
+::
+::card{ icon="lucide:play" title="Installation" description="Explore different ways to install Inspira UI — via CLI, manual import, or copy-paste." to="/getting-started/installation"}
+::
+::card{ icon="lucide:box" title="Components" description="Browse the full list of components, each with clear documentation and beautiful previews." to="/components"}
+::
+::card{ icon="lucide:blocks" title="Blocks" description="Discover ready-made layout blocks you can mix and match to build complete sections and pages." to="/blocks"}
+::
 ::
 
-::u-page-section
-#title
-Shipped with many features
+## Join the community
 
-#features
-  :::u-page-feature
-  ---
-  icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://nuxt.com
-  ---
-  #title
-  Built with [Nuxt 4]{.text-primary}
-  
-  #description
-  Optimized by the most famous Vue framework. Docus gives you everything you need to build fast, performant, and SEO-friendly websites.
-  :::
+We're building this together. Come say hi, share feedback, or contribute!
 
-  :::u-page-feature
-  ---
-  icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://ui.nuxt.com/
-  ---
-  #title
-  Powered by [Nuxt UI]{.text-primary}
-  
-  #description
-  Beautiful out of the box, minimal by design but highly customizable. Docus leverages Nuxt UI to give you the best docs writing experience with zero boilerplate, just focus on your content.
-  :::
+- [**Discord**](https://discord.gg/Xbh5DwJRc9) – Chat with the community and get help
+- [**X (Formely Twitter)**](https://x.com/rahulv_dev) – Follow for updates and sneak peeks
+- [**Bluesky**](http://bsky.app/profile/inspira-ui.com) – For indie and alt-web conversations
+- [**GitHub**](https://github.com/unovue/inspira-ui) – Star the repo to support us! ★
 
-  :::u-page-feature
-  ---
-  icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://content.nuxt.com
-  ---
-  #title
-  Enhanced Markdown syntax by [Nuxt Content]{.text-primary}
-  
-  #description
-  The only thing you need to take care about is writing your content. Write your pages in Markdown and extend with MDC syntax to embed Nuxt UI or custom Vue components. Structure, routing, and rendering are handled for you.
-  :::
+## Support Us
 
-  :::u-page-feature
-  ---
-  icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://nuxt.com/docs/guide/directory-structure/app-config
-  ---
-  #title
-  Customize with [Nuxt App Config]{.text-primary}
-  
-  #description
-  Update colors, social links, header logos and component styles globally using the `app.config.ts`, no direct code modifications required.
-  :::
+Help us grow and keep Inspira UI thriving 💜 by [**becoming a sponsor**](https://github.com/sponsors/rahul-vashishtha).
 
-  :::u-page-feature
-  ---
-  icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://content.nuxt.com/studio
-  ---
-  #title
-  Collaborate on [Nuxt Studio]{.text-primary}
-  
-  #description
-  Write and manage your content visually, with zero Markdown knowledge required. Let your non technical colleagues collaborate on the documentation and integrate Vue components without code skills.
-  :::
+## Repo Stats
 
-  :::u-page-feature
-  ---
-  icon: i-simple-icons-nuxt
-  target: _blank
-  to: https://ui.nuxt.com/components/content-search
-  ---
-  #title
-  Built-in navigation and [full-text search]{.text-primary}
-  
-  #description
-  Only focus on ordering your content, Docus handles the search modal and auto-generates the side navigation for you.
-  :::
-::
+![Repo Stats](https://repobeats.axiom.co/api/embed/da99e5e9c8ddaaff68b7f57b56ae21d5e0ea2ed2.svg "Repobeats analytics image")
+
+## Thanks to all the contributors 🙏
+
+[![Contributors](https://contrib.rocks/image?repo=unovue/inspira-ui)](https://github.com/unovue/inspira-ui/graphs/contributors)
+
+---
+
+Made with ♥ by [Rahul Vashishtha](https://rahulv.dev) and the Vue community.

@@ -31,7 +31,7 @@ function slugify(str: string): string {
  * @returns An object with slug and title, or null if no configuration is found.
  */
 function parseDirYml(dir: string): DirConfig | null {
-  const dirConfigPath = join(dir, "__dir.yml");
+  const dirConfigPath = join(dir, "__navigation.yml");
   if (existsSync(dirConfigPath)) {
     const ymlContent = readFileSync(dirConfigPath, "utf-8");
     const yml = yaml.parse(ymlContent);
