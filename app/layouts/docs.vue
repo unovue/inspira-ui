@@ -1,11 +1,7 @@
-<script setup lang="ts">
-import AppHeaderNav from "~/components/common/app-header-nav/AppHeaderNav.vue";
-</script>
-
 <template>
   <UMain>
+    <CommonAppHeaderNav />
     <UContainer>
-      <AppHeaderNav />
       <UPage>
         <template #left>
           <UPageAside>

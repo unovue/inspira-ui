@@ -17,14 +17,7 @@ const items = computed(() =>
 </script>
 
 <template>
-  <USeparator class="hidden lg:flex" />
-
-  <UContainer class="hidden lg:flex items-center justify-between">
-    <UNavigationMenu
-      :items="items"
-      variant="pill"
-      highlight
-      class="-mx-2.5 -mb-px"
-    />
-  </UContainer>
+  <UHeader title="" class="lg:flex items-center justify-between hidden">
+    <UNavigationMenu :items="items" variant="pill" highlight />
+  </UHeader>
 </template>
