@@ -1,4 +1,10 @@
 export default defineNuxtConfig({
+  site: {
+    name: "Inspira UI: Craft beautiful web experience with Vue & Nuxt.",
+  },
+
+  extends: ["docus"],
+
   modules: ["@nuxtjs/i18n", "@nuxt/eslint"],
   i18n: {
     defaultLocale: "en",
@@ -6,10 +12,6 @@ export default defineNuxtConfig({
       {
         code: "en",
         name: "English",
-      },
-      {
-        code: "fr",
-        name: "Français",
       },
     ],
   },
