@@ -8,7 +8,7 @@ This is the i18n Docus starter template that provides everything you need to bui
 
 - 🌍 **Internationalization** - Native i18n support for multi-language docs
 - 🎨 **Beautiful Design** - Clean, modern documentation theme
-- 📱 **Responsive** - Mobile-first responsive design  
+- 📱 **Responsive** - Mobile-first responsive design
 - 🌙 **Dark Mode** - Built-in dark/light mode support
 - 🔍 **Search** - Full-text search functionality per language
 - 📝 **Markdown Enhanced** - Extended markdown with custom components
@@ -31,6 +31,7 @@ Your multilingual documentation site will be running at `http://localhost:3000`
 ## 🌍 Languages
 
 This starter comes pre-configured with:
+
 - 🇺🇸 **English** (`en`) - Default language
 - 🇫🇷 **Français** (`fr`) - French translation
 
@@ -110,4 +111,4 @@ The built files will be in the `.output` directory, ready for deployment to any 
 
 ## 📄 License
 
-[MIT License](https://opensource.org/licenses/MIT) 
+[MIT License](https://opensource.org/licenses/MIT)

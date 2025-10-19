@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "@nuxt/scripts",
+    "@vueuse/nuxt",
   ],
 
   i18n: {
@@ -23,4 +24,12 @@ export default defineNuxtConfig({
       },
     ],
   },
+
+  components: [
+    {
+      path: "~/components/",
+      global: true,
+      pathPrefix: false,
+    },
+  ],
 });

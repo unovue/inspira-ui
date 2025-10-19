@@ -1,11 +1,7 @@
 <script setup lang="ts">
-import type {
-  ContentNavigationItem,
-  Collections,
-  DocsEnCollectionItem,
-} from "@nuxt/content";
-import { kebabCase } from "scule";
+import type { Collections, ContentNavigationItem, DocsEnCollectionItem } from "@nuxt/content";
 import { findPageHeadline } from "@nuxt/content/utils";
+import { kebabCase } from "scule";
 import { addPrerenderPath } from "@/utils/prerender";
 
 const route = useRoute();
@@ -14,10 +10,7 @@ const appConfig = useAppConfig();
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
 
 const isLandingPage = computed(() => {
-  return (
-    (isEnabled.value ? `/${locale.value}` : "/") ===
-    route.path.replace(/\/$/, "")
-  );
+  return (isEnabled.value ? `/${locale.value}` : "/") === route.path.replace(/\/$/, "");
 });
 
 const pageType = isLandingPage.value ? "landing" : "docs";
@@ -27,16 +20,13 @@ definePageMeta({
   middleware: (to) => {
     // Match /en or /en/ (with or without trailing slash)
     const localeMatch = to.path.match(/^\/([a-z]{2})\/?$/);
-    const isLanding =
-      to.path === "/" || to.path === "//" || localeMatch !== null;
+    const isLanding = to.path === "/" || to.path === "//" || localeMatch !== null;
 
     setPageLayout(isLanding ? "default" : "docs");
   },
 });
 
-const collectionName = computed(() =>
-  isEnabled.value ? `${pageType}_${locale.value}` : pageType
-);
+const collectionName = computed(() => (isEnabled.value ? `${pageType}_${locale.value}` : pageType));
 
 const [{ data: page }, { data: surround }] = await Promise.all([
   useAsyncData(
@@ -44,16 +34,12 @@ const [{ data: page }, { data: surround }] = await Promise.all([
     () =>
       queryCollection(collectionName.value as keyof Collections)
         .path(route.path)
-        .first() as Promise<DocsEnCollectionItem>
+        .first() as Promise<DocsEnCollectionItem>,
   ),
   useAsyncData(`${kebabCase(route.path)}-surround`, () => {
-    return queryCollectionItemSurroundings(
-      collectionName.value as keyof Collections,
-      route.path,
-      {
-        fields: ["description"],
-      }
-    );
+    return queryCollectionItemSurroundings(collectionName.value as keyof Collections, route.path, {
+      fields: ["description"],
+    });
   }),
 ]);
 
@@ -82,9 +68,8 @@ const headline = ref(findPageHeadline(navigation?.value, page.value?.path));
 watch(
   () => navigation?.value,
   () => {
-    headline.value =
-      findPageHeadline(navigation?.value, page.value?.path) || headline.value;
-  }
+    headline.value = findPageHeadline(navigation?.value, page.value?.path) || headline.value;
+  },
 );
 
 defineOgImageComponent("Docs", {
@@ -134,10 +119,16 @@ const editLink = computed(() => {
     </UPageHeader>
 
     <UPageBody>
-      <ContentRenderer v-if="page" :value="page" />
+      <ContentRenderer
+        v-if="page"
+        :value="page"
+      />
 
       <USeparator>
-        <div v-if="github" class="flex items-center gap-2 text-sm text-muted">
+        <div
+          v-if="github"
+          class="text-muted flex items-center gap-2 text-sm"
+        >
           <UButton
             variant="link"
             color="neutral"
@@ -164,7 +155,10 @@ const editLink = computed(() => {
       <UContentSurround :surround="surround" />
     </UPageBody>
 
-    <template v-if="page?.body?.toc?.links?.length" #right>
+    <template
+      v-if="page?.body?.toc?.links?.length"
+      #right
+    >
       <UContentToc
         highlight
         :title="appConfig.toc?.title || t('docs.toc')"
@@ -178,7 +172,10 @@ const editLink = computed(() => {
   </UPage>
   <UPage v-else-if="page && isLandingPage">
     <UPageBody>
-      <ContentRenderer v-if="page" :value="page" />
+      <ContentRenderer
+        v-if="page"
+        :value="page"
+      />
     </UPageBody>
   </UPage>
 </template>

@@ -75,9 +75,9 @@ export type BookRadius = keyof typeof BOOK_RADIUS_MAP;
 export type BookShadowSize = keyof typeof BOOK_SHADOW_SIZE_MAP;
 
 export { default as Book } from "./Book.vue";
+export { default as BookDescription } from "./BookDescription.vue";
 export { default as BookHeader } from "./BookHeader.vue";
 export { default as BookTitle } from "./BookTitle.vue";
-export { default as BookDescription } from "./BookDescription.vue";
 ```
 
 ::

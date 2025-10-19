@@ -1,13 +1,8 @@
 ---
-title: Component Index
+title: All Component
 description: List of all the components provided by Inspira UI.
 navigation: false
 ---
 
-::NewComponentsMarquee
-::
-
-## All components
-
-::ComponentIndex
+::ComponentsList
 ::

@@ -30,7 +30,7 @@ Copy and paste the following code in the same folder
 :CodeViewerTab{filename="CardItem.vue" language="vue" componentName="CardItem" type="ui" id="card-3d"}
 
 ```ts [useMouseState.ts]
-import { ref, readonly } from "vue";
+import { readonly, ref } from "vue";
 
 export function useMouseState() {
   const isMouseEntered = ref(false);

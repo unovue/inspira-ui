@@ -1,6 +1,6 @@
 <template>
   <UMain>
-    <CommonAppHeaderNav />
+    <AppHeaderNav />
     <UContainer>
       <UPage>
         <template #left>

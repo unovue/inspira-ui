@@ -1,8 +1,6 @@
 import type { ContentNavigationItem } from "@nuxt/content";
 
 export function useNavigation(navigation?: Ref<ContentNavigationItem[]>) {
-  console.log(navigation?.value);
-
   const route = useRoute();
 
   const children = computed(() => {
@@ -26,9 +24,7 @@ export function useNavigation(navigation?: Ref<ContentNavigationItem[]>) {
   });
 
   const isFlatList = computed(() => {
-    return children.value.every(
-      (child) => !child.children || child.children.length === 0
-    );
+    return children.value.every((child) => !child.children || child.children.length === 0);
   });
 
   const nav = computed(() => {

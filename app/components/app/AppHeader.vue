@@ -14,7 +14,7 @@ const links = computed(() =>
           "aria-label": "GitHub",
         },
       ]
-    : []
+    : [],
 );
 </script>
 
@@ -39,13 +39,14 @@ const links = computed(() =>
           <LanguageSelect />
 
           <template #fallback>
-            <div
-              class="h-8 w-8 animate-pulse bg-neutral-200 dark:bg-neutral-800 rounded-md"
-            />
+            <div class="h-8 w-8 animate-pulse rounded-md bg-neutral-200 dark:bg-neutral-800" />
           </template>
         </ClientOnly>
 
-        <USeparator orientation="vertical" class="h-8" />
+        <USeparator
+          orientation="vertical"
+          class="h-8"
+        />
       </template>
 
       <UContentSearchButton class="lg:hidden" />
@@ -54,9 +55,7 @@ const links = computed(() =>
         <UColorModeButton />
 
         <template #fallback>
-          <div
-            class="h-8 w-8 animate-pulse bg-neutral-200 dark:bg-neutral-800 rounded-md"
-          />
+          <div class="h-8 w-8 animate-pulse rounded-md bg-neutral-200 dark:bg-neutral-800" />
         </template>
       </ClientOnly>
 
@@ -70,7 +69,11 @@ const links = computed(() =>
     </template>
 
     <template #toggle="{ open, toggle }">
-      <IconMenuToggle :open="open" class="lg:hidden" @click="toggle" />
+      <IconMenuToggle
+        :open="open"
+        class="lg:hidden"
+        @click="toggle"
+      />
     </template>
 
     <template #body>

@@ -7,5 +7,8 @@ const { nav } = useNavigation(navigation);
 </script>
 
 <template>
-  <UContentNavigation highlight :navigation="nav" />
+  <UContentNavigation
+    highlight
+    :navigation="nav"
+  />
 </template>
