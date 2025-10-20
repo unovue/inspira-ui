@@ -11,6 +11,8 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
   ],
 
+  css: ["~/assets/css/main.css"],
+
   i18n: {
     defaultLocale: "en",
     locales: [
