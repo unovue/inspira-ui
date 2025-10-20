@@ -1,6 +1,8 @@
 ---
 title: Blur Reveal
 description: A component to smoothly blur fade in content.
+category: Text Animation
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="BlurRevealDemo" type="examples"}

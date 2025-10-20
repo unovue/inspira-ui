@@ -1,6 +1,8 @@
 ---
 title: Safari Mockup
 description: An SVG mockup of the Safari browser.
+category: Device Mockup
+tags: [css, tailwind, device-mockup, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="SafariMockupDemo" type="examples" id="mockups"}

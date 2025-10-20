@@ -1,6 +1,8 @@
 ---
 title: Globe
 description: An interactive rotating globe component.
+category: Visualization
+tags: [css, tailwind, cobe, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="GlobeDemo" type="examples" id="globe"}

@@ -1,6 +1,8 @@
 ---
 title: File Tree
 description: A component used to showcase the folder and file structure of a directory.
+category: Visualization
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="FileTreeDemo" type="examples"}

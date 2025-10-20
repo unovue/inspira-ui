@@ -1,9 +1,9 @@
 ---
 title: Silk Background
 description: A soft, flowing shader-powered background inspired by silk fabric motion and texture, rendered using ShaderToy.
-navBadges:
-  - value: New
-    type: lime
+category: Background
+tags: [css, tailwind, background, shader-toy, ogl, webgl]
+badge: New
 ---
 
 ::ComponentLoader{label="Preview" componentName="SilkBackgroundDemo" type="examples" id="bg-silk"}

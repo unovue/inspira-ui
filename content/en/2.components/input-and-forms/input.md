@@ -1,6 +1,8 @@
 ---
 title: Input
 description: A versatile and visually dynamic input field with radial hover effects, styled for modern web applications.
+category: Forms & Input
+tags: [css, tailwind, input, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="InputDemo" type="examples" id="input"}

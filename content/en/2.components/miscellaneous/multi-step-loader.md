@@ -1,6 +1,8 @@
 ---
 title: Multi Step Loader
 description: A step loader for screens that works with async conditions too.
+category: Miscellaneous
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="MultiStepLoaderDemo" type="examples"}  

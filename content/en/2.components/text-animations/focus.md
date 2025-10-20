@@ -1,6 +1,8 @@
 ---
 title: Focus
 description: Highlight words in a sentence with a dynamic blurred effect and animated focus frame. Supports auto-cycling or manual hover focus mode.
+category: Text Animation
+tags: [css, tailwind, codepen]
 ---
 
 ::ComponentLoader{label="Preview" componentName="FocusDemo" type="examples" id="focus"}

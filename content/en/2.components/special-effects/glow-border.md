@@ -1,6 +1,8 @@
 ---
 title: Glow Border
 description: An animated border effect.
+category: Special Effects
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="GlowBorderDemo" type="examples"}

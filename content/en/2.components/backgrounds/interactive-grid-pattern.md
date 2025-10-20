@@ -1,6 +1,8 @@
 ---
 title: Interactive Grid Pattern
 description: A interactive background grid pattern made with SVGs, fully customizable.
+category: Background
+tags: [css, tailwind, background, svg, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="InteractiveGridPatternDemo" type="examples" id="interactive-grid-pattern"}

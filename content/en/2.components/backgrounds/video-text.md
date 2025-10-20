@@ -1,6 +1,8 @@
 ---
 title: Video Text
 description: A text component with a video background.
+category: Background
+tags: [css, tailwind, background, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="VideoTextDemo" type="examples" id="video-text"}

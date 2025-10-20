@@ -1,6 +1,8 @@
 ---
 title: Spinning Text
 description: The Spinning Text component animates text in a circular motion with customizable speed, direction, color, and transitions for dynamic and engaging effects.
+category: Text Animation
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="SpinningTextDemo" type="examples" id="spinning-text"}

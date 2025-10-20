@@ -1,6 +1,8 @@
 ---
 title: Shader Toy Viewer
 description: A powerful and flexible component to render interactive GLSL shaders from ShaderToy in the browser.
+category: Miscellaneous
+tags: [css, tailwind, shader-toy, ogl, webgl]
 ---
 
 ::ComponentLoader{label="Preview" componentName="ShaderToyDemo" type="examples" id="shader-toy"}

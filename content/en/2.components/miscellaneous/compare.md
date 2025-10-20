@@ -1,6 +1,8 @@
 ---
 title: Compare
 description: Slide to compare any two pieces of content - images, designs, code, or custom elements
+category: Miscellaneous
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="CompareDemo" type="examples" id="compare"}

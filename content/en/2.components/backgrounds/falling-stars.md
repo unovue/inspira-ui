@@ -1,6 +1,8 @@
 ---
 title: Falling Stars Background
 description: A stunning animated starfield background with glowing and sharp trail effects.
+category: Background
+tags: [css, tailwind, background, canvas]
 ---
 
 ::ComponentLoader{label="Preview" componentName="FallingStarsBgDemo" type="examples" id="backgrounds"}

@@ -1,6 +1,8 @@
 ---
 title: Hyper Text
 description: A hyper changing text animation as you hover..
+category: Text Animation
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="HyperTextDemo" type="examples"}

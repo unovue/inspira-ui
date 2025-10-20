@@ -1,6 +1,8 @@
 ---
 title: Tetris
 description: Tetris background component, you can even click on a block to eliminate it.
+category: Background
+tags: [css, tailwind, background]
 ---
 
 ::ComponentLoader{label="Preview" componentName="TetrisDemo" type="examples" id="tetris"}

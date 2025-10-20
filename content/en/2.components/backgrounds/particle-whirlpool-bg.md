@@ -1,6 +1,8 @@
 ---
 title: Particle Whirlpool
 description: An animated background with swirling particles.
+category: Background
+tags: [css, tailwind, background, threejs]
 ---
 
 ::ComponentLoader{label="Preview" componentName="ParticleWhirlpoolBgDemo" type="examples" id="backgrounds"}

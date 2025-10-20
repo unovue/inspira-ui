@@ -1,6 +1,8 @@
 ---
 title: Colourful Text
 description: A text component with various colours, filter and scale effects.
+category: Text Animation
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="ColourfulTextDemo" type="examples" id="colourful-text"}

@@ -1,9 +1,9 @@
 ---
 title: Neural Background
 description: A dynamic, shader-powered animated background with fluid neural-like visuals using OGL and GLSL.
-navBadges:
-  - value: New
-    type: lime
+category: Background
+tags: [css, tailwind, background, ogl, webgl, cursify]
+badge: New
 ---
 
 ::ComponentLoader{label="Preview" componentName="NeuralBgDemo" type="examples" id="bg-neural"}

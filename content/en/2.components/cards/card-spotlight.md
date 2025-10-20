@@ -1,6 +1,8 @@
 ---
 title: Card Spotlight
 description: A card component with a dynamic spotlight effect that follows the mouse cursor, enhancing visual interactivity.
+category: Button
+tags: [css, tailwind, button, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="CardSpotlightDemo" type="examples"}  

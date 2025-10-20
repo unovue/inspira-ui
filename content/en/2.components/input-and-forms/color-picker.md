@@ -1,6 +1,8 @@
 ---
 title: Color Picker
 description: A comprehensive color picker component with support for multiple color formats, accessibility features, and custom swatches.
+category: Forms & Input
+tags: [css, tailwind, input, color-picker, uplusion23]
 ---
 
 ::ComponentLoader{label="Preview" componentName="ColorPickerDemo" type="examples" id="color-picker"}

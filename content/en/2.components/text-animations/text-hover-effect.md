@@ -1,6 +1,8 @@
 ---
 title: Text Hover Effect
 description: A text hover effect that animates and outlines gradient on hover, as seen on x.ai
+category: Text Animation
+tags: [css, tailwind]
 ---
 
 ::ComponentLoader{label="Preview" componentName="TextHoverEffectDemo" type="examples"}

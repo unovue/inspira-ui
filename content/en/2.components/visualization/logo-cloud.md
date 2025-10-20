@@ -1,6 +1,8 @@
 ---
 title: Animated Logo Cloud
 description: Animated company cloud logs. Usually we can use to show company logos.
+category: Visualization
+tags: [css, tailwind]
 ---
 
 ::ComponentLoader{label="Preview" componentName="StaticLogoCloudDemo" type="examples" id="logo-cloud"}

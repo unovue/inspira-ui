@@ -1,6 +1,8 @@
 ---
 title: Confetti
 description: A Vue component for confetti animations.
+category: Special Effects
+tags: [css, tailwind, canvas, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="ConfettiDemo" type="examples" id="confetti"}

@@ -1,6 +1,8 @@
 ---
 title: Fluid Cursor
 description: A GPU-accelerated animated cursor trail that simulates fluid motion.
+category: Cursor
+tags: [css, tailwind, cursor, webgl, cursify]
 ---
 
 ::ComponentLoader{label="Preview" componentName="FluidCursorDemo" type="examples" id="fluid-cursor"}

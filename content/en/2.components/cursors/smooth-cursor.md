@@ -1,6 +1,8 @@
 ---
 title: Smooth Cursor
 description: A customizable, physics-based smooth cursor animation component for Vue applications.
+category: Cursor
+tags: [css, tailwind, cursor, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="SmoothCursorDemo" type="examples" id="smooth-cursor"}

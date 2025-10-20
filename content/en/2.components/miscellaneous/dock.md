@@ -1,6 +1,8 @@
 ---
 title: Dock
 description: A macOS-style dock with magnifying icons as you hover over them.
+category: Miscellaneous
+tags: [css, tailwind]
 ---
 
 ::ComponentLoader{label="Preview" componentName="DockDemo" type="examples"}  

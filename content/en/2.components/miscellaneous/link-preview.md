@@ -1,6 +1,8 @@
 ---
 title: Link Preview
 description: Dynamic link previews for your anchor tags
+category: Miscellaneous
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="LinkPreviewDemo" type="examples"}  

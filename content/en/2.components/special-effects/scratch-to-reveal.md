@@ -1,6 +1,8 @@
 ---
 title: Scratch To Reveal
 description: The ScratchToReveal component creates an interactive scratch-off effect with customizable dimensions and animations, revealing hidden content beneath.
+category: Special Effects
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="ScratchToRevealDemo" type="examples" id="scratch-to-reveal"}

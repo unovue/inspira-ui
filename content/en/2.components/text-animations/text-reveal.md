@@ -1,6 +1,8 @@
 ---
 title: Text Reveal
 description: Animate text line-by-line using GSAP's SplitText for smooth word or line entrance effects.
+category: Text Animation
+tags: [css, tailwind, gsap]
 ---
 
 ::ComponentLoader{label="Preview" componentName="TextRevealDemo" type="examples" id="text-reveal"}

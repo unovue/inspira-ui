@@ -1,6 +1,8 @@
 ---
 title: Lens
 description: A lens component to zoom into images, videos, or practically anything.
+category: Miscellaneous
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="LensDemo" type="examples" id="lens"}

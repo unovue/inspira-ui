@@ -1,6 +1,8 @@
 ---
 title: Gradient Button
 description: A stylish animated button with a rotating conic gradient border and customizable properties for a vibrant look.
+category: Button
+tags: [css, tailwind, button]
 ---
 
 ::ComponentLoader{label="Preview" componentName="GradientButtonDemo" type="examples"}

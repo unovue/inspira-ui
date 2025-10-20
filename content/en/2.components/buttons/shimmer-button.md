@@ -1,6 +1,8 @@
 ---
 title: Shimmer Button
 description: A button with a shimmering animated effect.
+category: Button
+tags: [css, tailwind, button, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="ShimmerButtonDemo" type="examples"}

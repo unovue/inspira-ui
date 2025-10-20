@@ -1,6 +1,8 @@
 ---
 title: Rainbow Button
 description: A rainbow effect on button.
+category: Button
+tags: [css, tailwind, button, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="RainbowButtonDemo" type="examples"}

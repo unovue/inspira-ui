@@ -1,6 +1,8 @@
 ---
 title: Animate Grid
 description: Skew Animation grid with box shadow.
+category: Miscellaneous
+tags: [css, tailwind, input]
 ---
 
 ::ComponentLoader{label="Preview" componentName="AnimateGridDemo" type="examples" id="animate-grid"}

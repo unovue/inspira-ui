@@ -1,6 +1,8 @@
 ---
 title: Aurora Background
 description: A subtle Aurora or Southern Lights background for your website.
+category: Background
+tags: [css, tailwind, background, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="AuroraBackgroundDemo" type="examples" id="aurora-background"}

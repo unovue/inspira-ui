@@ -1,6 +1,8 @@
 ---
 title: Wavy Background
 description: A cool background effect with waves that move.
+category: Background
+tags: [css, tailwind, background, simplex-noise, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="WavyBackgroundDemo" type="examples" id="wavy-background"}

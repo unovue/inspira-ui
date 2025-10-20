@@ -1,6 +1,8 @@
 ---
 title: Bento Grid
 description: A cool grid layout with different child component.
+category: Miscellaneous
+tags: [css, tailwind, bento, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="BentoGridDemo" type="examples"}

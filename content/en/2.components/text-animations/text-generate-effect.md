@@ -1,6 +1,8 @@
 ---
 title: Text Generate Effect
 description: A cool text effect that fades in text on page load, one by one.
+category: Text Animation
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="TextGenerateDemo" type="examples"}  

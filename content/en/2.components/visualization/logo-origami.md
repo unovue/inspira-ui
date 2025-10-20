@@ -1,6 +1,8 @@
 ---
 title: Logo Origami
 description: Animated flipping logo with origami effect.
+category: Visualization
+tags: [css, tailwind, hover-dev]
 ---
 
 ::ComponentLoader{label="Preview" componentName="LogoOrigamiDemo" type="examples"}

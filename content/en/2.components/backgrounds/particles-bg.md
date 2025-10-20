@@ -1,6 +1,8 @@
 ---
 title: Particles Background
 description: Particles can add a dynamic and engaging element to your website's visuals. They help create a feeling of depth, motion, and interaction, making the site more visually appealing.
+category: Background
+tags: [css, tailwind, background, magic-ui, canvas]
 ---
 
 ::ComponentLoader{label="Preview" componentName="ParticlesBgDemo" type="examples"}

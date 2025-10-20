@@ -1,6 +1,8 @@
 ---
 title: Pattern Background
 description: Simple animated pattern background to make your sections stand out.
+category: Background
+tags: [css, tailwind, background, magic-ui]
 ---
 
 Grid background with dot

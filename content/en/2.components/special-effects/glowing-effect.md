@@ -1,6 +1,8 @@
 ---
 title: Glowing Effect
 description: A dynamic proximity-based glow effect that reacts to mouse movements and scroll events, perfect for highlighting interactive elements.
+category: Special Effects
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="GlowingEffectDemo" type="examples" id="glowing-effect"}

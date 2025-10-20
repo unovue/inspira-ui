@@ -1,6 +1,8 @@
 ---
 title: Balance Slider
 description: A dynamic balance slider with adjustable colors, limits, and interactive tooltip.
+category: Forms & Input
+tags: [css, tailwind, input]
 ---
 
 ::ComponentLoader{label="Preview" componentName="BalanceSliderDemo" type="examples"}

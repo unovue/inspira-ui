@@ -1,6 +1,8 @@
 ---
 title: Bubbles Background
 description: An animated background with floating bubbles.
+category: Background
+tags: [css, tailwind, background, threejs]
 ---
 
 ::ComponentLoader{label="Preview" componentName="BubblesBgDemo2" type="examples" id="backgrounds"}

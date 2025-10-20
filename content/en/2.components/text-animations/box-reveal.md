@@ -1,6 +1,8 @@
 ---
 title: Box Reveal
 description: An animated box reveal effect with customizable colors, duration, and delay.
+category: Text Animation
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="BoxRevealDemo" type="examples"}

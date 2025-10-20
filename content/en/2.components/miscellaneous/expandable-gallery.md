@@ -1,6 +1,8 @@
 ---
 title: Expandable Gallery
 description: A responsive image gallery with an interactive hover effect that expands images dynamically.
+category: Miscellaneous
+tags: [css, tailwind, gallery]
 ---
 
 ::ComponentLoader{label="Preview" componentName="ExpandableGalleryDemo" type="examples" id="expandable-gallery"}

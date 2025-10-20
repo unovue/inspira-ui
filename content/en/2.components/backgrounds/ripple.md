@@ -1,6 +1,8 @@
 ---
 title: Ripple
 description: An animated ripple effect typically used behind elements to emphasize them.
+category: Background
+tags: [css, tailwind, background, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="RippleDemo" type="examples" id="ripple"}

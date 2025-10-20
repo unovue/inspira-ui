@@ -1,6 +1,8 @@
 ---
 title: 3D Carousel
 description: A dynamic and interactive 3D carousel component using Three.js and Motion-V, allowing smooth infinite rotation and user-controlled interactions.
+category: Visualization
+tags: [css, tailwind, threejs, motion-v]
 ---
 
 ::ComponentLoader{label="Preview" componentName="Carousel3dDemo" type="examples" id="carousel-3d"}

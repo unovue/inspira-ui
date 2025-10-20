@@ -1,6 +1,8 @@
 ---
 title: Radiant Text
 description: A glare effect on text.
+category: Text Animation
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="RadiantTextDemo" type="examples"}

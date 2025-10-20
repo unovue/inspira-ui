@@ -1,6 +1,8 @@
 ---
 title: Sparkles
 description: A configurable sparkles component that can be used as a background or as a standalone component.
+category: Background
+tags: [css, tailwind, background, canvas]
 ---
 
 ::ComponentLoader{label="Preview" componentName="SparklesDemo" type="examples" id="sparkles"}

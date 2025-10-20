@@ -1,6 +1,8 @@
 ---
 title: World Map
 description: Displays a customizable world map with animated arcs and pulse effects for geographical points.
+category: Visualization
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="WorldMapDemo" type="examples" id="world-map"}

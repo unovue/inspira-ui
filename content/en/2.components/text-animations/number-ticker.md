@@ -1,6 +1,8 @@
 ---
 title: Number Ticker
 description: Animate numbers to count up or down to a target number
+category: Text Animation
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="NumberTickerDemo" type="examples"}

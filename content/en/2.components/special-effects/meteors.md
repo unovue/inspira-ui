@@ -1,6 +1,8 @@
 ---
-title: Meteor
+title: Meteors
 description: A component that displays a meteor shower animation with customizable meteor count and styling.
+category: Special Effects
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="MeteorsDemo" type="examples"}  

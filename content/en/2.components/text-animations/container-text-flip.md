@@ -1,6 +1,8 @@
 ---
 title: Container Text Flip
 description: A container that flips through words, animating the width.
+category: Text Animation
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="ContainerTextFlipDemo" type="examples" id="container-text-flip"}

@@ -1,6 +1,8 @@
 ---
 title: iPhone Mockup
 description: An SVG mockup of an iPhone.
+category: Device Mockups
+tags: [css, tailwind, device-mockup, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="iPhone15ProMockupDemo" type="examples" id="mockups"}

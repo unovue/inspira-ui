@@ -1,6 +1,8 @@
 ---
 title: Text Reveal Card
 description: Mousemove effect to reveal text content at the bottom of the card.
+category: Text Animation
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="TextRevealCardDemo" type="examples"}  

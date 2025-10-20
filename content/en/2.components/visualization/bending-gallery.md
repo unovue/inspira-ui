@@ -1,6 +1,8 @@
 ---
 title: Bending Gallery
 description: A curved, scrollable 3D gallery with dynamic image cards and animated text rendered using WebGL and OGL.
+category: Visualization
+tags: [css, tailwind, ogl, webgl]
 ---
 
 ::ComponentLoader{label="Preview" componentName="BendingGalleryDemo" type="examples" id="bending-gallery"}

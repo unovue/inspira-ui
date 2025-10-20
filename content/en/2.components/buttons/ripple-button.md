@@ -1,6 +1,8 @@
 ---
 title: Ripple Button
 description: A stylish ripple button component with customizable colors and animation duration.
+category: Button
+tags: [css, tailwind, button, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="RippleButtonDemo" type="examples"}

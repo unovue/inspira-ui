@@ -1,6 +1,8 @@
 ---
 title: Neon Border
 description: A visually appealing neon border component with customizable animations and colors.
+category: Special Effects
+tags: [css, tailwind, border]
 ---
 
 ::ComponentLoader{label="Preview" componentName="NeonBorderDemo" type="examples" id="neon-border"}

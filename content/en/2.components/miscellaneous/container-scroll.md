@@ -1,6 +1,8 @@
 ---
 title: Container Scroll
 description: A container scrolling effect that transforms the content inside based on scroll progress. Features smooth transitions with scaling and rotating effects on scroll.
+category: Miscellaneous
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="ContainerScrollDemo" type="examples"}  

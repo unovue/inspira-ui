@@ -1,6 +1,8 @@
 ---
 title: Book
 description: A 3D book component featuring customizable sizes and color gradients.
+category: Miscellaneous
+tags: [css, tailwind, x-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="BookDemo" type="examples"}

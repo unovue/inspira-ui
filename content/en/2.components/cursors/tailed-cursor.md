@@ -1,6 +1,8 @@
 ---
 title: Tailed Cursor
 description: A smooth, colorful ribbon cursor trail rendered with WebGL using OGL, featuring dynamic shaders and customizable animation effects.
+category: Cursor
+tags: [css, tailwind, cursor, webgl, codrops]
 ---
 
 ::ComponentLoader{label="Preview" componentName="TailedCursorDemo" type="examples" id="tailed-cursor"}

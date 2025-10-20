@@ -1,6 +1,8 @@
 ---
 title: Liquid Background
 description: A reactive and dynamic background effect using OGL for WebGL-based visuals.
+category: Background
+tags: [css, tailwind, background, ogl, webgl]
 ---
 
 ::ComponentLoader{label="Preview" componentName="LiquidBackgroundDemo" type="examples" id="liquid-background"}

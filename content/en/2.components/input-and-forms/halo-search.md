@@ -1,6 +1,8 @@
 ---
 title: Halo Search
 description: A futuristic search input component featuring multiple glowing rings and subtle animated halos for a vibrant, immersive UI experience.
+category: Forms & Input
+tags: [css, tailwind, input, ui-verse]
 ---
 
 ::ComponentLoader{label="Preview" componentName="HaloSearchDemo" type="examples" id="halo-search"}

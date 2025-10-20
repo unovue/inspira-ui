@@ -1,9 +1,8 @@
 ---
 title: Stars Background
 description: A parallax-animated starfield background using layered motion and randomized star positions.
-navBadges:
-  - value: New
-    type: lime
+category: Background
+tags: [css, tailwind, background, animate-ui, motion-v]
 ---
 
 ::ComponentLoader{label="Preview" componentName="StarsBackgroundDemo" type="examples" id="bg-stars"}

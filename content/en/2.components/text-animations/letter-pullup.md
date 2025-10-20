@@ -1,6 +1,8 @@
 ---
 title: Letter Pullup
 description: Staggered letter pull up text animation.
+category: Text Animation
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="LetterPullupDemo" type="examples" id="letter-pullup"}

@@ -1,6 +1,8 @@
 ---
 title: Icon Cloud
 description: An interactive 3D tag cloud component
+category: Visualization
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="IconCloudDemo" type="examples"}

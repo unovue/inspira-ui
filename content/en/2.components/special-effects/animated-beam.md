@@ -1,6 +1,8 @@
 ---
 title: Animated Beam
 description: An SVG beam connecting elements with animation.
+category: Special Effects
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="AnimatedBeamDemo" type="examples"}

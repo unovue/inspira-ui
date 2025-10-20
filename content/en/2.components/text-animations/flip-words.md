@@ -1,6 +1,8 @@
 ---
 title: Flip Words
 description: A component that flips through a list of words.
+category: Text Animation
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="FlipWordsDemo" type="examples"}  

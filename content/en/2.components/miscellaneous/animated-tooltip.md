@@ -1,6 +1,8 @@
 ---
 title: Animated Tooltip
 description: A cool tooltip that reveals on hover, follows mouse pointer
+category: Miscellaneous
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="AnimatedTooltipDemo" type="examples"}

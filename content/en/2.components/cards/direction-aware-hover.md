@@ -1,6 +1,8 @@
 ---
 title: Direction Aware Hover
 description: A direction aware hover card, that displays an image with dynamic hover effects and customizable content overlay.
+category: Button
+tags: [css, tailwind, button, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="DirectionAwareHoverDemo" type="examples"}  

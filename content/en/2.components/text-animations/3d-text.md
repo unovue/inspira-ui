@@ -1,6 +1,8 @@
 ---
 title: 3D Text
 description: A stylish 3D text component with customizable colors, shadows, and animation options.
+category: Text Animation
+tags: [css, tailwind, 3d]
 ---
 
 ::ComponentLoader{label="Preview" componentName="Text3dDemo" type="examples"}

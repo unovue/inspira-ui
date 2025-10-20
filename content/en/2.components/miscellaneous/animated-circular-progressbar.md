@@ -1,6 +1,8 @@
 ---
 title: Animated Circular Progress Bar
 description: Animated Circular Progress Bar is a component that displays a circular gauge with a percentage value.
+category: Miscellaneous
+tags: [css, tailwind, input, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="AnimatedCircularProgressBarDemo" type="examples" id="animated-circular-progressbar"}

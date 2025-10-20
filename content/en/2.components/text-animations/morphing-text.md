@@ -1,6 +1,8 @@
 ---
 title: Morphing Text
 description: This MorphingText component dynamically transitions between an array of text strings, creating a smooth, engaging visual effect.
+category: Text Animation
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="MorphingTextDemo" type="examples" id="morphing-text"}

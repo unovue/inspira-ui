@@ -1,6 +1,8 @@
 ---
 title: Sparkles Text
 description: A dynamic text that generates continuous sparkles with smooth transitions, perfect for highlighting text with animated stars.
+category: Text Animation
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="SparklesTextDemo" type="examples" id="sparkles-text"}

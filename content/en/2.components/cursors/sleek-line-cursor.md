@@ -1,9 +1,9 @@
 ---
 title: Sleek Line Cursor
 description: A reactive animated cursor trail with smooth wave-like motion, using spring physics and dynamic color waves.
-navBadges:
-  - value: New
-    type: lime
+category: Cursor
+tags: [css, tailwind, cursor, webgl, cursify]
+badge: New
 ---
 
 ::ComponentLoader{label="Preview" componentName="SleekLineCursorDemo" type="examples" id="sleek-line-cursor"}

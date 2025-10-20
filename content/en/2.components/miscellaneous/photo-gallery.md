@@ -1,6 +1,8 @@
 ---
 title: Photo Gallery
 description: Showcase your team with pride using our stunning Photo Gallery Component.
+category: Miscellaneous
+tags: [css, tailwind, gallery]
 ---
 
 ::ComponentLoader{label="Preview" componentName="PhotoGalleryDemo" type="examples" id="photo-gallery"}

@@ -1,6 +1,8 @@
 ---
 title: Placeholders And Vanish Input
 description: Sliding in placeholders and vanish effect of input on submit
+category: Forms & Input
+tags: [css, tailwind, input, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="VanishingInputDemo" type="examples"}  

@@ -1,6 +1,8 @@
 ---
 title: Animated List
 description: A sequentially animated list that introduces each item with a timed delay, perfect for displaying notifications or events on your landing page.
+category: Miscellaneous
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="AnimatedListDemo" type="examples"}

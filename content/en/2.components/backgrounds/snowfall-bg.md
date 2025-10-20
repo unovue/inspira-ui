@@ -1,6 +1,8 @@
 ---
 title: Snowfall Background
 description: A beautifully animated snowfall effect applied as a background.
+category: Background
+tags: [css, tailwind, background, canvas]
 ---
 
 ::ComponentLoader{label="Preview" componentName="SnowfallBgDemo" type="examples" id="backgrounds"}

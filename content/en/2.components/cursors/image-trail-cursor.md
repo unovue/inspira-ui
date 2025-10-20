@@ -1,9 +1,9 @@
 ---
 title: Image Trail Cursor
 description: An interactive cursor effect that creates a dynamic trail of images following mouse movement with multiple animation variants.
-navBadges:
-  - value: New
-    type: lime
+category: Cursor
+tags: [css, tailwind, cursor, codrops]
+badge: New
 ---
 
 ::ComponentLoader{label="Preview" componentName="ImageTrailCursorDemo" type="examples" id="image-trail-cursor"}

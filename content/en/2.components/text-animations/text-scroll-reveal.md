@@ -1,6 +1,8 @@
 ---
 title: Text Scroll Reveal
 description: A component that reveals text word by word as you scroll, with customizable text and styling.
+category: Text Animation
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="TextScrollRevealDemo" type="examples"}

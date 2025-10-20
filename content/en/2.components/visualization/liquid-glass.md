@@ -1,6 +1,8 @@
 ---
 title: Liquid Glass Effect
 description: A visually striking glassmorphism effect using SVG displacement filters similar to Apple Liquid Glass.
+category: Visualization
+tags: [css, tailwind, apple, svg]
 ---
 
 ::ComponentLoader{label="Preview" componentName="LiquidGlassDemo" type="examples" id="liquid-glass"}

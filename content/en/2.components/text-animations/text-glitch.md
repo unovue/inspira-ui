@@ -1,6 +1,8 @@
 ---
 title: Text Glitch
 description: Creates a vibrant glitch effect on text with customizable speed, shadow colors, and optional hover-triggered animation.
+category: Text Animation
+tags: [css, tailwind]
 ---
 
 ::ComponentLoader{label="Preview" componentName="TextGlitchDemo" type="examples" id="text-glitch"}

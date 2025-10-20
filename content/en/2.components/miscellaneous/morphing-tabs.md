@@ -1,6 +1,8 @@
 ---
 title: Morphing Tabs
 description: This is a morphing tabs interaction, recreated by Preet's work and featuring the gooey effect component.
+category: Miscellaneous
+tags: [css, tailwind]
 ---
 
 ::ComponentLoader{label="Preview" componentName="MorphingTabsDemo" type="examples" id="morphing-tabs"}

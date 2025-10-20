@@ -1,6 +1,8 @@
 ---
 title: Spring Calendar
 description: An animated calendar widget that expands to reveal events and features smooth, spring‑based Motion‑V transitions.
+category: Special Effects
+tags: [css, tailwind, motion-v]
 ---
 
 ::ComponentLoader{label="Preview" componentName="SpringCalendarDemo" type="examples" id="spring-calendar"}

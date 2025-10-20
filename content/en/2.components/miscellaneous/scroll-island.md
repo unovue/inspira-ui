@@ -1,6 +1,8 @@
 ---
 title: Scroll Island
 description: A dynamic and interactive component that displays scroll progress with animated visuals and an expandable area for additional content.
+category: Miscellaneous
+tags: [css, tailwind, number-flow]
 ---
 
 ::ComponentLoader{label="Preview" componentName="ScrollIslandDemo" type="examples" id="scroll-island"}

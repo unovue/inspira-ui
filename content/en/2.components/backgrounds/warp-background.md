@@ -1,6 +1,8 @@
 ---
 title: Warp Background
 description: A container component that applies a warp animation effect to its children
+category: Background
+tags: [css, tailwind, background, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="WarpBackgroundDemo" type="examples" id="warp-background"}

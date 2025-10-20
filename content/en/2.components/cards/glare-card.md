@@ -1,6 +1,8 @@
 ---
 title: Glare Card
 description: A glare effect that happens on hover, as seen on Linear's website.
+category: Button
+tags: [css, tailwind, button, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="GlareCardDemo" type="examples" id="glare-card"}

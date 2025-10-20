@@ -1,6 +1,8 @@
 ---
 title: Particle Image
 description: Visually appealing particle animation applied to images as seen on NuxtLabs.com
+category: Special Effects
+tags: [css, tailwind, canvas, particles]
 ---
 
 ::ComponentLoader{label="Preview" componentName="ParticleImageDemo" type="examples"}

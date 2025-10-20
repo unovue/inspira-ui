@@ -1,6 +1,8 @@
 ---
 title: Cosmic Portal
 description: A breathtaking, animated 3D portal built with Three.js that features glowing rings, floating crystals, space distortion, and interdimensional streams.
+category: Background
+tags: [css, tailwind, background, threejs, postprocessing]
 ---
 
 ::ComponentLoader{label="Preview" componentName="CosmicPortalDemo" type="examples" id="cosmic-portal"}

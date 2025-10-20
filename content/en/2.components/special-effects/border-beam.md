@@ -1,6 +1,8 @@
 ---
 title: Border Beam
 description: A stylish animated border beam effect with customizable size, duration, colors, and delay.
+category: Special Effects
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="BorderBeamDemo" type="examples"}

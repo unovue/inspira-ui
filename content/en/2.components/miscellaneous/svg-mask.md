@@ -1,6 +1,8 @@
 ---
 title: SVG Mask
 description: A dynamic SVG mask component that reveals content with hover and mouse movement.
+category: Miscellaneous
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="SvgMaskDemo" type="examples" id="svg-mask"}

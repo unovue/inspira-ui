@@ -1,6 +1,8 @@
 ---
 title: Line Shadow Text
 description: A line shadow text component for Magic UI that adds a shadow effect to the text, making it visually appealing and engaging.
+category: Text Animation
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="LineShadowTextDemo" type="examples" id="line-shadow-text"}

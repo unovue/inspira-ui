@@ -1,6 +1,8 @@
 ---
 title: Images Slider
 description: A full page slider with images that can be navigated with the keyboard.
+category: Miscellaneous
+tags: [css, tailwind, images, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="ImagesSliderDemo" type="examples" id="images-slider"}  

@@ -1,6 +1,8 @@
 ---
 title: Interactive Hover Button
 description: A visually engaging button component that responds to hover with dynamic transitions, adapting smoothly between light and dark modes for enhanced user interactivity.
+category: Button
+tags: [css, tailwind, button, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="InteractiveHoverButtonDemo" type="examples"}

@@ -1,6 +1,8 @@
 ---
 title: Flickering Grid
 description: A flickering grid background made with Canvas, fully customizable using Tailwind CSS.
+category: Background
+tags: [css, tailwind, background, canvas, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="FlickeringGridDemo" type="examples" id="flickering-grid"}

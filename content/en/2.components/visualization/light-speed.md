@@ -1,6 +1,8 @@
 ---
 title: Light Speed
 description: A highly customizable 3D highway speed visual effect built with Three.js, featuring animated road, cars, lights, and distortion effects for immersive motion simulation.
+category: Visualization
+tags: [css, tailwind, threejs, codrops]
 ---
 
 ::ComponentLoader{label="Preview" componentName="LightSpeedDemo" type="examples" id="light-speed"}

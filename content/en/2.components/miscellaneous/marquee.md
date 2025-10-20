@@ -1,6 +1,8 @@
 ---
 title: Marquee
 description: A customizable scrolling component that loops its content horizontally or vertically, with configurable direction, hover pause, and repeat options.
+category: Miscellaneous
+tags: [css, tailwind, magic-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="MarqueeDemo" type="examples" id="marquee"}  

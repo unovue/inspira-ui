@@ -1,6 +1,8 @@
 ---
 title: Tracing Beam
 description: A component that renders a tracing beam effect with dynamic scrolling animations and gradient strokes.
+category: Miscellaneous
+tags: [css, tailwind, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="TracingBeamDemo" type="examples"}

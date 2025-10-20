@@ -1,6 +1,8 @@
 ---
 title: Lamp Effect
 description: A captivating lamp lighting effect with conic gradients, spotlights, and glowing lines for an immersive visual experience.
+category: Background
+tags: [css, tailwind, background, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="LampEffectDemo" type="examples"}
