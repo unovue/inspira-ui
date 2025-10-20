@@ -1,6 +1,8 @@
 ---
 title: Hero
 description: Elevate website experience with unique hero blocks.
+category: Hero
+tags: [css, tailwind, hero]
 ---
 
 ### Hero Section 1

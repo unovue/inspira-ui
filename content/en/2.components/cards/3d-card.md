@@ -1,8 +1,8 @@
 ---
 title: 3D Card Effect
 description: A card perspective effect, hover over the card to elevate card elements.
-category: Button
-tags: [css, tailwind, button, aceternity-ui]
+category: Card
+tags: [css, tailwind, card, aceternity-ui]
 ---
 
 ::ComponentLoader{label="Preview" componentName="CardDemo" type="examples"}

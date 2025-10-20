@@ -1,7 +1,7 @@
 ---
 title: iPhone Mockup
 description: An SVG mockup of an iPhone.
-category: Device Mockups
+category: Device Mockup
 tags: [css, tailwind, device-mockup, magic-ui]
 ---
 

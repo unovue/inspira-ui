@@ -1,6 +1,8 @@
 ---
 title: Testimonials
 description: Show testimonials in style
+category: Testimonials
+tags: [css, tailwind, testimonials]
 ---
 
 ### With skewed marquee

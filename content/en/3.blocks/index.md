@@ -6,5 +6,5 @@ navigation: false
 
 ## All Blocks
 
-::ComponentIndex{path="blocks"}
+::BlocksList{routePath="/blocks"}
 ::

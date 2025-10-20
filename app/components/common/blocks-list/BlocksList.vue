@@ -5,7 +5,7 @@ interface Props {
   routePath?: string;
 }
 
-const { routePath = "/components" } = defineProps<Props>();
+const { routePath = "/blocks" } = defineProps<Props>();
 const { locale } = useDocusI18n();
 
 const { data: components } = await useAsyncData("tools", () => {
