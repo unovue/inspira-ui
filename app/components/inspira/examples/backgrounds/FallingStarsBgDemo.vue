@@ -2,7 +2,7 @@
 import { useColorMode } from "@vueuse/core";
 import { computed } from "vue";
 
-const isDark = computed(() => useColorMode().value == "dark");
+const isDark = computed(() => useColorMode().value === "dark");
 </script>
 
 <template>

@@ -1,17 +1,8 @@
 <script lang="ts" setup>
-import { onMounted, ref, watch } from "vue";
-
-const props = withDefaults(defineProps<Props>(), {
-  textGlowStartColor: "#38ef7d80",
-  textGlowEndColor: "#38ef7d",
-  perspective: 600,
-  rotateX: -1,
-  rotateY: -15,
-});
-const card = ref<HTMLElement[]>();
 interface Cards {
   logo: string;
 }
+
 interface Props {
   class?: string;
   textGlowStartColor?: string;
@@ -21,6 +12,17 @@ interface Props {
   rotateX?: number;
   rotateY?: number;
 }
+
+const {
+  textGlowStartColor = "#38ef7d80",
+  textGlowEndColor = "#38ef7d",
+  perspective = 600,
+  rotateX = -1,
+  rotateY = -15,
+  ...props
+} = defineProps<Props>();
+
+const card = ref<HTMLElement[]>();
 
 function adjacentCardItems(i: number): HTMLElement[] {
   return [i - 1, i + 1, i - 4, i + 4]
@@ -39,6 +41,7 @@ function removeCardClasses(el: HTMLElement, adjacentCards: HTMLElement[]) {
     adjacentCard?.classList.remove("card-raised-small");
   });
 }
+
 onMounted(() => {
   card.value?.forEach((el, i) => {
     const { isOutside } = useMouseInElement(el);
@@ -68,7 +71,7 @@ onMounted(() => {
       class="relative grid w-full max-w-full items-center justify-center"
       :class="[props.cards.length < 4 ? `grid-cols-${props.cards.length}` : 'grid-cols-4']"
       :style="{
-        transform: `perspective(${props.perspective}px) rotateX(${props.rotateX}deg) rotateY(${props.rotateY}deg)`,
+        transform: `perspective(${perspective}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
       }"
     >
       <div

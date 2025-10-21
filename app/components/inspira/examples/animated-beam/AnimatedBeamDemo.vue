@@ -1,14 +1,12 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
-const containerRef = ref(null);
-const div1Ref = ref(null);
-const div2Ref = ref(null);
-const div3Ref = ref(null);
-const div4Ref = ref(null);
-const div5Ref = ref(null);
-const div6Ref = ref(null);
-const div7Ref = ref(null);
+const containerRef = useTemplateRef("containerRef");
+const div1Ref = useTemplateRef("div1Ref");
+const div2Ref = useTemplateRef("div2Ref");
+const div3Ref = useTemplateRef("div3Ref");
+const div4Ref = useTemplateRef("div4Ref");
+const div5Ref = useTemplateRef("div5Ref");
+const div6Ref = useTemplateRef("div6Ref");
+const div7Ref = useTemplateRef("div7Ref");
 </script>
 
 <template>
