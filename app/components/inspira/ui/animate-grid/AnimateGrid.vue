@@ -60,11 +60,13 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative block" :class="[props.class]">
+  <div
+    class="relative block"
+    :class="[props.class]"
+  >
     <div
-      class="relative grid w-full max-w-full items-center justify-center" :class="[
-        props.cards.length < 4 ? `grid-cols-${props.cards.length}` : 'grid-cols-4',
-      ]"
+      class="relative grid w-full max-w-full items-center justify-center"
+      :class="[props.cards.length < 4 ? `grid-cols-${props.cards.length}` : 'grid-cols-4']"
       :style="{
         transform: `perspective(${props.perspective}px) rotateX(${props.rotateX}deg) rotateY(${props.rotateY}deg)`,
       }"

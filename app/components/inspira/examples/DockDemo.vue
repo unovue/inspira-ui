@@ -1,0 +1,29 @@
+<template>
+  <Dock class="mb-6">
+    <DockIcon>
+      <Icon
+        name="mdi:github"
+        class="size-full"
+      />
+    </DockIcon>
+    <DockSeparator />
+    <DockIcon>
+      <Icon
+        name="logos:google-drive"
+        class="size-full"
+      />
+    </DockIcon>
+    <DockIcon>
+      <Icon
+        name="logos:notion-icon"
+        class="size-full"
+      />
+    </DockIcon>
+    <DockIcon>
+      <Icon
+        name="logos:whatsapp-icon"
+        class="size-full"
+      />
+    </DockIcon>
+  </Dock>
+</template>
