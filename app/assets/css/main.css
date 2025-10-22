@@ -9,3 +9,7 @@
 .dark {
   --ui-bg: black;
 }
+
+.form-field {
+  @apply flex items-start justify-between gap-4 max-sm:flex-col;
+}
