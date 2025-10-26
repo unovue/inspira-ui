@@ -32,7 +32,10 @@ const config = ref({
         label="perspective"
         class="form-field"
       >
-        <UInputNumber v-model="config.perspective" />
+        <UInputNumber
+          v-model="config.perspective"
+          class="max-w-44"
+        />
       </UFormField>
 
       <UFormField
@@ -43,6 +46,7 @@ const config = ref({
           v-model="config.rotateX"
           :min="-360"
           :max="360"
+          class="max-w-44"
         />
       </UFormField>
 
@@ -54,6 +58,7 @@ const config = ref({
           v-model="config.rotateY"
           :min="-360"
           :max="360"
+          class="max-w-44"
         />
       </UFormField>
     </template>

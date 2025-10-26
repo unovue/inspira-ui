@@ -1,5 +1,5 @@
 <template>
-  <div class="flex w-full flex-col items-center justify-start gap-4">
+  <div class="flex w-full flex-col items-start justify-start gap-4">
     <UPageCard
       variant="outline"
       class="w-full"
@@ -7,8 +7,8 @@
       <slot name="component" />
     </UPageCard>
     <UPageCard
-      variant="soft"
-      class="w-full"
+      variant="naked"
+      class="w-full max-w-lg py-4"
       title="Playground"
       description="Play with following props and customize the component."
       :ui="{

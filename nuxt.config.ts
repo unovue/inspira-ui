@@ -11,6 +11,11 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
   ],
 
+  ui: {
+    content: true,
+    mdc: true,
+  },
+
   css: ["~/assets/css/main.css"],
 
   i18n: {
