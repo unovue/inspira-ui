@@ -20,10 +20,10 @@ const selectedCategory = ref<string>("all");
 
 // Compute unique categories
 const categories = computed(() => {
-  if (!components.value) return ["all"];
+  if (!components.value) return ["all", "new"];
 
   const uniqueCategories = new Set(components.value.map((component) => component.category));
-  return ["all", ...Array.from(uniqueCategories)];
+  return ["all", "new", ...Array.from(uniqueCategories)];
 });
 
 // Filter tools by selected category
@@ -32,6 +32,10 @@ const filteredComponents = computed(() => {
 
   if (selectedCategory.value === "all") {
     return components.value;
+  }
+
+  if (selectedCategory.value === "new") {
+    return components.value.filter((component) => component.badge === "New");
   }
 
   return components.value.filter((component) => component.category === selectedCategory.value);
@@ -46,7 +50,7 @@ const filteredComponents = computed(() => {
         v-for="category in categories"
         :key="category"
         :label="category"
-        :variant="selectedCategory === category ? 'soft' : 'outline'"
+        :variant="selectedCategory === category ? 'solid' : 'outline'"
         :color="selectedCategory === category ? 'primary' : 'neutral'"
         class="rounded-full px-4 py-3 lowercase"
         size="lg"
@@ -54,7 +58,7 @@ const filteredComponents = computed(() => {
       />
     </div>
 
-    <div class="mt-8 flex flex-row flex-wrap items-center justify-center gap-4">
+    <div class="mt-8 flex flex-row flex-wrap items-center justify-center gap-4 min-md:gap-6">
       <UPageCard
         v-for="component in filteredComponents"
         :key="component.id"
@@ -67,6 +71,13 @@ const filteredComponents = computed(() => {
         }"
         :to="component.path"
       >
+        <UBadge
+          v-if="component.badge"
+          class="absolute top-6 right-6"
+          variant="subtle"
+          :color="component.badge === 'New' ? 'success' : 'warning'"
+          :label="component.badge"
+        />
         <div class="flex flex-wrap items-center gap-2">
           <UBadge
             v-for="tag in component.tags"
