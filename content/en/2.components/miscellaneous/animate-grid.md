@@ -5,26 +5,17 @@ category: Miscellaneous
 tags: [css, tailwind, input]
 ---
 
-::ComponentLoader{label="Preview" componentName="AnimateGridDemo" type="examples" id="animate-grid"}
-::
+::ComponentViewer{demoFile="AnimateGridDemo.vue" config="AnimateGridConfig" componentId="animate-grid" :componentFiles='["AnimateGrid.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="animate-grid"}
-::
-
-## Install Manually
-
-::steps{level=4}
-
-Copy and paste the following code
-
-::CodeViewer{filename="AnimateGrid.vue" language="vue" componentName="AnimateGrid" type="ui" id="animate-grid"}
-::
+#instructions
 
 #### Add SVG file
 
 Add at least one SVG file to the same folder as your component and update the import in your component to use it
+
+#credits
+
+- Thanks to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for providing this component.
 
 ::
 
@@ -43,7 +34,3 @@ Add at least one SVG file to the same folder as your component and update the im
 ## Features
 
 - **Slot-Based Content**: Supports a default slot to add content inside the Animate Grid container.
-
-## Credits
-
-- Thanks to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for providing this component.

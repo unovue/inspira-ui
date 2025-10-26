@@ -16,7 +16,7 @@ const {
   dependencies = undefined,
   showInstallation = true,
   componentId,
-  componentFiles,
+  componentFiles = [],
   demoFile,
   config,
 } = defineProps<Props>();
