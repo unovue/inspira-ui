@@ -1,13 +1,15 @@
 <script setup lang="ts">
-import { provide, ref } from "vue";
-import { useMouseState } from "@/composables/useMouseState";
+import { provide } from "vue";
+import { useMouseState } from "~/composables/useMouseState";
 
-defineProps({
-  class: String,
-  containerClass: String,
-});
+interface Props {
+  class?: string;
+  containerClass?: string;
+}
 
-const containerRef = ref<HTMLElement | null>(null);
+const props = defineProps<Props>();
+
+const containerRef = useTemplateRef("containerRef");
 
 const mouseState = useMouseState(); // Use the composable
 provide("use3DCardMouseState", mouseState);
@@ -34,14 +36,14 @@ function handleMouseLeave() {
 
 <template>
   <div
-    class="flex items-center justify-center p-2" :class="[containerClass]"
+    class="flex items-center justify-center p-2"
+    :class="[props.containerClass]"
     style="perspective: 1000px"
   >
     <div
       ref="containerRef"
-      class="relative flex items-center justify-center transition-all duration-200 ease-linear" :class="[
-        $props.class,
-      ]"
+      class="relative flex items-center justify-center transition-all duration-200 ease-linear"
+      :class="[props.class]"
       style="transform-style: preserve-3d"
       @mouseenter="handleMouseEnter"
       @mousemove="handleMouseMove"

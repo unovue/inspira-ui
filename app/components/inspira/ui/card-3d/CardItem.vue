@@ -1,19 +1,29 @@
 <script setup lang="ts">
-import type {Ref} from "vue";
-import type { useMouseState } from "@/composables/useMouseState";
-import { inject, ref,  watch } from "vue";
-import { cn } from "@/lib/utils";
+import type { useMouseState } from "~/composables/useMouseState";
 
-const props = defineProps({
-  as: { type: String, default: "div" },
-  class: String,
-  translateX: { type: [Number, String], default: 0 },
-  translateY: { type: [Number, String], default: 0 },
-  translateZ: { type: [Number, String], default: 0 },
-  rotateX: { type: [Number, String], default: 0 },
-  rotateY: { type: [Number, String], default: 0 },
-  rotateZ: { type: [Number, String], default: 0 },
-});
+interface Props {
+  as?: string;
+  class?: string;
+
+  translateX?: number;
+  translateY?: number;
+  translateZ?: number;
+
+  rotateX?: number;
+  rotateY?: number;
+  rotateZ?: number;
+}
+
+const {
+  as = "div",
+  translateX = 0,
+  translateY = 0,
+  translateZ = 0,
+  rotateX = 0,
+  rotateY = 0,
+  rotateZ = 0,
+  ...props
+} = defineProps<Props>();
 
 const refElement = ref<HTMLElement | null>(null);
 
@@ -23,7 +33,7 @@ function handleAnimation(isMouseEntered: Readonly<Ref<boolean, boolean>>) {
   if (!refElement.value) return;
 
   if (isMouseEntered) {
-    refElement.value.style.transform = `translateX(${props.translateX}px) translateY(${props.translateY}px) translateZ(${props.translateZ}px) rotateX(${props.rotateX}deg) rotateY(${props.rotateY}deg) rotateZ(${props.rotateZ}deg)`;
+    refElement.value.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
   } else {
     refElement.value.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
   }
@@ -36,7 +46,8 @@ watch(mouseState.isMouseEntered, handleAnimation, { immediate: true });
   <component
     :is="as"
     ref="refElement"
-    :class="cn('w-fit transition duration-500 ease-in-out', $props.class)"
+    class="w-fit transition duration-500 ease-in-out"
+    :class="[props.class]"
   >
     <slot />
   </component>

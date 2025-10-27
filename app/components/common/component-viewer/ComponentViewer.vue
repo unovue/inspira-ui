@@ -208,7 +208,7 @@ onMounted(() => {
       v-if="showInstallation"
       #creditsTab
     >
-      <UPageCard>
+      <UPageCard class="bg-default/15">
         <slot name="credits" />
       </UPageCard>
     </template>

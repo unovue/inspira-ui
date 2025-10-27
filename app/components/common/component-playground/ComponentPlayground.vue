@@ -2,7 +2,7 @@
   <div class="flex w-full flex-col items-start justify-start gap-4">
     <UPageCard
       variant="outline"
-      class="w-full"
+      class="bg-default/15 w-full"
     >
       <slot name="component" />
     </UPageCard>

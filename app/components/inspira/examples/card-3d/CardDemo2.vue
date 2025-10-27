@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { CardBody, CardContainer, CardItem } from "~/components/content/inspira/ui/card-3d";
+import { CardBody, CardContainer, CardItem } from "~/components/inspira/ui/card-3d";
 </script>
 
 <template>
@@ -33,7 +33,7 @@ import { CardBody, CardContainer, CardItem } from "~/components/content/inspira/
             width="1000"
             class="h-60 w-full rounded-xl object-cover group-hover/card:shadow-xl"
             alt="thumbnail"
-          >
+          />
         </CardItem>
         <div class="mt-20 flex items-center justify-between">
           <CardItem

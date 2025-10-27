@@ -1,14 +1,15 @@
 <script setup lang="ts">
-import { cn } from "@/lib/utils";
+interface Props {
+  class?: string;
+}
 
-defineProps({
-  class: String,
-});
+const props = defineProps<Props>();
 </script>
 
 <template>
   <div
-    :class="cn('h-96 w-96', $props.class)"
+    class="h-96 w-96"
+    :class="[props.class]"
     style="transform-style: preserve-3d"
   >
     <slot />
