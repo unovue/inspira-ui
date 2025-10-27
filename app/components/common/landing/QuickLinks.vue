@@ -30,7 +30,10 @@ const links = [
 </script>
 
 <template>
-  <UPageSection title="Quick Links">
+  <UPageSection
+    id="quickLinks"
+    title="Quick Links"
+  >
     <div class="grid grid-cols-2 gap-8 max-md:grid-cols-1">
       <UPageCard
         v-for="link in links"

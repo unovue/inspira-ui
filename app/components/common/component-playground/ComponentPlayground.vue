@@ -8,7 +8,7 @@
     </UPageCard>
     <UPageCard
       variant="naked"
-      class="w-full max-w-lg py-4"
+      class="w-full py-4"
       title="Playground"
       description="Play with following props and customize the component."
       :ui="{
@@ -16,7 +16,9 @@
         description: 'italic mb-4',
       }"
     >
-      <slot name="config" />
+      <div class="grid grid-cols-2 gap-4 max-md:grid-cols-1">
+        <slot name="config" />
+      </div>
     </UPageCard>
   </div>
 </template>

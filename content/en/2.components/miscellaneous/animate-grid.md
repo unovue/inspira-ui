@@ -13,11 +13,7 @@ tags: [css, tailwind, input]
 
 Add at least one SVG file to the same folder as your component and update the import in your component to use it
 
-#credits
-
-- Thanks to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for providing this component.
-
-::
+#api
 
 ## API
 
@@ -31,6 +27,8 @@ Add at least one SVG file to the same folder as your component and update the im
 | `cards`              | `[]`     | `"[{logo: 'src'}]"` | Cards to display in grid.                           |
 | `class`              | `string` | `""`                | Additional tailwind CSS classes for custom styling. |
 
-## Features
+#credits
 
-- **Slot-Based Content**: Supports a default slot to add content inside the Animate Grid container.
+- Thanks to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for providing this component.
+
+::

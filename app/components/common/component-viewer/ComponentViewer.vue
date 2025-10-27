@@ -131,7 +131,7 @@ onMounted(() => {
     size="xl"
     variant="pill"
     :items="items"
-    class="w-full"
+    class="min-h-[60vh] w-full"
     :ui="{
       list: 'w-fit bg-transparent gap-4 self-start',
       trigger: 'w-fit outline outline-neutral-200 dark:outline-neutral-800',
@@ -143,6 +143,11 @@ onMounted(() => {
       <ClientOnly>
         <ConfigComponent />
       </ClientOnly>
+
+      <slot
+        name="api"
+        class="my-4"
+      />
     </template>
 
     <template #code>
@@ -203,7 +208,9 @@ onMounted(() => {
       v-if="showInstallation"
       #creditsTab
     >
-      <slot name="credits" />
+      <UPageCard>
+        <slot name="credits" />
+      </UPageCard>
     </template>
   </UTabs>
 </template>

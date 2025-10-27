@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+const { locale } = useDocusI18n();
+
+const componentPath = computed(() => `/${locale.value}/components`);
+</script>
+
 <template>
   <div
     class="relative flex h-full min-h-[75vh] w-full flex-col items-center justify-center gap-4 p-8 max-lg:p-6"
@@ -46,6 +52,24 @@
       <span class="text-muted text-center text-2xl font-normal max-lg:text-xl">
         Whether you're starting a new project or refining a current one, this is the place to begin.
       </span>
+      <div class="flex items-center justify-center gap-4">
+        <NuxtLink :href="componentPath">
+          <UButton
+            label="Components"
+            size="xl"
+            variant="subtle"
+          />
+        </NuxtLink>
+        <NuxtLink
+          href="https://pro.inspira-ui.com"
+          target="_blank"
+        >
+          <UButton
+            label="Get Premium"
+            size="xl"
+          />
+        </NuxtLink>
+      </div>
     </div>
   </div>
 </template>

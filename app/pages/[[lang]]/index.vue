@@ -169,6 +169,12 @@ const editLink = computed(() => {
         </template>
       </UContentToc>
     </template>
+    <template
+      v-else
+      #right
+    >
+      <div />
+    </template>
   </UPage>
   <UPage v-else-if="page && isLandingPage">
     <UPageBody class="container mx-auto max-w-6xl px-4">
