@@ -16,6 +16,11 @@ export default defineNuxtConfig({
     mdc: true,
   },
 
+  colorMode: {
+    preference: "dark",
+    fallback: "dark",
+  },
+
   css: ["~/assets/css/main.css"],
 
   i18n: {

@@ -65,7 +65,7 @@ const filteredComponents = computed(() => {
         :key="component.id"
         :title="component.title"
         :description="component.description"
-        class="relative h-44 w-full cursor-pointer bg-neutral-50 hover:active:scale-[98%] min-md:h-56 dark:bg-neutral-900/50"
+        class="bg-default/15 hover:bg-default/25 relative h-44 w-full cursor-pointer hover:active:scale-[98%] min-md:h-56"
         :ui="{
           title: 'text-lg',
           description: ' text-ellipsis line-clamp-2',

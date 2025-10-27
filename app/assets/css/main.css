@@ -15,3 +15,16 @@
 .form-field {
   @apply bg-muted/40 flex items-center justify-between gap-4 rounded-lg px-4 py-2 max-sm:flex-col;
 }
+
+@utility pattern-background-l {
+  background:
+    radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.35), transparent 60%),
+    radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.4), transparent 60%);
+}
+
+@utility pattern-background-d {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 40%),
+    linear-gradient(120deg, #0f0e17 0%, #1a1b26 100%);
+}

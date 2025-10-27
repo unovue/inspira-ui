@@ -19,7 +19,7 @@ const items = computed(() =>
 <template>
   <UHeader
     title=""
-    class="hidden items-center justify-between lg:flex"
+    class="hidden items-center justify-between border-none lg:flex"
   >
     <UNavigationMenu
       :items="items"

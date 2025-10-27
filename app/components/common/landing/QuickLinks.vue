@@ -39,7 +39,7 @@ const links = [
         v-for="link in links"
         :key="link.to"
         v-bind="link"
-        spotlight
+        class="bg-default/15 hover:bg-default/25"
       />
     </div>
   </UPageSection>

@@ -3,5 +3,10 @@ export default defineAppConfig({
     colors: {
       neutral: "zinc",
     },
+    header: {
+      slots: {
+        root: "bg-default/15",
+      },
+    },
   },
 });
