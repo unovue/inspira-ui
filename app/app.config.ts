@@ -8,5 +8,10 @@ export default defineAppConfig({
         root: "bg-default/15",
       },
     },
+    contentSearch: {
+      slots: {
+        modal: "bg-default/25 backdrop-blur-xl",
+      },
+    },
   },
 });

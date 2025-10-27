@@ -24,6 +24,7 @@ const links = computed(() =>
     :to="localePath('/')"
     :title="appConfig.header?.title || site.name"
     mode="drawer"
+    class="bg-default/15"
   >
     <AppHeaderCenter />
 
