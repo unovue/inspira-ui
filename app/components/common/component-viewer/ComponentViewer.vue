@@ -133,7 +133,7 @@ onMounted(() => {
     :items="items"
     class="min-h-[60vh] w-full"
     :ui="{
-      list: 'w-fit bg-transparent gap-4 self-start',
+      list: 'w-fit max-sm:w-full bg-transparent gap-4 self-start overflow-scroll',
       trigger: 'w-fit outline outline-neutral-200 dark:outline-neutral-800',
       content: 'py-4',
     }"

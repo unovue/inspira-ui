@@ -91,7 +91,7 @@ const props = withDefaults(defineProps<Props>(), {
 <template>
   <CardContainer>
     <CardBody
-      class="group/card relative size-auto h-auto rounded-xl border border-black/[0.1] bg-gray-50 p-6 sm:w-[30rem] dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]"
+      class="group/card relative h-auto w-fit rounded-xl border border-black/[0.1] bg-gray-50 p-6 sm:w-[30rem] dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]"
     >
       <CardItem
         v-bind="props.title"
