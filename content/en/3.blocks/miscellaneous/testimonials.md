@@ -1,0 +1,20 @@
+---
+title: Testimonials
+description: Show testimonials in style
+category: Testimonials
+tags: [css, tailwind, testimonials]
+---
+
+### With skewed marquee
+
+::ComponentLoader{label="Preview" componentName="SkewedMarqueeTestimonials" type="blocks" id="testimonials"}
+::
+
+### With linear marquee
+
+::ComponentLoader{label="Preview" componentName="LinearMarqueeTestimonials" type="blocks" id="testimonials"}
+::
+
+#### Components used
+
+- [Marquee & Review](https://inspira-ui.com/docs/components/miscellaneous/marquee) component.
