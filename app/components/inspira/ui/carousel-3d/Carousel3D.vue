@@ -1,10 +1,9 @@
 <script lang="ts" setup>
-import type {AnimationPlaybackControls} from "motion-v";
+import type { AnimationPlaybackControls } from "motion-v";
 import type { HTMLAttributes } from "vue";
-import { animate  } from "motion-v";
+import { animate } from "motion-v";
 import * as THREE from "three";
 import { CSS3DObject, CSS3DRenderer } from "three/addons/renderers/CSS3DRenderer.js";
-import { cn } from "@/lib/utils";
 
 interface Props {
   items?: unknown[];
@@ -166,12 +165,12 @@ onBeforeUnmount(() => {
 <template>
   <div
     ref="carouselContainer"
-    :class="cn('relative h-[60vh] w-full', props.containerClass)"
+    class="relative h-[60vh] w-full"
+    :class="[props.containerClass]"
   >
     <div
-      :class="
-        cn('absolute top-[40%] left-0 z-[100] h-[80%] w-full translate-y-[-50%]', props.class)
-      "
+      class="absolute top-[40%] left-0 z-[100] h-[80%] w-full translate-y-[-50%]"
+      :class="[props.class]"
       @mousedown="onDragStart"
       @mouseup="onDragEnd"
       @mouseleave="onDragEnd"

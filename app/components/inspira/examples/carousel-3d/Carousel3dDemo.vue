@@ -1,4 +1,11 @@
 <script setup lang="ts">
+interface Props {
+  width?: number;
+  height?: number;
+}
+
+const { width = 450, height = 600 } = defineProps<Props>();
+
 const items = [
   "https://images.pexels.com/photos/799443/pexels-photo-799443.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   "https://images.pexels.com/photos/16245254/pexels-photo-16245254/free-photo-of-chatgpt-a-chatbot-for-your-website.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
@@ -12,5 +19,9 @@ const items = [
 </script>
 
 <template>
-  <Carousel3D :items="items" />
+  <Carousel3D
+    :items="items"
+    :width="width"
+    :height="height"
+  />
 </template>
