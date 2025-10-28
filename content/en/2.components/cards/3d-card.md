@@ -58,3 +58,9 @@ The `CardItem` component represents individual items within the 3D card. It supp
 > 💡 **_Important Note:_**
 >
 > If you are using `CardItem` inside a `div`, add `style="transform-style: preserve-3d;"` to the div to make `translate-z` prop to work.
+
+#credits
+
+- Ported from Aceternity UI 3D Card Component.
+
+::
