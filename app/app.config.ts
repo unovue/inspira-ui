@@ -14,4 +14,20 @@ export default defineAppConfig({
       },
     },
   },
+  toc: {
+    // Rename the title of the table of contents
+    title: "On this page",
+    // Add a bottom section to the table of contents
+    bottom: {
+      title: "Community",
+      links: [
+        {
+          icon: "i-lucide-book-open",
+          label: "Nuxt UI docs",
+          to: "https://ui.nuxt.com/getting-started/installation/nuxt",
+          target: "_blank",
+        },
+      ],
+    },
+  },
 });

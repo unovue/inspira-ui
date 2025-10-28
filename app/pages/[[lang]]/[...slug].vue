@@ -2,31 +2,18 @@
 import type { Collections, ContentNavigationItem, DocsEnCollectionItem } from "@nuxt/content";
 import { findPageHeadline } from "@nuxt/content/utils";
 import { kebabCase } from "scule";
-import { addPrerenderPath } from "@/utils/prerender";
+import { addPrerenderPath } from "../../utils/prerender";
+
+definePageMeta({
+  layout: "docs",
+});
 
 const route = useRoute();
 const { locale, isEnabled, t } = useDocusI18n();
 const appConfig = useAppConfig();
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
 
-const isLandingPage = computed(() => {
-  return (isEnabled.value ? `/${locale.value}` : "/") === route.path.replace(/\/$/, "");
-});
-
-const pageType = isLandingPage.value ? "landing" : "docs";
-
-definePageMeta({
-  layout: false,
-  middleware: (to) => {
-    // Match /en or /en/ (with or without trailing slash)
-    const localeMatch = to.path.match(/^\/([a-z]{2})\/?$/);
-    const isLanding = to.path === "/" || to.path === "//" || localeMatch !== null;
-
-    setPageLayout(isLanding ? "default" : "docs");
-  },
-});
-
-const collectionName = computed(() => (isEnabled.value ? `${pageType}_${locale.value}` : pageType));
+const collectionName = computed(() => (isEnabled.value ? `docs_${locale.value}` : "docs"));
 
 const [{ data: page }, { data: surround }] = await Promise.all([
   useAsyncData(
@@ -44,11 +31,7 @@ const [{ data: page }, { data: surround }] = await Promise.all([
 ]);
 
 if (!page.value) {
-  throw createError({
-    statusCode: 404,
-    statusMessage: "Page not found",
-    fatal: true,
-  });
+  throw createError({ statusCode: 404, statusMessage: "Page not found", fatal: true });
 }
 
 // Add the page path to the prerender list
@@ -97,7 +80,7 @@ const editLink = computed(() => {
 </script>
 
 <template>
-  <UPage v-if="page && !isLandingPage">
+  <UPage v-if="page">
     <UPageHeader
       :title="page.title"
       :description="page.description"
@@ -155,13 +138,25 @@ const editLink = computed(() => {
       <UContentSurround :surround="surround" />
     </UPageBody>
 
-    <template #right>
+    <template
+      v-if="page?.body?.toc?.links?.length"
+      #right
+    >
+      <UContentToc
+        highlight
+        :title="appConfig.toc?.title || t('docs.toc')"
+        :links="page.body?.toc?.links"
+      >
+        <template #bottom>
+          <DocsAsideRightBottom />
+        </template>
+      </UContentToc>
+    </template>
+    <template
+      v-else
+      #right
+    >
       <DocsAsideRightBottom />
     </template>
-  </UPage>
-  <UPage v-else-if="page && isLandingPage">
-    <UPageBody class="container mx-auto max-w-6xl px-4">
-      <Landing />
-    </UPageBody>
   </UPage>
 </template>
