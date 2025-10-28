@@ -19,8 +19,8 @@ The `CardContainer` component serves as a wrapper for the 3D card effect. It man
 
 | Prop Name        | Type   | Default | Description                                                 |
 | ---------------- | ------ | ------- | ----------------------------------------------------------- |
-| `class`          | String | `null`  | Additional classes for styling the inner container element. |
-| `containerClass` | String | `null`  | Additional classes for styling the outer container element. |
+| `class`          | string | `null`  | Additional classes for styling the inner container element. |
+| `containerClass` | string | `null`  | Additional classes for styling the outer container element. |
 
 ---
 
@@ -32,7 +32,7 @@ The `CardBody` component is a flexible container with preserved 3D styling. It i
 
 | Prop Name | Type   | Default | Description                            |
 | --------- | ------ | ------- | -------------------------------------- |
-| `class`   | String | `null`  | Additional classes for custom styling. |
+| `class`   | string | `null`  | Additional classes for custom styling. |
 
 ---
 
@@ -44,7 +44,7 @@ The `CardItem` component represents individual items within the 3D card. It supp
 
 | Prop Name    | Type   | Default | Description                                                     |
 | ------------ | ------ | ------- | --------------------------------------------------------------- |
-| `as`         | String | `"div"` | The HTML tag or component to use for the item.                  |
+| `as`         | string | `"div"` | The HTML tag or component to use for the item.                  |
 | `class`      | string | `null`  | Additional classes for styling the item.                        |
 | `translateX` | string | `0`     | X-axis translation in pixels.                                   |
 | `translateY` | string | `0`     | Y-axis translation in pixels.                                   |
@@ -58,9 +58,3 @@ The `CardItem` component represents individual items within the 3D card. It supp
 > 💡 **_Important Note:_**
 >
 > If you are using `CardItem` inside a `div`, add `style="transform-style: preserve-3d;"` to the div to make `translate-z` prop to work.
-
-#credits
-
-- Ported from Aceternity UI 3D Card Component.
-
-::
