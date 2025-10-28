@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { cn } from "@/lib/utils";
 
 interface Props {
   max?: number;
@@ -35,8 +34,8 @@ const durationInSeconds = computed(() => `${props.duration}s`);
 
 <template>
   <div
-    class="progress-circle-base"
-    :class="cn('relative size-40 text-2xl font-semibold', props.class)"
+    class="progress-circle-base relative size-40 text-2xl font-semibold"
+    :class="[props.class]"
   >
     <svg
       fill="none"

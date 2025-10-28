@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { onBeforeUnmount, ref, watchEffect } from "vue";
-import { cn } from "@/lib/utils";
 
 interface AnimatedBeamProps {
   class?: string;
@@ -38,10 +37,11 @@ const props = withDefaults(defineProps<AnimatedBeamProps>(), {
   endYOffset: 0,
 });
 
-const id = `beam-${  Math.random().toString(36).substring(2, 10)}`;
+const id = `beam-${Math.random().toString(36).substring(2, 10)}`;
 const isVertical = ref(false);
 const isRightToLeft = ref(false);
 const isBottomToTop = ref(false);
+
 const x1 = computed(() => {
   const direction = props.reverse ? !isRightToLeft.value : isRightToLeft.value;
   return direction ? "90%; -10%;" : "10%; 110%;";
@@ -70,7 +70,7 @@ let resizeObserver: ResizeObserver | undefined;
 const { stop: stopEffect } = watchEffect(effect);
 
 function effect() {
-  if (resizeObserver == undefined && props.containerRef != null) {
+  if (resizeObserver === undefined && props.containerRef != null) {
     resizeObserver = new ResizeObserver(() => {
       updatePath();
     });
@@ -120,7 +120,8 @@ onBeforeUnmount(() => {
     :width="svgDimensions.width"
     :height="svgDimensions.height"
     xmlns="http://www.w3.org/2000/svg"
-    :class="cn('pointer-events-none absolute top-0 left-0 transform-gpu stroke-2', $props.class)"
+    class="pointer-events-none absolute top-0 left-0 transform-gpu stroke-2"
+    :class="[props.class]"
     :viewBox="`0 0 ${svgDimensions.width} ${svgDimensions.height}`"
   >
     <path

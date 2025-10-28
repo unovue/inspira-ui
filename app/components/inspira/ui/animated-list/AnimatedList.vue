@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { Motion } from "motion-v";
 import { computed, onMounted, ref, useSlots } from "vue";
-import { cn } from "@/lib/utils";
 
 interface Props {
   class?: string;
@@ -50,7 +49,10 @@ async function wait(ms: number) {
 </script>
 
 <template>
-  <div :class="cn('flex flex-col items-center gap-4', $props.class)">
+  <div
+    class="flex flex-col items-center gap-4"
+    :class="[props.class]"
+  >
     <transition-group
       name="list"
       tag="div"
@@ -78,7 +80,7 @@ async function wait(ms: number) {
           stiffness: 350,
           damping: 40,
         }"
-        :class="cn('mx-auto w-full')"
+        class="mx-auto w-full"
       >
         <component :is="data.node" />
       </Motion>

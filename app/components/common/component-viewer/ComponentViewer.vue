@@ -21,8 +21,6 @@ const {
   config,
 } = defineProps<Props>();
 
-const ConfigComponent = resolveComponent(config);
-
 const items = ref<TabsItem[]>([
   {
     label: "Preview",
@@ -141,7 +139,7 @@ onMounted(() => {
   >
     <template #preview>
       <ClientOnly>
-        <ConfigComponent />
+        <component :is="config" />
       </ClientOnly>
 
       <slot
