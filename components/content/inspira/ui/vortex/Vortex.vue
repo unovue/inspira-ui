@@ -21,7 +21,7 @@ import { createNoise3D } from "simplex-noise";
 import { onMounted, onUnmounted } from "vue";
 import { templateRef } from "@vueuse/core";
 import { cn } from "@/lib/utils";
-
+import { useDebounceFn } from "@vueuse/core";
 const TAU = 2 * Math.PI;
 const BASE_TTL = 50;
 const RANGE_TTL = 150;
@@ -130,15 +130,15 @@ function updateParticle(i: number) {
   const props = particleProps.value;
   const context = ctx.value;
 
-  particleCache.x = props[i];
-  particleCache.y = props[i + 1];
-  particleCache.vx = props[i + 2];
-  particleCache.vy = props[i + 3];
-  particleCache.life = props[i + 4];
-  particleCache.ttl = props[i + 5];
-  particleCache.speed = props[i + 6];
-  particleCache.radius = props[i + 7];
-  particleCache.hue = props[i + 8];
+  particleCache.x = props[i]!;
+  particleCache.y = props[i + 1]!;
+  particleCache.vx = props[i + 2]!;
+  particleCache.vy = props[i + 3]!;
+  particleCache.life = props[i + 4]!;
+  particleCache.ttl = props[i + 5]!;
+  particleCache.speed = props[i + 6]!;
+  particleCache.radius = props[i + 7]!;
+  particleCache.hue = props[i + 8]!;
 
   const n =
     noise3D(particleCache.x * X_OFF, particleCache.y * Y_OFF, tick.value * Z_OFF) *
