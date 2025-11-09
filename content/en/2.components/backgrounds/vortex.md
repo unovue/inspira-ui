@@ -5,56 +5,9 @@ category: Background
 tags: [css, tailwind, background, aceternity-ui, motion-v, simplex-noise]
 ---
 
-::ComponentLoader{label="Preview" componentName="VortexDemo" type="examples" id="vortex"}
-::
+::ComponentViewer{demoFile="VortexDemo.vue" config="VortexConfig" componentId="vortex" :componentFiles='["Vortex.vue"]' dependencies="simplex-noise"}
 
-::alert{type="info"}
-**Note:** This component requires `simplex-noise` as a dependency.
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="vortex"}
-::
-
-## Install Manually
-
-::steps{level=4}
-
-#### Install the dependencies
-
-::code-group
-
-```bash [npm]
-npm install simplex-noise
-```
-
-```bash [pnpm]
-pnpm install simplex-noise
-```
-
-```bash [bun]
-bun add simplex-noise
-```
-
-```bash [yarn]
-yarn add simplex-noise
-```
-
-::
-
-Copy and paste the following code
-
-::CodeViewer{filename="Vortex.vue" language="vue" componentName="Vortex" type="ui" id="vortex"}  
-::
-::
-
-## Example
-
-Full page demo usage
-
-::ComponentLoader{label="Preview" componentName="VortexFullPageDemo" type="examples" id="vortex"}
-::
+#api
 
 ## API
 
@@ -71,11 +24,9 @@ Full page demo usage
 | `rangeRadius`     | `number` | `2`         | Range of radius variation for particles.             |
 | `backgroundColor` | `string` | `"#000000"` | Background color of the canvas.                      |
 
-## Features
-
-- **Slot Support**: Easily add any content inside the component using the default slot.
-
-## Credits
+#credits
 
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/vortex).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.
+
+::

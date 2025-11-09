@@ -5,49 +5,9 @@ category: Background
 tags: [css, tailwind, background, simplex-noise, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="WavyBackgroundDemo" type="examples" id="wavy-background"}
-::
+::ComponentViewer{demoFile="WavyBackgroundDemo.vue" config="WavyBackgroundConfig" componentId="wavy-background" :componentFiles='["WavyBackground.vue"]' dependencies="simplex-noise"}
 
-::alert{type="info"}
-**Note:** This component requires `simplex-noise` as a dependency.
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="wavy-background"}
-::
-
-## Install Manually
-
-::steps{level=4}
-
-#### Install the dependencies
-
-::code-group
-
-```bash [npm]
-npm install simplex-noise
-```
-
-```bash [pnpm]
-pnpm install simplex-noise
-```
-
-```bash [bun]
-bun add simplex-noise
-```
-
-```bash [yarn]
-yarn add simplex-noise
-```
-
-::
-
-Copy and paste the following code
-
-::CodeViewer{filename="WavyBackground.vue" language="vue" componentName="WavyBackground" type="ui" id="wavy-background"}  
-::
-::
+#api
 
 ## API
 
@@ -63,11 +23,9 @@ Copy and paste the following code
 | `waveOpacity`    | `number`           | `0.5`                                                     | Base radius of particles.                                  |
 | `[key: string]`  | `any`              | `-`                                                       | Range of radius variation for particles.                   |
 
-## Features
-
-- **Slot Support**: Easily add any content inside the component using the default slot.
-
-## Credits
+#credits
 
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/wavy-background).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.
+
+::

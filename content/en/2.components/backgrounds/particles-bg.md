@@ -5,20 +5,9 @@ category: Background
 tags: [css, tailwind, background, magic-ui, canvas]
 ---
 
-::ComponentLoader{label="Preview" componentName="ParticlesBgDemo" type="examples"}
-::
+::ComponentViewer{demoFile="ParticlesBgDemo.vue" config="ParticlesBgConfig" componentId="particles-bg" :componentFiles='["ParticlesBg.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="particles-bg"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="ParticlesBg.vue" language="vue" componentName="ParticlesBg" type="ui" id="particles-bg"}
-::
+#api
 
 ## API
 
@@ -29,7 +18,9 @@ Copy and paste the following code
 | `staticity` | `number` | `50`    | Determines how much the particles move based on the mouse's proximity. Higher values reduce movement.       |
 | `ease`      | `number` | `50`    | Controls the easing effect of particle movement; lower values make particles follow the mouse more closely. |
 
-## Credits
+#credits
 
 - Credits to [Magic UI](https://magicui.design/docs/components/particles) for this fantastic component.
 - Credit to [Prodromos Pantos](https://github.com/prpanto) for porting the original component to Vue & Nuxt.
+
+::

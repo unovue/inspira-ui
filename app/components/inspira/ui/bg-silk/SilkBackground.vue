@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
-import { cn } from "~/lib/utils";
 
 interface Props {
   class?: HTMLAttributes["class"];
@@ -80,7 +79,10 @@ void mainImage(out vec4 fragColor, vec2 fragCoord) {
 </script>
 
 <template>
-  <div :class="cn('absolute inset-0', props.class)">
+  <div
+    class="absolute inset-0"
+    :class="[props.class]"
+  >
     <ShaderToy
       :shader-code="shaderCode"
       :hue="props.hue"

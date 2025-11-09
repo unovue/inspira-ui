@@ -22,7 +22,6 @@ import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
 import { onMounted, onUnmounted, ref } from "vue";
-import { cn } from "@/lib/utils";
 
 const props = defineProps({
   particleCount: {
@@ -53,7 +52,7 @@ const dummyO = new Object3D();
 const dummyV = new Vector3();
 const pointer = new Vector2();
 
-const light = new PointLight(0x0060FF, 0.5);
+const light = new PointLight(0x0060ff, 0.5);
 const raycaster = new Raycaster();
 
 let renderer: WebGLRenderer;
@@ -105,12 +104,12 @@ function setupScene() {
   camera.updateProjectionMatrix();
 
   const ambientLight = new AmbientLight(0x808080);
-  const pointLight1 = new PointLight(0xFF6000);
+  const pointLight1 = new PointLight(0xff6000);
 
-  const pointLight2 = new PointLight(0xFF6000, 0.5);
+  const pointLight2 = new PointLight(0xff6000, 0.5);
   pointLight2.position.set(100, 0, 0);
 
-  const pointLight3 = new PointLight(0x0000FF, 0.5);
+  const pointLight3 = new PointLight(0x0000ff, 0.5);
   pointLight3.position.set(-100, 0, 0);
 
   const boxGeometry = new BoxGeometry(2, 2, 10);
@@ -263,7 +262,8 @@ onUnmounted(() => {
 <template>
   <div
     ref="whirlpoolCanvasContainerRef"
-    :class="cn('relative h-full w-full', $props.class)"
+    class="relative h-full w-full"
+    :class="[$props.class]"
   >
     <canvas
       ref="whirlpoolCanvasRef"

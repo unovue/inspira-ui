@@ -2,7 +2,6 @@
 import type { SpringOptions } from "motion-v";
 import { motion, useMotionValue, useSpring } from "motion-v";
 import { computed, onMounted, ref, watch } from "vue";
-import { cn } from "@/lib/utils";
 
 interface StarsBackgroundProps {
   factor?: number;
@@ -88,12 +87,8 @@ const starLayer3Transition = computed(() => ({
 
 <template>
   <div
-    :class="
-      cn(
-        'relative size-full overflow-hidden bg-[radial-gradient(ellipse_at_bottom,_#262626_0%,_#000_100%)]',
-        props.class,
-      )
-    "
+    class="relative size-full overflow-hidden bg-[radial-gradient(ellipse_at_bottom,_#262626_0%,_#000_100%)]"
+    :class="[props.class]"
     @mousemove="handleMouseMove"
   >
     <motion.div :style="{ x: springX, y: springY }">

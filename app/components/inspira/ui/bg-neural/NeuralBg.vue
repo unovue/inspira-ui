@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import type {HTMLAttributes} from "vue";
+import type { HTMLAttributes } from "vue";
 import { Camera, Mesh, Plane, Program, Renderer, Transform } from "ogl";
-import {  onMounted, onUnmounted, ref, watch } from "vue";
-import { cn } from "~/lib/utils";
+import { onMounted, onUnmounted, ref, watch } from "vue";
 
 interface Props {
   hue?: number;
@@ -308,6 +307,7 @@ onUnmounted(() => {
 <template>
   <canvas
     ref="canvasRef"
-    :class="cn('pointer-events-none absolute inset-0 size-full opacity-95', props.class)"
+    class="pointer-events-none absolute inset-0 size-full opacity-95"
+    :class="[props.class]"
   />
 </template>

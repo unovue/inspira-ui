@@ -5,39 +5,9 @@ category: Background
 tags: [css, tailwind, background, magic-ui]
 ---
 
-Grid background with dot
-::ComponentLoader{label="Preview" componentName="PatternBackgroundDotDemo" type="examples" id="pattern-background"}
-::
+::ComponentViewer{demoFile="PatternBackgroundDotDemo.vue" config="PatternBackgroundConfig" componentId="pattern-background" :componentFiles='["PatternBackground.vue", "index.ts"]' dependencies="class-variance-authority"}
 
-## Install using CLI
-
-::InstallationCli{componentId="pattern-background"}
-::
-
-## Install Manually
-
-Copy and paste the following code in the same folder
-
-::code-group
-
-:CodeViewerTab{label="PatternBackground.vue" language="vue" componentName="PatternBackground" type="ui" id="pattern-background"}
-:CodeViewerTab{filename="index.ts" language="typescript" componentName="index" type="ui" id="pattern-background" extension="ts"}
-
-::
-
-## Examples
-
-Grid background with big dot and ellipse on top
-::ComponentLoader{label="Preview" componentName="PatternBackgroundBigDotDemo" type="examples" id="pattern-background"}
-::
-
-Grid background without animation
-::ComponentLoader{label="Preview" componentName="PatternBackgroundGridDemo" type="examples" id="pattern-background"}
-::
-
-Small grid background with animation
-::ComponentLoader{label="Preview" componentName="PatternBackgroundGridSmallDemo" type="examples" id="pattern-background"}
-::
+#api
 
 ## API
 
@@ -50,13 +20,11 @@ Small grid background with animation
 | `mask`      | `ellipse` \| `ellipse-top`                                                                             | `ellipse` | Add a mask over the background pattern. You can use the const `PATTERN_BACKGROUND_MASK.`                                                                       |
 | `speed`     | `number`                                                                                               | `10000`   | Duration of the animation in `ms`, the bigger it is, the slower the animation. (`20000` slower than `5000`). You can use the const `PATTERN_BACKGROUND_SPEED.` |
 
-### Custom variants, values and constants
-
-You can customize your needs directly within the `index.ts` file. See code below.
-
-## Credits
+#credits
 
 - Inspired by [Magic UI's Dot Pattern](https://magicui.design/docs/components/dot-pattern) component.
 - Inspired by [Magic UI's Grid Pattern](https://magicui.design/docs/components/grid-pattern) component.
 - Inspired by [Magic UI's Animated Grid Pattern](https://magicui.design/docs/components/animated-grid-pattern) component.
 - Credits to [Nathan De Pachtere](https://nathandepachtere.com/) for porting this component.
+
+::

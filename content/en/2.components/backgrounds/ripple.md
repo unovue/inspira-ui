@@ -5,41 +5,9 @@ category: Background
 tags: [css, tailwind, background, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="RippleDemo" type="examples" id="ripple"}
-::
+::ComponentViewer{demoFile="RippleDemo.vue" config="RippleConfig" componentId="ripple" :componentFiles='["Ripple.vue", "RippleCircle.vue", "RippleContainer.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="ripple"}
-::
-
-## Install Manually
-
-Copy and paste the following code in the same folder
-
-::code-group
-
-:CodeViewerTab{label="Ripple.vue" language="vue" componentName="Ripple" type="ui" id="ripple"}
-:CodeViewerTab{filename="RippleCircle.vue" language="vue" componentName="RippleCircle" type="ui" id="ripple"}
-:CodeViewerTab{filename="RippleContainer.vue" language="vue" componentName="RippleContainer" type="ui" id="ripple"}
-::
-
-## Examples
-
-Only lines
-
-::ComponentLoader{label="Preview" componentName="RippleDemoLinesOnly" type="examples" id="ripple"}
-::
-
-Squared
-
-::ComponentLoader{label="Preview" componentName="RippleDemoSquared" type="examples" id="ripple"}
-::
-
-Blobed
-
-::ComponentLoader{label="Preview" componentName="RippleDemoBlobed" type="examples" id="ripple"}
-::
+#api
 
 ## API
 
@@ -53,8 +21,10 @@ Blobed
 | `waveSpeed`                   | `number` | `80`        | The animation speed for the wave effect, measured in ms.               |
 | `numberOfCircles`             | `number` | `7`         | The number of ripple circles to render.                                |
 
-## Credits
+#credits
 
 - Credits to [Magic UI](https://magicui.design/docs/components/ripple).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.
 - Credits to [Nathan De Pachtere](https://nathandepachtere.com/) for updating this component.
+
+::

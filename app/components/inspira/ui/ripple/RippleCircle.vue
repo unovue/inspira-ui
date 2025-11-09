@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { cn } from "@/lib/utils";
-
 interface Props {
   size?: number;
   class?: string;
@@ -16,7 +14,10 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <div :class="cn('absolute shadow-xl', 'animate-ripple-circle', props.class)" />
+  <div
+    class="animate-ripple-circle absolute shadow-xl"
+    :class="[props.class]"
+  />
 </template>
 
 <style scoped>
@@ -25,9 +26,9 @@ const props = withDefaults(defineProps<Props>(), {
   border-width: 1px;
   top: 50%;
   left: 50%;
-  width: v-bind('`${props.size  }px`');
-  height: v-bind('`${props.size  }px`');
-  animation-delay: v-bind('`${props.animationDelay  }ms`');
+  width: v-bind("`${props.size  }px`");
+  height: v-bind("`${props.size  }px`");
+  animation-delay: v-bind("`${props.animationDelay  }ms`");
   opacity: v-bind("props.opacity");
   transform: translate(-50%, -50%) scale(1);
   border-style: v-bind("props.borderStyle");

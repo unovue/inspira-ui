@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { computed } from "vue";
-import { cn } from "@/lib/utils";
 import Beam from "./Beam.vue";
 
 interface Props {
@@ -49,7 +48,10 @@ const rightBeams = generateBeams();
 </script>
 
 <template>
-  <div :class="cn('relative rounded border md:p-20', props.class)">
+  <div
+    class="relative rounded border md:p-20"
+    :class="[props.class]"
+  >
     <div
       :style="{
         '--perspective': `${props.perspective}px`,

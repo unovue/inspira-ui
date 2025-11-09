@@ -2,7 +2,6 @@
 import { useElementSize } from "@vueuse/core";
 import { getColors } from "theme-colors";
 import { onMounted, onUnmounted, ref, watch } from "vue";
-import { cn } from "@/lib/utils";
 
 interface Props {
   class?: string;
@@ -83,9 +82,8 @@ function calcGrid() {
 
 watch(width, calcGrid);
 
- 
 let intervalId: NodeJS.Timeout | undefined;
- 
+
 let timeoutId: NodeJS.Timeout | undefined;
 
 onMounted(() => {
@@ -114,7 +112,8 @@ onUnmounted(() => {
         '--cell-size': `${width / cols}px`,
         '--grid-rows': rows - 1,
       }"
-      :class="cn('relative w-full', props.class)"
+      class="relative w-full"
+      :class="[props.class]"
     >
       <div
         ref="el"

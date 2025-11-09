@@ -2,7 +2,6 @@
 import { templateRef } from "@vueuse/core";
 import { createNoise3D } from "simplex-noise";
 import { onMounted, onUnmounted } from "vue";
-import { cn } from "@/lib/utils";
 
 const props = withDefaults(defineProps<VortexProps>(), {
   particleCount: 700,
@@ -235,7 +234,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div :class="cn('relative h-full w-full', props.containerClass)">
+  <div
+    class="relative h-full w-full"
+    :class="[props.containerClass]"
+  >
     <Motion
       ref="containerRef"
       as="div"
@@ -246,7 +248,10 @@ onUnmounted(() => {
       <canvas ref="canvasRef" />
     </Motion>
 
-    <div :class="cn('relative z-10', props.class)">
+    <div
+      class="relative z-10"
+      :class="[props.class]"
+    >
       <slot />
     </div>
   </div>

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { BaseProps as Props } from ".";
 import { computed } from "vue";
-import { cn } from "@/lib/utils";
 import {
   PATTERN_BACKGROUND_DIRECTION,
   PATTERN_BACKGROUND_SPEED,
@@ -23,21 +22,15 @@ const durationFormSpeed = computed(() => `${props.speed}ms`);
 
 <template>
   <div
-    :class="
-      cn(
-        patternBackgroundVariants({ variant, size }),
-        ` ${animate ? `move move-${ direction}` : ''} `,
-        props.class,
-      )
-    "
+    :class="[
+      patternBackgroundVariants({ variant, size }),
+      ` ${animate ? `move move-${direction}` : ''} `,
+      props.class,
+    ]"
   >
     <div
-      :class="
-        cn(
-          'pointer-events-none absolute inset-0 flex items-center justify-center',
-          patternBackgroundMaskVariants({ mask }),
-        )
-      "
+      class="pointer-events-none absolute inset-0 flex items-center justify-center"
+      :class="[patternBackgroundMaskVariants({ mask })]"
     />
     <slot />
   </div>

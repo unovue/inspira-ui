@@ -6,8 +6,9 @@ tags: [css, tailwind, background, shader-toy, ogl, webgl]
 badge: New
 ---
 
-::ComponentLoader{label="Preview" componentName="SilkBackgroundDemo" type="examples" id="bg-silk"}
-::
+::ComponentViewer{demoFile="SilkBackgroundDemo.vue" config="SilkBackgroundConfig" componentId="bg-silk" :componentFiles='["SilkBackground.vue"]'}
+
+#api
 
 ## API
 
@@ -21,33 +22,9 @@ badge: New
 
 > 💡 This component uses a full-screen absolute container by default. You can override positioning or stacking via the `class` prop.
 
-## Install using CLI
-
-::InstallationCli{componentId="bg-silk"}
-::
-
-## Install Manually
-
-::CodeViewer{filename="SilkBackground.vue" language="vue" componentName="SilkBackground" type="ui" id="bg-silk"}
-::
-
-## Features
-
-- **Shader-powered silk effect**: Based on a fragment shader that simulates soft silk motion using recursive trigonometry and noise.
-- **Real-time animation**: Runs on GPU with smooth transitions and natural waves.
-- **Interactive response**: Subtle mouse-based parallax and warping effects when the cursor is active.
-- **Custom color control**: Adjust hue, saturation, brightness, and animation speed using props.
-- **Lightweight and performant**: Optimized GLSL logic for modern GPUs and browsers.
-- **Modular**: Embeds the GLSL shader inside a `ShaderToy` wrapper component for easy reuse.
-
-## Notes
+#credits
 
 - Adapted from [this ShaderToy shader](https://www.shadertoy.com/view/X3yXRd) by Giorgi Azmaipharashvili (MIT License).
-- Designed primarily for decorative use, such as full-screen hero backgrounds or section dividers.
-- Shader uses a combination of sine wave functions, noise layers, and distance-based distortion.
-- Not recommended for low-end devices due to GPU intensity.
-
-## Credits
-
-- Embedded in a Vue component and adapted for dynamic input via props.
 - Inspired by silk textures and fluid motion patterns found in organic materials.
+
+::

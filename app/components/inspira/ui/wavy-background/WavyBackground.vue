@@ -2,7 +2,6 @@
 import { templateRef } from "@vueuse/core";
 import { createNoise3D } from "simplex-noise";
 import { onBeforeUnmount, onMounted, ref } from "vue";
-import { cn } from "@/lib/utils";
 
 interface WavyBackgroundProps {
   class?: string;
@@ -13,7 +12,6 @@ interface WavyBackgroundProps {
   blur?: number;
   speed?: "slow" | "fast";
   waveOpacity?: number;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
@@ -30,9 +28,9 @@ const noise = createNoise3D();
 
 // Declare variables with null
 let w: number;
-  let h: number;
-  let nt = 0;
-  let ctx: CanvasRenderingContext2D | null = null;
+let h: number;
+let nt = 0;
+let ctx: CanvasRenderingContext2D | null = null;
 let animationId: number;
 
 const canvasRef = templateRef<HTMLCanvasElement | null>("canvasRef");
@@ -106,14 +104,20 @@ onMounted(() => {
 </script>
 
 <template>
-  <div :class="cn('flex h-screen flex-col items-center justify-center', props.containerClass)">
+  <div
+    class="flex h-screen flex-col items-center justify-center"
+    :class="[props.containerClass]"
+  >
     <canvas
       id="canvas"
       ref="canvasRef"
       class="absolute z-0"
       :style="{ filter: isSafari ? `blur(${props.blur}px)` : undefined }"
     />
-    <div :class="cn('relative z-10', props.class)">
+    <div
+      class="relative z-10"
+      :class="[props.class]"
+    >
       <slot />
     </div>
   </div>

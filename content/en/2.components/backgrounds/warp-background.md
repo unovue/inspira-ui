@@ -5,24 +5,9 @@ category: Background
 tags: [css, tailwind, background, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="WarpBackgroundDemo" type="examples" id="warp-background"}
-::
+::ComponentViewer{demoFile="WarpBackgroundDemo.vue" config="WarpBackgroundConfig" componentId="warp-background" :componentFiles='["WarpBackground.vue", "Beam.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="warp-background"}
-::
-
-## Install Manually
-
-Copy and paste the following code in the same folder
-
-::code-group
-
-:CodeViewerTab{label="WarpBackground.vue" language="vue" componentName="WarpBackground" type="ui" id="warp-background"}
-:CodeViewerTab{filename="Beam.vue" language="vue" componentName="Beam" type="ui" id="warp-background"}
-
-::
+#api
 
 ## API
 
@@ -36,7 +21,9 @@ Copy and paste the following code in the same folder
 | `beamDuration` | `number` | `3`                    | The duration of the beams                 |
 | `gridColor`    | `string` | `"hsl(var(--border))"` | The color of the grid lines               |
 
-## Credits
+#credits
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Inspired and ported from [Magic UI WarpBackground](https://magicui.design/docs/components/warp-background).
+
+::

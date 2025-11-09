@@ -115,7 +115,7 @@ const editLink = computed(() => {
           :key="page.path + tag"
           :label="tag"
           variant="soft"
-          class="px-3 py-2 font-normal"
+          class="px-3 py-1 font-normal"
         />
       </div>
       <template #links>

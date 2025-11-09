@@ -5,20 +5,9 @@ category: Background
 tags: [css, tailwind, background, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="VideoTextDemo" type="examples" id="video-text"}
-::
+::ComponentViewer{demoFile="VideoTextDemo.vue" config="VideoTextConfig" componentId="video-text" :componentFiles='["VideoText.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="video-text"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="VideoText.vue" language="vue" componentName="VideoText" type="ui" id="video-text"}
-::
+#api
 
 ## API
 
@@ -36,7 +25,9 @@ Copy and paste the following code
 | `dominantBaseline` | `string`                         | `"middle"`     | Dominant baseline for the text mask.  |
 | `fontFamily`       | `string`                         | `"sans-serif"` | Font family for the text mask.        |
 
-## Credits
+#credits
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.
 - Ported from [Magic UI's Video Text](https://magicui.design/docs/components/video-text).
+
+::

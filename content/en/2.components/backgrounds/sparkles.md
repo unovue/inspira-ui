@@ -5,27 +5,9 @@ category: Background
 tags: [css, tailwind, background, canvas]
 ---
 
-::ComponentLoader{label="Preview" componentName="SparklesDemo" type="examples" id="sparkles"}
-::
+::ComponentViewer{demoFile="SparklesDemo.vue" config="SparklesConfig" componentId="sparkles" :componentFiles='["Sparkles.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="sparkles"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="Sparkles.vue" language="vue" componentName="Sparkles" type="ui" id="sparkles"}
-::
-
-## Examples
-
-Sparkles Full Page
-
-::ComponentLoader{label="Preview" componentName="SparklesFullPageDemo" type="examples" id="sparkles"}
-::
+#api
 
 ## API
 
@@ -38,8 +20,9 @@ Sparkles Full Page
 | `speed`           | `number` | `4`         | Movement speed multiplier. Higher values create faster movement.                       |
 | `particleDensity` | `number` | `120`       | Number of particles to render. Higher values create denser particle fields.            |
 
-## Credits
+#credits
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
-
 - Ported from [Aceternity UI's Sparkles](https://ui.aceternity.com/components/sparkles).
+
+::

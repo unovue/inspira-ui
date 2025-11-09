@@ -5,20 +5,9 @@ category: Background
 tags: [css, tailwind, background, canvas]
 ---
 
-::ComponentLoader{label="Preview" componentName="SnowfallBgDemo" type="examples" id="backgrounds"}
-::
+::ComponentViewer{demoFile="SnowfallBgDemo.vue" config="SnowfallBgConfig" componentId="snowfall-bg" :componentFiles='["SnowfallBg.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="snowfall-bg"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="SnowfallBg.vue" language="vue" componentName="SnowfallBg" type="ui" id="snowfall-bg"}
-::
+#api
 
 ## API
 
@@ -31,6 +20,8 @@ Copy and paste the following code
 | `minRadius` | `number` | `1`     | Minimum radius of snowflakes.                             |
 | `class`     | `string` | `null`  | Additional CSS classes to apply to the container element. |
 
-## Credits
+#credits
 
 - Inspired by natural snowfall effects.
+
+::

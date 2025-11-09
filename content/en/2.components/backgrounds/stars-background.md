@@ -5,8 +5,9 @@ category: Background
 tags: [css, tailwind, background, animate-ui, motion-v]
 ---
 
-::ComponentLoader{label="Preview" componentName="StarsBackgroundDemo" type="examples" id="bg-stars"}
-::
+::ComponentViewer{demoFile="StarsBackgroundDemo.vue" config="StarsBackgroundConfig" componentId="bg-stars" :componentFiles='["StarsBackground.vue"]'}
+
+#api
 
 ## API
 
@@ -20,24 +21,8 @@ tags: [css, tailwind, background, animate-ui, motion-v]
 
 > 💡 This component wraps a slot for children, so you can place other UI elements over the background.
 
-## Install using CLI
-
-::InstallationCli{componentId="bg-stars"}
-::
-
-## Install Manually
-
-::CodeViewer{filename="StarsBackground.vue" language="vue" componentName="StarsBackground" type="ui" id="bg-stars"}
-::
-
-## Features
-
-- **Animated starfield**: Renders three independently scrolling layers of stars with varying sizes and density.
-- **Parallax effect**: Responds to mouse movement with smooth spring physics, adding depth and realism.
-- **Customizable star density**: Each layer uses a different number of stars for natural variation.
-- **Slot support**: Acts as a visual container, allowing foreground UI or content to be layered on top.
-- **Responsive**
-
-## Credits
+#credits
 
 - Ported from [Animate UI](https://animate-ui.com/docs/backgrounds/stars)
+
+::
