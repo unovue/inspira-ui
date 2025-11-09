@@ -5,6 +5,5 @@
     <template #component>
       <StractiumBackgroundDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

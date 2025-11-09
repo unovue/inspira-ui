@@ -5,6 +5,5 @@
     <template #component>
       <BendingGalleryDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

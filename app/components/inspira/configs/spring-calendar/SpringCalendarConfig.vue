@@ -5,6 +5,5 @@
     <template #component>
       <SpringCalendarDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

@@ -5,6 +5,5 @@
     <template #component>
       <FileUploadDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

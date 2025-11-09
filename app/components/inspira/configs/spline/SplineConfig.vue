@@ -5,6 +5,5 @@
     <template #component>
       <SplineDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

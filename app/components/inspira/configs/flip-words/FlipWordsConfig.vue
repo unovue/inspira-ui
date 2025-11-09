@@ -5,6 +5,5 @@
     <template #component>
       <FlipWordsDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

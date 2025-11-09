@@ -5,6 +5,5 @@
     <template #component>
       <LineShadowTextDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

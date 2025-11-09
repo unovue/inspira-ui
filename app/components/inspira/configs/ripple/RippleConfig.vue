@@ -5,6 +5,5 @@
     <template #component>
       <RippleDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

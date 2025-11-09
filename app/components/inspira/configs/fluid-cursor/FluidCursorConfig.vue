@@ -5,6 +5,5 @@
     <template #component>
       <FluidCursorDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

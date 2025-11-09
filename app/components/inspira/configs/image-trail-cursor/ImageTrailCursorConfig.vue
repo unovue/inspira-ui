@@ -5,6 +5,5 @@
     <template #component>
       <ImageTrailCursorDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

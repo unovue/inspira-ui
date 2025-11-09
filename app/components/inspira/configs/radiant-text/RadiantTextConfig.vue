@@ -5,6 +5,5 @@
     <template #component>
       <RadiantTextDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

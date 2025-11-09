@@ -5,6 +5,5 @@
     <template #component>
       <LogoOrigamiDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

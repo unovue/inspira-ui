@@ -5,6 +5,5 @@
     <template #component>
       <BoxRevealDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

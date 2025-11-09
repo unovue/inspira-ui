@@ -5,6 +5,5 @@
     <template #component>
       <SparklesTextDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

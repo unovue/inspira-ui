@@ -5,6 +5,5 @@
     <template #component>
       <ColorPickerDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

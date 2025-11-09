@@ -5,6 +5,5 @@
     <template #component>
       <NeonBorderDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

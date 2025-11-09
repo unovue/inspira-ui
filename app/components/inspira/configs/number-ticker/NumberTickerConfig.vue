@@ -5,6 +5,5 @@
     <template #component>
       <NumberTickerDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

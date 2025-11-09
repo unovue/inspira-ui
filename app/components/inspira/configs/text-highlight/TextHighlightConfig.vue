@@ -5,6 +5,5 @@
     <template #component>
       <TextHighlightDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

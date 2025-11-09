@@ -5,6 +5,5 @@
     <template #component>
       <LampEffectDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

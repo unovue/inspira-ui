@@ -5,6 +5,5 @@
     <template #component>
       <AppleCardCarouselDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

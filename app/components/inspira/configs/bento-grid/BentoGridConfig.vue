@@ -5,6 +5,5 @@
     <template #component>
       <BentoGridDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

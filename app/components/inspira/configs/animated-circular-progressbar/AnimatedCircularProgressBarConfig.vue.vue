@@ -5,6 +5,5 @@
     <template #component>
       <AnimatedCircularProgressBarDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

@@ -5,6 +5,5 @@
     <template #component>
       <OrbitDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

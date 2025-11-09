@@ -6,6 +6,5 @@
       <!-- TODO: Need to update this -->
       <PatternBackgroundBigDotDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

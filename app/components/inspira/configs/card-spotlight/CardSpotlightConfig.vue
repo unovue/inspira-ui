@@ -5,6 +5,5 @@
     <template #component>
       <CardSpotlightDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

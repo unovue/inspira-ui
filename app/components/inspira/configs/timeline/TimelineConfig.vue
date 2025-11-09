@@ -5,6 +5,5 @@
     <template #component>
       <TimelineDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

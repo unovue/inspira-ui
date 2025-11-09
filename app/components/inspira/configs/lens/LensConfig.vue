@@ -5,6 +5,5 @@
     <template #component>
       <LensDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

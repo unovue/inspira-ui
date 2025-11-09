@@ -5,6 +5,5 @@
     <template #component>
       <IconLogoCloudDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

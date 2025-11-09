@@ -5,6 +5,5 @@
     <template #component>
       <ColourfulTextDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

@@ -5,6 +5,5 @@
     <template #component>
       <MorphingTextDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

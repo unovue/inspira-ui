@@ -5,6 +5,5 @@
     <template #component>
       <MeteorsDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

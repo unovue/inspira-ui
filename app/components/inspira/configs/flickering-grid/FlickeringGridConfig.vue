@@ -5,6 +5,5 @@
     <template #component>
       <FlickeringGridDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

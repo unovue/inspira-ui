@@ -5,6 +5,5 @@
     <template #component>
       <TetrisDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

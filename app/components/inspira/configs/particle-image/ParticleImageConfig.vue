@@ -5,6 +5,5 @@
     <template #component>
       <ParticleImageDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

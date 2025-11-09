@@ -5,6 +5,5 @@
     <template #component>
       <ConfettiDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

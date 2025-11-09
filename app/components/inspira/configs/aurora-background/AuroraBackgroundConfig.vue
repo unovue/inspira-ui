@@ -5,6 +5,5 @@
     <template #component>
       <AuroraBackgroundDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

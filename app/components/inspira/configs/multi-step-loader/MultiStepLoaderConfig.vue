@@ -5,6 +5,5 @@
     <template #component>
       <MultiStepLoaderDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

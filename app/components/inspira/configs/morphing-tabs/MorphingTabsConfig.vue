@@ -5,6 +5,5 @@
     <template #component>
       <MorphingTabsDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

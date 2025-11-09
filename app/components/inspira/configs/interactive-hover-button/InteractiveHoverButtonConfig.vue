@@ -5,6 +5,5 @@
     <template #component>
       <InteractiveHoverButtonDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

@@ -5,6 +5,5 @@
     <template #component>
       <TextRevealDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

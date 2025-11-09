@@ -5,6 +5,5 @@
     <template #component>
       <LiquidLogoDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

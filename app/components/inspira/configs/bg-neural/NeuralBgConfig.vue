@@ -5,6 +5,5 @@
     <template #component>
       <NeuralBgDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

@@ -5,6 +5,5 @@
     <template #component>
       <FallingStarsBgDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

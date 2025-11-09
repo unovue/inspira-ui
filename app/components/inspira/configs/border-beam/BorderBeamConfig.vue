@@ -5,6 +5,5 @@
     <template #component>
       <BorderBeamDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

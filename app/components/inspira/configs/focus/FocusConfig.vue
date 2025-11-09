@@ -5,6 +5,5 @@
     <template #component>
       <FocusDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

@@ -5,6 +5,5 @@
     <template #component>
       <DirectionAwareHoverDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

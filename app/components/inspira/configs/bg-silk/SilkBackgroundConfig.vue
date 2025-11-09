@@ -5,6 +5,5 @@
     <template #component>
       <SilkBackgroundDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

@@ -5,6 +5,5 @@
     <template #component>
       <ParticlesBgDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

@@ -5,6 +5,5 @@
     <template #component>
       <InteractiveGridPatternDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

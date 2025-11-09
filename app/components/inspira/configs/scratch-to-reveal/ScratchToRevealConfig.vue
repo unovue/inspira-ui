@@ -5,6 +5,5 @@
     <template #component>
       <ScratchToRevealDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

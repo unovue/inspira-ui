@@ -5,6 +5,5 @@
     <template #component>
       <ContainerScrollDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

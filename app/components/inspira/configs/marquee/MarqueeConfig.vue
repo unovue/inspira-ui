@@ -5,6 +5,5 @@
     <template #component>
       <MarqueeDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

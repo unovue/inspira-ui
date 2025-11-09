@@ -5,6 +5,5 @@
     <template #component>
       <TextHoverEffectDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

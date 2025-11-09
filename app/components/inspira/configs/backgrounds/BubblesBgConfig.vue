@@ -5,6 +5,5 @@
     <template #component>
       <BubblesBgDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

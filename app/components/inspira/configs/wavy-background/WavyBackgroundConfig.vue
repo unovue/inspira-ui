@@ -5,6 +5,5 @@
     <template #component>
       <WavyBackgroundDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

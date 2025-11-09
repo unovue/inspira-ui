@@ -5,6 +5,5 @@
     <template #component>
       <AnimatedTestimonialsDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

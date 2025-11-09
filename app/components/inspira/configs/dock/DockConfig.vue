@@ -5,6 +5,5 @@
     <template #component>
       <DockDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

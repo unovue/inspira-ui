@@ -5,6 +5,5 @@
     <template #component>
       <TailedCursorDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

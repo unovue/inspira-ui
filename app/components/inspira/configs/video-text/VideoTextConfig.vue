@@ -5,6 +5,5 @@
     <template #component>
       <VideoTextDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

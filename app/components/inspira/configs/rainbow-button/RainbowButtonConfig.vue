@@ -5,6 +5,5 @@
     <template #component>
       <RainbowButtonDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

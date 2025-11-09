@@ -5,6 +5,5 @@
     <template #component>
       <AnimatedListDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

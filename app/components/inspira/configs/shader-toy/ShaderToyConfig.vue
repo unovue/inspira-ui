@@ -5,6 +5,5 @@
     <template #component>
       <ShaderToyDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

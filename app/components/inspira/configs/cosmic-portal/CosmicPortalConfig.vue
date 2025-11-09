@@ -5,6 +5,5 @@
     <template #component>
       <CosmicPortalDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

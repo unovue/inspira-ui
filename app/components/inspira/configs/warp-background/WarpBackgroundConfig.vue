@@ -5,6 +5,5 @@
     <template #component>
       <WarpBackgroundDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

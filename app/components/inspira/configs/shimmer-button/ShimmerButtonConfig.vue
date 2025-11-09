@@ -5,6 +5,5 @@
     <template #component>
       <ShimmerButtonDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

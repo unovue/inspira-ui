@@ -5,6 +5,5 @@
     <template #component>
       <TracingBeamDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

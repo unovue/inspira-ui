@@ -5,6 +5,5 @@
     <template #component>
       <TextScrollRevealDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

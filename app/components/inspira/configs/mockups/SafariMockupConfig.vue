@@ -5,6 +5,5 @@
     <template #component>
       <SafariMockupDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

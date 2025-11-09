@@ -5,6 +5,5 @@
     <template #component>
       <LinkPreviewDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

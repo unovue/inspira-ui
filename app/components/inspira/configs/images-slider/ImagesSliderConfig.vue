@@ -5,6 +5,5 @@
     <template #component>
       <ImagesSliderDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

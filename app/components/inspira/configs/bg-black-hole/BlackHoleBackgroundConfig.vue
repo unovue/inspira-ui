@@ -5,6 +5,5 @@
     <template #component>
       <BlackHoleBackgroundDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

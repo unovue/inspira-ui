@@ -5,6 +5,5 @@
     <template #component>
       <SvgMaskDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

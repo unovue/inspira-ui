@@ -5,6 +5,5 @@
     <template #component>
       <GithubGlobeDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

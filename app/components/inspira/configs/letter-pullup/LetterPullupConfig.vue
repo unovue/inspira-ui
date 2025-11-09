@@ -5,6 +5,5 @@
     <template #component>
       <LetterPullupDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

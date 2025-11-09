@@ -5,6 +5,5 @@
     <template #component>
       <VanishingInputDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

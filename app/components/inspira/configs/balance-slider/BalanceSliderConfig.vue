@@ -5,6 +5,5 @@
     <template #component>
       <BalanceSliderDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

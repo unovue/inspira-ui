@@ -5,6 +5,5 @@
     <template #component>
       <LightSpeedDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

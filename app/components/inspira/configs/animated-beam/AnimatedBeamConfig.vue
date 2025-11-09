@@ -5,6 +5,5 @@
     <template #component>
       <AnimatedBeamDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

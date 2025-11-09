@@ -5,6 +5,5 @@
     <template #component>
       <InputDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

@@ -5,6 +5,5 @@
     <template #component>
       <ContainerTextFlipDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

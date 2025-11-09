@@ -5,6 +5,5 @@
     <template #component>
       <TextGlitchDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

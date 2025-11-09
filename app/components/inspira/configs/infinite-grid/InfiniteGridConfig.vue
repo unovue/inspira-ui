@@ -5,6 +5,5 @@
     <template #component>
       <InfiniteGridDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

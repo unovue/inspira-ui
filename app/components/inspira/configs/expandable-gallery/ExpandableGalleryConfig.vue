@@ -5,6 +5,5 @@
     <template #component>
       <ExpandableGalleryDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

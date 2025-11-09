@@ -5,6 +5,5 @@
     <template #component>
       <ScrollIslandDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

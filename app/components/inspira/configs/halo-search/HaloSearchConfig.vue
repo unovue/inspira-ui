@@ -5,6 +5,5 @@
     <template #component>
       <HaloSearchDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

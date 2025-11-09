@@ -5,6 +5,5 @@
     <template #component>
       <FlipCardDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

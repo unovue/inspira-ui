@@ -5,6 +5,5 @@
     <template #component>
       <BlurRevealDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

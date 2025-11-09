@@ -5,6 +5,5 @@
     <template #component>
       <RippleButtonDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

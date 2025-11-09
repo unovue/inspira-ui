@@ -5,6 +5,5 @@
     <template #component>
       <SpinningTextDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

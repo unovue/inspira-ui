@@ -5,6 +5,5 @@
     <template #component>
       <BookDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

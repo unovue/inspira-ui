@@ -5,6 +5,5 @@
     <template #component>
       <GradientButtonDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

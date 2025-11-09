@@ -5,6 +5,5 @@
     <template #component>
       <Text3dDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

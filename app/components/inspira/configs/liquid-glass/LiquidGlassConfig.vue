@@ -5,6 +5,5 @@
     <template #component>
       <LiquidGlassDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>
