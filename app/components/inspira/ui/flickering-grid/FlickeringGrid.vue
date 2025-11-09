@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { computed, onBeforeUnmount, onMounted, ref, toRefs } from "vue";
-import { cn } from "@/lib/utils";
 
 interface FlickeringGridProps {
   squareSize?: number;
@@ -169,7 +168,8 @@ onBeforeUnmount(() => {
 <template>
   <div
     ref="containerRef"
-    :class="cn('h-full w-full', props.class)"
+    class="h-full w-full"
+    :class="[props.class]"
   >
     <canvas
       ref="canvasRef"

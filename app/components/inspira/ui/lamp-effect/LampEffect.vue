@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import type {HTMLAttributes} from "vue";
-import { computed  } from "vue";
-import { cn } from "@/lib/utils";
+import type { HTMLAttributes } from "vue";
+import { computed } from "vue";
 
 interface LampEffectProps {
   delay?: number;
@@ -20,12 +19,8 @@ const delayInSeconds = computed(() => `${props.delay}s`);
 
 <template>
   <div
-    :class="
-      cn(
-        'relative z-0 flex min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-md bg-slate-950',
-        $props.class,
-      )
-    "
+    class="relative z-0 flex min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-md bg-slate-950"
+    :class="[$props.class]"
   >
     <div class="relative isolate z-0 flex w-full flex-1 scale-y-125 items-center justify-center">
       <!-- Conic Gradient -->
@@ -57,13 +52,9 @@ const delayInSeconds = computed(() => `${props.delay}s`);
         />
       </div>
 
-      <div
-        class="absolute top-1/2 h-48 w-full translate-y-12 scale-x-150 bg-slate-950 blur-2xl"
-      />
+      <div class="absolute top-1/2 h-48 w-full translate-y-12 scale-x-150 bg-slate-950 blur-2xl" />
 
-      <div
-        class="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md"
-      />
+      <div class="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md" />
 
       <div
         class="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-cyan-500 opacity-50 blur-3xl"

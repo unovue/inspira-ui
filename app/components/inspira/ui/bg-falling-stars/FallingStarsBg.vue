@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import { cn } from "@/lib/utils";
 
 interface Star {
   x: number;
@@ -161,6 +160,7 @@ function resizeCanvas() {
 <template>
   <canvas
     ref="starsCanvas"
-    :class="cn('absolute inset-0 h-full w-full', $props.class)"
+    class="absolute inset-0 h-full w-full"
+    :class="[$props.class]"
   />
 </template>

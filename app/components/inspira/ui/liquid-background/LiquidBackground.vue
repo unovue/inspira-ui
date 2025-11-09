@@ -1,9 +1,8 @@
 <script lang="ts" setup>
-import type {OGLRenderingContext} from "ogl";
-import type {HTMLAttributes} from "vue";
-import { Color, Mesh,  Program, Renderer, Triangle } from "ogl";
-import {  onMounted, onUnmounted, ref } from "vue";
-import { cn } from "@/lib/utils";
+import type { OGLRenderingContext } from "ogl";
+import type { HTMLAttributes } from "vue";
+import { Color, Mesh, Program, Renderer, Triangle } from "ogl";
+import { onMounted, onUnmounted, ref } from "vue";
 
 const props = defineProps<{ class?: HTMLAttributes["class"] }>();
 
@@ -118,6 +117,7 @@ onUnmounted(() => {
 <template>
   <div
     ref="ctnDom"
-    :class="cn('block size-full', props?.class)"
+    class="block size-full"
+    :class="[props?.class]"
   />
 </template>

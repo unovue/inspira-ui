@@ -1,4 +1,20 @@
 <script setup lang="ts">
+interface Props {
+  curvature?: number;
+  reverse?: boolean;
+  pathColor?: string;
+  pathWidth?: number;
+  pathOpacity?: number;
+  gradientStartColor?: string;
+  gradientStopColor?: string;
+  delay?: number;
+  duration?: number;
+  startXOffset?: number;
+  startYOffset?: number;
+  endXOffset?: number;
+  endYOffset?: number;
+}
+
 const containerRef = useTemplateRef("containerRef");
 const div1Ref = useTemplateRef("div1Ref");
 const div2Ref = useTemplateRef("div2Ref");

@@ -13,7 +13,10 @@ const isDesktop = useMediaQuery("(min-width: 768px)");
       <slot name="component" />
     </UPageCard>
 
-    <div class="flex w-full flex-row items-center justify-between">
+    <div
+      v-if="$slots.config"
+      class="flex w-full flex-row items-center justify-between"
+    >
       <div class="flex flex-col items-start gap-2">
         <span class="text-2xl font-semibold">Playground</span>
         <span class="text-muted italic">Play with props and customize the component.</span>

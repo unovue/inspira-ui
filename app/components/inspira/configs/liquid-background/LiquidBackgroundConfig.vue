@@ -5,6 +5,5 @@
     <template #component>
       <LiquidBackgroundDemo />
     </template>
-    <template #config />
   </ComponentPlayground>
 </template>

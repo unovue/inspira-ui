@@ -5,19 +5,10 @@ category: Background
 tags: [css, tailwind, background, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="AuroraBackgroundDemo" type="examples" id="aurora-background"}
-::
+::ComponentViewer{demoFile="AuroraBackgroundDemo.vue" config="AuroraBackgroundConfig" componentId="aurora-background" :componentFiles='["AuroraBackground.vue"]'}
 
-## API
+#instructions
 
-| Prop Name        | Type      | Default | Description                                                               |
-| ---------------- | --------- | ------- | ------------------------------------------------------------------------- |
-| `class`          | `string`  | `-`     | Additional CSS classes to apply to the component for styling.             |
-| `radialGradient` | `boolean` | `true`  | Determines whether a radial gradient effect is applied to the background. |
-
-## Installation
-
-::alert
 Add following entry to inline theme in your `main.css` file.
 
 ```css
@@ -38,25 +29,18 @@ Add following entry to inline theme in your `main.css` file.
 }
 ```
 
-::
+#api
 
-## Install using CLI
+## API
 
-::InstallationCli{componentId="aurora-background"}
-::
+| Prop Name        | Type      | Default | Description                                                               |
+| ---------------- | --------- | ------- | ------------------------------------------------------------------------- |
+| `class`          | `string`  | `-`     | Additional CSS classes to apply to the component for styling.             |
+| `radialGradient` | `boolean` | `true`  | Determines whether a radial gradient effect is applied to the background. |
 
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="AuroraBackground.vue" language="vue" componentName="AuroraBackground" type="ui" id="aurora-background"}
-::
-
-## Features
-
-- **Slot Support**: Easily add any content inside the component using the default slot.
-
-## Credits
+#credits
 
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/aurora-background).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.
+
+::

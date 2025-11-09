@@ -28,3 +28,19 @@
     radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 40%),
     linear-gradient(120deg, #0f0e17 0%, #1a1b26 100%);
 }
+
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
+}

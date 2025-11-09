@@ -5,24 +5,9 @@ category: Background
 tags: [css, tailwind, background, canvas, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="FlickeringGridDemo" type="examples" id="flickering-grid"}
-::
+::ComponentViewer{demoFile="FlickeringGridDemo.vue" config="FlickeringGridConfig" componentId="flickering-grid" :componentFiles='["FlickeringGrid.vue"]'}
 
-::alert{type="warning"}
-This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="flickering-grid"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="FlickeringGrid.vue" language="vue" componentName="FlickeringGrid" type="ui" id="flickering-grid"}
-::
+#api
 
 ## API
 
@@ -37,6 +22,8 @@ Copy and paste the following code
 | `class`         | `string` | `-`            | Additional CSS classes for the canvas. |
 | `maxOpacity`    | `number` | `0.2`          | Maximum opacity of the squares.        |
 
-## Credits
+#credits
 
 - Credits to [magicui flickering-grid](https://magicui.design/docs/components/flickering-grid) for this component.
+
+::

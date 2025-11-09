@@ -5,8 +5,9 @@ category: Background
 tags: [css, tailwind, background, threejs, postprocessing]
 ---
 
-::ComponentLoader{label="Preview" componentName="CosmicPortalDemo" type="examples" id="cosmic-portal"}
-::
+::ComponentViewer{demoFile="CosmicPortalDemo.vue" config="CosmicPortalConfig" componentId="cosmic-portal" :componentFiles='["CosmicPortal.vue"]' dependencies="three postprocessing" devDependencies="@types/three"}
+
+#api
 
 ## API
 
@@ -24,34 +25,8 @@ tags: [css, tailwind, background, threejs, postprocessing]
 | `bloomThreshold`   | `number` | `0.2`     | Threshold for bloom visibility.                             |
 | `dimensionShift`   | `number` | `4`       | Level of dimension distortion for shader animation.         |
 
-## Features
-
-- **Stunning Visuals**: Animated cosmic background, glowing vortex rings, and interdimensional streams.
-- **Shader Driven Effects**: Unique portal burst, distortion, and pulsing animations.
-- **User Controls**: Zoom, rotate, and orbit around the scene using OrbitControls.
-- **Postprocessing**: Includes bloom and FXAA for cinematic quality.
-- **Dynamic Colors**: Easily shift dimensions and regenerate colors using exposed methods.
-- **Exposed Actions**: Call `activatePortal()` to trigger portal effects or `shiftDimensions()` to regenerate the visual style.
-
-## Installation
-
-Ensure the following libraries are installed in your project:
-
-:pm-install{name="three postprocessing"}
-:pm-install{name="@types/three" save-dev}
-
-## Install using CLI
-
-::InstallationCli{componentId="cosmic-portal"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="CosmicPortal.vue" language="vue" componentName="CosmicPortal" type="ui" id="cosmic-portal"}
-::
-
-## Credits
+#credits
 
 - Inspired and ported from [Dimensional Portal by Techartist](https://x.com/techartist_).
+
+::

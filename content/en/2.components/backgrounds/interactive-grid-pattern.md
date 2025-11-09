@@ -5,29 +5,11 @@ category: Background
 tags: [css, tailwind, background, svg, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="InteractiveGridPatternDemo" type="examples" id="interactive-grid-pattern"}
-::
+::ComponentViewer{demoFile="InteractiveGridPatternDemo.vue" config="InteractiveGridPatternConfig" componentId="interactive-grid-pattern" :componentFiles='["InteractiveGridPattern.vue"]' }
 
-## Install using CLI
-
-::InstallationCli{componentId="interactive-grid-pattern"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="InteractiveGridPattern.vue" language="vue" componentName="InteractiveGridPattern" type="ui" id="interactive-grid-pattern"}
-::
-
-## Examples
-
-::ComponentLoader{label="Preview" componentName="InteractiveGridPatternColoredDemo" type="examples" id="interactive-grid-pattern"}
-::
+#api
 
 ## API
-
-#### Props
 
 | Prop Name          | Type               | Default    | Description                                   |
 | ------------------ | ------------------ | ---------- | --------------------------------------------- |
@@ -37,7 +19,9 @@ Copy and paste the following code
 | `height`           | `number`           | `40`       | Height of the square in pixels.               |
 | `squares`          | `[number, number]` | `[24, 24]` | Number of squares in the grid pattern.        |
 
-## Credits
+#credits
 
 - Inspired by [MagicUI](https://magicui.design/docs/components/interactive-grid-pattern).
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.
+
+::

@@ -89,6 +89,15 @@ const editLink = computed(() => {
         wrapper: 'flex-row items-center flex-wrap justify-between',
       }"
     >
+      <div class="mt-4 flex flex-wrap items-center gap-2">
+        <UBadge
+          v-for="tag in page.tags"
+          :key="page.path + tag"
+          :label="tag"
+          variant="soft"
+          class="px-3 py-2 font-normal"
+        />
+      </div>
       <template #links>
         <UButton
           v-for="(link, index) in (page as DocsEnCollectionItem).links"
