@@ -5,20 +5,9 @@ category: Button
 tags: [css, tailwind, button, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="RippleButtonDemo" type="examples"}
-::
+::ComponentViewer{demoFile="RippleButtonDemo.vue" config="RippleButtonConfig" componentId="ripple-button" :componentFiles='["RippleButton.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="ripple-button"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="RippleButton.vue" language="vue" componentName="RippleButton" type="ui" id="ripple-button"}
-::
+#api
 
 ## API
 
@@ -34,7 +23,9 @@ Copy and paste the following code
 | ---------- | ------- | ----------- |
 | `click`    | `event` | Click event |
 
-## Credits
+#credits
 
 - Inspired by [Magic UI's Ripple Button](https://magicui.design/docs/components/ripple-button) component.
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.
+
+::

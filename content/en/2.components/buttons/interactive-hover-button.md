@@ -5,20 +5,9 @@ category: Button
 tags: [css, tailwind, button, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="InteractiveHoverButtonDemo" type="examples"}
-::
+::ComponentViewer{demoFile="InteractiveHoverButtonDemo.vue" config="InteractiveHoverButtonConfig" componentId="interactive-hover-button" :componentFiles='["InteractiveHoverButton.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="interactive-hover-button"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="InteractiveHoverButton.vue" language="vue" componentName="InteractiveHoverButton" type="ui" id="interactive-hover-button"}
-::
+#api
 
 ## API
 
@@ -27,7 +16,9 @@ Copy and paste the following code
 | `text`    | `string` | `Button` | The text to be displayed inside the button.    |
 | `class`   | `string` | `""`     | Additional class names to style the component. |
 
-## Credits
+#credits
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Inspired and ported from [Magic UI Interactive Hover Button](https://magicui.design/docs/components/interactive-hover-button).
+
+::

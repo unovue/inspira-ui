@@ -5,20 +5,9 @@ category: Button
 tags: [css, tailwind, button, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="ShimmerButtonDemo" type="examples"}
-::
+::ComponentViewer{demoFile="ShimmerButtonDemo.vue" config="ShimmerButtonConfig" componentId="shimmer-button" :componentFiles='["ShimmerButton.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="shimmer-button"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="ShimmerButton.vue" language="vue" componentName="ShimmerButton" type="ui" id="shimmer-button"}
-::
+#api
 
 ## API
 
@@ -31,14 +20,8 @@ Copy and paste the following code
 | `shimmerDuration` | `string` | `"3s"`               | Duration of the shimmer animation.                      |
 | `background`      | `string` | `"rgba(0, 0, 0, 1)"` | Background color of the button. Can be rgb or hex code. |
 
-## Features
-
-- **Shimmering Effect**: Displays a continuous shimmering animation on the button.
-- **Customizable Appearance**: Adjust shimmer color, size, duration, border radius, and background color.
-- **Slot Support**: Easily add any content inside the button using the default slot.
-- **Interactive States**: Includes hover and active states for enhanced user interaction.
-- **Responsive Design**: Adapts to different screen sizes and resolutions seamlessly.
-
-## Credits
+#credits
 
 - Ported from [Magic UI Shimmer Button](https://magicui.design/docs/components/shimmer-button).
+
+::

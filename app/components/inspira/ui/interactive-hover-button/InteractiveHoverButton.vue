@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { ref } from "vue";
-import { cn } from "@/lib/utils";
 
 interface Props {
   text?: string;
@@ -16,12 +15,8 @@ const buttonRef = ref<HTMLButtonElement>();
 <template>
   <button
     ref="buttonRef"
-    :class="
-      cn(
-        'group bg-background relative w-auto cursor-pointer overflow-hidden rounded-full border p-2 px-6 text-center font-semibold',
-        props.class,
-      )
-    "
+    class="group bg-background relative w-auto cursor-pointer overflow-hidden rounded-full border p-2 px-6 text-center font-semibold"
+    :class="[props.class]"
   >
     <div class="flex items-center gap-2">
       <div

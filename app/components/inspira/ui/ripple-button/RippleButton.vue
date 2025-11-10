@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import type {HTMLAttributes} from "vue";
-import {  ref, watchEffect } from "vue";
-import { cn } from "@/lib/utils";
+import type { HTMLAttributes } from "vue";
+import { ref, watchEffect } from "vue";
 
 interface RippleButtonProps {
   class?: HTMLAttributes["class"];
@@ -52,14 +51,9 @@ watchEffect(() => {
 <template>
   <button
     ref="rippleButtonRef"
-    :class="
-      cn(
-        'relative flex cursor-pointer items-center justify-center overflow-hidden',
-        'bg-background text-primary rounded-lg border-2 px-4 py-2 text-center',
-        $props.class,
-      )
-    "
-    :style="{ '--duration': `${$props.duration }ms` }"
+    class="bg-background text-primary relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border-2 px-4 py-2 text-center"
+    :class="[$props.class]"
+    :style="{ '--duration': `${$props.duration}ms` }"
     @click="handleClick"
   >
     <div class="relative z-10">
@@ -72,13 +66,13 @@ watchEffect(() => {
         :key="ripple.key"
         class="ripple-animation bg-background absolute rounded-full opacity-30"
         :style="{
-          width: `${ripple.size }px`,
-          height: `${ripple.size }px`,
-          top: `${ripple.y }px`,
-          left: `${ripple.x }px`,
+          width: `${ripple.size}px`,
+          height: `${ripple.size}px`,
+          top: `${ripple.y}px`,
+          left: `${ripple.x}px`,
           backgroundColor: $props.rippleColor,
           transform: 'scale(0)',
-          animationDuration: `${$props.duration }ms`,
+          animationDuration: `${$props.duration}ms`,
         }"
       />
     </span>

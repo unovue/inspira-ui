@@ -5,20 +5,9 @@ category: Button
 tags: [css, tailwind, button, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="RainbowButtonDemo" type="examples"}
-::
+::ComponentViewer{demoFile="RainbowButtonDemo.vue" config="RainbowButtonConfig" componentId="rainbow-button" :componentFiles='["RainbowButton.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="rainbow-button"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="RainbowButton.vue" language="vue" componentName="RainbowButton" type="ui" id="rainbow-button"}
-::
+#api
 
 ## API
 
@@ -28,7 +17,9 @@ Copy and paste the following code
 | `is`      | `string` | `"button"` | The HTML tag to render for the component.      |
 | `speed`   | `number` | `2`        | Duration of the animation in seconds.          |
 
-## Credits
+#credits
 
 - Credits to [Grzegorz Krol](https://github.com/Grzechu335) for porting this component.
 - Credits to [Magic UI](https://magicui.design/docs/components/rainbow-button).
+
+::

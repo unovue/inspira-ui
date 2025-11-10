@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { cn } from "@/lib/utils";
-
 interface ShimmerButtonProps {
   shimmerColor?: string;
   shimmerSize?: string;
@@ -21,13 +19,8 @@ withDefaults(defineProps<ShimmerButtonProps>(), {
 
 <template>
   <button
-    :class="
-      cn(
-        'group relative z-0 flex cursor-pointer items-center justify-center overflow-hidden [border-radius:var(--radius)] border border-white/10 px-6 py-3 whitespace-nowrap text-white [background:var(--bg)] dark:text-black',
-        'transform-gpu transition-transform duration-300 ease-in-out active:translate-y-px',
-        $props.class,
-      )
-    "
+    class="group relative z-0 flex transform-gpu cursor-pointer items-center justify-center overflow-hidden [border-radius:var(--radius)] border border-white/10 px-6 py-3 whitespace-nowrap text-white transition-transform duration-300 ease-in-out [background:var(--bg)] active:translate-y-px dark:text-black"
+    :class="[$props.class]"
     :style="{
       '--spread': '90deg',
       '--shimmer-color': shimmerColor,
@@ -37,7 +30,7 @@ withDefaults(defineProps<ShimmerButtonProps>(), {
       '--bg': background,
     }"
   >
-    <div :class="cn('-z-30 blur-[2px]', '[container-type:size] absolute inset-0 overflow-visible')">
+    <div class="[container-type:size] absolute inset-0 -z-30 overflow-visible blur-[2px]">
       <div
         class="animate-shimmer-btn-shimmer-slide absolute inset-0 [aspect-ratio:1] h-[100cqh] [border-radius:0] [mask:none]"
       >
@@ -49,22 +42,7 @@ withDefaults(defineProps<ShimmerButtonProps>(), {
     <slot />
 
     <div
-      :class="
-        cn(
-          'insert-0 absolute size-full',
-
-          'rounded-2xl px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff1f]',
-
-          // transition
-          'transform-gpu transition-all duration-300 ease-in-out',
-
-          // on hover
-          'group-hover:shadow-[inset_0_-6px_10px_#ffffff3f]',
-
-          // on click
-          'group-active:shadow-[inset_0_-10px_10px_#ffffff3f]',
-        )
-      "
+      class="insert-0 absolute size-full transform-gpu rounded-2xl px-4 py-1.5 text-sm font-medium shadow-[inset_0_-8px_10px_#ffffff1f] transition-all duration-300 ease-in-out group-hover:shadow-[inset_0_-6px_10px_#ffffff3f] group-active:shadow-[inset_0_-10px_10px_#ffffff3f]"
     />
 
     <div

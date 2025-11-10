@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { computed } from "vue";
-import { cn } from "@/lib/utils";
 
 interface GradientButtonProps {
   borderWidth?: number;
@@ -39,12 +38,8 @@ const blurPx = computed(() => `${props.blur}px`);
 
 <template>
   <button
-    :class="
-      cn(
-        'animate-rainbow rainbow-btn relative flex min-h-10 min-w-28 items-center justify-center overflow-hidden before:absolute before:-inset-[200%]',
-        props.class,
-      )
-    "
+    class="animate-rainbow rainbow-btn relative flex min-h-10 min-w-28 items-center justify-center overflow-hidden before:absolute before:-inset-[200%]"
+    :class="[props.class]"
   >
     <span class="btn-content inline-flex size-full items-center justify-center px-4 py-2">
       <slot />
