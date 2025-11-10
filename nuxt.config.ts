@@ -1,101 +1,48 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  plugins: [{ src: "~/plugins/clarity.js", mode: "client" }],
-
+  extends: ["docus"],
   modules: [
-    "@nuxt/fonts",
-    "@nuxt/image",
-    "nuxt-gtag",
+    "@nuxtjs/i18n",
+    "@nuxt/content",
     "@nuxt/eslint",
+    "@nuxt/fonts",
+    "@nuxt/icon",
+    "@nuxt/image",
     "@nuxt/scripts",
-    "motion-v/nuxt",
-    "lenis/nuxt",
-    "nuxt-llms",
+    "@vueuse/nuxt",
   ],
 
-  components: [
-    {
-      path: "~/components",
-      pathPrefix: false,
-      ignore: ["**/index.ts", "**/shaders.ts", "**/types.ts"],
-    },
-  ],
-
-  ignore: ["components/**/index.ts", "components/**/shaders.ts", "components/**/types.ts"],
-
-  runtimeConfig: {
-    public: {
-      NUXT_CLARITY_ID: process.env.NUXT_CLARITY_ID,
-      NUXT_ADSENSE_ACCOUNT: process.env.NUXT_ADSENSE_ACCOUNT,
-    },
+  ui: {
+    content: true,
+    mdc: true,
   },
 
-  eslint: {
-    config: {
-      standalone: false,
-    },
+  colorMode: {
+    preference: "dark",
+    fallback: "dark",
   },
 
-  app: {
-    head: {
-      meta: [
-        {
-          name: "google-adsense-account",
-          content: process.env.NUXT_ADSENSE_ACCOUNT,
-        },
-      ],
-    },
-    baseURL: process.env.NODE_ENV === "development" ? "/" : "/docs/",
-  },
-  llms: {
-    domain: "https://inspira-ui.com/",
-    title: "Inspira UI",
-    description:
-      "Inspira UI is a free and open-source Vue.js component library that provides a collection of beautiful and customizable components for building modern web applications.",
-    full: {
-      title: "Inspira UI Documentation",
-      description: "The complete Inspira UI documentation.",
-    },
-  },
+  css: ["~/assets/css/main.css"],
+
   i18n: {
     defaultLocale: "en",
     locales: [
       {
         code: "en",
         name: "English",
-        language: "en-US",
       },
       {
-        code: "zh-cn",
-        name: "中文简体",
-        language: "zh-CN",
+        code: "fr",
+        name: "Français",
       },
     ],
   },
-  fonts: {
-    processCSSVariables: true,
-    families: [
-      {
-        name: "Plus Jakarta Sans",
-        provider: "google",
-        global: true,
-        weights: [300, 400, 500, 600, 700],
-      },
-      {
-        name: "Space Grotesk",
-        provider: "google",
-        global: true,
-        weights: [300, 400, 500, 600, 700],
-      },
-      {
-        name: "JetBrains Mono",
-        provider: "google",
-        global: true,
-        weights: [300, 400, 500, 600, 700],
-      },
-    ],
-  },
-  extends: ["shadcn-docs-nuxt"],
-  compatibilityDate: "2025-06-10",
+
+  components: [
+    {
+      path: "~/components/",
+      global: true,
+      pathPrefix: false,
+      ignore: ["**/index.ts", "**/shaders.ts", "**/types.ts"],
+    },
+  ],
 });
