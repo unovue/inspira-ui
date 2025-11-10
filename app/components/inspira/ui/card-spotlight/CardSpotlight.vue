@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import type {HTMLAttributes} from "vue";
-import { computed,  onMounted, ref } from "vue";
-import { cn } from "@/lib/utils";
+import type { HTMLAttributes } from "vue";
+import { computed, onMounted, ref } from "vue";
 
 const props = withDefaults(
   defineProps<{
@@ -51,13 +50,15 @@ const backgroundStyle = computed(() => {
 
 <template>
   <div
-    class="group relative flex size-full overflow-hidden rounded-xl border bg-neutral-100 text-black dark:bg-neutral-900 dark:text-white" :class="[
-      $props.class,
-    ]"
+    class="group relative flex size-full overflow-hidden rounded-xl border bg-neutral-100 text-black dark:bg-neutral-900 dark:text-white"
+    :class="[$props.class]"
     @mousemove="handleMouseMove"
     @mouseleave="handleMouseLeave"
   >
-    <div :class="cn('relative z-10', props.slotClass)">
+    <div
+      class="relative z-10"
+      :class="[props.slotClass]"
+    >
       <slot />
     </div>
     <div

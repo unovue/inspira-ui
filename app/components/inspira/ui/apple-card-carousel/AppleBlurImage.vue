@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import { cn } from "@/lib/utils";
 
 interface Props {
   height?: number | string;
@@ -28,14 +27,8 @@ function handleLoad() {
 
 <template>
   <img
-    :class="
-      cn(
-        'transition duration-300',
-        isLoading ? 'blur-sm' : 'blur-0',
-        props.class,
-        fill ? 'h-full w-full' : '',
-      )
-    "
+    class="transition duration-300"
+    :class="[isLoading ? 'blur-sm' : 'blur-0', props.class, fill ? 'h-full w-full' : '']"
     :src="src"
     :width="width"
     :height="height"
@@ -43,5 +36,5 @@ function handleLoad() {
     decoding="async"
     :alt="alt"
     @load="handleLoad"
-  >
+  />
 </template>

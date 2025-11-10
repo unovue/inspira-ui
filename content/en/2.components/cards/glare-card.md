@@ -5,27 +5,9 @@ category: Card
 tags: [css, tailwind, card, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="GlareCardDemo" type="examples" id="glare-card"}
-::
+::ComponentViewer{demoFile="GlareCardDemo.vue" config="GlareCardConfig" componentId="glare-card" :componentFiles='["GlareCard.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="glare-card"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="GlareCard.vue" language="vue" componentName="GlareCard" type="ui" id="glare-card"}
-::
-
-## Examples
-
-### Multiple Cards
-
-::ComponentLoader{label="Preview" componentName="GlareMultiCardDemo" type="examples" id="glare-card"}
-::
+#api
 
 ## API
 
@@ -33,11 +15,9 @@ Copy and paste the following code
 | --------- | -------- | ------- | --------------------------------------------------------- |
 | `class`   | `string` | `-`     | Additional Tailwind CSS class names to apply to the card. |
 
-## Features
-
-- **Slot Support**: Easily add any content inside the component using the default slot.
-
-## Credits
+#credits
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.
 - Inspired from [Aceternity UI](https://ui.aceternity.com/components/glare-card).
+
+::

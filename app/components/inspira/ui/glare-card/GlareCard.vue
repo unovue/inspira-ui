@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { useTimeoutFn } from "@vueuse/core";
 import { ref } from "vue";
-import { cn } from "@/lib/utils";
 
 interface GlareCardProps {
   class?: string;
@@ -70,12 +69,15 @@ function handlePointerLeave() {
     @pointerleave="handlePointerLeave"
   >
     <div
-      class="grid h-full origin-center [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] overflow-hidden rounded-lg border border-slate-800 transition-transform delay-[var(--delay)] duration-[var(--duration)] ease-[var(--easing)] will-change-transform hover:filter-none hover:[--duration:200ms] hover:[--easing:linear] hover:[--opacity:0.6]"
+      class="grid h-full origin-center [transform:rotateY(var(--r-x))_rotateX(var(--r-y))] overflow-hidden transition-transform delay-[var(--delay)] duration-[var(--duration)] ease-[var(--easing)] will-change-transform hover:filter-none hover:[--duration:200ms] hover:[--easing:linear] hover:[--opacity:0.6]"
     >
       <div
         class="grid size-full mix-blend-soft-light [clip-path:inset(0_0_0_0_round_var(--radius))] [grid-area:1/1]"
       >
-        <div :class="cn('size-full bg-slate-950', props.class)">
+        <div
+          class="size-full bg-slate-950"
+          :class="[props.class]"
+        >
           <slot />
         </div>
       </div>
@@ -125,12 +127,12 @@ function handlePointerLeave() {
   background-blend-mode: hue, hue, hue, overlay;
 }
 .container-style {
-  --m-x: v-bind(`${state.glare.x  }%`);
-  --m-y: v-bind(`${state.glare.y  }%`);
-  --r-x: v-bind(`${state.rotate.x  }deg`);
-  --r-y: v-bind(`${state.rotate.y  }deg`);
-  --bg-x: v-bind(`${state.background.x  }%`);
-  --bg-y: v-bind(`${state.background.y  }%`);
+  --m-x: v-bind(`${state.glare.x}%`);
+  --m-y: v-bind(`${state.glare.y}%`);
+  --r-x: v-bind(`${state.rotate.x}deg`);
+  --r-y: v-bind(`${state.rotate.y}deg`);
+  --bg-x: v-bind(`${state.background.x}%`);
+  --bg-y: v-bind(`${state.background.y}%`);
   --duration: 300ms;
   --foil-size: 100%;
   --opacity: 0;

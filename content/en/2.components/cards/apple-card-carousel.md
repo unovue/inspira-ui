@@ -5,10 +5,9 @@ category: Card
 tags: [css, tailwind, card, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="AppleCardCarouselDemo" type="examples" id="apple-card-carousel"}
-::
+::ComponentViewer{demoFile="AppleCardCarouselDemo.vue" config="AppleCardCarouselConfig" componentId="apple-card-carousel" :componentFiles='["AppleCardCarousel.vue", "AppleCarouselItem.vue", "AppleCard.vue", "AppleBlurImage.vue", "AppleCarouselContext.ts"]'}
 
-## Overview
+#api
 
 The **Apple Carousel** suite is composed of four inter‑related components:
 
@@ -84,35 +83,8 @@ When the image fires the native `load` event it gracefully transitions from `blu
 
 ---
 
-## Install using CLI
-
-::InstallationCli{componentId="apple-card-carousel"}
-::
-
-## Install Manually
-
-Copy and paste the following code in the same folder
-
-::code-group
-
-:CodeViewerTab{filename="AppleCardCarousel.vue" language="vue" componentName="AppleCardCarousel" type="ui" id="apple-card-carousel"}
-:CodeViewerTab{filename="AppleCarouselItem.vue" language="vue" componentName="AppleCarouselItem" type="ui" id="apple-card-carousel"}
-:CodeViewerTab{filename="AppleCard.vue" language="vue" componentName="AppleCard" type="ui" id="apple-card-carousel"}
-:CodeViewerTab{filename="AppleBlurImage.vue" language="vue" componentName="AppleBlurImage" type="ui" id="apple-card-carousel"}
-:CodeViewerTab{filename="AppleCarouselContext.ts" language="ts" componentName="AppleCarouselContext" type="ui" id="apple-card-carousel" extension="ts"}
-
-::
-
----
-
-## Features
-
-- **Blur‑Up Images** &mdash; Pleasant loading for card thumbnails.
-- **Shared Layout Animation** &mdash; Optional FLIP animation between thumbnail and modal using `layoutId`.
-- **Keyboard & Click Outside Close** &mdash; ⌘‑style modal dismissal (Esc key or outside click).
-- **Accessible Scrolling Controls** &mdash; Prev / next buttons with disabled state.
-- **Mobile‑Aware Scroll Calculations** &mdash; Ensures cards recentre correctly when closed on small screens.
-
-## Credits
+#credits
 
 - Ported from [Aceternity UI Apple Card Carousel](https://ui.aceternity.com/components/apple-cards-carousel).
+
+::

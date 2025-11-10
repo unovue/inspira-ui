@@ -5,27 +5,9 @@ category: Card
 tags: [css, tailwind, card]
 ---
 
-::ComponentLoader{label="Preview" componentName="FlipCardDemo" type="examples" id="flip-card"}
-::
+::ComponentViewer{demoFile="FlipCardDemo.vue" config="FlipCardConfig" componentId="flip-card" :componentFiles='["FlipCard.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="flip-card"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="FlipCard.vue" language="vue" componentName="FlipCard" type="ui" id="flip-card"}
-::
-
-## Examples
-
-### Horizontal Flip
-
-::ComponentLoader{label="Preview" componentName="FlipCardHorizontalDemo" type="examples" id="flip-card"}
-::
+#api
 
 ## API
 
@@ -39,6 +21,8 @@ Copy and paste the following code
 | `default` | Component to show as front. |
 | `back`    | Component to show as back.  |
 
-## Credits
+#credits
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.
+
+::

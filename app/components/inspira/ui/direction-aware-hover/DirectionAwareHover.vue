@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from "vue";
-import { cn } from "@/lib/utils";
 
 interface Props {
   imageUrl: string;
@@ -116,45 +115,39 @@ function getDirection(ev: MouseEvent, obj: HTMLElement) {
   return d;
 }
 
-const containerClass = computed(() =>
-  cn(
-    "group/card relative overflow-hidden rounded-lg bg-transparent transition-all duration-300",
-    // Mobile first responsive sizing
-    "h-48 w-48", // Base mobile size
-    "xs:h-56 xs:w-56", // Extra small screens
-    "sm:h-64 sm:w-64", // Small screens
-    "md:h-80 md:w-80", // Medium screens
-    "lg:h-96 lg:w-96", // Large screens
-    "xl:h-[28rem] xl:w-[28rem]", // Extra large screens
-    // Mobile touch improvements
-    "touch-manipulation",
-    "active:scale-[0.98]",
-    "md:active:scale-100", // Disable scale on desktop
-    props.class,
-  ),
-);
+const containerClass = computed(() => [
+  "group/card relative overflow-hidden rounded-lg bg-transparent transition-all duration-300",
+  // Mobile first responsive sizing
+  "h-48 w-48", // Base mobile size
+  "xs:h-56 xs:w-56", // Extra small screens
+  "sm:h-64 sm:w-64", // Small screens
+  "md:h-80 md:w-80", // Medium screens
+  "lg:h-96 lg:w-96", // Large screens
+  "xl:h-[28rem] xl:w-[28rem]", // Extra large screens
+  // Mobile touch improvements
+  "touch-manipulation",
+  "active:scale-[0.98]",
+  "md:active:scale-100", // Disable scale on desktop
+  props.class,
+]);
 
-const imageClass = computed(() =>
-  cn(
-    "h-full w-full object-cover transition-transform duration-300",
-    // Responsive scaling
-    "scale-125", // Mobile
-    "sm:scale-135", // Small screens
-    "md:scale-150", // Desktop
-    props.imageClass,
-  ),
-);
+const imageClass = computed(() => [
+  "h-full w-full object-cover transition-transform duration-300",
+  // Responsive scaling
+  "scale-125", // Mobile
+  "sm:scale-135", // Small screens
+  "md:scale-150", // Desktop
+  props.imageClass,
+]);
 
-const childrenClass = computed(() =>
-  cn(
-    "absolute z-40 text-white transition-opacity duration-300",
-    // Responsive positioning
-    "bottom-2 left-2 text-sm", // Mobile
-    "sm:bottom-3 sm:left-3 sm:text-base", // Small screens
-    "md:bottom-4 md:left-4 md:text-lg", // Desktop
-    props.childrenClass,
-  ),
-);
+const childrenClass = computed(() => [
+  "absolute z-40 text-white transition-opacity duration-300",
+  // Responsive positioning
+  "bottom-2 left-2 text-sm", // Mobile
+  "sm:bottom-3 sm:left-3 sm:text-base", // Small screens
+  "md:bottom-4 md:left-4 md:text-lg", // Desktop
+  props.childrenClass,
+]);
 
 const overlayClass = computed(() => {
   const baseClasses = "absolute inset-0 z-10 transition-all duration-300";
@@ -179,7 +172,7 @@ const overlayClass = computed(() => {
       transformClasses = "";
   }
 
-  return cn(baseClasses, backgroundClasses, transformClasses);
+  return [baseClasses, backgroundClasses, transformClasses];
 });
 
 const imageContainerClass = computed(() => ({
@@ -229,7 +222,7 @@ onUnmounted(() => {
           :class="imageClass"
           width="1000"
           height="1000"
-        >
+        />
       </div>
       <transition name="fade">
         <div

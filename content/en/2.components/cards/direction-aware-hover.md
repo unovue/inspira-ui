@@ -5,20 +5,9 @@ category: Card
 tags: [css, tailwind, card, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="DirectionAwareHoverDemo" type="examples"}  
-::
+::ComponentViewer{demoFile="DirectionAwareHoverDemo.vue" config="DirectionAwareHoverConfig" componentId="direction-aware-hover" :componentFiles='["DirectionAwareHover.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="direction-aware-hover"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="DirectionAwareHover.vue" language="vue" componentName="DirectionAwareHover" type="ui" id="direction-aware-hover"}
-::
+#api
 
 ## API
 
@@ -29,8 +18,9 @@ Copy and paste the following code
 | `imageClass`    | `string` | `undefined` | Additional CSS classes for the image element.   |
 | `childrenClass` | `string` | `undefined` | Additional CSS classes for the content overlay. |
 
-## Credits
+#credits
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
-
 - Ported from [Aceternity UI's Direction Aware Hover](https://ui.aceternity.com/components/direction-aware-hover)
+
+::

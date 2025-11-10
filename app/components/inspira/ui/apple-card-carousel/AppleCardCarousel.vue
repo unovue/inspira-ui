@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, onMounted, provide, ref, watch } from "vue";
-import { cn } from "@/lib/utils";
 import { CarouselKey } from "./AppleCarouselContext";
 
 interface Props {
@@ -83,11 +82,9 @@ provide(CarouselKey, {
       class="flex w-full overflow-x-scroll overscroll-x-auto scroll-smooth py-10 [scrollbar-width:none] md:py-20"
       @scroll="checkScrollability"
     >
-      <div
-        :class="cn('absolute right-0 z-[1000] h-auto w-[5%] overflow-hidden bg-gradient-to-l')"
-      />
+      <div class="absolute right-0 z-[1000] h-auto w-[5%] overflow-hidden bg-gradient-to-l" />
 
-      <div :class="cn('flex flex-row justify-start gap-4 pl-4', 'mx-auto max-w-7xl')">
+      <div class="mx-auto flex max-w-7xl flex-row justify-start gap-4 pl-4">
         <slot />
       </div>
     </div>

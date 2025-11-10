@@ -35,40 +35,42 @@ const data = [
 </script>
 
 <template>
-  <AppleCardCarousel>
-    <AppleCarouselItem
-      v-for="(card, index) in data"
-      :key="index"
-      :index="index"
-    >
-      <AppleCard
-        :card="card"
+  <div class="w-full overflow-hidden">
+    <AppleCardCarousel>
+      <AppleCarouselItem
+        v-for="(card, index) in data"
+        :key="index"
         :index="index"
-        :layout="true"
       >
-        <div
-          :key="`dummy-content${index}`"
-          class="mb-4 rounded-3xl bg-[#F5F5F7] p-8 md:p-14 dark:bg-neutral-800"
+        <AppleCard
+          :card="card"
+          :index="index"
+          :layout="true"
         >
-          <p
-            class="mx-auto max-w-3xl font-sans text-base text-neutral-600 md:text-2xl dark:text-neutral-400"
+          <div
+            :key="`dummy-content${index}`"
+            class="mb-4 rounded-3xl bg-[#F5F5F7] p-8 md:p-14 dark:bg-neutral-800"
           >
-            <span class="font-bold text-neutral-700 dark:text-neutral-200">
-              The first rule of Apple club is that you boast about Apple club.
-            </span>
-            Keep a journal, quickly jot down a grocery list, and take amazing class notes. Want to
-            convert those notes to text? No problem. Langotiya jeetu ka mara hua yaar is ready to
-            capture every thought.
-          </p>
-          <img
-            src="https://assets.aceternity.com/macbook.png"
-            alt="Macbook mockup from Aceternity UI"
-            height="500"
-            width="500"
-            class="mx-auto size-full object-contain md:size-1/2"
-          />
-        </div>
-      </AppleCard>
-    </AppleCarouselItem>
-  </AppleCardCarousel>
+            <p
+              class="mx-auto max-w-3xl font-sans text-base text-neutral-600 md:text-2xl dark:text-neutral-400"
+            >
+              <span class="font-bold text-neutral-700 dark:text-neutral-200">
+                The first rule of Apple club is that you boast about Apple club.
+              </span>
+              Keep a journal, quickly jot down a grocery list, and take amazing class notes. Want to
+              convert those notes to text? No problem. Langotiya jeetu ka mara hua yaar is ready to
+              capture every thought.
+            </p>
+            <img
+              src="https://assets.aceternity.com/macbook.png"
+              alt="Macbook mockup from Aceternity UI"
+              height="500"
+              width="500"
+              class="mx-auto size-full object-contain md:size-1/2"
+            />
+          </div>
+        </AppleCard>
+      </AppleCarouselItem>
+    </AppleCardCarousel>
+  </div>
 </template>
