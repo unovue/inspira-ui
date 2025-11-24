@@ -6,5 +6,5 @@ navigation: false
 
 ## All Blocks
 
-::BlocksList{routePath="/blocks"}
+::BlocksList
 ::

@@ -5,32 +5,9 @@ category: Miscellaneous
 tags: [css, tailwind, bento, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="BentoGridDemo" type="examples"}
-::
+::ComponentViewer{demoFile="BentoGridDemo.vue" config="BentoGridConfig" componentId="bento-grid" :componentFiles='["BentoGrid.vue", "BentoGridCard.vue", "BentoGridItem.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="bento-grid"}
-::
-
-## Install Manually
-
-Copy and paste the following code in the same folder
-
-::code-group
-
-:CodeViewerTab{label="BentoGrid.vue" language="vue" componentName="BentoGrid" type="ui" id="bento-grid"}
-:CodeViewerTab{label="BentoGridCard.vue" language="vue" componentName="BentoGridCard" type="ui" id="bento-grid"}
-:CodeViewerTab{label="BentoGridItem.vue" language="vue" componentName="BentoGridItem" type="ui" id="bento-grid"}
-
-::
-
-## Examples
-
-`BentoGrid` in MagicUI style.
-
-::ComponentLoader{label="Preview" componentName="BentoGridDemo2" type="examples"}
-::
+#api
 
 ## API
 
@@ -57,6 +34,8 @@ Copy and paste the following code in the same folder
 | `href`        | `string`  | Link to the url for CTA.             |
 | `cta`         | `string`  | Text to show on CTA.                 |
 
-## Credits
+#credits
 
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/bento-grid) and [Magic UI](https://magicui.design/docs/components/bento-grid) for this fantastic component.
+
+::

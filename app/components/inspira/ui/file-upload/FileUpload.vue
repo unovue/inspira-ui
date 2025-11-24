@@ -2,7 +2,6 @@
 import type { HTMLAttributes } from "vue";
 import { Motion } from "motion-v";
 import { ref } from "vue";
-import { cn } from "@/lib/utils";
 
 interface FileUploadProps {
   class?: HTMLAttributes["class"];
@@ -49,7 +48,8 @@ function handleDrop(e: DragEvent) {
 <template>
   <ClientOnly>
     <div
-      :class="cn('w-full', $props.class)"
+      class="w-full"
+      :class="[$props.class]"
       @dragover.prevent="handleEnter"
       @dragleave="handleLeave"
       @drop.prevent="handleDrop"
@@ -65,7 +65,7 @@ function handleDrop(e: DragEvent) {
           type="file"
           class="hidden"
           @change="onFileChange"
-        >
+        />
 
         <!-- Grid pattern -->
         <div
@@ -152,10 +152,10 @@ function handleDrop(e: DragEvent) {
                 :animate="
                   isActive
                     ? {
-                      x: 20,
-                      y: -20,
-                      opacity: 0.9,
-                    }
+                        x: 20,
+                        y: -20,
+                        opacity: 0.9,
+                      }
                     : {}
                 "
               >

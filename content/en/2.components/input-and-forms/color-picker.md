@@ -5,55 +5,9 @@ category: Forms & Input
 tags: [css, tailwind, input, color-picker, uplusion23]
 ---
 
-::ComponentLoader{label="Preview" componentName="ColorPickerDemo" type="examples" id="color-picker"}
-::
+::ComponentViewer{demoFile="ColorPickerDemo.vue" config="ColorPickerConfig" componentId="color-picker" :componentFiles='["ColorPicker.vue", "ObjectColorInput.vue", "ContrastRatio.vue", "index.ts"]' dependencies="@uiw/color-convert"}
 
-::alert{type="info"}
-**Note:** This component uses `@uiw/color-convert` npm package for color conversions.
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="color-picker"}
-::
-
-## Install Manually
-
-::steps{level=4}
-
-#### Install the dependencies
-
-::code-group
-
-```bash [npm]
-npm install @uiw/color-convert
-```
-
-```bash [pnpm]
-pnpm install @uiw/color-convert
-```
-
-```bash [bun]
-bun add @uiw/color-convert
-```
-
-```bash [yarn]
-yarn add @uiw/color-convert
-```
-
-::
-
-Copy and paste the following code
-
-::code-group
-
-:CodeViewerTab{filename="ColorPicker.vue" language="vue" componentName="ColorPicker" type="ui" id="color-picker"}
-:CodeViewerTab{filename="ObjectColorInput.vue" language="vue" componentName="ObjectColorInput" type="ui" id="color-picker"}
-:CodeViewerTab{filename="ContrastRatio.vue" language="vue" componentName="ContrastRatio" type="ui" id="color-picker"}
-:CodeViewerTab{filename="index.ts" language="ts" componentName="index" extension="ts" type="ui" id="color-picker"}
-
-::
-::
+#api
 
 ## API
 
@@ -88,15 +42,9 @@ interface ColorPickerValue {
 }
 ```
 
-## Features
-
-- Multiple color formats (HEX, HSL, HSLA, RGB, RGBA with alpha channel)
-- Interactive saturation, hue, and alpha sliders
-- Alpha channel support with transparency slider for RGBA/HSLA modes
-- Custom color swatches with default predefined colors
-- Accessibility contrast checker with AA/AAA indicators
-
-## Credits
+#credits
 
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.
 - Inspired by [@uplusion23](https://21st.dev/uplusion23/color-picker/color-picker-with-swatches-and-onchange).
+
+::

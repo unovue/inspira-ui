@@ -5,20 +5,9 @@ category: Miscellaneous
 tags: [css, tailwind, images, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="ImagesSliderDemo" type="examples" id="images-slider"}  
-::
+::ComponentViewer{demoFile="ImagesSliderDemo.vue" config="ImagesSliderConfig" componentId="images-slider" :componentFiles='["ImagesSlider.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="images-slider"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="ImagesSlider.vue" language="vue" componentName="ImagesSlider" type="ui" id="images-slider"}
-::
+#api
 
 ## API
 
@@ -36,14 +25,9 @@ Copy and paste the following code
 | `perspective`      | `string`                   | `'1000px'`                                        | The perspective to apply to the slider container.                              |
 | `modelValue`       | `number`                   | `0`                                               | Two-way binding for the current slide image index.                             |
 
-## Features
-
-- **Horizontal & Vertical Animations**: You can animate the images horizontally (default) or vertically with the `direction` prop.
-- **Preloaded Images**: Images are preloaded before showing, preventing flickering loading animation.
-- **Customisable Autoplay**: Automatically transition through your slides, or allow your users to navigate manually.
-- **Overlay Anything**: The default slot allows you to overlay whatever content you wish overlay slider.
-
-## Credits
+#credits
 
 - Component by [Craig Riley](https://github.com/craigrileyuk) for porting this component.
 - Credits to [Aceternity UI](https://ui.aceternity.com/components/images-slider) for inspiring this component.
+
+::

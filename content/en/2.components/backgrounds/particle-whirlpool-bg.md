@@ -2,7 +2,7 @@
 title: Particle Whirlpool
 description: An animated background with swirling particles.
 category: Background
-tags: [css, tailwind, background, threejs]
+tags: [css, tailwind, background, threejs, postprocessing]
 ---
 
 ::ComponentViewer{demoFile="ParticleWhirlpoolBgDemo.vue" config="ParticleWhirlpoolBgConfig" componentId="bg-particle-whirlpool" :componentFiles='["ParticleWhirlpoolBg.vue"]' dependencies="three postprocessing" devDependencies="@types/three"}

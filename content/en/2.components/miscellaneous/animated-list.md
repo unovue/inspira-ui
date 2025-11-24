@@ -5,23 +5,9 @@ category: Miscellaneous
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="AnimatedListDemo" type="examples"}
-::
+::ComponentViewer{demoFile="AnimatedListDemo.vue" config="AnimatedListConfig" componentId="animated-list" :componentFiles='["AnimatedList.vue", "Notification.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="animated-list"}
-::
-
-## Install Manually
-
-Copy and paste the following code in the same folder
-
-::code-group
-
-:CodeViewerTab{label="AnimatedList.vue" language="vue" componentName="AnimatedList" type="ui" id="animated-list"}
-:CodeViewerTab{label="Notification.vue" language="vue" componentName="Notification" type="ui" id="animated-list"}
-::
+#api
 
 ## API
 
@@ -29,13 +15,8 @@ Copy and paste the following code in the same folder
 | --------- | -------- | ------- | -------------------------------------------------------------- |
 | `delay`   | `number` | `1`     | The delay in milliseconds before adding each item to the list. |
 
-## Features
-
-- **Animated Item Loading**: Items are added to the list one by one with a configurable delay.
-- **Smooth Transitions**: Each item animates in with a spring effect on entry and a smooth scale and opacity animation on exit.
-- **Reverse Order**: Items are displayed in reverse order (newest at the top) for a dynamic, engaging user experience.
-- **Flexibility**: You can pass different components as items, making it highly versatile.
-
-## Credits
+#credits
 
 - Inspired by [Magic UI](https://magicui.design/docs/components/animated-list).
+
+::

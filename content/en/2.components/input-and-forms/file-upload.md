@@ -5,28 +5,9 @@ category: Forms & Input
 tags: [css, tailwind, input, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="FileUploadDemo" type="examples"}
-::
+::ComponentViewer{demoFile="FileUploadDemo.vue" config="FileUploadConfig" componentId="file-upload" :componentFiles='["FileUpload.vue", "FileUploadGrid.vue"]'}
 
-::alert{type="warning"}
-This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="file-upload"}
-::
-
-## Install Manually
-
-Copy and paste the following code in the same folder
-
-::code-group
-
-:CodeViewerTab{label="FileUpload.vue" language="vue" componentName="FileUpload" type="ui" id="file-upload"}
-:CodeViewerTab{label="FileUploadGrid.vue" language="vue" componentName="FileUploadGrid" type="ui" id="file-upload"}
-
-::
+#api
 
 ## API
 
@@ -46,14 +27,6 @@ The `FileUpload` component serves as a wrapper for the file upload effect. It ma
 | ---------- | ------------------------- | ---------------------------------------------------------- |
 | `onChange` | `(files: File[]) => void` | Callback function triggered when files are added/uploaded. |
 
-#### Usage
-
-```vue [MyComponent.vue]
-<FileUpload class="additional-class">
-  <!-- Your content here -->
-</FileUpload>
-```
-
 ### `FileUploadGrid`
 
 The `FileUploadGrid` component provides the background grid pattern for the file upload area. It is intended to be used within a `FileUpload` component to create the visual grid effect behind the upload interface.
@@ -64,13 +37,9 @@ The `FileUploadGrid` component provides the background grid pattern for the file
 | --------- | ------ | ------- | -------------------------------------- |
 | `class`   | String | -       | Additional classes for custom styling. |
 
-#### Usage
-
-```vue [MyComponent.vue]
-<FileUploadGrid class="custom-class" />
-```
-
-## Credits
+#credits
 
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.
 - Inspired by [AcernityUI](https://ui.aceternity.com/components/file-upload).
+
+::

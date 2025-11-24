@@ -5,20 +5,9 @@ category: Miscellaneous
 tags: [css, tailwind, input, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="AnimatedCircularProgressBarDemo" type="examples" id="animated-circular-progressbar"}
-::
+::ComponentViewer{demoFile="AnimatedCircularProgressBarDemo.vue" config="AnimatedCircularProgressBarConfig" componentId="animated-circular-progressbar" :componentFiles='["AnimatedCircularProgressBar.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="animated-circular-progressbar"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="AnimatedCircularProgressBar.vue" language="vue" componentName="AnimatedCircularProgressBar" type="ui" id="animated-circular-progressbar"}
-::
+#api
 
 ## API
 
@@ -34,7 +23,9 @@ Copy and paste the following code
 | `showPercentage`      | `boolean` | `true`               | Show the value inside the circle            |
 | `duration`            | `number`  | `1`                  | The duration of the animation (in seconds). |
 
-## Credits
+#credits
 
 - Credits to [Magic UI](https://magicui.design/docs/components/animated-circular-progress-bar).
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for porting this component.
+
+::

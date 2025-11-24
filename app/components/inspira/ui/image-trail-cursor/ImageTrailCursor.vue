@@ -12,7 +12,6 @@ const { images = [], variant = "type1" } = defineProps<Props>();
 
 const containerRef = useTemplateRef("containerRef");
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let currentInstance: any = null;
 
 // Initialize the variant instance

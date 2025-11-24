@@ -5,8 +5,9 @@ category: Miscellaneous
 tags: [css, tailwind, shader-toy, ogl, webgl]
 ---
 
-::ComponentLoader{label="Preview" componentName="ShaderToyDemo" type="examples" id="shader-toy"}
-::
+::ComponentViewer{demoFile="ShaderToyDemo.vue" config="AnimatedCircularProgressBarConfig" componentId="animated-circular-progressbar" :componentFiles='["ShaderToy.vue", "InspiraShaderToy.ts"]' dependencies="ogl"}
+
+#api
 
 ## API
 
@@ -20,44 +21,9 @@ tags: [css, tailwind, shader-toy, ogl, webgl]
 | `speed`      | `number`             | `1`       | Adjust the speed of the shader output.                    |
 | `class`      | `string`             | `-`       | Custom classes to apply to the container.                 |
 
-## Installation
-
-Make sure to include and install `ogl` (for rendering) in your project.
-
-::pm-install{name="ogl"}
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="shader-toy"}
-::
-
-## Install Manually
-
-Copy and paste the following code:
-
-::code-group
-::CodeViewerTab{filename="ShaderToy.vue" language="vue" componentName="ShaderToy" type="ui" id="shader-toy"}
-::
-::CodeViewerTab{filename="InspiraShaderToy.ts" language="typescript" icon="vscode-icons:file-type-typescript" componentName="InspiraShaderToy" type="ui" id="shader-toy" extension="ts"}
-::
-::
-
-## Features
-
-- **Shadertoy-Compatible**: Supports Shadertoy-style `mainImage`, `iTime`, `iResolution`, `iMouse`, and more.
-- **GLSL Shader Rendering**: Render full-featured ShaderToy-like fragment shaders.
-- **iMouse Support**: Interactive shaders with real-time mouse input (click or hover).
-- **HSV Color Control**: Dynamically adjust shader hue, saturation, and brightness.
-- **Responsive Design**: Automatically adjusts canvas size with container resizing.
-- **Runtime Control**: Play, pause, and reset shaders dynamically.
-
-## Notes
-
-- Converts and wraps Shadertoy-style shaders to work in a WebGL2 environment.
-- Color control (`hue`, `saturation`, `brightness`) is applied as a post-processing step to simulate HSV adjustments.
-
-## Credits
+#credits
 
 - Built with [OGL](https://github.com/oframe/ogl).
 - Inspired by [Shadertoy](https://shadertoy.com/) and adapted for Vue compatibility.
+
+::

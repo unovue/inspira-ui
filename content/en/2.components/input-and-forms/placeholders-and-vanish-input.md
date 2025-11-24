@@ -5,20 +5,9 @@ category: Forms & Input
 tags: [css, tailwind, input, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="VanishingInputDemo" type="examples"}  
-::
+::ComponentViewer{demoFile="VanishingInputDemo.vue" config="VanishingInputConfig" componentId="vanishing-input" :componentFiles='["VanishingInput.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="vanishing-input"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="VanishingInput.vue" language="vue" componentName="VanishingInput" type="ui" id="vanishing-input"}
-::
+#api
 
 ## API
 
@@ -33,8 +22,9 @@ This component listens to the following events emitted by the `VanishingInput` c
 | `change`   | `Event`    | Triggered when the input value changes. |
 | `submit`   | `string`   | Triggered when the input is submitted.  |
 
-## Credits
+#credits
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
-
 - Ported from [Aceternity UI's Placeholders And Vanish Input](https://ui.aceternity.com/components/placeholders-and-vanish-input).
+
+::

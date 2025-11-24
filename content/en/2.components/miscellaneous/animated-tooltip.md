@@ -5,20 +5,9 @@ category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="AnimatedTooltipDemo" type="examples"}
-::
+::ComponentViewer{demoFile="AnimatedTooltipDemo.vue" config="AnimatedTooltipConfig" componentId="animated-tooltip" :componentFiles='["AnimatedTooltip.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="animated-tooltip"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="AnimatedTooltip.vue" language="vue" componentName="AnimatedTooltip" type="ui" id="animated-tooltip"}
-::
+#api
 
 ## API
 
@@ -26,8 +15,9 @@ Copy and paste the following code
 | --------- | ----------------------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `items`   | `Array<{id: number, name: string, designation: string, image: string}>` | `[]`    | An array of objects, each representing an item. Each object in the array should have the following properties: id, name, designation, image |
 
-## Credits
+#credits
 
 - Credits to [M Atif](https://github.com/atif0075) for this component.
-
 - Inspired from [Aceternity UI's Animated Tooltip](https://ui.aceternity.com/components/animated-tooltip).
+
+::

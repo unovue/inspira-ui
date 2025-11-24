@@ -1,6 +1,6 @@
 {
   "name": "inspira-ui",
-  "packageManager": "pnpm@10.18.2+sha512.9fb969fa749b3ade6035e0f109f0b8a60b5d08a1a87fdf72e337da90dcc93336e2280ca4e44f2358a649b83c17959e9993e777c2080879f3801e6f0d999ad3dd",
+  "packageManager": "pnpm@10.22.0+sha512.bf049efe995b28f527fd2b41ae0474ce29186f7edcb3bf545087bd61fbbebb2bf75362d1307fda09c2d288e1e499787ac12d4fcb617a974718a6051f2eee741c",
   "scripts": {
     "dev": "nuxt dev",
     "build": "nuxt build",
@@ -23,12 +23,14 @@
     "@nuxt/kit": "^4.1.3",
     "@nuxt/scripts": "0.12.2",
     "@nuxt/ui": "^4.0.1",
+    "@uiw/color-convert": "^2.9.2",
     "@unhead/vue": "^2.0.19",
     "@vueuse/nuxt": "^13.9.0",
     "better-sqlite3": "^12.2.0",
     "class-variance-authority": "^0.7.1",
     "docus": "latest",
     "eslint": "^9.37.0",
+    "gsap": "^3.13.0",
     "nuxt": "4.1.2",
     "ogl": "^1.0.11",
     "scule": "^1.3.0",

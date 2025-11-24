@@ -5,20 +5,9 @@ category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="MultiStepLoaderDemo" type="examples"}  
-::
+::ComponentViewer{demoFile="MultiStepLoaderDemo.vue" config="MultiStepLoaderConfig" componentId="multi-step-loader" :componentFiles='["MultiStepLoader.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="multi-step-loader"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="MultiStepLoader.vue" language="vue" componentName="MultiStepLoader" type="ui" id="multi-step-loader"}
-::
+#api
 
 ## API
 
@@ -35,8 +24,9 @@ Copy and paste the following code
 | `complete`     | `void`       | Emitted when all steps have been completed.                          |
 | `close`        | `void`       | Emitted when the loader is closed by button.                         |
 
-## Credits
+#credits
 
 - Credits to [M Atif](https://github.com/atif0075) for this component.
-
 - Inspired from [Aceternity UI's Multi Step Loader](https://ui.aceternity.com/components/multi-step-loader).
+
+::

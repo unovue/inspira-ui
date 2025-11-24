@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
 import { onMounted, ref, watch } from "vue";
-import { cn } from "@/lib/utils";
 
 interface ColorRGB {
   r: number;
@@ -1389,7 +1388,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div :class="cn('pointer-events-none fixed top-0 left-0 z-50 size-full', props.class)">
+  <div
+    class="pointer-events-none fixed top-0 left-0 z-50 size-full"
+    :class="[props.class]"
+  >
     <canvas
       id="fluid"
       ref="canvasRef"

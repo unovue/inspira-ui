@@ -5,20 +5,9 @@ category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="TracingBeamDemo" type="examples"}
-::
+::ComponentViewer{demoFile="TracingBeamDemo.vue" config="TracingBeamConfig" componentId="tracing-beam" :componentFiles='["TracingBeam.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="tracing-beam"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="TracingBeam.vue" language="vue" componentName="TracingBeam" type="ui" id="tracing-beam"}
-::
+#api
 
 ## API
 
@@ -26,13 +15,8 @@ Copy and paste the following code
 | --------- | -------- | ------- | ------------------------------------------ |
 | `class`   | `string` | `""`    | Additional CSS classes for custom styling. |
 
-## Features
-
-- **Dynamic Tracing Beam**: Renders a gradient tracing beam that follows the scroll position, adding a modern visual effect.
-- **Scroll-Based Animation**: As the user scrolls, the beam animates along a path with varying gradients, responding to scroll depth.
-- **Gradient Transition**: Smoothly transitions colors along the beam from cyan to purple with fading edges for a subtle effect.
-- **Slot-Based Content**: Supports a default slot to add content inside the tracing beam container.
-
-## Credits
+#credits
 
 - Ported from [Aceternity UI](https://ui.aceternity.com/components/tracing-beam);
+
+::

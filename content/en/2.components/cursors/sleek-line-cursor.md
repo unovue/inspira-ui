@@ -6,8 +6,7 @@ tags: [css, tailwind, cursor, webgl, cursify]
 badge: New
 ---
 
-::ComponentLoader{label="Preview" componentName="SleekLineCursorDemo" type="examples" id="sleek-line-cursor"}
-::
+::ComponentViewer{demoFile="SleekLineCursorDemo.vue" config="SleekLineCursorConfig" componentId="sleek-line-cursor" :componentFiles='["SleekLineCursor.vue"]'}
 
 ## API
 
@@ -22,25 +21,8 @@ badge: New
 
 > 💡 This component uses `pointer-events-none` and is fixed fullscreen by default. You can extend or override its styling via the `class` prop.
 
-## Install using CLI
-
-::InstallationCli{componentId="sleek-line-cursor"}
-::
-
-## Install Manually
-
-::CodeViewer{filename="SleekLineCursor.vue" language="vue" componentName="SleekLineCursor" type="ui" id="sleek-line-cursor"}
-::
-
-## Features
-
-- **Spring-based animation**: Trails follow the cursor using simulated spring physics and velocity propagation.
-- **Color wave dynamics**: Dynamic hue changes via sinusoidal wave functions, generating smooth color transitions.
-- **Touch support**: Works seamlessly with both mouse and touch inputs.
-- **Lightweight and performant**: Uses the native `<canvas>` API with no external dependencies.
-- **Auto-resizing canvas**: Resizes dynamically with window or orientation changes.
-- **Custom styling**: Easily styled using Tailwind or your own classes.
-
-## Credits
+#credits
 
 - Ported from [Canvas Cursor by Cursify](https://cursify.vercel.app/components/canvas-cursor).
+
+::

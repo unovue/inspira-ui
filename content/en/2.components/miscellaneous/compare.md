@@ -5,41 +5,9 @@ category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="CompareDemo" type="examples" id="compare"}
-::
+::ComponentViewer{demoFile="CompareDemo.vue" config="CompareConfig" componentId="compare" :componentFiles='["Compare.vue", "StarField.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="compare"}
-::
-
-## Install Manually
-
-Copy and paste the following code in the same folder
-
-::code-group
-
-:CodeViewerTab{label="Compare.vue" language="vue" componentName="Compare" type="ui" id="compare"}
-:CodeViewerTab{label="StarField.vue" language="vue" componentName="StarField" type="ui" id="compare"}
-
-::
-
-## Examples
-
-Drag handle with custom content
-
-::ComponentLoader{label="Preview" componentName="CompareDragDemo" type="examples" id="compare"}
-::
-
-AutoPlay
-
-::ComponentLoader{label="Preview" componentName="CompareAutoplayDemo" type="examples" id="compare"}
-::
-
-Custom Content with AutoPlay
-
-::ComponentLoader{label="Preview" componentName="CompareCustomContentDemo" type="examples" id="compare"}
-::
+#api
 
 ## API
 
@@ -78,8 +46,9 @@ Custom Content with AutoPlay
 | `second-content` | `<img>` element if `secondImage` prop is provided | Content shown on the right/second side of the comparison. Has full access to component width/height.                              |
 | `handle`         | Default slider handle with dots icon              | Custom handle for the slider. Automatically positioned at the dividing line. Should handle positioning with absolute positioning. |
 
-## Credits
+#credits
 
 - Credits to [M Atif](https://github.com/atif0075) for this component.
-
 - Inspired from [Aceternity UI's Compare](https://ui.aceternity.com/components/compare).
+
+::

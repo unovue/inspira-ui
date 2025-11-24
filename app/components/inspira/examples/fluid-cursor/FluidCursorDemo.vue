@@ -6,7 +6,7 @@ const enabled = ref(false);
   <div class="relative flex h-60 w-full flex-col items-center justify-center gap-4">
     <div class="flex flex-row items-center justify-center gap-4">
       <span>Enable Effect</span>
-      <Switch v-model="enabled" />
+      <USwitch v-model="enabled" />
     </div>
     <span
       v-if="enabled"

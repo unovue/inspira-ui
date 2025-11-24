@@ -5,20 +5,9 @@ category: Miscellaneous
 tags: [css, tailwind]
 ---
 
-::ComponentLoader{label="Preview" componentName="MorphingTabsDemo" type="examples" id="morphing-tabs"}
-::
+::ComponentViewer{demoFile="MorphingTabsDemo.vue" config="MorphingTabsConfig" componentId="morphing-tabs" :componentFiles='["MorphingTabs.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="morphing-tabs"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="MorphingTabs.vue" language="vue" componentName="MorphingTabs" type="ui" id="morphing-tabs"}
-::
+#api
 
 ## API
 
@@ -30,7 +19,9 @@ Copy and paste the following code
 | `margin`           | `number`   | `20`    | Active tab margin left and right.              |
 | `blurStdDeviation` | `number`   | `6`     | Svg blur stdDeviation, tab rounded use it.     |
 
-## Credits
+#credits
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Inspired and ported from [@Preet "Exclusion tabs"](https://x.com/wickedmishra/status/1823026659894940124).
+
+::

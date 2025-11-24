@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { cn } from "@/lib/utils";
 
 interface Props {
   initialValue?: number;
@@ -85,10 +84,10 @@ function hexToHsl(hex: string): [number, number, number] {
 
   // Find min and max values of r, g, b
   const max = Math.max(r, g, b);
-    const min = Math.min(r, g, b);
+  const min = Math.min(r, g, b);
   let h = 0;
-    let s = 0;
-    const l = (max + min) / 2;
+  let s = 0;
+  const l = (max + min) / 2;
 
   if (max != min) {
     const d = max - min;
@@ -129,12 +128,10 @@ function hexToHsl(hex: string): [number, number, number] {
       min="0"
       max="100"
       class="size-full touch-none opacity-0 hover:cursor-grab focus-visible:outline-offset-4 focus-visible:outline-transparent active:cursor-grabbing"
-    >
+    />
     <div
       aria-hidden="true"
-      :class="
-        cn('slider-value-labels pointer-events-none absolute inset-x-0 top-0 z-[2] h-1/2 text-base')
-      "
+      class="slider-value-labels pointer-events-none absolute inset-x-0 top-0 z-[2] h-1/2 text-base"
       :style="sliderLabelStyles"
     />
     <div

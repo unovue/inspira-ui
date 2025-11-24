@@ -5,8 +5,9 @@ category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="AnimatedTestimonialsDemo" type="examples" id="animated-testimonials"}
-::
+::ComponentViewer{demoFile="AnimatedTestimonialsDemo.vue" config="AnimatedTestimonialsConfig" componentId="animated-testimonials" :componentFiles='["AnimatedTestimonials.vue"]'}
+
+#api
 
 ## API
 
@@ -27,26 +28,8 @@ Each testimonial object must contain the following fields:
 | `designation` | `string` | The position or role of the testimonial author (e.g., CEO, user). |
 | `image`       | `string` | URL of the image or avatar for the testimonial author.            |
 
-## Install using CLI
-
-::InstallationCli{componentId="animated-testimonials"}
-::
-
-## Install Manually
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="AnimatedTestimonials.vue" language="vue" componentName="AnimatedTestimonials" type="ui" id="animated-testimonials"}
-::
-
-## Features
-
-- **Animated Slides**: Utilizes Motion-V to animate transitions between testimonials.
-- **Auto-Play Support**: Automatically transitions to the next testimonial after a specified duration.
-- **Random Rotation Effects**: Adds a subtle randomized rotation for each new slide.
-- **Navigation Buttons**: Manually cycle through testimonials using previous and next controls.
-- **Responsive and Modular**: Adapts well to different screen sizes, allowing easy integration into various layouts.
-
-## Credits
+#credits
 
 - Ported from (Aceternity UI Animated Testimonials)[https://ui.aceternity.com/components/animated-testimonials].
+
+::

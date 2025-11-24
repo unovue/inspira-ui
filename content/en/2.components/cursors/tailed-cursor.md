@@ -5,8 +5,9 @@ category: Cursor
 tags: [css, tailwind, cursor, webgl, codrops]
 ---
 
-::ComponentLoader{label="Preview" componentName="TailedCursorDemo" type="examples" id="tailed-cursor"}
-::
+::ComponentViewer{demoFile="TailedCursorDemo.vue" config="TailedCursorConfig" componentId="tailed-cursor" :componentFiles='["TailedCursor.vue"]' dependencies="ogl"}
+
+#api
 
 ## API
 
@@ -25,35 +26,9 @@ tags: [css, tailwind, cursor, webgl, codrops]
 | `effectAmplitude`    | `number`   | `2`                                            | Amplitude of the shader wave effect when enabled.            |
 | `backgroundColor`    | `number[]` | `[0, 0, 0, 0]`                                 | RGBA background clear color for the WebGL canvas.            |
 
-## Installation
-
-This component requires the **OGL** library for WebGL rendering.
-
-::pm-install{name="ogl"}
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="tailed-cursor"}
-::
-
-## Install Manually
-
-Copy and paste the following code:
-
-::CodeViewer{filename="TailedCursor.vue" language="vue" componentName="TailedCursor" type="ui" id="tailed-cursor"}
-::
-
-## Features
-
-- **WebGL-powered tails**: High-performance smooth trailing ribbons following the cursor.
-- **Multi-color ribbons**: Multiple colored tails with customizable colors and offsets.
-- **Dynamic shaders**: Optional shader-based waving effects and fade transitions.
-- **Responsive and adaptive**: Automatically resizes with container and supports touch input.
-- **Customizable physics**: Adjustable spring, friction, thickness, and speed for fine-tuned motion.
-- **Lightweight integration**: Minimal external dependencies, easy to integrate in Vue 3 apps.
-
-## Credits
+#credits
 
 - Built with [OGL](https://github.com/oframe/ogl), a lightweight WebGL framework.
 - Inspired from [Codrops Article](https://tympanus.net/codrops/2019/09/24/crafting-stylised-mouse-trails-with-ogl/)
+
+::

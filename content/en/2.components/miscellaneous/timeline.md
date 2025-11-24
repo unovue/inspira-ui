@@ -5,8 +5,9 @@ category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="TimelineDemo" type="examples" id="timeline"}
-::
+::ComponentViewer{demoFile="TimelineDemo.vue" config="TimelineConfig" componentId="timeline" :componentFiles='["Timeline.vue"]'}
+
+#api
 
 ## API
 
@@ -18,31 +19,8 @@ tags: [css, tailwind, aceternity-ui]
 | `title`          | `string`                           | `""`    | Title of the timeline section.                     |
 | `description`    | `string`                           | `""`    | Description text displayed below the title.        |
 
-## Install using CLI
-
-::InstallationCli{componentId="timeline"}
-::
-
-## Install Manually
-
-You can copy and paste the following code to create this component:
-
-::code-group
-
-    ::CodeViewerTab{label="Timeline.vue" language="vue" componentName="Timeline" type="ui" id="timeline"}
-    ::
-
-::
-
-## Features
-
-- **Animated Scroll Effect**: The timeline bar animates smoothly as the user scrolls.
-- **Sticky Labels**: Each event label remains visible while scrolling.
-- **Gradient Progress Bar**: A visually appealing timeline indicator with gradient effects.
-- **Slot Support**: Custom content can be placed within each timeline item.
-- **Responsive Design**: Adapts seamlessly to different screen sizes.
-- **Dark Mode Support**: Automatically adjusts to light or dark themes.
-
-## Credits
+#credits
 
 - Inspired and ported from [Aceternity UI's Timeline](https://ui.aceternity.com/components/timeline).
+
+::

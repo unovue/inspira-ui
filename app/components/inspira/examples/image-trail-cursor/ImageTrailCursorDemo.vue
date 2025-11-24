@@ -26,7 +26,7 @@ const selectedVariant = ref<VariantType>("type2");
 
 <template>
   <div class="flex min-h-96 w-full flex-col gap-2">
-    <div class="relative mt-4 flex h-96 w-full items-center justify-center rounded-lg border p-4">
+    <div class="relative mt-4 flex h-96 w-full items-center justify-center rounded-lg p-4">
       <span class="absolute inset-0 flex items-center justify-center text-4xl">Hover Here</span>
       <ImageTrailCursor
         :key="selectedVariant"

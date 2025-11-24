@@ -5,20 +5,9 @@ category: Device Mockup
 tags: [css, tailwind, device-mockup, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="iPhone15ProMockupDemo" type="examples" id="mockups"}
-::
+::ComponentViewer{demoFile="iPhone15ProMockupDemo.vue" config="iPhone15ProMockupConfig" componentId="iphone-mockup" :componentFiles='["iPhone15ProMockup.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="iphone-mockup"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="iPhone15ProMockup.vue" language="vue" componentName="iPhone15ProMockup" type="ui" id="iphone-mockup"}
-::
+#api
 
 ## API
 
@@ -28,14 +17,8 @@ Copy and paste the following code
 | `height`  | `number` | `882`   | Height of the mockup SVG in pixels.            |
 | `src`     | `string` | `null`  | URL of the image to display inside the mockup. |
 
-## Features
-
-- **Realistic iPhone 15 Pro Mockup**: Provides an accurate SVG representation of the iPhone 15 Pro, perfect for showcasing mobile app designs or website previews.
-- **Customizable Dimensions**: Adjust the `width` and `height` props to fit your specific design requirements.
-- **Image Display Support**: Use the `src` prop to insert any image into the mockup screen area, allowing for dynamic content display.
-- **Light and Dark Mode Compatibility**: The mockup adapts its colors based on the theme, ensuring consistency in both light and dark modes.
-- **Easy Integration**: Simple to include in your Vue projects with minimal setup.
-
-## Credits
+#credits
 
 - Ported from [Magic UI](https://magicui.design/docs/components/iphone-15-pro).
+
+::

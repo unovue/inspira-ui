@@ -5,8 +5,9 @@ category: Cursor
 tags: [css, tailwind, cursor, webgl, cursify]
 ---
 
-::ComponentLoader{label="Preview" componentName="FluidCursorDemo" type="examples" id="fluid-cursor"}
-::
+::ComponentViewer{demoFile="FluidCursorDemo.vue" config="FluidCursorConfig" componentId="fluid-cursor" :componentFiles='["FluidCursor.vue"]'}
+
+#api
 
 ## API
 
@@ -28,28 +29,9 @@ tags: [css, tailwind, cursor, webgl, cursify]
 | `transparent`         | `boolean` | `true`                   | Whether the canvas background is transparent.                                      |
 | `class`               | `string`  | `undefined`              | Additional CSS classes for the outer container div.                                |
 
-## Install using CLI
-
-::InstallationCli{componentId="fluid-cursor"}
-::
-
-## Install Manually
-
-Copy and paste the following code:
-
-::CodeViewer{filename="FluidCursor.vue" language="vue" componentName="FluidCursor" type="ui" id="fluid-cursor"}
-::
-
-## Features
-
-- **GPU-powered fluid simulation**: Smooth and performant fluid dynamics using WebGL shaders.
-- **Pointer interaction**: Fluid responds dynamically to mouse and touch input with colorful splats.
-- **Customizable physics**: Adjustable simulation resolution, pressure, curl, and dissipation parameters.
-- **Shading effects**: Optional lighting/shading for enhanced 3D fluid appearance.
-- **Responsive canvas**: Automatically resizes and adapts to device pixel ratio for crisp visuals.
-- **Background control**: Support for transparent or solid colored backgrounds.
-
-## Credits
+#credits
 
 - Inspired from [Fluid Cursor by Cursify](https://cursify.vercel.app/components/fluid-cursor)
 - Utilizes WebGL 1/2 context and custom GLSL shaders for fluid physics and rendering.
+
+::

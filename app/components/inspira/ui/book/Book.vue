@@ -1,17 +1,12 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
-import type {BookColor, BookRadius, BookShadowSize, BookSize} from "./index";
+import type { BookColor, BookRadius, BookShadowSize, BookSize } from "./index";
 import { computed } from "vue";
-import { cn } from "@/lib/utils";
 import {
-  
-  
-  
-  
   BOOK_COLOR_MAP as colorMap,
   BOOK_RADIUS_MAP as radiusMap,
   BOOK_SHADOW_SIZE_MAP as shadowSizeMap,
-  BOOK_SIZE_MAP as sizeMap
+  BOOK_SIZE_MAP as sizeMap,
 } from "./index";
 
 interface BookProps {
@@ -40,16 +35,13 @@ const computedGradient = computed(() => {
 
 <template>
   <div
-    :class="
-      cn(
-        'group z-10 w-min [--shadowColor:#bbb] [perspective:800px] dark:[--shadowColor:#111]',
-        $props.class,
-      )
-    "
+    class="group z-10 w-min [--shadowColor:#bbb] [perspective:800px] dark:[--shadowColor:#111]"
+    :class="[$props.class]"
   >
     <div
       :style="{ width: sizeMap[size].width, transition: `transform ${props.duration}ms ease` }"
-      class="relative aspect-[3/4] [transform-style:preserve-3d]" :class="[
+      class="relative aspect-[3/4] [transform-style:preserve-3d]"
+      :class="[
         isStatic
           ? '[transform:rotateY(-30deg)]'
           : '[transform:rotateY(0deg)] group-hover:[transform:rotateY(-30deg)]',
@@ -83,7 +75,7 @@ const computedGradient = computed(() => {
           top: '3px',
           bottom: '3px',
           width: '48px',
-          transform: `translateX(${ sizeMap[size].spineTranslation }) rotateY(90deg)`,
+          transform: `translateX(${sizeMap[size].spineTranslation}) rotateY(90deg)`,
           background: 'linear-gradient(90deg, rgba(255,255,255,1) 50%, rgba(249,249,249,1) 50%)',
         }"
       />
