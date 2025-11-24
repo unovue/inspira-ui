@@ -5,36 +5,9 @@ category: Special Effects
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="AnimatedBeamDemo" type="examples"}
-::
+::ComponentViewer{demoFile="AnimatedBeamDemo.vue" config="AnimatedBeamConfig" componentId="animated-beam" :componentFiles='["AnimatedBeam.vue"]'}
 
-::alert{type="warning"}
-This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="animated-beam"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="AnimatedBeam.vue" language="vue" componentName="AnimatedBeam" type="ui" id="animated-beam"}
-::
-
-## Example
-
-Double-sided beam.
-
-::ComponentLoader{label="Preview" componentName="AnimatedBeamDemo2" type="examples"}
-::
-
-Vertical beam.
-
-::ComponentLoader{label="Preview" componentName="AnimatedBeamDemo3" type="examples"}
-::
+#api
 
 ## API
 
@@ -58,14 +31,8 @@ Vertical beam.
 | `endXOffset`         | `number`      | `0`                    | Horizontal offset for the beam's ending point.                               |
 | `endYOffset`         | `number`      | `0`                    | Vertical offset for the beam's ending point.                                 |
 
-## Features
-
-- **Dynamic Beam Drawing**: Automatically renders a beam between two specified elements on the page.
-- **Smooth Animation**: Features a gradient animation that flows along the beam's path for a visually engaging effect.
-- **Customizable Appearance**: Easily adjust color, width, opacity, and curvature to match your design requirements.
-- **Responsive Updates**: The beam adjusts its position and size in response to window resizing and element repositioning.
-- **Flexible Animation Control**: Customize the animation's duration, delay, and direction for precise timing.
-
-## Credits
+#credits
 
 - Inspired and ported from [Magic UI Animated Beam](https://magicui.design/docs/components/animated-beam).
+
+::

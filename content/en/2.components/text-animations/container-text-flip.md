@@ -5,32 +5,9 @@ category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="ContainerTextFlipDemo" type="examples" id="container-text-flip"}
-::
+::ComponentViewer{demoFile="ContainerTextFlipDemo.vue" config="ContainerTextFlipConfig" componentId="container-text-flip" :componentFiles='["ContainerTextFlip.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="container-text-flip"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="ContainerTextFlip.vue" language="vue" componentName="ContainerTextFlip" type="ui" id="container-text-flip"}
-::
-
-## Example
-
-Standard
-
-::ComponentLoader{label="Preview" componentName="ContainerTextFlipStandardDemo" type="examples" id="container-text-flip"}
-::
-
-Hero section with animation
-
-::ComponentLoader{label="Preview" componentName="ContainerTextFlipHeroDemo" type="examples" id="container-text-flip"}
-::
+#api
 
 ## API
 
@@ -42,7 +19,9 @@ Hero section with animation
 | `class`             | `string`   | ``                                             | Additional CSS classes to apply to the container     |
 | `textClass`         | `string`   | ``                                             | Additional CSS classes to apply to the text          |
 
-## Credits
+#credits
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Ported from [Aceternity UI Container Text Flip](https://ui.aceternity.com/components/container-text-flip).
+
+::

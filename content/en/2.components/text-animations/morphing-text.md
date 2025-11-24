@@ -5,24 +5,9 @@ category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="MorphingTextDemo" type="examples" id="morphing-text"}
-::
+::ComponentViewer{demoFile="MorphingTextDemo.vue" config="MorphingTextConfig" componentId="morphing-text" :componentFiles='["MorphingText.vue"]'}
 
-::alert{type="warning"}
-This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="morphing-text"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="MorphingText.vue" language="vue" componentName="MorphingText" type="ui" id="morphing-text"}
-::
+#api
 
 ## API
 
@@ -33,7 +18,9 @@ Copy and paste the following code
 | `morphTime`    | `number`   | `1.5`   | Animation execution time.             |
 | `coolDownTime` | `number`   | `0.5`   | Animation dwell time.                 |
 
-## Credits
+#credits
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Inspired and ported from [Magic UI Morphing Text](https://magicui.design/docs/components/morphing-text).
+
+::

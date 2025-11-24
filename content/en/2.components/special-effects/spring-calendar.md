@@ -5,8 +5,9 @@ category: Special Effects
 tags: [css, tailwind, motion-v]
 ---
 
-::ComponentLoader{label="Preview" componentName="SpringCalendarDemo" type="examples" id="spring-calendar"}
-::
+::ComponentViewer{demoFile="SpringCalendarDemo.vue" config="SpringCalendarConfig" componentId="spring-calendar" :componentFiles='["SpringCalendar.vue", "TextMorph.vue"]'}
+
+#api
 
 ## API
 
@@ -21,32 +22,8 @@ tags: [css, tailwind, motion-v]
 | -------------------- | -------- | ------------------------------------------------------------------ |
 | `update:activeIndex` | `number` | Fires when a day button is clicked, emitting the new active index. |
 
-## Install using CLI
-
-::InstallationCli{componentId="spring-calendar"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::code-group
-
-::CodeViewerTab{label="SpringCalendar.vue" language="vue" componentName="SpringCalendar" type="ui" id="spring-calendar"}
-::
-::CodeViewerTab{label="TextMorph.vue" language="vue" componentName="TextMorph" type="ui" id="spring-calendar"}
-::
-
-::
-
-## Features
-
-- **Spring Animations** — Uses `MotionConfig` to apply realistic spring/bounce transitions when height changes.
-- **Dynamic Height** — The outer card automatically grows to fit event listings.
-- **TextMorph Integration** — Day labels morph smoothly via the `TextMorph` sub‑component.
-- **Interactive Day Picker** — Clickable day chips with hover/press scale effects.
-- **Responsive Layout** — Flexbox layout that wraps chips and events neatly.
-
-## Credits
+#credits
 
 - Inspired from the work of [sekachov](https://x.com/sekachov)
+
+::

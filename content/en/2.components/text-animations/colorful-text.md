@@ -5,20 +5,9 @@ category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="ColourfulTextDemo" type="examples" id="colourful-text"}
-::
+::ComponentViewer{demoFile="ColourfulTextDemo.vue" config="ColourfulTextConfig" componentId="colourful-text" :componentFiles='["ColourfulText.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="colourful-text"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="ColourfulText.vue" language="vue" componentName="ColourfulText" type="ui" id="colourful-text"}
-::
+#api
 
 ## API
 
@@ -29,7 +18,9 @@ Copy and paste the following code
 | `startColor` | `string`   | `"rgb(255,255,255)"`                                                                                                                                                                                               | The char start color.                                                                                                                                     |
 | `duration`   | `number`   | `5`                                                                                                                                                                                                                | The animation duration time in seconds.                                                                                                                   |
 
-## Credits
+#credits
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Ported from [Aceternity UI Colourful Text](https://ui.aceternity.com/components/colourful-text)
+
+::

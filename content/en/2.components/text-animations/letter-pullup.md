@@ -5,20 +5,9 @@ category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="LetterPullupDemo" type="examples" id="letter-pullup"}
-::
+::ComponentViewer{demoFile="LetterPullupDemo.vue" config="LetterPullupConfig" componentId="letter-pullup" :componentFiles='["LetterPullup.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="letter-pullup"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="LetterPullup.vue" language="vue" componentName="LetterPullup" type="ui" id="letter-pullup"}
-::
+#api
 
 ## API
 
@@ -28,7 +17,9 @@ Copy and paste the following code
 | `words`   | `string` | `Staggered Letter Pull Up` | Text to animate.                                   |
 | `delay`   | `number` | `0.05`                     | Delay each letter's animation by this many seconds |
 
-## Credits
+#credits
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.
 - Inspired from [Magic UI](https://magicui.design/docs/components/letter-pullup).
+
+::

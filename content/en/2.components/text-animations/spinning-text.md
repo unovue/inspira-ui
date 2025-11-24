@@ -5,19 +5,9 @@ category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="SpinningTextDemo" type="examples" id="spinning-text"}
-::
+::ComponentViewer{demoFile="SpinningTextDemo.vue" config="SpinningTextConfig" componentId="spinning-text" :componentFiles='["SpinningText.vue"]'}
 
-::alert{type="warning"}
-This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
-::
-
-## Examples
-
-reverse
-
-::ComponentLoader{label="Preview" componentName="SpinningTextDemoReverse" type="examples" id="spinning-text"}
-::
+#api
 
 ## API
 
@@ -30,19 +20,9 @@ reverse
 | `variants`   | `{container: motion-v Variant, item: motion-v Variant}` | ``      | Variants for container and item animations.             |
 | `class`      | `string`                                                | `""`    | A custom class name for the text container.             |
 
-## Install using CLI
-
-::InstallationCli{componentId="spinning-text"}
-::
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="SpinningText.vue" language="vue" componentName="SpinningText" type="ui" id="spinning-text"}
-::
-
-## Credits
+#credits
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Ported from [Magic UI Spinning Text](https://magicui.design/docs/components/spinning-text).
+
+::

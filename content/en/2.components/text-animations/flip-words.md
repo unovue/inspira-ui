@@ -5,20 +5,9 @@ category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="FlipWordsDemo" type="examples"}  
-::
+::ComponentViewer{demoFile="FlipWordsDemo.vue" config="FlipWordsConfig" componentId="flip-words" :componentFiles='["FlipWords.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="flip-words"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="FlipWords.vue" language="vue" componentName="FlipWords" type="ui" id="flip-words"}
-::
+#api
 
 ## API
 
@@ -28,8 +17,9 @@ Copy and paste the following code
 | `duration` | `number` | Duration (in milliseconds) for each word to be displayed before flipping to the next word. |
 | `class`    | `string` | Additional CSS classes to apply to the component.                                          |
 
-## Credits
+#credits
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
-
 - Ported from [Aceternity UI's Flip Words](https://ui.aceternity.com/components/flip-words)
+
+::

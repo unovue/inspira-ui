@@ -5,22 +5,9 @@ category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="NumberTickerDemo" type="examples"}
-::
+::ComponentViewer{demoFile="NumberTickerDemo.vue" config="NumberTickerConfig" componentId="number-ticker" :componentFiles='["NumberTicker.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="number-ticker"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="NumberTicker.vue" language="vue" componentName="NumberTicker" type="ui" id="number-ticker"}
-::
-
----
+#api
 
 ## API
 
@@ -33,7 +20,9 @@ Copy and paste the following code
 | `duration`      | `number`            | `1000`         | Total duration for the entire animation (in milliseconds).        |
 | `transition`    | `TransitionPresets` | `easeOutCubic` | Name of transition preset (https://vueuse.org/core/useTransition) |
 
-## Credits
+#credits
 
 - Credits to [Grzegorz Krol](https://github.com/Grzechu335) for porting this component.
 - Ported from [Magic UI NumberTicker](https://magicui.design/docs/components/number-ticker).
+
+::

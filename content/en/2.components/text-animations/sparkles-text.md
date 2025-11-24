@@ -5,20 +5,9 @@ category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="SparklesTextDemo" type="examples" id="sparkles-text"}
-::
+::ComponentViewer{demoFile="SparklesTextDemo.vue" config="SparklesTextConfig" componentId="sparkles-text" :componentFiles='["SparklesText.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="sparkles-text"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="SparklesText.vue" language="vue" componentName="SparklesText" type="ui" id="sparkles-text"}
-::
+#api
 
 ## API
 
@@ -29,8 +18,10 @@ Copy and paste the following code
 | `sparklesCount` | `number` | `10`                                     | sparkles count that appears on the text.      |
 | `colors`        | `object` | `{first: '#A07CFE'; second: '#FE8FB5';}` | The sparkles colors.                          |
 
-## Credits
+#credits
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.
 - Inspired from [Magic UI](https://magicui.design/docs/components/sparkles-text).
 - Credits to [M Atif](https://github.com/atif0075) for updating this component.
+
+::

@@ -5,8 +5,9 @@ category: Special Effects
 tags: [css, tailwind, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="GlowingEffectDemo" type="examples" id="glowing-effect"}
-::
+::ComponentViewer{demoFile="GlowingEffectDemo.vue" config="GlowingEffectConfig" componentId="glowing-effect" :componentFiles='["GlowingEffect.vue"]'}
+
+#api
 
 ## API
 
@@ -23,30 +24,8 @@ tags: [css, tailwind, aceternity-ui]
 | `movementDuration` | `number`               | `2`         | Duration (in seconds) of the smooth rotation animation.                                               |
 | `borderWidth`      | `number`               | `1`         | Width (in pixels) of the border applied to the glow effect.                                           |
 
-## Install using CLI
-
-::InstallationCli{componentId="glowing-effect"}
-::
-
-## Install Manually
-
-You can copy and paste the following code to create this component:
-
-::code-group
-
-::CodeViewerTab{label="GlowingEffect.vue" language="vue" componentName="GlowingEffect" type="ui" id="glowing-effect"}
-::
-
-::
-
-## Features
-
-- **Proximity-Based Activation**: The glow effect is only active when the cursor is within a certain distance of the element.
-- **Smooth Angle Animation**: Gradually animates rotation based on pointer movement for an appealing dynamic glow.
-- **Configurable Glow Properties**: Fine-tune blur, spread, and proximity to achieve various visual effects.
-- **Variant Support**: Choose between default or white glow styling.
-- **Performance Optimizations**: Event listeners and animation frames are managed efficiently.
-
-## Credits
+#credits
 
 - Ported from (Aceternity UI Glowing Effect)[https://ui.aceternity.com/components/glowing-effect]
+
+::

@@ -5,8 +5,9 @@ category: Text Animation
 tags: [css, tailwind, codepen]
 ---
 
-::ComponentLoader{label="Preview" componentName="FocusDemo" type="examples" id="focus"}
-::
+::ComponentViewer{demoFile="FocusDemo.vue" config="FocusConfig" componentId="focus" :componentFiles='["Focus.vue"]'}
+
+#api
 
 ## API
 
@@ -19,26 +20,8 @@ tags: [css, tailwind, codepen]
 | `animationDuration`      | `number`  | `0.5`             | Duration in seconds for the focus frame animation transitions. |
 | `pauseBetweenAnimations` | `number`  | `1`               | Pause duration in seconds between auto-focus transitions.      |
 
-## Install using CLI
-
-::InstallationCli{componentId="focus"}
-::
-
-## Install Manually
-
-Copy and paste the following code:
-
-::CodeViewer{filename="Focus.vue" language="vue" componentName="Focus" type="ui" id="focus"}
-::
-
-## Features
-
-- **Word-by-word focus**: Highlights individual words in a sentence with blur on inactive words.
-- **Auto or manual mode**: Cycle focus automatically or control it with mouse hover.
-- **Animated focus frame**: Smoothly animates a border frame around the focused word.
-- **Customizable styling**: Configure blur amount, border color, and animation timing.
-- **Responsive layout**: Supports flexible wrapping and alignment of words.
-
-## Credits
+#credits
 
 - Inspired from [Focus Text Hover Effect on CodePen](https://codepen.io/CameronFitzwilliam/pen/JJRjMa).
+
+::

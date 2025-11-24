@@ -5,20 +5,9 @@ category: Special Effects
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="ScratchToRevealDemo" type="examples" id="scratch-to-reveal"}
-::
+::ComponentViewer{demoFile="ScratchToRevealDemo.vue" config="ScratchToRevealConfig" componentId="scratch-to-reveal" :componentFiles='["ScratchToReveal.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="scratch-to-reveal"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="ScratchToReveal.vue" language="vue" componentName="ScratchToReveal" type="ui" id="scratch-to-reveal"}
-::
+#api
 
 ## API
 
@@ -38,14 +27,9 @@ Copy and paste the following code
 | --------- | --------------- | -------------------------------------- |
 | `default` | `-`             | The text below the scratch-off ticket. |
 
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::CodeViewer{filename="ScratchToReveal.vue" language="vue" componentName="ScratchToReveal" type="ui" id="scratch-to-reveal"}
-::
-
-## Credits
+#credits
 
 - Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
 - Inspired by [MagicUI Scratch To Reveal](https://magicui.design/docs/components/scratch-to-reveal).
+
+::

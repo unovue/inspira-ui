@@ -5,8 +5,9 @@ category: Special Effects
 tags: [css, tailwind, border]
 ---
 
-::ComponentLoader{label="Preview" componentName="NeonBorderDemo" type="examples" id="neon-border"}
-::
+::ComponentViewer{demoFile="NeonBorderDemo.vue" config="NeonBorderConfig" componentId="neon-border" :componentFiles='["NeonBorder.vue"]'}
+
+#api
 
 ## API
 
@@ -18,9 +19,8 @@ tags: [css, tailwind, border]
 | `duration`      | `number`                     | `6`         | Duration of the animation effect in seconds.    |
 | `class`         | `string`                     | `""`        | Additional CSS classes for styling.             |
 
-## Installation
+#instructions
 
-::alert
 Add following entry to inline theme in your `main.css` file.
 
 ```css
@@ -37,30 +37,8 @@ Add following entry to inline theme in your `main.css` file.
 }
 ```
 
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="neon-border"}
-::
-
-## Install Manually
-
-Copy and paste the following code in the same folder
-
-::code-group
-::CodeViewerTab{label="NeonBorder.vue" language="vue" componentName="NeonBorder" type="ui" id="neon-border"}
-::
-::
-
-## Features
-
-- **Customizable Colors**: Allows setting primary and secondary neon colors.
-- **Three Animation Modes**: Supports `none`, `half`, and `full` animation effects.
-- **Adjustable Animation Duration**: Duration can be fine-tuned for different effects.
-- **Reactive Design**: Uses Vue’s reactivity system for dynamic updates.
-- **Scoped Styles**: Ensures styles do not interfere with other components.
-
-## Credits
+#credits
 
 - Inspired by modern neon border effects.
+
+::

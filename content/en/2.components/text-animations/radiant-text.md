@@ -5,20 +5,9 @@ category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="RadiantTextDemo" type="examples"}
-::
+::ComponentViewer{demoFile="RadiantTextDemo.vue" config="RadiantTextConfig" componentId="radiant-text" :componentFiles='["RadiantText.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="radiant-text"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="RadiantText.vue" language="vue" componentName="RadiantText" type="ui" id="radiant-text"}
-::
+#api
 
 ## API
 
@@ -27,6 +16,8 @@ Copy and paste the following code
 | `duration`     | `number` | `10`    | Duration of the animation in seconds. |
 | `radiantWidth` | `number` | `100`   | Width of the radiant animation.       |
 
-## Credits
+#credits
 
 - Credits to [Magic UI](https://magicui.design/docs/components/animated-shiny-text) for this fantastic component.
+
+::

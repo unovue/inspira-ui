@@ -5,25 +5,9 @@ category: Special Effects
 tags: [css, tailwind, canvas, particles]
 ---
 
-::ComponentLoader{label="Preview" componentName="ParticleImageDemo" type="examples"}
-::
+::ComponentViewer{demoFile="ParticleImageDemo.vue" config="ParticleImageConfig" componentId="particle-image" :componentFiles='["ParticleImage.vue", "inspiraImageParticles.js", "inspiraImageParticles.d.ts"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="particle-image"}
-::
-
-## Install Manually
-
-Copy and paste the following code in the same folder
-
-::code-group
-
-:CodeViewerTab{label="ParticleImage.vue" language="vue" componentName="ParticleImage" type="ui" id="particle-image"}
-:CodeViewerTab{label="inspiraImageParticles.js" icon="vscode-icons:file-type-js" componentName="inspiraImageParticles" type="ui" id="particle-image" extension="js"}
-:CodeViewerTab{label="inspiraImageParticles.d.ts" icon="vscode-icons:file-type-typescriptdef" componentName="inspiraImageParticles" type="ui" id="particle-image" extension="d.ts"}
-
-::
+#api
 
 ## API
 
@@ -47,7 +31,9 @@ Copy and paste the following code in the same folder
 | `noise`           | `number`                                                                      | `null`   | Noise of the particles.                                                         |
 | `responsiveWidth` | `boolean`                                                                     | `false`  | Should the canvas be responsive.                                                |
 
-## Credits
+#credits
 
 - Credits to [Nuxt Labs](https://nuxtlabs.com) for this inspiration.
 - Credits to [NextParticles](https://nextparticle.nextco.de) for the base of the animation library.
+
+::

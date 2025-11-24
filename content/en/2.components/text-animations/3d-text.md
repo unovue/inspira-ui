@@ -5,20 +5,9 @@ category: Text Animation
 tags: [css, tailwind, 3d]
 ---
 
-::ComponentLoader{label="Preview" componentName="Text3dDemo" type="examples"}
-::
+::ComponentViewer{demoFile="Text3dDemo.vue" config="Text3dConfig" componentId="text-3d" :componentFiles='["Text3d.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="text-3d"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="Text3d.vue" language="vue" componentName="Text3d" type="ui" id="text-3d"}
-::
+#api
 
 ## API
 
@@ -35,9 +24,4 @@ Copy and paste the following code
 | `animate`           | `boolean` | `true`     | Enables wiggle animation when set to `true`.       |
 | `animationDuration` | `number`  | `1500`     | Duration of the wiggle animation in milliseconds.  |
 
-## Features
-
-- **3D Text Effect**: Adds a three-dimensional stroke and shadow effect to text for a bold, layered look.
-- **Customizable Colors & Sizes**: Easily adjust text color, stroke size, shadow colors, and letter spacing.
-- **Wiggle Animation**: Includes an optional wiggle animation to make the text bounce for added emphasis.
-- **Flexible Animation Control**: Customize the animation speed with the `animationDuration` prop.
+::

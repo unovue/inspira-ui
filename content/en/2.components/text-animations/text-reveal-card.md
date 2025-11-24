@@ -5,23 +5,9 @@ category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="TextRevealCardDemo" type="examples"}  
-::
+::ComponentViewer{demoFile="TextRevealCardDemo.vue" config="TextRevealCardConfig" componentId="text-reveal-card" :componentFiles='["TextRevealCard.vue", "TextRevealStars.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="text-reveal-card"}
-::
-
-## Install Manually
-
-Copy and paste the following code in the same folder
-
-::code-group
-
-:CodeViewerTab{label="TextRevealCard.vue" language="vue" componentName="TextRevealCard" type="ui" id="text-reveal-card"}
-:CodeViewerTab{filename="TextRevealStars.vue" language="vue" componentName="TextRevealStars" type="ui" id="text-reveal-card"}
-::
+#api
 
 ## API
 
@@ -37,8 +23,9 @@ Copy and paste the following code in the same folder
 | text       | Display default text when the card is not hovered over. |
 | revealText | Text to be revealed when hovered over the card.         |
 
-## Credits
+#credits
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
-
 - Ported from [Aceternity UI's Text Reveal Card](https://ui.aceternity.com/components/text-reveal-card).
+
+::

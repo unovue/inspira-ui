@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import type {HTMLAttributes} from "vue";
-import { computed  } from "vue";
-import { cn } from "@/lib/utils";
+import type { HTMLAttributes } from "vue";
+import { computed } from "vue";
 
 interface Props {
   borderRadius?: number;
@@ -40,11 +39,7 @@ const styles = computed(() => {
 <template>
   <div
     :style="styles"
-    :class="
-      cn(
-        'motion-safe:animate-glow pointer-events-none absolute inset-0 size-full rounded-[inherit] will-change-[background-position]',
-        props.class,
-      )
-    "
+    class="motion-safe:animate-glow pointer-events-none absolute inset-0 size-full rounded-[inherit] will-change-[background-position]"
+    :class="[props.class]"
   />
 </template>

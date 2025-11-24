@@ -5,24 +5,9 @@ category: Text Animation
 tags: [css, tailwind]
 ---
 
-::ComponentLoader{label="Preview" componentName="TextHoverEffectDemo" type="examples"}
-::
+::ComponentViewer{demoFile="TextHoverEffectDemo.vue" config="TextHoverEffectConfig" componentId="text-hover-effect" :componentFiles='["TextHoverEffect.vue"]'}
 
-::alert{type="warning"}
-This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="text-hover-effect"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="TextHoverEffect.vue" language="vue" componentName="TextHoverEffect" type="ui" id="text-hover-effect"}
-::
+#api
 
 ## API
 
@@ -32,3 +17,5 @@ Copy and paste the following code
 | `duration`    | `number` | `200`    | The duration of the mask transition animation in seconds. |
 | `strokeWidth` | `number` | `0.75`   | The width of the text stroke.                             |
 | `opacity`     | `number` | `null`   | The opacity of the text.                                  |
+
+::

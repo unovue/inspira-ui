@@ -5,20 +5,9 @@ category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="LineShadowTextDemo" type="examples" id="line-shadow-text"}
-::
+::ComponentViewer{demoFile="LineShadowTextDemo.vue" config="LineShadowTextConfig" componentId="line-shadow-text" :componentFiles='["LineShadowText.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="line-shadow-text"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="LineShadowText.vue" language="vue" componentName="LineShadowText" type="ui" id="line-shadow-text"}
-::
+#api
 
 ## API
 
@@ -28,11 +17,9 @@ Copy and paste the following code
 | `class`       | `string` | `""`      | Additional CSS classes for custom styling. |
 | `as`          | `string` | `"span"`  | The HTML element to render the text as.    |
 
-## Features
-
-- **Slot-Based Content**: Supports default slots for dynamic content, making it flexible for various use cases.
-
-## Credits
+#credits
 
 - Credits to [SivaReddy Uppathi](https://github.com/sivareddyuppathi) for this component.
 - Ported from [Magic UI's Line Shadow Text](https://magicui.design/docs/components/line-shadow-text)
+
+::

@@ -5,84 +5,13 @@ category: Special Effects
 tags: [css, tailwind, canvas, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="ConfettiDemo" type="examples" id="confetti"}
-::
+::ComponentViewer{demoFile="ConfettiDemo.vue" config="ConfettiConfig" componentId="confetti" :componentFiles='["Confetti.vue", "ConfettiButton.vue"]' dependencies="canvas-confetti" devDependencies="@types/canvas-confetti"}
 
-::alert{type="info"}
-**Note:** This component uses `canvas-confetti` npm package as a dependency.
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="confetti"}
-::
-
-## Install Manually
-
-::steps{level=4}
-
-#### Install the dependencies
-
-::code-group
-
-```bash [npm]
-npm install canvas-confetti
-npm install -D @types/canvas-confetti
-```
-
-```bash [pnpm]
-pnpm install canvas-confetti
-pnpm install -D @types/canvas-confetti
-```
-
-```bash [bun]
-bun add canvas-confetti
-bun add -d @types/canvas-confetti
-```
-
-```bash [yarn]
-yarn add canvas-confetti
-yarn add --dev @types/canvas-confetti
-```
-
-::
-
-Copy and paste the following code
-
-::code-group
-
-:CodeViewerTab{label="Confetti.vue" language="vue" componentName="Confetti" type="ui" id="confetti"}
-:CodeViewerTab{label="ConfettiButton.vue" language="vue" componentName="ConfettiButton" type="ui" id="confetti"}
-::
-::
-
-## Examples
-
-### Basic
-
-::ComponentLoader{label="Preview" componentName="ConfettiBasicDemo" type="examples" id="confetti"}
-::
-
-### Random Direction
-
-::ComponentLoader{label="Preview" componentName="ConfettiRandomDirectionDemo" type="examples" id="confetti"}
-::
-
-### Fireworks
-
-::ComponentLoader{label="Preview" componentName="ConfettiFireworksDemo" type="examples" id="confetti"}
-::
-
-### Side Cannons
-
-::ComponentLoader{label="Preview" componentName="ConfettiCannonsDemo" type="examples" id="confetti"}
-::
+#api
 
 ## API
 
-### Components props
-
-::steps{level=4}
+### Props
 
 #### `Confetti`
 
@@ -123,16 +52,9 @@ Copy and paste the following code
 | --------- | -------------------------------------------------- | ------- | ------------------------------------------------ |
 | `options` | `ConfettiOptions & { canvas?: HTMLCanvasElement }` | `{}`    | Options for confetti when the button is clicked. |
 
-::
-
-## Features
-
-- **Confetti Animation**: Easily add confetti animations to your Vue application.
-- **Customizable Options**: Configure both global and individual options for confetti behavior.
-- **Manual Control**: Choose whether to start confetti automatically or manually trigger it.
-- **Button Integration**: Use the `ConfettiButton` component to trigger confetti on button clicks.
-
-## Credits
+#credits
 
 - Built using the [canvas-confetti](https://www.npmjs.com/package/canvas-confetti) library.
 - Ported from [Magic UI Confetti](https://magicui.design/docs/components/confetti).
+
+::

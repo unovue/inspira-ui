@@ -5,16 +5,21 @@ category: Special Effects
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="GlowBorderDemo" type="examples"}
-::
+::ComponentViewer{demoFile="GlowBorderDemo.vue" config="GlowBorderConfig" componentId="glow-border" :componentFiles='["GlowBorder.vue"]'}
 
-::alert{type="warning"}
-This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
-::
+#api
 
-## Installation
+## API
 
-::alert
+| Prop Name      | Type                 | Default | Description                                                |
+| -------------- | -------------------- | ------- | ---------------------------------------------------------- |
+| `duration`     | `number`             | `10`    | Duration of the glowing border animation.                  |
+| `color`        | `string \| string[]` | `#FFF`  | Color or array of colors to applied on the glowing border. |
+| `borderRadius` | `number`             | `10`    | Radius of the border.                                      |
+| `borderWidth`  | `number`             | `2`     | Width of the border.                                       |
+
+#instructions
+
 Add following entry to inline theme in your `main.css` file.
 
 ```css
@@ -34,29 +39,8 @@ Add following entry to inline theme in your `main.css` file.
 }
 ```
 
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="glow-border"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="GlowBorder.vue" language="vue" componentName="GlowBorder" type="ui" id="glow-border"}
-::
-
-## API
-
-| Prop Name      | Type                 | Default | Description                                                |
-| -------------- | -------------------- | ------- | ---------------------------------------------------------- |
-| `duration`     | `number`             | `10`    | Duration of the glowing border animation.                  |
-| `color`        | `string \| string[]` | `#FFF`  | Color or array of colors to applied on the glowing border. |
-| `borderRadius` | `number`             | `10`    | Radius of the border.                                      |
-| `borderWidth`  | `number`             | `2`     | Width of the border.                                       |
-
-## Credits
+#credits
 
 - Credits to [Magic UI](https://magicui.design/docs/components/shine-border) for this fantastic component.
+
+::

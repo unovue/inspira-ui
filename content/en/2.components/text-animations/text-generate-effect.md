@@ -5,31 +5,9 @@ category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="TextGenerateDemo" type="examples"}  
-::
+::ComponentViewer{demoFile="TextGenerateDemo.vue" config="TextGenerateEffectConfig" componentId="text-generate-effect" :componentFiles='["TextGenerateEffect.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="text-generate-effect"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="TextGenerateEffect.vue" language="vue" componentName="TextGenerateEffect" type="ui" id="text-generate-effect"}
-::
-
-## Examples
-
-Two text with different delay
-
-::ComponentLoader{label="Preview" componentName="TextGenerateEffectDemoDelayed" type="examples" id="text-generate-effect"}
-::
-
-::alert{type="warning"}
-This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
-::
+#api
 
 ## API
 
@@ -40,8 +18,9 @@ This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are n
 | `delay`    | `number`  | `0`      | The delay before the text generation animation starts in milliseconds. |
 | `filter`   | `boolean` | `true`   | The blur of the text.                                                  |
 
-## Credits
+#credits
 
 - Credits to [M Atif](https://github.com/atif0075) for porting this component.
-
 - Ported from [Aceternity UI's Text Generate Effect](https://ui.aceternity.com/components/text-generate-effect).
+
+::

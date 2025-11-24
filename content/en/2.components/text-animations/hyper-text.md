@@ -5,20 +5,9 @@ category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="HyperTextDemo" type="examples"}
-::
+::ComponentViewer{demoFile="HyperTextDemo.vue" config="HyperTextConfig" componentId="hyper-text" :componentFiles='["HyperText.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="hyper-text"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="HyperText.vue" language="vue" componentName="HyperText" type="ui" id="hyper-text"}
-::
+#api
 
 ## API
 
@@ -29,7 +18,9 @@ Copy and paste the following code
 | `duration`      | `number`  | `0.8`    | The total duration (in seconds) for the entire animation. |
 | `animateOnLoad` | `boolean` | `true`   | Play animation on load                                    |
 
-## Credits
+#credits
 
 - Inspired by [Magic UI's Hyper Text](https://magicui.design/docs/components/hyper-text) component.
 - Credits to [Prem](https://github.com/premdasvm) for porting this component.
+
+::

@@ -5,24 +5,9 @@ category: Special Effects
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="BorderBeamDemo" type="examples"}
-::
+::ComponentViewer{demoFile="BorderBeamDemo.vue" config="BorderBeamConfig" componentId="border-beam" :componentFiles='["BorderBeam.vue"]'}
 
-::alert{type="warning"}
-This component uses the `nuxt-only` syntax with the `<ClientOnly>`. If you are not using Nuxt, you can simply remove it.
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="border-beam"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="BorderBeam.vue" language="vue" componentName="BorderBeam" type="ui" id="border-beam"}
-::
+#api
 
 ## API
 
@@ -37,13 +22,8 @@ Copy and paste the following code
 | `colorTo`     | `string` | `"#9c40ff"` | Ending color for the gradient of the beam.                            |
 | `delay`       | `number` | `0`         | Delay before the animation starts, in seconds.                        |
 
-## Features
-
-- **Animated Border Beam**: Adds a dynamic border beam effect that animates around the border.
-- **Customizable Gradient Colors**: Adjust the `colorFrom` and `colorTo` props to create a gradient effect that suits your design.
-- **Flexible Animation Settings**: Control the size, duration, and delay of the animation to fine-tune the visual experience.
-- **Anchor Positioning**: Use the `anchor` prop to set the starting position of the beam along the border.
-
-## Credits
+#credits
 
 - Ported from [Magic UI](https://magicui.design/docs/components/border-beam).
+
+::

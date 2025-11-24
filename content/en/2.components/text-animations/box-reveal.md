@@ -5,20 +5,9 @@ category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="BoxRevealDemo" type="examples"}
-::
+::ComponentViewer{demoFile="BoxRevealDemo.vue" config="BoxRevealConfig" componentId="box-reveal" :componentFiles='["BoxReveal.vue"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="box-reveal"}
-::
-
-## Install Manually
-
-Copy and paste the following code
-
-::CodeViewer{filename="BoxReveal.vue" language="vue" componentName="BoxReveal" type="ui" id="box-reveal"}
-::
+#api
 
 ## API
 
@@ -29,13 +18,8 @@ Copy and paste the following code
 | `delay`    | `number` | `0.25`      | Delay before the reveal animation starts in seconds. |
 | `class`    | `string` | `""`        | Additional CSS classes for custom styling.           |
 
-## Features
-
-- **Box Reveal Animation**: Creates a sliding box reveal effect with smooth transitions.
-- **Customizable Animation**: Control the animation timing with the `duration` and `delay` props.
-- **Slot-Based Content**: Supports default slot content that appears once the reveal animation completes.
-- **Custom Background Color**: Easily customize the box's background color using the `color` prop.
-
-## Credits
+#credits
 
 - Ported from [Magic UI Box Reveal](https://magicui.design/docs/components/box-reveal).
+
+::
