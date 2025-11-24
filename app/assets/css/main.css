@@ -3,7 +3,7 @@
 
 @theme static {
   --font-sans: "Public Sans", sans-serif;
-  --ui-container: 100%;
+  --ui-container: 80rem;
   --ui-primary: black;
 }
 

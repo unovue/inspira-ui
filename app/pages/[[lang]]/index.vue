@@ -9,6 +9,8 @@ const { locale, isEnabled, t } = useDocusI18n();
 const appConfig = useAppConfig();
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
 
+const isRoot = isRootPage();
+
 const isLandingPage = computed(() => {
   return (isEnabled.value ? `/${locale.value}` : "/") === route.path.replace(/\/$/, "");
 });
@@ -167,7 +169,10 @@ const editLink = computed(() => {
       <UContentSurround :surround="surround" />
     </UPageBody>
 
-    <template #right>
+    <template
+      v-if="!isRoot"
+      #right
+    >
       <DocsAsideRightBottom />
     </template>
   </UPage>
