@@ -5,8 +5,9 @@ category: Visualization
 tags: [css, tailwind, apple, svg]
 ---
 
-::ComponentLoader{label="Preview" componentName="LiquidGlassDemo" type="examples" id="liquid-glass"}
-::
+::ComponentViewer{demoFile="LiquidGlassDemo.vue" config="LiquidGlassConfig" componentId="liquid-glass" :componentFiles='["LiquidGlass.vue"]' }
+
+#api
 
 ## API
 
@@ -28,39 +29,16 @@ tags: [css, tailwind, apple, svg]
 | `class`          | `string`            | `""`           | Additional CSS classes applied to the inner slot container wrapping content.            |
 | `containerClass` | `string`            | `""`           | Additional CSS classes applied to the outer container div.                              |
 
-## Installation
+#credits
 
-::alert{type="warning"}
+- Inspired by Apple Liquid Glass.
+
+::
+
+::warning
 This component uses SVG filters, for backdrop blur. These are not supported in Safari and have very limited support in Firefox.
 
 It is recommended to use this component when you are targeting Chromium based browsers, and use a fallback component in case user is on Safari or Firefox.
 
 For example, Inspira UI landing page, uses Liquid Glass component on Chromium based browsers but fallback to Frosted Glass effect on Safari and Mozilla.
 ::
-
-## Install using CLI
-
-::InstallationCli{componentId="liquid-glass"}
-::
-
-## Install Manually
-
-Copy and paste the following code:
-
-::code-group
-::CodeViewerTab{filename="LiquidGlass.vue" language="vue" componentName="LiquidGlass" type="ui" id="liquid-glass"}
-::
-::
-
-## Features
-
-- **Customizable glass effect**: Control blur, displacement, color channels, and blend modes for a unique glass morphism style.
-- **Responsive SVG displacement filter**: Dynamically adjusts to container size changes using ResizeObserver.
-- **Multi-channel displacement**: Applies independent displacement maps for red, green, and blue channels for rich distortion.
-- **Backdrop-filter integration**: Uses CSS backdrop-filter for real-time background blurring with filter fallback.
-- **Scoped styling**: Encapsulated styles prevent bleed and ensure smooth border-radius and shadows.
-- **Flexible content wrapper**: Slot container for any nested content with custom class support.
-
-## Credits
-
-- Inspired by Apple Liquid Glass.

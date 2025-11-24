@@ -5,8 +5,9 @@ category: Visualization
 tags: [css, tailwind, webgl, paper]
 ---
 
-::ComponentLoader{label="Preview" componentName="LiquidLogoDemo" type="examples" id="liquid-logo"}
-::
+::ComponentViewer{demoFile="GlobeDemo.vue" config="GlobeConfig" componentId="globe" :componentFiles='["LiquidLogo.vue", "parseLogoImage.ts", "shader.ts"]' }
+
+#api
 
 ## API
 
@@ -21,32 +22,9 @@ tags: [css, tailwind, webgl, paper]
 | `liquid`       | `number` | `0.07`  | Intensity of the liquid animation.           |
 | `speed`        | `number` | `0.3`   | Animation speed of the liquid effect.        |
 
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::code-group
-
-    ::CodeViewerTab{label="LiquidLogo.vue" language="vue" componentName="LiquidLogo" type="ui" id="liquid-logo"}
-    ::
-
-    ::CodeViewerTab{label="parseLogoImage.ts" language="typescript" componentName="parseLogoImage" type="ui" id="liquid-logo" extension="ts"}
-    ::
-
-    ::CodeViewerTab{label="shader.ts" language="typescript" componentName="shader" type="ui" id="liquid-logo" extension="ts"}
-    ::
-
-::
-
-## Features
-
-- **Dynamic Liquid Effect**: Transforms logos or images with a fluid, liquid-like motion.
-- **Custom Shader Utilization**: Built with WebGL2 and GLSL shaders for real-time rendering.
-- **Interactive Animations**: Smooth and configurable animation effects.
-- **Responsive Scaling**: Automatically adjusts to different screen sizes and resolutions.
-- **Configurable Parameters**: Offers a wide range of props to control effects like refraction, speed, and edge sharpness.
-
-## Credits
+#credits
 
 - Inspired by the Apple Fluid Motion design.
 - Ported and enhaced from [Paper Design Concept](https://github.com/paper-design/liquid-logo).
+
+::

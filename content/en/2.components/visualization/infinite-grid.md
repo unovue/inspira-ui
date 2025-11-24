@@ -5,12 +5,9 @@ category: Visualization
 tags: [css, tailwind, phantom-land, ogl, webgl]
 ---
 
-::ComponentLoader{label="Preview" componentName="InfiniteGridDemo" type="examples" id="infinite-grid"}
-::
+::ComponentViewer{demoFile="InfiniteGridDemo.vue" config="InfiniteGridConfig" componentId="infinite-grid" :componentFiles='["InfiniteGrid.vue", "InfiniteGridClass.ts", "DisposalManager.ts", "EventHandler.ts", "GridManager.ts", "PostProcessShader.ts", "createTexture.ts", "shaders.ts", "types.ts"]' dependencies="ogl gsap"}
 
-::alert{type="info"}
-**Note:** This component uses OGL & requires `ogl` and `gsap` as dependencies.
-::
+#api
 
 ## API
 
@@ -55,54 +52,10 @@ tags: [css, tailwind, phantom-land, ogl, webgl]
 | `tileClicked`  | `{ card: CardData, index: number }` | Fired whenever a tile is clicked/tapped. The payload contains the clicked `CardData` object and its zero-based `index`. |
 | `onTileLoaded` | -                                   | Fired when all the images are loaded inside the tile.                                                                   |
 
-## Install using CLI
-
-::InstallationCli{componentId="infinite-grid"}
-::
-
-## Install Manually
-
-#### Install the dependencies
-
-::code-group
-
-```bash [npm]
-npm install ogl gsap
-```
-
-```bash [pnpm]
-pnpm install ogl gsap
-```
-
-```bash [bun]
-bun add ogl gsap
-```
-
-```bash [yarn]
-yarn add ogl gsap
-```
-
-::
-
-#### Copy and paste the following code in the same folder
-
-::code-group
-
-:CodeViewerTab{label="InfiniteGrid.vue" language="vue" componentName="InfiniteGrid" type="ui" id="infinite-grid"}
-
-:CodeViewerTab{filename="InfiniteGridClass.ts" language="typescript" componentName="InfiniteGridClass" type="ui" id="infinite-grid" extension="ts"}
-:CodeViewerTab{filename="DisposalManager.ts" language="typescript" componentName="DisposalManager" type="ui" id="infinite-grid" extension="ts"}
-:CodeViewerTab{filename="EventHandler.ts" language="typescript" componentName="EventHandler" type="ui" id="infinite-grid" extension="ts"}
-:CodeViewerTab{filename="GridManager.ts" language="typescript" componentName="GridManager" type="ui" id="infinite-grid" extension="ts"}
-:CodeViewerTab{filename="PostProcessShader.ts" language="typescript" componentName="PostProcessShader" type="ui" id="infinite-grid" extension="ts"}
-:CodeViewerTab{filename="createTexture.ts" language="typescript" componentName="createTexture" type="ui" id="infinite-grid" extension="ts"}
-:CodeViewerTab{filename="shaders.ts" language="typescript" componentName="shaders" type="ui" id="infinite-grid" extension="ts"}
-:CodeViewerTab{filename="types.ts" language="typescript" componentName="types" type="ui" id="infinite-grid" extension="ts"}
-
-::
-
-## Credits
+#credits
 
 - Inspired from [Phantom Land](https://phantom.land)
 - Special thanks to [Safak Dinc](https://github.com/safakdinc) for the idea and for granting permission to include it here. You can find the original repository at [infinite-grid](https://github.com/safakdinc/infinite-grid). Your contribution is greatly appreciated!
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.
+
+::

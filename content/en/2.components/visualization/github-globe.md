@@ -5,57 +5,9 @@ category: Visualization
 tags: [css, tailwind, threejs, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="GithubGlobeDemo" type="examples" id="globe"}
-::
+::ComponentViewer{demoFile="GithubGlobeDemo.vue" config="GithubGlobeConfig" componentId="github-globe" :componentFiles='["GithubGlobe.vue"]' dependencies="three postprocessing three-globe" devDependencies="@types/three"}
 
-::alert{type="info"}
-**Note:** This component uses Three.js & requires `three`, `three-globe` & `postprocessing` npm package as a dependency.
-::
-
-::alert{type="warning"}
-**For Nuxt users**:
-Use `<ClientOnly>` tag to wrap this component to avoid `window is not defined` error.
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="github-globe"}
-::
-
-## Install Manually
-
-::steps{level=4}
-
-#### Install the dependencies
-
-::code-group
-
-```bash [npm]
-npm install three postprocessing three-globe
-npm install -D @types/three
-```
-
-```bash [pnpm]
-pnpm install three postprocessing three-globe
-pnpm install -D @types/three
-```
-
-```bash [bun]
-bun add three postprocessing three-globe
-bun add -d @types/three
-```
-
-```bash [yarn]
-yarn add three postprocessing three-globe
-yarn add --dev @types/three
-```
-
-::
-
-Copy and paste the following code
-
-::CodeViewer{filename="GithubGlobe.vue" language="vue" componentName="GithubGlobe" type="ui" id="github-globe"}  
-::
+#api
 
 #### Download GeoJSON file
 
@@ -104,15 +56,9 @@ Download a GeoJSON file containing the globe's geographical data from [GeoJSON M
 | `arcAlt`   | `number` | Altitude of the arc (determines arc height).    |
 | `color`    | `string` | Color of the arc or point in hex or RGB format. |
 
-## Features
-
-- **3D Interactive Globe**: A Three.js-based globe with interactive controls and orbit support.
-- **Customizable Globe & Atmosphere**: Allows configuration of globe color, atmosphere visibility, and colors.
-- **Arcs & Points Visualization**: Display arcs and points on the globe, simulating connections and locations.
-- **Auto-Rotate and Zoom**: Supports auto-rotation, zoom, and customizable controls for a dynamic experience.
-- **Responsive Design**: Adapts to container size and maintains performance with WebGL rendering.
-
-## Credits
+#credits
 
 - Built with Three.js and Three Globe libraries, designed for global data visualizations and dynamic effects.
 - Ported from [Aceternity UI](https://ui.aceternity.com/components/github-globe).
+
+::

@@ -5,8 +5,9 @@ category: Visualization
 tags: [css, tailwind, aceternity-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="WorldMapDemo" type="examples" id="world-map"}
-::
+::ComponentViewer{demoFile="WorldMapDemo.vue" config="WorldMapConfig" componentId="world-map" :componentFiles='["WorldMap.vue"]' dependencies="dotted-map"}
+
+#api
 
 ## API
 
@@ -18,58 +19,8 @@ tags: [css, tailwind, aceternity-ui]
 | `mapColor`   | `string`                                                                                                             | —           | Main color of the dotted map. (**Required**)                                            |
 | `mapBgColor` | `string`                                                                                                             | —           | Background color of the map. (**Required**)                                             |
 
-::alert{type="info"}
-**Note:** This component uses Spline & requires `dotted-map` npm package as a dependency.
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="world-map"}
-::
-
-## Install Manually
-
-### Install the dependencies
-
-::code-group
-
-```bash [npm]
-npm install dotted-map
-```
-
-```bash [pnpm]
-pnpm install dotted-map
-```
-
-```bash [bun]
-bun add dotted-map
-```
-
-```bash [yarn]
-yarn add dotted-map
-```
-
-::
-
-## Component Code
-
-You can copy and paste the following code to create this component:
-
-::code-group
-
-::CodeViewerTab{label="WorldMap.vue" language="vue" componentName="WorldMap" type="ui" id="world-map"}
-::
-
-::
-
-## Features
-
-- **Animated Arcs**: Smooth arcs between two geographical points using an SVG `path`.
-- **Dotted Background**: Renders a dotted map using the DottedMap library.
-- **Pulsing Markers**: Each point animates with expanding circles to highlight the location.
-- **Dynamic Projection**: Projects latitude/longitude to an 800x400 coordinate plane.
-- **Customizable Colors**: Control lineColor, mapColor, and mapBgColor.
-
-## Credits
+#credits
 
 - Ported from (World Map by Aceternity UI)[https://ui.aceternity.com/components/world-map].
+
+::

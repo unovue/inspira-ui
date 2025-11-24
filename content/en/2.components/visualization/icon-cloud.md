@@ -5,24 +5,9 @@ category: Visualization
 tags: [css, tailwind, magic-ui]
 ---
 
-::ComponentLoader{label="Preview" componentName="IconCloudDemo" type="examples"}
-::
+::ComponentViewer{demoFile="IconCloudDemo.vue" config="IconCloudConfig" componentId="icon-cloud" :componentFiles='["IconCloud.vue", "index.ts"]'}
 
-## Install using CLI
-
-::InstallationCli{componentId="icon-cloud"}
-::
-
-## Install Manually
-
-Copy and paste the following code in the same folder
-
-::code-group
-
-:CodeViewerTab{label="IconCloud.vue" language="vue" componentName="IconCloud" type="ui" id="icon-cloud"}
-:CodeViewerTab{filename="index.ts" language="typescript" componentName="index" type="ui" id="icon-cloud" extension="ts"}
-
-::
+#api
 
 ## API
 
@@ -31,7 +16,9 @@ Copy and paste the following code in the same folder
 | `class`   | `string` | -       | Additional classes for styling the component. |
 | `images`  | `array`  | `[]`    | Array of image URLs to render in the cloud    |
 
-## Credits
+#credits
 
 - Inspired by [MagicUI](https://magicui.design/docs/components/icon-cloud).
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.
+
+::

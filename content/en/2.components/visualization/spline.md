@@ -5,8 +5,9 @@ category: Visualization
 tags: [css, tailwind, spline]
 ---
 
-::ComponentLoader{label="Preview" componentName="SplineDemo" type="examples" id="spline"}
-::
+::ComponentViewer{demoFile="SplineDemo.vue" config="SplineConfig" componentId="spline" :componentFiles='["Spline.vue", "ParentSize.vue"]' dependencies="@splinetool/runtime"}
+
+#api
 
 ## API
 
@@ -32,62 +33,9 @@ tags: [css, tailwind, spline]
 | `spline-follow`      | `any`   | Emits when a follow event occurs.                             |
 | `spline-scroll`      | `any`   | Emits on scroll interactions.                                 |
 
-::alert{type="info"}
-**Note:** This component uses Spline & requires `@splinetool/runtime` npm package as a dependency.
-::
-
-## Install using CLI
-
-::InstallationCli{componentId="spline"}
-::
-
-## Install Manually
-
-### Install the dependencies
-
-::code-group
-
-```bash [npm]
-npm install @splinetool/runtime
-```
-
-```bash [pnpm]
-pnpm install @splinetool/runtime
-```
-
-```bash [bun]
-bun add @splinetool/runtime
-```
-
-```bash [yarn]
-yarn add @splinetool/runtime
-```
-
-::
-
-### Component Code
-
-You can copy and paste the following code to create this component:
-
-::code-group
-
-::CodeViewerTab{label="Spline.vue" language="vue" componentName="Spline" type="ui" id="spline"}
-::
-
-::CodeViewerTab{label="ParentSize.vue" language="vue" componentName="ParentSize" type="ui" id="spline"}
-::
-
-::
-
-## Features
-
-- **Responsive Canvas**: Uses a `ParentSize` wrapper to adjust to the parent container size.
-- **Event Bindings**: Exposes Spline’s mouse, keyboard, and scrolling events via Vue emits.
-- **Render-On-Demand**: Optionally only re-renders when necessary, optimizing performance.
-- **Easy Integration**: Load a Spline 3D scene by simply passing the `scene` prop.
-- **Cleanup & Disposal**: Manages resource disposal on unmount to avoid memory leaks.
-
-## Credits
+#credits
 
 - Utilizes Spline’s runtime behind the scenes.
 - Inspired by various 3D web experiences using Spline.
+
+::
