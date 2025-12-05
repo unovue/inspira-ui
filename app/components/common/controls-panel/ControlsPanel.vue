@@ -92,7 +92,7 @@ const reset = () => {
             :step="control.step || 1"
             class="control-range"
             @input="updateValue(key, $event)"
-          >
+          />
 
           <!-- Color Input -->
           <input
@@ -102,7 +102,7 @@ const reset = () => {
             :value="values[key]"
             class="control-color"
             @input="updateValue(key, $event)"
-          >
+          />
 
           <!-- Text Input -->
           <input
@@ -112,7 +112,7 @@ const reset = () => {
             :value="values[key]"
             class="control-text"
             @input="updateValue(key, $event)"
-          >
+          />
 
           <!-- Boolean Input -->
           <input
@@ -122,7 +122,7 @@ const reset = () => {
             :checked="values[key]"
             class="control-checkbox"
             @change="updateValue(key, $event)"
-          >
+          />
 
           <!-- Select Input -->
           <select

@@ -1,16 +1,6 @@
-import type {
-  Renderer,
-  Texture} from "ogl";
+import type { Renderer, Texture } from "ogl";
 import { gsap } from "gsap";
-import {
-  Camera,
-  Mesh,
-  Plane,
-  Program,
-  RenderTarget,
-  Transform,
-  Vec2
-} from "ogl";
+import { Camera, Mesh, Plane, Program, RenderTarget, Transform, Vec2 } from "ogl";
 
 // Import shaders as raw strings
 import { postProcessFragmentShader, postProcessVertexShader } from "./shaders";

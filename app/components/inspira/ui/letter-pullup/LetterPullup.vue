@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { Motion } from "motion-v";
-import { cn } from "@/lib/utils";
 
 interface LetterPullupProps {
   class?: string;
@@ -34,12 +33,8 @@ const pullupVariant = {
         :transition="{
           delay: index * (props.delay ? props.delay : 0.05),
         }"
-        :class="
-          cn(
-            'font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm md:text-4xl md:leading-[5rem]',
-            props.class,
-          )
-        "
+        class="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm md:text-4xl md:leading-[5rem]"
+        :class="[props.class]"
       >
         <span v-if="letter === ' '">&nbsp;</span>
         <span v-else>{{ letter }}</span>

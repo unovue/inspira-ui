@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import type {PropType, Ref} from "vue";
+import type { PropType, Ref } from "vue";
 import { onKeyStroke, useIntervalFn, useSwipe } from "@vueuse/core";
-import { computed,  ref,  watch } from "vue";
-import { cn } from "@/lib/utils";
+import { computed, ref, watch } from "vue";
 
 const props = defineProps({
   images: {
@@ -62,6 +61,19 @@ function setCurrentDirection(dir: "prev" | "next") {
     currentDirection.value = dir === "next" ? "up" : "down";
   }
 }
+
+// Autoplay
+const autoplayInterval = computed(() => {
+  if (props.autoplay === false) return 0;
+  else if (props.autoplay === true) return 5000;
+  else if (typeof props.autoplay === "string") {
+    return +props.autoplay;
+  } else return props.autoplay;
+});
+
+const { pause, resume, isActive } = useIntervalFn(() => {
+  onNext();
+}, autoplayInterval);
 
 // Image Loading
 const isLoading = ref(true);
@@ -157,19 +169,6 @@ function setSwiping(v: boolean) {
   resume();
 }
 
-// Autoplay
-const autoplayInterval = computed(() => {
-  if (props.autoplay === false) return 0;
-  else if (props.autoplay === true) return 5000;
-  else if (typeof props.autoplay === "string") {
-    return +props.autoplay;
-  } else return props.autoplay;
-});
-
-const { pause, resume, isActive } = useIntervalFn(() => {
-  onNext();
-}, autoplayInterval);
-
 watch(isLoading, (v) => {
   if (v) pause();
   else resume();
@@ -235,12 +234,13 @@ const transitionProps = computed(() => {
         <img
           :src="currentImage"
           :class="props.imageClass"
-        >
+        />
       </div>
     </Transition>
     <div
       v-if="hideOverlay !== true"
-      :class="cn('absolute inset-0', props.overlayClass)"
+      class="absolute inset-0"
+      :class="[props.overlayClass]"
     >
       <Transition
         appear

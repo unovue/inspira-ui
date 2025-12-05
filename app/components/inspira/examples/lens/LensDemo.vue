@@ -25,7 +25,7 @@ function setHovering(value: boolean) {
           width="500"
           height="500"
           class="rounded-2xl"
-        >
+        />
       </Lens>
       <div
         :style="{ filter: hovering ? 'blur(2px)' : 'blur(0px)' }"

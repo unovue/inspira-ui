@@ -174,7 +174,7 @@ onUnmounted(() => {
               <svg
                 v-if="
                   index < currentState ||
-                    (index === steps.length - 1 && index === currentState && isLastStepComplete)
+                  (index === steps.length - 1 && index === currentState && isLastStepComplete)
                 "
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -221,9 +221,8 @@ onUnmounted(() => {
               </svg>
               <div class="flex flex-col">
                 <span
-                  class="text-lg text-black dark:text-white" :class="[
-                    index > currentState && 'opacity-50',
-                  ]"
+                  class="text-lg text-black dark:text-white"
+                  :class="[index > currentState && 'opacity-50']"
                 >
                   {{ step.text }}
                 </span>
@@ -235,10 +234,10 @@ onUnmounted(() => {
                   <span
                     v-if="
                       step.afterText &&
-                        (index < currentState ||
-                          (index === steps.length - 1 &&
-                            index === currentState &&
-                            isLastStepComplete))
+                      (index < currentState ||
+                        (index === steps.length - 1 &&
+                          index === currentState &&
+                          isLastStepComplete))
                     "
                     class="mt-1 text-sm text-gray-500 dark:text-gray-400"
                   >

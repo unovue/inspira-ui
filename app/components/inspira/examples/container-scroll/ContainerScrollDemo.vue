@@ -3,7 +3,7 @@
     <ContainerScroll>
       <template #title>
         <h1 class="text-4xl font-semibold text-black dark:text-white">
-          Unleash the power of <br>
+          Unleash the power of <br />
           <span class="mt-1 text-4xl leading-none font-bold md:text-[6rem]">
             Scroll Animations
           </span>
@@ -16,7 +16,7 @@
           alt="hero"
           height="720"
           width="1400"
-        >
+        />
       </template>
     </ContainerScroll>
   </div>

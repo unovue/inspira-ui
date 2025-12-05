@@ -67,7 +67,7 @@ function smoothMouseMove(e: MouseEvent) {
   const currentPos = { x: e.clientX, y: e.clientY };
   updateVelocity(currentPos);
 
-  const speed = Math.sqrt(velocity.value.x**2 + velocity.value.y**2);
+  const speed = Math.sqrt(velocity.value.x ** 2 + velocity.value.y ** 2);
 
   cursorX.set(currentPos.x);
   cursorY.set(currentPos.y);

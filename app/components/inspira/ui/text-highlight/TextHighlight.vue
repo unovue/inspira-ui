@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import type {HTMLAttributes} from "vue";
-import { computed  } from "vue";
-import { cn } from "@/lib/utils";
+import type { HTMLAttributes } from "vue";
+import { computed } from "vue";
 
 interface Props {
   delay?: number;
@@ -21,7 +20,12 @@ const durationMs = computed(() => `${props.duration}ms`);
 </script>
 
 <template>
-  <span :class="cn('inline-block px-1 pb-1', props.class)"><slot /></span>
+  <span
+    class="inline-block px-1 pb-1"
+    :class="[props.class]"
+  >
+    <slot />
+  </span>
 </template>
 
 <style scoped>

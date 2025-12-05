@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import type {CSSProperties} from "vue";
-import { computed,  reactive, ref } from "vue";
-import { cn } from "@/lib/utils";
+import type { CSSProperties } from "vue";
+import { computed, reactive, ref } from "vue";
 
 interface BaseProps {
   class?: string;
@@ -123,11 +122,15 @@ function handleImageLoad() {
 </script>
 
 <template>
-  <div :class="cn('relative inline-block', props.class)">
+  <div
+    class="relative inline-block"
+    :class="[props.class]"
+  >
     <!-- Trigger -->
     <NuxtLink
       :to="url"
-      :class="cn('text-black dark:text-white', props.linkClass)"
+      class="text-black dark:text-white"
+      :class="[props.linkClass]"
       @mousemove="handleMouseMove"
       @mouseenter="showPreview"
       @mouseleave="hidePreview"
@@ -157,7 +160,7 @@ function handleImageLoad() {
             :style="imageStyle"
             alt="preview"
             @load="handleImageLoad"
-          >
+          />
         </div>
       </div>
     </div>

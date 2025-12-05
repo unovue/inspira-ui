@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import type {HTMLAttributes} from "vue";
-import { cn } from "@/lib/utils";
+import type { HTMLAttributes } from "vue";
 import { parseLogoImage } from "./parseLogoImage";
 import { liquidFragSource, vertexShaderSource } from "./shader";
 
@@ -266,6 +265,7 @@ watch(
   </div>
   <canvas
     ref="liquidLogoRef"
-    :class="cn('block size-full object-contain', props.class, { hidden: processing })"
+    class="block size-full object-contain"
+    :class="[props.class, processing ? 'hidden' : '']"
   />
 </template>

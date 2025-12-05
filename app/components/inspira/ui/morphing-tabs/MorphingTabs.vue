@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { cn } from "@/lib/utils";
-
 interface Props {
   tabs: string[];
   activeTab: string;
@@ -21,13 +19,14 @@ const emit = defineEmits<{
 <template>
   <div
     v-if="props.tabs.length"
-    :class="cn('relative', props.class)"
+    class="relative"
+    :class="[props.class]"
     style="filter: url(&quot;#exclusionTabsGoo&quot;)"
   >
     <button
       v-for="tab in props.tabs"
       :key="tab"
-      :class="cn('bg-primary text-background px-4 py-2 transition-all duration-500')"
+      class="bg-primary text-background px-4 py-2 transition-all duration-500"
       :style="{
         margin: `0 ${activeTab === tab ? props.margin : 0}px`,
       }"

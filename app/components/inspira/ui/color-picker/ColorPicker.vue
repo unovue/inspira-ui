@@ -1,16 +1,12 @@
 <script setup lang="ts">
-import type {HexColor, HslaColor, HsvaColor, RgbaColor} from "@uiw/color-convert";
+import type { HexColor, HslaColor, HsvaColor, RgbaColor } from "@uiw/color-convert";
 import {
-  
   hexToHsva,
-  
   hslaToHsva,
-  
   hsvaToHex,
   hsvaToHsla,
   hsvaToRgba,
-  
-  rgbaToHsva
+  rgbaToHsva,
 } from "@uiw/color-convert";
 import { computed, ref, watch } from "vue";
 import ContrastRatio from "./ContrastRatio.vue";
@@ -390,7 +386,7 @@ function updateAlpha(event: MouseEvent | TouchEvent) {
               class="border-input bg-background placeholder:text-muted-foreground flex h-8 w-full rounded-md border px-3 py-1 text-sm focus:outline-none"
               placeholder="#000000"
               @input="updateFromHex(($event.target as HTMLInputElement).value)"
-            >
+            />
 
             <ObjectColorInput
               v-else

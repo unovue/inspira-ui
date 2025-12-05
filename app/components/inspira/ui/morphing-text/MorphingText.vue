@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { onMounted, onUnmounted, ref } from "vue";
-import { cn } from "@/lib/utils";
 
 const props = withDefaults(defineProps<Props>(), {
   morphTime: 1.5,
@@ -27,11 +26,11 @@ function setStyles(fraction: number) {
   if (!text1Ref.value || !text2Ref.value) return;
 
   text2Ref.value.style.filter = `blur(${Math.min(8 / fraction - 8, 100)}px)`;
-  text2Ref.value.style.opacity = `${fraction**0.4 * 100}%`;
+  text2Ref.value.style.opacity = `${fraction ** 0.4 * 100}%`;
 
   const invertedFraction = 1 - fraction;
   text1Ref.value.style.filter = `blur(${Math.min(8 / invertedFraction - 8, 100)}px)`;
-  text1Ref.value.style.opacity = `${invertedFraction**0.4 * 100}%`;
+  text1Ref.value.style.opacity = `${invertedFraction ** 0.4 * 100}%`;
 
   text1Ref.value.textContent = props.texts[textIndex.value % props.texts.length];
   text2Ref.value.textContent = props.texts[(textIndex.value + 1) % props.texts.length];
@@ -94,20 +93,16 @@ onUnmounted(() => {
 
 <template>
   <div
-    :class="
-      cn(
-        'relative mx-auto h-16 w-full max-w-screen-md text-center font-sans text-[40pt] leading-none font-bold [filter:url(#threshold)_blur(0.6px)] md:h-24 lg:text-[6rem]',
-        props.class,
-      )
-    "
+    class="relative mx-auto h-16 w-full max-w-screen-md text-center font-sans text-[40pt] leading-none font-bold [filter:url(#threshold)_blur(0.6px)] md:h-24 lg:text-[6rem]"
+    :class="[props.class]"
   >
     <span
       ref="text1Ref"
-      :class="cn(TEXT_CLASSES)"
+      :class="[TEXT_CLASSES]"
     />
     <span
       ref="text2Ref"
-      :class="cn(TEXT_CLASSES)"
+      :class="[TEXT_CLASSES]"
     />
 
     <svg

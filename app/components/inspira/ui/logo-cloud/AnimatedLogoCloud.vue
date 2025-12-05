@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { AnimateLogoCloudProps } from "./index";
-import { cn } from "@/lib/utils";
 
 const props = defineProps<AnimateLogoCloudProps>();
 </script>
@@ -15,9 +14,8 @@ const props = defineProps<AnimateLogoCloudProps>();
         {{ props.title }}
       </div>
       <div
-        :class="
-          cn('mask-animation group relative mt-6 flex gap-6 overflow-hidden p-2', props.class)
-        "
+        class="mask-animation group relative mt-6 flex gap-6 overflow-hidden p-2"
+        :class="[props.class]"
       >
         <div
           v-for="index in Array(5).fill(null)"
@@ -30,7 +28,7 @@ const props = defineProps<AnimateLogoCloudProps>();
             :src="logo.path"
             :alt="logo.name"
             class="h-10 w-28 px-2 brightness-0 dark:invert"
-          >
+          />
         </div>
       </div>
     </div>

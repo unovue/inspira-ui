@@ -6,7 +6,7 @@
           src="https://images.unsplash.com/photo-1525373698358-041e3a460346?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
           alt="image"
           class="size-full rounded-2xl object-cover shadow-2xl shadow-black/40"
-        >
+        />
       </template>
       <template #back>
         <div class="flex min-h-full flex-col gap-2">

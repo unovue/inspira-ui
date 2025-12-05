@@ -30,7 +30,6 @@ const currentColors = ref(props.colors);
 const count = ref(0);
 const lastHidden = ref(0);
 
- 
 let intervalId: undefined | NodeJS.Timeout;
 onMounted(() => {
   intervalId = setInterval(() => {

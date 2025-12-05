@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import type {FileProps, TreeContextProps} from "./index";
+import type { FileProps, TreeContextProps } from "./index";
 import { computed, inject, toRefs } from "vue";
-import { cn } from "@/lib/utils";
-import {  TREE_CONTEXT_SYMBOL  } from "./index";
+import { TREE_CONTEXT_SYMBOL } from "./index";
 
 const props = withDefaults(defineProps<FileProps>(), {
   isSelectable: true,
@@ -29,16 +28,15 @@ function onClickHandler() {
 
 <template>
   <button
-    ref="fileRef"
     type="button"
     :disabled="!isSelectable"
+    class="flex w-fit items-center gap-1 rounded-sm pr-1 text-sm duration-200 ease-in-out rtl:pr-0 rtl:pl-1"
     :class="[
-      cn(
-        'flex w-fit items-center gap-1 rounded-sm pr-1 text-sm duration-200 ease-in-out rtl:pr-0 rtl:pl-1',
+      [
         isSelected && isSelectable ? 'bg-muted' : '',
         isSelectable ? 'cursor-pointer' : 'cursor-not-allowed opacity-50',
         $props.class,
-      ),
+      ],
     ]"
     :dir="direction"
     @click="onClickHandler"

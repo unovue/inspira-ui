@@ -52,7 +52,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="overflow-hidden" :class="[props.containerClass]">
+  <div
+    class="overflow-hidden"
+    :class="[props.containerClass]"
+  >
     <div
       ref="textContainer"
       :class="[props.class]"

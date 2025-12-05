@@ -184,17 +184,15 @@ onBeforeUnmount(() => {
 
 <template>
   <form
-    class="relative mx-auto h-12 w-full max-w-xl overflow-hidden rounded-full bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 dark:bg-zinc-800" :class="[
-      vanishingText && 'bg-gray-50',
-    ]"
+    class="relative mx-auto h-12 w-full max-w-xl overflow-hidden rounded-full bg-white shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),_0px_1px_0px_0px_rgba(25,28,33,0.02),_0px_0px_0px_1px_rgba(25,28,33,0.08)] transition duration-200 dark:bg-zinc-800"
+    :class="[vanishingText && 'bg-gray-50']"
     @submit.prevent="handleSubmit"
   >
     <!-- Canvas Element -->
     <canvas
       ref="canvasRef"
-      class="pointer-events-none absolute top-[20%] left-2 origin-top-left scale-50 pr-20 text-base invert sm:left-8 dark:invert-0" :class="[
-        animating ? 'opacity-100' : 'opacity-0',
-      ]"
+      class="pointer-events-none absolute top-[20%] left-2 origin-top-left scale-50 pr-20 text-base invert sm:left-8 dark:invert-0"
+      :class="[animating ? 'opacity-100' : 'opacity-0']"
     />
 
     <!-- Text Input -->
@@ -206,7 +204,7 @@ onBeforeUnmount(() => {
       class="relative z-50 size-full rounded-full border-none bg-transparent pr-20 pl-4 text-sm text-black focus:ring-0 focus:outline-none sm:pl-10 sm:text-base dark:text-white"
       :class="{ 'text-transparent dark:text-transparent': animating }"
       @keydown.enter="handleKeyDown"
-    >
+    />
 
     <!-- Submit Button -->
     <button

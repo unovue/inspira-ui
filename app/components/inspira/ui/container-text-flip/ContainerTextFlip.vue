@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { useIntervalFn } from "@vueuse/core";
 import { Motion } from "motion-v";
-import { cn } from "@/lib/utils";
 
 const props = withDefaults(
   defineProps<{
@@ -21,7 +20,7 @@ const props = withDefaults(
 const id = useId();
 
 const currentWordIndex = ref(0);
-const textRef = templateRef<HTMLDivElement>("textRef", null);
+const textRef = useTemplateRef<HTMLElement>("textRef");
 
 const width = computed(() => {
   if (textRef.value) {
@@ -42,16 +41,8 @@ useIntervalFn(() => {
     :layout-id="`words-here-${id}`"
     :animate="{ width }"
     :transition="{ duration: props.animationDuration / 2000 }"
-    :class="
-      cn(
-        'relative inline-block rounded-lg px-4 pt-2 pb-3 text-center text-4xl font-bold text-black md:text-7xl dark:text-white',
-        '[background:linear-gradient(to_bottom,#f3f4f6,#e5e7eb)]',
-        'shadow-[inset_0_-1px_#d1d5db,inset_0_0_0_1px_#d1d5db,_0_4px_8px_#d1d5db]',
-        'dark:[background:linear-gradient(to_bottom,#374151,#1f2937)]',
-        'dark:shadow-[inset_0_-1px_#10171e,inset_0_0_0_1px_hsla(205,89%,46%,.24),_0_4px_8px_#00000052]',
-        props.class,
-      )
-    "
+    class="relative inline-block rounded-lg px-4 pt-2 pb-3 text-center text-4xl font-bold text-black shadow-[inset_0_-1px_#d1d5db,inset_0_0_0_1px_#d1d5db,_0_4px_8px_#d1d5db] [background:linear-gradient(to_bottom,#f3f4f6,#e5e7eb)] md:text-7xl dark:text-white dark:shadow-[inset_0_-1px_#10171e,inset_0_0_0_1px_hsla(205,89%,46%,.24),_0_4px_8px_#00000052] dark:[background:linear-gradient(to_bottom,#374151,#1f2937)]"
+    :class="[props.class]"
   >
     <Motion
       ref="textRef"
@@ -60,7 +51,8 @@ useIntervalFn(() => {
         duration: animationDuration / 1000,
         ease: 'easeInOut',
       }"
-      :class="cn('inline-block', props.textClass)"
+      class="inline-block"
+      :class="[props.textClass]"
       :layout-id="`word-div-${words[currentWordIndex]}-${id}`"
     >
       <Motion
@@ -89,5 +81,3 @@ useIntervalFn(() => {
     </Motion>
   </Motion>
 </template>
-
-<style scoped></style>

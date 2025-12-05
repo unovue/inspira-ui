@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import type {TreeContextProps} from "./index";
+import type { TreeContextProps } from "./index";
 import { inject } from "vue";
-import { TREE_CONTEXT_SYMBOL  } from "./index";
+import { TREE_CONTEXT_SYMBOL } from "./index";
 
 const treeContext = inject<TreeContextProps>(TREE_CONTEXT_SYMBOL);
 if (!treeContext) {

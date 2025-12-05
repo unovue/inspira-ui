@@ -28,7 +28,7 @@ const props = defineProps<Props>();
         type="text"
         name="text"
         class="search-field"
-      >
+      />
       <div id="text-mask" />
       <div class="search-btn-border" />
       <span

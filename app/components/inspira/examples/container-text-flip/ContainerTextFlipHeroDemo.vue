@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { Motion } from "motion-v";
-import { cn } from "~/lib/utils";
 </script>
 
 <template>
@@ -13,11 +12,7 @@ import { cn } from "~/lib/utils";
       :while-in-view="{
         opacity: 1,
       }"
-      :class="
-        cn(
-          'relative mb-6 max-w-2xl text-left text-4xl leading-normal font-bold tracking-tight text-zinc-700 md:text-7xl dark:text-zinc-100',
-        )
-      "
+      class="relative mb-6 max-w-2xl text-left text-4xl leading-normal font-bold tracking-tight text-zinc-700 md:text-7xl dark:text-zinc-100"
       layout
     >
       <div class="inline-block">

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type {HTMLAttributes} from "vue";
-import type {MouseMode} from "./InspiraShaderToy";
-import {  onMounted, onUnmounted, ref, watch } from "vue";
-import { InspiraShaderToy  } from "./InspiraShaderToy";
+import type { HTMLAttributes } from "vue";
+import type { MouseMode } from "./InspiraShaderToy";
+import { onMounted, onUnmounted, ref, watch } from "vue";
+import { InspiraShaderToy } from "./InspiraShaderToy";
 
 interface Props {
   mouseMode?: MouseMode;
@@ -119,7 +119,8 @@ watch(
 <template>
   <div
     ref="containerRef"
-    class="shadertoy-container" :class="[props.class]"
+    class="shadertoy-container"
+    :class="[props.class]"
   />
 </template>
 

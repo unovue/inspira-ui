@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
-import { cn } from "@/lib/utils";
 
 interface Props {
   images: string[];
@@ -11,7 +10,10 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-  <div :class="cn('flex h-96 w-full gap-2', props.class)">
+  <div
+    class="flex h-96 w-full gap-2"
+    :class="[props.class]"
+  >
     <div
       v-for="image in images"
       :key="image"
@@ -21,7 +23,7 @@ const props = defineProps<Props>();
         class="relative h-full object-cover"
         :src="image"
         :alt="image"
-      >
+      />
     </div>
   </div>
 </template>

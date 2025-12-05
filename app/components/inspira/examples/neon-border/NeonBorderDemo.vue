@@ -5,7 +5,7 @@
         type="text"
         class="bg-background size-full rounded-lg px-4 text-sm"
         placeholder="No animation"
-      >
+      />
     </NeonBorder>
 
     <NeonBorder>
@@ -13,7 +13,7 @@
         type="text"
         class="bg-background size-full rounded-lg px-4 text-sm"
         placeholder="Half border animation"
-      >
+      />
     </NeonBorder>
 
     <NeonBorder animation-type="full">
@@ -21,7 +21,7 @@
         type="text"
         class="bg-background size-full rounded-lg px-4 text-sm"
         placeholder="Full border animation"
-      >
+      />
     </NeonBorder>
   </div>
 </template>

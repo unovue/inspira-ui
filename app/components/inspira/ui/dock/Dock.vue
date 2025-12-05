@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import type {HTMLAttributes} from "vue";
+import type { HTMLAttributes } from "vue";
 import type { DataOrientation, Direction } from "./types";
-import { computed,  provide, ref } from "vue";
-import { cn } from "@/lib/utils";
+import { computed, provide, ref } from "vue";
+
 import {
   DISTANCE_INJECTION_KEY,
   MAGNIFICATION_INJECTION_KEY,
@@ -61,14 +61,8 @@ provide(DISTANCE_INJECTION_KEY, distance);
 <template>
   <div
     ref="dockRef"
-    :class="
-      cn(
-        'mx-auto mt-8 flex h-[58px] w-max gap-4 rounded-2xl border p-2 backdrop-blur-md transition-all supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10',
-        orientation === 'vertical' && 'h-max w-[58px] flex-col',
-        props.class,
-        dockClass,
-      )
-    "
+    class="mx-auto mt-8 flex h-[58px] w-max gap-4 rounded-2xl border p-2 backdrop-blur-md transition-all supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10"
+    :class="[orientation === 'vertical' && 'h-max w-[58px] flex-col', props.class, dockClass]"
     @mousemove="onMouseMove"
     @mouseleave="onMouseLeave"
   >

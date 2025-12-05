@@ -14,7 +14,6 @@ import {
 import ThreeGlobe from "three-globe";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { onMounted, ref, watch } from "vue";
-import { cn } from "@/lib/utils";
 import contries from "./globe.json";
 
 interface Position {
@@ -333,6 +332,7 @@ function genRandomNumbers(min: number, max: number, count: number) {
 <template>
   <canvas
     ref="githubGlobeRef"
-    :class="cn('h-96 w-96', props.class)"
+    class="h-96 w-96"
+    :class="[props.class]"
   />
 </template>

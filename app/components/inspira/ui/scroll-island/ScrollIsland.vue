@@ -3,7 +3,6 @@ import NumberFlow from "@number-flow/vue";
 import { useColorMode } from "@vueuse/core";
 import { motion, MotionConfig } from "motion-v";
 import { computed, onMounted, onUnmounted, ref, useSlots } from "vue";
-import { cn } from "@/lib/utils";
 
 interface Props {
   class?: string;
@@ -51,12 +50,8 @@ onUnmounted(() => {
     }"
   >
     <div
-      :class="
-        cn(
-          'bg-primary/90 border-radius fixed top-12 left-1/2 z-[999] -translate-x-1/2 backdrop-blur-lg',
-          $props.class,
-        )
-      "
+      class="bg-primary/90 border-radius fixed top-12 left-1/2 z-[999] -translate-x-1/2 backdrop-blur-lg"
+      :class="[$props.class]"
       @click="() => (open = !open)"
     >
       <motion.div

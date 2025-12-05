@@ -96,7 +96,7 @@ onUnmounted(() => {
         :loop="loop"
         :preload="preload"
       >
-        <source :src="src">
+        <source :src="src" />
         Your browser does not support the video tag.
       </video>
     </div>

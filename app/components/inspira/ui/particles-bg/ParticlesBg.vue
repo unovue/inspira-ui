@@ -107,8 +107,8 @@ function resizeCanvas() {
     canvasSize.h = canvasContainerRef.value.offsetHeight;
     canvasRef.value.width = canvasSize.w * pixelRatio.value;
     canvasRef.value.height = canvasSize.h * pixelRatio.value;
-    canvasRef.value.style.width = `${canvasSize.w  }px`;
-    canvasRef.value.style.height = `${canvasSize.h  }px`;
+    canvasRef.value.style.width = `${canvasSize.w}px`;
+    canvasRef.value.style.height = `${canvasSize.h}px`;
     context.value.scale(pixelRatio.value, pixelRatio.value);
   }
 }

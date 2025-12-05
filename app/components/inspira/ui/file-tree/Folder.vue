@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import type {FolderProps, TreeContextProps} from "./index";
+import type { FolderProps, TreeContextProps } from "./index";
 import { computed, inject, toRefs } from "vue";
-import { cn } from "@/lib/utils";
-import {  TREE_CONTEXT_SYMBOL  } from "./index";
+import { TREE_CONTEXT_SYMBOL } from "./index";
 
 const props = withDefaults(defineProps<FolderProps>(), {
   isSelectable: true,
@@ -32,12 +31,11 @@ function onTriggerClick() {
     <div
       class="flex cursor-pointer items-center gap-1 rounded-md text-sm transition-all duration-200"
       :class="[
-        cn(
-          'flex cursor-pointer items-center gap-1 rounded-md text-sm',
+        [
           isSelect && isSelectable ? 'bg-muted' : '',
           !isSelectable ? 'cursor-not-allowed opacity-50' : '',
           $props.class,
-        ),
+        ],
       ]"
       :dir="direction"
       @click="onTriggerClick"

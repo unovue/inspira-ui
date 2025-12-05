@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import type { Transition, Variant } from "motion-v";
 import { Motion } from "motion-v";
-import { cn } from "~/lib/utils";
 
 const props = withDefaults(defineProps<CircularTextProps>(), {
   duration: 10,
@@ -56,7 +55,8 @@ const itemVariants = computed(() => ({
 <template>
   <Motion
     as="div"
-    :class="cn('relative', props.class)"
+    class="relative"
+    :class="[props.class]"
     initial="hidden"
     animate="visible"
     :variants="containerVariants"
@@ -83,4 +83,3 @@ const itemVariants = computed(() => ({
     </span>
   </Motion>
 </template>
-<style scoped></style>

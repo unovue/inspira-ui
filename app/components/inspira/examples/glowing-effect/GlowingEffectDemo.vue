@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { cn } from "@/lib/utils";
-
 const gridItems = [
   {
     area: "md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]",
@@ -47,7 +45,8 @@ const gridItems = [
     <li
       v-for="item in gridItems"
       :key="item.title"
-      :class="cn('min-h-[14rem] list-none', item.area)"
+      class="min-h-[14rem] list-none"
+      :class="[item.area]"
     >
       <div class="rounded-2.5xl relative h-full border p-2 md:rounded-3xl md:p-3">
         <GlowingEffect

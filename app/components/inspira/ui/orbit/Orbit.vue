@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import type {Props} from ".";
+import type { Props } from ".";
 import { computed } from "vue";
-import { cn } from "@/lib/utils";
-import { ORBIT_DIRECTION  } from ".";
+import { ORBIT_DIRECTION } from ".";
 
 const props = withDefaults(defineProps<Props>(), {
   direction: () => ORBIT_DIRECTION.Clockwise,
@@ -28,7 +27,10 @@ const negativeDelay = computed(() => -props.delay);
       fill="none"
     />
   </svg>
-  <div :class="cn('animate-orbit absolute flex size-full transform-gpu', props.class)">
+  <div
+    class="animate-orbit absolute flex size-full transform-gpu"
+    :class="[props.class]"
+  >
     <slot />
   </div>
 </template>

@@ -21,7 +21,7 @@ import { Motion } from "motion-v";
         class="relative z-2 text-center font-sans text-2xl font-bold text-white md:text-5xl lg:text-7xl"
       >
         The best <ColourfulText text="components" />
-        <br>
+        <br />
         you will ever find
       </h1>
     </div>

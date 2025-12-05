@@ -72,9 +72,8 @@ function touchMoveHandler(event: TouchEvent) {
 <template>
   <div
     ref="cardRef"
-    class="relative w-full max-w-[40rem] overflow-hidden rounded-lg border border-white/[0.08] bg-[#1d1c20] p-4 sm:p-6 md:p-8" :class="[
-      props.class,
-    ]"
+    class="relative w-full max-w-[40rem] overflow-hidden rounded-lg border border-white/[0.08] bg-[#1d1c20] p-4 sm:p-6 md:p-8"
+    :class="[props.class]"
     @mouseenter="mouseEnterHandler"
     @mouseleave="mouseLeaveHandler"
     @mousemove="mouseMoveHandler"

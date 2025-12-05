@@ -59,7 +59,7 @@ const dummyContent = [
               :src="item.image"
               alt="blog thumbnail"
               class="mb-10 rounded-lg object-cover"
-            >
+            />
             <div>
               <p
                 v-for="(paragraph, idx) in item.description"

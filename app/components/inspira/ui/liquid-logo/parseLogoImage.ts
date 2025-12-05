@@ -131,7 +131,7 @@ export function parseLogoImage(imageUrl: string): Promise<{ imageData: ImageData
             outImg.data[px + 3] = 255;
           } else {
             const raw = u[idx] / maxVal;
-            const remapped = raw**alpha;
+            const remapped = raw ** alpha;
             const gray = 255 * (1 - remapped);
             outImg.data[px] = gray;
             outImg.data[px + 1] = gray;

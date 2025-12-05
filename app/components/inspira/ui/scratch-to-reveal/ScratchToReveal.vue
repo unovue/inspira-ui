@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import type {Ref} from "vue";
+import type { Ref } from "vue";
 import { Motion, useAnimate } from "motion-v";
-import { computed, onMounted, onUnmounted, ref  } from "vue";
-import { cn } from "@/lib/utils";
+import { computed, onMounted, onUnmounted, ref } from "vue";
 
 const props = withDefaults(defineProps<Props>(), {
   gradientColors: () => ["#A97CF8", "#F38CB8", "#FDCC92"],
@@ -26,8 +25,8 @@ interface Props {
 
 const canvasRef = ref<HTMLCanvasElement>();
 
-const containerWidth = computed(() => `${props.width  }px`);
-const containerHeight = computed(() => `${props.height  }px`);
+const containerWidth = computed(() => `${props.width}px`);
+const containerHeight = computed(() => `${props.height}px`);
 
 const context = ref<CanvasRenderingContext2D>();
 
@@ -163,7 +162,8 @@ onUnmounted(() => {
 <template>
   <Motion
     ref="containerRef"
-    :class="cn('relative select-none', props.class)"
+    class="relative select-none"
+    :class="[props.class]"
     :style="{
       width: containerWidth,
       height: containerHeight,

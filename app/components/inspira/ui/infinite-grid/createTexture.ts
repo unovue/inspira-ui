@@ -158,7 +158,7 @@ export async function generateForegroundTexture(
 
   // Simple truncation if text exceeds maxWidth
   while (textMetrics.width > titleMaxWidth && truncatedTitle.length > 3) {
-    truncatedTitle = `${truncatedTitle.substring(0, truncatedTitle.length - 4)  }...`;
+    truncatedTitle = `${truncatedTitle.substring(0, truncatedTitle.length - 4)}...`;
     textMetrics = ctx.measureText(truncatedTitle);
   }
   ctx.fillText(truncatedTitle, padding, currentY);

@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import type {HTMLAttributes} from "vue";
-import { computed,  onMounted, ref } from "vue";
-
-import { cn } from "@/lib/utils";
+import type { HTMLAttributes } from "vue";
+import { computed, onMounted, ref } from "vue";
 
 const props = withDefaults(
   defineProps<{
@@ -41,7 +39,10 @@ onMounted(() => {
 </script>
 
 <template>
-  <div :class="cn('leading-snug tracking-wide', props.class)">
+  <div
+    class="leading-snug tracking-wide"
+    :class="[props.class]"
+  >
     <div ref="scope">
       <span
         v-for="(word, idx) in wordsArray"

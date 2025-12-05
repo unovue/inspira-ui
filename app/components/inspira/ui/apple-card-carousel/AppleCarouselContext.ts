@@ -1,4 +1,4 @@
-import type {InjectionKey, Ref} from "vue";
+import type { InjectionKey, Ref } from "vue";
 
 export interface CarouselContextType {
   onCardClose: (index: number) => void;

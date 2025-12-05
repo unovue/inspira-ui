@@ -1,13 +1,7 @@
 <script lang="ts" setup>
-import type {TreeContextProps, TreeProps, TreeViewElement} from "./index";
+import type { TreeContextProps, TreeProps, TreeViewElement } from "./index";
 import { onMounted, provide, ref, toRefs } from "vue";
-import { cn } from "@/lib/utils";
-import {
-  TREE_CONTEXT_SYMBOL
-  
-  
-  
-} from "./index";
+import { TREE_CONTEXT_SYMBOL } from "./index";
 
 const props = withDefaults(defineProps<TreeProps>(), {
   indicator: true,
@@ -93,9 +87,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div :class="cn('size-full', $props.class)">
+  <div
+    class="size-full"
+    :class="[$props.class]"
+  >
     <div
-      ref="rootRef"
       class="relative h-full overflow-auto px-2"
       :dir="direction"
     >

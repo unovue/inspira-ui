@@ -24,10 +24,10 @@
  * - Textures are generated dynamically from card data using Canvas 2D API
  */
 
-import type { Mesh} from "ogl";
-import type {DisposableHost} from "./DisposalManager";
-import type {EventHandlerHost} from "./EventHandler";
-import type {GridManagerHost} from "./GridManager";
+import type { Mesh } from "ogl";
+import type { DisposableHost } from "./DisposalManager";
+import type { EventHandlerHost } from "./EventHandler";
+import type { GridManagerHost } from "./GridManager";
 import type {
   CardData,
   CardTexturePair,
@@ -40,9 +40,9 @@ import type {
 import { gsap } from "gsap";
 import { InertiaPlugin } from "gsap/InertiaPlugin";
 import { Camera, Raycast, Renderer, RenderTarget, Transform, Vec2 } from "ogl";
-import {  DisposalManager } from "./DisposalManager";
-import { EventHandler  } from "./EventHandler";
-import { GridManager  } from "./GridManager";
+import { DisposalManager } from "./DisposalManager";
+import { EventHandler } from "./EventHandler";
+import { GridManager } from "./GridManager";
 
 import { CustomPostProcessShader } from "./PostProcessShader";
 

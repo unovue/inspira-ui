@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {ColorPickerValue} from "@/components/content/inspira/ui/color-picker";
+import type { ColorPickerValue } from "@/components/content/inspira/ui/color-picker";
 import { ref } from "vue";
 
 const color = ref<ColorPickerValue>({

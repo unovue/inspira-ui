@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { Motion } from "motion-v";
 import { onBeforeUnmount, onMounted, ref, useSlots, watchEffect } from "vue";
-import { cn } from "@/lib/utils";
 
 interface LogoOrigamiProps {
   duration?: number;
@@ -41,12 +40,8 @@ onBeforeUnmount(() => {
       transform: 'rotateY(-20deg)',
       transformStyle: 'preserve-3d',
     }"
-    :class="
-      cn(
-        'border-background/75 bg-background relative z-0 h-44 w-60 shrink-0 rounded-xl border',
-        $props.class,
-      )
-    "
+    class="border-background/75 bg-background relative z-0 h-44 w-60 shrink-0 rounded-xl border"
+    :class="[$props.class]"
   >
     <!-- Static Upper part -->
     <div
@@ -134,6 +129,6 @@ onBeforeUnmount(() => {
     <hr
       style="transform: translateZ(1px)"
       class="absolute top-1/2 right-[15px] left-4 z-[999999999] -translate-y-1/2 border-t-2 border-neutral-800"
-    >
+    />
   </div>
 </template>

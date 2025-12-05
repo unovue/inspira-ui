@@ -83,7 +83,7 @@ function linear(p: number) {
 }
 
 function easeInExpo(p: number) {
-  return p === 0 ? 0 : 2**(10 * (p - 1));
+  return p === 0 ? 0 : 2 ** (10 * (p - 1));
 }
 
 function tweenValue(start: number, end: number, p: number, ease: "inExpo" | null = null) {
@@ -377,7 +377,7 @@ onBeforeUnmount(() => {
 <template>
   <div
     data-slot="black-hole-background"
-    class="relative size-full overflow-hidden before:absolute before:top-1/2 before:left-1/2 before:block before:size-[140%] before:[transform:translate3d(-50%,-50%,0)] before:content-[''] before:[background:radial-gradient(ellipse_at_50%_55%,transparent_10%,white_50%)] dark:before:[background:radial-gradient(ellipse_at_50%_55%,transparent_10%,black_50%)] after:absolute after:top-1/2 after:left-1/2 after:z-[5] after:block after:size-full after:[transform:translate3d(-50%,-50%,0)] after:mix-blend-overlay after:content-[''] after:[background:radial-gradient(ellipse_at_50%_75%,#a900ff_20%,transparent_75%)]" 
+    class="relative size-full overflow-hidden before:absolute before:top-1/2 before:left-1/2 before:block before:size-[140%] before:[transform:translate3d(-50%,-50%,0)] before:content-[''] before:[background:radial-gradient(ellipse_at_50%_55%,transparent_10%,white_50%)] after:absolute after:top-1/2 after:left-1/2 after:z-[5] after:block after:size-full after:[transform:translate3d(-50%,-50%,0)] after:mix-blend-overlay after:content-[''] after:[background:radial-gradient(ellipse_at_50%_75%,#a900ff_20%,transparent_75%)] dark:before:[background:radial-gradient(ellipse_at_50%_55%,transparent_10%,black_50%)]"
     v-bind="props"
   >
     <slot />
@@ -386,7 +386,7 @@ onBeforeUnmount(() => {
       class="absolute inset-0 block size-full opacity-10 dark:opacity-20"
     />
     <motion.div
-      class="absolute top-[-71.5%] left-1/2 z-[3] h-[140%] w-[30%] [transform:translate3d(-50%,0,0)] rounded-b-full [background-size:100%_200%] [background-position:0%_100%] opacity-75 mix-blend-plus-darker blur-3xl dark:mix-blend-plus-lighter [background:linear-gradient(20deg,#00f8f1,#ffbd1e40_16.5%,#fe848f_33%,#fe848f40_49.5%,#00f8f1_66%,#00f8f180_85.5%,#ffbd1e_100%)_0_100%_/_100%_200%] dark:[background:linear-gradient(20deg,#00f8f1,#ffbd1e20_16.5%,#fe848f_33%,#fe848f20_49.5%,#00f8f1_66%,#00f8f160_85.5%,#ffbd1e_100%)_0_100%_/_100%_200%]" 
+      class="absolute top-[-71.5%] left-1/2 z-[3] h-[140%] w-[30%] [transform:translate3d(-50%,0,0)] rounded-b-full [background-size:100%_200%] [background-position:0%_100%] opacity-75 mix-blend-plus-darker blur-3xl [background:linear-gradient(20deg,#00f8f1,#ffbd1e40_16.5%,#fe848f_33%,#fe848f40_49.5%,#00f8f1_66%,#00f8f180_85.5%,#ffbd1e_100%)_0_100%_/_100%_200%] dark:mix-blend-plus-lighter dark:[background:linear-gradient(20deg,#00f8f1,#ffbd1e20_16.5%,#fe848f_33%,#fe848f20_49.5%,#00f8f1_66%,#00f8f160_85.5%,#ffbd1e_100%)_0_100%_/_100%_200%]"
       :animate="{ backgroundPosition: '0% 300%' }"
       :transition="{ duration: 5, ease: 'linear', repeat: Infinity }"
     />

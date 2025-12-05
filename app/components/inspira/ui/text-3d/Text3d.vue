@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import type {HTMLAttributes} from "vue";
-import { computed  } from "vue";
-import { cn } from "@/lib/utils";
+import type { HTMLAttributes } from "vue";
+import { computed } from "vue";
 
 interface Props {
   textColor?: string;
@@ -51,9 +50,8 @@ const animationDurationInMs = computed(() => {
 
 <template>
   <div
-    :class="
-      cn('text-3d flex items-center justify-center', animate ? 'animate-text-3d' : '', props.class)
-    "
+    class="text-3d flex items-center justify-center"
+    :class="[animate ? 'animate-text-3d' : '', props.class]"
   >
     <slot />
   </div>

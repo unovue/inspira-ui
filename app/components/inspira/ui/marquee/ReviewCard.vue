@@ -20,7 +20,7 @@ defineProps<Props>();
         width="32"
         height="32"
         alt=""
-      >
+      />
       <div class="flex flex-col">
         <span class="text-sm font-medium dark:text-white">
           {{ name }}

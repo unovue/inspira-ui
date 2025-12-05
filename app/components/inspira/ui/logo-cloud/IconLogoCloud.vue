@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { AnimateLogoCloudProps } from "./index";
-import { cn } from "@/lib/utils";
 
 const props = defineProps<AnimateLogoCloudProps>();
 </script>
@@ -14,14 +13,17 @@ const props = defineProps<AnimateLogoCloudProps>();
       >
         {{ props.title }}
       </div>
-      <div :class="cn('grid grid-cols-3 md:grid-cols-8 lg:grid-cols-8', props.class)">
+      <div
+        class="grid grid-cols-3 md:grid-cols-8 lg:grid-cols-8"
+        :class="[props.class]"
+      >
         <img
           v-for="(logo, key) in props.logos"
           :key="key"
           :src="logo.path"
           :alt="logo.name"
           class="h-7 w-12 px-2 brightness-0 dark:invert"
-        >
+        />
       </div>
     </div>
   </div>

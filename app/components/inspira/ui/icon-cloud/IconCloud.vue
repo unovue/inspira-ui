@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import type { IconCloudProps, SphereIcon } from "./index";
 import { onBeforeUnmount, onMounted, reactive, ref, watchEffect } from "vue";
-import { cn } from "@/lib/utils";
 
 const props = defineProps<IconCloudProps>();
 
@@ -142,7 +141,6 @@ function handleMouseDown(e: MouseEvent) {
         startTime: performance.now(),
         duration,
       };
-      
     }
   });
 
@@ -251,7 +249,8 @@ onBeforeUnmount(() => {
     ref="canvasRef"
     width="300"
     height="300"
-    :class="cn('rounded-lg', $props.class)"
+    class="rounded-lg"
+    :class="[$props.class]"
     role="img"
     aria-label="Interactive 3D Image Cloud"
     @mousedown="handleMouseDown"

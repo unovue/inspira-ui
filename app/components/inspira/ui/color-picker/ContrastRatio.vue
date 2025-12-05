@@ -21,9 +21,9 @@ const shouldUseWhiteText = computed(() => {
   const g = rgb.g / 255;
   const b = rgb.b / 255;
 
-  const rLinear = r <= 0.03928 ? r / 12.92 : ((r + 0.055) / 1.055)**2.4;
-  const gLinear = g <= 0.03928 ? g / 12.92 : ((g + 0.055) / 1.055)**2.4;
-  const bLinear = b <= 0.03928 ? b / 12.92 : ((b + 0.055) / 1.055)**2.4;
+  const rLinear = r <= 0.03928 ? r / 12.92 : ((r + 0.055) / 1.055) ** 2.4;
+  const gLinear = g <= 0.03928 ? g / 12.92 : ((g + 0.055) / 1.055) ** 2.4;
+  const bLinear = b <= 0.03928 ? b / 12.92 : ((b + 0.055) / 1.055) ** 2.4;
 
   const luminance = 0.2126 * rLinear + 0.7152 * gLinear + 0.0722 * bLinear;
 
@@ -49,7 +49,7 @@ function calculateContrastRatios(color: HsvaColor) {
 
   function toSRGB(c: number) {
     const channel = c / 255;
-    return channel <= 0.03928 ? channel / 12.92 : ((channel + 0.055) / 1.055)**2.4;
+    return channel <= 0.03928 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4;
   }
 
   function alphaBlend(foreground: number, background: number, alpha: number) {
@@ -114,7 +114,8 @@ watch(() => props.color, calculateContrastRatios, { immediate: true, deep: true 
           :style="{
             color: shouldUseWhiteText ? 'white' : 'black',
           }"
-        >A</span>
+          >A</span
+        >
       </div>
       <div class="flex flex-col justify-between">
         <span class="text-muted-foreground text-xs text-nowrap whitespace-nowrap">

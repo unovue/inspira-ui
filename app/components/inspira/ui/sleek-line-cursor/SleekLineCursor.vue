@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import type {HTMLAttributes} from "vue";
-import {  onMounted, onUnmounted, ref } from "vue";
-import { cn } from "~/lib/utils";
+import type { HTMLAttributes } from "vue";
+import { onMounted, onUnmounted, ref } from "vue";
 
 interface Props {
   friction?: number;
@@ -293,10 +292,7 @@ onUnmounted(() => {
   <canvas
     id="canvas"
     ref="canvasRef"
-    :class="cn('pointer-events-none fixed inset-0 z-50', props.class)"
+    class="pointer-events-none fixed inset-0 z-50"
+    :class="[props.class]"
   />
 </template>
-
-<style scoped>
-/* Tailwind classes are applied directly to the template */
-</style>

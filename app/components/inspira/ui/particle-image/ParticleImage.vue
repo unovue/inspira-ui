@@ -1,11 +1,7 @@
 <script lang="ts" setup>
-import type {InspiraImageParticle as ImageParticle} from "./inspiraImageParticles";
+import type { InspiraImageParticle as ImageParticle } from "./inspiraImageParticles";
 import { onMounted, ref } from "vue";
-import { cn } from "@/lib/utils";
-import {
-  
-  inspiraImageParticles
-} from "./inspiraImageParticles";
+import { inspiraImageParticles } from "./inspiraImageParticles";
 
 interface ParticleImageProps {
   imageSrc: string;
@@ -29,12 +25,12 @@ interface ParticleImageProps {
 
 defineProps<ParticleImageProps>();
 
-let particles: ImageParticle;
+let _particles: ImageParticle;
 const imageParticleRef = ref<HTMLImageElement>();
 
 onMounted(() => {
   const { InspiraImageParticle } = inspiraImageParticles();
-  particles = new InspiraImageParticle(imageParticleRef.value);
+  _particles = new InspiraImageParticle(imageParticleRef.value);
 });
 </script>
 
@@ -42,7 +38,8 @@ onMounted(() => {
   <img
     ref="imageParticleRef"
     :src="imageSrc"
-    :class="cn('hidden h-32 w-32', $props.class)"
+    class="hidden h-32 w-32"
+    :class="[$props.class]"
     :data-particle-gap="particleGap"
     :data-width="canvasWidth"
     :data-height="canvasHeight"
@@ -58,5 +55,5 @@ onMounted(() => {
     :data-fade-direction="fadeDirection"
     :data-noise="noise"
     :data-responsive-width="responsiveWidth"
-  >
+  />
 </template>

@@ -21,7 +21,7 @@
  * - Programs are created with appropriate shaders for each tile type
  */
 
-import type { Renderer, Texture} from "ogl";
+import type { Renderer, Texture } from "ogl";
 import type { CardData, CardTexturePair, TileGroupData, TileUserData } from "./types.ts";
 import { Mesh, Plane, Program, Transform, Vec3 } from "ogl";
 import { generateBackgroundTexture, generateForegroundTexture } from "./createTexture";

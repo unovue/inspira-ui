@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { templateRef } from "@vueuse/core";
 import { onMounted, onUnmounted, ref, watch } from "vue";
-import { cn } from "@/lib/utils";
 
 interface Props {
   firstImage?: string;
@@ -197,7 +196,8 @@ watch(
 <template>
   <div
     ref="sliderRef"
-    :class="cn('h-[400px] w-[400px] overflow-hidden', props.class)"
+    class="h-[400px] w-[400px] overflow-hidden"
+    :class="[props.class]"
     :style="{
       position: 'relative',
       cursor: props.slideMode === 'drag' ? 'grab' : 'col-resize',
@@ -262,12 +262,8 @@ watch(
       <Transition>
         <div
           v-show="true"
-          :class="
-            cn(
-              'absolute inset-0 z-20 h-full w-full flex-shrink-0 overflow-hidden rounded-2xl select-none',
-              props.firstContentClass,
-            )
-          "
+          class="absolute inset-0 z-20 h-full w-full flex-shrink-0 overflow-hidden rounded-2xl select-none"
+          :class="[props.firstContentClass]"
           :style="{
             clipPath: `inset(0 ${100 - sliderXPercent}% 0 0)`,
           }"
@@ -277,14 +273,10 @@ watch(
               v-if="props.firstImage"
               :alt="props.firstImageAlt"
               :src="props.firstImage"
-              :class="
-                cn(
-                  'absolute inset-0 z-20 h-full w-full flex-shrink-0 rounded-2xl select-none',
-                  firstContentClass,
-                )
-              "
+              class="absolute inset-0 z-20 h-full w-full flex-shrink-0 rounded-2xl select-none"
+              :class="[firstContentClass]"
               :draggable="false"
-            >
+            />
           </slot>
         </div>
       </Transition>
@@ -294,12 +286,8 @@ watch(
     <Transition>
       <div
         v-show="true"
-        :class="
-          cn(
-            'absolute top-0 left-0 z-[19] h-full w-full rounded-2xl select-none',
-            props.secondContentClass,
-          )
-        "
+        class="absolute top-0 left-0 z-[19] h-full w-full rounded-2xl select-none"
+        :class="[props.secondContentClass]"
         :style="{ pointerEvents: isInteracting ? 'none' : 'auto' }"
       >
         <slot name="second-content">
@@ -307,9 +295,10 @@ watch(
             v-if="props.secondImage"
             :alt="props.secondImageAlt"
             :src="props.secondImage"
-            :class="cn('h-full w-full object-cover', secondContentClass)"
+            class="h-full w-full object-cover"
+            :class="[secondContentClass]"
             :draggable="false"
-          >
+          />
         </slot>
       </div>
     </Transition>

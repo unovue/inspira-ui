@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
-import { cn } from "@/lib/utils";
 
 interface Props {
   name: string;
@@ -17,16 +16,8 @@ const props = defineProps<Props>();
 <template>
   <div
     :key="name"
-    :class="
-      cn(
-        'group relative col-span-3 flex flex-col justify-end overflow-hidden rounded-xl',
-        // light styles
-        'bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]',
-        // dark styles
-        'transform-gpu dark:bg-black dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] dark:[border:1px_solid_rgba(255,255,255,.1)]',
-        props.class,
-      )
-    "
+    class="group relative col-span-3 flex transform-gpu flex-col justify-end overflow-hidden rounded-xl bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] dark:bg-black dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] dark:[border:1px_solid_rgba(255,255,255,.1)]"
+    :class="[props.class]"
   >
     <slot name="background" />
 

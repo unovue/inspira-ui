@@ -82,8 +82,8 @@ function initThreeJS() {
 
   // Scene setup
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x0A0015);
-  scene.fog = new THREE.FogExp2(0x1A0033, 0.001);
+  scene.background = new THREE.Color(0x0a0015);
+  scene.fog = new THREE.FogExp2(0x1a0033, 0.001);
 
   // Camera setup - get container dimensions first
   const container = canvasRef.value.parentElement;
@@ -95,7 +95,7 @@ function initThreeJS() {
 
   // Lighting
   scene.add(new THREE.AmbientLight(0x330066, 0.2));
-  const mainLight = new THREE.DirectionalLight(0xFFFFFF, 0.6);
+  const mainLight = new THREE.DirectionalLight(0xffffff, 0.6);
   mainLight.position.set(10, 10, 5);
   scene.add(mainLight);
 
@@ -166,16 +166,15 @@ function addPortalShader(material: any) {
     shader.uniforms.portalColor = { value: new THREE.Color(params.value.accentColor) };
     shader.uniforms.dimensionShift = { value: 0 };
 
-    shader.vertexShader = `varying vec3 vWorldPosition;\n${  shader.vertexShader}`;
+    shader.vertexShader = `varying vec3 vWorldPosition;\n${shader.vertexShader}`;
 
-    shader.fragmentShader =
-      `
+    shader.fragmentShader = `
         uniform float time;
         uniform float pulseTime;
         uniform float portalSpeed;
         uniform vec3 portalColor;
         uniform float dimensionShift;
-        varying vec3 vWorldPosition;\n${  shader.fragmentShader}`;
+        varying vec3 vWorldPosition;\n${shader.fragmentShader}`;
 
     shader.vertexShader = shader.vertexShader.replace(
       "#include <begin_vertex>",
@@ -689,10 +688,14 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="relative h-full w-full overflow-hidden" :class="[props.containerClass]">
+  <div
+    class="relative h-full w-full overflow-hidden"
+    :class="[props.containerClass]"
+  >
     <canvas
       ref="canvasRef"
-      class="absolute inset-0 block h-full w-full" :class="[props.class]"
+      class="absolute inset-0 block h-full w-full"
+      :class="[props.class]"
     />
   </div>
 </template>

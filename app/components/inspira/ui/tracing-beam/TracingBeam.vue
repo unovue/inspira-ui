@@ -2,7 +2,6 @@
 import { Motion } from "motion-v";
 import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 import { useSpring } from "vue-use-spring";
-import { cn } from "@/lib/utils";
 
 defineProps({
   class: String,
@@ -91,7 +90,8 @@ function mapRange(
 <template>
   <div
     ref="tracingBeamRef"
-    :class="cn('relative mx-auto h-full w-full max-w-4xl', $props.class)"
+    class="relative mx-auto h-full w-full max-w-4xl"
+    :class="[$props.class]"
   >
     <div class="absolute top-3 -left-4 md:-left-12">
       <div

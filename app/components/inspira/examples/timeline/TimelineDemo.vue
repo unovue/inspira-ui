@@ -38,7 +38,7 @@ const data = [
     >
       <template
         v-for="(item, index) in data"
-        :key="`${item.id }template`"
+        :key="`${item.id}template`"
         #[item.id]
       >
         <div class="relative w-full pr-4 pl-20 md:pl-4">

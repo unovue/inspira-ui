@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { computed } from "vue";
-import { cn } from "@/lib/utils";
 
 const props = defineProps({
   duration: {
@@ -25,16 +24,8 @@ const styleVar = computed(() => {
 <template>
   <p
     :style="styleVar"
-    :class="
-      cn(
-        'mx-auto max-w-md text-neutral-600/70 dark:text-neutral-400/70',
-        // Radiant effect
-        'radiant-animation [background-size:var(--radiant-width)_100%] bg-clip-text [background-position:0_0] bg-no-repeat [transition:background-position_1s_cubic-bezier(.6,.6,0,1)_infinite]',
-        // Radiant gradient
-        'bg-gradient-to-r from-transparent via-black via-50% to-transparent dark:via-white',
-        $props.class,
-      )
-    "
+    class="radiant-animation mx-auto max-w-md bg-gradient-to-r from-transparent via-black via-50% to-transparent [background-size:var(--radiant-width)_100%] bg-clip-text [background-position:0_0] bg-no-repeat text-neutral-600/70 [transition:background-position_1s_cubic-bezier(.6,.6,0,1)_infinite] dark:via-white dark:text-neutral-400/70"
+    :class="[$props.class]"
   >
     <slot />
   </p>

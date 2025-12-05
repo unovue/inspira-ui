@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
 import { computed, ref } from "vue";
-import { cn } from "@/lib/utils";
 
 interface Props {
   class?: HTMLAttributes["class"];
@@ -33,7 +32,8 @@ function updateMousePosition(event: MouseEvent) {
 <template>
   <div
     ref="svgMaskContainerRef"
-    :class="cn('relative h-screen', isHovered ? 'bg-slate-900' : 'bg-white', props.class)"
+    class="relative h-screen"
+    :class="[isHovered ? 'bg-slate-900' : 'bg-white', props.class]"
     @mousemove="updateMousePosition"
   >
     <div

@@ -6,7 +6,7 @@
           src="https://images.unsplash.com/photo-1525373698358-041e3a460346?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3"
           alt="image"
           class="size-full rounded-2xl object-cover shadow-2xl shadow-black/40"
-        >
+        />
         <div class="absolute bottom-4 left-4 text-xl font-bold text-white">Inspira UI</div>
       </template>
       <template #back>

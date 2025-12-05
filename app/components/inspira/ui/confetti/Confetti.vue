@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import type {GlobalOptions as ConfettiGlobalOptions, CreateTypes as ConfettiInstance, Options as ConfettiOptions} from "canvas-confetti";
-import {
-  
-  
-  
-  create
+import type {
+  GlobalOptions as ConfettiGlobalOptions,
+  CreateTypes as ConfettiInstance,
+  Options as ConfettiOptions,
 } from "canvas-confetti";
+import { create } from "canvas-confetti";
 import { onMounted, onUnmounted, provide, ref } from "vue";
 
 interface Api {

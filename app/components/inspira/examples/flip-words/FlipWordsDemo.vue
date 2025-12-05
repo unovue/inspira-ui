@@ -8,7 +8,7 @@
         class="!text-primary text-4xl"
       />
       <div>
-        JavaScript Framework for building <br>
+        JavaScript Framework for building <br />
         Modern Web Apps
       </div>
     </div>

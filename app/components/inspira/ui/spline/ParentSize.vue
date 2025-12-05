@@ -2,7 +2,6 @@
 <script setup lang="ts">
 import { useDebounceFn, useResizeObserver } from "@vueuse/core";
 import { computed, reactive, ref, useAttrs } from "vue";
-import { cn } from "@/lib/utils";
 
 const props = defineProps({
   class: String,
@@ -34,8 +33,6 @@ const mergedStyles = computed(() => ({
   ...props.parentSizeStyles,
   ...(attrs.style as object),
 }));
-
-const mergedClass = computed(() => ["w-full h-full", props.class]);
 
 const attrsWithoutClassAndStyle = computed(() => {
   const { class: _, style: __, ...rest } = attrs;
@@ -77,7 +74,8 @@ useResizeObserver(target, (entries) => {
   <div
     ref="target"
     :style="mergedStyles"
-    :class="cn('h-full w-full', props.class)"
+    class="h-full w-full"
+    :class="[props.class]"
     v-bind="attrsWithoutClassAndStyle"
   >
     <slot />

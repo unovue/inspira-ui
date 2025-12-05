@@ -149,7 +149,7 @@ async function startAsyncLoading() {
         {{ uiState.isSimpleLoading ? "Stop Loading" : "Start Simple Loading" }}
       </button>
     </section>
-    <hr class="my-4 h-px w-full bg-gray-200">
+    <hr class="my-4 h-px w-full bg-gray-200" />
     <!-- Async Loading Demo -->
     <section class="flex w-full flex-col items-center justify-center">
       <h2 class="mb-2 text-lg font-semibold">Async Loading Demo</h2>

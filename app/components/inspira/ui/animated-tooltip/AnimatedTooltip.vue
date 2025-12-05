@@ -99,6 +99,6 @@ function handleMouseMove(event: MouseEvent) {
       :src="item.image"
       :alt="item.name"
       class="relative !m-0 size-14 rounded-full border-2 border-white object-cover object-top !p-0 transition duration-500 group-hover:z-30 group-hover:scale-105"
-    >
+    />
   </div>
 </template>

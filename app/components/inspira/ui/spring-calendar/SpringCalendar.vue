@@ -51,7 +51,7 @@ function setActive(index: number) {
 
       <Motion
         v-if="calendarData[activeIndex].events"
-        :key="`event-container${ Math.random()}`"
+        :key="`event-container${Math.random()}`"
         layout
         as="div"
         class="flex flex-col gap-4"
@@ -88,7 +88,7 @@ function setActive(index: number) {
       <div class="flex flex-wrap gap-3">
         <Motion
           v-for="(day, index) in calendarData"
-          :key="`${day.date }-${ index}`"
+          :key="`${day.date}-${index}`"
           as="button"
           layout
           class="border-border hover:bg-muted-foreground/10 flex flex-col rounded-2xl border p-3 text-center opacity-100 duration-200"

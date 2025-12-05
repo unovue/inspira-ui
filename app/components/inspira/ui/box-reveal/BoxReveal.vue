@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
 import { Motion } from "motion-v";
-import { cn } from "@/lib/utils";
 
 interface BoxRevealProps {
   color?: string;
@@ -30,7 +29,10 @@ const visibleSlideVariants = {
 </script>
 
 <template>
-  <div :class="cn('relative', $props.class)">
+  <div
+    class="relative"
+    :class="[$props.class]"
+  >
     <Motion
       :initial="initialMainVariants"
       :while-in-view="visibleMainVariants"

@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { cn } from "@/lib/utils";
-
 withDefaults(
   defineProps<{
     class?: string;
@@ -19,24 +17,17 @@ withDefaults(
 
 <template>
   <div
-    :class="
-      cn(
-        'group flex [gap:var(--gap)] overflow-hidden p-2 [--duration:40s] [--gap:1rem]',
-        vertical ? 'flex-col' : 'flex-row',
-        $props.class,
-      )
-    "
+    class="group flex [gap:var(--gap)] overflow-hidden p-2 [--duration:40s] [--gap:1rem]"
+    :class="[vertical ? 'flex-col' : 'flex-row', $props.class]"
   >
     <div
       v-for="index in repeat"
       :key="index"
-      :class="
-        cn(
-          'flex shrink-0 justify-around [gap:var(--gap)]',
-          vertical ? 'animate-marquee-vertical flex-col' : 'animate-marquee flex-row',
-          pauseOnHover ? 'group-hover:[animation-play-state:paused]' : '',
-        )
-      "
+      class="flex shrink-0 justify-around [gap:var(--gap)]"
+      :class="[
+        vertical ? 'animate-marquee-vertical flex-col' : 'animate-marquee flex-row',
+        pauseOnHover ? 'group-hover:[animation-play-state:paused]' : '',
+      ]"
       :style="{
         animationDirection: reverse ? 'reverse' : 'normal',
       }"

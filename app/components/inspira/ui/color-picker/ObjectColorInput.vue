@@ -112,6 +112,6 @@ function handleChange(idx: number, event: Event) {
       :class="input.class"
       step="1"
       @input="handleChange(idx, $event)"
-    >
+    />
   </div>
 </template>

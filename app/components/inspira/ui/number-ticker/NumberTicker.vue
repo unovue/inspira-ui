@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { TransitionPresets, useElementVisibility, useTransition } from "@vueuse/core";
 import { computed, ref, watch } from "vue";
-import { cn } from "@/lib/utils";
 
 type TransitionsPresetsKeys = keyof typeof TransitionPresets;
 
@@ -72,7 +71,8 @@ watch(
 <template>
   <span
     ref="spanRef"
-    :class="cn('inline-block tracking-wider text-black tabular-nums dark:text-white', props.class)"
+    class="inline-block tracking-wider text-black tabular-nums dark:text-white"
+    :class="[props.class]"
   >
     {{ output }}
   </span>

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
 import { animate } from "motion-v";
-import { cn } from "@/lib/utils";
 
 interface Props {
   blur?: number;
@@ -162,30 +161,16 @@ function handleMove(e?: MouseEvent | PointerEvent | { x: number; y: number }) {
   <div
     ref="containerRef"
     :style="containerStyles"
-    :class="
-      cn(
-        'pointer-events-none absolute inset-0 rounded-[inherit] opacity-100 transition-opacity',
-        glow && 'opacity-100',
-        blur > 0 && 'blur-[var(--blur)]',
-        props.class,
-        disabled && '!hidden',
-      )
-    "
+    class="pointer-events-none absolute inset-0 rounded-[inherit] opacity-100 transition-opacity"
+    :class="[
+      glow && 'opacity-100',
+      blur > 0 && 'blur-[var(--blur)]',
+      props.class,
+      disabled && '!hidden',
+    ]"
   >
     <div
-      :class="
-        cn(
-          'glow',
-          'rounded-[inherit]',
-          `after:absolute after:inset-[calc(-1*var(--glowingeffect-border-width))] after:rounded-[inherit] after:content-['']`,
-          'after:[border:var(--glowingeffect-border-width)_solid_transparent]',
-          'after:[background-attachment:fixed] after:[background:var(--gradient)]',
-          'after:opacity-[var(--active)] after:transition-opacity after:duration-300',
-          'after:[mask-clip:padding-box,border-box]',
-          'after:[mask-composite:intersect]',
-          'after:[mask-image:linear-gradient(#0000,#0000),conic-gradient(from_calc((var(--start)-var(--spread))*1deg),#00000000_0deg,#fff,#00000000_calc(var(--spread)*2deg))]',
-        )
-      "
+      class="glow rounded-[inherit] after:absolute after:inset-[calc(-1*var(--glowingeffect-border-width))] after:rounded-[inherit] after:[mask-image:linear-gradient(#0000,#0000),conic-gradient(from_calc((var(--start)-var(--spread))*1deg),#00000000_0deg,#fff,#00000000_calc(var(--spread)*2deg))] after:[background-attachment:fixed] after:[mask-composite:intersect] after:[mask-clip:padding-box,border-box] after:opacity-[var(--active)] after:transition-opacity after:duration-300 after:content-[''] after:[background:var(--gradient)] after:[border:var(--glowingeffect-border-width)_solid_transparent]"
     />
   </div>
 </template>

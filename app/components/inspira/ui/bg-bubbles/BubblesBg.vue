@@ -48,7 +48,7 @@ const rand = seededRandom(RAND_SEED);
 
 const { PI, cos, sin } = Math;
 const PI2 = PI * 2;
-const sizes = new Array(SPHERE_COUNT).fill(0).map(() => randRange(1) * randRange()**3);
+const sizes = new Array(SPHERE_COUNT).fill(0).map(() => randRange(1) * randRange() ** 3);
 const orbitRadii = new Array(SPHERE_COUNT)
   .fill(0)
   .map(() => MathUtils.lerp(ORBIT_MIN, ORBIT_MAX, randRange()));
@@ -81,11 +81,11 @@ bgMaterial.uniforms.uTemperatureVariancePeriod.value = new Vector3(0, 0, 0.1);
 function seededRandom(a: number) {
   return function () {
     a |= 0;
-    a = (a + 0x9E3779B9) | 0;
+    a = (a + 0x9e3779b9) | 0;
     let t = a ^ (a >>> 16);
-    t = Math.imul(t, 0x21F0AAAD);
+    t = Math.imul(t, 0x21f0aaad);
     t = t ^ (t >>> 15);
-    t = Math.imul(t, 0x735A2D97);
+    t = Math.imul(t, 0x735a2d97);
     return ((t = t ^ (t >>> 15)) >>> 0) / 4294967296;
   };
 }

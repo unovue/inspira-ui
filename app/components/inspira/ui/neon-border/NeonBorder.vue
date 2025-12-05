@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
-import { cn } from "@/lib/utils";
 
 interface Props {
   color1?: string;
@@ -36,25 +35,19 @@ function getWidth(animationType: "none" | "half" | "full") {
 
 <template>
   <div
-    :class="
-      cn(
-        'relative z-10 inline-block h-10 w-full max-w-sm overflow-hidden rounded-lg p-px',
-        props.class,
-      )
-    "
+    class="relative z-10 inline-block h-10 w-full max-w-sm overflow-hidden rounded-lg p-px"
+    :class="[props.class]"
     :style="{
       '--neon-border-duration': durationInSeconds,
     }"
   >
     <div
-      :class="
-        cn('neon-border-one rounded-lg', animationType != 'none' ? 'animate-neon-border' : '')
-      "
+      class="neon-border-one rounded-lg"
+      :class="[animationType !== 'none' ? 'animate-neon-border' : '']"
     />
     <div
-      :class="
-        cn('neon-border-two rounded-lg', animationType != 'none' ? 'animate-neon-border' : '')
-      "
+      class="neon-border-two rounded-lg"
+      :class="[animationType !== 'none' ? 'animate-neon-border' : '']"
     />
     <slot />
   </div>
