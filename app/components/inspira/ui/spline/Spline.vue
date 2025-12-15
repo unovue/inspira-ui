@@ -1,6 +1,4 @@
 <script setup lang="ts">
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 import type { SplineEventName } from "@splinetool/runtime";
 import { Application } from "@splinetool/runtime";
 import { useDebounceFn, useIntersectionObserver } from "@vueuse/core";

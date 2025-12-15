@@ -125,90 +125,101 @@ onMounted(() => {
 </script>
 
 <template>
-  <UTabs
-    size="xl"
-    variant="pill"
-    :items="items"
-    class="min-h-[60vh] w-full"
-    :ui="{
-      list: 'w-fit max-sm:w-full bg-transparent gap-4 self-start overflow-scroll',
-      trigger: 'w-fit outline outline-neutral-200 dark:outline-neutral-800',
-      content: 'py-4',
-    }"
-    :unmount-on-hide="false"
-  >
-    <template #preview>
-      <ClientOnly>
-        <component :is="config" />
-      </ClientOnly>
-
-      <slot
-        name="api"
-        class="my-4"
-      />
-    </template>
-
-    <template #code>
-      <MDC
-        :key="demoCode"
-        :value="demoCode"
-        class="-mt-12"
-      />
-    </template>
-
-    <template
-      v-if="showInstallation"
-      #installation
+  <Suspense>
+    <UTabs
+      size="xl"
+      variant="pill"
+      :items="items"
+      class="min-h-[60vh] w-full"
+      :ui="{
+        list: 'w-fit max-sm:w-full bg-transparent gap-4 self-start overflow-scroll',
+        trigger: 'w-fit outline outline-neutral-200 dark:outline-neutral-800',
+        content: 'py-4',
+      }"
+      :unmount-on-hide="false"
     >
-      <div class="mb-4 text-lg italic">
-        Install component by either CLI or Manually copy-pasting.
+      <template #preview>
+        <ClientOnly>
+          <component :is="config" />
+        </ClientOnly>
+
+        <slot
+          name="api"
+          class="my-4"
+        />
+      </template>
+
+      <template #code>
+        <MDC
+          :key="demoCode"
+          :value="demoCode"
+          class="-mt-12"
+        />
+      </template>
+
+      <template
+        v-if="showInstallation"
+        #installation
+      >
+        <div class="mb-4 text-lg italic">
+          Install component by either CLI or Manually copy-pasting.
+        </div>
+        <UTabs :items="installationItems">
+          <template #cli>
+            <RegistryTabs :component-id="componentId" />
+          </template>
+
+          <template #manual>
+            <div
+              v-if="devDependencies || dependencies"
+              class="my-4 text-base"
+            >
+              This component requires following dependencies to be installed.
+            </div>
+            <PmTabs
+              v-if="devDependencies"
+              :is-dev="true"
+              :package-name="devDependencies"
+            />
+
+            <PmTabs
+              v-if="dependencies"
+              :package-name="dependencies"
+            />
+
+            <slot name="instructions" />
+
+            <div class="mt-8 mb-4 text-base">
+              Copy and paste the following code in your project. Update imports according to your
+              project.
+            </div>
+
+            <MDC
+              v-if="componentCode"
+              :key="componentCode"
+              :value="componentCode"
+            />
+          </template>
+        </UTabs>
+      </template>
+
+      <template
+        v-if="showInstallation"
+        #creditsTab
+      >
+        <UPageCard class="bg-default/15">
+          <slot name="credits" />
+        </UPageCard>
+      </template>
+    </UTabs>
+    <template #fallback>
+      <div class="flex h-32 items-center justify-center gap-3 text-lg">
+        <UIcon
+          name="line-md:loading-twotone-loop"
+          size="28"
+        />
+        <span> Loading component info </span>
       </div>
-      <UTabs :items="installationItems">
-        <template #cli>
-          <RegistryTabs :component-id="componentId" />
-        </template>
-
-        <template #manual>
-          <div
-            v-if="devDependencies || dependencies"
-            class="my-4 text-base"
-          >
-            This component requires following dependencies to be installed.
-          </div>
-          <PmTabs
-            v-if="devDependencies"
-            :is-dev="true"
-            :package-name="devDependencies"
-          />
-
-          <PmTabs
-            v-if="dependencies"
-            :package-name="dependencies"
-          />
-
-          <slot name="instructions" />
-
-          <div class="mt-8 mb-4 text-base">
-            Copy and paste the following code in your project. Update imports according to your
-            project.
-          </div>
-
-          <MDC
-            v-if="componentCode"
-            :key="componentCode"
-            :value="componentCode"
-          />
-        </template>
-      </UTabs>
     </template>
-
-    <template
-      v-if="showInstallation"
-      #creditsTab
-    >
-      <UPageCard class="bg-default/15">
-        <slot name="credits" />
-      </UPageCard>
-    </template>
-  </UTabs>
+  </Suspense>
 </template>

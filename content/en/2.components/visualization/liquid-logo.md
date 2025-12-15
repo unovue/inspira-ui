@@ -5,7 +5,7 @@ category: Visualization
 tags: [css, tailwind, webgl, paper]
 ---
 
-::ComponentViewer{demoFile="GlobeDemo.vue" config="GlobeConfig" componentId="globe" :componentFiles='["LiquidLogo.vue", "parseLogoImage.ts", "shader.ts"]' }
+::ComponentViewer{demoFile="LiquidLogoDemo.vue" config="LiquidLogoConfig" componentId="liquid-logo" :componentFiles='["LiquidLogo.vue", "parseLogoImage.ts", "shader.ts"]' }
 
 #api
 

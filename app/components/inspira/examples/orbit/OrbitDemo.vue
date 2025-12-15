@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { ORBIT_DIRECTION } from "../ui/orbit";
+import { ORBIT_DIRECTION } from "../../ui/orbit";
 </script>
 
 <template>
   <div
-    class="bg-background relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl"
+    class="bg-background relative flex h-125 w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl"
   >
     <span class="pointer-events-none text-center text-8xl leading-none font-semibold"> 🌍 </span>
 
     <!-- Inner Circles -->
     <Orbit
-      class="size-[30px] items-center justify-center border-none bg-transparent"
+      class="size-7.5 items-center justify-center border-none bg-transparent"
       :duration="20"
       :delay="20"
       :radius="80"
@@ -22,7 +22,7 @@ import { ORBIT_DIRECTION } from "../ui/orbit";
       />
     </Orbit>
     <Orbit
-      class="size-[30px] items-center justify-center border-none bg-transparent"
+      class="size-7.5 items-center justify-center border-none bg-transparent"
       :duration="20"
       :delay="10"
       :radius="80"
@@ -37,7 +37,7 @@ import { ORBIT_DIRECTION } from "../ui/orbit";
 
     <!-- Outer Circles (reverse) -->
     <Orbit
-      class="size-[50px] items-center justify-center border-none bg-transparent"
+      class="size-12.5 items-center justify-center border-none bg-transparent"
       :radius="190"
       :duration="20"
       path
@@ -48,7 +48,7 @@ import { ORBIT_DIRECTION } from "../ui/orbit";
       />
     </Orbit>
     <Orbit
-      class="size-[50px] items-center justify-center border-none bg-transparent"
+      class="size-12.5 items-center justify-center border-none bg-transparent"
       :radius="190"
       :duration="20"
       :delay="200"

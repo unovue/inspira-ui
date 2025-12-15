@@ -3,7 +3,7 @@ const sceneUrl = "https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode";
 </script>
 
 <template>
-  <div class="relative w-full overflow-hidden rounded-lg bg-black/[0.96]">
+  <div class="relative w-full overflow-hidden rounded-lg bg-black/96">
     <div
       class="font-heading absolute flex w-full flex-col items-center justify-center gap-2 p-8 text-center text-white"
     >
