@@ -8,7 +8,7 @@ const props = withDefaults(
     filter?: boolean;
     duration?: number;
     delay?: number;
-    class: HTMLAttributes["class"];
+    class?: HTMLAttributes["class"];
   }>(),
   { duration: 0.7, delay: 0, filter: true },
 );

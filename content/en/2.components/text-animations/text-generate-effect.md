@@ -5,7 +5,7 @@ category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 
-::ComponentViewer{demoFile="TextGenerateDemo.vue" config="TextGenerateEffectConfig" componentId="text-generate-effect" :componentFiles='["TextGenerateEffect.vue"]'}
+::ComponentViewer{demoFile="TextGenerateDemo.vue" config="TextGenerateConfig" componentId="text-generate-effect" :componentFiles='["TextGenerateEffect.vue"]'}
 
 #api
 

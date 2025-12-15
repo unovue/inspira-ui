@@ -13,8 +13,6 @@ tags: [css, tailwind, threejs, aceternity-ui]
 
 Download a GeoJSON file containing the globe's geographical data from [GeoJSON Maps](https://geojson-maps.kyd.au/) by customizing the continents and detail level. Save the downloaded file as `globe.json` in the same folder as your component.
 
-::
-
 ## API
 
 | Prop Name     | Type         | Default | Description                                                                                         |

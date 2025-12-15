@@ -19,9 +19,12 @@ const items = [
 </script>
 
 <template>
-  <Carousel3D
-    :items="items"
-    :width="width"
-    :height="height"
-  />
+  <div class="flex size-full overflow-hidden py-12">
+    <Carousel3D
+      :key="`${width.toString()}_${height.toString()}`"
+      :items="items"
+      :width="width"
+      :height="height"
+    />
+  </div>
 </template>
