@@ -127,7 +127,7 @@ onMounted(() => {
 <template>
   <Suspense>
     <UTabs
-      size="xl"
+      size="lg"
       variant="pill"
       :items="items"
       class="min-h-[60vh] w-full"

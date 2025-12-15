@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 
 @theme static {
-  --font-sans: "Public Sans", sans-serif;
+  --font-sans: "Geist", sans-serif;
   --ui-container: 80rem;
   --ui-primary: black;
 }
