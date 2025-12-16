@@ -41,9 +41,10 @@
 </template>
 
 <script setup lang="ts">
+import type { HTMLAttributes } from "vue";
+import { ref, computed, useTemplateRef, onMounted, onUnmounted } from "vue";
 import { cn } from "@/lib/utils";
 import { animate } from "motion-v";
-import type { HTMLAttributes } from "vue";
 
 interface Props {
   blur?: number;
@@ -70,7 +71,7 @@ const props = withDefaults(defineProps<Props>(), {
   disabled: true,
 });
 
-const containerRef = templateRef("containerRef");
+const containerRef = useTemplateRef("containerRef");
 const lastPosition = ref({
   x: 0,
   y: 0,

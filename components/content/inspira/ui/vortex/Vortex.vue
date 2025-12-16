@@ -1,7 +1,6 @@
 <template>
   <div :class="cn('relative h-full w-full', props.containerClass)">
     <Motion
-      ref="containerRef"
       as="div"
       :initial="{ opacity: 0 }"
       :animate="{ opacity: 1 }"
@@ -18,10 +17,10 @@
 
 <script setup lang="ts">
 import { createNoise3D } from "simplex-noise";
-import { onMounted, onUnmounted } from "vue";
-import { templateRef } from "@vueuse/core";
+import { ref, shallowRef, onMounted, onUnmounted, useTemplateRef } from "vue";
 import { cn } from "@/lib/utils";
 import { useDebounceFn } from "@vueuse/core";
+
 const TAU = 2 * Math.PI;
 const BASE_TTL = 50;
 const RANGE_TTL = 150;
@@ -62,8 +61,7 @@ const particleProps = shallowRef<Float32Array | null>(null);
 const center = ref<[number, number]>([0, 0]);
 const ctx = shallowRef<CanvasRenderingContext2D | null>(null);
 
-const canvasRef = templateRef<HTMLCanvasElement | null>("canvasRef");
-const containerRef = templateRef<HTMLElement | null>("containerRef");
+const canvasRef = useTemplateRef("canvasRef");
 
 const particleCache = {
   x: 0,
