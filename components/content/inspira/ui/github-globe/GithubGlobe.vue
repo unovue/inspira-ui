@@ -165,6 +165,13 @@ function setupScene() {
   pLight.position.set(-200, 500, 200);
   camera.add(pLight);
 
+  if (defaultGlobeConfig.initialPosition) {
+    const { lat, lng } = defaultGlobeConfig.initialPosition;
+    const pos = latLngToCartesian(lat, lng, 400);
+    camera.position.set(pos.x, pos.y, pos.z);
+    camera.lookAt(0, 0, 0);
+  }
+
   camera.updateProjectionMatrix();
   scene.add(camera);
 
@@ -177,10 +184,22 @@ function setupScene() {
   controls.maxDistance = 500;
   controls.rotateSpeed = defaultGlobeConfig.autoRotateSpeed || 0.8;
   controls.zoomSpeed = 1;
-  controls.autoRotate = defaultGlobeConfig.autoRotate || false;
+  controls.autoRotate = false;
+  controls.autoRotateSpeed = defaultGlobeConfig.autoRotateSpeed ?? 2.0;
 
   controls.minPolarAngle = Math.PI / 3.5;
   controls.maxPolarAngle = Math.PI - Math.PI / 3;
+}
+
+function latLngToCartesian(lat: number, lng: number, radius = 400) {
+  const phi = (lat * Math.PI) / 180;
+  const theta = (lng * Math.PI) / 180;
+
+  const x = radius * Math.cos(phi) * Math.sin(theta);
+  const y = radius * Math.sin(phi);
+  const z = radius * Math.cos(phi) * Math.cos(theta);
+
+  return { x, y, z };
 }
 
 function initGlobe() {
@@ -198,8 +217,8 @@ function initGlobe() {
     .atmosphereAltitude(defaultGlobeConfig.atmosphereAltitude!)
     .hexPolygonColor((e) => defaultGlobeConfig.polygonColor!);
 
-  globe.rotateY(-Math.PI * (5 / 9));
-  globe.rotateZ(-Math.PI / 6);
+  // globe.rotateY(-Math.PI * (5 / 9));
+  // globe.rotateZ(-Math.PI / 6);
 
   const globeMaterial = globe.globeMaterial() as unknown as {
     color: Color;
@@ -261,8 +280,9 @@ function startAnimation() {
 }
 
 function animate() {
-  globe.rotation.y += 0.01; // Rotate globe
-
+  if (globe && defaultGlobeConfig.autoRotate) {
+    globe.rotation.y += (defaultGlobeConfig.autoRotateSpeed ?? 2.0) * 0.001;
+  }
   renderer.render(scene, camera);
 
   requestAnimationFrame(animate);
