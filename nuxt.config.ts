@@ -1,6 +1,11 @@
+import { createResolver } from "@nuxt/kit";
+
+const { resolve } = createResolver(import.meta.url);
+
 export default defineNuxtConfig({
   extends: ["docus"],
   modules: [
+    resolve("./modules/config"),
     "@nuxtjs/i18n",
     "@nuxt/content",
     "@nuxt/eslint",
