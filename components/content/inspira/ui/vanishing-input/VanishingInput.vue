@@ -86,8 +86,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, watch, onBeforeUnmount } from "vue";
-import { templateRef } from "@vueuse/core";
+import { ref, onMounted, watch, onBeforeUnmount, useTemplateRef } from "vue";
 
 // Define interfaces for props and data structures
 interface Props {
@@ -109,8 +108,8 @@ const vanishingText = defineModel<string>({
 });
 const emit = defineEmits(["submit", "change"]);
 
-const canvasRef = templateRef<HTMLCanvasElement>("canvasRef");
-const inputRef = templateRef<HTMLInputElement>("inputRef");
+const canvasRef = useTemplateRef("canvasRef");
+const inputRef = useTemplateRef("inputRef");
 
 // normal refs
 const currentPlaceholder = ref<number>(0);
@@ -221,7 +220,7 @@ function animate(start: number = 0): void {
       animating.value = false;
       setTimeout(() => {
         // regain focus after animation
-        inputRef.value.focus();
+        inputRef.value?.focus();
       }, 100);
     }
   });

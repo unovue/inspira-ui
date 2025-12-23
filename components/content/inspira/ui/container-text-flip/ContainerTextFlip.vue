@@ -55,6 +55,7 @@
 
 <script lang="ts" setup>
 import { cn } from "@/lib/utils";
+import { ref, computed, useId, useTemplateRef } from "vue";
 import { Motion } from "motion-v";
 import { useIntervalFn } from "@vueuse/core";
 
@@ -76,7 +77,7 @@ const props = withDefaults(
 const id = useId();
 
 const currentWordIndex = ref(0);
-const textRef = templateRef<HTMLDivElement>("textRef", null);
+const textRef = useTemplateRef<HTMLDivElement>("textRef");
 
 const width = computed(() => {
   if (textRef.value) {
