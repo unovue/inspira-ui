@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "或",
+    "error": {
+      "title": "页面未找到",
+      "description": "很抱歉，无法找到此页面。"
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "复制页面",
+      "link": "复制 Markdown 页面",
+      "view": "以 Markdown 查看",
+      "gpt": "在 ChatGPT 中打开",
+      "claude": "在 Claude 中打开"
+    },
+    "links": "社区",
+    "toc": "本页内容",
+    "report": "报告问题",
+    "edit": "编辑此页面"
+  }
+}

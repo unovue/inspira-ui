@@ -2,7 +2,7 @@ export function isRootPage() {
   const { isEnabled, locale } = useDocusI18n();
   const route = useRoute();
 
-  const rootPages = ["/components", "/blocks"];
+  const rootPages = ["/components", "/blocks", "/changelogs"];
 
   return computed(
     () =>

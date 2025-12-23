@@ -3,8 +3,11 @@
 
 @theme static {
   --font-sans: "Geist", sans-serif;
-  --ui-container: 80rem;
   --ui-primary: black;
+}
+
+:root {
+  --ui-container: min(90rem, 100%);
 }
 
 .dark {
