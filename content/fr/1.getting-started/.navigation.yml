@@ -1,2 +1,3 @@
-title: Bien démarrer
-icon: false
+title: Commencer
+icon: lucide:rocket
+navigation.redirect: /fr/getting-started/introduction
