@@ -19,9 +19,9 @@
 <script setup lang="ts">
 import { createNoise3D } from "simplex-noise";
 import { onMounted, onUnmounted } from "vue";
-import { templateRef } from "@vueuse/core";
+import { templateRef, useDebounceFn } from "@vueuse/core";
 import { cn } from "@/lib/utils";
-import { useDebounceFn } from "@vueuse/core";
+
 const TAU = 2 * Math.PI;
 const BASE_TTL = 50;
 const RANGE_TTL = 150;
