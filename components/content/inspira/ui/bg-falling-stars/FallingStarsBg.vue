@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { onMounted, ref, onBeforeUnmount, watch } from "vue";
 import { cn } from "@/lib/utils";
 
 interface Star {
@@ -32,135 +32,153 @@ const starsCanvas = ref<HTMLCanvasElement | null>(null);
 let perspective: number = 0;
 let stars: Star[] = [];
 let ctx: CanvasRenderingContext2D | null = null;
+let dpr = typeof window !== "undefined" ? window.devicePixelRatio || 1 : 1;
+let rafId = 0 as number;
+
+// Cache RGB for color — update only when prop changes
+let cachedRgb = hexToRgb(props.color || "#FFF");
+
+function hexToRgb(hex: string) {
+  let h = (hex || "#000").replace(/^#/, "");
+  if (h.length === 3) {
+    h = h
+      .split("")
+      .map((c) => c + c)
+      .join("");
+  }
+  const bigint = parseInt(h, 16) || 0;
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
+  return { r, g, b };
+}
+
+watch(
+  () => props.color,
+  (v) => {
+    cachedRgb = hexToRgb(v || "#FFF");
+  },
+);
+
+// Resize handler uses DPR to set backing store size once
+function resizeCanvas() {
+  const canvas = starsCanvas.value;
+  if (!canvas) return;
+
+  dpr = window.devicePixelRatio || 1;
+  const width = Math.max(1, Math.floor(canvas.clientWidth));
+  const height = Math.max(1, Math.floor(canvas.clientHeight));
+
+  canvas.width = Math.floor(width * dpr);
+  canvas.height = Math.floor(height * dpr);
+  canvas.style.width = `${width}px`;
+  canvas.style.height = `${height}px`;
+
+  // Get and set transform so drawing coordinates use CSS pixels
+  ctx = canvas.getContext("2d");
+  if (ctx) {
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  // perspective should be in CSS pixels
+  perspective = canvas.width / dpr / 2;
+}
 
 onMounted(() => {
   const canvas = starsCanvas.value;
   if (!canvas) return;
 
-  window.addEventListener("resize", resizeCanvas);
-  resizeCanvas(); // Call it initially to set correct size
+  window.addEventListener("resize", resizeCanvas, { passive: true });
+  resizeCanvas();
 
-  perspective = canvas.width / 2;
+  // Initialize stars using CSS pixel coordinates for x/y and z in CSS pixels
   stars = [];
-
-  // Initialize stars
-  for (let i = 0; i < props.count; i++) {
+  const cssWidth = canvas.clientWidth;
+  const cssHeight = canvas.clientHeight;
+  for (let i = 0; i < props.count!; i++) {
     stars.push({
-      x: (Math.random() - 0.5) * 2 * canvas.width,
-      y: (Math.random() - 0.5) * 2 * canvas.height,
-      z: Math.random() * canvas.width,
-      speed: Math.random() * 5 + 2, // Speed for falling effect
+      x: (Math.random() - 0.5) * 2 * cssWidth,
+      y: (Math.random() - 0.5) * 2 * cssHeight,
+      z: Math.random() * (cssWidth || 1),
+      speed: Math.random() * 5 + 2,
     });
   }
 
-  animate(); // Start animation
+  // Start loop
+  rafId = requestAnimationFrame(loop);
 });
 
-function hexToRgb() {
-  let hex = props.color.replace(/^#/, "");
+onBeforeUnmount(() => {
+  window.removeEventListener("resize", resizeCanvas);
+  if (rafId) cancelAnimationFrame(rafId);
+});
 
-  // If the hex code is 3 characters, expand it to 6 characters
-  if (hex.length === 3) {
-    hex = hex
-      .split("")
-      .map((char) => char + char)
-      .join("");
-  }
-
-  // Parse the r, g, b values from the hex string
-  const bigint = parseInt(hex, 16);
-  const r = (bigint >> 16) & 255; // Extract the red component
-  const g = (bigint >> 8) & 255; // Extract the green component
-  const b = bigint & 255; // Extract the blue component
-
-  // Return the RGB values as a string separated by spaces
-  return {
-    r,
-    g,
-    b,
-  };
-}
-
-// Function to draw a star with a sharp line and blurred trail
-function drawStar(star: Star) {
-  const canvas = starsCanvas.value;
-  if (!canvas) return;
-
-  ctx = canvas.getContext("2d");
+// Draw star using layered strokes to simulate blur (avoids ctx.shadowBlur)
+function drawStar(star: Star, width: number, height: number) {
   if (!ctx) return;
 
-  const scale = perspective / (perspective + star.z); // 3D perspective scale
-  const x2d = canvas.width / 2 + star.x * scale;
-  const y2d = canvas.height / 2 + star.y * scale;
-  const size = Math.max(scale * 3, 0.5); // Size based on perspective
+  const scale = perspective / (perspective + star.z);
+  const x2d = width / 2 + star.x * scale;
+  const y2d = height / 2 + star.y * scale;
+  const size = Math.max(scale * 3, 0.5);
 
-  // Previous position for a trail effect
-  const prevScale = perspective / (perspective + star.z + star.speed * 15); // Longer trail distance
-  const xPrev = canvas.width / 2 + star.x * prevScale;
-  const yPrev = canvas.height / 2 + star.y * prevScale;
+  const prevScale = perspective / (perspective + star.z + star.speed * 15);
+  const xPrev = width / 2 + star.x * prevScale;
+  const yPrev = height / 2 + star.y * prevScale;
 
-  const rgb = hexToRgb();
+  const rgb = cachedRgb;
 
-  // Draw blurred trail (longer, with low opacity)
-  ctx.save(); // Save current context state for restoring later
-  ctx.strokeStyle = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.2)`;
-  ctx.lineWidth = size * 2.5; // Thicker trail for a blur effect
-  ctx.shadowBlur = 35; // Add blur to the trail
-  ctx.shadowColor = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.8)`;
+  // Layered strokes from wide+faint to narrow+slightly brighter to fake blur
+  const layerAlphas = [0.08, 0.14, 0.22];
+  for (let i = 0; i < layerAlphas.length; i++) {
+    ctx.beginPath();
+    ctx.strokeStyle = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${layerAlphas[i]})`;
+    ctx.lineWidth = size * (1.4 + i * 1.2);
+    ctx.moveTo(x2d, y2d);
+    ctx.lineTo(xPrev, yPrev);
+    ctx.stroke();
+  }
+
+  // Sharp center line
   ctx.beginPath();
-  ctx.moveTo(x2d, y2d);
-  ctx.lineTo(xPrev, yPrev); // Longer trail
-  ctx.stroke();
-  ctx.restore(); // Restore context state to remove blur from the main line
-
-  // Draw sharp line (no blur)
   ctx.strokeStyle = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 0.6)`;
-  ctx.lineWidth = size; // The line width is the same as the star's size
-  ctx.beginPath();
+  ctx.lineWidth = Math.max(1, size);
   ctx.moveTo(x2d, y2d);
-  ctx.lineTo(xPrev, yPrev); // Sharp trail
+  ctx.lineTo(xPrev, yPrev);
   ctx.stroke();
 
-  // Draw the actual star (dot)
-  ctx.fillStyle = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 1)`;
+  // Dot
   ctx.beginPath();
-  ctx.arc(x2d, y2d, size / 4, 0, Math.PI * 2); // Dot with size matching the width
+  ctx.fillStyle = `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, 1)`;
+  ctx.arc(x2d, y2d, Math.max(0.5, size / 4), 0, Math.PI * 2);
   ctx.fill();
 }
 
-// Function to animate the stars
-function animate() {
+function loop() {
   const canvas = starsCanvas.value;
   if (!canvas) return;
-
-  ctx = canvas.getContext("2d");
+  if (!ctx) ctx = canvas.getContext("2d");
   if (!ctx) return;
 
-  ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas for each frame
+  const width = canvas.clientWidth;
+  const height = canvas.clientHeight;
 
-  stars.forEach((star) => {
-    drawStar(star);
+  // Clear using CSS pixel dimensions (context is scaled to DPR)
+  ctx.clearRect(0, 0, width, height);
 
-    // Move star towards the screen (decrease z)
+  for (let i = 0; i < stars.length; i++) {
+    const star = stars[i];
+    drawStar(star, width, height);
+
     star.z -= star.speed;
 
-    // Reset star when it reaches the viewer (z = 0)
     if (star.z <= 0) {
-      star.z = canvas.width;
-      star.x = (Math.random() - 0.5) * 2 * canvas.width;
-      star.y = (Math.random() - 0.5) * 2 * canvas.height;
+      star.z = width || 1;
+      star.x = (Math.random() - 0.5) * 2 * width;
+      star.y = (Math.random() - 0.5) * 2 * height;
     }
-  });
+  }
 
-  requestAnimationFrame(animate); // Continue animation
-}
-
-// Set canvas to full screen
-function resizeCanvas() {
-  const canvas = starsCanvas.value;
-  if (!canvas) return;
-
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
+  rafId = requestAnimationFrame(loop);
 }
 </script>
