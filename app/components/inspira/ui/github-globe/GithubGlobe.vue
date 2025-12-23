@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 // Download globe json file from https://geojson-maps.kyd.au/ and save in the same folder
-/* eslint-disable @typescript-eslint/no-explicit-any */
 
 import {
   AmbientLight,
@@ -157,6 +156,13 @@ function setupScene() {
   pLight.position.set(-200, 500, 200);
   camera.add(pLight);
 
+  if (defaultGlobeConfig.initialPosition) {
+    const { lat, lng } = defaultGlobeConfig.initialPosition;
+    const pos = latLngToCartesian(lat, lng, 400);
+    camera.position.set(pos.x, pos.y, pos.z);
+    camera.lookAt(0, 0, 0);
+  }
+
   camera.updateProjectionMatrix();
   scene.add(camera);
 
@@ -169,10 +175,22 @@ function setupScene() {
   controls.maxDistance = 500;
   controls.rotateSpeed = defaultGlobeConfig.autoRotateSpeed || 0.8;
   controls.zoomSpeed = 1;
-  controls.autoRotate = defaultGlobeConfig.autoRotate || false;
+  controls.autoRotate = false;
+  controls.autoRotateSpeed = defaultGlobeConfig.autoRotateSpeed ?? 2.0;
 
   controls.minPolarAngle = Math.PI / 3.5;
   controls.maxPolarAngle = Math.PI - Math.PI / 3;
+}
+
+function latLngToCartesian(lat: number, lng: number, radius = 400) {
+  const phi = (lat * Math.PI) / 180;
+  const theta = (lng * Math.PI) / 180;
+
+  const x = radius * Math.cos(phi) * Math.sin(theta);
+  const y = radius * Math.sin(phi);
+  const z = radius * Math.cos(phi) * Math.cos(theta);
+
+  return { x, y, z };
 }
 
 function initGlobe() {
@@ -188,10 +206,10 @@ function initGlobe() {
     .showAtmosphere(defaultGlobeConfig.showAtmosphere!)
     .atmosphereColor(defaultGlobeConfig.atmosphereColor!)
     .atmosphereAltitude(defaultGlobeConfig.atmosphereAltitude!)
-    .hexPolygonColor((e) => defaultGlobeConfig.polygonColor!);
+    .hexPolygonColor((_e) => defaultGlobeConfig.polygonColor!);
 
-  globe.rotateY(-Math.PI * (5 / 9));
-  globe.rotateZ(-Math.PI / 6);
+  // globe.rotateY(-Math.PI * (5 / 9));
+  // globe.rotateZ(-Math.PI / 6);
 
   const globeMaterial = globe.globeMaterial() as unknown as {
     color: Color;
@@ -231,7 +249,7 @@ function startAnimation() {
     .arcEndLng((d: any) => d.endLng * 1)
     .arcColor((e: any) => e.color)
     .arcAltitude((e: any) => e.arcAlt * 1)
-    .arcStroke((e: any) => [0.32, 0.28, 0.3][Math.round(Math.random() * 4)])
+    .arcStroke((_e: any) => [0.32, 0.28, 0.3][Math.round(Math.random() * 4)] || null)
     .arcDashLength(defaultGlobeConfig.arcLength!)
     .arcDashInitialGap((e: any) => e.order * 1)
     .arcDashGap(15)
@@ -253,8 +271,9 @@ function startAnimation() {
 }
 
 function animate() {
-  globe.rotation.y += 0.01; // Rotate globe
-
+  if (globe && defaultGlobeConfig.autoRotate) {
+    globe.rotation.y += (defaultGlobeConfig.autoRotateSpeed ?? 2.0) * 0.001;
+  }
   renderer.render(scene, camera);
 
   requestAnimationFrame(animate);
@@ -264,7 +283,7 @@ function buildData() {
   const arcs = props.data;
   const points = [];
   for (let i = 0; i < arcs.length; i++) {
-    const arc = arcs[i];
+    const arc = arcs[i] as Position;
     const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
     points.push({
       size: props.globeConfig.pointSize,
@@ -319,7 +338,7 @@ function hexToRgb(color: string) {
 }
 
 function genRandomNumbers(min: number, max: number, count: number) {
-  const arr = [];
+  const arr: number[] = [];
   while (arr.length < count) {
     const r = Math.floor(Math.random() * (max - min)) + min;
     if (!arr.includes(r)) arr.push(r);

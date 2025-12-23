@@ -3,6 +3,7 @@ title: Falling Stars Background
 description: A stunning animated starfield background with glowing and sharp trail effects.
 category: Background
 tags: [css, tailwind, background, canvas]
+badge: "Updated"
 ---
 
 ::ComponentViewer{demoFile="FallingStarsBgDemo.vue" config="FallingStarsBgConfig" componentId="bg-falling-stars" :componentFiles='["FallingStarsBg.vue"]'}
