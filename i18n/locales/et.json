@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "või",
+    "error": {
+      "title": "Lehekülge ei leitud",
+      "description": "Vabandame, kuid otsitavat lehekülge ei leitud."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Kopeeri lehekülg",
+      "link": "Kopeeri Markdown lehekülg",
+      "view": "Vaata Markdownina",
+      "gpt": "Ava ChatGPT-s",
+      "claude": "Ava Claude'is"
+    },
+    "links": "Kogukond",
+    "toc": "Sellel lehel",
+    "report": "Teata probleemist",
+    "edit": "Muuda seda lehekülge"
+  }
+}

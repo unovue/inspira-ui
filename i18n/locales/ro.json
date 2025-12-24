@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "sau",
+    "error": {
+      "title": "Pagina nu a fost găsită",
+      "description": "Ne pare rău, dar această pagină nu a putut fi găsită."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Copiază pagina",
+      "link": "Copiază pagina în Markdown",
+      "view": "Vezi ca Markdown",
+      "gpt": "Deschide în ChatGPT",
+      "claude": "Deschide în Claude"
+    },
+    "links": "Comunitate",
+    "toc": "Pe această pagină",
+    "report": "Raportează o problemă",
+    "edit": "Editează această pagină"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "oder",
+    "error": {
+      "title": "Säit net fonnt",
+      "description": "Et deet ons leed, awer d'Säit déi Dir sicht gëtt et net."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Säit kopéieren",
+      "link": "Markdown Säit kopéieren",
+      "view": "Als Markdown kucken",
+      "gpt": "An ChatGPT opmaachen",
+      "claude": "An Claude opmaachen"
+    },
+    "links": "Gemeinschaft",
+    "toc": "Op dëser Säit",
+    "report": "Problem mellen",
+    "edit": "Dës Säit änneren"
+  }
+}

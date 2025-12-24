@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "oder",
+    "error": {
+      "title": "Seite nicht gefunden",
+      "description": "Es tut uns leid, aber diese Seite konnte nicht gefunden werden."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Seite kopieren",
+      "link": "Markdown-Seite kopieren",
+      "view": "Als Markdown anzeigen",
+      "gpt": "In ChatGPT öffnen",
+      "claude": "In Claude öffnen"
+    },
+    "links": "Community",
+    "toc": "Auf dieser Seite",
+    "report": "Problem melden",
+    "edit": "Diese Seite bearbeiten"
+  }
+}

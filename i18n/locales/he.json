@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "או",
+    "error": {
+      "title": "העמוד לא נמצא",
+      "description": "אנו מתנצלים, אך העמוד שאתה מחפש לא קיים."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "העתק עמוד",
+      "link": "העתק עמוד Markdown",
+      "view": "הצג כ-Markdown",
+      "gpt": "פתח ב-ChatGPT",
+      "claude": "פתח ב-Claude"
+    },
+    "links": "קהילה",
+    "toc": "בעמוד זה",
+    "report": "דווח על בעיה",
+    "edit": "ערוך עמוד זה"
+  }
+}

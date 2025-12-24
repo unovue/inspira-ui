@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "hoặc",
+    "error": {
+      "title": "Không tìm thấy trang",
+      "description": "Chúng tôi xin lỗi, nhưng trang bạn đang tìm kiếm không tồn tại."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Sao chép trang",
+      "link": "Sao chép trang Markdown",
+      "view": "Xem dưới dạng Markdown",
+      "gpt": "Mở trong ChatGPT",
+      "claude": "Mở trong Claude"
+    },
+    "links": "Cộng đồng",
+    "toc": "Trên trang này",
+    "report": "Báo cáo sự cố",
+    "edit": "Chỉnh sửa trang này"
+  }
+}

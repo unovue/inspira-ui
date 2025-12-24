@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "eller",
+    "error": {
+      "title": "Side ikke funnet",
+      "description": "Vi beklager, men siden du leter etter kunne ikke finnes."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Kopier side",
+      "link": "Kopier Markdown-side",
+      "view": "Vis som Markdown",
+      "gpt": "Åpne i ChatGPT",
+      "claude": "Åpne i Claude"
+    },
+    "links": "Fellesskap",
+    "toc": "På denne siden",
+    "report": "Rapporter et problem",
+    "edit": "Rediger denne siden"
+  }
+}

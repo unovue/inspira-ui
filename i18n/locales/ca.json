@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "o",
+    "error": {
+      "title": "Pàgina no trobada",
+      "description": "Ho sentim, però la pàgina que cerques no existeix."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Copiar pàgina",
+      "link": "Copiar pàgina Markdown",
+      "view": "Veure com a Markdown",
+      "gpt": "Obrir a ChatGPT",
+      "claude": "Obrir a Claude"
+    },
+    "links": "Comunitat",
+    "toc": "En aquesta pàgina",
+    "report": "Informar d'un problema",
+    "edit": "Editar aquesta pàgina"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "tai",
+    "error": {
+      "title": "Sivua ei löytynyt",
+      "description": "Pahoittelut, etsimääsi sivua ei löytynyt."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Kopioi sivu",
+      "link": "Kopioi Markdown-sivu",
+      "view": "Näytä Markdownina",
+      "gpt": "Avaa ChatGPT:ssä",
+      "claude": "Avaa Claudessa"
+    },
+    "links": "Yhteisö",
+    "toc": "Tällä sivulla",
+    "report": "Ilmoita ongelmasta",
+    "edit": "Muokkaa tätä sivua"
+  }
+}

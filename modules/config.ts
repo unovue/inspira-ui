@@ -1,6 +1,6 @@
 import { existsSync } from "node:fs";
 import { join } from "node:path";
-import { createResolver, defineNuxtModule } from "@nuxt/kit";
+import { defineNuxtModule } from "@nuxt/kit";
 import { defu } from "defu";
 import { getGitBranch, getGitEnv, getLocalGitInfo } from "../utils/git";
 import { getPackageJsonMetadata, inferSiteURL } from "../utils/meta";
@@ -53,18 +53,16 @@ export default defineNuxtModule({
      ** I18N
      */
     if (nuxt.options.i18n && nuxt.options.i18n.locales) {
-      const { resolve } = createResolver(import.meta.url);
-
       // Filter locales to only include existing ones
       const filteredLocales = nuxt.options.i18n.locales.filter((locale) => {
         const localeCode = typeof locale === "string" ? locale : locale.code;
 
         // Check for JSON locale file
-        const localeFilePath = resolve("../i18n/locales", `${localeCode}.json`);
+        const localeFilePath = join(dir, "i18n/locales", `${localeCode}.json`);
         const hasLocaleFile = existsSync(localeFilePath);
 
         // Check for content folder
-        const contentPath = join(nuxt.options.rootDir, "content", localeCode);
+        const contentPath = join(dir, "content", localeCode);
         const hasContentFolder = existsSync(contentPath);
 
         if (!hasLocaleFile) {
@@ -94,7 +92,7 @@ export default defineNuxtModule({
       };
 
       nuxt.hook("i18n:registerModule", (register) => {
-        const langDir = resolve("../i18n/locales");
+        const langDir = join(dir, "i18n/locales");
 
         const locales = filteredLocales?.map((locale) => {
           return typeof locale === "string"
