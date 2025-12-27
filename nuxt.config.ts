@@ -55,8 +55,7 @@ export default defineNuxtConfig({
   i18n: {
     // Use a public SITE URL for correct hreflang / SEO generation.
     // Prefer `NUXT_PUBLIC_SITE_URL` (Vite/Nuxt public env) then `SITE_URL`.
-    baseUrl:
-      process.env.NUXT_PUBLIC_SITE_URL || process.env.SITE_URL || "https://inspira-ui.com/docs",
+    baseUrl: process.env.NUXT_PUBLIC_SITE_URL || process.env.SITE_URL || "https://inspira-ui.com",
     defaultLocale: "en",
     locales: [
       {
@@ -118,5 +117,9 @@ export default defineNuxtConfig({
       bindingName: "DB",
       type: "d1",
     },
+  },
+
+  nitro: {
+    preset: "cloudflare-pages",
   },
 });
