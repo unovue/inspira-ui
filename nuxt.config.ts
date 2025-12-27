@@ -57,8 +57,6 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/main.css"],
 
-  ssr: false,
-
   i18n: {
     // Use a public SITE URL for correct hreflang / SEO generation.
     // Prefer `NUXT_PUBLIC_SITE_URL` (Vite/Nuxt public env) then `SITE_URL`.
