@@ -29,6 +29,26 @@ export default defineNuxtConfig({
         });
       }
     },
+
+    "nitro:config": function (nitroConfig) {
+      const nuxt = useNuxt();
+
+      const i18nOptions = nuxt.options.i18n;
+
+      const routes: string[] = [];
+      if (!i18nOptions) {
+        routes.push("/");
+      } else {
+        routes.push(
+          ...(i18nOptions.locales?.map((locale) =>
+            typeof locale === "string" ? `/${locale}` : `/${locale.code}`,
+          ) || []),
+        );
+      }
+
+      nitroConfig.prerender = nitroConfig.prerender || {};
+      nitroConfig.prerender.routes = [];
+    },
   },
 
   modules: [
@@ -121,6 +141,12 @@ export default defineNuxtConfig({
     database: {
       bindingName: "DB",
       type: "d1",
+    },
+  },
+
+  nitro: {
+    prerender: {
+      crawlLinks: false,
     },
   },
 });
