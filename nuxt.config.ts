@@ -112,4 +112,11 @@ export default defineNuxtConfig({
       description: "The complete Inspira UI documentation.",
     },
   },
+
+  content: {
+    database: {
+      bindingName: "DB",
+      type: "d1",
+    },
+  },
 });
