@@ -165,7 +165,15 @@ const editLink = computed(() => {
       v-else
       #right
     >
-      <DocsAsideRightBottom />
+      <div class="flex h-full w-full flex-col gap-8 max-md:items-center">
+        <DocsAsideRightBottom />
+
+        <USeparator orientation="horizontal" />
+
+        <ClientOnly>
+          <InspiraCarbonAds />
+        </ClientOnly>
+      </div>
     </template>
   </UPage>
 </template>

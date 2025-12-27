@@ -20,12 +20,12 @@ const links = [
     description: "Kick off your journey with installation, setup, and usage guides.",
     to: `/${locale.value}/components`,
   },
-  {
-    icon: "tabler:blocks",
-    title: "Blocks",
-    description: "Kick off your journey with installation, setup, and usage guides.",
-    to: `/${locale.value}/blocks`,
-  },
+  // {
+  //   icon: "tabler:blocks",
+  //   title: "Blocks",
+  //   description: "Kick off your journey with installation, setup, and usage guides.",
+  //   to: `/${locale.value}/blocks`,
+  // },
 ];
 </script>
 
@@ -33,8 +33,9 @@ const links = [
   <UPageSection
     id="quickLinks"
     title="Quick Links"
+    description="Links to get you started with Inspira UI"
   >
-    <div class="grid grid-cols-2 gap-8 max-md:grid-cols-1">
+    <div class="grid grid-cols-3 gap-4 max-md:grid-cols-1">
       <UPageCard
         v-for="link in links"
         :key="link.to"

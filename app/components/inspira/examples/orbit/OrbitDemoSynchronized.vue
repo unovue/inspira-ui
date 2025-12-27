@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { OrbitDirection } from "../ui/orbit";
+import type { OrbitDirection } from "../../ui/orbit";
 import { ref } from "vue";
-import { ORBIT_DIRECTION } from "../ui/orbit";
+import { ORBIT_DIRECTION } from "../../ui/orbit";
 
 const direction = ref<OrbitDirection>(ORBIT_DIRECTION.Clockwise);
 
@@ -32,7 +32,7 @@ function switchDirection() {
     </button>
   </div>
   <div
-    class="bg-background relative flex h-[600px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl"
+    class="bg-background relative flex h-150 w-full flex-col items-center justify-center overflow-hidden rounded-lg border md:shadow-xl"
   >
     <span class="pointer-events-none text-center text-8xl leading-none font-semibold"> 🌍 </span>
 

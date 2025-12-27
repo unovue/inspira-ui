@@ -57,7 +57,7 @@ const componentPath = computed(() => `/${locale.value}/components`);
           <UButton
             label="Components"
             size="xl"
-            variant="subtle"
+            variant="outline"
           />
         </NuxtLink>
         <NuxtLink

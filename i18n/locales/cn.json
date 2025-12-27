@@ -18,5 +18,15 @@
     "toc": "本页内容",
     "report": "报告问题",
     "edit": "编辑此页面"
+  },
+
+  "toc": {
+    "title": "本页内容",
+    "StarOnGitHub": "在 GitHub 上点赞",
+    "CreateIssues": "创建问题",
+    "JoinDiscord": "加入 Discord",
+    "Forum": "论坛",
+    "FollowOnX": "在 X 上关注",
+    "FollowOnBluesky": "在 Bluesky 上关注"
   }
 }

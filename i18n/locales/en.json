@@ -18,5 +18,15 @@
     "toc": "On this page",
     "report": "Report an issue",
     "edit": "Edit this page"
+  },
+
+  "toc": {
+    "title": "On This Page",
+    "StarOnGitHub": "Star on GitHub",
+    "CreateIssues": "Create Issues",
+    "JoinDiscord": "Join Discord",
+    "Forum": "Forum",
+    "FollowOnX": "Follow on X",
+    "FollowOnBluesky": "Follow on Bluesky"
   }
 }

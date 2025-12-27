@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { DocsEnCollectionItem } from "@nuxt/content";
+import InspiraCarbonAds from "../carbon-ads/InspiraCarbonAds.vue";
 
 interface Props {
   routePath?: string;
@@ -87,6 +88,8 @@ function getCategoryColor(category: string) {
         @click="selectedCategory = category"
       />
     </div>
+
+    <InspiraCarbonAds class="mb-8" />
 
     <div
       v-if="filteredComponents.length"

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import BentoGridCard from "../ui/bento-grid/BentoGridCard.vue";
+import BentoGridCard from "../../ui/bento-grid/BentoGridCard.vue";
 
 const features = [
   {
