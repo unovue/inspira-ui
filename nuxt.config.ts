@@ -14,8 +14,6 @@ export default defineNuxtConfig({
     plugins: [tailwindcss()],
   },
 
-  ssr: false,
-
   // Ensure we use the local config module instead of the one bundled in the Docus layer.
   hooks: {
     "modules:before": function () {
@@ -30,9 +28,6 @@ export default defineNuxtConfig({
             : mod;
         });
       }
-    },
-    "prerender:routes": function ({ routes }) {
-      routes.clear(); // Do not generate any routes (except the defaults)
     },
   },
 
@@ -61,6 +56,8 @@ export default defineNuxtConfig({
   },
 
   css: ["~/assets/css/main.css"],
+
+  ssr: false,
 
   i18n: {
     // Use a public SITE URL for correct hreflang / SEO generation.
