@@ -1,5 +1,5 @@
 {
   "version": 1,
   "include": ["/*"],
-  "exclude": ["/api/*", "/_nuxt/*", "/__nuxt_*"]
+  "exclude": ["/api/*", "/_nuxt/*", "/__nuxt_*", "/docs/api/*", "/docs/_nuxt/*", "/docs/__nuxt_*"]
 }
