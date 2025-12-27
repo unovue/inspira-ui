@@ -1,4 +1,5 @@
 import { createResolver, useNuxt } from "@nuxt/kit";
+import tailwindcss from "@tailwindcss/vite";
 
 const { resolve } = createResolver(import.meta.url);
 
@@ -7,6 +8,10 @@ export default defineNuxtConfig({
 
   site: {
     name: "Inspira UI",
+  },
+
+  vite: {
+    plugins: [tailwindcss()],
   },
 
   // Ensure we use the local config module instead of the one bundled in the Docus layer.
@@ -117,9 +122,5 @@ export default defineNuxtConfig({
       bindingName: "DB",
       type: "d1",
     },
-  },
-
-  nitro: {
-    preset: "cloudflare-pages",
   },
 });
