@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { templateRef } from "@vueuse/core";
-import { onMounted, onUnmounted, ref, watch } from "vue";
+import { onMounted, onUnmounted, ref, useTemplateRef, watch } from "vue";
 
 interface Props {
   firstImage?: string;
@@ -40,7 +39,7 @@ const emit = defineEmits<{
   (e: "hover:leave"): void;
 }>();
 
-const sliderRef = templateRef<HTMLDivElement | null>("sliderRef");
+const sliderRef = useTemplateRef("sliderRef");
 const sliderXPercent = ref(props.initialSliderPercentage);
 const isDragging = ref(false);
 const isMouseOver = ref(false);

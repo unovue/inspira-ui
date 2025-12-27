@@ -27,7 +27,7 @@ const props = withDefaults(defineProps<Props>(), {
   disabled: true,
 });
 
-const containerRef = templateRef("containerRef");
+const containerRef = useTemplateRef("containerRef");
 const lastPosition = ref({
   x: 0,
   y: 0,

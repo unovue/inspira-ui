@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { templateRef, useRafFn } from "@vueuse/core";
+import { useRafFn } from "@vueuse/core";
 import { onBeforeUnmount, onMounted, ref } from "vue";
 
 interface Props {
@@ -31,8 +31,8 @@ const props = withDefaults(defineProps<Props>(), {
   particleDensity: 120,
 });
 
-const containerRef = templateRef<HTMLElement | null>("containerRef");
-const canvasRef = templateRef<HTMLCanvasElement | null>("canvasRef");
+const containerRef = useTemplateRef("containerRef");
+const canvasRef = useTemplateRef("canvasRef");
 const particles = ref<Particle[]>([]);
 const ctx = ref<CanvasRenderingContext2D | null>(null);
 

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { templateRef } from "@vueuse/core";
 import { createNoise3D } from "simplex-noise";
 import { onMounted, onUnmounted } from "vue";
 
@@ -42,8 +41,7 @@ const particleProps = shallowRef<Float32Array | null>(null);
 const center = ref<[number, number]>([0, 0]);
 const ctx = shallowRef<CanvasRenderingContext2D | null>(null);
 
-const canvasRef = templateRef<HTMLCanvasElement | null>("canvasRef");
-const containerRef = templateRef<HTMLElement | null>("containerRef");
+const canvasRef = useTemplateRef("canvasRef");
 
 const particleCache = {
   x: 0,
@@ -110,15 +108,15 @@ function updateParticle(i: number) {
   const props = particleProps.value;
   const context = ctx.value;
 
-  particleCache.x = props[i];
-  particleCache.y = props[i + 1];
-  particleCache.vx = props[i + 2];
-  particleCache.vy = props[i + 3];
-  particleCache.life = props[i + 4];
-  particleCache.ttl = props[i + 5];
-  particleCache.speed = props[i + 6];
-  particleCache.radius = props[i + 7];
-  particleCache.hue = props[i + 8];
+  particleCache.x = props[i]!;
+  particleCache.y = props[i + 1]!;
+  particleCache.vx = props[i + 2]!;
+  particleCache.vy = props[i + 3]!;
+  particleCache.life = props[i + 4]!;
+  particleCache.ttl = props[i + 5]!;
+  particleCache.speed = props[i + 6]!;
+  particleCache.radius = props[i + 7]!;
+  particleCache.hue = props[i + 8]!;
 
   const n =
     noise3D(particleCache.x * X_OFF, particleCache.y * Y_OFF, tick.value * Z_OFF) *
@@ -239,7 +237,6 @@ onUnmounted(() => {
     :class="[props.containerClass]"
   >
     <Motion
-      ref="containerRef"
       as="div"
       :initial="{ opacity: 0 }"
       :animate="{ opacity: 1 }"

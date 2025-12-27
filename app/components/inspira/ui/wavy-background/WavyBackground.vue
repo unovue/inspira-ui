@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { templateRef } from "@vueuse/core";
 import { createNoise3D } from "simplex-noise";
-import { onBeforeUnmount, onMounted, ref } from "vue";
+import { onBeforeUnmount, onMounted, ref, useTemplateRef } from "vue";
 
 interface WavyBackgroundProps {
   class?: string;
@@ -33,7 +32,7 @@ let nt = 0;
 let ctx: CanvasRenderingContext2D | null = null;
 let animationId: number;
 
-const canvasRef = templateRef<HTMLCanvasElement | null>("canvasRef");
+const canvasRef = useTemplateRef("canvasRef");
 
 function getSpeed(): number {
   return props.speed === "slow" ? 0.001 : 0.002;
