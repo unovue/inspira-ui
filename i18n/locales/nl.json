@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "of",
+    "error": {
+      "title": "Pagina niet gevonden",
+      "description": "Sorry, maar deze pagina is niet gevonden."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Kopieer pagina",
+      "link": "Kopieer Markdown pagina",
+      "view": "Bekijk als Markdown",
+      "gpt": "Open in ChatGPT",
+      "claude": "Open in Claude"
+    },
+    "links": "Community",  
+    "toc": "Op deze pagina",
+    "report": "Rapporteer een probleem",
+    "edit": "Bewerk deze pagina"
+  }
+}

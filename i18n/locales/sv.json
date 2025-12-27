@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "eller",
+    "error": {
+      "title": "Sidan hittades inte",
+      "description": "Vi ber om ursäkt, men sidan du letar efter kunde inte hittas."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Kopiera sida",
+      "link": "Kopiera Markdown-sida",
+      "view": "Visa som Markdown",
+      "gpt": "Öppna i ChatGPT",
+      "claude": "Öppna i Claude"
+    },
+    "links": "Gemenskap",
+    "toc": "På denna sida",
+    "report": "Rapportera ett problem",
+    "edit": "Redigera denna sida"
+  }
+}

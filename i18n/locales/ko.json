@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "또는",
+    "error": {
+      "title": "페이지를 찾을 수 없습니다",
+      "description": "죄송합니다. 찾고 계신 페이지를 찾을 수 없습니다."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "페이지 복사",
+      "link": "Markdown 페이지 복사",
+      "view": "Markdown으로 보기",
+      "gpt": "ChatGPT에서 열기",
+      "claude": "Claude에서 열기"
+    },
+    "links": "커뮤니티",
+    "toc": "이 페이지에서",
+    "report": "문제 신고",
+    "edit": "이 페이지 편집"
+  }
+}

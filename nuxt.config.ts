@@ -1,40 +1,63 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { createResolver, useNuxt } from "@nuxt/kit";
+
+const { resolve } = createResolver(import.meta.url);
+
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  plugins: [{ src: "~/plugins/clarity.js", mode: "client" }],
+  extends: ["docus"],
 
-  modules: [
-    "@nuxt/fonts",
-    "@nuxt/image",
-    "nuxt-gtag",
-    "@nuxt/eslint",
-    "@nuxt/scripts",
-    "motion-v/nuxt",
-    "lenis/nuxt",
-    "nuxt-llms",
-  ],
+  site: {
+    name: "Inspira UI",
+  },
 
-  components: [
-    {
-      path: "~/components",
-      pathPrefix: false,
-      ignore: ["**/index.ts", "**/shaders.ts", "**/types.ts"],
-    },
-  ],
+  // Ensure we use the local config module instead of the one bundled in the Docus layer.
+  hooks: {
+    "modules:before": function () {
+      const nuxt = useNuxt();
+      const localConfigModule = resolve("./modules/config");
 
-  ignore: ["components/**/index.ts", "components/**/shaders.ts", "components/**/types.ts"],
-
-  runtimeConfig: {
-    public: {
-      NUXT_CLARITY_ID: process.env.NUXT_CLARITY_ID,
-      NUXT_ADSENSE_ACCOUNT: process.env.NUXT_ADSENSE_ACCOUNT,
+      for (const layer of nuxt.options._layers) {
+        layer.config.modules = (layer.config.modules || []).map((mod) => {
+          const entry = Array.isArray(mod) ? mod[0] : mod;
+          return typeof entry === "string" && entry.includes("/docus/modules/config")
+            ? localConfigModule
+            : mod;
+        });
+      }
     },
   },
 
-  eslint: {
-    config: {
-      standalone: false,
-    },
+  modules: ["@nuxtjs/i18n", "@nuxt/content", "@nuxt/eslint", "@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "@nuxt/scripts", "@vueuse/nuxt", "nuxt-gtag"],
+
+  plugins: [{ src: "./plugins/clarity.js", mode: "client" }],
+
+  ui: {
+    content: true,
+    mdc: true,
+  },
+
+  colorMode: {
+    preference: "dark",
+    fallback: "dark",
+  },
+
+  css: ["~/assets/css/main.css"],
+
+  i18n: {
+    defaultLocale: "en",
+    locales: [
+      {
+        code: "en",
+        name: "English",
+      },
+      {
+        code: "cn",
+        name: "简体中文",
+      },
+      {
+        code: "fr",
+        name: "Français",
+      },
+    ],
   },
 
   app: {
@@ -48,6 +71,21 @@ export default defineNuxtConfig({
     },
     baseURL: process.env.NODE_ENV === "development" ? "/" : "/docs/",
   },
+
+  components: [
+    {
+      path: "~/components/",
+      global: true,
+      pathPrefix: false,
+      ignore: ["**/index.ts", "**/shaders.ts", "**/types.ts"],
+    },
+  ],
+  runtimeConfig: {
+    public: {
+      NUXT_CLARITY_ID: process.env.NUXT_CLARITY_ID,
+      NUXT_ADSENSE_ACCOUNT: process.env.NUXT_ADSENSE_ACCOUNT,
+    },
+  },
   llms: {
     domain: "https://inspira-ui.com/",
     title: "Inspira UI",
@@ -58,44 +96,4 @@ export default defineNuxtConfig({
       description: "The complete Inspira UI documentation.",
     },
   },
-  i18n: {
-    defaultLocale: "en",
-    locales: [
-      {
-        code: "en",
-        name: "English",
-        language: "en-US",
-      },
-      {
-        code: "zh-cn",
-        name: "中文简体",
-        language: "zh-CN",
-      },
-    ],
-  },
-  fonts: {
-    processCSSVariables: true,
-    families: [
-      {
-        name: "Plus Jakarta Sans",
-        provider: "google",
-        global: true,
-        weights: [300, 400, 500, 600, 700],
-      },
-      {
-        name: "Space Grotesk",
-        provider: "google",
-        global: true,
-        weights: [300, 400, 500, 600, 700],
-      },
-      {
-        name: "JetBrains Mono",
-        provider: "google",
-        global: true,
-        weights: [300, 400, 500, 600, 700],
-      },
-    ],
-  },
-  extends: ["shadcn-docs-nuxt"],
-  compatibilityDate: "2025-06-10",
 });

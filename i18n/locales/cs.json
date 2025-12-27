@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "nebo",
+    "error": {
+      "title": "Stránka nenalezena",
+      "description": "Je nám líto, ale stránka, kterou hledáte, nebyla nalezena."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Kopírovat stránku",
+      "link": "Kopírovat Markdown stránku",
+      "view": "Zobrazit jako Markdown",
+      "gpt": "Otevřít v ChatGPT",
+      "claude": "Otevřít v Claude"
+    },
+    "links": "Komunita",
+    "toc": "Na této stránce",
+    "report": "Nahlásit problém",
+    "edit": "Upravit tuto stránku"
+  }
+}

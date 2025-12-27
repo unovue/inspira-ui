@@ -1,0 +1,35 @@
+---
+title: Scratch To Reveal
+description: The ScratchToReveal component creates an interactive scratch-off effect with customizable dimensions and animations, revealing hidden content beneath.
+category: Special Effects
+tags: [css, tailwind, magic-ui]
+---
+
+::ComponentViewer{demoFile="ScratchToRevealDemo.vue" config="ScratchToRevealConfig" componentId="scratch-to-reveal" :componentFiles='["ScratchToReveal.vue"]'}
+
+#api
+
+## API
+
+| Prop Name              | Type                     | Default | Description                                                                                   |
+| ---------------------- | ------------------------ | ------- | --------------------------------------------------------------------------------------------- |
+| `class`                | `string`                 | `""`    | The class name to apply to the component.                                                     |
+| `width`                | `number`                 | `""`    | Width of the scratch container.                                                               |
+| `height`               | `number`                 | `""`    | Height of the scratch container.                                                              |
+| `minScratchPercentage` | `number`                 | `50`    | Minimum percentage of scratched area to be considered as completed (Value between 0 and 100). |
+| `gradientColors`       | `[string,string,string]` | `-`     | Gradient colors for the scratch effect.                                                       |
+
+| Event Name | Payload | Description                                        |
+| ---------- | ------- | -------------------------------------------------- |
+| `complete` | `-`     | Callback function called when scratch is completed |
+
+| Slot Name | Default Content | Description                            |
+| --------- | --------------- | -------------------------------------- |
+| `default` | `-`             | The text below the scratch-off ticket. |
+
+#credits
+
+- Credits to [Whbbit1999](https://github.com/Whbbit1999) for this component.
+- Inspired by [MagicUI Scratch To Reveal](https://magicui.design/docs/components/scratch-to-reveal).
+
+::

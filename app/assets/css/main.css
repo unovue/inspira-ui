@@ -1,0 +1,98 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+  --font-sans: "Geist", sans-serif;
+  --ui-primary: black;
+}
+
+:root {
+  --ui-container: min(90rem, 100%);
+}
+
+.dark {
+  --ui-bg: black;
+  --ui-primary: white;
+}
+
+.form-field {
+  @apply bg-muted/40 flex items-center justify-between gap-4 rounded-lg px-4 py-2 max-sm:flex-col;
+}
+
+@utility pattern-background-l1 {
+  background:
+    radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.35), transparent 60%),
+    radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.4), transparent 60%);
+}
+
+@utility pattern-background-l {
+  background:
+    radial-gradient(circle at 30% 70%, rgba(173, 216, 230, 0.35), transparent 60%),
+    radial-gradient(circle at 70% 30%, rgba(255, 182, 193, 0.4), transparent 60%);
+}
+
+@utility pattern-background-d1 {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 40%),
+    linear-gradient(120deg, #0f0e17 0%, #1a1b26 100%);
+}
+
+@utility pattern-background-d {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 232, 240, 0.15), transparent 70%), #000000;
+}
+
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
+    }
+  }
+
+  --animate-glow: glow var(--duration) infinite linear;
+  @keyframes glow {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    to {
+      background-position: 0% 0%;
+    }
+  }
+
+  --animate-meteor-effect: meteor 5s linear infinite;
+  @keyframes meteor {
+    0% {
+      transform: rotate(215deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(215deg) translateX(-500px);
+      opacity: 0;
+    }
+  }
+
+  --animate-neon-border: neon-border var(--neon-border-duration) linear infinite;
+  @keyframes neon-border {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

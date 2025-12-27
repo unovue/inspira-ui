@@ -43,22 +43,22 @@ type ArrayItem<T> = T extends Array<infer X> ? X : never;
 type RegistryItem = ArrayItem<Registry>;
 
 export async function buildRegistry() {
-  const registryRootPath = resolve("components", "content", "inspira");
+  const registryRootPath = resolve("app", "components", "inspira");
   const registry: Registry = [];
 
   const uiPath = resolve(registryRootPath, "ui");
   // const examplesPath = resolve(registryRootPath, "examples");
-  const blocksPath = resolve(registryRootPath, "blocks");
-  const composablesPath = resolve("composables");
+  // const blocksPath = resolve(registryRootPath, "blocks");
+  const composablesPath = resolve("app", "composables");
 
-  const [ui, block, hooks] = await Promise.all([
+  const [ui, hooks] = await Promise.all([
     crawlUI(uiPath),
     // crawlExample(examplesPath),
-    crawlBlock(blocksPath),
+    // crawlBlock(blocksPath),
     crawlHook(composablesPath),
   ]);
 
-  registry.push(...ui, ...block, ...hooks);
+  registry.push(...ui, ...hooks);
 
   return registry;
 }
@@ -79,111 +79,6 @@ async function crawlUI(rootPath: string) {
   return uiRegistry;
 }
 
-async function crawlExample(rootPath: string) {
-  const type = `registry:example` as const;
-  const dir = await readdir(rootPath, { withFileTypes: true });
-  const registry: Registry = [];
-
-  async function processFile(filepath: string, filename: string, relativePath: string) {
-    const source = await readFile(filepath, { encoding: "utf8" });
-    const [name] = filename.split(".");
-
-    const file = {
-      name: filename,
-      content: source,
-      path: relativePath,
-      target: "",
-      type,
-    };
-
-    let dependencies = new Set<string>();
-    let registryDependencies = new Set<string>();
-
-    if (filename.endsWith(".vue")) {
-      const deps = await getFileDependencies(filepath, source);
-      dependencies = deps.dependencies;
-      registryDependencies = deps.registryDependencies;
-    }
-
-    registry.push({
-      name,
-      type,
-      files: [file],
-      registryDependencies: Array.from(registryDependencies),
-      dependencies: Array.from(dependencies),
-    });
-  }
-
-  for (const dirent of dir) {
-    if (!dirent.isFile()) {
-      const subDirPath = join(rootPath, dirent.name);
-      const subDir = await readdir(subDirPath, { withFileTypes: true });
-
-      for (const subDirent of subDir) {
-        if (!subDirent.isFile()) continue;
-
-        const filepath = join(subDirPath, subDirent.name);
-        const relativePath = join("examples", dirent.name, subDirent.name);
-        await processFile(filepath, subDirent.name, relativePath);
-      }
-      continue;
-    }
-
-    const filepath = join(rootPath, dirent.name);
-    const relativePath = join("examples", dirent.name);
-    await processFile(filepath, dirent.name, relativePath);
-  }
-
-  return registry;
-}
-
-async function crawlBlock(rootPath: string) {
-  const type = `registry:block` as const;
-
-  const dir = await readdir(rootPath, { withFileTypes: true });
-
-  const registry: Registry = [];
-
-  for (const dirent of dir) {
-    if (!dirent.isFile()) {
-      const result = await buildBlockRegistry(`${rootPath}/${dirent.name}`, dirent.name);
-
-      if (result.files.length) {
-        registry.push(result);
-      }
-      continue;
-    }
-    if (!dirent.name.endsWith(".vue") || !dirent.isFile()) continue;
-
-    const [name] = dirent.name.split(".vue");
-
-    const filepath = join(rootPath, dirent.name);
-    const source = await readFile(filepath, { encoding: "utf8" });
-    const relativePath = join("blocks", dirent.name);
-
-    const target = "pages/dashboard/index.vue";
-
-    const file = {
-      name: dirent.name,
-      content: source,
-      path: relativePath,
-      target,
-      type,
-    };
-    const { dependencies, registryDependencies } = await getFileDependencies(filepath, source);
-
-    registry.push({
-      name,
-      type,
-      files: [file],
-      registryDependencies: Array.from(registryDependencies),
-      dependencies: Array.from(dependencies),
-    });
-  }
-
-  return registry;
-}
-
 async function crawlHook(rootPath: string) {
   const type = `registry:hook` as const;
   const registry: Registry = [];
@@ -196,7 +91,7 @@ async function crawlHook(rootPath: string) {
     const [name] = dirent.name.split(".ts");
     const filepath = join(rootPath, dirent.name);
     const source = await readFile(filepath, { encoding: "utf8" });
-    const relativePath = join("composables", dirent.name);
+    const relativePath = join("app", "composables", dirent.name);
 
     const file = {
       name: dirent.name,
@@ -263,38 +158,6 @@ async function buildUIRegistry(componentPath: string, componentName: string) {
     name: componentName,
     type,
     files,
-    registryDependencies: Array.from(registryDependencies),
-    dependencies: Array.from(dependencies),
-  } satisfies RegistryItem;
-}
-
-async function buildBlockRegistry(blockPath: string, blockName: string) {
-  const dir = await readdir(blockPath, { withFileTypes: true, recursive: true });
-
-  const files: RegistryFiles[] = [];
-  const dependencies = new Set<string>();
-  const registryDependencies = new Set<string>();
-
-  for (const dirent of dir) {
-    if (!dirent.isFile()) continue;
-
-    const filepath = join(blockPath, dirent.name);
-    const relativePath = join("blocks", blockName, dirent.name);
-    const source = await readFile(filepath, { encoding: "utf8" });
-
-    files.push({ content: source, path: relativePath, type: "registry:component", target: "" });
-
-    const deps = await getFileDependencies(filepath, source);
-    if (!deps) continue;
-
-    deps.dependencies.forEach((dep) => dependencies.add(dep));
-    deps.registryDependencies.forEach((dep) => registryDependencies.add(dep));
-  }
-
-  return {
-    type: "registry:block",
-    files,
-    name: blockName,
     registryDependencies: Array.from(registryDependencies),
     dependencies: Array.from(dependencies),
   } satisfies RegistryItem;

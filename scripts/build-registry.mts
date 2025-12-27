@@ -4,8 +4,8 @@ import type { Registry, registryItemTypeSchema } from "../registry/schema";
 import { existsSync, promises as fs } from "node:fs";
 import path from "node:path";
 import { registry } from "../registry";
-import { buildRegistry as crawlContent } from "./crawl-content";
 import { registryEntrySchema, registrySchema } from "../registry/schema";
+import { buildRegistry as crawlContent } from "./crawl-content";
 
 const REGISTRY_PATH = path.join(process.cwd(), "public/r");
 
@@ -47,7 +47,7 @@ async function buildStyles(registry: Registry) {
               content = await fs.readFile(path.join(process.cwd(), file.path), "utf8");
             } else {
               content = await fs.readFile(
-                path.join(process.cwd(), "components", "content", "inspira", file.path),
+                path.join(process.cwd(), "app", "components", "inspira", file.path),
                 "utf8",
               );
             }
@@ -103,7 +103,6 @@ try {
 
   await buildStyles(result.data);
 
-  // eslint-disable-next-line no-console
   console.log("✅ Done!");
 } catch (error) {
   console.error(error);

@@ -1,0 +1,22 @@
+{
+  "common": {
+    "or": "ali",
+    "error": {
+      "title": "Stran ni bila najdena",
+      "description": "Opravičujemo se, vendar stran, ki jo iščete, ni bila najdena."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Kopiraj stran",
+      "link": "Kopiraj Markdown stran",
+      "view": "Prikaži kot Markdown",
+      "gpt": "Odpri v ChatGPT",
+      "claude": "Odpri v Claude"
+    },
+    "links": "Skupnost",
+    "toc": "Na tej strani",
+    "report": "Prijavi težavo",
+    "edit": "Uredi to stran"
+  }
+}

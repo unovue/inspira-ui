@@ -1,0 +1,23 @@
+{
+  "common": {
+    "or": "lub",
+    "error": {
+      "title": "Nie znaleziono strony",
+      "description": "Przepraszamy, ale nie znaleziono tej strony."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Skopiuj stronę",
+      "link": "Skopiuj stronę Markdown",
+      "view": "Wyświetl jako Markdown",
+      "gpt": "Otwórz w ChatGPT",
+      "claude": "Otwórz w Claude"
+    },
+    "links": "Społeczność",
+    "toc": "Na tej stronie",
+    "report": "Zgłoś problem",
+    "edit": "Edytuj tę stronę"
+  }
+}
+

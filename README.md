@@ -1,87 +1,114 @@
-<p align="center">
-  <a href="https://github.com/unovue/inspira-ui">
-    <img src="./logo.png" alt="Logo" width="150" />
-  </a>
-</p>
-<h1 align="center">
-  Inspira UI
-</h1>
-<p align="center">
-  <b>Build beautiful websites using Vue & Nuxt.</b><br>
-  A curated collection of beautifully designed, reusable components for Vue & Nuxt.
-</p>
+# Docus i18n Starter
 
-<p align="center">
-  <a href="https://github.com/unovue/inspira-ui/stargazers">
-    <img alt="GitHub stars" src="https://img.shields.io/github/stars/unovue/inspira-ui?style=social">
-  </a>
-  <a href="https://github.com/unovue/inspira-ui/blob/main/LICENSE.md">
-    <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
-  </a>  
-</p>
+> A beautiful, internationalized starter for creating multi-language documentation with Docus
 
-<p align="center">🌐 Available Languages</h2>
+This is the i18n Docus starter template that provides everything you need to build beautiful, multi-language documentation sites with Markdown and Vue components.
 
-<p align="center">
-  <a href="README.md">🇺🇸 English</a> |
-  <a href="README_CN.md">🇨🇳 Chinese</a> |
-  <a href="README_IT.md">🇮🇹 Italian</a>
-</p>
+## ✨ Features
 
----
+- 🌍 **Internationalization** - Native i18n support for multi-language docs
+- 🎨 **Beautiful Design** - Clean, modern documentation theme
+- 📱 **Responsive** - Mobile-first responsive design
+- 🌙 **Dark Mode** - Built-in dark/light mode support
+- 🔍 **Search** - Full-text search functionality per language
+- 📝 **Markdown Enhanced** - Extended markdown with custom components
+- 🎨 **Customizable** - Easy theming and brand customization
+- ⚡ **Fast** - Optimized for performance with Nuxt 4
+- 🔧 **TypeScript** - Full TypeScript support
 
-Welcome to [**Inspira UI**](https://inspira-ui.com), a community-driven project that brings the beauty and functionality of both [Aceternity UI](https://ui.aceternity.com) and [Magic UI](https://magicui.design) to the [Vue](https://vuejs.org) & [Nuxt](https://nuxt.com) ecosystem! While this project draws inspiration from these sources, it also includes unique custom components contributed by the community and created by us.
-For **Chinese version** visit [here](README_CN.md).
+## 🚀 Quick Start
 
-## ✨ About Inspira UI
+```bash
+# Install dependencies
+npm install
 
-Inspira UI is a collection of elegant, ready-to-use Vue components designed to be flexible and easy to integrate. Rather than being a traditional component library, it allows you to pick, customize, and adapt components as needed, giving you the freedom to shape them to fit your unique project requirements.
+# Start development server
+npm run dev
+```
 
-## 🚀 Why Inspira UI?
+Your multilingual documentation site will be running at `http://localhost:3000`
 
-Inspira UI was created to fill a gap in the Vue community by providing a set of components with the aesthetics and functionality of both Aceternity UI and Magic UI. Our goal is to empower developers to build beautiful applications more efficiently while adding our own custom and community-driven designs.
+## 🌍 Languages
 
-## 🎯 Key Features
+This starter comes pre-configured with:
 
-- **Free and Open Source**: Completely [open source](https://github.com/unovue/inspira-ui) under the MIT license.
-- **Highly Configurable**: Tailor components to your specific design needs. Check out our [configuration guide](/api/configuration).
-- **Diverse Component Range**: A broad selection of [components](/components), inspired by Aceternity UI, Magic UI, and custom contributions, to help you build anything you imagine.
-- **Mobile Optimized**: Designed to look great on all devices.
-- **Nuxt Compatibility**: Fully compatible with [Nuxt](https://nuxt.com).
+- 🇺🇸 **English** (`en`) - Default language
+- 🇫🇷 **Français** (`fr`) - French translation
 
-## 📚 Documentation
+## 📁 Project Structure
 
-For full documentation and usage examples, visit [**Inspira UI Documentation**](https://inspira-ui.com).
+```
+my-docs/
+├── content/              # Your markdown content
+│   ├── en/              # English content
+│   │   ├── index.md     # English homepage
+│   │   └── docs/        # English documentation
+│   └── fr/              # French content
+│       ├── index.md     # French homepage
+│       └── docs/        # French documentation
+├── public/              # Static assets
+├── nuxt.config.ts       # Nuxt configuration with i18n setup
+└── package.json         # Dependencies and scripts
+```
 
-## 🙏 Acknowledgments
+### Content Structure
 
-A special thanks to:
+The content is organized by language, making it easy to manage translations:
 
-- [Aceternity UI](https://ui.aceternity.com) for providing the inspiration and permission to adapt the original designs.
-- [Magic UI](https://magicui.design) for its beautiful design inspiration.
-- [shadcn-vue](https://www.shadcn-vue.com) for the Vue port of shadcn-ui and contributions to some components.
-- [shadcn-docs-nuxt](https://github.com/ZTL-UwU/shadcn-docs-nuxt) for the beautifully crafted Nuxt documentation site.
+```
+content/
+├── en/                   # English content
+│   ├── index.md
+│   ├── 1.getting-started/
+│   │   ├── installation.md
+│   │   └── configuration.md
+│   └── 2.essentials/
+│       ├── markdown.md
+│       └── components.md
+└── fr/                   # French content
+    ├── index.md
+    ├── 1.getting-started/
+    │   ├── installation.md
+    │   └── configuration.md
+    └── 2.essentials/
+        ├── markdown.md
+        └── components.md
+```
 
-## 👤 Author
+## 🔗 URL Structure
 
-Hi, I'm [Rahul Vashishtha](https://rahulv.dev). I started Inspira UI to bring a similar experience to the Vue ecosystem, inspired by Aceternity UI, Magic UI, and community contributions. I'm continuously working on it to make it better. Feel free to check out my work on [GitHub](https://github.com/rahul-vashishtha) and join me on this journey [here](https://github.com/unovue/inspira-ui)!
+The i18n starter generates URLs with language prefixes:
 
-## 🌟 Contribute
+- English: `/en/getting-started/installation`
+- French: `/fr/getting-started/installation`
+- Default locale fallback: `/getting-started/installation` (redirects to English)
 
-We welcome contributions! If you want to suggest features, report bugs, or help improve the project, feel free to open an issue or submit a pull request on [GitHub](https://github.com/unovue/inspira-ui).
+## ⚡ Built with
 
-You can also follow this [Contribution Guide](https://inspira-ui.com/getting-started/contribution).
+This starter comes pre-configured with:
 
-## Sponsorship
+- [Nuxt 4](https://nuxt.com) - The web framework
+- [Nuxt Content](https://content.nuxt.com/) - File-based CMS
+- [Nuxt i18n](https://i18n.nuxt.com/) - Internationalization
+- [Nuxt UI](https://ui.nuxt.com) - UI components
+- [Nuxt Image](https://image.nuxt.com/) - Optimized images
+- [Tailwind CSS 4](https://tailwindcss.com/) - Utility-first CSS
+- [Docus Layer](https://www.npmjs.com/package/docus) - Documentation theme
 
-You can also support the development of the project by sponsoring the developer.
+## 📖 Documentation
 
-Support and sponsor the maintainer here: [Support Inspira UI](https://github.com/sponsors/rahul-vashishtha)
+For detailed documentation on customizing your Docus project, visit the [Docus Documentation](https://docus.dev)
 
-## Repo Stats
+## 🚀 Deployment
 
-![Repo Stats](https://repobeats.axiom.co/api/embed/da99e5e9c8ddaaff68b7f57b56ae21d5e0ea2ed2.svg "Repobeats analytics image")
+Build for production:
 
-## Thanks to all the contributors 🙏
+```bash
+npm run build
+```
 
-[![Contributors](https://contrib.rocks/image?repo=unovue/inspira-ui)](https://github.com/unovue/inspira-ui/graphs/contributors)
+The built files will be in the `.output` directory, ready for deployment to any hosting provider that supports Node.js.
+
+## 📄 License
+
+[MIT License](https://opensource.org/licenses/MIT)
