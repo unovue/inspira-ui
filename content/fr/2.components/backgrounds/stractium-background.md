@@ -3,7 +3,7 @@ title: Fond Stractium
 description: Un fond basé sur des shaders, inspiré de motifs fractals complexes et de textures organiques, créé avec du raymarching et du GLSL. L'effet simule des textures visuelles évolutives et détaillées.
 category: Arrière-plan
 tags: [css, tailwind, background, shader-toy, webgl, ogl]
-badge: Nouveau
+badge: New
 ---
 
 ::ComponentViewer{demoFile="StractiumBackgroundDemo.vue" config="StractiumBackgroundConfig" componentId="bg-stractium" :componentFiles='["StractiumBackground.vue"]'}
@@ -12,15 +12,15 @@ badge: Nouveau
 
 ## API
 
-| Nom de propriété    | Type     | Valeur par défaut | Description                                                                 |
-| ------------------- | -------- | ----------------- | --------------------------------------------------------------------------- |
-| `hue`               | `number` | `0`               | Teinte de base pour la texture fractale (0–360 degrés).                     |
-| `saturation`        | `number` | `1`               | Saturation de la couleur (0–1).                                             |
-| `brightness`        | `number` | `1`               | Multiplicateur de luminosité de la couleur de sortie (0–2 recommandé).      |
-| `speed`             | `number` | `1`               | Multiplicateur de vitesse pour l'animation de texture.                      |
-| `mouseSensitivity`  | `number` | `0.5`             | Contrôle la réactivité de la texture aux mouvements de souris (0–1).        |
-| `damping`           | `number` | `1`               | Facteur d'amortissement pour lisser les distorsions de texture (0–1).       |
-| `class`             | `string` | `—`               | Classes CSS optionnelles pour la div conteneur (z-index, etc.).             |
+| Nom de propriété   | Type     | Valeur par défaut | Description                                                            |
+| ------------------ | -------- | ----------------- | ---------------------------------------------------------------------- |
+| `hue`              | `number` | `0`               | Teinte de base pour la texture fractale (0–360 degrés).                |
+| `saturation`       | `number` | `1`               | Saturation de la couleur (0–1).                                        |
+| `brightness`       | `number` | `1`               | Multiplicateur de luminosité de la couleur de sortie (0–2 recommandé). |
+| `speed`            | `number` | `1`               | Multiplicateur de vitesse pour l'animation de texture.                 |
+| `mouseSensitivity` | `number` | `0.5`             | Contrôle la réactivité de la texture aux mouvements de souris (0–1).   |
+| `damping`          | `number` | `1`               | Facteur d'amortissement pour lisser les distorsions de texture (0–1).  |
+| `class`            | `string` | `—`               | Classes CSS optionnelles pour la div conteneur (z-index, etc.).        |
 
 > 💡 Ce composant est pensé pour des fonds plein écran ou de grandes sections. Il est optimisé pour les GPU modernes mais peut être exigeant sur les appareils plus modestes.
 
