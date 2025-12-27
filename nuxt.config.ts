@@ -26,7 +26,17 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/i18n", "@nuxt/content", "@nuxt/eslint", "@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "@nuxt/scripts", "@vueuse/nuxt", "nuxt-gtag"],
+  modules: [
+    "@nuxtjs/i18n",
+    "@nuxt/content",
+    "@nuxt/eslint",
+    "@nuxt/fonts",
+    "@nuxt/icon",
+    "@nuxt/image",
+    "@nuxt/scripts",
+    "@vueuse/nuxt",
+    "nuxt-gtag",
+  ],
 
   plugins: [{ src: "./plugins/clarity.js", mode: "client" }],
 
@@ -43,6 +53,10 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
 
   i18n: {
+    // Use a public SITE URL for correct hreflang / SEO generation.
+    // Prefer `NUXT_PUBLIC_SITE_URL` (Vite/Nuxt public env) then `SITE_URL`.
+    baseUrl:
+      process.env.NUXT_PUBLIC_SITE_URL || process.env.SITE_URL || "https://inspira-ui.com/docs",
     defaultLocale: "en",
     locales: [
       {
@@ -84,6 +98,8 @@ export default defineNuxtConfig({
     public: {
       NUXT_CLARITY_ID: process.env.NUXT_CLARITY_ID,
       NUXT_ADSENSE_ACCOUNT: process.env.NUXT_ADSENSE_ACCOUNT,
+      // Public site URL used by modules (e.g. i18n) for canonical/hreflang links.
+      SITE_URL: process.env.NUXT_PUBLIC_SITE_URL || process.env.SITE_URL,
     },
   },
   llms: {
