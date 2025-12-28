@@ -5,19 +5,19 @@ const links = [
   {
     icon: "tabler:rocket",
     title: "Getting Started",
-    description: "Kick off your journey with installation, setup, and usage guides.",
+    description: "Learn core concepts, setup, and first steps for Inspira UI.",
     to: `/${locale.value}/getting-started`,
   },
   {
     icon: "tabler:play",
     title: "Installation",
-    description: "Kick off your journey with installation, setup, and usage guides.",
+    description: "Install and configure Inspira UI in your project.",
     to: `/${locale.value}/getting-started/installation`,
   },
   {
     icon: "tabler:components",
     title: "Components",
-    description: "Kick off your journey with installation, setup, and usage guides.",
+    description: "Explore components, examples, and API props.",
     to: `/${locale.value}/components`,
   },
   // {
