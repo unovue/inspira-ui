@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const versions = ref([
   {
-    title: "Released v3: Dec 23, 2025",
+    title: "Released v3: Dec 27, 2025",
     description: "Migrated docs to Docus.dev and improved docs user experience.",
     date: "2025-12-27",
     ui: {
