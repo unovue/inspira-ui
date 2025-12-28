@@ -123,4 +123,15 @@ export default defineNuxtConfig({
       type: "d1",
     },
   },
+
+  fonts: {
+    processCSSVariables: true,
+    families: [
+      {
+        name: "Geist",
+        provider: "google",
+        global: true,
+      },
+    ],
+  },
 });
