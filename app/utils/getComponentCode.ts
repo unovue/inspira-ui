@@ -4,14 +4,17 @@ export interface ComponentCodeArgs {
   type: "ui" | "examples" | "configs";
 }
 
-let rawComponent: Record<string, () => Promise<unknown>> = {};
+const rawComponents = import.meta.glob<string>("~/components/inspira/**/*.{vue,ts,js,d.ts}", {
+  query: "?raw",
+  import: "default",
+});
 
 export function getComponentCode(args: ComponentCodeArgs) {
-  const componentPath = `../components/inspira/${args.type}/${args.id}/${args.fileName}`;
-  rawComponent = import.meta.glob(`../components/inspira/**/*.{vue,ts,js,d.ts}`, {
-    query: "?raw",
-    import: "default",
-  });
+  const normalizedSuffix = `/components/inspira/${args.type}/${args.id}/${args.fileName}`;
 
-  return rawComponent[componentPath];
+  const match = Object.entries(rawComponents).find(([path]) =>
+    path.replaceAll("\\", "/").endsWith(normalizedSuffix),
+  );
+
+  return match?.[1];
 }
