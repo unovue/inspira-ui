@@ -41,6 +41,7 @@ export default defineNuxtConfig({
     "@nuxt/scripts",
     "@vueuse/nuxt",
     "nuxt-gtag",
+    "@tresjs/nuxt",
   ],
 
   plugins: [{ src: "./plugins/clarity.js", mode: "client" }],

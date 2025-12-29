@@ -1,18 +1,10 @@
 <script lang="ts" setup>
-// Download globe json file from https://geojson-maps.kyd.au/ and save in the same folder
-
-import {
-  AmbientLight,
-  Color,
-  DirectionalLight,
-  PerspectiveCamera,
-  PointLight,
-  Scene,
-  WebGLRenderer,
-} from "three";
+import type { TresContext } from "@tresjs/core";
+import { dispose } from "@tresjs/core";
+import { Color } from "three";
 import ThreeGlobe from "three-globe";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
-import { onMounted, ref, watch } from "vue";
+import { computed, onBeforeUnmount, shallowRef, watch } from "vue";
 import contries from "./globe.json";
 
 interface Position {
@@ -72,7 +64,7 @@ const props = withDefaults(defineProps<Props>(), {
   data: () => [],
 });
 
-const defaultGlobeConfig: GlobeConfig = {
+const resolvedGlobeConfig = computed(() => ({
   pointSize: 1,
   atmosphereColor: "#ffffff",
   showAtmosphere: true,
@@ -87,100 +79,24 @@ const defaultGlobeConfig: GlobeConfig = {
   rings: 1,
   maxRings: 3,
   ...props.globeConfig,
-};
+}));
 
-const githubGlobeRef = ref<HTMLCanvasElement>();
-const globeData = ref<GlobeData[]>();
+const globe = shallowRef<ThreeGlobe>();
+const controls = shallowRef<OrbitControls>();
+const globeData = shallowRef<GlobeData[]>([]);
+const ringIndexes = shallowRef<number[]>([]);
+const tresContext = shallowRef<TresContext>();
+const loopCleanup = shallowRef<() => void>();
 
-let numberOfRings: number[] = [];
-
-let renderer: WebGLRenderer;
-let scene: Scene;
-let camera: PerspectiveCamera;
-let controls: OrbitControls;
-
-let globe: ThreeGlobe;
-
-onMounted(() => {
-  setupScene();
-  initGlobe();
-  startAnimation();
-  animate();
-
-  onWindowResize();
-
-  window.addEventListener("resize", onWindowResize, false);
-
-  watch(globeData, () => {
-    if (!globe || !globeData.value) return;
-
-    numberOfRings = genRandomNumbers(0, props.data.length, Math.floor((props.data.length * 4) / 5));
-
-    globe.ringsData(globeData.value.filter((d, i) => numberOfRings.includes(i)));
-  });
-});
-
-function setupScene() {
-  if (!githubGlobeRef.value) {
-    throw new Error("Canvas not initialized");
-  }
-
-  const width = githubGlobeRef.value.clientWidth;
-  const height = githubGlobeRef.value.clientHeight;
-
-  renderer = new WebGLRenderer({ canvas: githubGlobeRef.value, antialias: true });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-  renderer.setSize(width, height);
-  renderer.autoClear = false;
-
-  scene = new Scene();
-
-  camera = new PerspectiveCamera();
-  camera.aspect = width / height;
-  camera.position.setX(0);
-  camera.position.setY(0);
-  camera.position.setZ(400);
-
-  const ambientLight = new AmbientLight(defaultGlobeConfig.ambientLight || "#ffffff", 0.6);
-  scene.add(ambientLight);
-
-  const dLight1 = new DirectionalLight(defaultGlobeConfig.directionalLeftLight || "#ffffff", 1);
-  dLight1.position.set(-400, 100, 400);
-  camera.add(dLight1);
-
-  const dLight2 = new DirectionalLight(defaultGlobeConfig.directionalTopLight || "#ffffff", 1);
-  dLight2.position.set(-200, 500, 200);
-  camera.add(dLight2);
-
-  const pLight = new PointLight(defaultGlobeConfig.pointLight || "#ffffff", 0.8);
-  pLight.position.set(-200, 500, 200);
-  camera.add(pLight);
-
-  if (defaultGlobeConfig.initialPosition) {
-    const { lat, lng } = defaultGlobeConfig.initialPosition;
+const cameraPosition = computed<[number, number, number]>(() => {
+  if (resolvedGlobeConfig.value.initialPosition) {
+    const { lat, lng } = resolvedGlobeConfig.value.initialPosition;
     const pos = latLngToCartesian(lat, lng, 400);
-    camera.position.set(pos.x, pos.y, pos.z);
-    camera.lookAt(0, 0, 0);
+    return [pos.x, pos.y, pos.z];
   }
 
-  camera.updateProjectionMatrix();
-  scene.add(camera);
-
-  controls = new OrbitControls(camera, renderer.domElement);
-  controls.enableZoom = false;
-  controls.enablePan = false;
-  controls.enableDamping = true;
-  controls.dampingFactor = 0.01;
-  controls.minDistance = 200;
-  controls.maxDistance = 500;
-  controls.rotateSpeed = defaultGlobeConfig.autoRotateSpeed || 0.8;
-  controls.zoomSpeed = 1;
-  controls.autoRotate = false;
-  controls.autoRotateSpeed = defaultGlobeConfig.autoRotateSpeed ?? 2.0;
-
-  controls.minPolarAngle = Math.PI / 3.5;
-  controls.maxPolarAngle = Math.PI - Math.PI / 3;
-}
+  return [0, 0, 400];
+});
 
 function latLngToCartesian(lat: number, lng: number, radius = 400) {
   const phi = (lat * Math.PI) / 180;
@@ -193,107 +109,21 @@ function latLngToCartesian(lat: number, lng: number, radius = 400) {
   return { x, y, z };
 }
 
-function initGlobe() {
-  buildData();
-
-  globe = new ThreeGlobe({
-    waitForGlobeReady: true,
-    animateIn: true,
-  })
-    .hexPolygonsData(contries.features)
-    .hexPolygonResolution(3)
-    .hexPolygonMargin(0.7)
-    .showAtmosphere(defaultGlobeConfig.showAtmosphere!)
-    .atmosphereColor(defaultGlobeConfig.atmosphereColor!)
-    .atmosphereAltitude(defaultGlobeConfig.atmosphereAltitude!)
-    .hexPolygonColor((_e) => defaultGlobeConfig.polygonColor!);
-
-  // globe.rotateY(-Math.PI * (5 / 9));
-  // globe.rotateZ(-Math.PI / 6);
-
-  const globeMaterial = globe.globeMaterial() as unknown as {
-    color: Color;
-    emissive: Color;
-    emissiveIntensity: number;
-    shininess: number;
-  };
-
-  globeMaterial.color = new Color(defaultGlobeConfig.globeColor!);
-  globeMaterial.emissive = new Color(defaultGlobeConfig.emissive!);
-  globeMaterial.emissiveIntensity = defaultGlobeConfig.emissiveIntensity || 0.1;
-  globeMaterial.shininess = defaultGlobeConfig.shininess || 0.9;
-
-  scene.add(globe);
-}
-
-function onWindowResize() {
-  if (!githubGlobeRef.value) {
-    return;
-  }
-
-  const width = githubGlobeRef.value.clientWidth;
-  const height = githubGlobeRef.value.clientHeight;
-
-  camera.aspect = width / height;
-  camera.updateProjectionMatrix();
-
-  renderer.setSize(width, height);
-}
-function startAnimation() {
-  if (!globe || !globeData.value!) return;
-  globe
-    .arcsData(props.data)
-    .arcStartLat((d: any) => d.startLat * 1)
-    .arcStartLng((d: any) => d.startLng * 1)
-    .arcEndLat((d: any) => d.endLat * 1)
-    .arcEndLng((d: any) => d.endLng * 1)
-    .arcColor((e: any) => e.color)
-    .arcAltitude((e: any) => e.arcAlt * 1)
-    .arcStroke((_e: any) => [0.32, 0.28, 0.3][Math.round(Math.random() * 4)] || null)
-    .arcDashLength(defaultGlobeConfig.arcLength!)
-    .arcDashInitialGap((e: any) => e.order * 1)
-    .arcDashGap(15)
-    .arcDashAnimateTime(defaultGlobeConfig.arcTime!)
-
-    .pointsData(props.data)
-    .pointColor((e: any) => e.color)
-    .pointsMerge(true)
-    .pointAltitude(0.0)
-    .pointRadius(2)
-
-    .ringsData([])
-    .ringColor((e: any) => (t: any) => e.color(t))
-    .ringMaxRadius(defaultGlobeConfig.maxRings!)
-    .ringPropagationSpeed(3)
-    .ringRepeatPeriod(
-      (defaultGlobeConfig.arcTime! * defaultGlobeConfig.arcLength!) / defaultGlobeConfig.rings!,
-    );
-}
-
-function animate() {
-  if (globe && defaultGlobeConfig.autoRotate) {
-    globe.rotation.y += (defaultGlobeConfig.autoRotateSpeed ?? 2.0) * 0.001;
-  }
-  renderer.render(scene, camera);
-
-  requestAnimationFrame(animate);
-}
-
 function buildData() {
   const arcs = props.data;
-  const points = [];
+  const points: GlobeData[] = [];
   for (let i = 0; i < arcs.length; i++) {
     const arc = arcs[i] as Position;
     const rgb = hexToRgb(arc.color) as { r: number; g: number; b: number };
     points.push({
-      size: props.globeConfig.pointSize,
+      size: resolvedGlobeConfig.value.pointSize,
       order: arc.order,
       color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
       lat: arc.startLat,
       lng: arc.startLng,
     });
     points.push({
-      size: props.globeConfig.pointSize,
+      size: resolvedGlobeConfig.value.pointSize,
       order: arc.order,
       color: (t: number) => `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${1 - t})`,
       lat: arc.endLat,
@@ -301,7 +131,6 @@ function buildData() {
     });
   }
 
-  // remove duplicates for same lat and lng
   const filteredPoints = points.filter(
     (v, i, a) =>
       a.findIndex((v2) =>
@@ -312,10 +141,205 @@ function buildData() {
   globeData.value = filteredPoints;
 }
 
+function applyGlobeConfig() {
+  if (!globe.value) return;
+
+  const config = resolvedGlobeConfig.value;
+
+  globe.value
+    .showAtmosphere(config.showAtmosphere!)
+    .atmosphereColor(config.atmosphereColor!)
+    .atmosphereAltitude(config.atmosphereAltitude!)
+    .hexPolygonColor((_e) => config.polygonColor!);
+
+  const globeMaterial = globe.value.globeMaterial() as unknown as {
+    color: Color;
+    emissive: Color;
+    emissiveIntensity: number;
+    shininess: number;
+  };
+
+  globeMaterial.color = new Color(config.globeColor!);
+  globeMaterial.emissive = new Color(config.emissive!);
+  globeMaterial.emissiveIntensity = config.emissiveIntensity || 0.1;
+  globeMaterial.shininess = config.shininess || 0.9;
+}
+
+function applyDataToGlobe() {
+  if (!globe.value) return;
+
+  const config = resolvedGlobeConfig.value;
+
+  globe.value
+    .arcsData(props.data)
+    .arcStartLat((d: Position) => d.startLat * 1)
+    .arcStartLng((d: Position) => d.startLng * 1)
+    .arcEndLat((d: Position) => d.endLat * 1)
+    .arcEndLng((d: Position) => d.endLng * 1)
+    .arcColor((e: Position) => e.color)
+    .arcAltitude((e: Position) => e.arcAlt * 1)
+    .arcStroke((_e: Position) => [0.32, 0.28, 0.3][Math.round(Math.random() * 4)] || null)
+    .arcDashLength(config.arcLength!)
+    .arcDashInitialGap((e: Position) => e.order * 1)
+    .arcDashGap(15)
+    .arcDashAnimateTime(config.arcTime!)
+    .pointsData(props.data)
+    .pointColor((e: Position) => e.color)
+    .pointsMerge(true)
+    .pointAltitude(0.0)
+    .pointRadius(config.pointSize || 2)
+    .ringsData([]);
+
+  updateRings();
+}
+
+function updateRings() {
+  if (!globe.value || !globeData.value.length) return;
+
+  ringIndexes.value = genRandomNumbers(
+    0,
+    props.data.length,
+    Math.floor((props.data.length * 4) / 5),
+  );
+
+  const config = resolvedGlobeConfig.value;
+
+  globe.value
+    .ringsData(globeData.value.filter((_d, i) => ringIndexes.value.includes(i)))
+    .ringColor((e: GlobeData) => (t: number) => e.color(t))
+    .ringMaxRadius(config.maxRings!)
+    .ringPropagationSpeed(3)
+    .ringRepeatPeriod((config.arcTime! * config.arcLength!) / config.rings!);
+}
+
+function setupControls(context: TresContext) {
+  controls.value?.dispose();
+
+  const activeCamera = context.camera.activeCamera.value;
+  if (!activeCamera) return;
+
+  const instance = context.renderer.instance;
+  const orbitControls = new OrbitControls(activeCamera, instance.domElement);
+  orbitControls.enableZoom = false;
+  orbitControls.enablePan = false;
+  orbitControls.enableDamping = true;
+  orbitControls.dampingFactor = 0.01;
+  orbitControls.minDistance = 200;
+  orbitControls.maxDistance = 500;
+  orbitControls.rotateSpeed = resolvedGlobeConfig.value.autoRotateSpeed || 0.8;
+  orbitControls.zoomSpeed = 1;
+  orbitControls.autoRotate = false;
+  orbitControls.autoRotateSpeed = resolvedGlobeConfig.value.autoRotateSpeed ?? 2.0;
+
+  orbitControls.minPolarAngle = Math.PI / 3.5;
+  orbitControls.maxPolarAngle = Math.PI - Math.PI / 3;
+
+  orbitControls.update();
+
+  controls.value = orbitControls;
+}
+
+function setupLoop(context: TresContext) {
+  loopCleanup.value?.();
+
+  if (!context.renderer.loop.isActive.value) {
+    context.renderer.loop.start();
+  }
+
+  const { off } = context.renderer.loop.onLoop(({ delta }) => {
+    if (globe.value && resolvedGlobeConfig.value.autoRotate) {
+      globe.value.rotation.y += (resolvedGlobeConfig.value.autoRotateSpeed ?? 2.0) * delta * 1;
+    }
+
+    controls.value?.update();
+  });
+
+  loopCleanup.value = off;
+}
+
+function syncCameraPosition(context: TresContext) {
+  const activeCamera = context.camera.activeCamera.value;
+  if (!activeCamera) return;
+
+  const [x, y, z] = cameraPosition.value;
+  activeCamera.position.set(x, y, z);
+  activeCamera.lookAt(0, 0, 0);
+}
+
+function setupGlobe(context: TresContext) {
+  buildData();
+
+  const globeInstance = new ThreeGlobe({
+    waitForGlobeReady: true,
+    animateIn: true,
+  })
+    .hexPolygonsData(contries.features)
+    .hexPolygonResolution(3)
+    .hexPolygonMargin(0.7);
+
+  globe.value = globeInstance;
+
+  applyGlobeConfig();
+  context.scene.value.add(globeInstance);
+
+  applyDataToGlobe();
+  syncCameraPosition(context);
+  setupControls(context);
+  setupLoop(context);
+}
+
+watch(
+  () => props.data,
+  () => {
+    buildData();
+    applyDataToGlobe();
+  },
+  { deep: true },
+);
+
+watch(
+  resolvedGlobeConfig,
+  () => {
+    buildData();
+    applyGlobeConfig();
+    applyDataToGlobe();
+    if (tresContext.value) {
+      syncCameraPosition(tresContext.value);
+      setupControls(tresContext.value);
+    }
+  },
+  { deep: true },
+);
+
+onBeforeUnmount(() => {
+  loopCleanup.value?.();
+  controls.value?.dispose();
+
+  if (globe.value && tresContext.value) {
+    tresContext.value.scene.value.remove(globe.value);
+    dispose(globe.value);
+  }
+});
+
+const handleCanvasReady = (context: TresContext) => {
+  tresContext.value = context;
+  context.renderer.instance.setClearColor(0x000000, 0);
+  setupGlobe(context);
+
+  watch(
+    () => context.camera.activeCamera.value,
+    (camera) => {
+      if (!camera) return;
+      syncCameraPosition(context);
+      setupControls(context);
+    },
+    { immediate: true },
+  );
+};
+
 function hexToRgb(color: string) {
   let hex = color.replace(/^#/, "");
 
-  // If the hex code is 3 characters, expand it to 6 characters
   if (hex.length === 3) {
     hex = hex
       .split("")
@@ -323,13 +347,11 @@ function hexToRgb(color: string) {
       .join("");
   }
 
-  // Parse the r, g, b values from the hex string
   const bigint = Number.parseInt(hex, 16);
-  const r = (bigint >> 16) & 255; // Extract the red component
-  const g = (bigint >> 8) & 255; // Extract the green component
-  const b = bigint & 255; // Extract the blue component
+  const r = (bigint >> 16) & 255;
+  const g = (bigint >> 8) & 255;
+  const b = bigint & 255;
 
-  // Return the RGB values as a string separated by spaces
   return {
     r,
     g,
@@ -349,9 +371,43 @@ function genRandomNumbers(min: number, max: number, count: number) {
 </script>
 
 <template>
-  <canvas
-    ref="githubGlobeRef"
-    class="h-96 w-96"
-    :class="[props.class]"
-  />
+  <ClientOnly>
+    <div
+      class="h-96 w-96"
+      :class="[props.class]"
+    >
+      <TresCanvas
+        class="h-full w-full"
+        :dpr="[1, 2]"
+        :antialias="true"
+        :alpha="true"
+        @ready="handleCanvasReady"
+      >
+        <TresPerspectiveCamera :position="cameraPosition" />
+
+        <TresAmbientLight
+          :color="resolvedGlobeConfig.ambientLight || '#ffffff'"
+          :intensity="0.6"
+        />
+
+        <TresDirectionalLight
+          :color="resolvedGlobeConfig.directionalLeftLight || '#ffffff'"
+          :intensity="1"
+          :position="[-400, 100, 400]"
+        />
+
+        <TresDirectionalLight
+          :color="resolvedGlobeConfig.directionalTopLight || '#ffffff'"
+          :intensity="1"
+          :position="[-200, 500, 200]"
+        />
+
+        <TresPointLight
+          :color="resolvedGlobeConfig.pointLight || '#ffffff'"
+          :intensity="0.8"
+          :position="[-200, 500, 200]"
+        />
+      </TresCanvas>
+    </div>
+  </ClientOnly>
 </template>
