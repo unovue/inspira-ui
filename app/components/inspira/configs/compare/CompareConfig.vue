@@ -3,7 +3,7 @@
 <template>
   <ComponentPlayground>
     <template #component>
-      <ConfettiDemo />
+      <CompareDemo />
     </template>
   </ComponentPlayground>
 </template>
