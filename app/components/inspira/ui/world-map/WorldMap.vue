@@ -19,7 +19,8 @@ const props = withDefaults(defineProps<Props>(), {
   lineColor: "#0EA5E9",
 });
 
-const map = new DottedMap({ height: 100, grid: "diagonal" });
+const DottedMapCtor = (DottedMap as any).default ?? DottedMap;
+const map = new DottedMapCtor({ height: 100, grid: "diagonal" });
 
 const svgMap = computed(() =>
   map.getSVG({
