@@ -5,7 +5,7 @@ category: Divers
 tags: [css, tailwind, shader-toy, ogl, webgl]
 ---
 
-::ComponentViewer{demoFile="ShaderToyDemo.vue" config="AnimatedCircularProgressBarConfig" componentId="animated-circular-progressbar" :componentFiles='["ShaderToy.vue", "InspiraShaderToy.ts"]' dependencies="ogl"}
+::ComponentViewer{demoFile="ShaderToyDemo.vue" config="ShaderToyConfig" componentId="shader-toy" :componentFiles='["ShaderToy.vue", "InspiraShaderToy.ts"]' dependencies="ogl"}
 
 #api
 
