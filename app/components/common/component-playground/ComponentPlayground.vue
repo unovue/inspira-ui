@@ -31,7 +31,7 @@ const isDesktop = useMediaQuery("(min-width: 768px)");
         :inset="isDesktop"
         :ui="{
           header: 'flex items-center justify-between',
-          content: 'bg-default/35 backdrop-blur-3xl min-md:min-w-md',
+          content: 'bg-default/35 backdrop-blur-3xl md:min-w-md',
         }"
       >
         <UButton
@@ -55,7 +55,7 @@ const isDesktop = useMediaQuery("(min-width: 768px)");
           />
         </template>
         <template #body>
-          <div class="grid grid-cols-1 gap-4 overflow-y-auto p-1">
+          <div class="mt-4 grid grid-cols-1 gap-4 overflow-y-auto p-1">
             <slot name="config" />
           </div>
         </template>

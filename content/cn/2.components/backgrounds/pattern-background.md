@@ -3,22 +3,23 @@ title: 图案背景
 description: 简单的动画图案背景，让版块更突出。
 category: 背景
 tags: [css, tailwind, background, magic-ui]
+badge: "Updated"
 ---
 
-::ComponentViewer{demoFile="PatternBackgroundDotDemo.vue" config="PatternBackgroundConfig" componentId="pattern-background" :componentFiles='["PatternBackground.vue", "index.ts"]' dependencies="class-variance-authority"}
+::ComponentViewer{demoFile="PatternBackgroundDemo.vue" config="PatternBackgroundConfig" componentId="pattern-background" :componentFiles='["PatternBackground.vue", "index.ts"]' dependencies="class-variance-authority"}
 
 #api
 
 ## API
 
-| 属性名    | 类型                                                                                                   | 默认值   | 描述                                                                                              |
-| --------- | ------------------------------------------------------------------------------------------------------ | -------- | ------------------------------------------------------------------------------------------------- |
-| `animate` | `boolean`                                                                                              | `false`  | 若设为 `true`，背景将有动画。                                                                     |
-| `direction`| `top` \| `bottom` \| `left` \| `right` \| `top-left` \| `top-right` \| `bottom-left` \| `bottom-right`| `top`    | 动画移动方向。可使用常量 `PATTERN_BACKGROUND_DIRECTION`。                                         |
-| `direction`| `grid` \| `dot`                                                                                        | `grid`   | 图案类型。可使用常量 `PATTERN_BACKGROUND_VARIANT`。                                                |
-| `size`    | `xs` \| `sm` \| `md` \| `lg`                                                                           | `md`     | 背景图案的大小。                                                                                  |
-| `mask`    | `ellipse` \| `ellipse-top`                                                                             | `ellipse`| 在背景图案上添加遮罩。可使用常量 `PATTERN_BACKGROUND_MASK`。                                      |
-| `speed`   | `number`                                                                                               | `10000`  | 动画时长（毫秒），数值越大动画越慢（`20000` 比 `5000` 更慢）。可使用常量 `PATTERN_BACKGROUND_SPEED`。 |
+| 属性名      | 类型                                                                                                   | 默认值    | 描述                                                                                                  |
+| ----------- | ------------------------------------------------------------------------------------------------------ | --------- | ----------------------------------------------------------------------------------------------------- |
+| `animate`   | `boolean`                                                                                              | `false`   | 若设为 `true`，背景将有动画。                                                                         |
+| `direction` | `top` \| `bottom` \| `left` \| `right` \| `top-left` \| `top-right` \| `bottom-left` \| `bottom-right` | `top`     | 动画移动方向。可使用常量 `PATTERN_BACKGROUND_DIRECTION`。                                             |
+| `direction` | `grid` \| `dot`                                                                                        | `grid`    | 图案类型。可使用常量 `PATTERN_BACKGROUND_VARIANT`。                                                   |
+| `size`      | `xs` \| `sm` \| `md` \| `lg`                                                                           | `md`      | 背景图案的大小。                                                                                      |
+| `mask`      | `ellipse` \| `ellipse-top`                                                                             | `ellipse` | 在背景图案上添加遮罩。可使用常量 `PATTERN_BACKGROUND_MASK`。                                          |
+| `speed`     | `number`                                                                                               | `10000`   | 动画时长（毫秒），数值越大动画越慢（`20000` 比 `5000` 更慢）。可使用常量 `PATTERN_BACKGROUND_SPEED`。 |
 
 #credits
 
