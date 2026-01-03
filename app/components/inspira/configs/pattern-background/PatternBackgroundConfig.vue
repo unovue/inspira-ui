@@ -43,7 +43,7 @@ const speedItems = [
       >
         <USwitch
           v-model="config.animate"
-          class="max-w-40"
+          class="w-32"
         />
       </UFormField>
 
