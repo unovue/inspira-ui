@@ -132,7 +132,7 @@ onMounted(() => {
     class="min-h-[60vh] w-full"
     :ui="{
       list: 'w-fit max-sm:w-full bg-transparent gap-4 self-start overflow-auto',
-      trigger: 'w-fit outline outline-neutral-200 dark:outline-neutral-800',
+      trigger: 'w-fit min-w-fit outline outline-neutral-200 dark:outline-neutral-800',
       content: 'py-4',
     }"
     :unmount-on-hide="false"

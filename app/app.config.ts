@@ -13,6 +13,17 @@ export default defineAppConfig({
         modal: "bg-default/25 backdrop-blur-xl",
       },
     },
+    formField: {
+      slots: {
+        wrapper: "w-full",
+        container: "max-w-32 w-full flex items-center justify-end",
+      },
+    },
+    switch: {
+      slots: {
+        root: "justify-end",
+      },
+    },
   },
 
   header: {
