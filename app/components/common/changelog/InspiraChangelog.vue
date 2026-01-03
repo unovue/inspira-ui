@@ -1,8 +1,16 @@
 <script setup lang="ts">
 const versions = ref([
   {
-    title: "New Component: Added <DitherShader />",
-    description: "Added Dither Shader component.",
+    title: "New Components added",
+    description: `Added <DitherShader />, <ThunderstormBackground /> & <SingularityBackground /> components.`,
+    date: "2026-01-04",
+    ui: {
+      container: "max-w-md",
+    },
+  },
+  {
+    title: "Components updated",
+    description: `Added Component playground to <SilkBackground /> component.`,
     date: "2026-01-04",
     ui: {
       container: "max-w-md",
