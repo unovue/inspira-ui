@@ -3,7 +3,6 @@ title: Image Trail Cursor
 description: An interactive cursor effect that creates a dynamic trail of images following mouse movement with multiple animation variants.
 category: Cursor
 tags: [css, tailwind, cursor, codrops, gsap]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="ImageTrailCursorDemo.vue" config="ImageTrailCursorConfig" componentId="image-trail-cursor" :componentFiles='["ImageTrailCursor.vue", "trail-variants.ts"]' dependencies="gsap"}

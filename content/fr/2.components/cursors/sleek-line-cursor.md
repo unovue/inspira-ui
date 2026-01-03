@@ -3,7 +3,6 @@ title: Curseur ligne fluide
 description: Une traînée de curseur animée et réactive avec un mouvement ondulant, utilisant une physique de ressort et des ondes de couleur dynamiques.
 category: Curseur
 tags: [css, tailwind, cursor, webgl, cursify]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="SleekLineCursorDemo.vue" config="SleekLineCursorConfig" componentId="sleek-line-cursor" :componentFiles='["SleekLineCursor.vue"]'}

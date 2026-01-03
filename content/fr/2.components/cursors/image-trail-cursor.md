@@ -3,7 +3,6 @@ title: Curseur à traînée d'images
 description: Un effet de curseur interactif qui crée une traînée dynamique d'images suivant le mouvement de la souris, avec plusieurs variantes d'animation.
 category: Curseur
 tags: [css, tailwind, cursor, codrops, gsap]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="ImageTrailCursorDemo.vue" config="ImageTrailCursorConfig" componentId="image-trail-cursor" :componentFiles='["ImageTrailCursor.vue", "trail-variants.ts"]' dependencies="gsap"}

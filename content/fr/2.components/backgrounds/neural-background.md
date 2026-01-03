@@ -3,7 +3,6 @@ title: Fond neuronal
 description: Un fond animé dynamique propulsé par shader, avec des visuels fluides de type réseau neuronal, utilisant OGL et GLSL.
 category: Arrière-plan
 tags: [css, tailwind, background, ogl, webgl, cursify]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="NeuralBgDemo.vue" config="NeuralBgConfig" componentId="bg-neural" :componentFiles='["NeuralBg.vue"]'}

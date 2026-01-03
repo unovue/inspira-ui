@@ -3,7 +3,6 @@ title: Stractium Background
 description: A shader-based background inspired by intricate fractal patterns and organic textures, created using raymarching and GLSL. This effect is designed to simulate complex, evolving visual textures.
 category: Background
 tags: [css, tailwind, background, shader-toy, webgl, ogl]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="StractiumBackgroundDemo.vue" config="StractiumBackgroundConfig" componentId="bg-stractium" :componentFiles='["StractiumBackground.vue"]'}

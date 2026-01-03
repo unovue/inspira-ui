@@ -3,7 +3,6 @@ title: Silk Background
 description: A soft, flowing shader-powered background inspired by silk fabric motion and texture, rendered using ShaderToy.
 category: Background
 tags: [css, tailwind, background, shader-toy, ogl, webgl]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="SilkBackgroundDemo.vue" config="SilkBackgroundConfig" componentId="bg-silk" :componentFiles='["SilkBackground.vue"]'}

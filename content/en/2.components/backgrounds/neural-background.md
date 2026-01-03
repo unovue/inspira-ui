@@ -3,7 +3,6 @@ title: Neural Background
 description: A dynamic, shader-powered animated background with fluid neural-like visuals using OGL and GLSL.
 category: Background
 tags: [css, tailwind, background, ogl, webgl, cursify]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="NeuralBgDemo.vue" config="NeuralBgConfig" componentId="bg-neural" :componentFiles='["NeuralBg.vue"]'}
