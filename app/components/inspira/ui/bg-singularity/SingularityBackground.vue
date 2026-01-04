@@ -9,6 +9,10 @@ interface Props {
   speed?: number;
   mouseSensitivity?: number;
   damping?: number;
+  noise?: {
+    opacity: number;
+    scale: number;
+  };
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -80,12 +84,7 @@ void mainImage(out vec4 O, vec2 F)
   >
     <ShaderToy
       :shader-code="shader"
-      :hue="props.hue"
-      :saturation="props.saturation"
-      :brightness="props.brightness"
-      :speed="props.speed"
-      :mouse-sensitivity="props.mouseSensitivity"
-      :damping="props.damping"
+      v-bind="props"
     />
   </div>
 </template>

@@ -6,6 +6,10 @@ export interface Model {
   speed: number;
   mouseSensitivity: number;
   damping: number;
+  noise: {
+    opacity: number;
+    scale: number;
+  };
 }
 
 const model = defineModel<Model>();
@@ -87,6 +91,29 @@ const model = defineModel<Model>();
         :min="0"
         :max="1"
         :step="0.01"
+      />
+    </UFormField>
+
+    <UFormField
+      label="noise.opacity"
+      class="form-field"
+    >
+      <UInputNumber
+        v-model="model.noise.opacity"
+        class="w-full"
+        :min="0"
+        :step="0.01"
+      />
+    </UFormField>
+
+    <UFormField
+      label="noise.scale"
+      class="form-field"
+    >
+      <UInputNumber
+        v-model="model.noise.scale"
+        class="w-full"
+        :min="0"
       />
     </UFormField>
   </template>

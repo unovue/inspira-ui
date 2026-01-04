@@ -4,6 +4,11 @@ import type { MouseMode } from "./InspiraShaderToy";
 import { onMounted, onUnmounted, ref, watch } from "vue";
 import { InspiraShaderToy } from "./InspiraShaderToy";
 
+interface NoiseConfig {
+  opacity: number;
+  scale: number;
+}
+
 interface Props {
   mouseMode?: MouseMode;
   class?: HTMLAttributes["class"];
@@ -14,6 +19,7 @@ interface Props {
   speed?: number;
   mouseSensitivity?: number;
   damping?: number;
+  noise?: NoiseConfig;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -119,9 +125,18 @@ watch(
 <template>
   <div
     ref="containerRef"
-    class="shadertoy-container"
+    class="shadertoy-container isolate"
     :class="[props.class]"
-  />
+  >
+    <div
+      v-if="props.noise && props.noise.opacity > 0"
+      class="absolute inset-0 z-10 bg-[url(https://framerusercontent.com/images/g0QcWrxr87K0ufOxIUFBakwYA8.png)] bg-repeat"
+      :style="{
+        backgroundSize: props.noise.scale * 200,
+        opacity: props.noise.opacity / 2,
+      }"
+    />
+  </div>
 </template>
 
 <style scoped>

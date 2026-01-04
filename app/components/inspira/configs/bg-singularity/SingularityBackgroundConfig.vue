@@ -9,6 +9,10 @@ const config = ref<ConfigModel>({
   speed: 1,
   mouseSensitivity: 1,
   damping: 0,
+  noise: {
+    opacity: 0,
+    scale: 1,
+  },
 });
 </script>
 

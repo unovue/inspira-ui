@@ -85,10 +85,7 @@ void mainImage(out vec4 fragColor, vec2 fragCoord) {
   >
     <ShaderToy
       :shader-code="shaderCode"
-      :hue="props.hue"
-      :saturation="props.saturation"
-      :brightness="props.brightness"
-      :speed="props.speed"
+      v-bind="props"
     />
   </div>
 </template>
