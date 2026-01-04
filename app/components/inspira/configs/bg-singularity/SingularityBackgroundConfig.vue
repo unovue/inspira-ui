@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Model as ConfigModel } from "@/components/common/shader-toy-config/ShaderToyConfig.vue";
+import type { Model as ConfigModel } from "@/components/common/shader-toy-config-manager/ShaderToyConfigManager.vue";
 import SingularityBackgroundDemo from "@/components/inspira/examples/bg-singularity/SingularityBackgroundDemo.vue";
 
 const config = ref<ConfigModel>({
@@ -18,7 +18,7 @@ const config = ref<ConfigModel>({
       <SingularityBackgroundDemo v-bind="config" />
     </template>
     <template #config>
-      <ShaderToyConfig v-model="config" />
+      <ShaderToyConfigManager v-model="config" />
     </template>
   </ComponentPlayground>
 </template>

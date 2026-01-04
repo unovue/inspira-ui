@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { Model as ConfigModel } from "@/components/common/shader-toy-config/ShaderToyConfig.vue";
+import type { Model as ConfigModel } from "@/components/common/shader-toy-config-manager/ShaderToyConfigManager.vue";
 
 const config = ref<ConfigModel>({
   hue: 0,
@@ -17,7 +17,7 @@ const config = ref<ConfigModel>({
       <ThunderstormBackgroundDemo v-bind="config" />
     </template>
     <template #config>
-      <ShaderToyConfig v-model="config" />
+      <ShaderToyConfigManager v-model="config" />
     </template>
   </ComponentPlayground>
 </template>
