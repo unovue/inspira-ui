@@ -4,10 +4,73 @@
 @theme static {
   --font-sans: "Geist", sans-serif;
   --ui-primary: black;
+
+  --color-background: var(--ui-bg);
+  --color-foreground: var(--ui-text);
+
+  --color-card: var(--ui-bg-elevated);
+  --color-card-foreground: var(--ui-text);
+
+  --color-popover: var(--ui-bg-elevated);
+  --color-popover-foreground: var(--ui-text);
+
+  --color-muted: var(--ui-bg-muted);
+  --color-muted-foreground: var(--ui-text-muted);
+
+  --color-accent: var(--ui-bg-accented);
+  --color-accent-foreground: var(--ui-text);
+
+  --color-border: var(--ui-border);
+  --color-input: var(--ui-border);
+
+  /* semantic */
+  --color-primary: var(--ui-primary);
+  --color-primary-foreground: var(--ui-text-inverted);
+
+  --color-secondary: var(--ui-secondary);
+  --color-secondary-foreground: var(--ui-text-inverted);
+
+  --color-destructive: var(--ui-error);
+  --color-destructive-foreground: var(--ui-text-inverted);
+
+  /* ring/focus (use with ring-[color] utilities) */
+  --color-ring: var(--ui-primary);
+
+  /* radius (shadcn uses this) */
+  --radius: var(--ui-radius);
 }
 
 :root {
   --ui-container: min(90rem, 100%);
+
+  --background: var(--ui-bg);
+  --foreground: var(--ui-text);
+
+  --card: var(--ui-bg-elevated);
+  --card-foreground: var(--ui-text);
+
+  --popover: var(--ui-bg-elevated);
+  --popover-foreground: var(--ui-text);
+
+  --muted: var(--ui-bg-muted);
+  --muted-foreground: var(--ui-text-muted);
+
+  --accent: var(--ui-bg-accented);
+  --accent-foreground: var(--ui-text);
+
+  --border: var(--ui-border);
+  --input: var(--ui-border);
+
+  --primary: var(--ui-primary);
+  --primary-foreground: var(--ui-text-inverted);
+
+  --secondary: var(--ui-secondary);
+  --secondary-foreground: var(--ui-text-inverted);
+
+  --destructive: var(--ui-error);
+  --destructive-foreground: var(--ui-text-inverted);
+
+  --ring: var(--ui-primary);
 }
 
 .dark {
