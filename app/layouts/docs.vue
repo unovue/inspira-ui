@@ -5,6 +5,7 @@ const isRoot = isRootPage();
 
 <template>
   <UMain class="relative -mt-16 pt-16">
+    <ComponentStatusMarquee class="relative mt-0" />
     <div class="dark:pattern-background-d pattern-background-l absolute inset-0 z-[-1]" />
     <AppHeaderNav />
     <UContainer>

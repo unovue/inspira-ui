@@ -10,7 +10,7 @@ const componentPath = computed(() => `/${locale.value}/components`);
   >
     <div class="flex max-w-4xl flex-col items-center justify-center gap-6 py-24">
       <h1
-        class="pointer-events-none my-8 bg-gradient-to-b from-black to-gray-500 bg-clip-text text-center text-6xl leading-none font-bold tracking-tight text-pretty whitespace-pre-wrap text-transparent max-md:text-5xl dark:from-white dark:to-gray-50/40"
+        class="pointer-events-none my-8 bg-linear-to-b from-black to-gray-500 bg-clip-text text-center text-6xl leading-none font-bold tracking-tight text-pretty whitespace-pre-wrap text-transparent max-md:text-5xl dark:from-white dark:to-gray-50/40"
       >
         Build beautiful websites using Vue & Nuxt
       </h1>

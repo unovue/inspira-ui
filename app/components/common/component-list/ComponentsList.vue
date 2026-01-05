@@ -9,7 +9,7 @@ interface Props {
 const { routePath = "/components" } = defineProps<Props>();
 const { locale } = useDocusI18n();
 
-const { data: components } = await useAsyncData("tools", () => {
+const { data: components } = await useAsyncData("component_collection", () => {
   return queryCollection(`docs_${locale.value}` as any).all() as Promise<DocsEnCollectionItem[]>;
 });
 
