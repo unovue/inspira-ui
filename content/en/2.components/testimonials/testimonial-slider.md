@@ -1,8 +1,8 @@
 ---
 title: Testimonial Slider
 description: A lightweight testimonial slider with image rotation, text transitions, and optional auto‑rotation.
-category: Miscellaneous
-tags: [css, tailwind]
+category: Testimonials
+tags: [css, tailwind, testimonial]
 ---
 
 ::ComponentViewer{demoFile="TestimonialSliderDemo.vue" config="TestimonialSliderConfig" componentId="testimonial-slider" :componentFiles='["TestimonialSlider.vue"]'}

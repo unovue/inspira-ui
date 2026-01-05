@@ -1,8 +1,8 @@
 ---
 title: Animated Testimonials
 description: An engaging and animated testimonial component showcasing user feedback with transitions and auto-play functionality.
-category: Miscellaneous
-tags: [css, tailwind, aceternity-ui]
+category: Testimonials
+tags: [css, tailwind, aceternity-ui, testimonial]
 ---
 
 ::ComponentViewer{demoFile="AnimatedTestimonialsDemo.vue" config="AnimatedTestimonialsConfig" componentId="animated-testimonials" :componentFiles='["AnimatedTestimonials.vue"]'}
