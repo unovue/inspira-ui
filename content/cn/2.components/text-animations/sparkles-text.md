@@ -1,7 +1,7 @@
 ---
 title: 闪光文字
 description: 为文字持续生成闪光与平滑过渡，非常适合突出显示的星光效果。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

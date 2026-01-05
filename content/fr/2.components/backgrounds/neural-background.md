@@ -1,7 +1,7 @@
 ---
 title: Fond neuronal
 description: Un fond animé dynamique propulsé par shader, avec des visuels fluides de type réseau neuronal, utilisant OGL et GLSL.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, ogl, webgl, cursify]
 ---
 

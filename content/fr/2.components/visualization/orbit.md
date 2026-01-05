@@ -1,7 +1,7 @@
 ---
 title: Orbite
 description: Un composant qui anime du contenu sur une orbite circulaire, avec durée, délai et rayon personnalisables, et une option pour afficher la trajectoire.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind, magic-ui]
 ---
 

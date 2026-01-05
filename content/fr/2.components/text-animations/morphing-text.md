@@ -1,7 +1,7 @@
 ---
 title: Texte morphing
 description: Le composant MorphingText fait passer en douceur un tableau de chaînes de texte pour un effet visuel fluide et engageant.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

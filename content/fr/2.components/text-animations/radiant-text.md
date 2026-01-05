@@ -1,7 +1,7 @@
 ---
 title: Texte rayonnant
 description: Un effet de reflet sur le texte.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

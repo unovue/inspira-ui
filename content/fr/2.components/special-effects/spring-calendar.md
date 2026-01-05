@@ -1,7 +1,7 @@
 ---
 title: Calendrier à ressorts
 description: Un widget de calendrier animé qui s'étend pour révéler les événements et propose des transitions Motion‑V fluides basées sur des ressorts.
-category: Effets spéciaux
+category: Special Effects
 tags: [css, tailwind, motion-v]
 ---
 

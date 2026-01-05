@@ -1,7 +1,7 @@
 ---
 title: Bento 网格
 description: 炫酷的 Bento 网格布局，可放置不同子组件。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, bento, aceternity-ui]
 ---
 

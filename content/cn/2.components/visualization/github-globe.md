@@ -1,7 +1,7 @@
 ---
 title: Github 地球
 description: 可自定义弧线、点与动画的 3D 互动地球可视化，灵感来自 Github。
-category: 可视化
+category: Visualization
 tags: [css, tailwind, threejs, aceternity-ui]
 badge: Updated
 ---

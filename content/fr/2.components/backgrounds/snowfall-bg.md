@@ -1,7 +1,7 @@
 ---
 title: Fond chute de neige
 description: Un magnifique effet de chute de neige animé appliqué en arrière-plan.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, canvas]
 ---
 

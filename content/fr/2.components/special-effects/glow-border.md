@@ -1,7 +1,7 @@
 ---
 title: Bordure lumineuse
 description: Un effet de bordure animée.
-category: Effets spéciaux
+category: Special Effects
 tags: [css, tailwind, magic-ui]
 ---
 

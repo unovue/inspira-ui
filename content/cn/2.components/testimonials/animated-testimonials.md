@@ -1,7 +1,7 @@
 ---
 title: 动态评价
 description: 展示用户反馈的动态组件，包含过渡与自动播放功能。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

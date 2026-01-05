@@ -1,7 +1,7 @@
 ---
 title: Fond à motifs
 description: Un fond animé simple pour faire ressortir vos sections.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, magic-ui]
 badge: "Updated"
 ---

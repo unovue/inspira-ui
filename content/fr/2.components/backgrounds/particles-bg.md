@@ -1,7 +1,7 @@
 ---
 title: Fond particules
 description: Les particules apportent de la dynamique et de la profondeur à vos visuels web, créant une impression de mouvement et d'interaction.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, magic-ui, canvas]
 ---
 

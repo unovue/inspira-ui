@@ -1,7 +1,7 @@
 ---
 title: Stractium 背景
 description: 基于着色器的背景，灵感来自复杂分形与有机纹理，使用光线步进与 GLSL 创建不断演化的视觉效果。
-category: 背景
+category: Background
 tags: [css, tailwind, background, shader-toy, webgl, ogl]
 ---
 

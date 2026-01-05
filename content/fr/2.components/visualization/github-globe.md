@@ -1,7 +1,7 @@
 ---
 title: Globe Github
 description: Une visualisation 3D interactive d'un globe avec arcs, points et options d'animation personnalisables, inspirée de Github.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind, threejs, aceternity-ui]
 badge: Updated
 ---

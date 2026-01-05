@@ -1,7 +1,7 @@
 ---
 title: Galerie extensible
 description: Une galerie d'images réactive avec effet interactif au survol qui agrandit les images dynamiquement.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, gallery]
 ---
 

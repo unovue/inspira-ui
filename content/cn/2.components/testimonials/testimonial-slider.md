@@ -1,7 +1,7 @@
 ---
 title: 评价滑块
 description: 轻量的评价滑块，包含图片旋转、文字过渡与可选自动轮播。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind]
 ---
 

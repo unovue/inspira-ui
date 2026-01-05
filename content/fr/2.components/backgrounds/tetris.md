@@ -1,7 +1,7 @@
 ---
 title: Tetris
 description: Composant de fond Tetris : vous pouvez même cliquer sur un bloc pour l'éliminer.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background]
 ---
 

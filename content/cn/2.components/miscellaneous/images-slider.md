@@ -1,7 +1,7 @@
 ---
 title: 图片滑块
 description: 全屏图片滑块，可使用键盘导航。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, images, aceternity-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 波浪背景
 description: 流动的波浪背景效果。
-category: 背景
+category: Background
 tags: [css, tailwind, background, simplex-noise, aceternity-ui]
 ---
 

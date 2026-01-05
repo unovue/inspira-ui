@@ -1,7 +1,7 @@
 ---
 title: Carte sensible à la direction du survol
 description: Une carte qui détecte la direction du survol, affichant une image avec effets dynamiques et contenu superposé personnalisable.
-category: Carte
+category: Card
 tags: [css, tailwind, card, aceternity-ui]
 ---
 

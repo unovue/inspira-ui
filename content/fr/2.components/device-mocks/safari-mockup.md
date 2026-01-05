@@ -1,7 +1,7 @@
 ---
 title: Maquette Safari
 description: Une maquette SVG du navigateur Safari.
-category: Maquette d'appareil
+category: Device Mockup
 tags: [css, tailwind, device-mockup, magic-ui]
 ---
 

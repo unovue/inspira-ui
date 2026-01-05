@@ -1,7 +1,7 @@
 ---
 title: Bordure néon
 description: Une bordure néon esthétique avec animations et couleurs personnalisables.
-category: Effets spéciaux
+category: Special Effects
 tags: [css, tailwind, border]
 ---
 

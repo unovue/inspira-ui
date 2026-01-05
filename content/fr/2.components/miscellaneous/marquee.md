@@ -1,7 +1,7 @@
 ---
 title: Marquee
 description: Un composant défilant personnalisable qui boucle son contenu horizontalement ou verticalement, avec direction, pause au survol et répétitions configurables.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, magic-ui]
 ---
 

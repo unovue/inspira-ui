@@ -1,7 +1,7 @@
 ---
 title: Carte avec reflet
 description: Un effet de reflet au survol, comme sur le site de Linear.
-category: Carte
+category: Card
 tags: [css, tailwind, card, aceternity-ui]
 ---
 

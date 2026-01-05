@@ -1,7 +1,7 @@
 ---
 title: 交互网格图案
 description: 采用 SVG 制作的交互式网格背景，完全可自定义。
-category: 背景
+category: Background
 tags: [css, tailwind, background, svg, magic-ui]
 ---
 

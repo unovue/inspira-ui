@@ -1,7 +1,7 @@
 ---
 title: 流线光标
 description: 具有平滑波动尾迹的响应式动画光标，使用弹簧物理和动态色彩波动。
-category: 光标
+category: Cursor
 tags: [css, tailwind, cursor, webgl, cursify]
 ---
 

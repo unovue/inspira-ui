@@ -1,7 +1,7 @@
 ---
 title: Logo liquide
 description: Un composant avancé basé sur WebGL qui applique un effet liquide dynamique à des logos ou images via des shaders personnalisés.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind, webgl, paper]
 ---
 

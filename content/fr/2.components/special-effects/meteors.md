@@ -1,7 +1,7 @@
 ---
 title: Pluie de météores
 description: Un composant affichant une animation de pluie de météores avec nombre et style personnalisables.
-category: Effets spéciaux
+category: Special Effects
 tags: [css, tailwind, aceternity-ui]
 ---
 

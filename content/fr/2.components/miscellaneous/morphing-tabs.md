@@ -1,7 +1,7 @@
 ---
 title: Onglets morphing
 description: Une interaction d'onglets morphing recréée à partir du travail de Preet et intégrant un effet gooey.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind]
 ---
 

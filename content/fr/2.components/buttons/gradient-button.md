@@ -1,7 +1,7 @@
 ---
 title: Bouton dégradé
 description: Un bouton animé élégant avec une bordure en dégradé conique rotatif et des propriétés personnalisables pour un rendu dynamique.
-category: Bouton
+category: Button
 tags: [css, tailwind, button]
 ---
 

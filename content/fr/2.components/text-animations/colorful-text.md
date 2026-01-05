@@ -1,7 +1,7 @@
 ---
 title: Texte coloré
 description: Un composant texte avec couleurs variées, effets de filtre et d'échelle.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 

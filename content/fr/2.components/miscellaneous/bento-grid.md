@@ -1,7 +1,7 @@
 ---
 title: Grille bento
 description: Une grille soignée pouvant accueillir différents composants enfants.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, bento, aceternity-ui]
 ---
 

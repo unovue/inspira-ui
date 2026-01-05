@@ -1,7 +1,7 @@
 ---
 title: 放大镜
 description: 用于放大图片、视频或任意元素的镜头组件。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

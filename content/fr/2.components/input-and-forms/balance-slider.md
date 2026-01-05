@@ -1,7 +1,7 @@
 ---
 title: Curseur d'équilibre
 description: Un curseur d'équilibre dynamique avec couleurs ajustables, limites configurables et info-bulle interactive.
-category: Formulaires et saisie
+category: Forms & Input
 tags: [css, tailwind, input]
 ---
 

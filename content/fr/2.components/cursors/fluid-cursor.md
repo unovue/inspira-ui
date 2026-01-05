@@ -1,7 +1,7 @@
 ---
 title: Curseur fluide
 description: Une traînée de curseur animée, accélérée par GPU, qui simule un mouvement fluide.
-category: Curseur
+category: Cursor
 tags: [css, tailwind, cursor, webgl, cursify]
 ---
 

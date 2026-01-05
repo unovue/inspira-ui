@@ -1,7 +1,7 @@
 ---
 title: Compteur numérique
 description: Anime des nombres pour compter à la hausse ou à la baisse jusqu'à une valeur cible.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

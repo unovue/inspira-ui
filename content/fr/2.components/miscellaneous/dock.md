@@ -1,7 +1,7 @@
 ---
 title: Dock
 description: Un dock façon macOS avec agrandissement des icônes au survol.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind]
 ---
 

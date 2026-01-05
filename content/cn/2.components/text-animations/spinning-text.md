@@ -1,7 +1,7 @@
 ---
 title: 旋转文字
 description: 让文字沿圆周运动的动画组件，可自定义速度、方向、颜色与过渡，打造动态效果。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

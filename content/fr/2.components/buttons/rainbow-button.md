@@ -1,7 +1,7 @@
 ---
 title: Bouton arc-en-ciel
 description: Un effet arc-en-ciel appliqué au bouton.
-category: Bouton
+category: Button
 tags: [css, tailwind, button, magic-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 图像尾迹光标
 description: 一种交互式光标效果，鼠标移动时呈现动态的图像尾迹，并提供多种动画变体。
-category: 光标
+category: Cursor
 tags: [css, tailwind, cursor, codrops, gsap]
 ---
 

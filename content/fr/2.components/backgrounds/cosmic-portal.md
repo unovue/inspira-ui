@@ -1,7 +1,7 @@
 ---
 title: Portail cosmique
 description: Un portail 3D animé impressionnant, réalisé avec Three.js, comprenant des anneaux lumineux, des cristaux flottants, une distorsion spatiale et des flux interdimensionnels.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, threejs, postprocessing]
 ---
 

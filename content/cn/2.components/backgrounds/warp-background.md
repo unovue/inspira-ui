@@ -1,7 +1,7 @@
 ---
 title: 扭曲背景
 description: 为子元素添加扭曲动画效果的容器组件。
-category: 背景
+category: Background
 tags: [css, tailwind, background, magic-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: SVG 遮罩
 description: 通过悬停与鼠标移动揭示内容的动态 SVG 遮罩组件。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

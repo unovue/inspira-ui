@@ -1,7 +1,7 @@
 ---
 title: 盒子揭示
 description: 可自定义颜色、时长与延迟的盒子揭示动画。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

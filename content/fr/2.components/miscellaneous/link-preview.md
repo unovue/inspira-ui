@@ -1,7 +1,7 @@
 ---
 title: Aperçu de lien
 description: Aperçus dynamiques pour vos balises de lien.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

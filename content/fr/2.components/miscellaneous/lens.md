@@ -1,7 +1,7 @@
 ---
 title: Loupe
 description: Un composant loupe pour zoomer sur des images, vidéos ou tout autre contenu.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

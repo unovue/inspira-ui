@@ -1,7 +1,7 @@
 ---
 title: 卡片聚光效果
 description: 一款带有动态聚光灯效果的卡片组件，光标移动时跟随，增强视觉互动。
-category: 卡片
+category: Card
 tags: [css, tailwind, card, magic-ui]
 ---
 

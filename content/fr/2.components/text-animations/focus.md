@@ -1,7 +1,7 @@
 ---
 title: Focus
 description: Met en évidence des mots dans une phrase avec un effet de flou dynamique et un cadre animé. Prend en charge le cycle automatique ou un mode focus au survol.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, codepen]
 ---
 

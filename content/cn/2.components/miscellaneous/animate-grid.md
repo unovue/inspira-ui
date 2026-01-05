@@ -1,7 +1,7 @@
 ---
 title: 动画网格
 description: 倾斜动画网格，带投影效果。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, input]
 ---
 

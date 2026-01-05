@@ -1,7 +1,7 @@
 ---
 title: Dock
 description: 类似 macOS 的 Dock，悬停时放大图标。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind]
 ---
 

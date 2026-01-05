@@ -1,7 +1,7 @@
 ---
 title: 动画列表
 description: 逐个引入的动画列表，适合在落地页展示通知或事件。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, magic-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 液态玻璃效果
 description: 使用 SVG 置换滤镜实现的玻璃拟态效果，类似 Apple Liquid Glass。
-category: 可视化
+category: Visualization
 tags: [css, tailwind, apple, svg]
 ---
 

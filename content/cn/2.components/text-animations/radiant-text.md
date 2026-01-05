@@ -1,7 +1,7 @@
 ---
 title: 光辉文字
 description: 为文字添加耀眼的高光效果。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

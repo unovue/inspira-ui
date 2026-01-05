@@ -1,7 +1,7 @@
 ---
 title: 无限网格
 description: 使用 OGL 构建的高性能交互式 3D 无限网格组件，效果类似 phantom.land。
-category: 可视化
+category: Visualization
 tags: [css, tailwind, phantom-land, ogl, webgl]
 ---
 

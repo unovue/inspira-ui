@@ -1,7 +1,7 @@
 ---
 title: Comparaison
 description: Faites glisser pour comparer deux contenus – images, maquettes, code ou éléments personnalisés.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Scroll Island
 description: Un composant interactif affichant la progression de défilement avec des visuels animés et une zone extensible pour du contenu supplémentaire.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, number-flow]
 ---
 

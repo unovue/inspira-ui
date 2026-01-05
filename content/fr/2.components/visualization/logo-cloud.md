@@ -1,7 +1,7 @@
 ---
 title: Nuage de logos animé
 description: Un nuage de logos d'entreprises animé, idéal pour présenter des partenaires ou clients.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind]
 ---
 

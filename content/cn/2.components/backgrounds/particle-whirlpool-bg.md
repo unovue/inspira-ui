@@ -1,7 +1,7 @@
 ---
 title: 粒子漩涡
 description: 带有旋转粒子的动画背景。
-category: 背景
+category: Background
 tags: [css, tailwind, background, threejs, postprocessing]
 ---
 

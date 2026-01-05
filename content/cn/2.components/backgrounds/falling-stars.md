@@ -1,7 +1,7 @@
 ---
 title: 流星背景
 description: 华丽的星空动画背景，带有发光和锐利拖尾效果。
-category: 背景
+category: Background
 tags: [css, tailwind, background, canvas]
 badge: "Updated"
 ---

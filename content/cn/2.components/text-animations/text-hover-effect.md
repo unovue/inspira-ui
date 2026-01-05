@@ -1,7 +1,7 @@
 ---
 title: 文字悬停效果
 description: 在悬停时为文字添加渐变描边与动画，灵感来自 x.ai。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind]
 ---
 

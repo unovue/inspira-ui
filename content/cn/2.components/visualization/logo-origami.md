@@ -1,7 +1,7 @@
 ---
 title: 折纸 Logo
 description: 带折纸效果的翻转 Logo 动画。
-category: 可视化
+category: Visualization
 tags: [css, tailwind, hover-dev]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Fond bulles
 description: Un fond animé avec des bulles flottantes.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, threejs]
 ---
 

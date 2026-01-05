@@ -1,7 +1,7 @@
 ---
 title: Nuage d'icônes
 description: Un nuage de tags 3D interactif.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind, magic-ui]
 ---
 

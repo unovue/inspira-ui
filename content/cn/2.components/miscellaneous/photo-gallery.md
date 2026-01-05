@@ -1,7 +1,7 @@
 ---
 title: 照片画廊
 description: 用精美的画廊展示团队风采。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, gallery]
 ---
 

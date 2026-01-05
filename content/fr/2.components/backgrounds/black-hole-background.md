@@ -1,7 +1,7 @@
 ---
 title: Fond trou noir
 description: Un fond hypnotisant sur canvas simulant un tunnel de « trou noir » avec disques animés, lignes radiales et particules.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, motion-v, canvas]
 ---
 

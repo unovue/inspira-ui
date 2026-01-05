@@ -1,7 +1,7 @@
 ---
 title: 地球
 description: 可交互的旋转地球组件。
-category: 可视化
+category: Visualization
 tags: [css, tailwind, cobe, magic-ui]
 ---
 

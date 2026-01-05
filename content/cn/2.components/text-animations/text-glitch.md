@@ -1,7 +1,7 @@
 ---
 title: 文字故障
 description: 为文字添加鲜明的故障效果，可自定义速度、阴影颜色，并可选择仅在悬停时触发。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind]
 ---
 

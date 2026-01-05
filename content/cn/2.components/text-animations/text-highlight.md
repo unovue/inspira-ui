@@ -1,7 +1,7 @@
 ---
 title: 文字高亮
 description: 为文字填充背景以突出显示的效果。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 

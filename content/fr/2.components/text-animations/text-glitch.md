@@ -1,7 +1,7 @@
 ---
 title: Texte glitch
 description: Crée un effet glitch coloré sur le texte avec vitesse, ombres et déclenchement au survol personnalisables.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind]
 ---
 

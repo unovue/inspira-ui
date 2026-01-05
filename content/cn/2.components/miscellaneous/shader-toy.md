@@ -1,7 +1,7 @@
 ---
 title: Shader Toy Viewer
 description: 在浏览器中渲染 ShaderToy GLSL 着色器的强大灵活组件。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, shader-toy, ogl, webgl]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 世界地图
 description: 展示带有动画弧线和脉冲点效果的可自定义世界地图。
-category: 可视化
+category: Visualization
 tags: [css, tailwind, aceternity-ui]
 ---
 

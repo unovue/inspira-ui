@@ -1,7 +1,7 @@
 ---
 title: Lettres en soulèvement
 description: Animation de texte où les lettres se soulèvent en décalé.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

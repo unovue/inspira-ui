@@ -1,7 +1,7 @@
 ---
 title: iPhone 模型
 description: iPhone 的 SVG 设备模型。
-category: 设备模型
+category: Device Mockup
 tags: [css, tailwind, device-mockup, magic-ui]
 ---
 

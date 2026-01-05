@@ -1,7 +1,7 @@
 ---
 title: Globe
 description: Un globe interactif en rotation.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind, cobe, magic-ui]
 ---
 

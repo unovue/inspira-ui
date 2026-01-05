@@ -1,7 +1,7 @@
 ---
 title: Visionneuse Shader Toy
 description: Un composant puissant et flexible pour rendre des shaders GLSL interactifs de ShaderToy dans le navigateur.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, shader-toy, ogl, webgl]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 渐变按钮
 description: 一款带有旋转圆锥渐变边框的时尚动效按钮，提供可自定义的属性，呈现活力效果。
-category: 按钮
+category: Button
 tags: [css, tailwind, button]
 ---
 

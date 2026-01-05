@@ -1,7 +1,7 @@
 ---
 title: Curseur fluide
 description: Un composant de curseur fluide et personnalisable, basé sur la physique, pour les applications Vue.
-category: Curseur
+category: Cursor
 tags: [css, tailwind, cursor, magic-ui]
 ---
 

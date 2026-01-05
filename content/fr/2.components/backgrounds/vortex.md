@@ -1,7 +1,7 @@
 ---
 title: Fond vortex
 description: Un fond ondulant et tourbillonnant, idéal pour les CTA et arrière-plans.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, aceternity-ui, motion-v, simplex-noise]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 雪花背景
 description: 优雅的雪花飘落动画背景。
-category: 背景
+category: Background
 tags: [css, tailwind, background, canvas]
 ---
 

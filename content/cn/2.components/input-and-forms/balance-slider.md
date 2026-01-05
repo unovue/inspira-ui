@@ -1,7 +1,7 @@
 ---
 title: 平衡滑块
 description: 具备可调颜色、限制和交互提示的动态平衡滑块。
-category: 表单与输入
+category: Forms & Input
 tags: [css, tailwind, input]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Effet de génération de texte
 description: Un effet sympa qui fait apparaître le texte au chargement, lettre par lettre.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 

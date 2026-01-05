@@ -1,7 +1,7 @@
 ---
 title: 线条阴影文字
 description: 为文字添加线条阴影效果，使其更具视觉吸引力。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

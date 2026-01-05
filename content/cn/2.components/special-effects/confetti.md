@@ -1,7 +1,7 @@
 ---
 title: 彩带
 description: 用于彩带动画的 Vue 组件。
-category: 特效
+category: Special Effects
 tags: [css, tailwind, canvas, magic-ui]
 ---
 

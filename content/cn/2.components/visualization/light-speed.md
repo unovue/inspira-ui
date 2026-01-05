@@ -1,7 +1,7 @@
 ---
 title: 光速动效
 description: 使用 Three.js 构建的高度可定制 3D 高速公路视觉效果，包含道路、车辆、灯光与失真等动画，可模拟沉浸式运动感。
-category: 可视化
+category: Visualization
 tags: [css, tailwind, threejs, codrops]
 ---
 

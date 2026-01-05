@@ -1,7 +1,7 @@
 ---
 title: Galerie courbée
 description: Une galerie 3D incurvée et défilante avec cartes d'images dynamiques et texte animé rendu avec WebGL et OGL.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind, ogl, webgl]
 ---
 

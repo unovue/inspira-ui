@@ -1,7 +1,7 @@
 ---
 title: 对比
 description: 通过滑动比较两组内容——图像、设计、代码或自定义元素。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

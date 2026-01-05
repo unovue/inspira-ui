@@ -1,7 +1,7 @@
 ---
 title: Fond liquide
 description: Un effet de fond réactif et dynamique utilisant OGL pour des visuels WebGL.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, ogl, webgl]
 ---
 

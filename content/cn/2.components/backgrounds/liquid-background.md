@@ -1,7 +1,7 @@
 ---
 title: 液态背景
 description: 使用 OGL 实现的响应式动态背景效果，基于 WebGL。
-category: 背景
+category: Background
 tags: [css, tailwind, background, ogl, webgl]
 ---
 

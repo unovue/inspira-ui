@@ -1,7 +1,7 @@
 ---
 title: Loader multi-étapes
 description: Un loader en plusieurs étapes pour les écrans, compatible avec des conditions asynchrones.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

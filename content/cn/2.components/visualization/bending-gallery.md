@@ -1,7 +1,7 @@
 ---
 title: 弯曲画廊
 description: 带曲面布局的可滚动 3D 画廊，使用 WebGL 与 OGL 渲染动态图片卡片和动画文字。
-category: 可视化
+category: Visualization
 tags: [css, tailwind, ogl, webgl]
 ---
 

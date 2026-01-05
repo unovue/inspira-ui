@@ -1,7 +1,7 @@
 ---
 title: Texte 3D
 description: Un composant de texte 3D élégant avec couleurs, ombres et options d'animation personnalisables.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, 3d]
 ---
 

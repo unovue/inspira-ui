@@ -1,7 +1,7 @@
 ---
 title: 图标云
 description: 交互式 3D 标签云组件。
-category: 可视化
+category: Visualization
 tags: [css, tailwind, magic-ui]
 ---
 

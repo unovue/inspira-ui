@@ -1,7 +1,7 @@
 ---
 title: 光晕搜索框
 description: 具有多重发光环与细微动画光晕的未来感搜索输入，为界面带来沉浸式体验。
-category: 表单与输入
+category: Forms & Input
 tags: [css, tailwind, input, ui-verse]
 ---
 

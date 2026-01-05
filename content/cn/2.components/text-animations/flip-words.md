@@ -1,7 +1,7 @@
 ---
 title: 翻转单词
 description: 循环翻转单词列表的组件。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 

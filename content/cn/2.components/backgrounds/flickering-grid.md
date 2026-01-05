@@ -1,7 +1,7 @@
 ---
 title: 闪烁网格
 description: 使用 Canvas 制作的闪烁网格背景，可通过 Tailwind CSS 完全自定义。
-category: 背景
+category: Background
 tags: [css, tailwind, background, canvas, magic-ui]
 ---
 

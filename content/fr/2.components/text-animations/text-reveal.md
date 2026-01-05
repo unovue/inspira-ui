@@ -1,7 +1,7 @@
 ---
 title: Révélation de texte
 description: Anime le texte ligne par ligne grâce à SplitText de GSAP pour des entrées fluides de mots ou de lignes.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, gsap]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 文件树
 description: 用于展示目录中文件与文件夹结构的组件。
-category: 可视化
+category: Visualization
 tags: [css, tailwind, magic-ui]
 ---
 

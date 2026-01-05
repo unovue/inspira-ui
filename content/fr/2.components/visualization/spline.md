@@ -1,7 +1,7 @@
 ---
 title: Spline
 description: Un wrapper Vue pour l'outil 3D Spline, avec événements et redimensionnement automatique.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind, spline]
 ---
 

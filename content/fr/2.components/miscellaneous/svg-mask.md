@@ -1,7 +1,7 @@
 ---
 title: Masque SVG
 description: Un composant de masque SVG dynamique qui révèle le contenu au survol et aux mouvements de souris.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Révélation floutée
 description: Un composant pour faire apparaître du contenu avec un flou progressif.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

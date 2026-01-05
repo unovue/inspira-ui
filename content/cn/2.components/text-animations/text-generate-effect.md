@@ -1,7 +1,7 @@
 ---
 title: 文字生成效果
 description: 炫酷的文字效果，在页面加载时逐字渐显。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 

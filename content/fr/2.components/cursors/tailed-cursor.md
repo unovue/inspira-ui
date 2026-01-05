@@ -1,7 +1,7 @@
 ---
 title: Curseur à ruban
 description: Une traînée de curseur en ruban coloré et fluide rendue en WebGL avec OGL, dotée de shaders dynamiques et d'effets d'animation personnalisables.
-category: Curseur
+category: Cursor
 tags: [css, tailwind, cursor, webgl, codrops]
 ---
 

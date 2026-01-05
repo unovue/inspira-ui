@@ -1,7 +1,7 @@
 ---
 title: Galerie photo
 description: Présentez votre équipe avec fierté grâce à ce superbe composant de galerie photo.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, gallery]
 ---
 

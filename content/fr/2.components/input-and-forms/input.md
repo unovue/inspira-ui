@@ -1,7 +1,7 @@
 ---
 title: Champ de saisie
 description: Un champ de saisie polyvalent et visuellement dynamique avec effet radial au survol, conçu pour les applications web modernes.
-category: Formulaires et saisie
+category: Forms & Input
 tags: [css, tailwind, input, aceternity-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 视频文字
 description: 带有视频背景的文字组件。
-category: 背景
+category: Background
 tags: [css, tailwind, background, magic-ui]
 ---
 

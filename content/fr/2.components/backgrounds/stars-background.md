@@ -1,7 +1,7 @@
 ---
 title: Fond étoilé
 description: Un fond de champ d'étoiles avec parallaxe, utilisant des couches en mouvement et des positions d'étoiles aléatoires.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, animate-ui, motion-v]
 ---
 

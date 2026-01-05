@@ -1,7 +1,7 @@
 ---
 title: Défilement conteneur
 description: Effet de défilement d'un conteneur qui transforme son contenu selon la progression, avec transitions fluides de mise à l'échelle et rotation.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

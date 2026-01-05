@@ -1,7 +1,7 @@
 ---
 title: 漩涡背景
 description: 波动、旋转的漩涡背景，适用于 CTA 与背景展示。
-category: 背景
+category: Background
 tags: [css, tailwind, background, aceternity-ui, motion-v, simplex-noise]
 ---
 

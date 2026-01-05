@@ -1,7 +1,7 @@
 ---
 title: Fond singularité
 description: Un fond basé sur un shader.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, shader-toy, webgl, ogl]
 badge: New
 ---

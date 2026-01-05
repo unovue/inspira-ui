@@ -1,7 +1,7 @@
 ---
 title: Révélation en boîte
 description: Un effet d'apparition animé avec boîte colorée, aux couleurs, durée et délai personnalisables.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Bouton à ondulation
 description: Un bouton élégant avec un effet d'onde personnalisable et une durée d'animation ajustable.
-category: Bouton
+category: Button
 tags: [css, tailwind, button, magic-ui]
 ---
 

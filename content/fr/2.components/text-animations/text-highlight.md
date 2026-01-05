@@ -1,7 +1,7 @@
 ---
 title: Surlignage de texte
 description: Un effet qui remplit l'arrière-plan du texte pour le mettre en valeur.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 

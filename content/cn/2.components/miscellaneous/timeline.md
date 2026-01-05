@@ -1,7 +1,7 @@
 ---
 title: 时间线
 description: 视觉化、交互式的时间线组件，带平滑动画、粘性标签与渐变滚动效果。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

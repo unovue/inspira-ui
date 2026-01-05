@@ -1,7 +1,7 @@
 ---
 title: 弹性日历
 description: 带弹簧动画的日历组件，可展开查看事件，使用 Motion-V 实现平滑过渡。
-category: 特效
+category: Special Effects
 tags: [css, tailwind, motion-v]
 ---
 

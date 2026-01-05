@@ -1,7 +1,7 @@
 ---
 title: 涟漪
 description: 用于突出元素的动画涟漪效果。
-category: 背景
+category: Background
 tags: [css, tailwind, background, magic-ui]
 ---
 

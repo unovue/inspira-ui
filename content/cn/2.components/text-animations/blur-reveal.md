@@ -1,7 +1,7 @@
 ---
 title: 模糊揭示
 description: 平滑模糊淡入内容的组件。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

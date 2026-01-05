@@ -1,7 +1,7 @@
 ---
 title: Témoignages animés
 description: Un composant de témoignages animé et attractif, présentant les retours utilisateurs avec transitions et lecture automatique.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 彩虹按钮
 description: 在按钮上呈现彩虹效果。
-category: 按钮
+category: Button
 tags: [css, tailwind, button, magic-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Fond orageux
 description: Un fond basé sur un shader, inspiré d'un orage dans les nuages.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, shader-toy, webgl, ogl]
 badge: New
 ---

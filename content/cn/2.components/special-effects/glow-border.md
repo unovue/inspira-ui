@@ -1,7 +1,7 @@
 ---
 title: 发光边框
 description: 动态的发光边框效果。
-category: 特效
+category: Special Effects
 tags: [css, tailwind, magic-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 数字滚动
 description: 动画数字向目标值递增或递减。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

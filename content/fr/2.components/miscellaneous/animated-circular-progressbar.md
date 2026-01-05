@@ -1,7 +1,7 @@
 ---
 title: Barre de progression circulaire animée
 description: Une barre de progression circulaire animée qui affiche une jauge avec valeur en pourcentage.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, input, magic-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 占位符滚动与消失输入框
 description: 输入框占位符滑入，并在提交时呈现消失效果。
-category: 表单与输入
+category: Forms & Input
 tags: [css, tailwind, input, aceternity-ui]
 ---
 

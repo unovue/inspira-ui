@@ -1,7 +1,7 @@
 ---
 title: Carte du monde
 description: Affiche une carte du monde personnalisable avec des arcs animés et des effets de pulsation sur les points géographiques.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind, aceternity-ui]
 ---
 

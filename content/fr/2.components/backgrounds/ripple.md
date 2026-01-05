@@ -1,7 +1,7 @@
 ---
 title: Ondes concentriques
 description: Un effet d'ondulation animé, souvent utilisé derrière des éléments pour les mettre en valeur.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, magic-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 丝绸背景
 description: 柔和流动的着色器背景，灵感来自丝绸纹理与运动，基于 ShaderToy。
-category: 背景
+category: Background
 tags: [css, tailwind, background, shader-toy, ogl, webgl]
 ---
 

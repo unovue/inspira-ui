@@ -1,7 +1,7 @@
 ---
 title: Fond soyeux
 description: Un fond doux et fluide propulsé par shader, inspiré du mouvement et de la texture de la soie, rendu avec ShaderToy.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, shader-toy, ogl, webgl]
 ---
 

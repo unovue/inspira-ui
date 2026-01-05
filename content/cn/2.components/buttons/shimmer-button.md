@@ -1,7 +1,7 @@
 ---
 title: 闪光按钮
 description: 一款带有闪烁动画效果的按钮。
-category: 按钮
+category: Button
 tags: [css, tailwind, button, magic-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Hyper texte
 description: Une animation de texte changeant rapidement au survol.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

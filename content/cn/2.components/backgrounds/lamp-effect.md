@@ -1,7 +1,7 @@
 ---
 title: 灯光效果
 description: 引人注目的灯光效果，包含圆锥渐变、聚光与发光线，带来沉浸式视觉体验。
-category: 背景
+category: Background
 tags: [css, tailwind, background, aceternity-ui]
 ---
 

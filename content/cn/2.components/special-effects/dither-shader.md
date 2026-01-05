@@ -1,7 +1,7 @@
 ---
 title: 抖动着色器
 description: 用于图像的实时有序抖动效果，非常适合像素艺术和复古风格。
-category: 特效
+category: Special Effects
 tags: [tailwind, background, card, aceternity-ui]
 badge: New
 ---

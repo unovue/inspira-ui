@@ -1,7 +1,7 @@
 ---
 title: Apple 卡片轮播
 description: 一款流畅的 Apple 风格卡片轮播，支持模糊加载图片、模态展开和平滑滚动控制。
-category: 卡片
+category: Card
 tags: [css, tailwind, card, aceternity-ui]
 ---
 

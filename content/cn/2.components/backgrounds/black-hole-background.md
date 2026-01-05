@@ -1,7 +1,7 @@
 ---
 title: 黑洞背景
 description: 令人沉浸的画布背景效果，模拟扭曲的“黑洞”隧道，包含动画圆盘、放射线与粒子。
-category: 背景
+category: Background
 tags: [css, tailwind, background, motion-v, canvas]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Gratter pour révéler
 description: Le composant ScratchToReveal crée un effet à gratter interactif avec dimensions et animations personnalisables, révélant le contenu caché en dessous.
-category: Effets spéciaux
+category: Special Effects
 tags: [css, tailwind, magic-ui]
 ---
 

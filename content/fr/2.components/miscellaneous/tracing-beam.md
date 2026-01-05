@@ -1,7 +1,7 @@
 ---
 title: Faisceau traçant
 description: Un composant qui rend un effet de faisceau traçant avec animations de défilement dynamiques et traits en dégradé.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

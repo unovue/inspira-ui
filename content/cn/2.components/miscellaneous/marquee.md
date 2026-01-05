@@ -1,7 +1,7 @@
 ---
 title: 跑马灯
 description: 可定制的循环滚动组件，支持水平/垂直方向、悬停暂停与重复次数。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, magic-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Curseur ligne fluide
 description: Une traînée de curseur animée et réactive avec un mouvement ondulant, utilisant une physique de ressort et des ondes de couleur dynamiques.
-category: Curseur
+category: Cursor
 tags: [css, tailwind, cursor, webgl, cursify]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Arborescence de fichiers
 description: Un composant pour présenter la structure de dossiers et fichiers d'un répertoire.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind, magic-ui]
 ---
 

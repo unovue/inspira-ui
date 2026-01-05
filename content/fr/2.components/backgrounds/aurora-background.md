@@ -1,7 +1,7 @@
 ---
 title: Fond Aurore
 description: Un fond discret inspiré des aurores boréales pour votre site.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, aceternity-ui]
 ---
 

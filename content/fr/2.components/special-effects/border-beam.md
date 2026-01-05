@@ -1,7 +1,7 @@
 ---
 title: Rayon de bordure
 description: Un effet de rayon animé le long d'une bordure, avec taille, durée, couleurs et délai personnalisables.
-category: Effets spéciaux
+category: Special Effects
 tags: [css, tailwind, magic-ui]
 ---
 

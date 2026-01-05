@@ -1,7 +1,7 @@
 ---
 title: Bouton scintillant
 description: Un bouton doté d'un effet de scintillement animé.
-category: Bouton
+category: Button
 tags: [css, tailwind, button, magic-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Étincelles
 description: Un composant d'étincelles configurable, utilisable comme arrière-plan ou composant autonome.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, canvas]
 ---
 

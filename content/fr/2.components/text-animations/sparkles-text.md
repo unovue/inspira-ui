@@ -1,7 +1,7 @@
 ---
 title: Texte étincelant
 description: Un texte dynamique qui génère en continu des étincelles avec des transitions fluides, idéal pour mettre en valeur du texte avec des étoiles animées.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

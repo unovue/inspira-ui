@@ -1,7 +1,7 @@
 ---
 title: 发光效果
 description: 基于距离的动态发光效果，对鼠标移动与滚动作出响应，适合突出可交互元素。
-category: 特效
+category: Special Effects
 tags: [css, tailwind, aceternity-ui]
 ---
 

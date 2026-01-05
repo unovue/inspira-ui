@@ -1,7 +1,7 @@
 ---
 title: Effet de texte au survol
 description: Un effet de survol qui anime et trace un dégradé autour du texte, comme sur x.ai.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind]
 ---
 

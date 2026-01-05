@@ -1,7 +1,7 @@
 ---
 title: Image en particules
 description: Une animation de particules appliquée aux images, comme sur NuxtLabs.com.
-category: Effets spéciaux
+category: Special Effects
 tags: [css, tailwind, canvas, particles]
 ---
 

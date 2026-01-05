@@ -1,7 +1,7 @@
 ---
 title: Témoignages design
 description: Une section de témoignages premium et orientée design, avec typographie cinématographique, parallaxe magnétique, animations mot à mot et navigation en lecture automatique.
-category: Divers
+category: Testimonials
 tags: [css, tailwind, motion-v, testimonial, animation]
 badge: New
 ---

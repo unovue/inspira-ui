@@ -1,7 +1,7 @@
 ---
 title: 多步加载器
 description: 多步骤加载组件，支持异步条件。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

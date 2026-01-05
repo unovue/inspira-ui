@@ -1,7 +1,7 @@
 ---
 title: Téléversement de fichier
 description: Un composant moderne de téléversement de fichiers avec effet de carte 3D, glisser-déposer et arrière-plan en grille réactive.
-category: Formulaires et saisie
+category: Forms & Input
 tags: [css, tailwind, input, aceternity-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 波纹按钮
 description: 一款带有可自定义颜色和动画时长的时尚波纹按钮组件。
-category: 按钮
+category: Button
 tags: [css, tailwind, button, magic-ui]
 ---
 

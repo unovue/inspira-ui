@@ -1,7 +1,7 @@
 ---
 title: 滚动岛
 description: 具备动态动画的交互组件，展示滚动进度，并带可展开的附加内容区域。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, number-flow]
 ---
 

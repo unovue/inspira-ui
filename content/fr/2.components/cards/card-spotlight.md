@@ -1,7 +1,7 @@
 ---
 title: Carte avec spot lumineux
 description: Une carte dotée d'un effet de projecteur dynamique qui suit le curseur, renforçant l'interactivité visuelle.
-category: Carte
+category: Card
 tags: [css, tailwind, card, magic-ui]
 ---
 

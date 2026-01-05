@@ -1,7 +1,7 @@
 ---
 title: 宇宙传送门
 description: 使用 Three.js 构建的震撼 3D 传送门，包含发光环、漂浮水晶、空间扭曲和次元流体。
-category: 背景
+category: Background
 tags: [css, tailwind, background, threejs, postprocessing]
 ---
 

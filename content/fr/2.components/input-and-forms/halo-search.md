@@ -1,7 +1,7 @@
 ---
 title: Recherche Halo
 description: Un champ de recherche futuriste doté d'anneaux lumineux et d'auras animées pour une expérience immersive.
-category: Formulaires et saisie
+category: Forms & Input
 tags: [css, tailwind, input, ui-verse]
 ---
 

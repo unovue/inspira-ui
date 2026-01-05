@@ -1,7 +1,7 @@
 ---
 title: Liste animée
 description: Une liste animée séquentielle qui introduit chaque élément avec un délai, idéale pour afficher des notifications ou des événements sur une landing page.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, magic-ui]
 ---
 

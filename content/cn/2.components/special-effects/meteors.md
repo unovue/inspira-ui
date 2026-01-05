@@ -1,7 +1,7 @@
 ---
 title: 流星雨
 description: 展示流星雨动画的组件，可自定义流星数量与样式。
-category: 特效
+category: Special Effects
 tags: [css, tailwind, aceternity-ui]
 ---
 

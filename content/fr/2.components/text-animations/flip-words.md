@@ -1,7 +1,7 @@
 ---
 title: Mots pivotants
 description: Un composant qui fait défiler une liste de mots en rotation.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 

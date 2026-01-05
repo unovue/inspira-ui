@@ -1,7 +1,7 @@
 ---
 title: 平滑光标
 description: 适用于 Vue 应用的可定制物理驱动平滑光标动画组件。
-category: 光标
+category: Cursor
 tags: [css, tailwind, cursor, magic-ui]
 ---
 

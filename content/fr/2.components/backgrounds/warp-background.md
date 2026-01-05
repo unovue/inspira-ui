@@ -1,7 +1,7 @@
 ---
 title: Fond Warp
 description: Un composant conteneur qui applique un effet de warp animé à ses enfants.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, magic-ui]
 ---
 

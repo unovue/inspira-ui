@@ -1,7 +1,7 @@
 ---
 title: 尾迹光标
 description: 使用 OGL 渲染的顺滑彩带尾迹光标，具备动态着色器和可定制的动画效果。
-category: 光标
+category: Cursor
 tags: [css, tailwind, cursor, webgl, codrops]
 ---
 

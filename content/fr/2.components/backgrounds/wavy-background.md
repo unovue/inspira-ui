@@ -1,7 +1,7 @@
 ---
 title: Fond ondulé
 description: Un effet de fond sympa avec des vagues en mouvement.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, simplex-noise, aceternity-ui]
 ---
 

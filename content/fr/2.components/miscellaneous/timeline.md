@@ -1,7 +1,7 @@
 ---
 title: Chronologie
 description: Une timeline interactive et esthétique avec animations fluides, étiquettes collantes et effet de dégradé au défilement.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

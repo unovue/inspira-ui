@@ -1,7 +1,7 @@
 ---
 title: 书本
 description: 可自定义尺寸与渐变的 3D 书本组件。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, x-ui]
 ---
 

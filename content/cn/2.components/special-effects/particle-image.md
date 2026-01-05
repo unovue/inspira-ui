@@ -1,7 +1,7 @@
 ---
 title: 粒子图像
 description: 将粒子动画应用到图像上的炫酷效果，类似 NuxtLabs.com 上的展示。
-category: 特效
+category: Special Effects
 tags: [css, tailwind, canvas, particles]
 ---
 

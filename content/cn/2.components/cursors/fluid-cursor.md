@@ -1,7 +1,7 @@
 ---
 title: 流体光标
 description: GPU 加速的动画光标尾迹，模拟流体运动。
-category: 光标
+category: Cursor
 tags: [css, tailwind, cursor, webgl, cursify]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 奇点背景
 description: 一个基于着色器的背景。
-category: 背景
+category: Background
 tags: [css, tailwind, background, shader-toy, webgl, ogl]
 badge: New
 ---

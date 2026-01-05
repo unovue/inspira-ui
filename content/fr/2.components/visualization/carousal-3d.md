@@ -1,7 +1,7 @@
 ---
 title: Carrousel 3D
 description: Un carrousel 3D dynamique et interactif utilisant Three.js et Motion-V, offrant une rotation infinie fluide et des interactions utilisateur.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind, threejs, motion-v]
 ---
 

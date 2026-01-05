@@ -1,7 +1,7 @@
 ---
 title: 粒子背景
 description: 粒子能为页面增加动态与沉浸感，营造深度、运动和交互的视觉效果。
-category: 背景
+category: Background
 tags: [css, tailwind, background, magic-ui, canvas]
 ---
 

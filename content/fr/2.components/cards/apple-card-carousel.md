@@ -1,7 +1,7 @@
 ---
 title: Carrousel de cartes Apple
 description: Un carrousel de cartes au style Apple, avec images floutées lors du chargement, extension en modal et commandes de défilement fluides.
-category: Carte
+category: Card
 tags: [css, tailwind, card, aceternity-ui]
 ---
 

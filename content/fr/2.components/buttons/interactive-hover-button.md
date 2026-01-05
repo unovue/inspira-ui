@@ -1,7 +1,7 @@
 ---
 title: Bouton interactif au survol
 description: Un bouton visuellement engageant qui réagit au survol avec des transitions dynamiques et s'adapte en douceur entre les modes clair et sombre pour une meilleure interactivité.
-category: Bouton
+category: Button
 tags: [css, tailwind, button, magic-ui]
 ---
 

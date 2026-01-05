@@ -1,7 +1,7 @@
 ---
 title: 方向感知悬停卡片
 description: 方向感知的悬停卡片，在悬停时显示带动态效果的图片，并提供可自定义的内容覆盖层。
-category: 卡片
+category: Card
 tags: [css, tailwind, card, aceternity-ui]
 ---
 

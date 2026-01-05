@@ -1,7 +1,7 @@
 ---
 title: Révélation au défilement
 description: Un composant qui dévoile le texte mot par mot pendant le défilement, avec texte et styles personnalisables.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

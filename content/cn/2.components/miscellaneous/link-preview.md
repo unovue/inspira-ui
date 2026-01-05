@@ -1,7 +1,7 @@
 ---
 title: 链接预览
 description: 为锚点生成动态链接预览。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

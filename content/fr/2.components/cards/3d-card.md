@@ -1,7 +1,7 @@
 ---
 title: Effet de carte 3D
 description: Un effet de perspective sur carte ; survolez la carte pour mettre en relief ses éléments.
-category: Carte
+category: Card
 tags: [css, tailwind, card, aceternity-ui]
 ---
 

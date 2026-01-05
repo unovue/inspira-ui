@@ -1,7 +1,7 @@
 ---
 title: 设计感评价
 description: 一个高级、设计优先的评价版块，包含电影感排版、磁性视差、逐词动画与自动轮播导航。
-category: 杂项
+category: Testimonials
 tags: [css, tailwind, motion-v, testimonial, animation]
 badge: New
 ---

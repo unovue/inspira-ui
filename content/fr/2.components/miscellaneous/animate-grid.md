@@ -1,7 +1,7 @@
 ---
 title: Grille animée
 description: Grille animée inclinée avec ombre portée.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, input]
 ---
 

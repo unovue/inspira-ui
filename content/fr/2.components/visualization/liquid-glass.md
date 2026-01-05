@@ -1,7 +1,7 @@
 ---
 title: Effet verre liquide
 description: Un effet de glassmorphism saisissant utilisant des filtres de déplacement SVG, similaire à l'effet Apple Liquid Glass.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind, apple, svg]
 ---
 

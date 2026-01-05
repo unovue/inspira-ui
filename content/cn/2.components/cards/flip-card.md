@@ -1,7 +1,7 @@
 ---
 title: 翻转卡片
 description: 一款动态的翻转卡片，沿 X 轴或 Y 轴平滑实现 180 度翻转，带来有趣的交互视觉效果。
-category: 卡片
+category: Card
 tags: [css, tailwind, card]
 ---
 

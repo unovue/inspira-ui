@@ -1,7 +1,7 @@
 ---
 title: 变形标签页
 description: 复刻 Preet 的胶状变形标签交互，包含粘连效果。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Grille infinie
 description: Une grille 3D infinie, interactive et performante, construite avec OGL comme vue sur phantom.land.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind, phantom-land, ogl, webgl]
 ---
 

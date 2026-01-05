@@ -1,7 +1,7 @@
 ---
 title: Effet lampe
 description: Un effet lumineux immersif avec dégradés coniques, spots et lignes lumineuses.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, aceternity-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Shader de tramage
 description: Effet de tramage ordonné en temps réel pour les images, idéal pour le pixel art et les esthétiques rétro.
-category: Effets spéciaux
+category: Special Effects
 tags: [tailwind, background, card, aceternity-ui]
 badge: New
 ---

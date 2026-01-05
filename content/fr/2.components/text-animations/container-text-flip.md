@@ -1,7 +1,7 @@
 ---
 title: Conteneur de mots pivotants
 description: Un conteneur qui fait défiler des mots en animant la largeur.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 

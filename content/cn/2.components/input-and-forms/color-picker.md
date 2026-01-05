@@ -1,7 +1,7 @@
 ---
 title: 取色器
 description: 全功能的取色组件，支持多种颜色格式、无障碍特性与自定义色板。
-category: 表单与输入
+category: Forms & Input
 tags: [css, tailwind, input, color-picker, uplusion23]
 ---
 

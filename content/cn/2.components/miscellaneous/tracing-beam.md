@@ -1,7 +1,7 @@
 ---
 title: 跟踪光束
 description: 渲染跟踪光束效果的组件，支持动态滚动动画与渐变描边。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

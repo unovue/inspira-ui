@@ -1,7 +1,7 @@
 ---
 title: 液态 Logo
 description: 基于 WebGL 的高级组件，通过自定义着色器为徽标或图像添加动态液态效果。
-category: 可视化
+category: Visualization
 tags: [css, tailwind, webgl, paper]
 ---
 

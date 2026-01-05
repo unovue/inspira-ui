@@ -1,7 +1,7 @@
 ---
 title: 文字变形
 description: 动态在一组文本之间切换，呈现平滑的渐变效果。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

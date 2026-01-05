@@ -1,7 +1,7 @@
 ---
 title: 可扩展画廊
 description: 响应式图片画廊，悬停时动态放大图片。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, gallery]
 ---
 

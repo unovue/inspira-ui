@@ -1,7 +1,7 @@
 ---
 title: Motif de grille interactif
 description: Un fond de grille interactif réalisé en SVG, entièrement personnalisable.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, svg, magic-ui]
 ---
 

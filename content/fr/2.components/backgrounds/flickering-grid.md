@@ -1,7 +1,7 @@
 ---
 title: Grille scintillante
 description: Un fond de grille scintillante réalisé avec Canvas, entièrement personnalisable via Tailwind CSS.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, canvas, magic-ui]
 ---
 

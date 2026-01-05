@@ -1,7 +1,7 @@
 ---
 title: Texte à ombre linéaire
 description: Un composant de texte avec ombre en ligne pour Magic UI, ajoutant un effet visuel accrocheur.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

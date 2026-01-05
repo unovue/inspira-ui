@@ -1,7 +1,7 @@
 ---
 title: 轨道动画
 description: 让内容沿圆轨道运动的组件，可自定义持续时间、延迟与半径，并可选择显示轨道路径。
-category: 可视化
+category: Visualization
 tags: [css, tailwind, magic-ui]
 ---
 

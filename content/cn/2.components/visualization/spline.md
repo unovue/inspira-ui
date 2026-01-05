@@ -1,7 +1,7 @@
 ---
 title: Spline
 description: Spline 3D 工具的 Vue 包装组件，提供事件与自动缩放。
-category: 可视化
+category: Visualization
 tags: [css, tailwind, spline]
 ---
 

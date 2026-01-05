@@ -1,7 +1,7 @@
 ---
 title: 字符上提
 description: 逐字上提的错落文字动画。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

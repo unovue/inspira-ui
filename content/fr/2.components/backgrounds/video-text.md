@@ -1,7 +1,7 @@
 ---
 title: Texte vidéo
 description: Un composant texte avec une vidéo en arrière-plan.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, magic-ui]
 ---
 

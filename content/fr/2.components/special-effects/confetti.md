@@ -1,7 +1,7 @@
 ---
 title: Confettis
 description: Un composant Vue pour des animations de confettis.
-category: Effets spéciaux
+category: Special Effects
 tags: [css, tailwind, canvas, magic-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Livre
 description: Un composant de livre 3D avec tailles et dégradés personnalisables.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, x-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 彩色文字
 description: 多彩文字组件，带滤镜与缩放效果。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 

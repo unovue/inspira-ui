@@ -1,7 +1,7 @@
 ---
 title: Effet lumineux
 description: Un effet lumineux réactif basé sur la proximité, qui répond aux mouvements de souris et au défilement pour mettre en valeur les éléments interactifs.
-category: Effets spéciaux
+category: Special Effects
 tags: [css, tailwind, aceternity-ui]
 ---
 

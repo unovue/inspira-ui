@@ -1,7 +1,7 @@
 ---
 title: Maquette iPhone
 description: Une maquette SVG d'iPhone.
-category: Maquette d'appareil
+category: Device Mockup
 tags: [css, tailwind, device-mockup, magic-ui]
 ---
 

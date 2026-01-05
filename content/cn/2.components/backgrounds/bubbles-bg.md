@@ -1,7 +1,7 @@
 ---
 title: 气泡背景
 description: 具有漂浮气泡的动画背景。
-category: 背景
+category: Background
 tags: [css, tailwind, background, threejs]
 ---
 

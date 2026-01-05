@@ -1,7 +1,7 @@
 ---
 title: 容器文字翻转
 description: 一个循环翻转单词的容器，并随文字宽度动画。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 

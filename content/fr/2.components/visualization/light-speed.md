@@ -1,7 +1,7 @@
 ---
 title: Vitesse lumière
 description: Un effet visuel de route 3D hautement personnalisable construit avec Three.js, incluant route animée, voitures, lumières et distorsions pour une simulation immersive du mouvement.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind, threejs, codrops]
 ---
 

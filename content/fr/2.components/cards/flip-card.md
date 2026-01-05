@@ -1,7 +1,7 @@
 ---
 title: Carte rotative
 description: Une carte dynamique avec des animations de rotation à 180 degrés sur les axes X et Y, offrant un effet visuel interactif et attrayant.
-category: Carte
+category: Card
 tags: [css, tailwind, card]
 ---
 

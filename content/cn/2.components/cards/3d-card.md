@@ -1,7 +1,7 @@
 ---
 title: 3D 卡片效果
 description: 具有透视效果的卡片，悬停时可让卡片元素提升。
-category: 卡片
+category: Card
 tags: [css, tailwind, card, aceternity-ui]
 ---
 

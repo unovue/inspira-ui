@@ -1,7 +1,7 @@
 ---
 title: Carte texte dévoilé
 description: Effet au mouvement de souris pour révéler du texte en bas de la carte.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 

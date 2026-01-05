@@ -1,7 +1,7 @@
 ---
 title: 星空背景
 description: 使用分层运动与随机星位的视差星空动画背景。
-category: 背景
+category: Background
 tags: [css, tailwind, background, animate-ui, motion-v]
 ---
 

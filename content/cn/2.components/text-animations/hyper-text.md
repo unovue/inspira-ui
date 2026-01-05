@@ -1,7 +1,7 @@
 ---
 title: 超能文字
 description: 悬停时快速变化的文字动画。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

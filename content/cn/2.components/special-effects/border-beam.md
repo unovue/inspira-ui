@@ -1,7 +1,7 @@
 ---
 title: 边框光束
 description: 可定制尺寸、时长、颜色与延迟的炫酷动画边框光束效果。
-category: 特效
+category: Special Effects
 tags: [css, tailwind, magic-ui]
 ---
 

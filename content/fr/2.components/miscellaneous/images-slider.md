@@ -1,7 +1,7 @@
 ---
 title: Slider d'images
 description: Un slider pleine page avec navigation clavier.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, images, aceternity-ui]
 ---
 

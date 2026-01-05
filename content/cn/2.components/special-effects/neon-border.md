@@ -1,7 +1,7 @@
 ---
 title: 霓虹边框
 description: 视觉吸引力强的霓虹边框组件，可自定义动画与颜色。
-category: 特效
+category: Special Effects
 tags: [css, tailwind, border]
 ---
 

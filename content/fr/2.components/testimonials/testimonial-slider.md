@@ -1,7 +1,7 @@
 ---
 title: Slider de témoignages
 description: Un slider de témoignages léger avec rotation d'image, transitions de texte et auto-rotation optionnelle.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 文字揭示卡片
 description: 鼠标移动时在卡片底部揭示文字的效果。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, aceternity-ui]
 ---
 

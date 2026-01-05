@@ -1,7 +1,7 @@
 ---
 title: 容器滚动
 description: 根据滚动进度变换内部内容的滚动效果，包含缩放与旋转的平滑过渡。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

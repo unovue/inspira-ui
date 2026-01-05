@@ -1,7 +1,7 @@
 ---
 title: Fond Stractium
 description: Un fond basé sur des shaders, inspiré de motifs fractals complexes et de textures organiques, créé avec du raymarching et du GLSL. L'effet simule des textures visuelles évolutives et détaillées.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, shader-toy, webgl, ogl]
 ---
 

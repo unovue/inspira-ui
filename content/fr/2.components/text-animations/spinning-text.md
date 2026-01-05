@@ -1,7 +1,7 @@
 ---
 title: Texte rotatif
 description: Le composant Spinning Text anime un texte en rotation circulaire avec vitesse, direction, couleur et transitions personnalisables pour un effet dynamique.
-category: Animation de texte
+category: Text Animation
 tags: [css, tailwind, magic-ui]
 ---
 

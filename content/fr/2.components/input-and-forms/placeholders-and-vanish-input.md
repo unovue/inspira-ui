@@ -1,7 +1,7 @@
 ---
 title: Placeholders et saisie qui disparaît
 description: Des placeholders qui glissent et un champ qui disparaît après soumission.
-category: Formulaires et saisie
+category: Forms & Input
 tags: [css, tailwind, input, aceternity-ui]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: 3D 轮播
 description: 使用 Three.js 与 Motion-V 的动态交互 3D 轮播组件，支持平滑无限旋转与用户控制。
-category: 可视化
+category: Visualization
 tags: [css, tailwind, threejs, motion-v]
 ---
 

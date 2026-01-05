@@ -1,7 +1,7 @@
 ---
 title: Logo origami
 description: Logo animé avec effet origami en rotation.
-category: Visualisation
+category: Visualization
 tags: [css, tailwind, hover-dev]
 ---
 

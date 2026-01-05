@@ -1,7 +1,7 @@
 ---
 title: Sélecteur de couleur
 description: Un sélecteur de couleurs complet prenant en charge plusieurs formats, l'accessibilité et des palettes personnalisées.
-category: Formulaires et saisie
+category: Forms & Input
 tags: [css, tailwind, input, color-picker, uplusion23]
 ---
 

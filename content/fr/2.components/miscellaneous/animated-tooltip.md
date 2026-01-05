@@ -1,7 +1,7 @@
 ---
 title: Infobulle animée
 description: Une infobulle sympa qui se révèle au survol et suit le pointeur de la souris.
-category: Divers
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

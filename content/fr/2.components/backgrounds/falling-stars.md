@@ -1,7 +1,7 @@
 ---
 title: Fond étoiles filantes
 description: Un superbe fond animé de champ d'étoiles avec des traînées lumineuses nettes.
-category: Arrière-plan
+category: Background
 tags: [css, tailwind, background, canvas]
 badge: "Updated"
 ---

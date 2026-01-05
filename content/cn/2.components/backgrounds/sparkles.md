@@ -1,7 +1,7 @@
 ---
 title: 闪光
 description: 可配置的闪光组件，可作为背景或独立使用。
-category: 背景
+category: Background
 tags: [css, tailwind, background, canvas]
 ---
 

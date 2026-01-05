@@ -1,7 +1,7 @@
 ---
 title: 高光卡片
 description: 悬停时出现高光效果的卡片，灵感来自 Linear 网站。
-category: 卡片
+category: Card
 tags: [css, tailwind, card, aceternity-ui]
 ---
 

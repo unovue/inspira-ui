@@ -1,7 +1,7 @@
 ---
 title: 俄罗斯方块
 description: 俄罗斯方块背景组件，甚至可以点击方块来消除。
-category: 背景
+category: Background
 tags: [css, tailwind, background]
 ---
 

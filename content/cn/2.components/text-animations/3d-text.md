@@ -1,7 +1,7 @@
 ---
 title: 3D 文字
 description: 时尚的 3D 文字组件，可自定义颜色、阴影与动画选项。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, 3d]
 ---
 

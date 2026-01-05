@@ -1,7 +1,7 @@
 ---
 title: 文字揭示
 description: 使用 GSAP 的 SplitText 实现逐行的文字入场动画。
-category: 文字动画
+category: Text Animation
 tags: [css, tailwind, gsap]
 ---
 

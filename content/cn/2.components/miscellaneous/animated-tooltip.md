@@ -1,7 +1,7 @@
 ---
 title: 动画提示
 description: 炫酷的提示气泡，悬停时揭示并跟随鼠标。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, aceternity-ui]
 ---
 

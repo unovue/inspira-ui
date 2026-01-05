@@ -1,7 +1,7 @@
 ---
 title: 极光背景
 description: 细腻的极光（南北极光）背景效果。
-category: 背景
+category: Background
 tags: [css, tailwind, background, aceternity-ui]
 ---
 

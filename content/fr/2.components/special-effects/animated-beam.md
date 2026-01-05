@@ -1,7 +1,7 @@
 ---
 title: Rayon animé
 description: Un rayon SVG reliant des éléments avec une animation.
-category: Effets spéciaux
+category: Special Effects
 tags: [css, tailwind, magic-ui]
 ---
 

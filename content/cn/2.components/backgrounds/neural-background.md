@@ -1,7 +1,7 @@
 ---
 title: 神经网络背景
 description: 使用 OGL 与 GLSL 的动态着色器背景，呈现流动的神经质视觉效果。
-category: 背景
+category: Background
 tags: [css, tailwind, background, ogl, webgl, cursify]
 ---
 

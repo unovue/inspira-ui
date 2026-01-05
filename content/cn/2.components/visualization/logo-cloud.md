@@ -1,7 +1,7 @@
 ---
 title: 动态 Logo 云
 description: 动态展示公司 Logo 的云图，可用于展示合作或客户徽标。
-category: 可视化
+category: Visualization
 tags: [css, tailwind]
 ---
 

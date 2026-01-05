@@ -1,7 +1,7 @@
 ---
 title: 动画光束
 description: 通过 SVG 连接元素的光束动画。
-category: 特效
+category: Special Effects
 tags: [css, tailwind, magic-ui]
 ---
 
