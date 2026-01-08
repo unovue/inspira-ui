@@ -2,7 +2,6 @@
 import { useEventListener, useScrollLock } from "@vueuse/core";
 import { AnimatePresence, Motion } from "motion-v";
 import { inject, nextTick, onBeforeUnmount, ref, watch } from "vue";
-import { cn } from "@/lib/utils";
 import { ANIMATED_MODAL_KEY } from "./AnimatedModalContext";
 
 interface Props {
@@ -138,12 +137,8 @@ onBeforeUnmount(() => {
           role="dialog"
           aria-modal="true"
           tabindex="-1"
-          :class="
-            cn(
-              'relative z-50 flex max-h-[85vh] w-[min(720px,calc(100vw-32px))] flex-col overflow-hidden rounded-2xl border border-transparent bg-white dark:border-neutral-800 dark:bg-neutral-950',
-              props.class,
-            )
-          "
+          class="relative z-50 flex max-h-[85vh] w-[min(720px,calc(100vw-32px))] flex-col overflow-hidden rounded-2xl border border-transparent bg-white dark:border-neutral-800 dark:bg-neutral-950"
+          :class="[props.class]"
           :initial="{
             opacity: 0,
             scale: 0.5,
@@ -197,7 +192,10 @@ onBeforeUnmount(() => {
             </svg>
           </button>
 
-          <div :class="cn('flex flex-1 flex-col', props.contentClass)">
+          <div
+            class="flex flex-1 flex-col"
+            :class="[props.contentClass]"
+          >
             <slot />
           </div>
         </Motion>

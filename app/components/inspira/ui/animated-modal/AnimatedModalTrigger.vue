@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { computed, inject } from "vue";
-import { cn } from "@/lib/utils";
 import { ANIMATED_MODAL_KEY } from "./AnimatedModalContext";
 
 interface Props {
@@ -35,12 +34,8 @@ const onClick = (event: MouseEvent) => {
     :aria-disabled="props.disabled ? 'true' : 'false'"
     aria-haspopup="dialog"
     :aria-expanded="modal.open.value ? 'true' : 'false'"
-    :class="
-      cn(
-        'relative inline-flex items-center justify-center overflow-hidden rounded-md px-4 py-2 text-center',
-        props.disabled && 'cursor-not-allowed opacity-60',
-      )
-    "
+    class="relative inline-flex items-center justify-center overflow-hidden rounded-md px-4 py-2 text-center"
+    :class="[props.disabled && 'cursor-not-allowed opacity-60']"
     @click="onClick"
   >
     <slot />
