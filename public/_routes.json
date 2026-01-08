@@ -8,12 +8,14 @@
     "/__og-image__/*",
     "/_fonts/*",
     "/_i18n/*",
+    "/r/*",
 
     "/docs/api/*",
     "/docs/_nuxt/*",
     "/docs/__nuxt_*",
     "/docs/__og-image__/*",
     "/docs/_fonts/*",
-    "/docs/_i18n/*"
+    "/docs/_i18n/*",
+    "/docs/r/*"
   ]
 }
