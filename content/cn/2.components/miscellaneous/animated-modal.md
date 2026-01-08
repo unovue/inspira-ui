@@ -1,8 +1,9 @@
 ---
 title: Animated Modal
 description: 带 3D 入场动画与背景模糊效果的弹窗组件。
-category: 杂项
+category: Miscellaneous
 tags: [css, tailwind, modal, motion, aceternity-ui]
+badge: New
 ---
 
 ::ComponentViewer{demoFile="AnimatedModalDemo.vue" config="AnimatedModalConfig" componentId="animated-modal" :componentFiles='["AnimatedModal.vue", "AnimatedModalBody.vue", "AnimatedModalContent.vue", "AnimatedModalFooter.vue", "AnimatedModalTrigger.vue", "AnimatedModalContext.ts", "useAnimatedModal.ts", "index.ts"]' dependencies="motion-v @vueuse/core"}
@@ -23,17 +24,17 @@ tags: [css, tailwind, modal, motion, aceternity-ui]
 
 #### Events
 
-| 事件名        | 负载      | 描述                               |
-| ------------- | --------- | ---------------------------------- |
-| `update:open` | `boolean` | 打开状态变化时触发。               |
-| `open`        | -         | 调用 `openModal()` 时触发。        |
-| `close`       | -         | 调用 `closeModal()` 时触发。       |
+| 事件名        | 负载      | 描述                         |
+| ------------- | --------- | ---------------------------- |
+| `update:open` | `boolean` | 打开状态变化时触发。         |
+| `open`        | -         | 调用 `openModal()` 时触发。  |
+| `close`       | -         | 调用 `closeModal()` 时触发。 |
 
 #### Slots
 
-| 插槽名     | 插槽参数                              |
-| ---------- | ------------------------------------- |
-| `default`  | `open`, `openModal`, `closeModal`, `toggle` |
+| 插槽名    | 插槽参数                                    |
+| --------- | ------------------------------------------- |
+| `default` | `open`, `openModal`, `closeModal`, `toggle` |
 
 #### Composable
 
@@ -43,16 +44,16 @@ tags: [css, tailwind, modal, motion, aceternity-ui]
 
 #### Props
 
-| 属性名           | 类型                      | 默认值    | 描述                         |
-| ---------------- | ------------------------- | --------- | ---------------------------- |
-| `class`          | `string`                  | `""`      | 弹窗面板额外类名。           |
-| `overlayClass`   | `string`                  | `""`      | 遮罩层额外类名。             |
-| `contentClass`   | `string`                  | `""`      | 内容容器额外类名。           |
-| `showClose`      | `boolean`                 | `true`    | 是否显示关闭按钮。           |
-| `closeOnOutside` | `boolean`                 | `true`    | 点击弹窗外部是否关闭。       |
-| `lockScroll`     | `boolean`                 | `true`    | 打开时是否锁定页面滚动。     |
-| `zIndex`         | `number`                  | `10000`   | 弹窗层级。                   |
-| `teleportTo`     | `string \| HTMLElement`   | `"body"`  | Teleport 目标容器。          |
+| 属性名           | 类型                    | 默认值   | 描述                     |
+| ---------------- | ----------------------- | -------- | ------------------------ |
+| `class`          | `string`                | `""`     | 弹窗面板额外类名。       |
+| `overlayClass`   | `string`                | `""`     | 遮罩层额外类名。         |
+| `contentClass`   | `string`                | `""`     | 内容容器额外类名。       |
+| `showClose`      | `boolean`               | `true`   | 是否显示关闭按钮。       |
+| `closeOnOutside` | `boolean`               | `true`   | 点击弹窗外部是否关闭。   |
+| `lockScroll`     | `boolean`               | `true`   | 打开时是否锁定页面滚动。 |
+| `zIndex`         | `number`                | `10000`  | 弹窗层级。               |
+| `teleportTo`     | `string \| HTMLElement` | `"body"` | Teleport 目标容器。      |
 
 #credits
 
