@@ -88,6 +88,12 @@ const props = defineProps<Props>();
   outline: none;
 }
 
+.search-field:autofill {
+  box-shadow: 0 0 0 1000px #010201 inset;
+  -webkit-text-fill-color: white;
+  caret-color: white;
+}
+
 .inner-glow,
 .main-border,
 .outer-ring,
