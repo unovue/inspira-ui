@@ -31,7 +31,7 @@ const isDesktop = useMediaQuery("(min-width: 768px)");
         :inset="isDesktop"
         :ui="{
           header: 'flex items-center justify-between',
-          content: 'bg-default/35 backdrop-blur-3xl md:min-w-md',
+          content: 'bg-default/35 backdrop-blur-3xl md:min-w-120',
         }"
       >
         <UButton

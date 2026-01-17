@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
 import type { MouseMode } from "./InspiraShaderToy";
-import { onMounted, onUnmounted, ref, watch } from "vue";
+import { onMounted, onUnmounted, watch } from "vue";
 import { InspiraShaderToy } from "./InspiraShaderToy";
 
 interface NoiseConfig {
@@ -32,8 +32,10 @@ const props = withDefaults(defineProps<Props>(), {
   damping: 0,
 });
 
-const containerRef = ref<HTMLElement>();
+const containerRef = useTemplateRef("containerRef");
 let shader: InspiraShaderToy | undefined;
+
+const backgroundSize = computed(() => `${(props.noise?.scale || 0) * 200}%`);
 
 onMounted(() => {
   if (!containerRef.value) return;
@@ -130,9 +132,11 @@ watch(
   >
     <div
       v-if="props.noise && props.noise.opacity > 0"
+      :key="props.noise.toString()"
       class="absolute inset-0 z-10 bg-[url(https://framerusercontent.com/images/g0QcWrxr87K0ufOxIUFBakwYA8.png)] bg-repeat"
       :style="{
-        backgroundSize: props.noise.scale * 200,
+        backgroundSize,
+        backgroundPosition: 'center',
         opacity: props.noise.opacity / 2,
       }"
     />
@@ -153,5 +157,6 @@ watch(
   width: 100%;
   height: 100%;
   cursor: pointer;
+  z-index: 0;
 }
 </style>

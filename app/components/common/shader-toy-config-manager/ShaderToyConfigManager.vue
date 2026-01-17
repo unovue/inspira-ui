@@ -21,11 +21,11 @@ const model = defineModel<Model>();
       label="hue"
       class="form-field"
     >
-      <UInputNumber
+      <ConfigSlider
         v-model="model.hue"
-        class="w-full"
         :min="0"
         :max="360"
+        :step="1"
       />
     </UFormField>
 
@@ -33,9 +33,8 @@ const model = defineModel<Model>();
       label="saturation"
       class="form-field"
     >
-      <UInputNumber
+      <ConfigSlider
         v-model="model.saturation"
-        class="w-full"
         :min="0"
         :max="1"
         :step="0.01"
@@ -46,9 +45,8 @@ const model = defineModel<Model>();
       label="brightness"
       class="form-field"
     >
-      <UInputNumber
+      <ConfigSlider
         v-model="model.brightness"
-        class="w-full"
         :min="0"
         :max="2"
         :step="0.01"
@@ -59,9 +57,8 @@ const model = defineModel<Model>();
       label="speed"
       class="form-field"
     >
-      <UInputNumber
+      <ConfigSlider
         v-model="model.speed"
-        class="w-full"
         :min="0"
         :max="10"
         :step="0.01"
@@ -72,9 +69,8 @@ const model = defineModel<Model>();
       label="mouseSensitivity"
       class="form-field"
     >
-      <UInputNumber
+      <ConfigSlider
         v-model="model.mouseSensitivity"
-        class="w-full"
         :min="0"
         :max="5"
         :step="0.01"
@@ -85,9 +81,8 @@ const model = defineModel<Model>();
       label="damping"
       class="form-field"
     >
-      <UInputNumber
+      <ConfigSlider
         v-model="model.damping"
-        class="w-full"
         :min="0"
         :max="1"
         :step="0.01"
@@ -98,11 +93,11 @@ const model = defineModel<Model>();
       label="noise.opacity"
       class="form-field"
     >
-      <UInputNumber
+      <ConfigSlider
         v-model="model.noise.opacity"
-        class="w-full"
         :min="0"
-        :step="0.01"
+        :step="0.1"
+        :max="2"
       />
     </UFormField>
 
@@ -110,10 +105,11 @@ const model = defineModel<Model>();
       label="noise.scale"
       class="form-field"
     >
-      <UInputNumber
+      <ConfigSlider
         v-model="model.noise.scale"
-        class="w-full"
         :min="0"
+        :step="0.01"
+        :max="1"
       />
     </UFormField>
   </template>

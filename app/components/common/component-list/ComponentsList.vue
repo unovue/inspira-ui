@@ -41,6 +41,22 @@ const filteredComponents = computed(() => {
     filtered = filtered.filter((component) => component.category === selectedCategory.value);
   }
 
+  if (selectedCategory.value === "all") {
+    const badgePriority = (badge?: string) => {
+      if (badge === "New") return 0;
+      if (badge === "Updated") return 1;
+      return 2;
+    };
+
+    return filtered
+      .slice()
+      .sort(
+        (a, b) =>
+          badgePriority(a.badge) - badgePriority(b.badge) ||
+          a.title.localeCompare(b.title),
+      );
+  }
+
   // ✅ Sort alphabetically by title
   return filtered.slice().sort((a, b) => a.title.localeCompare(b.title));
 });
