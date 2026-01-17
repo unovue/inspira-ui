@@ -6,6 +6,10 @@ interface Props {
   speed: number;
   mouseSensitivity: number;
   damping: number;
+  noise?: {
+    opacity: number;
+    scale: number;
+  };
 }
 
 const props = defineProps<Props>();
