@@ -1,14 +1,9 @@
-<script setup lang="ts">
-import { withBase } from "ufo";
-
-const runtimeConfig = useRuntimeConfig();
-const imageSrc = computed(() => withBase("/og-image.png", runtimeConfig.app.baseURL || "/"));
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <div class="flex flex-col items-center justify-center">
     <ParticleImage
-      :image-src="imageSrc"
+      image-src="https://cdn.inspira-ui.com/og-image.png"
       :responsive-width="true"
     />
   </div>
