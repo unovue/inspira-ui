@@ -79,7 +79,7 @@
 }
 
 .form-field {
-  @apply bg-muted/40 flex items-center justify-between gap-4 rounded-lg px-4 py-2 max-sm:flex-col;
+  @apply bg-muted/40 flex min-h-14 items-center justify-between gap-4 rounded-lg px-4 py-2 max-sm:flex-col;
 }
 
 @utility pattern-background-l1 {
