@@ -3,7 +3,7 @@
 <template>
   <ComponentPlayground>
     <template #component>
-      <BendingGalleryDemo />
+      <ConfettiCannonsDemo />
     </template>
   </ComponentPlayground>
 </template>
