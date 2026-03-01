@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
+
 const props = defineProps<{
   class?: string;
 }>();
@@ -6,8 +8,12 @@ const props = defineProps<{
 
 <template>
   <CarbonAdsScript
-    class="w-fit gap-4 rounded-lg border border-gray-200 bg-white text-black dark:border-gray-800 dark:bg-white/5 dark:text-white"
-    :class="[props.class]"
+    :class="
+      cn(
+        'w-fit gap-4 rounded-lg border border-gray-200 bg-white text-black dark:border-gray-800 dark:bg-white/5 dark:text-white',
+        props.class,
+      )
+    "
     serve="CW7DEK37"
     placement="inspira-uicom"
     format="cover"

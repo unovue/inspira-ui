@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
+
 interface Cards {
   logo: string;
 }
@@ -63,13 +65,15 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    class="relative block"
-    :class="[props.class]"
-  >
+  <div :class="cn('relative block', props.class)">
     <div
-      class="relative grid w-full max-w-full items-center justify-center"
-      :class="[props.cards.length < 4 ? `grid-cols-${props.cards.length}` : 'grid-cols-4']"
+      class=""
+      :class="
+        cn(
+          'relative grid w-full max-w-full items-center justify-center',
+          props.cards.length < 4 ? `grid-cols-${props.cards.length}` : 'grid-cols-4',
+        )
+      "
       :style="{
         transform: `perspective(${perspective}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
       }"
