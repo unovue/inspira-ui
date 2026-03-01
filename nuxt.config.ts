@@ -31,17 +31,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: [
-    "@nuxtjs/i18n",
-    "@nuxt/content",
-    "@nuxt/eslint",
-    "@nuxt/fonts",
-    "@nuxt/icon",
-    "@nuxt/image",
-    "@nuxt/scripts",
-    "@vueuse/nuxt",
-    "nuxt-gtag",
-  ],
+  modules: ["@nuxtjs/i18n", "@nuxt/content", "@nuxt/eslint", "@nuxt/fonts", "@nuxt/icon", "@nuxt/image", "@nuxt/scripts", "@vueuse/nuxt", "nuxt-gtag", "@tresjs/nuxt"],
 
   plugins: [{ src: "./plugins/clarity.js", mode: "client" }],
 
