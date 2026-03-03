@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
 import { Motion } from "motion-v";
 import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 import { useSpring } from "vue-use-spring";
@@ -90,8 +91,7 @@ function mapRange(
 <template>
   <div
     ref="tracingBeamRef"
-    class="relative mx-auto h-full w-full max-w-4xl"
-    :class="[$props.class]"
+    :class="cn(`relative mx-auto h-full w-full max-w-4xl`, $props.class)"
   >
     <div class="absolute top-3 -left-4 md:-left-12">
       <div

@@ -11,14 +11,14 @@ tags: [css, tailwind, background, canvas]
 
 ## API
 
-| Nom de propriété   | Type     | Valeur par défaut | Description                                                                            |
-| ------------------ | -------- | ----------------- | -------------------------------------------------------------------------------------- |
-| `background`       | `string` | `'#0d47a1'`       | Couleur de fond du conteneur. Utilisez `transparent` pour voir l'élément parent.       |
-| `particleColor`    | `string` | `'#ffffff'`       | Couleur des particules. Accepte toute valeur de couleur CSS valide.                    |
-| `minSize`          | `number` | `1`               | Taille minimale des particules, en pixels.                                             |
-| `maxSize`          | `number` | `3`               | Taille maximale des particules, en pixels.                                             |
-| `speed`            | `number` | `4`               | Multiplicateur de vitesse de mouvement. Plus la valeur est élevée, plus le mouvement est rapide. |
-| `particleDensity`  | `number` | `120`             | Nombre de particules à rendre. Plus la valeur est élevée, plus le champ est dense.     |
+| Nom de propriété  | Type     | Valeur par défaut | Description                                                                                      |
+| ----------------- | -------- | ----------------- | ------------------------------------------------------------------------------------------------ |
+| `background`      | `string` | `'#0d47a1'`       | Couleur de fond du conteneur. Utilisez `transparent` pour voir l'élément parent.                 |
+| `particleColor`   | `string` | `'#ffffff'`       | Couleur des particules. Accepte toute valeur de couleur CSS valide.                              |
+| `minSize`         | `number` | `1`               | Taille minimale des particules, en pixels.                                                       |
+| `maxSize`         | `number` | `3`               | Taille maximale des particules, en pixels.                                                       |
+| `speed`           | `number` | `4`               | Multiplicateur de vitesse de mouvement. Plus la valeur est élevée, plus le mouvement est rapide. |
+| `particleDensity` | `number` | `120`             | Nombre de particules à rendre. Plus la valeur est élevée, plus le champ est dense.               |
 
 #credits
 

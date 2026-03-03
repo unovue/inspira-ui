@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { computed, inject } from "vue";
 import { ANIMATED_MODAL_KEY } from "./AnimatedModalContext";
 
@@ -34,8 +35,12 @@ const onClick = (event: MouseEvent) => {
     :aria-disabled="props.disabled ? 'true' : 'false'"
     aria-haspopup="dialog"
     :aria-expanded="modal.open.value ? 'true' : 'false'"
-    class="relative inline-flex items-center justify-center overflow-hidden rounded-md px-4 py-2 text-center"
-    :class="[props.disabled && 'cursor-not-allowed opacity-60']"
+    :class="
+      cn(
+        `relative inline-flex items-center justify-center overflow-hidden rounded-md px-4 py-2 text-center`,
+        props.disabled && 'cursor-not-allowed opacity-60',
+      )
+    "
     @click="onClick"
   >
     <slot />

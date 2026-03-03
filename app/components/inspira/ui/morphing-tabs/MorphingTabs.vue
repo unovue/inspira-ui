@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
 interface Props {
   tabs: string[];
   activeTab: string;
@@ -19,9 +20,8 @@ const emit = defineEmits<{
 <template>
   <div
     v-if="props.tabs.length"
-    class="relative"
-    :class="[props.class]"
     style="filter: url(&quot;#exclusionTabsGoo&quot;)"
+    :class="cn(`relative`, props.class)"
   >
     <button
       v-for="tab in props.tabs"

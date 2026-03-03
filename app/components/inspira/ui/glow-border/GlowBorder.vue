@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { computed } from "vue";
 
 interface Props {
@@ -39,7 +40,11 @@ const styles = computed(() => {
 <template>
   <div
     :style="styles"
-    class="motion-safe:animate-glow pointer-events-none absolute inset-0 size-full rounded-[inherit] will-change-[background-position]"
-    :class="[props.class]"
+    :class="
+      cn(
+        `motion-safe:animate-glow pointer-events-none absolute inset-0 size-full rounded-[inherit] will-change-[background-position]`,
+        props.class,
+      )
+    "
   />
 </template>

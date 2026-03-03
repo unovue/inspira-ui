@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 
 interface Props {
   text?: string;
@@ -26,9 +27,8 @@ const hoverClass = computed(() => (enableOnHover ? "enable-on-hover" : ""));
 
 <template>
   <div
-    class="glitch"
-    :class="[hoverClass, props.class]"
     :data-text="text"
+    :class="cn(`glitch`, hoverClass, props.class)"
   >
     {{ text }}
   </div>

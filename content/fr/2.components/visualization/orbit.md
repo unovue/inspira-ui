@@ -11,13 +11,13 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| Nom de propriété | Type                  | Valeur par défaut | Description                                                                 |
-| ---------------- | --------------------- | ----------------- | --------------------------------------------------------------------------- |
-| `direction`      | `normal` \| `reverse` | `normal`          | Sens de l'orbite. Vous pouvez utiliser la constante ORBIT_DIRECTION.        |
-| `duration`       | `?number`             | `20`              | Durée de l'animation d'orbite en secondes.                                  |
-| `delay`          | `?number`             | `10`              | Délai avant le début de l'animation, en secondes.                           |
-| `radius`         | `?number`             | `50`              | Rayon du parcours orbital, en pixels.                                       |
-| `path`           | `?boolean`            | `false`           | Affiche un cercle de trajectoire si `true`.                                 |
+| Nom de propriété | Type                  | Valeur par défaut | Description                                                          |
+| ---------------- | --------------------- | ----------------- | -------------------------------------------------------------------- |
+| `direction`      | `normal` \| `reverse` | `normal`          | Sens de l'orbite. Vous pouvez utiliser la constante ORBIT_DIRECTION. |
+| `duration`       | `?number`             | `20`              | Durée de l'animation d'orbite en secondes.                           |
+| `delay`          | `?number`             | `10`              | Délai avant le début de l'animation, en secondes.                    |
+| `radius`         | `?number`             | `50`              | Rayon du parcours orbital, en pixels.                                |
+| `path`           | `?boolean`            | `false`           | Affiche un cercle de trajectoire si `true`.                          |
 
 #credits
 

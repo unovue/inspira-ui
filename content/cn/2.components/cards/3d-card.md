@@ -17,10 +17,10 @@ tags: [css, tailwind, card, aceternity-ui]
 
 #### Props
 
-| 属性名           | 类型   | 默认值 | 描述                                       |
-| ---------------- | ------ | ------ | ------------------------------------------ |
-| `class`          | string | `null` | 用于内层容器的额外样式类。                 |
-| `containerClass` | string | `null` | 用于外层容器的额外样式类。                 |
+| 属性名           | 类型   | 默认值 | 描述                       |
+| ---------------- | ------ | ------ | -------------------------- |
+| `class`          | string | `null` | 用于内层容器的额外样式类。 |
+| `containerClass` | string | `null` | 用于外层容器的额外样式类。 |
 
 ---
 
@@ -30,9 +30,9 @@ tags: [css, tailwind, card, aceternity-ui]
 
 #### Props
 
-| 属性名 | 类型   | 默认值 | 描述                           |
-| ------ | ------ | ------ | ------------------------------ |
-| `class`| string | `null` | 用于自定义样式的额外类。       |
+| 属性名  | 类型   | 默认值 | 描述                     |
+| ------- | ------ | ------ | ------------------------ |
+| `class` | string | `null` | 用于自定义样式的额外类。 |
 
 ---
 
@@ -42,16 +42,16 @@ tags: [css, tailwind, card, aceternity-ui]
 
 #### Props
 
-| 属性名      | 类型   | 默认值 | 描述                                         |
-| ----------- | ------ | ------ | -------------------------------------------- |
-| `as`        | string | `"div"`| 渲染该元素使用的 HTML 标签或组件。           |
-| `class`     | string | `null` | 应用于元素的额外类名。                       |
-| `translateX`| string | `0`    | X 轴平移（像素）。                           |
-| `translateY`| string | `0`    | Y 轴平移（像素）。                           |
-| `translateZ`| string | `0`    | Z 轴平移（像素），用于控制纵深效果。         |
-| `rotateX`   | string | `0`    | 绕 X 轴旋转角度（度）。                      |
-| `rotateY`   | string | `0`    | 绕 Y 轴旋转角度（度）。                      |
-| `rotateZ`   | string | `0`    | 绕 Z 轴旋转角度（度）。                      |
+| 属性名       | 类型   | 默认值  | 描述                                 |
+| ------------ | ------ | ------- | ------------------------------------ |
+| `as`         | string | `"div"` | 渲染该元素使用的 HTML 标签或组件。   |
+| `class`      | string | `null`  | 应用于元素的额外类名。               |
+| `translateX` | string | `0`     | X 轴平移（像素）。                   |
+| `translateY` | string | `0`     | Y 轴平移（像素）。                   |
+| `translateZ` | string | `0`     | Z 轴平移（像素），用于控制纵深效果。 |
+| `rotateX`    | string | `0`     | 绕 X 轴旋转角度（度）。              |
+| `rotateY`    | string | `0`     | 绕 Y 轴旋转角度（度）。              |
+| `rotateZ`    | string | `0`     | 绕 Z 轴旋转角度（度）。              |
 
 ---
 

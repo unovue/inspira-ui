@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { computed } from "vue";
 
 interface Props {
@@ -50,8 +51,9 @@ const animationDurationInMs = computed(() => {
 
 <template>
   <div
-    class="text-3d flex items-center justify-center"
-    :class="[animate ? 'animate-text-3d' : '', props.class]"
+    :class="
+      cn(`text-3d flex items-center justify-center`, animate ? 'animate-text-3d' : '', props.class)
+    "
   >
     <slot />
   </div>

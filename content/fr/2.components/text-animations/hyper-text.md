@@ -11,12 +11,12 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| Nom de propriété | Type      | Valeur par défaut | Description                                               |
-| ---------------- | --------- | ----------------- | --------------------------------------------------------- |
-| `class`          | `string`  | `""`              | Classes CSS supplémentaires à appliquer au composant.     |
-| `text`           | `string`  | Requise           | Texte à animer.                                           |
-| `duration`       | `number`  | `0.8`             | Durée totale de l'animation, en secondes.                 |
-| `animateOnLoad`  | `boolean` | `true`            | Lance l'animation au chargement.                          |
+| Nom de propriété | Type      | Valeur par défaut | Description                                           |
+| ---------------- | --------- | ----------------- | ----------------------------------------------------- |
+| `class`          | `string`  | `""`              | Classes CSS supplémentaires à appliquer au composant. |
+| `text`           | `string`  | Requise           | Texte à animer.                                       |
+| `duration`       | `number`  | `0.8`             | Durée totale de l'animation, en secondes.             |
+| `animateOnLoad`  | `boolean` | `true`            | Lance l'animation au chargement.                      |
 
 #credits
 

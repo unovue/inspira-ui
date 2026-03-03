@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { onUnmounted, ref, watch } from "vue";
 
 interface Step {
@@ -221,8 +222,9 @@ onUnmounted(() => {
               </svg>
               <div class="flex flex-col">
                 <span
-                  class="text-lg text-black dark:text-white"
-                  :class="[index > currentState && 'opacity-50']"
+                  :class="
+                    cn(`text-lg text-black dark:text-white`, index > currentState && 'opacity-50')
+                  "
                 >
                   {{ step.text }}
                 </span>

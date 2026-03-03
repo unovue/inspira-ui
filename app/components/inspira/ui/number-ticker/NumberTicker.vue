@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { TransitionPresets, useElementVisibility, useTransition } from "@vueuse/core";
 import { computed, ref, watch } from "vue";
 
@@ -71,8 +72,7 @@ watch(
 <template>
   <span
     ref="spanRef"
-    class="inline-block tracking-wider text-black tabular-nums dark:text-white"
-    :class="[props.class]"
+    :class="cn(`inline-block tracking-wider text-black tabular-nums dark:text-white`, props.class)"
   >
     {{ output }}
   </span>

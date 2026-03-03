@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
 import type { MouseMode } from "./InspiraShaderToy";
+import { cn } from "@inspira-ui/plugins";
 import { onMounted, onUnmounted, watch } from "vue";
 import { InspiraShaderToy } from "./InspiraShaderToy";
 
@@ -127,8 +128,7 @@ watch(
 <template>
   <div
     ref="containerRef"
-    class="shadertoy-container isolate"
-    :class="[props.class]"
+    :class="cn(`shadertoy-container isolate`, props.class)"
   >
     <div
       v-if="props.noise && props.noise.opacity > 0"

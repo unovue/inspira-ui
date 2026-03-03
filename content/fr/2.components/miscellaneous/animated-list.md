@@ -11,8 +11,8 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                                    |
-| ---------------- | -------- | ----------------- | -------------------------------------------------------------- |
+| Nom de propriété | Type     | Valeur par défaut | Description                                                       |
+| ---------------- | -------- | ----------------- | ----------------------------------------------------------------- |
 | `delay`          | `number` | `1`               | Délai en millisecondes avant d'ajouter chaque élément à la liste. |
 
 #credits

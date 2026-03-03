@@ -11,11 +11,11 @@ tags: [css, tailwind, aceternity-ui]
 
 ## API
 
-| Nom de propriété  | Type     | Valeur par défaut | Description                                                                |
-| ----------------- | -------- | ----------------- | -------------------------------------------------------------------------- |
-| `delay`           | `number` | `0`               | Délai avant le début de l'animation, en `ms`.                              |
-| `duration`        | `number` | `2000`            | Durée de l'animation, en `ms`.                                             |
-| `text-end-color`  | `string` | `inherit`         | Couleur du texte à la fin de l'animation. Respectez les recommandations WCAG. |
+| Nom de propriété | Type     | Valeur par défaut | Description                                                                   |
+| ---------------- | -------- | ----------------- | ----------------------------------------------------------------------------- |
+| `delay`          | `number` | `0`               | Délai avant le début de l'animation, en `ms`.                                 |
+| `duration`       | `number` | `2000`            | Durée de l'animation, en `ms`.                                                |
+| `text-end-color` | `string` | `inherit`         | Couleur du texte à la fin de l'animation. Respectez les recommandations WCAG. |
 
 #credits
 

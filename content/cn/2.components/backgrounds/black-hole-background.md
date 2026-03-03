@@ -11,13 +11,13 @@ tags: [css, tailwind, background, motion-v, canvas]
 
 ## API
 
-| 属性名           | 类型                       | 默认值         | 描述                                         |
-| ---------------- | -------------------------- | -------------- | -------------------------------------------- |
-| `strokeColor`    | `string`                   | `"#737373"`    | 同心圆与放射线的描边颜色。                   |
-| `numberOfLines`  | `number`                   | `50`           | 从中心发出的放射线数量。                     |
-| `numberOfDiscs`  | `number`                   | `50`           | 组成隧道的同心椭圆数量。                     |
-| `particleRGBColor`| `[number, number, number]`| `[255,255,255]`| 流向黑洞的微粒 RGB 颜色。                    |
-| `class`          | `string`                   | `""`           | 合并到根容器的额外工具类。                   |
+| 属性名             | 类型                       | 默认值          | 描述                       |
+| ------------------ | -------------------------- | --------------- | -------------------------- |
+| `strokeColor`      | `string`                   | `"#737373"`     | 同心圆与放射线的描边颜色。 |
+| `numberOfLines`    | `number`                   | `50`            | 从中心发出的放射线数量。   |
+| `numberOfDiscs`    | `number`                   | `50`            | 组成隧道的同心椭圆数量。   |
+| `particleRGBColor` | `[number, number, number]` | `[255,255,255]` | 流向黑洞的微粒 RGB 颜色。  |
+| `class`            | `string`                   | `""`            | 合并到根容器的额外工具类。 |
 
 #credits
 

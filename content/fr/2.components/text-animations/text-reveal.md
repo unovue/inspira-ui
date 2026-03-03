@@ -11,13 +11,13 @@ tags: [css, tailwind, gsap]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                      |
-| ---------------- | -------- | ----------------- | ------------------------------------------------ |
+| Nom de propriété | Type     | Valeur par défaut | Description                                        |
+| ---------------- | -------- | ----------------- | -------------------------------------------------- |
 | `class`          | `string` | `-`               | Classes supplémentaires pour le conteneur interne. |
 | `containerClass` | `string` | `-`               | Classes supplémentaires pour le conteneur externe. |
-| `duration`       | `number` | `0.6`             | Durée de l'animation de révélation des lignes.   |
-| `delay`          | `number` | `0.2`             | Délai initial avant le début de l'animation.     |
-| `stagger`        | `number` | `0.1`             | Décalage de l'animation entre chaque ligne.      |
+| `duration`       | `number` | `0.6`             | Durée de l'animation de révélation des lignes.     |
+| `delay`          | `number` | `0.2`             | Délai initial avant le début de l'animation.       |
+| `stagger`        | `number` | `0.1`             | Décalage de l'animation entre chaque ligne.        |
 
 #credits
 

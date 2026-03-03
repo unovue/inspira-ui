@@ -11,13 +11,13 @@ tags: [css, tailwind, border]
 
 ## API
 
-| Nom de propriété | Type                         | Valeur par défaut | Description                                        |
-| ---------------- | ---------------------------- | ----------------- | -------------------------------------------------- |
-| `color1`         | `string`                     | `"#0496ff"`       | Couleur principale de la bordure néon.             |
-| `color2`         | `string`                     | `"#ff0a54"`       | Couleur secondaire de la bordure néon.             |
-| `animationType`  | `"none" \| "half" \| "full"` | `"half"`          | Type d'animation appliquée à la bordure.           |
-| `duration`       | `number`                     | `6`               | Durée de l'effet d'animation en secondes.          |
-| `class`          | `string`                     | `""`              | Classes CSS supplémentaires pour le style.         |
+| Nom de propriété | Type                         | Valeur par défaut | Description                                |
+| ---------------- | ---------------------------- | ----------------- | ------------------------------------------ |
+| `color1`         | `string`                     | `"#0496ff"`       | Couleur principale de la bordure néon.     |
+| `color2`         | `string`                     | `"#ff0a54"`       | Couleur secondaire de la bordure néon.     |
+| `animationType`  | `"none" \| "half" \| "full"` | `"half"`          | Type d'animation appliquée à la bordure.   |
+| `duration`       | `number`                     | `6`               | Durée de l'effet d'animation en secondes.  |
+| `class`          | `string`                     | `""`              | Classes CSS supplémentaires pour le style. |
 
 #instructions
 

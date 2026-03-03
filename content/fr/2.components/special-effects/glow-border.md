@@ -11,12 +11,12 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| Nom de propriété | Type                 | Valeur par défaut | Description                                                |
-| ---------------- | -------------------- | ----------------- | ---------------------------------------------------------- |
-| `duration`       | `number`             | `10`              | Durée de l'animation de la bordure lumineuse.              |
-| `color`          | `string \| string[]` | `#FFF`            | Couleur ou tableau de couleurs appliqués à la bordure.     |
-| `borderRadius`   | `number`             | `10`              | Rayon de la bordure.                                       |
-| `borderWidth`    | `number`             | `2`               | Largeur de la bordure.                                     |
+| Nom de propriété | Type                 | Valeur par défaut | Description                                            |
+| ---------------- | -------------------- | ----------------- | ------------------------------------------------------ |
+| `duration`       | `number`             | `10`              | Durée de l'animation de la bordure lumineuse.          |
+| `color`          | `string \| string[]` | `#FFF`            | Couleur ou tableau de couleurs appliqués à la bordure. |
+| `borderRadius`   | `number`             | `10`              | Rayon de la bordure.                                   |
+| `borderWidth`    | `number`             | `2`               | Largeur de la bordure.                                 |
 
 #instructions
 

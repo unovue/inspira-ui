@@ -17,10 +17,10 @@ Le composant `CardContainer` sert de conteneur pour l'effet de carte 3D. Il gèr
 
 #### Props
 
-| Nom de propriété | Type   | Valeur par défaut | Description                                                   |
-| ---------------- | ------ | ----------------- | ------------------------------------------------------------- |
-| `class`          | string | `null`            | Classes supplémentaires pour styliser le conteneur interne.   |
-| `containerClass` | string | `null`            | Classes supplémentaires pour styliser le conteneur externe.   |
+| Nom de propriété | Type   | Valeur par défaut | Description                                                 |
+| ---------------- | ------ | ----------------- | ----------------------------------------------------------- |
+| `class`          | string | `null`            | Classes supplémentaires pour styliser le conteneur interne. |
+| `containerClass` | string | `null`            | Classes supplémentaires pour styliser le conteneur externe. |
 
 ---
 
@@ -30,8 +30,8 @@ Le composant `CardBody` est un conteneur flexible qui conserve le style 3D. Il e
 
 #### Props
 
-| Nom de propriété | Type   | Valeur par défaut | Description                                    |
-| ---------------- | ------ | ----------------- | ---------------------------------------------- |
+| Nom de propriété | Type   | Valeur par défaut | Description                                         |
+| ---------------- | ------ | ----------------- | --------------------------------------------------- |
 | `class`          | string | `null`            | Classes supplémentaires pour un style personnalisé. |
 
 ---
@@ -42,16 +42,16 @@ Le composant `CardItem` représente les éléments individuels de la carte 3D. I
 
 #### Props
 
-| Nom de propriété | Type   | Valeur par défaut | Description                                                     |
-| ---------------- | ------ | ----------------- | --------------------------------------------------------------- |
-| `as`             | string | `"div"`           | Balise HTML ou composant à utiliser pour l'élément.             |
-| `class`          | string | `null`            | Classes supplémentaires pour styliser l'élément.                |
-| `translateX`     | string | `0`               | Translation sur l'axe X, en pixels.                             |
-| `translateY`     | string | `0`               | Translation sur l'axe Y, en pixels.                             |
-| `translateZ`     | string | `0`               | Translation sur l'axe Z, en pixels, pour gérer la profondeur.   |
-| `rotateX`        | string | `0`               | Rotation sur l'axe X, en degrés.                                |
-| `rotateY`        | string | `0`               | Rotation sur l'axe Y, en degrés.                                |
-| `rotateZ`        | string | `0`               | Rotation sur l'axe Z, en degrés.                                |
+| Nom de propriété | Type   | Valeur par défaut | Description                                                   |
+| ---------------- | ------ | ----------------- | ------------------------------------------------------------- |
+| `as`             | string | `"div"`           | Balise HTML ou composant à utiliser pour l'élément.           |
+| `class`          | string | `null`            | Classes supplémentaires pour styliser l'élément.              |
+| `translateX`     | string | `0`               | Translation sur l'axe X, en pixels.                           |
+| `translateY`     | string | `0`               | Translation sur l'axe Y, en pixels.                           |
+| `translateZ`     | string | `0`               | Translation sur l'axe Z, en pixels, pour gérer la profondeur. |
+| `rotateX`        | string | `0`               | Rotation sur l'axe X, en degrés.                              |
+| `rotateY`        | string | `0`               | Rotation sur l'axe Y, en degrés.                              |
+| `rotateZ`        | string | `0`               | Rotation sur l'axe Z, en degrés.                              |
 
 ---
 

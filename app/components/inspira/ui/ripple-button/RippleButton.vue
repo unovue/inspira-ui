@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { ref, watchEffect } from "vue";
 
 interface RippleButtonProps {
@@ -51,9 +52,13 @@ watchEffect(() => {
 <template>
   <button
     ref="rippleButtonRef"
-    class="bg-background text-primary relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border-2 px-4 py-2 text-center"
-    :class="[$props.class]"
     :style="{ '--duration': `${$props.duration}ms` }"
+    :class="
+      cn(
+        `bg-background text-primary relative flex cursor-pointer items-center justify-center overflow-hidden rounded-lg border-2 px-4 py-2 text-center`,
+        $props.class,
+      )
+    "
     @click="handleClick"
   >
     <div class="relative z-10">

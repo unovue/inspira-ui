@@ -11,11 +11,11 @@ tags: [css, tailwind, device-mockup, magic-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                         |
-| ---------------- | -------- | ----------------- | --------------------------------------------------- |
-| `width`          | `number` | `433`             | Largeur de la maquette SVG en pixels.               |
-| `height`         | `number` | `882`             | Hauteur de la maquette SVG en pixels.               |
-| `src`            | `string` | `null`            | URL de l'image à afficher dans la maquette.         |
+| Nom de propriété | Type     | Valeur par défaut | Description                                 |
+| ---------------- | -------- | ----------------- | ------------------------------------------- |
+| `width`          | `number` | `433`             | Largeur de la maquette SVG en pixels.       |
+| `height`         | `number` | `882`             | Hauteur de la maquette SVG en pixels.       |
+| `src`            | `string` | `null`            | URL de l'image à afficher dans la maquette. |
 
 #credits
 

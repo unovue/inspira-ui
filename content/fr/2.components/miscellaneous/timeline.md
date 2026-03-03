@@ -11,13 +11,13 @@ tags: [css, tailwind, aceternity-ui]
 
 ## API
 
-| Nom de propriété  | Type                               | Valeur par défaut | Description                                        |
-| ----------------- | ---------------------------------- | ----------------- | -------------------------------------------------- |
-| `containerClass`  | `string`                           | `""`              | Classes CSS supplémentaires pour le conteneur de la timeline. |
-| `class`           | `string`                           | `""`              | Classes CSS supplémentaires pour le style.         |
-| `items`           | `{ id: string; label: string; }[]` | `[]`              | Liste des éléments de timeline, chacun avec un ID et un label. |
-| `title`           | `string`                           | `""`              | Titre de la section timeline.                      |
-| `description`     | `string`                           | `""`              | Description affichée sous le titre.                |
+| Nom de propriété | Type                               | Valeur par défaut | Description                                                    |
+| ---------------- | ---------------------------------- | ----------------- | -------------------------------------------------------------- |
+| `containerClass` | `string`                           | `""`              | Classes CSS supplémentaires pour le conteneur de la timeline.  |
+| `class`          | `string`                           | `""`              | Classes CSS supplémentaires pour le style.                     |
+| `items`          | `{ id: string; label: string; }[]` | `[]`              | Liste des éléments de timeline, chacun avec un ID et un label. |
+| `title`          | `string`                           | `""`              | Titre de la section timeline.                                  |
+| `description`    | `string`                           | `""`              | Description affichée sous le titre.                            |
 
 #credits
 

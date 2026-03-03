@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { createNoise3D } from "simplex-noise";
 import { onMounted, onUnmounted } from "vue";
 
@@ -232,10 +233,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div
-    class="relative h-full w-full"
-    :class="[props.containerClass]"
-  >
+  <div :class="cn(`relative h-full w-full`, props.containerClass)">
     <Motion
       as="div"
       :initial="{ opacity: 0 }"
@@ -245,10 +243,7 @@ onUnmounted(() => {
       <canvas ref="canvasRef" />
     </Motion>
 
-    <div
-      class="relative z-10"
-      :class="[props.class]"
-    >
+    <div :class="cn(`relative z-10`, props.class)">
       <slot />
     </div>
   </div>

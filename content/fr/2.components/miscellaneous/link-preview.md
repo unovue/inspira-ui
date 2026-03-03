@@ -11,15 +11,15 @@ tags: [css, tailwind, aceternity-ui]
 
 ## API
 
-| Nom de propriété | Type      | Valeur par défaut | Description                                                                                 |
-| ---------------- | --------- | ----------------- | ------------------------------------------------------------------------------------------- |
-| `class`          | `string`  | `""`              | Classe personnalisée appliquée à l'élément principal.                                      |
-| `linkClass`      | `string`  | `""`              | Classe personnalisée appliquée à l'élément lien.                                            |
-| `width`          | `number`  | `200`             | Largeur de l'image d'aperçu.                                                                |
-| `height`         | `number`  | `125`             | Hauteur de l'image d'aperçu.                                                                |
+| Nom de propriété | Type      | Valeur par défaut | Description                                                                                   |
+| ---------------- | --------- | ----------------- | --------------------------------------------------------------------------------------------- |
+| `class`          | `string`  | `""`              | Classe personnalisée appliquée à l'élément principal.                                         |
+| `linkClass`      | `string`  | `""`              | Classe personnalisée appliquée à l'élément lien.                                              |
+| `width`          | `number`  | `200`             | Largeur de l'image d'aperçu.                                                                  |
+| `height`         | `number`  | `125`             | Hauteur de l'image d'aperçu.                                                                  |
 | `isStatic`       | `boolean` | `false`           | Définit si l'image d'aperçu est statique ou générée depuis l'URL (`true` pour mode statique). |
-| `imageSrc`       | `string`  | `""`              | Source de l'image à afficher (requis si `isStatic` vaut `true`).                            |
-| `url`            | `string`  | `""`              | URL du lien et pour générer l'aperçu (requis si `isStatic` vaut `false`).                   |
+| `imageSrc`       | `string`  | `""`              | Source de l'image à afficher (requis si `isStatic` vaut `true`).                              |
+| `url`            | `string`  | `""`              | URL du lien et pour générer l'aperçu (requis si `isStatic` vaut `false`).                     |
 
 #credits
 

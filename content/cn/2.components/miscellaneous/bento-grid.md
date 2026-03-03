@@ -20,17 +20,17 @@ tags: [css, tailwind, bento, aceternity-ui]
 
 #### `BentoGridCard`
 
-| 插槽名      | 描述                  |
-| ----------- | --------------------- |
-| `background`| 显示在背景的组件。    |
+| 插槽名       | 描述               |
+| ------------ | ------------------ |
+| `background` | 显示在背景的组件。 |
 
-| 属性名       | 类型      | 描述                   |
-| ------------ | --------- | ---------------------- |
-| `name`       | `string`  | 卡片上显示的名称。     |
-| `icon`       | `?string` | 卡片上显示的图标。     |
-| `description`| `string`  | 卡片的描述内容。       |
-| `href`       | `string`  | CTA 对应的链接。       |
-| `cta`        | `string`  | CTA 上显示的文字。     |
+| 属性名        | 类型      | 描述               |
+| ------------- | --------- | ------------------ |
+| `name`        | `string`  | 卡片上显示的名称。 |
+| `icon`        | `?string` | 卡片上显示的图标。 |
+| `description` | `string`  | 卡片的描述内容。   |
+| `href`        | `string`  | CTA 对应的链接。   |
+| `cta`         | `string`  | CTA 上显示的文字。 |
 
 #credits
 

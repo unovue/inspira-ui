@@ -17,17 +17,17 @@ Le composant `Tree` sert de conteneur pour afficher une structure hiérarchique 
 
 #### Props
 
-| Nom de propriété        | Type                | Valeur par défaut        | Description                                            |
-| ----------------------- | ------------------- | ------------------------ | ------------------------------------------------------ |
-| `class`                 | `string`            | -                        | Classes supplémentaires pour styliser le conteneur.    |
-| `initialSelectedId`     | `string`            | -                        | ID de l'élément sélectionné au chargement.             |
-| `indicator`             | `boolean`           | `true`                   | Affiche ou non la ligne d'indicateur de l'arborescence. |
-| `elements`              | `TreeViewElement[]` | -                        | Tableau des éléments de l'arbre à afficher.            |
-| `initialExpandedItems`  | `string[]`          | -                        | IDs des dossiers ouverts initialement.                 |
-| `openIcon`              | `string`            | `"lucide:folder-open"`   | Icône pour les dossiers ouverts.                       |
-| `closeIcon`             | `string`            | `"lucide:folder"`        | Icône pour les dossiers fermés.                        |
-| `fileIcon`              | `string`            | `"lucide:file"`          | Icône pour les fichiers.                               |
-| `direction`             | `"rtl" \| "ltr"`    | `"ltr"`                  | Sens d'écriture de l'arborescence.                     |
+| Nom de propriété       | Type                | Valeur par défaut      | Description                                             |
+| ---------------------- | ------------------- | ---------------------- | ------------------------------------------------------- |
+| `class`                | `string`            | -                      | Classes supplémentaires pour styliser le conteneur.     |
+| `initialSelectedId`    | `string`            | -                      | ID de l'élément sélectionné au chargement.              |
+| `indicator`            | `boolean`           | `true`                 | Affiche ou non la ligne d'indicateur de l'arborescence. |
+| `elements`             | `TreeViewElement[]` | -                      | Tableau des éléments de l'arbre à afficher.             |
+| `initialExpandedItems` | `string[]`          | -                      | IDs des dossiers ouverts initialement.                  |
+| `openIcon`             | `string`            | `"lucide:folder-open"` | Icône pour les dossiers ouverts.                        |
+| `closeIcon`            | `string`            | `"lucide:folder"`      | Icône pour les dossiers fermés.                         |
+| `fileIcon`             | `string`            | `"lucide:file"`        | Icône pour les fichiers.                                |
+| `direction`            | `"rtl" \| "ltr"`    | `"ltr"`                | Sens d'écriture de l'arborescence.                      |
 
 ### `Folder` et `File`
 
@@ -35,13 +35,13 @@ Les composants `Folder` et `File` représentent les dossiers et fichiers. Les do
 
 #### Props
 
-| Nom de propriété | Type      | Valeur par défaut | Description                                  |
-| ---------------- | --------- | ----------------- | -------------------------------------------- |
+| Nom de propriété | Type      | Valeur par défaut | Description                                         |
+| ---------------- | --------- | ----------------- | --------------------------------------------------- |
 | `class`          | `string`  | -                 | Classes supplémentaires pour un style personnalisé. |
-| `id`             | `string`  | -                 | Identifiant unique de l'élément.             |
-| `name`           | `string`  | -                 | Nom affiché du dossier/fichier.              |
-| `isSelectable`   | `boolean` | `true`            | Indique si l'élément peut être sélectionné.  |
-| `isSelect`       | `boolean` | `false`           | Indique si l'élément est actuellement sélectionné. |
+| `id`             | `string`  | -                 | Identifiant unique de l'élément.                    |
+| `name`           | `string`  | -                 | Nom affiché du dossier/fichier.                     |
+| `isSelectable`   | `boolean` | `true`            | Indique si l'élément peut être sélectionné.         |
+| `isSelect`       | `boolean` | `false`           | Indique si l'élément est actuellement sélectionné.  |
 
 #credits
 

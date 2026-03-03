@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { computed } from "vue";
 
 interface FlipCardProps {
@@ -18,13 +19,14 @@ const rotation = computed(() => rotationClass[props.rotate]);
 </script>
 
 <template>
-  <div
-    class="group h-72 w-56 [perspective:1000px]"
-    :class="[props.class]"
-  >
+  <div :class="cn(`group h-72 w-56 [perspective:1000px]`, props.class)">
     <div
-      class="relative h-full rounded-2xl transition-all duration-500 [transform-style:preserve-3d]"
-      :class="[rotation[0]]"
+      :class="
+        cn(
+          `relative h-full rounded-2xl transition-all duration-500 [transform-style:preserve-3d]`,
+          rotation[0],
+        )
+      "
     >
       <!-- Front -->
       <div
@@ -35,8 +37,12 @@ const rotation = computed(() => rotationClass[props.rotate]);
 
       <!-- Back -->
       <div
-        class="absolute h-full w-full overflow-hidden rounded-2xl border bg-black/80 p-4 text-slate-200 [backface-visibility:hidden]"
-        :class="[rotation[1]]"
+        :class="
+          cn(
+            `absolute h-full w-full overflow-hidden rounded-2xl border bg-black/80 p-4 text-slate-200 [backface-visibility:hidden]`,
+            rotation[1],
+          )
+        "
       >
         <slot name="back" />
       </div>

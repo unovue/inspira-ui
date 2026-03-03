@@ -11,11 +11,11 @@ tags: [css, tailwind, input, aceternity-ui]
 
 ## API
 
-| Nom de propriété   | Type                | Valeur par défaut | Description                                                  |
-| ------------------ | ------------------- | ----------------- | ------------------------------------------------------------ |
-| `defaultValue`     | `string  \| number` | `""`              | Valeur par défaut du champ de saisie.                        |
-| `class`            | `string`            | `""`              | Classes CSS supplémentaires pour un style personnalisé.      |
-| `containerClass`   | `string`            | `""`              | Classes CSS supplémentaires pour styliser le conteneur.      |
+| Nom de propriété | Type                | Valeur par défaut | Description                                             |
+| ---------------- | ------------------- | ----------------- | ------------------------------------------------------- |
+| `defaultValue`   | `string  \| number` | `""`              | Valeur par défaut du champ de saisie.                   |
+| `class`          | `string`            | `""`              | Classes CSS supplémentaires pour un style personnalisé. |
+| `containerClass` | `string`            | `""`              | Classes CSS supplémentaires pour styliser le conteneur. |
 
 #credits
 

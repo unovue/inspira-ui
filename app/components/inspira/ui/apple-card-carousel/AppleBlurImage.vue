@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { ref } from "vue";
 
 interface Props {
@@ -27,14 +28,20 @@ function handleLoad() {
 
 <template>
   <img
-    class="transition duration-300"
-    :class="[isLoading ? 'blur-sm' : 'blur-0', props.class, fill ? 'h-full w-full' : '']"
     :src="src"
     :width="width"
     :height="height"
     loading="lazy"
     decoding="async"
     :alt="alt"
+    :class="
+      cn(
+        `transition duration-300`,
+        isLoading ? 'blur-sm' : 'blur-0',
+        props.class,
+        fill ? 'h-full w-full' : '',
+      )
+    "
     @load="handleLoad"
   />
 </template>

@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import type { OGLRenderingContext } from "ogl";
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { Color, Mesh, Program, Renderer, Triangle } from "ogl";
 import { onMounted, onUnmounted, ref } from "vue";
 
@@ -117,7 +118,6 @@ onUnmounted(() => {
 <template>
   <div
     ref="ctnDom"
-    class="block size-full"
-    :class="[props?.class]"
+    :class="cn(`block size-full`, props.class)"
   />
 </template>

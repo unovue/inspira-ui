@@ -11,12 +11,12 @@ tags: [css, tailwind, aceternity-ui]
 
 ## API
 
-| Nom de propriété | Type      | Valeur par défaut | Description                                                             |
-| ---------------- | --------- | ----------------- | ----------------------------------------------------------------------- |
-| `words`          | `string`  | Requise           | Texte à afficher avec l'effet de génération.                            |
-| `duration`       | `number`  | `0.7`             | Durée de l'animation de génération, en secondes.                        |
-| `delay`          | `number`  | `0`               | Délai avant le démarrage de l'animation, en millisecondes.              |
-| `filter`         | `boolean` | `true`            | Intensité du flou appliqué au texte.                                    |
+| Nom de propriété | Type      | Valeur par défaut | Description                                                |
+| ---------------- | --------- | ----------------- | ---------------------------------------------------------- |
+| `words`          | `string`  | Requise           | Texte à afficher avec l'effet de génération.               |
+| `duration`       | `number`  | `0.7`             | Durée de l'animation de génération, en secondes.           |
+| `delay`          | `number`  | `0`               | Délai avant le démarrage de l'animation, en millisecondes. |
+| `filter`         | `boolean` | `true`            | Intensité du flou appliqué au texte.                       |
 
 #credits
 

@@ -11,13 +11,13 @@ tags: [css, tailwind, threejs, motion-v]
 
 ## API
 
-| Nom de propriété  | Type        | Valeur par défaut | Description                                                 |
-| ----------------- | ----------- | ----------------- | ----------------------------------------------------------- |
-| `items`           | `unknown[]` | `[]`              | Liste d'images ou d'éléments à afficher dans le carrousel.  |
-| `class`           | `string`    | `""`              | Classes CSS supplémentaires pour l'overlay du carrousel.    |
-| `containerClass`  | `string`    | `""`              | Classes CSS pour styliser le conteneur du carrousel.        |
-| `width`           | `number`    | `450`             | Largeur des éléments individuels.                           |
-| `height`          | `number`    | `600`             | Hauteur des éléments individuels.                           |
+| Nom de propriété | Type        | Valeur par défaut | Description                                                |
+| ---------------- | ----------- | ----------------- | ---------------------------------------------------------- |
+| `items`          | `unknown[]` | `[]`              | Liste d'images ou d'éléments à afficher dans le carrousel. |
+| `class`          | `string`    | `""`              | Classes CSS supplémentaires pour l'overlay du carrousel.   |
+| `containerClass` | `string`    | `""`              | Classes CSS pour styliser le conteneur du carrousel.       |
+| `width`          | `number`    | `450`             | Largeur des éléments individuels.                          |
+| `height`         | `number`    | `600`             | Hauteur des éléments individuels.                          |
 
 #credits
 

@@ -11,10 +11,10 @@ tags: [css, tailwind, cursor, magic-ui]
 
 ## API
 
-| Nom de propriété  | Type           | Valeur par défaut | Description                                                    |
-| ----------------- | -------------- | ----------------- | -------------------------------------------------------------- |
-| `cursor`          | `Component`    | `DefaultCursor`   | Composant de curseur personnalisé remplaçant le curseur par défaut. |
-| `springConfig`    | `SpringConfig` | `Voir ci-dessous` | Objet de configuration pour le comportement d'animation à ressort. |
+| Nom de propriété | Type           | Valeur par défaut | Description                                                         |
+| ---------------- | -------------- | ----------------- | ------------------------------------------------------------------- |
+| `cursor`         | `Component`    | `DefaultCursor`   | Composant de curseur personnalisé remplaçant le curseur par défaut. |
+| `springConfig`   | `SpringConfig` | `Voir ci-dessous` | Objet de configuration pour le comportement d'animation à ressort.  |
 
 ### Type SpringConfig
 

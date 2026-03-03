@@ -11,14 +11,14 @@ tags: [css, tailwind, background, canvas]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                               |
-| ---------------- | -------- | ----------------- | --------------------------------------------------------- |
-| `color`          | `string` | `#FFF`            | Couleur des flocons au format hexadécimal.                |
-| `quantity`       | `number` | `100`             | Nombre de flocons à afficher.                             |
-| `speed`          | `number` | `1`               | Vitesse de chute des flocons.                             |
-| `maxRadius`      | `number` | `3`               | Rayon maximal des flocons.                                |
-| `minRadius`      | `number` | `1`               | Rayon minimal des flocons.                                |
-| `class`          | `string` | `null`            | Classes CSS supplémentaires à appliquer au conteneur.     |
+| Nom de propriété | Type     | Valeur par défaut | Description                                           |
+| ---------------- | -------- | ----------------- | ----------------------------------------------------- |
+| `color`          | `string` | `#FFF`            | Couleur des flocons au format hexadécimal.            |
+| `quantity`       | `number` | `100`             | Nombre de flocons à afficher.                         |
+| `speed`          | `number` | `1`               | Vitesse de chute des flocons.                         |
+| `maxRadius`      | `number` | `3`               | Rayon maximal des flocons.                            |
+| `minRadius`      | `number` | `1`               | Rayon minimal des flocons.                            |
+| `class`          | `string` | `null`            | Classes CSS supplémentaires à appliquer au conteneur. |
 
 #credits
 

@@ -11,11 +11,11 @@ tags: [css, tailwind, number-flow]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                     |
-| ---------------- | -------- | ----------------- | ----------------------------------------------- |
+| Nom de propriété | Type     | Valeur par défaut | Description                                             |
+| ---------------- | -------- | ----------------- | ------------------------------------------------------- |
 | `class`          | `string` | `""`              | Classes CSS supplémentaires pour un style personnalisé. |
-| `title`          | `string` | `"Progress"`      | Titre affiché dans l'en-tête du composant.      |
-| `height`         | `string` | `44`              | Hauteur du composant.                           |
+| `title`          | `string` | `"Progress"`      | Titre affiché dans l'en-tête du composant.              |
+| `height`         | `string` | `44`              | Hauteur du composant.                                   |
 
 #credits
 

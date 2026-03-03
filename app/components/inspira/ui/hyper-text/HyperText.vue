@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { useIntervalFn } from "@vueuse/core";
 import { Motion } from "motion-v";
 import { computed, ref, watch } from "vue";
@@ -62,8 +63,7 @@ if (props.animateOnLoad) {
 
 <template>
   <div
-    class="flex scale-100 cursor-default overflow-hidden py-2"
-    :class="[$props.class]"
+    :class="cn(`flex scale-100 cursor-default overflow-hidden py-2`, $props.class)"
     @mouseenter="triggerAnimation"
   >
     <div class="flex">
@@ -71,11 +71,10 @@ if (props.animateOnLoad) {
         v-for="(letter, i) in displayText"
         :key="i"
         as="span"
-        :class="[letter === ' ' ? 'w-3' : '', $props.class]"
-        class="inline-block font-mono"
         :initial="{ opacity: 0, y: -10 }"
         :animate="{ opacity: 1, y: 0 }"
         :delay="i * (duration / (text.length * 10))"
+        :class="cn(`inline-block font-mono`, letter === ' ' ? 'w-3' : '', $props.class)"
       >
         {{ letter.toUpperCase() }}
       </Motion>

@@ -11,11 +11,11 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut            | Description                                         |
-| ---------------- | -------- | ---------------------------- | --------------------------------------------------- |
-| `class`          | `string` | `-`                          | Classe appliquée au composant.                      |
-| `words`          | `string` | `Staggered Letter Pull Up`   | Texte à animer.                                     |
-| `delay`          | `number` | `0.05`                       | Délai en secondes appliqué à l'animation de chaque lettre. |
+| Nom de propriété | Type     | Valeur par défaut          | Description                                                |
+| ---------------- | -------- | -------------------------- | ---------------------------------------------------------- |
+| `class`          | `string` | `-`                        | Classe appliquée au composant.                             |
+| `words`          | `string` | `Staggered Letter Pull Up` | Texte à animer.                                            |
+| `delay`          | `number` | `0.05`                     | Délai en secondes appliqué à l'animation de chaque lettre. |
 
 #credits
 

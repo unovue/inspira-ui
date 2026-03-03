@@ -11,21 +11,21 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| Nom de propriété        | Type                     | Valeur par défaut | Description                                                                                     |
-| ----------------------- | ------------------------ | ----------------- | ----------------------------------------------------------------------------------------------- |
-| `class`                 | `string`                 | `""`              | Nom de classe à appliquer au composant.                                                         |
-| `width`                 | `number`                 | `""`              | Largeur du conteneur à gratter.                                                                 |
-| `height`                | `number`                 | `""`              | Hauteur du conteneur à gratter.                                                                 |
-| `minScratchPercentage`  | `number`                 | `50`              | Pourcentage minimal de surface grattée considéré comme terminé (valeur entre 0 et 100).        |
-| `gradientColors`        | `[string,string,string]` | `-`               | Couleurs de dégradé pour l'effet à gratter.                                                     |
+| Nom de propriété       | Type                     | Valeur par défaut | Description                                                                             |
+| ---------------------- | ------------------------ | ----------------- | --------------------------------------------------------------------------------------- |
+| `class`                | `string`                 | `""`              | Nom de classe à appliquer au composant.                                                 |
+| `width`                | `number`                 | `""`              | Largeur du conteneur à gratter.                                                         |
+| `height`               | `number`                 | `""`              | Hauteur du conteneur à gratter.                                                         |
+| `minScratchPercentage` | `number`                 | `50`              | Pourcentage minimal de surface grattée considéré comme terminé (valeur entre 0 et 100). |
+| `gradientColors`       | `[string,string,string]` | `-`               | Couleurs de dégradé pour l'effet à gratter.                                             |
 
-| Nom de l'événement | Charge utile | Description                                         |
-| ------------------ | ------------ | --------------------------------------------------- |
-| `complete`         | `-`          | Fonction appelée lorsque le grattage est terminé.   |
+| Nom de l'événement | Charge utile | Description                                       |
+| ------------------ | ------------ | ------------------------------------------------- |
+| `complete`         | `-`          | Fonction appelée lorsque le grattage est terminé. |
 
-| Nom du slot | Contenu par défaut | Description                             |
-| ----------- | ------------------ | --------------------------------------- |
-| `default`   | `-`                | Le texte sous le ticket à gratter.      |
+| Nom du slot | Contenu par défaut | Description                        |
+| ----------- | ------------------ | ---------------------------------- |
+| `default`   | `-`                | Le texte sous le ticket à gratter. |
 
 #credits
 

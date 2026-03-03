@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { onMounted, onUnmounted, ref } from "vue";
@@ -52,10 +53,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div
-    class="overflow-hidden"
-    :class="[props.containerClass]"
-  >
+  <div :class="cn(`overflow-hidden`, props.containerClass)">
     <div
       ref="textContainer"
       :class="[props.class]"

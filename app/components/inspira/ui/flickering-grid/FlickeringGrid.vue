@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
 import { computed, onBeforeUnmount, onMounted, ref, toRefs } from "vue";
 
 interface FlickeringGridProps {
@@ -168,8 +169,7 @@ onBeforeUnmount(() => {
 <template>
   <div
     ref="containerRef"
-    class="h-full w-full"
-    :class="[props.class]"
+    :class="cn(`h-full w-full`, props.class)"
   >
     <canvas
       ref="canvasRef"

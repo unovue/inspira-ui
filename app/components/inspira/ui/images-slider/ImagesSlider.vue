@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { PropType, Ref } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { onKeyStroke, useIntervalFn, useSwipe } from "@vueuse/core";
 import { computed, ref, watch } from "vue";
 
@@ -239,8 +240,7 @@ const transitionProps = computed(() => {
     </Transition>
     <div
       v-if="hideOverlay !== true"
-      class="absolute inset-0"
-      :class="[props.overlayClass]"
+      :class="cn(`absolute inset-0`, props.overlayClass)"
     >
       <Transition
         appear

@@ -11,9 +11,9 @@ tags: [css, tailwind, card, aceternity-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                                     |
-| ---------------- | -------- | ----------------- | --------------------------------------------------------------- |
-| `class`          | `string` | `-`               | Classes Tailwind CSS supplémentaires à appliquer à la carte.    |
+| Nom de propriété | Type     | Valeur par défaut | Description                                                  |
+| ---------------- | -------- | ----------------- | ------------------------------------------------------------ |
+| `class`          | `string` | `-`               | Classes Tailwind CSS supplémentaires à appliquer à la carte. |
 
 #credits
 

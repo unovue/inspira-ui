@@ -11,13 +11,13 @@ tags: [css, tailwind, aceternity-ui]
 
 ## API
 
-| Nom de propriété | Type                                                                                                                 | Valeur par défaut | Description                                                                             |
-| ---------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------- | --------------------------------------------------------------------------------------- |
-| `dots`           | `Array<{ start: { lat: number; lng: number; label?: string }, end: { lat: number; lng: number; label?: string } }> ` | `[]`              | Tableau d'objets contenant coordonnées de départ et d'arrivée (latitude, longitude).    |
-| `class`          | `string`                                                                                                             | `""`              | Classes CSS supplémentaires pour un style personnalisé.                                 |
-| `lineColor`      | `string`                                                                                                             | `"#0EA5E9"`       | Couleur des arcs et des bordures des points.                                            |
-| `mapColor`       | `string`                                                                                                             | —                 | Couleur principale de la carte en points. (**Requise**)                                 |
-| `mapBgColor`     | `string`                                                                                                             | —                 | Couleur de fond de la carte. (**Requise**)                                              |
+| Nom de propriété | Type                                                                                                                 | Valeur par défaut | Description                                                                          |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------ |
+| `dots`           | `Array<{ start: { lat: number; lng: number; label?: string }, end: { lat: number; lng: number; label?: string } }> ` | `[]`              | Tableau d'objets contenant coordonnées de départ et d'arrivée (latitude, longitude). |
+| `class`          | `string`                                                                                                             | `""`              | Classes CSS supplémentaires pour un style personnalisé.                              |
+| `lineColor`      | `string`                                                                                                             | `"#0EA5E9"`       | Couleur des arcs et des bordures des points.                                         |
+| `mapColor`       | `string`                                                                                                             | —                 | Couleur principale de la carte en points. (**Requise**)                              |
+| `mapBgColor`     | `string`                                                                                                             | —                 | Couleur de fond de la carte. (**Requise**)                                           |
 
 #credits
 

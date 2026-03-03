@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
 // Download globe json file from https://geojson-maps.kyd.au/ and save in the same folder
 
 import {
@@ -351,7 +352,6 @@ function genRandomNumbers(min: number, max: number, count: number) {
 <template>
   <canvas
     ref="githubGlobeRef"
-    class="h-96 w-96"
-    :class="[props.class]"
+    :class="cn(`h-96 w-96`, props.class)"
   />
 </template>

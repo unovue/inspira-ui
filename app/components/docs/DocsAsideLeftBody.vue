@@ -26,7 +26,8 @@ const navWithData = computed(() => addDataNavPath(nav.value));
 async function scrollActiveLinkIntoView() {
   await nextTick();
 
-  const escapedPath = typeof CSS !== "undefined" && CSS.escape ? CSS.escape(route.path) : route.path;
+  const escapedPath =
+    typeof CSS !== "undefined" && CSS.escape ? CSS.escape(route.path) : route.path;
   const activeItem = navContainer.value?.querySelector<HTMLElement>(
     `[data-nav-path="${escapedPath}"], [data-nav-path="${escapedPath}/"]`,
   );
@@ -62,7 +63,8 @@ function getScrollParent(element: HTMLElement): HTMLElement | null {
   while (current) {
     const style = getComputedStyle(current);
     const overflowY = style.overflowY;
-    const canScrollY = (overflowY === "auto" || overflowY === "scroll" || overflowY === "overlay") &&
+    const canScrollY =
+      (overflowY === "auto" || overflowY === "scroll" || overflowY === "overlay") &&
       current.scrollHeight > current.clientHeight;
     if (canScrollY) {
       return current;

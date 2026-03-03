@@ -11,11 +11,11 @@ tags: [css, tailwind, gallery]
 
 ## API
 
-| 属性名          | 类型                | 默认值 | 描述                                       |
-| --------------- | ------------------- | ------ | ------------------------------------------ |
-| `items`         | `"[{src: string}]"` | `[]`   | 传入要动画的图片项/图片源。                |
-| `containerClass`| `string`            | `""`   | 容器的额外 Tailwind CSS 类。               |
-| `class`         | `string`            | `""`   | 自定义样式的额外 Tailwind CSS 类。         |
+| 属性名           | 类型                | 默认值 | 描述                               |
+| ---------------- | ------------------- | ------ | ---------------------------------- |
+| `items`          | `"[{src: string}]"` | `[]`   | 传入要动画的图片项/图片源。        |
+| `containerClass` | `string`            | `""`   | 容器的额外 Tailwind CSS 类。       |
+| `class`          | `string`            | `""`   | 自定义样式的额外 Tailwind CSS 类。 |
 
 #credits
 

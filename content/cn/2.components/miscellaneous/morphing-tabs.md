@@ -11,13 +11,13 @@ tags: [css, tailwind]
 
 ## API
 
-| 属性名            | 类型       | 默认值 | 描述                           |
-| ----------------- | ---------- | ------ | ------------------------------ |
-| `class`           | `string`   | `""`   | 用于样式的额外类名。           |
-| `tabs`            | `string[]` | `[]`   | 标签集合。                     |
-| `activeTab`       | `string`   | `""`   | 当前激活的标签。               |
-| `margin`          | `number`   | `20`   | 激活标签左右的外边距。         |
-| `blurStdDeviation`| `number`   | `6`    | SVG 模糊的 stdDeviation 值。    |
+| 属性名             | 类型       | 默认值 | 描述                         |
+| ------------------ | ---------- | ------ | ---------------------------- |
+| `class`            | `string`   | `""`   | 用于样式的额外类名。         |
+| `tabs`             | `string[]` | `[]`   | 标签集合。                   |
+| `activeTab`        | `string`   | `""`   | 当前激活的标签。             |
+| `margin`           | `number`   | `20`   | 激活标签左右的外边距。       |
+| `blurStdDeviation` | `number`   | `6`    | SVG 模糊的 stdDeviation 值。 |
 
 #credits
 

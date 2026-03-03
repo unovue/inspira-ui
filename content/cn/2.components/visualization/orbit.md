@@ -11,13 +11,13 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| 属性名      | 类型                  | 默认值  | 描述                                                         |
-| ----------- | --------------------- | ------- | ------------------------------------------------------------ |
-| `direction` | `normal` \| `reverse` | `normal`| 轨道运动方向，可使用常量 ORBIT_DIRECTION。                   |
-| `duration`  | `?number`             | `20`    | 轨道动画持续时间（秒）。                                     |
-| `delay`     | `?number`             | `10`    | 动画开始前的延迟时间（秒）。                                 |
-| `radius`    | `?number`             | `50`    | 轨道半径（像素）。                                           |
-| `path`      | `?boolean`            | `false` | 若为 `true`，显示轨道圆路径。                                |
+| 属性名      | 类型                  | 默认值   | 描述                                       |
+| ----------- | --------------------- | -------- | ------------------------------------------ |
+| `direction` | `normal` \| `reverse` | `normal` | 轨道运动方向，可使用常量 ORBIT_DIRECTION。 |
+| `duration`  | `?number`             | `20`     | 轨道动画持续时间（秒）。                   |
+| `delay`     | `?number`             | `10`     | 动画开始前的延迟时间（秒）。               |
+| `radius`    | `?number`             | `50`     | 轨道半径（像素）。                         |
+| `path`      | `?boolean`            | `false`  | 若为 `true`，显示轨道圆路径。              |
 
 #credits
 

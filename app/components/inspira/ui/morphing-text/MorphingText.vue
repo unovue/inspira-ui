@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
 import { onMounted, onUnmounted, ref } from "vue";
 
 const props = withDefaults(defineProps<Props>(), {
@@ -93,8 +94,12 @@ onUnmounted(() => {
 
 <template>
   <div
-    class="relative mx-auto h-16 w-full max-w-screen-md text-center font-sans text-[40pt] leading-none font-bold [filter:url(#threshold)_blur(0.6px)] md:h-24 lg:text-[6rem]"
-    :class="[props.class]"
+    :class="
+      cn(
+        `relative mx-auto h-16 w-full max-w-screen-md text-center font-sans text-[40pt] leading-none font-bold [filter:url(#threshold)_blur(0.6px)] md:h-24 lg:text-[6rem]`,
+        props.class,
+      )
+    "
   >
     <span
       ref="text1Ref"

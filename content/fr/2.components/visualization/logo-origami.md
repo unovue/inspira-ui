@@ -11,11 +11,11 @@ tags: [css, tailwind, hover-dev]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                       |
-| ---------------- | -------- | ----------------- | ------------------------------------------------- |
+| Nom de propriété | Type     | Valeur par défaut | Description                                             |
+| ---------------- | -------- | ----------------- | ------------------------------------------------------- |
 | `class`          | `string` | `""`              | Classes CSS supplémentaires pour un style personnalisé. |
-| `duration`       | `number` | `1.5`             | Durée de l'animation de flip, en secondes.        |
-| `delay`          | `number` | `2.5`             | Délai entre chaque animation de flip, en secondes. |
+| `duration`       | `number` | `1.5`             | Durée de l'animation de flip, en secondes.              |
+| `delay`          | `number` | `2.5`             | Délai entre chaque animation de flip, en secondes.      |
 
 #credits
 

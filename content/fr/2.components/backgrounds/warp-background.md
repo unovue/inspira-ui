@@ -11,15 +11,15 @@ tags: [css, tailwind, background, magic-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut        | Description                                   |
-| ---------------- | -------- | ------------------------ | --------------------------------------------- |
-| `perspective`    | `number` | `100`                    | Perspective de l'animation warp.              |
-| `beamsPerSide`   | `number` | `3`                      | Nombre de rayons par côté.                    |
-| `beamSize`       | `number` | `5`                      | Taille des rayons.                            |
-| `beamDelayMax`   | `number` | `3`                      | Délai maximum des rayons, en secondes.        |
-| `beamDelayMin`   | `number` | `0`                      | Délai minimum des rayons, en secondes.        |
-| `beamDuration`   | `number` | `3`                      | Durée d'animation des rayons.                 |
-| `gridColor`      | `string` | `"hsl(var(--border))"`   | Couleur des lignes de la grille.              |
+| Nom de propriété | Type     | Valeur par défaut      | Description                            |
+| ---------------- | -------- | ---------------------- | -------------------------------------- |
+| `perspective`    | `number` | `100`                  | Perspective de l'animation warp.       |
+| `beamsPerSide`   | `number` | `3`                    | Nombre de rayons par côté.             |
+| `beamSize`       | `number` | `5`                    | Taille des rayons.                     |
+| `beamDelayMax`   | `number` | `3`                    | Délai maximum des rayons, en secondes. |
+| `beamDelayMin`   | `number` | `0`                    | Délai minimum des rayons, en secondes. |
+| `beamDuration`   | `number` | `3`                    | Durée d'animation des rayons.          |
+| `gridColor`      | `string` | `"hsl(var(--border))"` | Couleur des lignes de la grille.       |
 
 #credits
 

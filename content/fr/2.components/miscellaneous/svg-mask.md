@@ -11,11 +11,11 @@ tags: [css, tailwind, aceternity-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                |
-| ---------------- | -------- | ----------------- | ------------------------------------------ |
+| Nom de propriété | Type     | Valeur par défaut | Description                                             |
+| ---------------- | -------- | ----------------- | ------------------------------------------------------- |
 | `class`          | `string` | `""`              | Classes CSS supplémentaires pour un style personnalisé. |
-| `size`           | `number` | `10`              | Taille initiale du masque en pixels.       |
-| `revealSize`     | `number` | `600`             | Taille du masque au survol, en pixels.     |
+| `size`           | `number` | `10`              | Taille initiale du masque en pixels.                    |
+| `revealSize`     | `number` | `600`             | Taille du masque au survol, en pixels.                  |
 
 #credits
 

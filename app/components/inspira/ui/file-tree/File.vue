@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { FileProps, TreeContextProps } from "./index";
+import { cn } from "@inspira-ui/plugins";
 import { computed, inject, toRefs } from "vue";
 import { TREE_CONTEXT_SYMBOL } from "./index";
 
@@ -30,15 +31,15 @@ function onClickHandler() {
   <button
     type="button"
     :disabled="!isSelectable"
-    class="flex w-fit items-center gap-1 rounded-sm pr-1 text-sm duration-200 ease-in-out rtl:pr-0 rtl:pl-1"
-    :class="[
-      [
+    :dir="direction"
+    :class="
+      cn(
+        `flex w-fit items-center gap-1 rounded-sm pr-1 text-sm duration-200 ease-in-out rtl:pr-0 rtl:pl-1`,
         isSelected && isSelectable ? 'bg-muted' : '',
         isSelectable ? 'cursor-pointer' : 'cursor-not-allowed opacity-50',
         $props.class,
-      ],
-    ]"
-    :dir="direction"
+      )
+    "
     @click="onClickHandler"
   >
     <Icon

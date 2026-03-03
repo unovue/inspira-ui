@@ -11,11 +11,11 @@ tags: [css, tailwind]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut              | Description                                                    |
-| ---------------- | -------- | ------------------------------ | -------------------------------------------------------------- |
-| `class`          | `string` | `-`                            | Délai en millisecondes avant l'ajout de chaque élément à la liste. |
-| `title`          | `string` | `Trusted by Companies like`    | Titre du nuage animé.                                         |
-| `logos`          | `[]`     | `[{name: "", path: ""}]`       | Tableau d'éléments (logos) avec les champs `name` et `path`.   |
+| Nom de propriété | Type     | Valeur par défaut           | Description                                                        |
+| ---------------- | -------- | --------------------------- | ------------------------------------------------------------------ |
+| `class`          | `string` | `-`                         | Délai en millisecondes avant l'ajout de chaque élément à la liste. |
+| `title`          | `string` | `Trusted by Companies like` | Titre du nuage animé.                                              |
+| `logos`          | `[]`     | `[{name: "", path: ""}]`    | Tableau d'éléments (logos) avec les champs `name` et `path`.       |
 
 #credits
 

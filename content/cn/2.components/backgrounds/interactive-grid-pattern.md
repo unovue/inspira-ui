@@ -11,13 +11,13 @@ tags: [css, tailwind, background, svg, magic-ui]
 
 ## API
 
-| 属性名            | 类型               | 默认值    | 描述                               |
-| ----------------- | ------------------ | --------- | ---------------------------------- |
-| `className`       | `string`           | -         | 组件样式的额外类名。               |
-| `squaresClassName`| `string`           | -         | 方块样式的额外类名。               |
-| `width`           | `number`           | `40`      | 方块宽度（像素）。                 |
-| `height`          | `number`           | `40`      | 方块高度（像素）。                 |
-| `squares`         | `[number, number]` | `[24, 24]`| 网格中方块的数量。                 |
+| 属性名             | 类型               | 默认值     | 描述                 |
+| ------------------ | ------------------ | ---------- | -------------------- |
+| `className`        | `string`           | -          | 组件样式的额外类名。 |
+| `squaresClassName` | `string`           | -          | 方块样式的额外类名。 |
+| `width`            | `number`           | `40`       | 方块宽度（像素）。   |
+| `height`           | `number`           | `40`       | 方块高度（像素）。   |
+| `squares`          | `[number, number]` | `[24, 24]` | 网格中方块的数量。   |
 
 #credits
 

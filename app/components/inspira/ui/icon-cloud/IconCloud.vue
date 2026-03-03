@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { IconCloudProps, SphereIcon } from "./index";
+import { cn } from "@inspira-ui/plugins";
 import { onBeforeUnmount, onMounted, reactive, ref, watchEffect } from "vue";
 
 const props = defineProps<IconCloudProps>();
@@ -249,10 +250,9 @@ onBeforeUnmount(() => {
     ref="canvasRef"
     width="300"
     height="300"
-    class="rounded-lg"
-    :class="[$props.class]"
     role="img"
     aria-label="Interactive 3D Image Cloud"
+    :class="cn(`rounded-lg`, $props.class)"
     @mousedown="handleMouseDown"
     @mousemove="handleMouseMove"
     @mouseup="handleMouseUp"

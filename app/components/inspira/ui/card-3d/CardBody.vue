@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 interface Props {
   class?: string;
 }
@@ -8,9 +9,8 @@ const props = defineProps<Props>();
 
 <template>
   <div
-    class="h-96 w-96"
-    :class="[props.class]"
     style="transform-style: preserve-3d"
+    :class="cn(`h-96 w-96`, props.class)"
   >
     <slot />
   </div>

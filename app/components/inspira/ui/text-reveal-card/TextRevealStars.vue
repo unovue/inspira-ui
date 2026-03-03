@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 
 interface Props {
   starsCount?: number;
@@ -54,8 +55,7 @@ const randomDuration = random() * 10 + 20;
         repeat: Infinity,
         ease: 'linear',
       }"
-      class="absolute z-[1] inline-block h-0.5 w-0.5 rounded-full bg-white"
-      :class="[props.class]"
+      :class="cn(`absolute z-[1] inline-block h-0.5 w-0.5 rounded-full bg-white`, props.class)"
     />
   </div>
 </template>

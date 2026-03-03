@@ -11,16 +11,16 @@ tags: [css, tailwind, input]
 
 ## API
 
-| 属性名          | 类型     | 默认值      | 描述                                   |
-| --------------- | -------- | ----------- | -------------------------------------- |
-| `initialValue`  | `number` | `50`        | 滑块的初始位置（0-100）。              |
-| `leftColor`     | `string` | `"#e68a00"` | 滑块左侧的背景色。                     |
-| `rightColor`    | `string` | `"#ffffff"` | 滑块右侧的背景色。                     |
-| `minShiftLimit` | `number` | `40`        | 启动位移动画的最小阈值。               |
-| `maxShiftLimit` | `number` | `68`        | 关闭位移动画的最大阈值。               |
-| `leftContent`   | `string` | `"LEFT"`    | 左侧提示中显示的文本。                 |
-| `rightContent`  | `string` | `"RIGHT"`   | 右侧提示中显示的文本。                 |
-| `indicatorColor`| `string` | `"#FFFFFF"` | 滑块中央指示器的颜色。                 |
+| 属性名           | 类型     | 默认值      | 描述                      |
+| ---------------- | -------- | ----------- | ------------------------- |
+| `initialValue`   | `number` | `50`        | 滑块的初始位置（0-100）。 |
+| `leftColor`      | `string` | `"#e68a00"` | 滑块左侧的背景色。        |
+| `rightColor`     | `string` | `"#ffffff"` | 滑块右侧的背景色。        |
+| `minShiftLimit`  | `number` | `40`        | 启动位移动画的最小阈值。  |
+| `maxShiftLimit`  | `number` | `68`        | 关闭位移动画的最大阈值。  |
+| `leftContent`    | `string` | `"LEFT"`    | 左侧提示中显示的文本。    |
+| `rightContent`   | `string` | `"RIGHT"`   | 右侧提示中显示的文本。    |
+| `indicatorColor` | `string` | `"#FFFFFF"` | 滑块中央指示器的颜色。    |
 
 #credits
 

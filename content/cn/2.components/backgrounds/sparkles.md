@@ -11,14 +11,14 @@ tags: [css, tailwind, background, canvas]
 
 ## API
 
-| 属性名            | 类型     | 默认值      | 描述                                                            |
-| ----------------- | -------- | ----------- | --------------------------------------------------------------- |
-| `background`      | `string` | `'#0d47a1'` | 容器背景色。使用 `transparent` 可透视父元素。                   |
-| `particleColor`   | `string` | `'#ffffff'` | 粒子颜色，接受任何合法 CSS 颜色值。                             |
-| `minSize`         | `number` | `1`         | 粒子最小尺寸（像素）。                                          |
-| `maxSize`         | `number` | `3`         | 粒子最大尺寸（像素）。                                          |
-| `speed`           | `number` | `4`         | 移动速度倍数，值越大移动越快。                                  |
-| `particleDensity` | `number` | `120`       | 渲染的粒子数量，值越大粒子越密集。                              |
+| 属性名            | 类型     | 默认值      | 描述                                          |
+| ----------------- | -------- | ----------- | --------------------------------------------- |
+| `background`      | `string` | `'#0d47a1'` | 容器背景色。使用 `transparent` 可透视父元素。 |
+| `particleColor`   | `string` | `'#ffffff'` | 粒子颜色，接受任何合法 CSS 颜色值。           |
+| `minSize`         | `number` | `1`         | 粒子最小尺寸（像素）。                        |
+| `maxSize`         | `number` | `3`         | 粒子最大尺寸（像素）。                        |
+| `speed`           | `number` | `4`         | 移动速度倍数，值越大移动越快。                |
+| `particleDensity` | `number` | `120`       | 渲染的粒子数量，值越大粒子越密集。            |
 
 #credits
 

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 
 interface FileUploadGridProps {
   class?: HTMLAttributes["class"];
@@ -13,8 +14,12 @@ const COLUMNS = 41;
 
 <template>
   <div
-    class="flex shrink-0 scale-105 flex-wrap items-center justify-center gap-px bg-gray-100 dark:bg-neutral-900"
-    :class="[$props.class]"
+    :class="
+      cn(
+        `flex shrink-0 scale-105 flex-wrap items-center justify-center gap-px bg-gray-100 dark:bg-neutral-900`,
+        $props.class,
+      )
+    "
   >
     <template v-for="row in ROWS">
       <template
@@ -22,12 +27,14 @@ const COLUMNS = 41;
         :key="`${row}-${col}`"
       >
         <div
-          class="flex h-10 w-10 flex-shrink-0 rounded-[2px]"
-          :class="[
-            ((row - 1) * COLUMNS + (col - 1)) % 2 === 0
-              ? 'bg-gray-50 dark:bg-neutral-950'
-              : 'bg-gray-50 shadow-[0px_0px_1px_3px_rgba(255,255,255,1)_inset] dark:bg-neutral-950 dark:shadow-[0px_0px_1px_3px_rgba(0,0,0,1)_inset]',
-          ]"
+          :class="
+            cn(
+              `flex h-10 w-10 flex-shrink-0 rounded-[2px]`,
+              ((row - 1) * COLUMNS + (col - 1)) % 2 === 0
+                ? 'bg-gray-50 dark:bg-neutral-950'
+                : 'bg-gray-50 shadow-[0px_0px_1px_3px_rgba(255,255,255,1)_inset] dark:bg-neutral-950 dark:shadow-[0px_0px_1px_3px_rgba(0,0,0,1)_inset]',
+            )
+          "
         />
       </template>
     </template>

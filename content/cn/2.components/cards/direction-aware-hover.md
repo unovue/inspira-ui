@@ -11,12 +11,12 @@ tags: [css, tailwind, card, aceternity-ui]
 
 ## API
 
-| 属性名          | 类型     | 默认值      | 描述                                      |
-| --------------- | -------- | ----------- | ----------------------------------------- |
-| `imageUrl`      | `string` | 必填        | 要显示的图片 URL。                        |
-| `class`         | `string` | `undefined` | 卡片容器的额外 CSS 类。                   |
-| `imageClass`    | `string` | `undefined` | 图片元素的额外 CSS 类。                   |
-| `childrenClass` | `string` | `undefined` | 内容覆盖层的额外 CSS 类。                 |
+| 属性名          | 类型     | 默认值      | 描述                      |
+| --------------- | -------- | ----------- | ------------------------- |
+| `imageUrl`      | `string` | 必填        | 要显示的图片 URL。        |
+| `class`         | `string` | `undefined` | 卡片容器的额外 CSS 类。   |
+| `imageClass`    | `string` | `undefined` | 图片元素的额外 CSS 类。   |
+| `childrenClass` | `string` | `undefined` | 内容覆盖层的额外 CSS 类。 |
 
 #credits
 

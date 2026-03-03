@@ -6,3 +6,5 @@ onlyBuiltDependencies:
   - sharp
   - unrs-resolver
   - vue-demi
+overrides:
+  vite: npm:rolldown-vite@latest

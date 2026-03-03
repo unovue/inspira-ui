@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 interface Props {
   class?: string;
 }
@@ -9,10 +10,7 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <div
-    class="flex justify-end bg-gray-100 p-4 dark:bg-neutral-900"
-    :class="[props.class]"
-  >
+  <div :class="cn(`flex justify-end bg-gray-100 p-4 dark:bg-neutral-900`, props.class)">
     <slot />
   </div>
 </template>

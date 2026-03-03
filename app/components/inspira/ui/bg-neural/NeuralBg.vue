@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { Camera, Mesh, Plane, Program, Renderer, Transform } from "ogl";
 import { onMounted, onUnmounted, ref, watch } from "vue";
 
@@ -307,7 +308,6 @@ onUnmounted(() => {
 <template>
   <canvas
     ref="canvasRef"
-    class="pointer-events-none absolute inset-0 size-full opacity-95"
-    :class="[props.class]"
+    :class="cn(`pointer-events-none absolute inset-0 size-full opacity-95`, props.class)"
   />
 </template>

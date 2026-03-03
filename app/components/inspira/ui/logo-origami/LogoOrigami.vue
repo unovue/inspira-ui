@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
 import { Motion } from "motion-v";
 import { onBeforeUnmount, onMounted, ref, useSlots, watchEffect } from "vue";
 
@@ -40,8 +41,12 @@ onBeforeUnmount(() => {
       transform: 'rotateY(-20deg)',
       transformStyle: 'preserve-3d',
     }"
-    class="border-background/75 bg-background relative z-0 h-44 w-60 shrink-0 rounded-xl border"
-    :class="[$props.class]"
+    :class="
+      cn(
+        `border-background/75 bg-background relative z-0 h-44 w-60 shrink-0 rounded-xl border`,
+        $props.class,
+      )
+    "
   >
     <!-- Static Upper part -->
     <div

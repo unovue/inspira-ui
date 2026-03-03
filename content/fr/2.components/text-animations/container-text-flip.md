@@ -11,13 +11,13 @@ tags: [css, tailwind, aceternity-ui]
 
 ## API
 
-| Nom de propriété    | Type       | Valeur par défaut                                | Description                                          |
-| ------------------- | ---------- | ------------------------------------------------ | ---------------------------------------------------- |
-| `words`             | `string[]` | `["better", "modern", "beautiful", "awesome"]`   | Tableau de mots à faire défiler dans l'animation.    |
-| `interval`          | `number`   | `3000`                                           | Temps en millisecondes entre chaque transition.      |
-| `animationDuration` | `number`   | `700`                                            | Durée de l'animation de transition, en millisecondes. |
-| `class`             | `string`   | ``                                               | Classes CSS supplémentaires à appliquer au conteneur. |
-| `textClass`         | `string`   | ``                                               | Classes CSS supplémentaires à appliquer au texte.     |
+| Nom de propriété    | Type       | Valeur par défaut                              | Description                                           |
+| ------------------- | ---------- | ---------------------------------------------- | ----------------------------------------------------- |
+| `words`             | `string[]` | `["better", "modern", "beautiful", "awesome"]` | Tableau de mots à faire défiler dans l'animation.     |
+| `interval`          | `number`   | `3000`                                         | Temps en millisecondes entre chaque transition.       |
+| `animationDuration` | `number`   | `700`                                          | Durée de l'animation de transition, en millisecondes. |
+| `class`             | `string`   | ``                                             | Classes CSS supplémentaires à appliquer au conteneur. |
+| `textClass`         | `string`   | ``                                             | Classes CSS supplémentaires à appliquer au texte.     |
 
 #credits
 

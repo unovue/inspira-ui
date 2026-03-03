@@ -11,13 +11,13 @@ tags: [css, tailwind]
 
 ## API
 
-| 属性名        | 类型      | 默认值     | 描述                                       |
-| ------------- | --------- | ---------- | ------------------------------------------ |
-| `text`        | `string`  | `""`       | 展示故障效果的文字内容。                   |
-| `speed`       | `number`  | `0.5`      | 故障动画的速度（秒）。                     |
-| `enableShadows`| `boolean`| `true`     | 是否开启彩色阴影以增强故障感。            |
-| `enableOnHover`| `boolean`| `false`    | 为 `true` 时仅在悬停时启用故障动画。      |
-| `class`       | `string`  | `undefined`| 容器 div 的额外 CSS 类。                  |
+| 属性名          | 类型      | 默认值      | 描述                                 |
+| --------------- | --------- | ----------- | ------------------------------------ |
+| `text`          | `string`  | `""`        | 展示故障效果的文字内容。             |
+| `speed`         | `number`  | `0.5`       | 故障动画的速度（秒）。               |
+| `enableShadows` | `boolean` | `true`      | 是否开启彩色阴影以增强故障感。       |
+| `enableOnHover` | `boolean` | `false`     | 为 `true` 时仅在悬停时启用故障动画。 |
+| `class`         | `string`  | `undefined` | 容器 div 的额外 CSS 类。             |
 
 #credits
 

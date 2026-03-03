@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
 interface ShimmerButtonProps {
   shimmerColor?: string;
   shimmerSize?: string;
@@ -19,8 +20,6 @@ withDefaults(defineProps<ShimmerButtonProps>(), {
 
 <template>
   <button
-    class="group relative z-0 flex transform-gpu cursor-pointer items-center justify-center overflow-hidden [border-radius:var(--radius)] border border-white/10 px-6 py-3 whitespace-nowrap text-white transition-transform duration-300 ease-in-out [background:var(--bg)] active:translate-y-px dark:text-black"
-    :class="[$props.class]"
     :style="{
       '--spread': '90deg',
       '--shimmer-color': shimmerColor,
@@ -29,6 +28,12 @@ withDefaults(defineProps<ShimmerButtonProps>(), {
       '--cut': shimmerSize,
       '--bg': background,
     }"
+    :class="
+      cn(
+        `group relative z-0 flex transform-gpu cursor-pointer items-center justify-center overflow-hidden [border-radius:var(--radius)] border border-white/10 px-6 py-3 whitespace-nowrap text-white transition-transform duration-300 ease-in-out [background:var(--bg)] active:translate-y-px dark:text-black`,
+        $props.class,
+      )
+    "
   >
     <div class="[container-type:size] absolute inset-0 -z-30 overflow-visible blur-[2px]">
       <div

@@ -17,15 +17,15 @@ tags: [css, tailwind, input]
 
 ## API
 
-| 属性名              | 类型     | 默认值             | 描述                                         |
-| ------------------- | -------- | ------------------ | -------------------------------------------- |
-| `textGlowStartColor`| `string` | `"#38ef7d80"`      | 盒子阴影的起始颜色。                         |
-| `textGlowEndColor`  | `string` | `"#38ef7d"`        | 盒子阴影的结束颜色。                         |
-| `perspective`       | `number` | `600`              | 传递给 CSS `transform` 的透视值。            |
-| `rotateX`           | `number` | `-1`               | 传递给 CSS `transform` 的 rotateX 值。       |
-| `rotateY`           | `number` | `-15`              | 传递给 CSS `transform` 的 rotateY 值。       |
-| `cards`             | `[]`     | `"[{logo: 'src'}]"`| 要在网格中展示的卡片。                       |
-| `class`             | `string` | `""`               | 自定义样式的额外 Tailwind CSS 类。           |
+| 属性名               | 类型     | 默认值              | 描述                                   |
+| -------------------- | -------- | ------------------- | -------------------------------------- |
+| `textGlowStartColor` | `string` | `"#38ef7d80"`       | 盒子阴影的起始颜色。                   |
+| `textGlowEndColor`   | `string` | `"#38ef7d"`         | 盒子阴影的结束颜色。                   |
+| `perspective`        | `number` | `600`               | 传递给 CSS `transform` 的透视值。      |
+| `rotateX`            | `number` | `-1`                | 传递给 CSS `transform` 的 rotateX 值。 |
+| `rotateY`            | `number` | `-15`               | 传递给 CSS `transform` 的 rotateY 值。 |
+| `cards`              | `[]`     | `"[{logo: 'src'}]"` | 要在网格中展示的卡片。                 |
+| `class`              | `string` | `""`                | 自定义样式的额外 Tailwind CSS 类。     |
 
 #credits
 

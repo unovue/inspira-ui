@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
 import { Motion } from "motion-v";
 import { computed, onMounted, ref, useSlots } from "vue";
 
@@ -49,10 +50,7 @@ async function wait(ms: number) {
 </script>
 
 <template>
-  <div
-    class="flex flex-col items-center gap-4"
-    :class="[props.class]"
-  >
+  <div :class="cn(`flex flex-col items-center gap-4`, props.class)">
     <transition-group
       name="list"
       tag="div"

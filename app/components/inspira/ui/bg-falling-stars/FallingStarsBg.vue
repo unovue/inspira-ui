@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { onBeforeUnmount, onMounted, ref, watch } from "vue";
 
 interface Star {
@@ -178,7 +179,6 @@ function loop() {
 <template>
   <canvas
     ref="starsCanvas"
-    class="absolute inset-0 h-full w-full"
-    :class="[$props.class]"
+    :class="cn(`absolute inset-0 h-full w-full`, props.class)"
   />
 </template>

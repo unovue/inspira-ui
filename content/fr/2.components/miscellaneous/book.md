@@ -13,32 +13,32 @@ tags: [css, tailwind, x-ui]
 
 #### `Book`
 
-| Nom de propriété | Type    | Valeur par défaut | Description                                       |
-| ---------------- | ------- | ----------------- | ------------------------------------------------- |
+| Nom de propriété | Type    | Valeur par défaut | Description                                         |
+| ---------------- | ------- | ----------------- | --------------------------------------------------- |
 | `class`          | String  | -                 | Classes supplémentaires pour styliser le composant. |
-| `duration`       | Number  | 1000              | Durée de l'animation en millisecondes.            |
-| `color`          | String  | "zinc"            | Palette de couleur pour le dégradé du livre.      |
-| `isStatic`       | Boolean | false             | Désactive les animations au survol si `true`.     |
-| `size`           | String  | "md"              | Variante de taille du livre.                      |
-| `radius`         | String  | "md"              | Variante de rayon de bordure du livre.            |
-| `shadowSize`     | String  | "lg"              | Variante de taille d'ombre du livre.              |
+| `duration`       | Number  | 1000              | Durée de l'animation en millisecondes.              |
+| `color`          | String  | "zinc"            | Palette de couleur pour le dégradé du livre.        |
+| `isStatic`       | Boolean | false             | Désactive les animations au survol si `true`.       |
+| `size`           | String  | "md"              | Variante de taille du livre.                        |
+| `radius`         | String  | "md"              | Variante de rayon de bordure du livre.              |
+| `shadowSize`     | String  | "lg"              | Variante de taille d'ombre du livre.                |
 
 #### `BookHeader`
 
-| Nom de propriété | Type   | Valeur par défaut | Description                                   |
-| ---------------- | ------ | ----------------- | --------------------------------------------- |
+| Nom de propriété | Type   | Valeur par défaut | Description                                         |
+| ---------------- | ------ | ----------------- | --------------------------------------------------- |
 | `class`          | String | -                 | Classes supplémentaires pour un style personnalisé. |
 
 #### `BookTitle`
 
-| Nom de propriété | Type   | Valeur par défaut | Description                                   |
-| ---------------- | ------ | ----------------- | --------------------------------------------- |
+| Nom de propriété | Type   | Valeur par défaut | Description                                         |
+| ---------------- | ------ | ----------------- | --------------------------------------------------- |
 | `class`          | String | -                 | Classes supplémentaires pour un style personnalisé. |
 
 #### `BookDescription`
 
-| Nom de propriété | Type   | Valeur par défaut | Description                                   |
-| ---------------- | ------ | ----------------- | --------------------------------------------- |
+| Nom de propriété | Type   | Valeur par défaut | Description                                         |
+| ---------------- | ------ | ----------------- | --------------------------------------------------- |
 | `class`          | String | -                 | Classes supplémentaires pour un style personnalisé. |
 
 #credits

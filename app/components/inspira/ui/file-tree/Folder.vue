@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { FolderProps, TreeContextProps } from "./index";
+import { cn } from "@inspira-ui/plugins";
 import { computed, inject, toRefs } from "vue";
 import { TREE_CONTEXT_SYMBOL } from "./index";
 
@@ -29,15 +30,15 @@ function onTriggerClick() {
 <template>
   <div class="relative h-full overflow-hidden">
     <div
-      class="flex cursor-pointer items-center gap-1 rounded-md text-sm transition-all duration-200"
-      :class="[
-        [
+      :dir="direction"
+      :class="
+        cn(
+          `flex cursor-pointer items-center gap-1 rounded-md text-sm transition-all duration-200`,
           isSelect && isSelectable ? 'bg-muted' : '',
           !isSelectable ? 'cursor-not-allowed opacity-50' : '',
           $props.class,
-        ],
-      ]"
-      :dir="direction"
+        )
+      "
       @click="onTriggerClick"
     >
       <Icon

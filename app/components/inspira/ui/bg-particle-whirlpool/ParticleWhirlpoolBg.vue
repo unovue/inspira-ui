@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
 import {
   AmbientLight,
   BoxGeometry,
@@ -262,8 +263,7 @@ onUnmounted(() => {
 <template>
   <div
     ref="whirlpoolCanvasContainerRef"
-    class="relative h-full w-full"
-    :class="[$props.class]"
+    :class="cn(`relative h-full w-full`, props.class)"
   >
     <canvas
       ref="whirlpoolCanvasRef"

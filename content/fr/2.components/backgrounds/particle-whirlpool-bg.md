@@ -11,11 +11,11 @@ tags: [css, tailwind, background, threejs, postprocessing]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                                       |
-| ---------------- | -------- | ----------------- | ----------------------------------------------------------------- |
-| `class`          | `string` | `""`              | Classes CSS supplémentaires pour un style personnalisé.           |
-| `blur`           | `number` | `0`               | Niveau de flou appliqué au fond, en pixels.                       |
-| `particleCount`  | `number` | `2000`            | Nombre de particules dans l'animation de tourbillon.              |
+| Nom de propriété | Type     | Valeur par défaut | Description                                             |
+| ---------------- | -------- | ----------------- | ------------------------------------------------------- |
+| `class`          | `string` | `""`              | Classes CSS supplémentaires pour un style personnalisé. |
+| `blur`           | `number` | `0`               | Niveau de flou appliqué au fond, en pixels.             |
+| `particleCount`  | `number` | `2000`            | Nombre de particules dans l'animation de tourbillon.    |
 
 #credits
 

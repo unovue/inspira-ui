@@ -11,8 +11,8 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| Nom de propriété | Type       | Valeur par défaut | Description                           |
-| ---------------- | ---------- | ----------------- | ------------------------------------- |
+| Nom de propriété | Type       | Valeur par défaut | Description                                |
+| ---------------- | ---------- | ----------------- | ------------------------------------------ |
 | `texts`          | `string[]` | `[]`              | Tableau de textes entre lesquels alterner. |
 | `class`          | `string`   | `""`              | Classes supplémentaires pour le conteneur. |
 | `morphTime`      | `number`   | `1.5`             | Durée d'exécution de l'animation.          |

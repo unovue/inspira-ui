@@ -11,8 +11,8 @@ tags: [css, tailwind, input, ui-verse]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                      |
-| ---------------- | -------- | ----------------- | ------------------------------------------------ |
+| Nom de propriété | Type     | Valeur par défaut | Description                                           |
+| ---------------- | -------- | ----------------- | ----------------------------------------------------- |
 | `class`          | `string` | `""`              | Classes CSS supplémentaires pour le conteneur racine. |
 
 #credits

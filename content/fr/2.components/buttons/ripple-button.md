@@ -11,16 +11,16 @@ tags: [css, tailwind, button, magic-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                                    |
-| ---------------- | -------- | ----------------- | -------------------------------------------------------------- |
-| `class`          | `string` | -                 | Classes CSS supplémentaires pour un style personnalisé.        |
-| `rippleColor`    | `string` | `"#ADD8E6"`       | Couleur de l'effet d'onde.                                     |
-| `duration`       | `number` | `600`             | Durée de l'animation de l'onde en millisecondes.               |
+| Nom de propriété | Type     | Valeur par défaut | Description                                             |
+| ---------------- | -------- | ----------------- | ------------------------------------------------------- |
+| `class`          | `string` | -                 | Classes CSS supplémentaires pour un style personnalisé. |
+| `rippleColor`    | `string` | `"#ADD8E6"`       | Couleur de l'effet d'onde.                              |
+| `duration`       | `number` | `600`             | Durée de l'animation de l'onde en millisecondes.        |
 
 ## Événements émis
 
-| Nom de l'événement | Type    | Description  |
-| ------------------ | ------- | ------------ |
+| Nom de l'événement | Type    | Description    |
+| ------------------ | ------- | -------------- |
 | `click`            | `event` | Événement clic |
 
 #credits

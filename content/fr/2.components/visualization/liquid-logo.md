@@ -11,16 +11,16 @@ tags: [css, tailwind, webgl, paper]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                      |
-| ---------------- | -------- | ----------------- | ------------------------------------------------ |
+| Nom de propriété | Type     | Valeur par défaut | Description                                             |
+| ---------------- | -------- | ----------------- | ------------------------------------------------------- |
 | `class`          | `string` | `""`              | Classes CSS supplémentaires pour un style personnalisé. |
-| `imageUrl`       | `string` | `""`              | URL de l'image sur laquelle appliquer l'effet liquide. |
-| `patternScale`   | `number` | `2`               | Échelle du motif de distorsion.                   |
-| `refraction`     | `number` | `0.015`           | Niveau de réfraction appliqué à l'image.          |
-| `edge`           | `number` | `0.4`             | Netteté de l'effet de bord.                      |
-| `patternBlur`    | `number` | `0.005`           | Flou appliqué au motif.                          |
-| `liquid`         | `number` | `0.07`            | Intensité de l'animation liquide.                |
-| `speed`          | `number` | `0.3`             | Vitesse d'animation de l'effet liquide.          |
+| `imageUrl`       | `string` | `""`              | URL de l'image sur laquelle appliquer l'effet liquide.  |
+| `patternScale`   | `number` | `2`               | Échelle du motif de distorsion.                         |
+| `refraction`     | `number` | `0.015`           | Niveau de réfraction appliqué à l'image.                |
+| `edge`           | `number` | `0.4`             | Netteté de l'effet de bord.                             |
+| `patternBlur`    | `number` | `0.005`           | Flou appliqué au motif.                                 |
+| `liquid`         | `number` | `0.07`            | Intensité de l'animation liquide.                       |
+| `speed`          | `number` | `0.3`             | Vitesse d'animation de l'effet liquide.                 |
 
 #credits
 

@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@googlemaps/markerclusterer": "^2.6.2",
+    "@inspira-ui/plugins": "^0.0.2",
     "@number-flow/vue": "^0.4.8",
     "@nuxt/content": "3.9.0",
     "@nuxt/eslint": "1.12.1",
@@ -29,6 +30,7 @@
     "@nuxt/ui": "^4.3.0",
     "@oxc-parser/wasm": "^0.60.0",
     "@splinetool/runtime": "^1.12.28",
+    "@tresjs/nuxt": "^5.3.0",
     "@uiw/color-convert": "^2.9.2",
     "@unhead/vue": "^2.0.19",
     "@vueuse/nuxt": "^14.1.0",
@@ -69,10 +71,5 @@
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.2.1"
-  },
-  "pnpm": {
-    "overrides": {
-      "vite": "npm:rolldown-vite@latest"
-    }
   }
 }

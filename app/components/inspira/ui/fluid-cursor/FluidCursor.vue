@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { onMounted, ref, watch } from "vue";
 
 interface ColorRGB {
@@ -1388,10 +1389,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    class="pointer-events-none fixed top-0 left-0 z-50 size-full"
-    :class="[props.class]"
-  >
+  <div :class="cn(`pointer-events-none fixed top-0 left-0 z-50 size-full`, props.class)">
     <canvas
       id="fluid"
       ref="canvasRef"

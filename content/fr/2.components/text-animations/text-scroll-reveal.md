@@ -11,9 +11,9 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                                         |
-| ---------------- | -------- | ----------------- | ------------------------------------------------------------------- |
-| `text`           | `string` | N/A               | Texte à afficher et révéler mot par mot pendant le défilement.      |
+| Nom de propriété | Type     | Valeur par défaut | Description                                                              |
+| ---------------- | -------- | ----------------- | ------------------------------------------------------------------------ |
+| `text`           | `string` | N/A               | Texte à afficher et révéler mot par mot pendant le défilement.           |
 | `class`          | `string` | `""`              | Classes CSS supplémentaires à appliquer pour personnaliser le composant. |
 
 #credits

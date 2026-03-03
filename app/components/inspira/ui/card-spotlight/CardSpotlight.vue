@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { computed, onMounted, ref } from "vue";
 
 const props = withDefaults(
@@ -50,15 +51,16 @@ const backgroundStyle = computed(() => {
 
 <template>
   <div
-    class="group relative flex size-full overflow-hidden rounded-xl border bg-neutral-100 text-black dark:bg-neutral-900 dark:text-white"
-    :class="[$props.class]"
+    :class="
+      cn(
+        `group relative flex size-full overflow-hidden rounded-xl border bg-neutral-100 text-black dark:bg-neutral-900 dark:text-white`,
+        $props.class,
+      )
+    "
     @mousemove="handleMouseMove"
     @mouseleave="handleMouseLeave"
   >
-    <div
-      class="relative z-10"
-      :class="[props.slotClass]"
-    >
+    <div :class="cn(`relative z-10`, props.slotClass)">
       <slot />
     </div>
     <div

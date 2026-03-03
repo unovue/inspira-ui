@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { InspiraImageParticle as ImageParticle } from "./inspiraImageParticles";
+import { cn } from "@inspira-ui/plugins";
 import { onMounted, ref } from "vue";
 import { inspiraImageParticles } from "./inspiraImageParticles";
 
@@ -38,8 +39,6 @@ onMounted(() => {
   <img
     ref="imageParticleRef"
     :src="imageSrc"
-    class="hidden h-32 w-32"
-    :class="[$props.class]"
     :data-particle-gap="particleGap"
     :data-width="canvasWidth"
     :data-height="canvasHeight"
@@ -55,5 +54,6 @@ onMounted(() => {
     :data-fade-direction="fadeDirection"
     :data-noise="noise"
     :data-responsive-width="responsiveWidth"
+    :class="cn(`hidden h-32 w-32`, $props.class)"
   />
 </template>
