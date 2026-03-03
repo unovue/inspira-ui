@@ -3,7 +3,7 @@
     <h1 class="text-4xl font-bold">
       Design should always match
       <TextHighlight
-        class="rounded-xl bg-gradient-to-r from-green-300 to-blue-300"
+        class="rounded-xl bg-linear-to-r from-green-300 to-blue-300"
         text-end-color="hsl(var(--accent))"
       >
         WCAG recommendations

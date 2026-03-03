@@ -308,7 +308,7 @@ onBeforeUnmount(() => {
       :style="{
         '--bubbles-blur': `${blur}px`,
       }"
-      class="absolute inset-0 z-[2] size-full backdrop-blur-[--bubbles-blur]"
+      class="absolute inset-0 z-2 size-full backdrop-blur-(--bubbles-blur)"
     >
       <slot />
     </div>

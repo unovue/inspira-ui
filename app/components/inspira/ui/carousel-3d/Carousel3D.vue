@@ -170,7 +170,7 @@ onBeforeUnmount(() => {
   >
     <div
       :class="
-        cn(`absolute top-[40%] left-0 z-[100] h-[80%] w-full translate-y-[-50%]`, props.class)
+        cn(`absolute top-[40%] left-0 z-100 h-[80%] w-full translate-y-[-50%]`, props.class)
       "
       @mousedown="onDragStart"
       @mouseup="onDragEnd"

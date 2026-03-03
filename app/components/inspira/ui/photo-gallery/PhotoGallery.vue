@@ -11,7 +11,7 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-  <div :class="cn(`gallery mb-[var(--size)] grid grid-cols-6 gap-1`, props.containerClass)">
+  <div :class="cn(`gallery mb-(--size) grid grid-cols-6 gap-1`, props.containerClass)">
     <img
       v-for="(image, index) in props.items"
       :key="index"

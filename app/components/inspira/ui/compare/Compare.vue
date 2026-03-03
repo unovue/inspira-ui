@@ -214,7 +214,7 @@ watch(
     <Transition>
       <div
         v-show="true"
-        class="absolute top-0 z-30 m-auto h-full w-px bg-gradient-to-b from-transparent from-5% via-indigo-500 to-transparent to-95%"
+        class="absolute top-0 z-30 m-auto h-full w-px bg-linear-to-b from-transparent from-5% via-indigo-500 to-transparent to-95%"
         :style="{
           left: `${sliderXPercent}%`,
           top: '0',
@@ -224,13 +224,13 @@ watch(
       >
         <!-- Decorative Effects -->
         <div
-          class="absolute top-1/2 left-0 z-20 h-full w-36 -translate-y-1/2 bg-gradient-to-r from-indigo-400 via-transparent to-transparent [mask-image:radial-gradient(100px_at_left,white,transparent)] opacity-50"
+          class="absolute top-1/2 left-0 z-20 h-full w-36 -translate-y-1/2 bg-linear-to-r from-indigo-400 via-transparent to-transparent mask-[radial-gradient(100px_at_left,white,transparent)] opacity-50"
         />
         <div
-          class="absolute top-1/2 left-0 z-10 h-1/2 w-10 -translate-y-1/2 bg-gradient-to-r from-cyan-400 via-transparent to-transparent [mask-image:radial-gradient(50px_at_left,white,transparent)] opacity-100"
+          class="absolute top-1/2 left-0 z-10 h-1/2 w-10 -translate-y-1/2 bg-linear-to-r from-cyan-400 via-transparent to-transparent mask-[radial-gradient(50px_at_left,white,transparent)] opacity-100"
         />
         <div
-          class="absolute top-1/2 -right-10 h-3/4 w-10 -translate-y-1/2 [mask-image:radial-gradient(100px_at_left,white,transparent)]"
+          class="absolute top-1/2 -right-10 h-3/4 w-10 -translate-y-1/2 mask-[radial-gradient(100px_at_left,white,transparent)]"
         >
           <StarField
             :stars-count="120"
@@ -266,7 +266,7 @@ watch(
           }"
           :class="
             cn(
-              `absolute inset-0 z-20 h-full w-full flex-shrink-0 overflow-hidden rounded-2xl select-none`,
+              `absolute inset-0 z-20 h-full w-full shrink-0 overflow-hidden rounded-2xl select-none`,
               props.firstContentClass,
             )
           "
@@ -279,7 +279,7 @@ watch(
               :draggable="false"
               :class="
                 cn(
-                  `absolute inset-0 z-20 h-full w-full flex-shrink-0 rounded-2xl select-none`,
+                  `absolute inset-0 z-20 h-full w-full shrink-0 rounded-2xl select-none`,
                   firstContentClass,
                 )
               "
@@ -296,7 +296,7 @@ watch(
         :style="{ pointerEvents: isInteracting ? 'none' : 'auto' }"
         :class="
           cn(
-            `absolute top-0 left-0 z-[19] h-full w-full rounded-2xl select-none`,
+            `absolute top-0 left-0 z-19 h-full w-full rounded-2xl select-none`,
             props.secondContentClass,
           )
         "

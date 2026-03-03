@@ -36,10 +36,10 @@ const delayInSeconds = computed(() => `${props.delay}s`);
         class="animate-conic-gradient bg-gradient-conic absolute inset-auto right-1/2 h-56 w-60 overflow-visible from-cyan-500 via-transparent to-transparent text-white opacity-50 [--conic-position:from_70deg_at_center_top]"
       >
         <div
-          class="absolute bottom-0 left-0 z-20 h-40 w-full bg-slate-950 [mask-image:linear-gradient(to_top,white,transparent)]"
+          class="absolute bottom-0 left-0 z-20 h-40 w-full bg-slate-950 mask-[linear-gradient(to_top,white,transparent)]"
         />
         <div
-          class="absolute bottom-0 left-0 z-20 h-full w-40 bg-slate-950 [mask-image:linear-gradient(to_right,white,transparent)]"
+          class="absolute bottom-0 left-0 z-20 h-full w-40 bg-slate-950 mask-[linear-gradient(to_right,white,transparent)]"
         />
       </div>
 
@@ -50,10 +50,10 @@ const delayInSeconds = computed(() => `${props.delay}s`);
         class="animate-conic-gradient bg-gradient-conic absolute inset-auto left-1/2 h-56 w-60 from-transparent via-transparent to-cyan-500 text-white opacity-50 [--conic-position:from_290deg_at_center_top]"
       >
         <div
-          class="absolute right-0 bottom-0 z-20 h-full w-40 bg-slate-950 [mask-image:linear-gradient(to_left,white,transparent)]"
+          class="absolute right-0 bottom-0 z-20 h-full w-40 bg-slate-950 mask-[linear-gradient(to_left,white,transparent)]"
         />
         <div
-          class="absolute right-0 bottom-0 z-20 h-40 w-full bg-slate-950 [mask-image:linear-gradient(to_top,white,transparent)]"
+          class="absolute right-0 bottom-0 z-20 h-40 w-full bg-slate-950 mask-[linear-gradient(to_top,white,transparent)]"
         />
       </div>
 
@@ -62,7 +62,7 @@ const delayInSeconds = computed(() => `${props.delay}s`);
       <div class="absolute top-1/2 z-50 h-48 w-full bg-transparent opacity-10 backdrop-blur-md" />
 
       <div
-        class="absolute inset-auto z-50 h-36 w-[28rem] -translate-y-1/2 rounded-full bg-cyan-500 opacity-50 blur-3xl"
+        class="absolute inset-auto z-50 h-36 w-md -translate-y-1/2 rounded-full bg-cyan-500 opacity-50 blur-3xl"
       />
 
       <!-- Spotlight -->
@@ -75,7 +75,7 @@ const delayInSeconds = computed(() => `${props.delay}s`);
         class="animate-glowing-line absolute inset-auto z-50 h-0.5 w-60 -translate-y-28 bg-cyan-400"
       />
 
-      <div class="absolute inset-auto z-40 h-44 w-full translate-y-[-12.5rem] bg-slate-950" />
+      <div class="absolute inset-auto z-40 h-44 w-full -translate-y-50 bg-slate-950" />
     </div>
 
     <div class="relative z-50 flex -translate-y-80 flex-col items-center px-5">

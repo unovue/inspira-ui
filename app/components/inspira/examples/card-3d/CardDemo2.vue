@@ -6,7 +6,7 @@ import { CardBody, CardContainer, CardItem } from "~/components/inspira/ui/card-
   <ClientOnly>
     <CardContainer>
       <CardBody
-        class="group/card relative size-auto rounded-xl border border-black/[0.1] bg-gray-50 p-6 sm:w-[30rem] dark:border-white/[0.2] dark:bg-black dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]"
+        class="group/card relative size-auto rounded-xl border border-black/10 bg-gray-50 p-6 sm:w-120 dark:border-white/20 dark:bg-black dark:hover:shadow-2xl dark:hover:shadow-emerald-500/10"
       >
         <CardItem
           :translate-z="50"

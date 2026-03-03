@@ -108,7 +108,7 @@ onBeforeUnmount(() => {
         v-if="modal.open.value"
         as="div"
         :style="{ zIndex: props.zIndex }"
-        class="fixed inset-0 z-50 flex h-full w-full items-center justify-center [perspective:800px] [transform-style:preserve-3d]"
+        class="fixed inset-0 z-50 flex h-full w-full items-center justify-center perspective-midrange transform-3d"
         :animate="{
           backdropFilter: 'blur(10px)',
         }"

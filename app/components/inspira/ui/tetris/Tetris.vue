@@ -137,12 +137,12 @@ onUnmounted(() => {
               '--square-dark': theme[700],
               '--square-hover-dark': theme[600],
             }"
-            class="relative border border-[color:var(--border-light)] dark:border-[color:var(--border-dark)]"
+            class="relative border border-(--border-light) dark:border-(--border-dark)"
           >
             <div
               :class="
                 cn(
-                  `absolute inset-0 bg-[color:var(--square-light)] opacity-0 transition-opacity duration-1000 will-change-[opacity] hover:bg-[color:var(--square-hover-light)] dark:bg-[color:var(--square-dark)] dark:hover:bg-[color:var(--square-hover-dark)]`,
+                  `absolute inset-0 bg-(--square-light) opacity-0 transition-opacity duration-1000 will-change-[opacity] hover:bg-(--square-hover-light) dark:bg-(--square-dark) dark:hover:bg-(--square-hover-dark)`,
                   cell && 'cursor-pointer opacity-60',
                 )
               "

@@ -3,7 +3,7 @@
     <div class="flex w-full flex-col items-center justify-center py-24">
       <div class="relative w-full max-w-xs">
         <div
-          class="absolute inset-0 size-full scale-[0.80] rounded-full bg-red-500 bg-gradient-to-r from-blue-500 to-teal-500 blur-3xl"
+          class="absolute inset-0 size-full scale-[0.80] rounded-full bg-red-500 bg-linear-to-r from-blue-500 to-teal-500 blur-3xl"
         />
         <div
           class="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-2xl border border-gray-800 bg-gray-900 px-4 py-8 shadow-xl"

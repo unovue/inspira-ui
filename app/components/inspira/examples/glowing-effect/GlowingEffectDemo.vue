@@ -40,12 +40,12 @@ const gridItems = [
 
 <template>
   <ul
-    class="grid grid-cols-1 grid-rows-none gap-4 overflow-auto md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[56rem] xl:grid-rows-2"
+    class="grid grid-cols-1 grid-rows-none gap-4 overflow-auto md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-224 xl:grid-rows-2"
   >
     <li
       v-for="item in gridItems"
       :key="item.title"
-      class="min-h-[14rem] list-none"
+      class="min-h-56 list-none"
       :class="[item.area]"
     >
       <div class="rounded-2.5xl relative h-full border p-2 md:rounded-3xl md:p-3">

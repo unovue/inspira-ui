@@ -124,7 +124,7 @@ const containerClass = computed(() => [
   "sm:h-64 sm:w-64", // Small screens
   "md:h-80 md:w-80", // Medium screens
   "lg:h-96 lg:w-96", // Large screens
-  "xl:h-[28rem] xl:w-[28rem]", // Extra large screens
+  "xl:h-112 xl:w-md", // Extra large screens
   // Mobile touch improvements
   "touch-manipulation",
   "active:scale-[0.98]",

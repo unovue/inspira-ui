@@ -30,7 +30,7 @@
           image-url="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
           class="border-2 border-blue-500 shadow-xl ring-2 ring-blue-200 dark:border-blue-400 dark:ring-blue-800"
           image-class="scale-110 hover:scale-125 transition-transform duration-500"
-          children-class="bg-gradient-to-t from-black/80 to-transparent p-3 sm:p-4 rounded-b-lg backdrop-blur-sm"
+          children-class="bg-linear-to-t from-black/80 to-transparent p-3 sm:p-4 rounded-b-lg backdrop-blur-sm"
         >
           <h2 class="text-lg font-semibold sm:text-xl">Urban Adventure</h2>
           <p class="mt-1 text-sm opacity-90 sm:mt-2 sm:text-base">Explore the city lights</p>
@@ -42,7 +42,7 @@
         <DirectionAwareHover
           image-url="https://images.unsplash.com/photo-1664710476481-1213c456c56c?q=80&w=2672&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           class="overflow-hidden rounded-xl shadow-2xl ring-1 ring-gray-300 dark:ring-gray-700"
-          children-class="bg-gradient-to-t from-black/90 via-black/40 to-transparent p-3 sm:p-4 rounded-b-xl"
+          children-class="bg-linear-to-t from-black/90 via-black/40 to-transparent p-3 sm:p-4 rounded-b-xl"
         >
           <h2 class="text-lg font-semibold sm:text-xl">Culinary Delights</h2>
           <p class="mt-1 text-sm opacity-90 sm:mt-2 sm:text-base">Savor exquisite flavors</p>
@@ -65,7 +65,7 @@
           <DirectionAwareHover
             image-url="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2670&auto=format&fit=crop"
             class="rounded-2xl shadow-lg"
-            children-class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-3 text-center"
+            children-class="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 to-transparent p-3 text-center"
           >
             <h3 class="text-base font-medium sm:text-lg">Mountain Peak</h3>
           </DirectionAwareHover>
@@ -90,7 +90,7 @@
           <DirectionAwareHover
             image-url="https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             class="rounded-lg shadow-lg ring-2 ring-green-400 dark:ring-green-600"
-            children-class="bg-gradient-to-r from-green-600/90 to-blue-600/90 backdrop-blur-sm p-3 rounded-b-lg"
+            children-class="bg-linear-to-r from-green-600/90 to-blue-600/90 backdrop-blur-sm p-3 rounded-b-lg"
           >
             <h3 class="text-base font-semibold sm:text-lg">Technology</h3>
             <p class="text-xs opacity-90 sm:text-sm">Innovation Hub</p>
@@ -103,7 +103,7 @@
             image-url="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2671&auto=format&fit=crop"
             class="rounded-lg shadow-lg"
             image-class="scale-110 hover:scale-130 transition-transform duration-700 sepia hover:sepia-0"
-            children-class="bg-gradient-to-t from-emerald-900/90 to-transparent p-3"
+            children-class="bg-linear-to-t from-emerald-900/90 to-transparent p-3"
           >
             <h3 class="text-base font-semibold sm:text-lg">Forest Trail</h3>
             <p class="text-xs opacity-90 sm:text-sm">Nature's Path</p>

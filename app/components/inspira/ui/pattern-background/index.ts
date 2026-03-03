@@ -43,18 +43,18 @@ export const patternBackgroundVariants = cva("relative text-clip", {
   variants: {
     variant: {
       [PATTERN_BACKGROUND_VARIANT.Grid]:
-        "[background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]",
+        "bg-[linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]",
       [PATTERN_BACKGROUND_VARIANT.Dot]:
-        "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)] dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
+        "bg-[radial-gradient(#d4d4d4_1px,transparent_1px)] dark:bg-[radial-gradient(#404040_1px,transparent_1px)]",
       [PATTERN_BACKGROUND_VARIANT.BigDot]:
-        "[background-image:radial-gradient(#d4d4d4_3px,transparent_3px)] dark:[background-image:radial-gradient(#404040_3px,transparent_3px)]",
+        "bg-[radial-gradient(#d4d4d4_3px,transparent_3px)] dark:bg-[radial-gradient(#404040_3px,transparent_3px)]",
     },
     size: {
-      xs: "bg-[size:8px_8px]",
-      sm: "bg-[size:16px_16px]",
-      md: "bg-[size:24px_24px]",
-      lg: "bg-[size:32px_32px]",
-      xl: "bg-[size:40px_40px]",
+      xs: "bg-size-[8px_8px]",
+      sm: "bg-size-[16px_16px]",
+      md: "bg-size-[24px_24px]",
+      lg: "bg-size-[32px_32px]",
+      xl: "bg-size-[40px_40px]",
     },
   },
   defaultVariants: {
@@ -74,9 +74,9 @@ export const patternBackgroundMaskVariants = cva("bg-default bg-background", {
   variants: {
     mask: {
       [PATTERN_BACKGROUND_MASK.Ellipse]:
-        "[mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]",
+        "mask-[radial-gradient(ellipse_at_center,transparent_20%,black)]",
       [PATTERN_BACKGROUND_MASK.EllipseTop]:
-        "[mask-image:radial-gradient(ellipse_at_top,transparent_20%,black)]",
+        "mask-[radial-gradient(ellipse_at_top,transparent_20%,black)]",
     },
   },
   defaultVariants: {

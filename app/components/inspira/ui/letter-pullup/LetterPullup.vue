@@ -36,7 +36,7 @@ const pullupVariant = {
         }"
         :class="
           cn(
-            `font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm md:text-4xl md:leading-[5rem]`,
+            `font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm md:text-4xl md:leading-20`,
             props.class,
           )
         "

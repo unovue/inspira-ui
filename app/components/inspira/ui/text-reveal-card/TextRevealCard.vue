@@ -75,7 +75,7 @@ function touchMoveHandler(event: TouchEvent) {
     ref="cardRef"
     :class="
       cn(
-        `relative w-full max-w-[40rem] overflow-hidden rounded-lg border border-white/[0.08] bg-[#1d1c20] p-4 sm:p-6 md:p-8`,
+        `relative w-full max-w-160 overflow-hidden rounded-lg border border-white/8 bg-[#1d1c20] p-4 sm:p-6 md:p-8`,
         props.class,
       )
     "
@@ -107,11 +107,11 @@ function touchMoveHandler(event: TouchEvent) {
           opacity: widthPercentage > 0 ? 1 : 0,
           transition: isMouseOver ? 'none' : 'all 0.4s ease-out',
         }"
-        class="absolute z-50 h-40 w-[8px] bg-gradient-to-b from-transparent via-neutral-800 to-transparent will-change-transform"
+        class="absolute z-50 h-40 w-[8px] bg-linear-to-b from-transparent via-neutral-800 to-transparent will-change-transform"
       />
 
       <div
-        class="overflow-hidden [mask-image:linear-gradient(to_bottom,transparent,white,transparent)]"
+        class="overflow-hidden mask-[linear-gradient(to_bottom,transparent,white,transparent)]"
       >
         <slot name="revealText" />
 

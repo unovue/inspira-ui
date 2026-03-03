@@ -11,7 +11,7 @@ defineProps<Props>();
 
 <template>
   <figure
-    class="relative w-64 cursor-pointer overflow-hidden rounded-xl border border-gray-950/[.1] bg-gray-950/[.01] p-4 hover:bg-gray-950/[.05] dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]"
+    class="relative w-64 cursor-pointer overflow-hidden rounded-xl border border-gray-950/10 bg-gray-950/1 p-4 hover:bg-gray-950/5 dark:border-gray-50/10 dark:bg-gray-50/10 dark:hover:bg-gray-50/15"
   >
     <div class="flex flex-row items-center gap-2">
       <img

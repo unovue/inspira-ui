@@ -161,7 +161,7 @@ function onTilesLoaded() {
 
 <template>
   <ClientOnly>
-    <div class="relative flex h-[28rem] w-full flex-col items-center justify-center">
+    <div class="relative flex h-112 w-full flex-col items-center justify-center">
       <div
         ref="el"
         class="absolute inset-0 z-50 flex flex-col items-center justify-center"
@@ -174,7 +174,7 @@ function onTilesLoaded() {
       </div>
       <span
         v-if="!tilesLoaded"
-        class="z-[51] text-lg font-semibold"
+        class="z-51 text-lg font-semibold"
       >
         Loading Tiles
       </span>
@@ -182,7 +182,7 @@ function onTilesLoaded() {
       <InteractiveHoverButton
         v-if="tilesLoaded"
         text="View Fullscreen"
-        class="absolute bottom-0 z-[52]"
+        class="absolute bottom-0 z-52"
         @click="toggle"
       />
     </div>

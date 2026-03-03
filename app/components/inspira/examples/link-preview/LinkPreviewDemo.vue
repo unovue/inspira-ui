@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-[40rem] flex-col items-center justify-center px-4">
+  <div class="flex h-160 flex-col items-center justify-center px-4">
     <p class="mx-auto mb-10 max-w-3xl text-xl text-neutral-500 md:text-3xl dark:text-neutral-400">
       <LinkPreview
         url="https://tailwindcss.com"
@@ -24,7 +24,7 @@
         :height="200"
       >
         <span
-          class="bg-gradient-to-br from-purple-500 to-pink-500 bg-clip-text font-bold text-transparent"
+          class="bg-linear-to-br from-purple-500 to-pink-500 bg-clip-text font-bold text-transparent"
         >
           Inspira UI
         </span>

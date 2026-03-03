@@ -8,8 +8,8 @@
       Squared
     </p>
     <Ripple
-      class="bg-white/5 [mask-image:linear-gradient(to_bottom,white,transparent)]"
-      circle-class="border-[hsl(var(--primary))] bg-[#0000]/25 dark:bg-[#fff]/25 rounded-md"
+      class="bg-white/5 mask-[linear-gradient(to_bottom,white,transparent)]"
+      circle-class="border-[hsl(var(--primary))] bg-[#0000]/25 dark:bg-white/25 rounded-md"
     />
   </div>
 </template>

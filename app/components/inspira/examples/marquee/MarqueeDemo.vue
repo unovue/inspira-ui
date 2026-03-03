@@ -83,12 +83,12 @@ const secondRow = ref(reviews.slice(reviews.length / 2));
 
     <!-- Left Gradient -->
     <div
-      class="dark:from-background pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white"
+      class="dark:from-background pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-linear-to-r from-white"
     />
 
     <!-- Right Gradient -->
     <div
-      class="dark:from-background pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white"
+      class="dark:from-background pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-linear-to-l from-white"
     />
   </div>
 </template>

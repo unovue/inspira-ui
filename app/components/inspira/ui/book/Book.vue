@@ -37,7 +37,7 @@ const computedGradient = computed(() => {
 <template>
   <div
     :class="
-      cn(`group z-10 w-min [--shadowColor:#bbb] [perspective:800px] dark:[--shadowColor:#111]`, [
+      cn(`group z-10 w-min [--shadowColor:#bbb] perspective-midrange dark:[--shadowColor:#111]`, [
         props.class,
       ])
     "
@@ -45,16 +45,16 @@ const computedGradient = computed(() => {
     <div
       :style="{ width: sizeMap[size].width, transition: `transform ${props.duration}ms ease` }"
       :class="
-        cn(`relative aspect-[3/4] [transform-style:preserve-3d]`, [
+        cn(`relative aspect-3/4 transform-3d`, [
           isStatic
-            ? '[transform:rotateY(-30deg)]'
-            : '[transform:rotateY(0deg)] group-hover:[transform:rotateY(-30deg)]',
+            ? 'transform-[rotateY(-30deg)]'
+            : 'transform-[rotateY(0deg)] group-hover:transform-[rotateY(-30deg)]',
           radiusMap[radius],
         ])
       "
     >
       <div
-        :class="`absolute inset-y-0 left-0 flex size-full flex-col justify-end overflow-hidden bg-gradient-to-tr p-6 text-white ${computedGradient.from} ${computedGradient.to} ${radiusMap[radius]} `"
+        :class="`absolute inset-y-0 left-0 flex size-full flex-col justify-end overflow-hidden bg-linear-to-tr p-6 text-white ${computedGradient.from} ${computedGradient.to} ${radiusMap[radius]} `"
         :style="{
           transform: 'translateZ(25px)',
           boxShadow: '5px 5px 20px var(--shadowColor)',
@@ -86,7 +86,7 @@ const computedGradient = computed(() => {
       />
 
       <div
-        :class="`absolute inset-y-0 left-0 flex size-full flex-col justify-end overflow-hidden bg-gradient-to-tr p-6 text-white ${computedGradient.from} ${computedGradient.to} ${radiusMap[radius]} `"
+        :class="`absolute inset-y-0 left-0 flex size-full flex-col justify-end overflow-hidden bg-linear-to-tr p-6 text-white ${computedGradient.from} ${computedGradient.to} ${radiusMap[radius]} `"
         :style="{
           transform: 'translateZ(-25px)',
           boxShadow: shadowSizeMap[shadowSize],

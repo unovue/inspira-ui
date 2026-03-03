@@ -32,7 +32,7 @@ const props = defineProps<Props>();
       <div id="text-mask" />
       <div class="search-btn-border" />
       <span
-        class="absolute top-2 right-2 isolate z-[2] flex size-full max-h-10 max-w-10 items-center justify-center overflow-hidden rounded-lg border border-solid border-transparent"
+        class="absolute top-2 right-2 isolate z-2 flex size-full max-h-10 max-w-10 items-center justify-center overflow-hidden rounded-lg border border-solid border-transparent"
         style="background: linear-gradient(180deg, #161329, black, #1d1b4b)"
       >
         <Icon

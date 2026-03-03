@@ -124,7 +124,7 @@ onUnmounted(() => {
   <div
     :class="
       cn(
-        `relative h-16 w-full max-w-screen-md text-center font-sans text-[40pt] leading-none font-bold [filter:url(#threshold)_blur(0.6px)]`,
+        `relative h-16 w-full max-w-(--breakpoint-md) text-center font-sans text-[40pt] leading-none font-bold filter-[url(#threshold)_blur(0.6px)]`,
         props.class,
       )
     "

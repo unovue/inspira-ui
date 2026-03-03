@@ -6,7 +6,7 @@ import { firstCode, secondCode } from "./code/index";
   <div class="flex w-full justify-center">
     <Compare
       slide-mode="drag"
-      class="rounded-xl !bg-zinc-950"
+      class="rounded-xl bg-zinc-950!"
     >
       <template #first-content>
         <div class="size-full overflow-auto bg-zinc-900 p-8">

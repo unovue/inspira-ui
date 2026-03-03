@@ -127,12 +127,12 @@ onUnmounted(() => {
   >
     <div
       v-if="loading && steps.length > 0"
-      class="fixed inset-0 z-[100] flex size-full items-center justify-center backdrop-blur-2xl"
+      class="fixed inset-0 z-100 flex size-full items-center justify-center backdrop-blur-2xl"
     >
       <!-- Closing Button -->
       <button
         v-show="!preventClose"
-        class="bg-primary text-primary-foreground ring-offset-background hover:bg-primary/90 focus-visible:ring-ring absolute top-4 right-4 z-[101] inline-flex h-9 items-center justify-center rounded-md px-3 text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
+        class="bg-primary text-primary-foreground ring-offset-background hover:bg-primary/90 focus-visible:ring-ring absolute top-4 right-4 z-101 inline-flex h-9 items-center justify-center rounded-md px-3 text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
         size="sm"
         @click="close"
       >
@@ -252,7 +252,7 @@ onUnmounted(() => {
         </div>
       </div>
       <div
-        class="absolute inset-x-0 bottom-0 z-[-1] h-full bg-white bg-gradient-to-t [mask-image:radial-gradient(900px_at_center,white_30%,transparent)] dark:bg-black"
+        class="absolute inset-x-0 bottom-0 z-[-1] h-full bg-white bg-linear-to-t mask-[radial-gradient(900px_at_center,white_30%,transparent)] dark:bg-black"
       />
     </div>
   </Transition>

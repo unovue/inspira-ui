@@ -1,6 +1,6 @@
 <template>
-  <div class="flex h-[40rem] w-full items-center justify-center overflow-hidden">
-    <SVGMask class="h-[40rem] rounded-md border">
+  <div class="flex h-160 w-full items-center justify-center overflow-hidden">
+    <SVGMask class="h-160 rounded-md border">
       <template #base>
         The first rule of <span class="text-red-500">MRR Club</span> is you do not talk about MRR
         Club. The second rule of MRR Club is you DO NOT talk about

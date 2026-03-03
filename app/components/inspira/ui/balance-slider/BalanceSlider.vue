@@ -131,7 +131,7 @@ function hexToHsl(hex: string): [number, number, number] {
     />
     <div
       aria-hidden="true"
-      class="slider-value-labels pointer-events-none absolute inset-x-0 top-0 z-[2] h-1/2 text-base"
+      class="slider-value-labels pointer-events-none absolute inset-x-0 top-0 z-2 h-1/2 text-base"
       :style="sliderLabelStyles"
     />
     <div
@@ -139,7 +139,7 @@ function hexToHsl(hex: string): [number, number, number] {
       :style="sliderTrackStyles"
     >
       <div
-        class="slider-indicator absolute top-1/2 z-[2] h-3/4 w-1 -translate-x-1/2 -translate-y-1/2 rounded-sm"
+        class="slider-indicator absolute top-1/2 z-2 h-3/4 w-1 -translate-x-1/2 -translate-y-1/2 rounded-sm"
       />
     </div>
   </div>

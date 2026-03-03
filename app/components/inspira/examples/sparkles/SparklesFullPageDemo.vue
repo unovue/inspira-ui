@@ -6,7 +6,7 @@ const particlesColor = computed(() => (useColorMode().value === "dark" ? "#FFFFF
 </script>
 <template>
   <div
-    class="relative flex h-[40rem] w-full flex-col items-center justify-center overflow-hidden rounded-md bg-white dark:bg-black"
+    class="relative flex h-160 w-full flex-col items-center justify-center overflow-hidden rounded-md bg-white dark:bg-black"
   >
     <div class="absolute inset-0 h-screen w-full">
       <Sparkles

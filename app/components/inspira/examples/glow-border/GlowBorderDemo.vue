@@ -6,7 +6,7 @@
     />
     <div class="flex h-full w-full items-center justify-center">
       <span
-        class="pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-7xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-zinc-700/75"
+        class="pointer-events-none bg-linear-to-b from-black to-gray-300/80 bg-clip-text text-center text-7xl leading-none font-semibold whitespace-pre-wrap text-transparent dark:from-white dark:to-zinc-700/75"
       >
         Glow Border
       </span>

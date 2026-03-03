@@ -69,7 +69,7 @@ function handleDrop(e: DragEvent) {
 
         <!-- Grid pattern -->
         <div
-          class="pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,white,transparent)]"
+          class="pointer-events-none absolute inset-0 mask-[radial-gradient(ellipse_at_center,white,transparent)]"
         >
           <slot />
         </div>

@@ -6,7 +6,7 @@
       Being late for highlights
       <TextHighlight
         :delay="3000"
-        class="bg-gradient-to-r from-green-300 to-blue-300"
+        class="bg-linear-to-r from-green-300 to-blue-300"
       >
         is bad ...
       </TextHighlight>

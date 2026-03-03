@@ -12,7 +12,7 @@ const text = ref("");
 </script>
 
 <template>
-  <div class="flex h-[40rem] flex-col items-center justify-center px-4">
+  <div class="flex h-160 flex-col items-center justify-center px-4">
     <h2 class="mb-10 text-center text-xl text-black sm:mb-20 sm:text-5xl dark:text-white">
       Ask Anything Silly
     </h2>

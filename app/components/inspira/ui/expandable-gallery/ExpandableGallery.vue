@@ -15,7 +15,7 @@ const props = defineProps<Props>();
     <div
       v-for="image in images"
       :key="image"
-      class="relative flex h-full flex-1 cursor-pointer overflow-hidden rounded-xl transition-all duration-500 ease-in-out hover:flex-[3]"
+      class="relative flex h-full flex-1 cursor-pointer overflow-hidden rounded-xl transition-all duration-500 ease-in-out hover:flex-3"
     >
       <img
         class="relative h-full object-cover"

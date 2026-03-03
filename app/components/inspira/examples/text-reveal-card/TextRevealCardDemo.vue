@@ -16,7 +16,7 @@
         :style="{
           textShadow: '4px 4px 15px rgba(0,0,0,0.5)',
         }"
-        class="bg-gradient-to-b from-white to-neutral-300 bg-clip-text py-4 text-sm font-bold text-white sm:py-6 sm:text-3xl md:py-10 md:text-[3rem]"
+        class="bg-linear-to-b from-white to-neutral-300 bg-clip-text py-4 text-sm font-bold text-white sm:py-6 sm:text-3xl md:py-10 md:text-[3rem]"
       >
         Light reveals what shadows hide
       </p>

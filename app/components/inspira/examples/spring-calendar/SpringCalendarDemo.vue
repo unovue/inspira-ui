@@ -29,7 +29,7 @@ const calendarData = [
 </script>
 
 <template>
-  <div class="flex min-h-[32rem] w-full items-center justify-center py-4">
+  <div class="flex min-h-128 w-full items-center justify-center py-4">
     <SpringCalendar :calendar-data="calendarData" />
   </div>
 </template>

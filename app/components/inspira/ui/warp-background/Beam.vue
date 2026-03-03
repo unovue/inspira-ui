@@ -22,7 +22,7 @@ const ar = computed(() => Math.floor(Math.random() * 10) + 1);
       '--aspect-ratio': `${ar}`,
       '--background': `linear-gradient(hsl(${hue} 80% 60%), transparent)`,
     }"
-    class="absolute top-0 left-[var(--x)] [aspect-ratio:1/var(--aspect-ratio)] [width:var(--width)] [background:var(--background)]"
+    class="absolute top-0 left-(--x) aspect-[1/var(--aspect-ratio)] w-(--width) [background:var(--background)]"
     :initial="{
       x: '-50%',
       y: '100cqmax',

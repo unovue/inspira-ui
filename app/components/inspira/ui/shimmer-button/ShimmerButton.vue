@@ -35,9 +35,9 @@ withDefaults(defineProps<ShimmerButtonProps>(), {
       )
     "
   >
-    <div class="[container-type:size] absolute inset-0 -z-30 overflow-visible blur-[2px]">
+    <div class="@container-[size] absolute inset-0 -z-30 overflow-visible blur-[2px]">
       <div
-        class="animate-shimmer-btn-shimmer-slide absolute inset-0 [aspect-ratio:1] h-[100cqh] [border-radius:0] [mask:none]"
+        class="animate-shimmer-btn-shimmer-slide absolute inset-0 aspect-[1] h-[100cqh] rounded-none [mask:none]"
       >
         <div
           class="animate-shimmer-btn-spin-around absolute -inset-full w-auto [translate:0_0] rotate-0 [background:conic-gradient(from_calc(270deg-(var(--spread)*0.5)),transparent_0,var(--shimmer-color)_var(--spread),transparent_var(--spread))]"
@@ -51,7 +51,7 @@ withDefaults(defineProps<ShimmerButtonProps>(), {
     />
 
     <div
-      class="absolute [inset:var(--cut)] -z-20 [border-radius:var(--radius)] [background:var(--bg)]"
+      class="absolute inset-(--cut) -z-20 [border-radius:var(--radius)] [background:var(--bg)]"
     />
   </button>
 </template>

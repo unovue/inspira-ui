@@ -17,7 +17,7 @@ const images = [
       autoplay
     >
       <div
-        class="flex size-full items-end justify-center bg-gradient-to-b from-transparent via-transparent to-black/80 p-8"
+        class="flex size-full items-end justify-center bg-linear-to-b from-transparent via-transparent to-black/80 p-8"
       >
         <div class="max-w-prose text-center">
           <h1 class="mb-8 text-5xl max-md:text-2xl">

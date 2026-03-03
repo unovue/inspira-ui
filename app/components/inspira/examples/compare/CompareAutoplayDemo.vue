@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex h-[60vh] w-full items-center justify-center px-1 [perspective:800px] [transform-style:preserve-3d] md:px-8"
+    class="flex h-[60vh] w-full items-center justify-center px-1 perspective-midrange transform-3d md:px-8"
   >
     <div
       :style="{

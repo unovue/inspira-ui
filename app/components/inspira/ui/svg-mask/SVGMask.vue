@@ -44,7 +44,7 @@ function updateMousePosition(event: MouseEvent) {
         }px`,
         transition: 'mask-size 0.2s ease-in-out',
       }"
-      class="bg-grid-white/[0.2] absolute flex size-full items-center justify-center bg-black [mask-image:url(https://cdn.inspira-ui.com/images/mask.svg)] [mask-size:40px] [mask-repeat:no-repeat] text-6xl text-white"
+      class="bg-grid-white/[0.2] absolute flex size-full items-center justify-center bg-black mask-[url(https://cdn.inspira-ui.com/images/mask.svg)] mask-size-[40px] mask-no-repeat text-6xl text-white"
     >
       <div class="absolute inset-0 z-0 size-full bg-black opacity-50" />
       <div

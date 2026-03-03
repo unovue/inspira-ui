@@ -55,7 +55,7 @@ const randomDuration = random() * 10 + 20;
         repeat: Infinity,
         ease: 'linear',
       }"
-      :class="cn(`absolute z-[1] inline-block h-0.5 w-0.5 rounded-full bg-white`, props.class)"
+      :class="cn(`absolute z-1 inline-block h-0.5 w-0.5 rounded-full bg-white`, props.class)"
     />
   </div>
 </template>

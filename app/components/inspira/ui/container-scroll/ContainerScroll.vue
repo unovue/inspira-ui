@@ -40,7 +40,7 @@ const translateY = computed(() => -100 * scrollYProgress.value);
 <template>
   <div
     ref="containerRef"
-    class="relative flex h-[60rem] items-center justify-center p-2 md:h-[80rem] md:p-20"
+    class="relative flex h-240 items-center justify-center p-2 md:h-320 md:p-20"
   >
     <div
       class="relative w-full py-10 md:py-40"

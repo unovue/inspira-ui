@@ -12,7 +12,7 @@
       <template #card>
         <img
           src="https://cdn.inspira-ui.com/images/linear.webp"
-          class="mx-auto h-full rounded-2xl object-cover object-left-top"
+          class="mx-auto h-full rounded-2xl object-cover object-top-left"
           alt="hero"
           height="720"
           width="1400"

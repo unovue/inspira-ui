@@ -53,12 +53,12 @@ onBeforeUnmount(() => {
 <template>
   <div
     ref="containerRef"
-    class="relative z-[100] h-full w-full overflow-visible rounded-lg bg-transparent"
+    class="relative z-100 h-full w-full overflow-visible rounded-lg bg-transparent"
   >
     <div
       v-for="(image, i) in images"
       :key="variant + i"
-      class="content__img absolute top-0 left-0 aspect-[1.1] w-[190px] overflow-hidden rounded-[15px] opacity-0 [will-change:transform,filter]"
+      class="content__img absolute top-0 left-0 aspect-[1.1] w-[190px] overflow-hidden rounded-[15px] opacity-0 will-change-[transform,filter]"
     >
       <div
         class="content__img-inner absolute top-[-10px] left-[-10px] h-[calc(100%+20px)] w-[calc(100%+20px)] bg-cover bg-center"

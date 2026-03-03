@@ -53,7 +53,7 @@ onUnmounted(() => {
     <div
       :class="
         cn(
-          'bg-primary/90 border-radius fixed top-12 left-1/2 z-[999] -translate-x-1/2 backdrop-blur-lg',
+          'bg-primary/90 border-radius fixed top-12 left-1/2 z-999 -translate-x-1/2 backdrop-blur-lg',
           $props.class,
         )
       "

@@ -81,10 +81,10 @@ onUnmounted(() => {
     <!-- Testimonial image -->
     <div class="relative h-32">
       <div
-        class="pointer-events-none absolute top-0 left-1/2 size-[480px] -translate-x-1/2 before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-gradient-to-b before:from-zinc-500/25 before:via-zinc-500/5 before:via-25% before:to-zinc-500/0 before:to-75%"
+        class="pointer-events-none absolute top-0 left-1/2 size-[480px] -translate-x-1/2 before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-linear-to-b before:from-zinc-500/25 before:via-zinc-500/5 before:via-25% before:to-zinc-500/0 before:to-75%"
       >
         <div
-          class="h-32 [mask-image:_linear-gradient(0deg,transparent,theme(colors.white)_20%,theme(colors.white))]"
+          class="h-32 mask-[linear-gradient(0deg,transparent,var(--color-white)_20%,var(--color-white))]"
         >
           <transition-group name="testimonial-image">
             <div

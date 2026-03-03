@@ -10,7 +10,7 @@ function setHovering(value: boolean) {
 
 <template>
   <div
-    class="relative mx-auto my-10 w-full max-w-md overflow-hidden rounded-3xl bg-gradient-to-r from-[#1D2235] to-[#121318] p-8"
+    class="relative mx-auto my-10 w-full max-w-md overflow-hidden rounded-3xl bg-linear-to-r from-[#1D2235] to-[#121318] p-8"
   >
     <Rays />
     <Beams />

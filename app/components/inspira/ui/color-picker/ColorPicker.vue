@@ -308,7 +308,7 @@ function updateAlpha(event: MouseEvent | TouchEvent) {
       <div class="space-y-4">
         <div
           ref="saturationRef"
-          class="relative aspect-[4/2] w-full cursor-crosshair rounded border"
+          class="relative aspect-4/2 w-full cursor-crosshair rounded border"
           :style="{
             background: `linear-gradient(to right, #fff, hsl(${colorHsv.h}, 100%, 50%)), linear-gradient(to top, #000, transparent)`,
           }"

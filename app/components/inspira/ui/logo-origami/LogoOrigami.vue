@@ -133,7 +133,7 @@ onBeforeUnmount(() => {
     <!-- Center divider line -->
     <hr
       style="transform: translateZ(1px)"
-      class="absolute top-1/2 right-[15px] left-4 z-[999999999] -translate-y-1/2 border-t-2 border-neutral-800"
+      class="absolute top-1/2 right-[15px] left-4 z-999999999 -translate-y-1/2 border-t-2 border-neutral-800"
     />
   </div>
 </template>

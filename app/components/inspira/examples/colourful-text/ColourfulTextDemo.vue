@@ -7,7 +7,7 @@ import { Motion } from "motion-v";
     <Motion
       as="img"
       src="https://assets.aceternity.com/linear-demo.webp"
-      class="pointer-events-none absolute inset-0 size-full [mask-image:radial-gradient(circle,transparent,black_80%)] object-cover"
+      class="pointer-events-none absolute inset-0 size-full mask-[radial-gradient(circle,transparent,black_80%)] object-cover"
       :initial="{ opacity: 0 }"
       :while-in-view="{
         opacity: 0.5,

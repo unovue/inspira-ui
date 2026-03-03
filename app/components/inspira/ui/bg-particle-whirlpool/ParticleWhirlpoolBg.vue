@@ -273,7 +273,7 @@ onUnmounted(() => {
       :style="{
         '--bubbles-blur': `${blur}px`,
       }"
-      class="absolute inset-0 backdrop-blur-[--bubbles-blur]"
+      class="absolute inset-0 backdrop-blur-(--bubbles-blur)"
     />
 
     <div class="absolute inset-0">

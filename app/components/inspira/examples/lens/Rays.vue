@@ -12,7 +12,7 @@ const props = defineProps<Props>();
     viewBox="0 0 380 397"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    class="pointer-events-none absolute top-0 left-0 z-[1]"
+    class="pointer-events-none absolute top-0 left-0 z-1"
     :class="[props.class]"
   >
     <g filter="url(#filter0_f_120_7480)">

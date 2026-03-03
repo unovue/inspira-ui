@@ -12,12 +12,12 @@ import {
     :animate="true"
     :direction="PATTERN_BACKGROUND_DIRECTION.Bottom"
     :variant="PATTERN_BACKGROUND_VARIANT.BigDot"
-    class="flex h-[36rem] w-full items-center justify-center"
+    class="flex h-144 w-full items-center justify-center"
     :speed="PATTERN_BACKGROUND_SPEED.Slow"
     :mask="PATTERN_BACKGROUND_MASK.EllipseTop"
   >
     <p
-      class="relative z-20 bg-gradient-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-5xl"
+      class="relative z-20 bg-linear-to-b from-neutral-200 to-neutral-500 bg-clip-text py-8 text-4xl font-bold text-transparent sm:text-5xl"
     >
       Big Dot Background
     </p>

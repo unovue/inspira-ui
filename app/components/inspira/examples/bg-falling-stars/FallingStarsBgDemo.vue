@@ -11,7 +11,7 @@ const isDark = computed(() => useColorMode().value === "dark");
       class="bg-white dark:bg-black"
       :color="isDark ? '#FFF' : '#555'"
     />
-    <div class="z-[1] flex items-center">
+    <div class="z-1 flex items-center">
       <span class="text-6xl font-bold text-black dark:text-white">Inspira UI</span>
     </div>
   </div>
