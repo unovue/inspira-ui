@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { computed } from "vue";
 
 interface LampEffectProps {
@@ -19,8 +20,12 @@ const delayInSeconds = computed(() => `${props.delay}s`);
 
 <template>
   <div
-    class="relative z-0 flex min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-md bg-slate-950"
-    :class="[$props.class]"
+    :class="
+      cn(
+        `relative z-0 flex min-h-screen w-full flex-col items-center justify-center overflow-hidden rounded-md bg-slate-950`,
+        $props.class,
+      )
+    "
   >
     <div class="relative isolate z-0 flex w-full flex-1 scale-y-125 items-center justify-center">
       <!-- Conic Gradient -->

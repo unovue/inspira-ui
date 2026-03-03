@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { computed } from "vue";
 
 interface Props {
@@ -33,10 +34,7 @@ const durationInSeconds = computed(() => `${props.duration}s`);
 </script>
 
 <template>
-  <div
-    class="progress-circle-base relative size-40 text-2xl font-semibold"
-    :class="[props.class]"
-  >
+  <div :class="cn(`progress-circle-base relative size-40 text-2xl font-semibold`, props.class)">
     <svg
       fill="none"
       class="size-full"

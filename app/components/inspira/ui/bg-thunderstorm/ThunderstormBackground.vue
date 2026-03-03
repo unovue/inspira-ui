@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 
 interface Props {
   class?: HTMLAttributes["class"];
@@ -53,10 +54,7 @@ void mainImage(out vec4 o, vec2 p) {
 </script>
 
 <template>
-  <div
-    class="absolute inset-0"
-    :class="[props.class]"
-  >
+  <div :class="cn(`absolute inset-0`, props.class)">
     <ShaderToy
       :shader-code="shader"
       v-bind="props"

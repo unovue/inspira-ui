@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 
 interface Props {
   images: string[];
@@ -10,10 +11,7 @@ const props = defineProps<Props>();
 </script>
 
 <template>
-  <div
-    class="flex h-96 w-full gap-2"
-    :class="[props.class]"
-  >
+  <div :class="cn(`flex h-96 w-full gap-2`, props.class)">
     <div
       v-for="image in images"
       :key="image"

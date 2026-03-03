@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { VNode } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { useSlots } from "vue";
 
 interface LineShadowTextProps {
@@ -26,9 +27,13 @@ if (!content) {
 <template>
   <component
     :is="as"
-    class="shadow-color animate-line-shadow relative z-0 inline-flex after:absolute after:top-[0.04em] after:left-[0.04em] after:-z-10 after:bg-[linear-gradient(45deg,transparent_45%,var(--shadow-color)_45%,var(--shadow-color)_55%,transparent_0)] after:bg-[length:0.06em_0.06em] after:bg-clip-text after:text-transparent after:content-[attr(data-text)]"
-    :class="[props.class]"
     :data-text="content"
+    :class="
+      cn(
+        `shadow-color animate-line-shadow relative z-0 inline-flex after:absolute after:top-[0.04em] after:left-[0.04em] after:-z-10 after:bg-[linear-gradient(45deg,transparent_45%,var(--shadow-color)_45%,var(--shadow-color)_55%,transparent_0)] after:bg-[length:0.06em_0.06em] after:bg-clip-text after:text-transparent after:content-[attr(data-text)]`,
+        props.class,
+      )
+    "
   >
     <slot />
   </component>

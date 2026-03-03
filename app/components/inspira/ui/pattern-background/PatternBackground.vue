@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { BaseProps as Props } from ".";
+import { cn } from "@inspira-ui/plugins";
 import { computed } from "vue";
 import {
   PATTERN_BACKGROUND_DIRECTION,
@@ -29,8 +30,12 @@ const durationFormSpeed = computed(() => `${props.speed}ms`);
     ]"
   >
     <div
-      class="pointer-events-none absolute inset-0 flex items-center justify-center"
-      :class="[patternBackgroundMaskVariants({ mask })]"
+      :class="
+        cn(
+          `pointer-events-none absolute inset-0 flex items-center justify-center`,
+          patternBackgroundMaskVariants({ mask }),
+        )
+      "
     />
     <slot />
   </div>

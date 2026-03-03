@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 
 export type DitheringMode = "bayer" | "halftone" | "noise" | "crosshatch";
@@ -430,8 +431,7 @@ watch(
 <template>
   <div
     ref="containerRef"
-    :class="props.class"
-    class="relative h-full w-full"
+    :class="cn(`relative h-full w-full`, props.class)"
   >
     <canvas
       ref="canvasRef"

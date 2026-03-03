@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { useTimeoutFn } from "@vueuse/core";
 import { ref } from "vue";
 
@@ -74,10 +75,7 @@ function handlePointerLeave() {
       <div
         class="grid size-full mix-blend-soft-light [clip-path:inset(0_0_0_0_round_var(--radius))] [grid-area:1/1]"
       >
-        <div
-          class="size-full bg-slate-950"
-          :class="[props.class]"
-        >
+        <div :class="cn(`size-full bg-slate-950`, props.class)">
           <slot />
         </div>
       </div>

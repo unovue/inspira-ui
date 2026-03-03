@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
 import type { BookColor, BookRadius, BookShadowSize, BookSize } from "./index";
+import { cn } from "@inspira-ui/plugins";
 import { computed } from "vue";
 import {
   BOOK_COLOR_MAP as colorMap,
@@ -35,18 +36,22 @@ const computedGradient = computed(() => {
 
 <template>
   <div
-    class="group z-10 w-min [--shadowColor:#bbb] [perspective:800px] dark:[--shadowColor:#111]"
-    :class="[$props.class]"
+    :class="
+      cn(`group z-10 w-min [--shadowColor:#bbb] [perspective:800px] dark:[--shadowColor:#111]`, [
+        props.class,
+      ])
+    "
   >
     <div
       :style="{ width: sizeMap[size].width, transition: `transform ${props.duration}ms ease` }"
-      class="relative aspect-[3/4] [transform-style:preserve-3d]"
-      :class="[
-        isStatic
-          ? '[transform:rotateY(-30deg)]'
-          : '[transform:rotateY(0deg)] group-hover:[transform:rotateY(-30deg)]',
-        radiusMap[radius],
-      ]"
+      :class="
+        cn(`relative aspect-[3/4] [transform-style:preserve-3d]`, [
+          isStatic
+            ? '[transform:rotateY(-30deg)]'
+            : '[transform:rotateY(0deg)] group-hover:[transform:rotateY(-30deg)]',
+          radiusMap[radius],
+        ])
+      "
     >
       <div
         :class="`absolute inset-y-0 left-0 flex size-full flex-col justify-end overflow-hidden bg-gradient-to-tr p-6 text-white ${computedGradient.from} ${computedGradient.to} ${radiusMap[radius]} `"

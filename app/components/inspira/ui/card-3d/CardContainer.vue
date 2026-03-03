@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { provide } from "vue";
 import { useMouseState } from "~/composables/useMouseState";
 
@@ -36,15 +37,18 @@ function handleMouseLeave() {
 
 <template>
   <div
-    class="flex items-center justify-center p-2"
-    :class="[props.containerClass]"
     style="perspective: 1000px"
+    :class="cn(`flex items-center justify-center p-2`, props.containerClass)"
   >
     <div
       ref="containerRef"
-      class="relative flex items-center justify-center transition-all duration-200 ease-linear"
-      :class="[props.class]"
       style="transform-style: preserve-3d"
+      :class="
+        cn(
+          `relative flex items-center justify-center transition-all duration-200 ease-linear`,
+          props.class,
+        )
+      "
       @mouseenter="handleMouseEnter"
       @mousemove="handleMouseMove"
       @mouseleave="handleMouseLeave"

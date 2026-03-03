@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { onMounted, onUnmounted, ref } from "vue";
 
 interface Props {
@@ -292,7 +293,6 @@ onUnmounted(() => {
   <canvas
     id="canvas"
     ref="canvasRef"
-    class="pointer-events-none fixed inset-0 z-50"
-    :class="[props.class]"
+    :class="cn(`pointer-events-none fixed inset-0 z-50`, props.class)"
   />
 </template>

@@ -67,17 +67,15 @@ onMounted(() => {
 <template>
   <div :class="cn('relative block', props.class)">
     <div
-      class=""
+      :style="{
+        transform: `perspective(${perspective}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+      }"
       :class="
         cn(
           'relative grid w-full max-w-full items-center justify-center',
           props.cards.length < 4 ? `grid-cols-${props.cards.length}` : 'grid-cols-4',
         )
-      "
-      :style="{
-        transform: `perspective(${perspective}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
-      }"
-    >
+      ">
       <div
         v-for="(item, index) in props.cards"
         :key="index"

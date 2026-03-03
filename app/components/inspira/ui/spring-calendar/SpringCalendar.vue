@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { Motion, MotionConfig } from "motion-v";
 import { ref } from "vue";
 
@@ -91,11 +92,15 @@ function setActive(index: number) {
           :key="`${day.date}-${index}`"
           as="button"
           layout
-          class="border-border hover:bg-muted-foreground/10 flex flex-col rounded-2xl border p-3 text-center opacity-100 duration-200"
-          :class="activeIndex === index ? 'bg-muted-foreground/5' : ''"
           :while-hover="{ scale: 1.1 }"
           :while-press="{ scale: 0.8 }"
           :transition="{ duration: 0.01 }"
+          :class="
+            cn(
+              `border-border hover:bg-muted-foreground/10 flex flex-col rounded-2xl border p-3 text-center opacity-100 duration-200`,
+              activeIndex === index ? 'bg-muted-foreground/5' : '',
+            )
+          "
           @click="setActive(index)"
         >
           <span class="text-xs font-medium uppercase">{{ day.month }}</span>

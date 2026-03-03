@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { computed } from "vue";
 
 interface Props {
@@ -20,10 +21,7 @@ const durationMs = computed(() => `${props.duration}ms`);
 </script>
 
 <template>
-  <span
-    class="inline-block px-1 pb-1"
-    :class="[props.class]"
-  >
+  <span :class="cn(`inline-block px-1 pb-1`, props.class)">
     <slot />
   </span>
 </template>

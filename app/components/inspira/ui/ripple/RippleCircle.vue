@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 interface Props {
   size?: number;
   class?: string;
@@ -14,10 +15,7 @@ const props = withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <div
-    class="animate-ripple-circle absolute shadow-xl"
-    :class="[props.class]"
-  />
+  <div :class="cn(`animate-ripple-circle absolute shadow-xl`, props.class)" />
 </template>
 
 <style scoped>

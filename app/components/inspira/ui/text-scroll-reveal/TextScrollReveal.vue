@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
 import { computed, onMounted, onUnmounted, ref } from "vue";
 
 interface Props {
@@ -39,8 +40,7 @@ onUnmounted(() => {
 <template>
   <div
     ref="textScrollRevealRef"
-    class="relative z-0 h-[200vh]"
-    :class="[$props.class]"
+    :class="cn(`relative z-0 h-[200vh]`, $props.class)"
   >
     <div class="sticky top-0 mx-auto flex h-1/2 max-w-4xl items-center bg-transparent px-4 py-20">
       <p

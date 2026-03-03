@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { Ref } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { Motion, useAnimate } from "motion-v";
 import { computed, onMounted, onUnmounted, ref } from "vue";
 
@@ -162,8 +163,6 @@ onUnmounted(() => {
 <template>
   <Motion
     ref="containerRef"
-    class="relative select-none"
-    :class="[props.class]"
     :style="{
       width: containerWidth,
       height: containerHeight,
@@ -174,6 +173,7 @@ onUnmounted(() => {
       rotate: [0, 10, -10, 10, -10, 0],
     }"
     :transition="{ duration: 0.5 }"
+    :class="cn(`relative select-none`, props.class)"
   >
     <canvas
       ref="canvasRef"

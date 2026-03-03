@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
@@ -688,14 +689,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div
-    class="relative h-full w-full overflow-hidden"
-    :class="[props.containerClass]"
-  >
+  <div :class="cn(`relative h-full w-full overflow-hidden`, props.containerClass)">
     <canvas
       ref="canvasRef"
-      class="absolute inset-0 block h-full w-full"
-      :class="[props.class]"
+      :class="cn(`absolute inset-0 block h-full w-full`, props.class)"
     />
   </div>
 </template>

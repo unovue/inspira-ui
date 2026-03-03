@@ -1,5 +1,6 @@
 <!-- ParentSize.vue -->
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { useDebounceFn, useResizeObserver } from "@vueuse/core";
 import { computed, reactive, ref, useAttrs } from "vue";
 
@@ -74,9 +75,8 @@ useResizeObserver(target, (entries) => {
   <div
     ref="target"
     :style="mergedStyles"
-    class="h-full w-full"
-    :class="[props.class]"
     v-bind="attrsWithoutClassAndStyle"
+    :class="cn(`h-full w-full`, props.class)"
   >
     <slot />
   </div>

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { Motion } from "motion-v";
 
 interface BoxRevealProps {
@@ -29,10 +30,7 @@ const visibleSlideVariants = {
 </script>
 
 <template>
-  <div
-    class="relative"
-    :class="[$props.class]"
-  >
+  <div :class="cn(`relative`, $props.class)">
     <Motion
       :initial="initialMainVariants"
       :while-in-view="visibleMainVariants"

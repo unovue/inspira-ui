@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { AnimateLogoCloudProps } from "./index";
+import { cn } from "@inspira-ui/plugins";
 
 const props = defineProps<AnimateLogoCloudProps>();
 </script>
@@ -14,8 +15,9 @@ const props = defineProps<AnimateLogoCloudProps>();
         {{ props.title }}
       </div>
       <div
-        class="mask-animation group relative mt-6 flex gap-6 overflow-hidden p-2"
-        :class="[props.class]"
+        :class="
+          cn(`mask-animation group relative mt-6 flex gap-6 overflow-hidden p-2`, props.class)
+        "
       >
         <div
           v-for="index in Array(5).fill(null)"

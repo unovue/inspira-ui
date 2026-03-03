@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { Motion } from "motion-v";
 
 interface LetterPullupProps {
@@ -33,8 +34,12 @@ const pullupVariant = {
         :transition="{
           delay: index * (props.delay ? props.delay : 0.05),
         }"
-        class="font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm md:text-4xl md:leading-[5rem]"
-        :class="[props.class]"
+        :class="
+          cn(
+            `font-display text-center text-4xl font-bold tracking-[-0.02em] text-black drop-shadow-sm md:text-4xl md:leading-[5rem]`,
+            props.class,
+          )
+        "
       >
         <span v-if="letter === ' '">&nbsp;</span>
         <span v-else>{{ letter }}</span>

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
 import { ref } from "vue";
 
 interface Props {
@@ -15,8 +16,12 @@ const buttonRef = ref<HTMLButtonElement>();
 <template>
   <button
     ref="buttonRef"
-    class="group bg-background relative w-auto cursor-pointer overflow-hidden rounded-full border p-2 px-6 text-center font-semibold"
-    :class="[props.class]"
+    :class="
+      cn(
+        `group bg-background relative w-auto cursor-pointer overflow-hidden rounded-full border p-2 px-6 text-center font-semibold`,
+        props.class,
+      )
+    "
   >
     <div class="flex items-center gap-2">
       <div

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { parseLogoImage } from "./parseLogoImage";
 import { liquidFragSource, vertexShaderSource } from "./shader";
 
@@ -265,7 +266,6 @@ watch(
   </div>
   <canvas
     ref="liquidLogoRef"
-    class="block size-full object-contain"
-    :class="[props.class, processing ? 'hidden' : '']"
+    :class="cn(`block size-full object-contain`, props.class, processing ? 'hidden' : '')"
   />
 </template>

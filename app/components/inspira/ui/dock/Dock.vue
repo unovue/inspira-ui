@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
 import type { DataOrientation, Direction } from "./types";
+import { cn } from "@inspira-ui/plugins";
 import { computed, provide, ref } from "vue";
 
 import {
@@ -61,8 +62,14 @@ provide(DISTANCE_INJECTION_KEY, distance);
 <template>
   <div
     ref="dockRef"
-    class="mx-auto mt-8 flex h-[58px] w-max gap-4 rounded-2xl border p-2 backdrop-blur-md transition-all supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10"
-    :class="[orientation === 'vertical' && 'h-max w-[58px] flex-col', props.class, dockClass]"
+    :class="
+      cn(
+        `mx-auto mt-8 flex h-[58px] w-max gap-4 rounded-2xl border p-2 backdrop-blur-md transition-all supports-backdrop-blur:bg-white/10 supports-backdrop-blur:dark:bg-black/10`,
+        orientation === 'vertical' && 'h-max w-[58px] flex-col',
+        props.class,
+        dockClass,
+      )
+    "
     @mousemove="onMouseMove"
     @mouseleave="onMouseLeave"
   >

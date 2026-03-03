@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { Transition, Variant } from "motion-v";
+import { cn } from "@inspira-ui/plugins";
 import { Motion } from "motion-v";
 
 const props = withDefaults(defineProps<CircularTextProps>(), {
@@ -55,12 +56,11 @@ const itemVariants = computed(() => ({
 <template>
   <Motion
     as="div"
-    class="relative"
-    :class="[props.class]"
     initial="hidden"
     animate="visible"
     :variants="containerVariants"
     :transition="finalTransition"
+    :class="cn(`relative`, props.class)"
   >
     <span
       v-for="(letter, index) in letters"

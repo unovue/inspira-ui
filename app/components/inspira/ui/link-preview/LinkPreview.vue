@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { CSSProperties } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { computed, reactive, ref } from "vue";
 
 interface BaseProps {
@@ -122,15 +123,11 @@ function handleImageLoad() {
 </script>
 
 <template>
-  <div
-    class="relative inline-block"
-    :class="[props.class]"
-  >
+  <div :class="cn(`relative inline-block`, props.class)">
     <!-- Trigger -->
     <NuxtLink
       :to="url"
-      class="text-black dark:text-white"
-      :class="[props.linkClass]"
+      :class="cn(`text-black dark:text-white`, props.linkClass)"
       @mousemove="handleMouseMove"
       @mouseenter="showPreview"
       @mouseleave="hidePreview"
@@ -146,8 +143,9 @@ function handleImageLoad() {
       :style="previewStyle"
     >
       <div
-        class="overflow-hidden rounded-xl shadow-xl"
-        :class="[popClass, { 'transform-gpu': !props.isStatic }]"
+        :class="
+          cn(`overflow-hidden rounded-xl shadow-xl`, popClass, !props.isStatic && 'transform-gpu')
+        "
       >
         <div
           class="block rounded-xl border-2 border-transparent bg-white p-1 shadow-lg dark:bg-gray-900"

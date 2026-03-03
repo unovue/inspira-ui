@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
 import { onBeforeUnmount, ref, watchEffect } from "vue";
 
 interface AnimatedBeamProps {
@@ -120,9 +121,8 @@ onBeforeUnmount(() => {
     :width="svgDimensions.width"
     :height="svgDimensions.height"
     xmlns="http://www.w3.org/2000/svg"
-    class="pointer-events-none absolute top-0 left-0 transform-gpu stroke-2"
-    :class="[props.class]"
     :viewBox="`0 0 ${svgDimensions.width} ${svgDimensions.height}`"
+    :class="cn(`pointer-events-none absolute top-0 left-0 transform-gpu stroke-2`, props.class)"
   >
     <path
       :d="pathD"

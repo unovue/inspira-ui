@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { Motion } from "motion-v";
 import { ref } from "vue";
 
@@ -48,8 +49,7 @@ function handleDrop(e: DragEvent) {
 <template>
   <ClientOnly>
     <div
-      class="w-full"
-      :class="[$props.class]"
+      :class="cn(`w-full`, $props.class)"
       @dragover.prevent="handleEnter"
       @dragleave="handleLeave"
       @drop.prevent="handleDrop"
@@ -167,8 +167,13 @@ function handleDrop(e: DragEvent) {
               </Motion>
 
               <div
-                class="absolute inset-0 z-30 mx-auto mt-4 flex h-32 w-full max-w-32 items-center justify-center rounded-md border border-dashed border-sky-400 bg-transparent transition-opacity"
-                :class="{ 'opacity-100': isActive, 'opacity-0': !isActive }"
+                :class="
+                  cn(
+                    `absolute inset-0 z-30 mx-auto mt-4 flex h-32 w-full max-w-32 items-center justify-center rounded-md border border-dashed border-sky-400 bg-transparent transition-opacity`,
+                    isActive && 'opacity-100',
+                    !isActive && 'opacity-0',
+                  )
+                "
               />
             </template>
           </div>

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { useEventListener, useScrollLock } from "@vueuse/core";
 import { AnimatePresence, Motion } from "motion-v";
 import { inject, nextTick, onBeforeUnmount, ref, watch } from "vue";
@@ -118,8 +119,6 @@ onBeforeUnmount(() => {
       >
         <Motion
           as="div"
-          class="fixed inset-0 h-full w-full bg-black/50"
-          :class="props.overlayClass"
           :initial="{ opacity: 0 }"
           :animate="{
             opacity: 1,
@@ -129,6 +128,7 @@ onBeforeUnmount(() => {
             opacity: 0,
             backdropFilter: 'blur(0px)',
           }"
+          :class="cn(`fixed inset-0 h-full w-full bg-black/50`, props.overlayClass)"
         />
 
         <Motion
@@ -137,8 +137,6 @@ onBeforeUnmount(() => {
           role="dialog"
           aria-modal="true"
           tabindex="-1"
-          class="relative z-50 flex max-h-[85vh] w-[min(720px,calc(100vw-32px))] flex-col overflow-hidden rounded-2xl border border-transparent bg-white dark:border-neutral-800 dark:bg-neutral-950"
-          :class="[props.class]"
           :initial="{
             opacity: 0,
             scale: 0.5,
@@ -162,6 +160,12 @@ onBeforeUnmount(() => {
             rotateX: { type: 'spring', stiffness: 260, damping: 15 },
             y: { type: 'spring', stiffness: 260, damping: 15 },
           }"
+          :class="
+            cn(
+              `relative z-50 flex max-h-[85vh] w-[min(720px,calc(100vw-32px))] flex-col overflow-hidden rounded-2xl border border-transparent bg-white dark:border-neutral-800 dark:bg-neutral-950`,
+              props.class,
+            )
+          "
         >
           <button
             v-if="props.showClose"
@@ -192,10 +196,7 @@ onBeforeUnmount(() => {
             </svg>
           </button>
 
-          <div
-            class="flex flex-1 flex-col"
-            :class="[props.contentClass]"
-          >
+          <div :class="cn(`flex flex-1 flex-col`, props.contentClass)">
             <slot />
           </div>
         </Motion>

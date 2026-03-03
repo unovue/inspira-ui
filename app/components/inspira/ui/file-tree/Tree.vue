@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { TreeContextProps, TreeProps, TreeViewElement } from "./index";
+import { cn } from "@inspira-ui/plugins";
 import { onMounted, provide, ref, toRefs } from "vue";
 import { TREE_CONTEXT_SYMBOL } from "./index";
 
@@ -87,10 +88,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    class="size-full"
-    :class="[$props.class]"
-  >
+  <div :class="cn(`size-full`, props.class)">
     <div
       class="relative h-full overflow-auto px-2"
       :dir="direction"

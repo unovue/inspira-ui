@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { computed, onMounted, onUnmounted, ref } from "vue";
 
 interface Props {
@@ -127,14 +128,10 @@ onUnmounted(() => {
 <template>
   <div
     ref="liquidGlassRoot"
-    class="effect"
-    :class="[props.containerClass]"
     :style="baseStyle"
+    :class="cn(`effect`, props.containerClass)"
   >
-    <div
-      class="slot-container"
-      :class="[props.class]"
-    >
+    <div :class="cn(`slot-container`, props.class)">
       <slot />
     </div>
 

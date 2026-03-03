@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { COBEOptions } from "cobe";
+import { cn } from "@inspira-ui/plugins";
 import createGlobe from "cobe";
 import { onBeforeUnmount, onMounted, ref } from "vue";
 import { useSpring } from "vue-use-spring";
@@ -130,10 +131,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div
-    class="absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]"
-    :class="[$props.class]"
-  >
+  <div :class="cn(`absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]`, $props.class)">
     <canvas
       ref="globeCanvasRef"
       class="size-full opacity-0 transition-opacity duration-1000 ease-in-out [contain:layout_paint_size]"

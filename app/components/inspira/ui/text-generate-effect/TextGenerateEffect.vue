@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
+import { cn } from "@inspira-ui/plugins";
 import { computed, onMounted, ref } from "vue";
 
 const props = withDefaults(
@@ -39,10 +40,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    class="leading-snug tracking-wide"
-    :class="[props.class]"
-  >
+  <div :class="cn(`leading-snug tracking-wide`, props.class)">
     <div ref="scope">
       <span
         v-for="(word, idx) in wordsArray"

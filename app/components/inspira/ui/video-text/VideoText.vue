@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { computed, onMounted, onUnmounted, ref, watch } from "vue";
 
 interface Props {
@@ -73,10 +74,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div
-    class="relative size-full"
-    :class="props.class"
-  >
+  <div :class="cn(`relative size-full`, props.class)">
     <div
       class="absolute inset-0 flex items-center justify-center"
       :style="{

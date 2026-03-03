@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
 import { computed } from "vue";
 
 const props = defineProps({
@@ -24,8 +25,12 @@ const styleVar = computed(() => {
 <template>
   <p
     :style="styleVar"
-    class="radiant-animation mx-auto max-w-md bg-gradient-to-r from-transparent via-black via-50% to-transparent [background-size:var(--radiant-width)_100%] bg-clip-text [background-position:0_0] bg-no-repeat text-neutral-600/70 [transition:background-position_1s_cubic-bezier(.6,.6,0,1)_infinite] dark:via-white dark:text-neutral-400/70"
-    :class="[$props.class]"
+    :class="
+      cn(
+        `radiant-animation mx-auto max-w-md bg-gradient-to-r from-transparent via-black via-50% to-transparent [background-size:var(--radiant-width)_100%] bg-clip-text [background-position:0_0] bg-no-repeat text-neutral-600/70 [transition:background-position_1s_cubic-bezier(.6,.6,0,1)_infinite] dark:via-white dark:text-neutral-400/70`,
+        $props.class,
+      )
+    "
   >
     <slot />
   </p>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { useMouseState } from "~/composables/useMouseState";
+import { cn } from "@inspira-ui/plugins";
 
 interface Props {
   as?: string;
@@ -46,8 +47,7 @@ watch(mouseState.isMouseEntered, handleAnimation, { immediate: true });
   <component
     :is="as"
     ref="refElement"
-    class="w-fit transition duration-500 ease-in-out"
-    :class="[props.class]"
+    :class="cn(`w-fit transition duration-500 ease-in-out`, props.class)"
   >
     <slot />
   </component>

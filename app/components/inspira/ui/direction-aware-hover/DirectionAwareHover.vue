@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { computed, onMounted, onUnmounted, ref } from "vue";
 
 interface Props {
@@ -213,8 +214,12 @@ onUnmounted(() => {
         />
       </transition>
       <div
-        class="relative size-full bg-gray-50 transition-transform duration-300 dark:bg-black"
-        :class="imageContainerClass"
+        :class="
+          cn(
+            `relative size-full bg-gray-50 transition-transform duration-300 dark:bg-black`,
+            imageContainerClass,
+          )
+        "
       >
         <img
           :src="imageUrl"

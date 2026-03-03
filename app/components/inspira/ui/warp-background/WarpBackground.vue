@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { cn } from "@inspira-ui/plugins";
 import { computed } from "vue";
 import Beam from "./Beam.vue";
 
@@ -48,10 +49,7 @@ const rightBeams = generateBeams();
 </script>
 
 <template>
-  <div
-    class="relative rounded border md:p-20"
-    :class="[props.class]"
-  >
+  <div :class="cn(`relative rounded border md:p-20`, props.class)">
     <div
       :style="{
         '--perspective': `${props.perspective}px`,

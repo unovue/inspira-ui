@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { AnimateLogoCloudProps } from "./index";
+import { cn } from "@inspira-ui/plugins";
 
 const props = defineProps<AnimateLogoCloudProps>();
 </script>
@@ -13,10 +14,7 @@ const props = defineProps<AnimateLogoCloudProps>();
       >
         {{ props.title }}
       </div>
-      <div
-        class="grid grid-cols-3 gap-x-4 md:grid-cols-5 lg:grid-cols-8"
-        :class="[props.class]"
-      >
+      <div :class="cn(`grid grid-cols-3 gap-x-4 md:grid-cols-5 lg:grid-cols-8`, props.class)">
         <img
           v-for="(logo, key) in props.logos"
           :key="key"

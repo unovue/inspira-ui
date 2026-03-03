@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { Props } from ".";
+import { cn } from "@inspira-ui/plugins";
 import { computed } from "vue";
 import { ORBIT_DIRECTION } from ".";
 
@@ -27,10 +28,7 @@ const negativeDelay = computed(() => -props.delay);
       fill="none"
     />
   </svg>
-  <div
-    class="animate-orbit absolute flex size-full transform-gpu"
-    :class="[props.class]"
-  >
+  <div :class="cn(`animate-orbit absolute flex size-full transform-gpu`, props.class)">
     <slot />
   </div>
 </template>

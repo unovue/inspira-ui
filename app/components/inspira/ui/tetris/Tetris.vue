@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { useElementSize } from "@vueuse/core";
 import { getColors } from "theme-colors";
 import { onMounted, onUnmounted, ref, watch } from "vue";
@@ -112,8 +113,7 @@ onUnmounted(() => {
         '--cell-size': `${width / cols}px`,
         '--grid-rows': rows - 1,
       }"
-      class="relative w-full"
-      :class="[props.class]"
+      :class="cn(`relative w-full`, props.class)"
     >
       <div
         ref="el"
@@ -140,8 +140,12 @@ onUnmounted(() => {
             class="relative border border-[color:var(--border-light)] dark:border-[color:var(--border-dark)]"
           >
             <div
-              class="absolute inset-0 bg-[color:var(--square-light)] opacity-0 transition-opacity duration-1000 will-change-[opacity] hover:bg-[color:var(--square-hover-light)] dark:bg-[color:var(--square-dark)] dark:hover:bg-[color:var(--square-hover-dark)]"
-              :class="[cell && 'cursor-pointer opacity-60']"
+              :class="
+                cn(
+                  `absolute inset-0 bg-[color:var(--square-light)] opacity-0 transition-opacity duration-1000 will-change-[opacity] hover:bg-[color:var(--square-hover-light)] dark:bg-[color:var(--square-dark)] dark:hover:bg-[color:var(--square-hover-dark)]`,
+                  cell && 'cursor-pointer opacity-60',
+                )
+              "
               @click="cell && removeCell(rowIndex, cellIndex)"
             />
           </div>

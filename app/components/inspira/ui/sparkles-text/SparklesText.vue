@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { cn } from "@inspira-ui/plugins";
 import { Motion } from "motion-v";
 import { onMounted, onUnmounted, ref } from "vue";
 
@@ -74,10 +75,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div
-    class="text-6xl font-bold"
-    :class="props.class"
-  >
+  <div :class="cn(`text-6xl font-bold`, props.class)">
     <span class="relative inline-block">
       <template
         v-for="sparkle in sparkles"
