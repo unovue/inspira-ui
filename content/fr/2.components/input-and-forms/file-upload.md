@@ -17,14 +17,14 @@ Le composant `FileUpload` sert de conteneur pour l'effet d'upload. Il gère les 
 
 #### Props
 
-| Nom de propriété | Type   | Valeur par défaut | Description                                                 |
-| ---------------- | ------ | ----------------- | ----------------------------------------------------------- |
-| `class`          | String | -                 | Classes supplémentaires pour styliser l'élément conteneur.  |
+| Nom de propriété | Type   | Valeur par défaut | Description                                                |
+| ---------------- | ------ | ----------------- | ---------------------------------------------------------- |
+| `class`          | String | -                 | Classes supplémentaires pour styliser l'élément conteneur. |
 
 #### Événements émis
 
-| Nom de l'événement | Type                      | Description                                                       |
-| ------------------ | ------------------------- | ----------------------------------------------------------------- |
+| Nom de l'événement | Type                      | Description                                                                 |
+| ------------------ | ------------------------- | --------------------------------------------------------------------------- |
 | `onChange`         | `(files: File[]) => void` | Fonction de rappel déclenchée lorsque des fichiers sont ajoutés/téléversés. |
 
 ### `FileUploadGrid`
@@ -33,8 +33,8 @@ Le composant `FileUploadGrid` fournit le motif de grille d'arrière-plan pour la
 
 #### Props
 
-| Nom de propriété | Type   | Valeur par défaut | Description                                   |
-| ---------------- | ------ | ----------------- | --------------------------------------------- |
+| Nom de propriété | Type   | Valeur par défaut | Description                                         |
+| ---------------- | ------ | ----------------- | --------------------------------------------------- |
 | `class`          | String | -                 | Classes supplémentaires pour un style personnalisé. |
 
 #credits

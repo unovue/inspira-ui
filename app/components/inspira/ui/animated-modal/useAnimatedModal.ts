@@ -8,4 +8,3 @@ export function useAnimatedModal() {
   }
   return modal;
 }
-

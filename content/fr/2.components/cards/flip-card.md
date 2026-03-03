@@ -11,15 +11,15 @@ tags: [css, tailwind, card]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                        |
-| ---------------- | -------- | ----------------- | -------------------------------------------------- |
-| `class`          | `string` | `-`               | Classe appliquée au composant.                     |
-| `rotate`         | `x \| y` | `y`               | Valeur d'axe de rotation à appliquer.              |
+| Nom de propriété | Type     | Valeur par défaut | Description                           |
+| ---------------- | -------- | ----------------- | ------------------------------------- |
+| `class`          | `string` | `-`               | Classe appliquée au composant.        |
+| `rotate`         | `x \| y` | `y`               | Valeur d'axe de rotation à appliquer. |
 
-| Nom du slot | Description                     |
-| ----------- | ------------------------------- |
+| Nom du slot | Description                      |
+| ----------- | -------------------------------- |
 | `default`   | Composant affiché en face avant. |
-| `back`      | Composant affiché au dos.       |
+| `back`      | Composant affiché au dos.        |
 
 #credits
 

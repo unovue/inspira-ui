@@ -33,10 +33,10 @@ Ajoutez l'entrée suivante au thème inline dans votre fichier `main.css`.
 
 ## API
 
-| Nom de propriété | Type      | Valeur par défaut | Description                                                                |
-| ---------------- | --------- | ----------------- | -------------------------------------------------------------------------- |
-| `class`          | `string`  | `-`               | Classes CSS supplémentaires à appliquer pour le style du composant.        |
-| `radialGradient` | `boolean` | `true`            | Indique si un dégradé radial est appliqué sur le fond.                     |
+| Nom de propriété | Type      | Valeur par défaut | Description                                                         |
+| ---------------- | --------- | ----------------- | ------------------------------------------------------------------- |
+| `class`          | `string`  | `-`               | Classes CSS supplémentaires à appliquer pour le style du composant. |
+| `radialGradient` | `boolean` | `true`            | Indique si un dégradé radial est appliqué sur le fond.              |
 
 #credits
 

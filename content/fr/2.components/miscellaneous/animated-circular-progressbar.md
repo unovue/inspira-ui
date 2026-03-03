@@ -11,17 +11,17 @@ tags: [css, tailwind, input, magic-ui]
 
 ## API
 
-| Nom de propriété         | Type      | Valeur par défaut        | Description                                   |
-| ------------------------ | --------- | ------------------------ | --------------------------------------------- |
-| `class`                  | `string`  | `-`                      | Classe appliquée au composant.                |
-| `max`                    | `number`  | `100`                    | Valeur maximale de la jauge.                  |
-| `min`                    | `number`  | `0`                      | Valeur minimale de la jauge.                  |
-| `value`                  | `number`  | `0`                      | Valeur actuelle de la jauge.                  |
-| `gaugePrimaryColor`      | `string`  | `rgb(79 70 229)`         | Couleur principale de la jauge.               |
-| `gaugeSecondaryColor`    | `string`  | `rgba(0, 0, 0, 0.1)`     | Couleur secondaire de la jauge.               |
-| `circleStrokeWidth`      | `number`  | `10`                     | Largeur du cercle de progression.             |
-| `showPercentage`         | `boolean` | `true`                   | Affiche la valeur à l'intérieur du cercle.    |
-| `duration`               | `number`  | `1`                      | Durée de l'animation (en secondes).           |
+| Nom de propriété      | Type      | Valeur par défaut    | Description                                |
+| --------------------- | --------- | -------------------- | ------------------------------------------ |
+| `class`               | `string`  | `-`                  | Classe appliquée au composant.             |
+| `max`                 | `number`  | `100`                | Valeur maximale de la jauge.               |
+| `min`                 | `number`  | `0`                  | Valeur minimale de la jauge.               |
+| `value`               | `number`  | `0`                  | Valeur actuelle de la jauge.               |
+| `gaugePrimaryColor`   | `string`  | `rgb(79 70 229)`     | Couleur principale de la jauge.            |
+| `gaugeSecondaryColor` | `string`  | `rgba(0, 0, 0, 0.1)` | Couleur secondaire de la jauge.            |
+| `circleStrokeWidth`   | `number`  | `10`                 | Largeur du cercle de progression.          |
+| `showPercentage`      | `boolean` | `true`               | Affiche la valeur à l'intérieur du cercle. |
+| `duration`            | `number`  | `1`                  | Durée de l'animation (en secondes).        |
 
 #credits
 

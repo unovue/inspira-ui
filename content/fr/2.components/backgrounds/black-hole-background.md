@@ -11,13 +11,13 @@ tags: [css, tailwind, background, motion-v, canvas]
 
 ## API
 
-| Nom de propriété   | Type                       | Valeur par défaut | Description                                                      |
-| ------------------ | -------------------------- | ----------------- | ---------------------------------------------------------------- |
-| `strokeColor`      | `string`                   | `"#737373"`       | Couleur de tracé pour les disques concentriques et les lignes.   |
-| `numberOfLines`    | `number`                   | `50`              | Nombre total de lignes radiales partant du centre.               |
-| `numberOfDiscs`    | `number`                   | `50`              | Nombre total d'ellipses concentriques formant le tunnel.         |
+| Nom de propriété   | Type                       | Valeur par défaut | Description                                                             |
+| ------------------ | -------------------------- | ----------------- | ----------------------------------------------------------------------- |
+| `strokeColor`      | `string`                   | `"#737373"`       | Couleur de tracé pour les disques concentriques et les lignes.          |
+| `numberOfLines`    | `number`                   | `50`              | Nombre total de lignes radiales partant du centre.                      |
+| `numberOfDiscs`    | `number`                   | `50`              | Nombre total d'ellipses concentriques formant le tunnel.                |
 | `particleRGBColor` | `[number, number, number]` | `[255,255,255]`   | Couleur RVB utilisée pour les petites particules attirées dans le trou. |
-| `class`            | `string`                   | `""`              | Classes utilitaires supplémentaires fusionnées sur le wrapper racine. |
+| `class`            | `string`                   | `""`              | Classes utilitaires supplémentaires fusionnées sur le wrapper racine.   |
 
 #credits
 

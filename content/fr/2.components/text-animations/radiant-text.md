@@ -11,10 +11,10 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                              |
-| ---------------- | -------- | ----------------- | ---------------------------------------- |
-| `duration`       | `number` | `10`              | Durée de l'animation en secondes.        |
-| `radiantWidth`   | `number` | `100`             | Largeur de l'animation rayonnante.       |
+| Nom de propriété | Type     | Valeur par défaut | Description                        |
+| ---------------- | -------- | ----------------- | ---------------------------------- |
+| `duration`       | `number` | `10`              | Durée de l'animation en secondes.  |
+| `radiantWidth`   | `number` | `100`             | Largeur de l'animation rayonnante. |
 
 #credits
 

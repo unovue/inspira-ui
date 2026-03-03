@@ -75,7 +75,8 @@ onMounted(() => {
           'relative grid w-full max-w-full items-center justify-center',
           props.cards.length < 4 ? `grid-cols-${props.cards.length}` : 'grid-cols-4',
         )
-      ">
+      "
+    >
       <div
         v-for="(item, index) in props.cards"
         :key="index"

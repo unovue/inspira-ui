@@ -11,13 +11,13 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| Nom de propriété | Type      | Valeur par défaut | Description                                                              |
-| ---------------- | --------- | ----------------- | ------------------------------------------------------------------------ |
-| `class`          | `string`  | `''`              | Classes CSS personnalisées pour le conteneur externe du marquee.         |
-| `reverse`        | `boolean` | `false`           | Inverse le sens de défilement (droite vers gauche ou bas vers haut).     |
-| `pauseOnHover`   | `boolean` | `false`           | Met en pause l'animation au survol.                                      |
-| `vertical`       | `boolean` | `false`           | Définit un défilement vertical au lieu d'horizontal.                     |
-| `repeat`         | `number`  | `4`               | Nombre de répétitions du contenu dans le marquee.                        |
+| Nom de propriété | Type      | Valeur par défaut | Description                                                          |
+| ---------------- | --------- | ----------------- | -------------------------------------------------------------------- |
+| `class`          | `string`  | `''`              | Classes CSS personnalisées pour le conteneur externe du marquee.     |
+| `reverse`        | `boolean` | `false`           | Inverse le sens de défilement (droite vers gauche ou bas vers haut). |
+| `pauseOnHover`   | `boolean` | `false`           | Met en pause l'animation au survol.                                  |
+| `vertical`       | `boolean` | `false`           | Définit un défilement vertical au lieu d'horizontal.                 |
+| `repeat`         | `number`  | `4`               | Nombre de répétitions du contenu dans le marquee.                    |
 
 ## Variables CSS
 

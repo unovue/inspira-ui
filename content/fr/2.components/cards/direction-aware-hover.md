@@ -11,11 +11,11 @@ tags: [css, tailwind, card, aceternity-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                           |
-| ---------------- | -------- | ----------------- | ----------------------------------------------------- |
-| `imageUrl`       | `string` | Requise           | URL de l'image à afficher.                            |
-| `class`          | `string` | `undefined`       | Classes CSS supplémentaires pour le conteneur de carte. |
-| `imageClass`     | `string` | `undefined`       | Classes CSS supplémentaires pour l'élément image.     |
+| Nom de propriété | Type     | Valeur par défaut | Description                                                   |
+| ---------------- | -------- | ----------------- | ------------------------------------------------------------- |
+| `imageUrl`       | `string` | Requise           | URL de l'image à afficher.                                    |
+| `class`          | `string` | `undefined`       | Classes CSS supplémentaires pour le conteneur de carte.       |
+| `imageClass`     | `string` | `undefined`       | Classes CSS supplémentaires pour l'élément image.             |
 | `childrenClass`  | `string` | `undefined`       | Classes CSS supplémentaires pour la superposition de contenu. |
 
 #credits

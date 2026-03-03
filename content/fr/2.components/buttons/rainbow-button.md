@@ -11,11 +11,11 @@ tags: [css, tailwind, button, magic-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                         |
-| ---------------- | -------- | ----------------- | --------------------------------------------------- |
-| `class`          | `string` | `""`              | Classes CSS supplémentaires à appliquer au bouton.  |
-| `is`             | `string` | `"button"`        | Balise HTML utilisée pour rendre le composant.      |
-| `speed`          | `number` | `2`               | Durée de l'animation en secondes.                   |
+| Nom de propriété | Type     | Valeur par défaut | Description                                        |
+| ---------------- | -------- | ----------------- | -------------------------------------------------- |
+| `class`          | `string` | `""`              | Classes CSS supplémentaires à appliquer au bouton. |
+| `is`             | `string` | `"button"`        | Balise HTML utilisée pour rendre le composant.     |
+| `speed`          | `number` | `2`               | Durée de l'animation en secondes.                  |
 
 #credits
 

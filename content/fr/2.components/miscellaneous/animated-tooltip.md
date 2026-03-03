@@ -11,9 +11,9 @@ tags: [css, tailwind, aceternity-ui]
 
 ## API
 
-| Nom de propriété | Type                                                                    | Valeur par défaut | Description                                                                                                                                 |
-| ---------------- | ----------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `items`          | `Array<{id: number, name: string, designation: string, image: string}>` | `[]`              | Tableau d'objets représentant chaque élément avec les propriétés id, name, designation et image.                                            |
+| Nom de propriété | Type                                                                    | Valeur par défaut | Description                                                                                      |
+| ---------------- | ----------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------ |
+| `items`          | `Array<{id: number, name: string, designation: string, image: string}>` | `[]`              | Tableau d'objets représentant chaque élément avec les propriétés id, name, designation et image. |
 
 #credits
 

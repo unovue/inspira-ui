@@ -11,16 +11,16 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                                           |
-| ---------------- | -------- | ----------------- | --------------------------------------------------------------------- |
-| `class`          | `string` | `""`              | Classes CSS supplémentaires pour un style personnalisé.               |
-| `size`           | `number` | `200`             | Taille de l'effet de rayon sur la bordure.                            |
-| `duration`       | `number` | `15`              | Durée de l'animation en secondes.                                     |
-| `borderWidth`    | `number` | `1.5`             | Largeur de la bordure entourant l'effet.                              |
-| `anchor`         | `number` | `90`              | Point d'ancrage du rayon, définit sa position le long de la bordure.  |
-| `colorFrom`      | `string` | `"#ffaa40"`       | Couleur de départ du dégradé du rayon.                                |
-| `colorTo`        | `string` | `"#9c40ff"`       | Couleur de fin du dégradé du rayon.                                   |
-| `delay`          | `number` | `0`               | Délai avant le démarrage de l'animation, en secondes.                 |
+| Nom de propriété | Type     | Valeur par défaut | Description                                                          |
+| ---------------- | -------- | ----------------- | -------------------------------------------------------------------- |
+| `class`          | `string` | `""`              | Classes CSS supplémentaires pour un style personnalisé.              |
+| `size`           | `number` | `200`             | Taille de l'effet de rayon sur la bordure.                           |
+| `duration`       | `number` | `15`              | Durée de l'animation en secondes.                                    |
+| `borderWidth`    | `number` | `1.5`             | Largeur de la bordure entourant l'effet.                             |
+| `anchor`         | `number` | `90`              | Point d'ancrage du rayon, définit sa position le long de la bordure. |
+| `colorFrom`      | `string` | `"#ffaa40"`       | Couleur de départ du dégradé du rayon.                               |
+| `colorTo`        | `string` | `"#9c40ff"`       | Couleur de fin du dégradé du rayon.                                  |
+| `delay`          | `number` | `0`               | Délai avant le démarrage de l'animation, en secondes.                |
 
 #credits
 

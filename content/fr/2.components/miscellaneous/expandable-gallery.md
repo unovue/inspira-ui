@@ -11,8 +11,8 @@ tags: [css, tailwind, gallery]
 
 ## API
 
-| Nom de propriété | Type       | Valeur par défaut | Description                                     |
-| ---------------- | ---------- | ----------------- | ----------------------------------------------- |
+| Nom de propriété | Type       | Valeur par défaut | Description                                        |
+| ---------------- | ---------- | ----------------- | -------------------------------------------------- |
 | `images`         | `string[]` | `[]`              | Tableau d'URL d'images à afficher dans la galerie. |
 
 #credits

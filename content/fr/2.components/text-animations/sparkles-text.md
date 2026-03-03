@@ -11,12 +11,12 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut                         | Description                                   |
-| ---------------- | -------- | ----------------------------------------- | --------------------------------------------- |
-| `class`          | `string` | `-`                                       | Classe appliquée au texte étincelant.         |
-| `text`           | `string` | ``                                        | Texte à afficher.                             |
-| `sparklesCount`  | `number` | `10`                                      | Nombre d'étincelles affichées sur le texte.   |
-| `colors`         | `object` | `{first: '#A07CFE'; second: '#FE8FB5';}`  | Couleurs des étincelles.                      |
+| Nom de propriété | Type     | Valeur par défaut                        | Description                                 |
+| ---------------- | -------- | ---------------------------------------- | ------------------------------------------- |
+| `class`          | `string` | `-`                                      | Classe appliquée au texte étincelant.       |
+| `text`           | `string` | ``                                       | Texte à afficher.                           |
+| `sparklesCount`  | `number` | `10`                                     | Nombre d'étincelles affichées sur le texte. |
+| `colors`         | `object` | `{first: '#A07CFE'; second: '#FE8FB5';}` | Couleurs des étincelles.                    |
 
 #credits
 

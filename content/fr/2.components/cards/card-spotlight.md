@@ -11,12 +11,12 @@ tags: [css, tailwind, card, magic-ui]
 
 ## API
 
-| Nom de propriété   | Type     | Valeur par défaut | Description                                                    |
-| ------------------ | -------- | ----------------- | -------------------------------------------------------------- |
-| `gradientSize`     | `number` | `200`             | Rayon de l'effet de spot, en pixels.                           |
-| `gradientColor`    | `string` | `'#262626'`       | Couleur du dégradé du spot.                                    |
-| `gradientOpacity`  | `number` | `0.8`             | Niveau d'opacité du dégradé du spot.                           |
-| `slotClass`        | `string` | `undefined`       | Classe à appliquer au conteneur parent du slot.                |
+| Nom de propriété  | Type     | Valeur par défaut | Description                                     |
+| ----------------- | -------- | ----------------- | ----------------------------------------------- |
+| `gradientSize`    | `number` | `200`             | Rayon de l'effet de spot, en pixels.            |
+| `gradientColor`   | `string` | `'#262626'`       | Couleur du dégradé du spot.                     |
+| `gradientOpacity` | `number` | `0.8`             | Niveau d'opacité du dégradé du spot.            |
+| `slotClass`       | `string` | `undefined`       | Classe à appliquer au conteneur parent du slot. |
 
 #credits
 

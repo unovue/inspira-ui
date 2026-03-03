@@ -11,12 +11,12 @@ tags: [css, tailwind, background, magic-ui, canvas]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                                                                                 |
-| ---------------- | -------- | ----------------- | ----------------------------------------------------------------------------------------------------------- |
-| `color`          | `string` | `#FFF`            | Code couleur hexadécimal utilisé pour les particules (3 ou 6 caractères).                                   |
-| `quantity`       | `number` | `100`             | Nombre de particules générées et affichées sur le canvas.                                                   |
+| Nom de propriété | Type     | Valeur par défaut | Description                                                                                                              |
+| ---------------- | -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| `color`          | `string` | `#FFF`            | Code couleur hexadécimal utilisé pour les particules (3 ou 6 caractères).                                                |
+| `quantity`       | `number` | `100`             | Nombre de particules générées et affichées sur le canvas.                                                                |
 | `staticity`      | `number` | `50`              | Contrôle l'amplitude de mouvement des particules selon la proximité de la souris. Une valeur élevée réduit le mouvement. |
-| `ease`           | `number` | `50`              | Contrôle l'effet d'easing du mouvement : plus la valeur est basse, plus les particules suivent la souris de près. |
+| `ease`           | `number` | `50`              | Contrôle l'effet d'easing du mouvement : plus la valeur est basse, plus les particules suivent la souris de près.        |
 
 #credits
 

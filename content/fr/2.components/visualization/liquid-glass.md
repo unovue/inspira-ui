@@ -11,23 +11,23 @@ tags: [css, tailwind, apple, svg]
 
 ## API
 
-| Nom de propriété  | Type                | Valeur par défaut | Description                                                                             |
-| ----------------- | ------------------- | ----------------- | --------------------------------------------------------------------------------------- |
-| `radius`          | `number`            | `16`              | Rayon des coins du conteneur en verre (en pixels).                                      |
-| `border`          | `number`            | `0.07`            | Épaisseur relative de la bordure influençant la marge interne du filtre de déplacement. |
-| `lightness`       | `number`            | `50`              | Luminosité (0-100) de la couleur de superposition en HSL.                               |
-| `blend`           | `string`            | `"difference"`    | Mode de fusion CSS entre les couches de déplacement rouges et bleues pour la distorsion. |
-| `xChannel`        | `"R" \| "G" \| "B"` | `"R"`             | Canal de l'image de déplacement utilisé pour le décalage horizontal.                    |
-| `yChannel`        | `"R" \| "G" \| "B"` | `"B"`             | Canal de l'image de déplacement utilisé pour le décalage vertical.                      |
-| `alpha`           | `number`            | `0.93`            | Transparence alpha de la couleur de superposition (0-1).                                |
-| `blur`            | `number`            | `11`              | Rayon de flou gaussien appliqué à la superposition.                                     |
-| `rOffset`         | `number`            | `0`               | Décalage d'échelle supplémentaire pour la carte de déplacement rouge.                   |
-| `gOffset`         | `number`            | `10`              | Décalage d'échelle supplémentaire pour la carte de déplacement verte.                   |
-| `bOffset`         | `number`            | `20`              | Décalage d'échelle supplémentaire pour la carte de déplacement bleue.                   |
-| `scale`           | `number`            | `-180`            | Facteur d'échelle de base pour les effets de déplacement, combiné aux décalages de canal. |
-| `frost`           | `number`            | `0.05`            | Facteur d'opacité contrôlant la force de l'arrière-plan givré.                           |
-| `class`           | `string`            | `""`              | Classes CSS supplémentaires appliquées au slot interne qui enveloppe le contenu.         |
-| `containerClass`  | `string`            | `""`              | Classes CSS supplémentaires appliquées à la div conteneur externe.                       |
+| Nom de propriété | Type                | Valeur par défaut | Description                                                                               |
+| ---------------- | ------------------- | ----------------- | ----------------------------------------------------------------------------------------- |
+| `radius`         | `number`            | `16`              | Rayon des coins du conteneur en verre (en pixels).                                        |
+| `border`         | `number`            | `0.07`            | Épaisseur relative de la bordure influençant la marge interne du filtre de déplacement.   |
+| `lightness`      | `number`            | `50`              | Luminosité (0-100) de la couleur de superposition en HSL.                                 |
+| `blend`          | `string`            | `"difference"`    | Mode de fusion CSS entre les couches de déplacement rouges et bleues pour la distorsion.  |
+| `xChannel`       | `"R" \| "G" \| "B"` | `"R"`             | Canal de l'image de déplacement utilisé pour le décalage horizontal.                      |
+| `yChannel`       | `"R" \| "G" \| "B"` | `"B"`             | Canal de l'image de déplacement utilisé pour le décalage vertical.                        |
+| `alpha`          | `number`            | `0.93`            | Transparence alpha de la couleur de superposition (0-1).                                  |
+| `blur`           | `number`            | `11`              | Rayon de flou gaussien appliqué à la superposition.                                       |
+| `rOffset`        | `number`            | `0`               | Décalage d'échelle supplémentaire pour la carte de déplacement rouge.                     |
+| `gOffset`        | `number`            | `10`              | Décalage d'échelle supplémentaire pour la carte de déplacement verte.                     |
+| `bOffset`        | `number`            | `20`              | Décalage d'échelle supplémentaire pour la carte de déplacement bleue.                     |
+| `scale`          | `number`            | `-180`            | Facteur d'échelle de base pour les effets de déplacement, combiné aux décalages de canal. |
+| `frost`          | `number`            | `0.05`            | Facteur d'opacité contrôlant la force de l'arrière-plan givré.                            |
+| `class`          | `string`            | `""`              | Classes CSS supplémentaires appliquées au slot interne qui enveloppe le contenu.          |
+| `containerClass` | `string`            | `""`              | Classes CSS supplémentaires appliquées à la div conteneur externe.                        |
 
 #credits
 

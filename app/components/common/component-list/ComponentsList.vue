@@ -51,9 +51,7 @@ const filteredComponents = computed(() => {
     return filtered
       .slice()
       .sort(
-        (a, b) =>
-          badgePriority(a.badge) - badgePriority(b.badge) ||
-          a.title.localeCompare(b.title),
+        (a, b) => badgePriority(a.badge) - badgePriority(b.badge) || a.title.localeCompare(b.title),
       );
   }
 

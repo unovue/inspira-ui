@@ -18,18 +18,18 @@ tags: [css, tailwind]
 | `class`         | `string` | Dock 容器的额外类名。                                        |
 | `magnification` | `number` | 悬停时图标的放大倍数（默认 60）。                            |
 | `distance`      | `number` | 放大作用的图标中心距离。                                     |
-| `direction`     | `string` | 图标对齐方式（`top`、`middle`、`bottom`，默认 middle）。    |
+| `direction`     | `string` | 图标对齐方式（`top`、`middle`、`bottom`，默认 middle）。     |
 | `orientation`   | `string` | Dock 的方向（`vertical` 或 `horizontal`，默认 horizontal）。 |
 
-| 插槽名   | 描述                                     |
-| -------- | ---------------------------------------- |
-| `default`| Dock 图标或其他子组件。                  |
+| 插槽名    | 描述                    |
+| --------- | ----------------------- |
+| `default` | Dock 图标或其他子组件。 |
 
 ### `DockIcon`
 
-| 插槽名   | 描述                                    |
-| -------- | --------------------------------------- |
-| `default`| 显示在 Dock 图标中的组件或图标。        |
+| 插槽名    | 描述                             |
+| --------- | -------------------------------- |
+| `default` | 显示在 Dock 图标中的组件或图标。 |
 
 #credits
 

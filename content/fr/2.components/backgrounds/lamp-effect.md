@@ -11,10 +11,10 @@ tags: [css, tailwind, background, aceternity-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                        |
-| ---------------- | -------- | ----------------- | -------------------------------------------------- |
-| `delay`          | `number` | `0.5`             | Délai avant le début de l'animation, en secondes.  |
-| `duration`       | `number` | `0.8`             | Durée de l'animation, en secondes.                 |
+| Nom de propriété | Type     | Valeur par défaut | Description                                             |
+| ---------------- | -------- | ----------------- | ------------------------------------------------------- |
+| `delay`          | `number` | `0.5`             | Délai avant le début de l'animation, en secondes.       |
+| `duration`       | `number` | `0.8`             | Durée de l'animation, en secondes.                      |
 | `class`          | `string` | `""`              | Classes CSS supplémentaires pour un style personnalisé. |
 
 #credits

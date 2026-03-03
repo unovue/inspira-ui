@@ -11,16 +11,16 @@ tags: [css, tailwind, input, aceternity-ui]
 
 ## API
 
-| Nom de propriété | Type            | Valeur par défaut                                 | Description                                                                       |
-| ---------------- | --------------- | ------------------------------------------------- | --------------------------------------------------------------------------------- |
-| `placeholders`   | `Array<string>` | `["Placeholder 1", "Placeholder 2", "Placeholder 3"]` | Tableau de textes de placeholder qui défilent comme invites dans le champ.        |
+| Nom de propriété | Type            | Valeur par défaut                                     | Description                                                                |
+| ---------------- | --------------- | ----------------------------------------------------- | -------------------------------------------------------------------------- |
+| `placeholders`   | `Array<string>` | `["Placeholder 1", "Placeholder 2", "Placeholder 3"]` | Tableau de textes de placeholder qui défilent comme invites dans le champ. |
 
 Ce composant écoute les événements suivants émis par le composant `VanishingInput` :
 
-| Nom de l'événement | Paramètres | Description                                    |
-| ------------------ | ---------- | ---------------------------------------------- |
-| `change`           | `Event`    | Déclenché lorsque la valeur du champ change.   |
-| `submit`           | `string`   | Déclenché lorsque le champ est soumis.         |
+| Nom de l'événement | Paramètres | Description                                  |
+| ------------------ | ---------- | -------------------------------------------- |
+| `change`           | `Event`    | Déclenché lorsque la valeur du champ change. |
+| `submit`           | `string`   | Déclenché lorsque le champ est soumis.       |
 
 #credits
 

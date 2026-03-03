@@ -11,14 +11,14 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| 属性名      | 类型                                                    | 默认值 | 描述                                   |
-| ----------- | ------------------------------------------------------- | ------ | -------------------------------------- |
-| `duration`  | `number`                                                | `10`   | 完成一圈旋转动画的持续时间。           |
-| `reverse`   | `boolean`                                               | `false`| 是否反向旋转。                         |
-| `radius`    | `number`                                                | `5`    | 文字旋转路径的半径。                   |
-| `transition`| `motion-v Transition`                                   | ``     | 动画的自定义过渡效果。                 |
-| `variants`  | `{container: motion-v Variant, item: motion-v Variant}` | ``     | 容器与子项动画的变体。                 |
-| `class`     | `string`                                                | `""`   | 文字容器的自定义类名。                 |
+| 属性名       | 类型                                                    | 默认值  | 描述                         |
+| ------------ | ------------------------------------------------------- | ------- | ---------------------------- |
+| `duration`   | `number`                                                | `10`    | 完成一圈旋转动画的持续时间。 |
+| `reverse`    | `boolean`                                               | `false` | 是否反向旋转。               |
+| `radius`     | `number`                                                | `5`     | 文字旋转路径的半径。         |
+| `transition` | `motion-v Transition`                                   | ``      | 动画的自定义过渡效果。       |
+| `variants`   | `{container: motion-v Variant, item: motion-v Variant}` | ``      | 容器与子项动画的变体。       |
+| `class`      | `string`                                                | `""`    | 文字容器的自定义类名。       |
 
 #credits
 

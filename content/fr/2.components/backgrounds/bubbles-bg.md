@@ -11,9 +11,9 @@ tags: [css, tailwind, background, threejs]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                                       |
-| ---------------- | -------- | ----------------- | ----------------------------------------------------------------- |
-| `blur`           | `number` | `0`               | Niveau de flou appliqué au fond, en pixels.                       |
+| Nom de propriété | Type     | Valeur par défaut | Description                                 |
+| ---------------- | -------- | ----------------- | ------------------------------------------- |
+| `blur`           | `number` | `0`               | Niveau de flou appliqué au fond, en pixels. |
 
 #credits
 

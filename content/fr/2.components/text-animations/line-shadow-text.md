@@ -11,11 +11,11 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                |
-| ---------------- | -------- | ----------------- | ------------------------------------------ |
-| `shadowColor`    | `string` | `"black"`         | Couleur de l'effet d'ombre.                |
+| Nom de propriété | Type     | Valeur par défaut | Description                                             |
+| ---------------- | -------- | ----------------- | ------------------------------------------------------- |
+| `shadowColor`    | `string` | `"black"`         | Couleur de l'effet d'ombre.                             |
 | `class`          | `string` | `""`              | Classes CSS supplémentaires pour un style personnalisé. |
-| `as`             | `string` | `"span"`          | Élément HTML utilisé pour rendre le texte. |
+| `as`             | `string` | `"span"`          | Élément HTML utilisé pour rendre le texte.              |
 
 #credits
 

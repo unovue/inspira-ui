@@ -11,11 +11,11 @@ tags: [css, tailwind, card, aceternity-ui]
 
 La suite **Apple Carousel** se compose de quatre composants liés :
 
-| Composant           | Rôle                                                                       |
-| ------------------- | -------------------------------------------------------------------------- |
-| `AppleCardCarousel` | Le conteneur de défilement horizontal avec contrôles gauche / droite.      |
-| `AppleCarouselItem` | Un wrapper qui ajoute animation d'entrée et espacement à chaque carte.     |
-| `AppleCard`         | Une carte riche et cliquable pouvant s'étendre en modal plein écran.       |
+| Composant           | Rôle                                                                        |
+| ------------------- | --------------------------------------------------------------------------- |
+| `AppleCardCarousel` | Le conteneur de défilement horizontal avec contrôles gauche / droite.       |
+| `AppleCarouselItem` | Un wrapper qui ajoute animation d'entrée et espacement à chaque carte.      |
+| `AppleCard`         | Une carte riche et cliquable pouvant s'étendre en modal plein écran.        |
 | `AppleBlurImage`    | Un remplacement de `<img>` qui démarre flou jusqu'au chargement de l'image. |
 
 Ensemble, ils reproduisent l'expérience de navigation interactive type App Store / Apple TV.
@@ -24,9 +24,9 @@ Ensemble, ils reproduisent l'expérience de navigation interactive type App Stor
 
 ## `AppleCardCarousel`
 
-| Propriété       | Type     | Valeur par défaut | Description                                          |
-| --------------- | -------- | ----------------- | ---------------------------------------------------- |
-| `initialScroll` | `number` | `0`               | Décalage horizontal appliqué au montage (en px).     |
+| Propriété       | Type     | Valeur par défaut | Description                                      |
+| --------------- | -------- | ----------------- | ------------------------------------------------ |
+| `initialScroll` | `number` | `0`               | Décalage horizontal appliqué au montage (en px). |
 
 ### Slots
 
@@ -40,8 +40,8 @@ _Aucun événement personnalisé._
 
 ## `AppleCarouselItem`
 
-| Propriété | Type     | Obligatoire | Description                                                  |
-| --------- | -------- | ----------- | ------------------------------------------------------------ |
+| Propriété | Type     | Obligatoire | Description                                                            |
+| --------- | -------- | ----------- | ---------------------------------------------------------------------- |
 | `index`   | `number` | ✓           | Index basé sur zéro, utilisé pour échelonner l'animation d'apparition. |
 
 ### Slots
@@ -52,10 +52,10 @@ Slot par défaut — placez ici une **`AppleCard`**.
 
 ## `AppleCard`
 
-| Propriété | Type                                               | Obligatoire | Valeur par défaut | Description                              |
-| --------- | -------------------------------------------------- | ----------- | ----------------- | ---------------------------------------- |
-| `card`    | `{ src: string; title: string; category: string }` | ✓           | —                 | Objet de données de la carte.            |
-| `index`   | `number`                                           | ✓           | —                 | Position dans le carrousel.              |
+| Propriété | Type                                               | Obligatoire | Valeur par défaut | Description                                  |
+| --------- | -------------------------------------------------- | ----------- | ----------------- | -------------------------------------------- |
+| `card`    | `{ src: string; title: string; category: string }` | ✓           | —                 | Objet de données de la carte.                |
+| `index`   | `number`                                           | ✓           | —                 | Position dans le carrousel.                  |
 | `layout`  | `boolean`                                          | ✕           | `false`           | Active l'animation FLIP avec layout partagé. |
 
 ### Slots
@@ -70,14 +70,14 @@ _Aucun événement personnalisé (repose sur le contexte injecté `CarouselKey`)
 
 ## `AppleBlurImage`
 
-| Propriété | Type               | Valeur par défaut                 | Description                                                        |
-| --------- | ------------------ | --------------------------------- | ------------------------------------------------------------------ |
-| `src`     | `string`           | **—**                             | URL de l'image. _Requise._                                         |
-| `alt`     | `string`           | "Background of a beautiful view"  | Texte alternatif.                                                  |
-| `width`   | `number \| string` | _taille naturelle de l'image_     | Attribut de largeur ; omis lors de l'utilisation de `fill`.        |
-| `height`  | `number \| string` | _taille naturelle de l'image_     | Attribut de hauteur ; omis lors de l'utilisation de `fill`.        |
-| `fill`    | `boolean`          | `false`                           | Si `true`, applique `width:100%; height:100%` via des classes utilitaires. |
-| `class`   | `string`           | `""`                              | Classes supplémentaires fusionnées via `cn()`.                     |
+| Propriété | Type               | Valeur par défaut                | Description                                                                |
+| --------- | ------------------ | -------------------------------- | -------------------------------------------------------------------------- |
+| `src`     | `string`           | **—**                            | URL de l'image. _Requise._                                                 |
+| `alt`     | `string`           | "Background of a beautiful view" | Texte alternatif.                                                          |
+| `width`   | `number \| string` | _taille naturelle de l'image_    | Attribut de largeur ; omis lors de l'utilisation de `fill`.                |
+| `height`  | `number \| string` | _taille naturelle de l'image_    | Attribut de hauteur ; omis lors de l'utilisation de `fill`.                |
+| `fill`    | `boolean`          | `false`                          | Si `true`, applique `width:100%; height:100%` via des classes utilitaires. |
+| `class`   | `string`           | `""`                             | Classes supplémentaires fusionnées via `cn()`.                             |
 
 Lorsque l'image déclenche l'événement natif `load`, elle passe en douceur de `blur-sm` à sans flou.
 

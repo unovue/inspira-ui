@@ -11,13 +11,13 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| 属性名          | 类型                | 默认值         | 描述                                              |
-| --------------- | ------------------- | -------------- | ------------------------------------------------- |
-| `value`         | `int`               | `0`            | 需要滚动到的目标值。                              |
-| `direction`     | `up \| down`        | `up`           | 计数方向。                                        |
-| `decimalPlaces` | `number`            | `0`            | 显示的小数位数。                                  |
-| `delay`         | `number`            | `0`            | 开始计数前的延迟（毫秒）。                        |
-| `duration`      | `number`            | `1000`         | 整个动画的持续时间（毫秒）。                      |
+| 属性名          | 类型                | 默认值         | 描述                                                    |
+| --------------- | ------------------- | -------------- | ------------------------------------------------------- |
+| `value`         | `int`               | `0`            | 需要滚动到的目标值。                                    |
+| `direction`     | `up \| down`        | `up`           | 计数方向。                                              |
+| `decimalPlaces` | `number`            | `0`            | 显示的小数位数。                                        |
+| `delay`         | `number`            | `0`            | 开始计数前的延迟（毫秒）。                              |
+| `duration`      | `number`            | `1000`         | 整个动画的持续时间（毫秒）。                            |
 | `transition`    | `TransitionPresets` | `easeOutCubic` | 过渡预设名称（https://vueuse.org/core/useTransition）。 |
 
 #credits

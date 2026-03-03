@@ -13,26 +13,26 @@ tags: [css, tailwind, bento, aceternity-ui]
 
 #### `BentoGridItem`
 
-| Nom du slot | Description                           |
-| ----------- | ------------------------------------- |
-| `title`     | Composant affiché comme titre.        |
+| Nom du slot   | Description                          |
+| ------------- | ------------------------------------ |
+| `title`       | Composant affiché comme titre.       |
 | `description` | Composant affiché comme description. |
-| `icon`      | Composant affiché comme icône.        |
-| `header`    | Composant affiché comme en-tête.      |
+| `icon`        | Composant affiché comme icône.       |
+| `header`      | Composant affiché comme en-tête.     |
 
 #### `BentoGridCard`
 
-| Nom du slot | Description                              |
-| ----------- | ---------------------------------------- |
-| `background`| Composant affiché en arrière-plan.       |
+| Nom du slot  | Description                        |
+| ------------ | ---------------------------------- |
+| `background` | Composant affiché en arrière-plan. |
 
-| Nom de la prop | Type      | Description                          |
-| -------------- | --------- | ------------------------------------ |
-| `name`         | `string`  | Nom ou titre affiché sur la carte.   |
-| `icon`         | `?string` | Icône à afficher sur la carte.       |
-| `description`  | `string`  | Description affichée sur la carte.   |
-| `href`         | `string`  | Lien URL pour l'appel à l'action.    |
-| `cta`          | `string`  | Texte de l'appel à l'action.         |
+| Nom de la prop | Type      | Description                        |
+| -------------- | --------- | ---------------------------------- |
+| `name`         | `string`  | Nom ou titre affiché sur la carte. |
+| `icon`         | `?string` | Icône à afficher sur la carte.     |
+| `description`  | `string`  | Description affichée sur la carte. |
+| `href`         | `string`  | Lien URL pour l'appel à l'action.  |
+| `cta`          | `string`  | Texte de l'appel à l'action.       |
 
 #credits
 

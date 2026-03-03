@@ -11,11 +11,11 @@ tags: [css, tailwind, gallery]
 
 ## API
 
-| Nom de propriété  | Type                | Valeur par défaut | Description                                            |
-| ----------------- | ------------------- | ----------------- | ------------------------------------------------------ |
-| `items`           | `"[{src: string}]"` | `[]`              | Éléments / sources d'images à animer.                  |
-| `containerClass`  | `string`            | `""`              | Classes Tailwind supplémentaires pour styliser le conteneur. |
-| `class`           | `string`            | `""`              | Classes Tailwind supplémentaires pour un style personnalisé. |
+| Nom de propriété | Type                | Valeur par défaut | Description                                                  |
+| ---------------- | ------------------- | ----------------- | ------------------------------------------------------------ |
+| `items`          | `"[{src: string}]"` | `[]`              | Éléments / sources d'images à animer.                        |
+| `containerClass` | `string`            | `""`              | Classes Tailwind supplémentaires pour styliser le conteneur. |
+| `class`          | `string`            | `""`              | Classes Tailwind supplémentaires pour un style personnalisé. |
 
 #credits
 

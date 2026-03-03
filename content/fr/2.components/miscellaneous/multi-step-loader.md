@@ -11,18 +11,18 @@ tags: [css, tailwind, aceternity-ui]
 
 ## API
 
-| Nom de propriété   | Type      | Valeur par défaut | Description                                                                   |
-| ------------------ | --------- | ----------------- | ----------------------------------------------------------------------------- |
-| `loading`          | `boolean` | `false`           | Contrôle la visibilité du loader. À `true`, le loader s'affiche.              |
-| `steps`            | `Step[]`  | `[]`              | Tableau d'objets étapes définissant la séquence de chargement.                |
-| `defaultDuration`  | `number`  | `1500`            | Durée de chaque étape en millisecondes.                                       |
-| `preventClose`     | `boolean` | `false`           | Si `true`, le bouton de fermeture n'est pas affiché.                          |
+| Nom de propriété  | Type      | Valeur par défaut | Description                                                      |
+| ----------------- | --------- | ----------------- | ---------------------------------------------------------------- |
+| `loading`         | `boolean` | `false`           | Contrôle la visibilité du loader. À `true`, le loader s'affiche. |
+| `steps`           | `Step[]`  | `[]`              | Tableau d'objets étapes définissant la séquence de chargement.   |
+| `defaultDuration` | `number`  | `1500`            | Durée de chaque étape en millisecondes.                          |
+| `preventClose`    | `boolean` | `false`           | Si `true`, le bouton de fermeture n'est pas affiché.             |
 
-| Nom de l'événement | Type de charge | Description                                                          |
-| ------------------ | -------------- | -------------------------------------------------------------------- |
-| `state-change`     | `number`       | Émis lorsque l'étape courante change, fournit le nouvel index.       |
-| `complete`         | `void`         | Émis lorsque toutes les étapes sont terminées.                       |
-| `close`            | `void`         | Émis lorsque le loader est fermé via le bouton.                      |
+| Nom de l'événement | Type de charge | Description                                                    |
+| ------------------ | -------------- | -------------------------------------------------------------- |
+| `state-change`     | `number`       | Émis lorsque l'étape courante change, fournit le nouvel index. |
+| `complete`         | `void`         | Émis lorsque toutes les étapes sont terminées.                 |
+| `close`            | `void`         | Émis lorsque le loader est fermé via le bouton.                |
 
 #credits
 

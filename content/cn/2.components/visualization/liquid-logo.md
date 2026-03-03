@@ -11,16 +11,16 @@ tags: [css, tailwind, webgl, paper]
 
 ## API
 
-| 属性名        | 类型     | 默认值 | 描述                                   |
-| ------------- | -------- | ------ | -------------------------------------- |
-| `class`       | `string` | `""`   | 用于自定义样式的额外 CSS 类。          |
-| `imageUrl`    | `string` | `""`   | 应用液态效果的图片 URL。               |
-| `patternScale`| `number` | `2`    | 置换图案的缩放。                       |
-| `refraction`  | `number` | `0.015`| 应用于图像的折射程度。                 |
-| `edge`        | `number` | `0.4`  | 边缘效果的锐利度。                     |
-| `patternBlur` | `number` | `0.005`| 应用于图案的模糊。                     |
-| `liquid`      | `number` | `0.07` | 液态动画的强度。                       |
-| `speed`       | `number` | `0.3`  | 液态效果的动画速度。                   |
+| 属性名         | 类型     | 默认值  | 描述                          |
+| -------------- | -------- | ------- | ----------------------------- |
+| `class`        | `string` | `""`    | 用于自定义样式的额外 CSS 类。 |
+| `imageUrl`     | `string` | `""`    | 应用液态效果的图片 URL。      |
+| `patternScale` | `number` | `2`     | 置换图案的缩放。              |
+| `refraction`   | `number` | `0.015` | 应用于图像的折射程度。        |
+| `edge`         | `number` | `0.4`   | 边缘效果的锐利度。            |
+| `patternBlur`  | `number` | `0.005` | 应用于图案的模糊。            |
+| `liquid`       | `number` | `0.07`  | 液态动画的强度。              |
+| `speed`        | `number` | `0.3`   | 液态效果的动画速度。          |
 
 #credits
 

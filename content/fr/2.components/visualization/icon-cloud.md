@@ -11,10 +11,10 @@ tags: [css, tailwind, magic-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                     |
-| ---------------- | -------- | ----------------- | ----------------------------------------------- |
+| Nom de propriété | Type     | Valeur par défaut | Description                                         |
+| ---------------- | -------- | ----------------- | --------------------------------------------------- |
 | `class`          | `string` | -                 | Classes supplémentaires pour styliser le composant. |
-| `images`         | `array`  | `[]`              | Tableau d'URL d'images à rendre dans le nuage.  |
+| `images`         | `array`  | `[]`              | Tableau d'URL d'images à rendre dans le nuage.      |
 
 #credits
 

@@ -15,28 +15,28 @@ tags: [css, tailwind, aceternity-ui]
 
 Le composant `ContainerScroll` crée un effet de défilement 3D. À mesure que l'utilisateur fait défiler, le contenu interne est transformé par des effets d'échelle, de rotation et de translation.
 
-| Nom de propriété | Type   | Valeur par défaut | Description                                                                     |
-| ---------------- | ------ | ----------------- | ------------------------------------------------------------------------------- |
-| `rotate`         | Number | `0`               | Contrôle la rotation du contenu interne selon le défilement.                   |
-| `scale`          | Number | `1`               | Contrôle la mise à l'échelle appliquée au contenu pendant le défilement.       |
-| `translateY`     | Number | `0`               | Contrôle la translation verticale du titre pendant le défilement.              |
+| Nom de propriété | Type   | Valeur par défaut | Description                                                              |
+| ---------------- | ------ | ----------------- | ------------------------------------------------------------------------ |
+| `rotate`         | Number | `0`               | Contrôle la rotation du contenu interne selon le défilement.             |
+| `scale`          | Number | `1`               | Contrôle la mise à l'échelle appliquée au contenu pendant le défilement. |
+| `translateY`     | Number | `0`               | Contrôle la translation verticale du titre pendant le défilement.        |
 
 ### `ContainerScrollTitle`
 
 Le composant `ContainerScrollTitle` gère la transformation du titre au défilement en appliquant une translation verticale.
 
-| Nom de propriété | Type   | Valeur par défaut | Description                                     |
-| ---------------- | ------ | ----------------- | ----------------------------------------------- |
-| `translate`      | Number | `0`               | Contrôle la translation verticale du titre.     |
+| Nom de propriété | Type   | Valeur par défaut | Description                                 |
+| ---------------- | ------ | ----------------- | ------------------------------------------- |
+| `translate`      | Number | `0`               | Contrôle la translation verticale du titre. |
 
 ### `ContainerScrollCard`
 
 Le composant `ContainerScrollCard` applique des effets d'échelle et de rotation au contenu de la carte lorsque l'utilisateur fait défiler la page.
 
-| Nom de propriété | Type   | Valeur par défaut | Description                                      |
-| ---------------- | ------ | ----------------- | ------------------------------------------------ |
-| `rotate`         | Number | `0`               | Contrôle l'effet de rotation de la carte.        |
-| `scale`          | Number | `1`               | Contrôle l'effet de mise à l'échelle de la carte.|
+| Nom de propriété | Type   | Valeur par défaut | Description                                       |
+| ---------------- | ------ | ----------------- | ------------------------------------------------- |
+| `rotate`         | Number | `0`               | Contrôle l'effet de rotation de la carte.         |
+| `scale`          | Number | `1`               | Contrôle l'effet de mise à l'échelle de la carte. |
 
 ## Variables CSS
 

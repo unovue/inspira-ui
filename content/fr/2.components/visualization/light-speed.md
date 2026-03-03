@@ -11,9 +11,9 @@ tags: [css, tailwind, threejs, codrops]
 
 ## API
 
-| Nom de propriété | Type                         | Valeur par défaut      | Description                                                                    |
-| ---------------- | ---------------------------- | ---------------------- | ------------------------------------------------------------------------------ |
-| `effectOptions`  | `Partial<LightSpeedOptions>` | Voir `defaultOptions`  | Objet de configuration pour personnaliser la route, les lumières, la distorsion, la vitesse et les couleurs. |
+| Nom de propriété | Type                         | Valeur par défaut     | Description                                                                                                  |
+| ---------------- | ---------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------------ |
+| `effectOptions`  | `Partial<LightSpeedOptions>` | Voir `defaultOptions` | Objet de configuration pour personnaliser la route, les lumières, la distorsion, la vitesse et les couleurs. |
 
 #credits
 

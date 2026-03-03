@@ -11,14 +11,14 @@ tags: [css, tailwind, background, canvas]
 
 ## API
 
-| 属性名    | 类型     | 默认值 | 描述                               |
-| --------- | -------- | ------ | ---------------------------------- |
-| `color`   | `string` | `#FFF` | 雪花的十六进制颜色。               |
-| `quantity`| `number` | `100`  | 显示的雪花数量。                   |
-| `speed`   | `number` | `1`    | 雪花下落速度。                     |
-| `maxRadius`| `number`| `3`    | 雪花的最大半径。                   |
-| `minRadius`| `number`| `1`    | 雪花的最小半径。                   |
-| `class`   | `string` | `null` | 应用于容器的额外 CSS 类。          |
+| 属性名      | 类型     | 默认值 | 描述                      |
+| ----------- | -------- | ------ | ------------------------- |
+| `color`     | `string` | `#FFF` | 雪花的十六进制颜色。      |
+| `quantity`  | `number` | `100`  | 显示的雪花数量。          |
+| `speed`     | `number` | `1`    | 雪花下落速度。            |
+| `maxRadius` | `number` | `3`    | 雪花的最大半径。          |
+| `minRadius` | `number` | `1`    | 雪花的最小半径。          |
+| `class`     | `string` | `null` | 应用于容器的额外 CSS 类。 |
 
 #credits
 

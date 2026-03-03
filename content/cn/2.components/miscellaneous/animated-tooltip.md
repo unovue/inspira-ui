@@ -11,9 +11,9 @@ tags: [css, tailwind, aceternity-ui]
 
 ## API
 
-| 属性名 | 类型                                                                    | 默认值 | 描述                                                         |
-| ------ | ----------------------------------------------------------------------- | ------ | ------------------------------------------------------------ |
-| `items`| `Array<{id: number, name: string, designation: string, image: string}>` | `[]`   | 项目数组，每个对象需包含 id、name、designation、image 字段。 |
+| 属性名  | 类型                                                                    | 默认值 | 描述                                                         |
+| ------- | ----------------------------------------------------------------------- | ------ | ------------------------------------------------------------ |
+| `items` | `Array<{id: number, name: string, designation: string, image: string}>` | `[]`   | 项目数组，每个对象需包含 id、name、designation、image 字段。 |
 
 #credits
 

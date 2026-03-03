@@ -13,21 +13,21 @@ tags: [css, tailwind, input, color-picker, uplusion23]
 
 ### Props de ColorPicker
 
-| Nom de propriété        | Type                                            | Valeur par défaut | Description                                           |
-| ----------------------- | ----------------------------------------------- | ----------------- | ----------------------------------------------------- |
-| `value`                 | `string \| HsvaColor \| HslaColor \| RgbaColor` | `undefined`       | Valeur de couleur actuelle dans n'importe quel format pris en charge. |
-| `type`                  | `'hsl' \| 'hsla' \| 'rgb' \| 'rgba' \| 'hex'`   | `'hsl'`           | Format de couleur par défaut affiché dans les champs. |
-| `swatches`              | `HexColor[]`                                    | `[]`              | Tableau d'échantillons de couleur prédéfinis.         |
-| `hideContrastRatio`     | `boolean`                                       | `false`           | Masque la section du rapport de contraste (accessibilité). |
-| `hideDefaultSwatches`   | `boolean`                                       | `false`           | Masque les échantillons de couleur par défaut.        |
-| `class`                 | `string`                                        | `""`              | Classes CSS supplémentaires pour le contenu du popover. |
-| `open`                  | `boolean`                                       | `false`           | Contrôle l'état ouvert/fermé du sélecteur de couleurs. |
+| Nom de propriété      | Type                                            | Valeur par défaut | Description                                                           |
+| --------------------- | ----------------------------------------------- | ----------------- | --------------------------------------------------------------------- |
+| `value`               | `string \| HsvaColor \| HslaColor \| RgbaColor` | `undefined`       | Valeur de couleur actuelle dans n'importe quel format pris en charge. |
+| `type`                | `'hsl' \| 'hsla' \| 'rgb' \| 'rgba' \| 'hex'`   | `'hsl'`           | Format de couleur par défaut affiché dans les champs.                 |
+| `swatches`            | `HexColor[]`                                    | `[]`              | Tableau d'échantillons de couleur prédéfinis.                         |
+| `hideContrastRatio`   | `boolean`                                       | `false`           | Masque la section du rapport de contraste (accessibilité).            |
+| `hideDefaultSwatches` | `boolean`                                       | `false`           | Masque les échantillons de couleur par défaut.                        |
+| `class`               | `string`                                        | `""`              | Classes CSS supplémentaires pour le contenu du popover.               |
+| `open`                | `boolean`                                       | `false`           | Contrôle l'état ouvert/fermé du sélecteur de couleurs.                |
 
 ### Événements de ColorPicker
 
-| Nom de l'événement | Type                                | Description                                   |
-| ------------------ | ----------------------------------- | --------------------------------------------- |
-| `value-change`     | `(value: ColorPickerValue) => void` | Émis lorsque la couleur sélectionnée change.  |
+| Nom de l'événement | Type                                | Description                                        |
+| ------------------ | ----------------------------------- | -------------------------------------------------- |
+| `value-change`     | `(value: ColorPickerValue) => void` | Émis lorsque la couleur sélectionnée change.       |
 | `update:open`      | `(value: boolean) => void`          | Émis lorsque l'état d'ouverture du popover change. |
 
 ### Type ColorPickerValue

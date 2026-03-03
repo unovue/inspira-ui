@@ -11,12 +11,12 @@ tags: [css, tailwind, card, magic-ui]
 
 ## API
 
-| 属性名            | 类型     | 默认值     | 描述                                           |
-| ----------------- | -------- | ---------- | ---------------------------------------------- |
-| `gradientSize`    | `number` | `200`      | 聚光效果的半径（像素）。                       |
-| `gradientColor`   | `string` | `'#262626'`| 聚光渐变的颜色。                               |
-| `gradientOpacity` | `number` | `0.8`      | 聚光渐变效果的不透明度。                       |
-| `slotClass`       | `string` | `undefined`| 应用于包含插槽的父容器的类名。                 |
+| 属性名            | 类型     | 默认值      | 描述                           |
+| ----------------- | -------- | ----------- | ------------------------------ |
+| `gradientSize`    | `number` | `200`       | 聚光效果的半径（像素）。       |
+| `gradientColor`   | `string` | `'#262626'` | 聚光渐变的颜色。               |
+| `gradientOpacity` | `number` | `0.8`       | 聚光渐变效果的不透明度。       |
+| `slotClass`       | `string` | `undefined` | 应用于包含插槽的父容器的类名。 |
 
 #credits
 

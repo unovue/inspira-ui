@@ -11,13 +11,13 @@ tags: [css, tailwind]
 
 ## API
 
-| Nom de propriété  | Type      | Valeur par défaut | Description                                                           |
-| ----------------- | --------- | ----------------- | --------------------------------------------------------------------- |
-| `text`            | `string`  | `""`              | Texte à afficher avec l'effet glitch.                                 |
-| `speed`           | `number`  | `0.5`             | Vitesse de l'animation glitch, en secondes.                           |
-| `enableShadows`   | `boolean` | `true`            | Active les ombres colorées qui renforcent l'effet glitch.             |
-| `enableOnHover`   | `boolean` | `false`           | Si `true`, l'animation glitch ne s'active qu'au survol.               |
-| `class`           | `string`  | `undefined`       | Classes CSS supplémentaires pour la div conteneur.                    |
+| Nom de propriété | Type      | Valeur par défaut | Description                                               |
+| ---------------- | --------- | ----------------- | --------------------------------------------------------- |
+| `text`           | `string`  | `""`              | Texte à afficher avec l'effet glitch.                     |
+| `speed`          | `number`  | `0.5`             | Vitesse de l'animation glitch, en secondes.               |
+| `enableShadows`  | `boolean` | `true`            | Active les ombres colorées qui renforcent l'effet glitch. |
+| `enableOnHover`  | `boolean` | `false`           | Si `true`, l'animation glitch ne s'active qu'au survol.   |
+| `class`          | `string`  | `undefined`       | Classes CSS supplémentaires pour la div conteneur.        |
 
 #credits
 

@@ -11,10 +11,10 @@ tags: [css, tailwind, cursor, magic-ui]
 
 ## API
 
-| 属性名        | 类型           | 默认值           | 描述                                        |
-| ------------- | -------------- | ---------------- | ------------------------------------------- |
-| `cursor`      | `Component`    | `DefaultCursor`  | 用于替换默认光标的自定义光标组件。          |
-| `springConfig`| `SpringConfig` | `See below`      | 弹簧动画的配置对象。                        |
+| 属性名         | 类型           | 默认值          | 描述                               |
+| -------------- | -------------- | --------------- | ---------------------------------- |
+| `cursor`       | `Component`    | `DefaultCursor` | 用于替换默认光标的自定义光标组件。 |
+| `springConfig` | `SpringConfig` | `See below`     | 弹簧动画的配置对象。               |
 
 ### SpringConfig 类型
 

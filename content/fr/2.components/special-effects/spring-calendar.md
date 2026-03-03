@@ -11,16 +11,16 @@ tags: [css, tailwind, motion-v]
 
 ## API
 
-| Nom de propriété | Type                                                                                                           | Valeur par défaut | Description                                                              |
-| ---------------- | -------------------------------------------------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------ |
+| Nom de propriété | Type                                                                                                           | Valeur par défaut | Description                                                                          |
+| ---------------- | -------------------------------------------------------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------ |
 | `calendarData`   | `Array<{ month: string; date: number; day: string; events?: { title: string; day: string; time: string }[] }>` | **—**             | Tableau définissant chaque jour du calendrier et ses éventuels événements. _Requis._ |
-| `initialIndex`   | `number`                                                                                                       | `0`               | Index du jour sélectionné au départ.                                    |
+| `initialIndex`   | `number`                                                                                                       | `0`               | Index du jour sélectionné au départ.                                                 |
 
 ### Événements émis
 
-| Nom de l'événement      | Charge utile | Description                                                        |
-| ----------------------- | ------------ | ------------------------------------------------------------------ |
-| `update:activeIndex`    | `number`     | Déclenché lorsqu'un jour est cliqué, en émettant le nouvel index actif. |
+| Nom de l'événement   | Charge utile | Description                                                             |
+| -------------------- | ------------ | ----------------------------------------------------------------------- |
+| `update:activeIndex` | `number`     | Déclenché lorsqu'un jour est cliqué, en émettant le nouvel index actif. |
 
 #credits
 

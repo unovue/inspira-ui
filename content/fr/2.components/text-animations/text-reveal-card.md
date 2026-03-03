@@ -11,17 +11,17 @@ tags: [css, tailwind, aceternity-ui]
 
 ## API
 
-| Nom de propriété | Type     | Description                                                      |
-| ---------------- | -------- | ---------------------------------------------------------------- |
-| class            | `String` | Classes supplémentaires à ajouter à la carte.                    |
-| starsCount       | `Number` | Contrôle le nombre d'étoiles générées.                          |
+| Nom de propriété | Type     | Description                                                            |
+| ---------------- | -------- | ---------------------------------------------------------------------- |
+| class            | `String` | Classes supplémentaires à ajouter à la carte.                          |
+| starsCount       | `Number` | Contrôle le nombre d'étoiles générées.                                 |
 | starsClass       | `String` | Classes supplémentaires à ajouter aux étoiles flottant sur le contenu. |
 
-| Nom du slot | Description                                                |
-| ----------- | ---------------------------------------------------------- |
-| header      | `String`                                                   |
+| Nom du slot | Description                                                   |
+| ----------- | ------------------------------------------------------------- |
+| header      | `String`                                                      |
 | text        | Texte affiché par défaut lorsque la carte n'est pas survolée. |
-| revealText  | Texte révélé au survol de la carte.                        |
+| revealText  | Texte révélé au survol de la carte.                           |
 
 #credits
 

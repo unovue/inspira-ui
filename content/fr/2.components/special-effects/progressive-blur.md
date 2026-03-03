@@ -12,12 +12,12 @@ badge: New
 
 ## API
 
-| Nom de propriété  | Type                                     | Valeur par défaut | Description                                                      |
-| ----------------- | ---------------------------------------- | ----------------- | ---------------------------------------------------------------- |
-| `direction`       | `"top" \| "right" \| "bottom" \| "left"` | `"bottom"`        | Direction dans laquelle le flou augmente progressivement.       |
-| `blurLayers`      | `number`                                 | `8`               | Nombre de couches de flou utilisées pour créer l'effet progressif. |
-| `blurIntensity`   | `number`                                 | `0.25`            | Multiplicateur d'intensité du flou par couche (en pixels).       |
-| `class`           | `string`                                 | `""`              | Classe optionnelle appliquée au conteneur englobant.             |
+| Nom de propriété | Type                                     | Valeur par défaut | Description                                                        |
+| ---------------- | ---------------------------------------- | ----------------- | ------------------------------------------------------------------ |
+| `direction`      | `"top" \| "right" \| "bottom" \| "left"` | `"bottom"`        | Direction dans laquelle le flou augmente progressivement.          |
+| `blurLayers`     | `number`                                 | `8`               | Nombre de couches de flou utilisées pour créer l'effet progressif. |
+| `blurIntensity`  | `number`                                 | `0.25`            | Multiplicateur d'intensité du flou par couche (en pixels).         |
+| `class`          | `string`                                 | `""`              | Classe optionnelle appliquée au conteneur englobant.               |
 
 > Ce composant accepte aussi toutes les props `motion-v` valides pour un `div`.
 

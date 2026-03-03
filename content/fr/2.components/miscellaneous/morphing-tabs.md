@@ -11,13 +11,13 @@ tags: [css, tailwind]
 
 ## API
 
-| Nom de propriété      | Type       | Valeur par défaut | Description                                       |
-| --------------------- | ---------- | ----------------- | ------------------------------------------------- |
-| `class`               | `string`   | `""`              | Classes supplémentaires pour styliser le composant. |
-| `tabs`                | `string[]` | `[]`              | Onglets.                                          |
-| `activeTab`           | `string`   | `""`              | Onglet actif actuel.                              |
-| `margin`              | `number`   | `20`              | Marge gauche et droite de l'onglet actif.         |
-| `blurStdDeviation`    | `number`   | `6`               | Valeur `stdDeviation` du flou SVG, utile pour arrondir l'onglet. |
+| Nom de propriété   | Type       | Valeur par défaut | Description                                                      |
+| ------------------ | ---------- | ----------------- | ---------------------------------------------------------------- |
+| `class`            | `string`   | `""`              | Classes supplémentaires pour styliser le composant.              |
+| `tabs`             | `string[]` | `[]`              | Onglets.                                                         |
+| `activeTab`        | `string`   | `""`              | Onglet actif actuel.                                             |
+| `margin`           | `number`   | `20`              | Marge gauche et droite de l'onglet actif.                        |
+| `blurStdDeviation` | `number`   | `6`               | Valeur `stdDeviation` du flou SVG, utile pour arrondir l'onglet. |
 
 #credits
 

@@ -11,11 +11,11 @@ tags: [css, tailwind]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                                   |
-| ---------------- | -------- | ----------------- | ------------------------------------------------------------- |
-| `text`           | `string` | Requise           | Texte à afficher avec l'effet de survol.                      |
-| `duration`       | `number` | `200`             | Durée de l'animation de transition du masque, en secondes.    |
-| `strokeWidth`    | `number` | `0.75`            | Largeur du contour du texte.                                  |
-| `opacity`        | `number` | `null`            | Opacité du texte.                                             |
+| Nom de propriété | Type     | Valeur par défaut | Description                                                |
+| ---------------- | -------- | ----------------- | ---------------------------------------------------------- |
+| `text`           | `string` | Requise           | Texte à afficher avec l'effet de survol.                   |
+| `duration`       | `number` | `200`             | Durée de l'animation de transition du masque, en secondes. |
+| `strokeWidth`    | `number` | `0.75`            | Largeur du contour du texte.                               |
+| `opacity`        | `number` | `null`            | Opacité du texte.                                          |
 
 ::

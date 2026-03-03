@@ -11,11 +11,11 @@ tags: [css, tailwind, aceternity-ui]
 
 ## API
 
-| Nom de propriété | Type     | Description                                                                                |
-| ---------------- | -------- | ------------------------------------------------------------------------------------------ |
-| `words`          | `Array`  | Tableau de mots à afficher et animer.                                                      |
-| `duration`       | `number` | Durée (en millisecondes) d'affichage de chaque mot avant de passer au suivant.             |
-| `class`          | `string` | Classes CSS supplémentaires à appliquer au composant.                                      |
+| Nom de propriété | Type     | Description                                                                    |
+| ---------------- | -------- | ------------------------------------------------------------------------------ |
+| `words`          | `Array`  | Tableau de mots à afficher et animer.                                          |
+| `duration`       | `number` | Durée (en millisecondes) d'affichage de chaque mot avant de passer au suivant. |
+| `class`          | `string` | Classes CSS supplémentaires à appliquer au composant.                          |
 
 #credits
 

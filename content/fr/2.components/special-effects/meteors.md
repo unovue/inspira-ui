@@ -11,9 +11,9 @@ tags: [css, tailwind, aceternity-ui]
 
 ## API
 
-| Nom de propriété | Type     | Valeur par défaut | Description                                                     |
-| ---------------- | -------- | ----------------- | --------------------------------------------------------------- |
-| `count`          | `number` | `20`              | Nombre de météores affichés dans l'animation.                   |
+| Nom de propriété | Type     | Valeur par défaut | Description                                                              |
+| ---------------- | -------- | ----------------- | ------------------------------------------------------------------------ |
+| `count`          | `number` | `20`              | Nombre de météores affichés dans l'animation.                            |
 | `class`          | `string` | `""`              | Classes CSS supplémentaires à appliquer pour personnaliser les météores. |
 
 #instructions
