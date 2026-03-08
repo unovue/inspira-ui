@@ -3,7 +3,6 @@ title: Encrypted Text
 description: A text reveal effect that starts as scrambled characters and progressively decrypts into the final message when it enters the viewport.
 category: Text Animation
 tags: [css, tailwind, motion-v, typography, animation, text]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="EncryptedTextDemo.vue" config="EncryptedTextConfig" componentId="encrypted-text" :componentFiles='["EncryptedText.vue"]'}

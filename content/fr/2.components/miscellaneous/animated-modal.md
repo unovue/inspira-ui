@@ -3,7 +3,6 @@ title: Animated Modal
 description: Une fenêtre modale avec une animation 3D et un arrière-plan flouté.
 category: Miscellaneous
 tags: [css, tailwind, modal, motion, aceternity-ui]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="AnimatedModalDemo.vue" config="AnimatedModalConfig" componentId="animated-modal" :componentFiles='["AnimatedModal.vue", "AnimatedModalBody.vue", "AnimatedModalContent.vue", "AnimatedModalFooter.vue", "AnimatedModalTrigger.vue", "AnimatedModalContext.ts", "useAnimatedModal.ts", "index.ts"]' dependencies="motion-v @vueuse/core"}

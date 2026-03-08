@@ -3,7 +3,6 @@ title: Shader de tramage
 description: Effet de tramage ordonné en temps réel pour les images, idéal pour le pixel art et les esthétiques rétro.
 category: Special Effects
 tags: [tailwind, background, card, aceternity-ui]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="DitherShaderDemo.vue" config="DitherShaderConfig" componentId="dither-shader" :componentFiles='["DitherShader.vue"]'}

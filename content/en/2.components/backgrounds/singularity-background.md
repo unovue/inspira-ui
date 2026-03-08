@@ -3,7 +3,6 @@ title: Singularity Background
 description: A shader-based background.
 category: Background
 tags: [css, tailwind, background, shader-toy, webgl, ogl]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="SingularityBackgroundDemo.vue" config="SingularityBackgroundConfig" componentId="bg-singularity" :componentFiles='["SingularityBackground.vue"]'}

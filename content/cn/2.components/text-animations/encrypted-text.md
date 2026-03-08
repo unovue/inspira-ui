@@ -3,7 +3,6 @@ title: 加密文字
 description: 当进入视口时由乱码字符开始并逐步解密为最终内容的文字揭示效果。
 category: Text Animation
 tags: [css, tailwind, motion-v, typography, animation, text]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="EncryptedTextDemo.vue" config="EncryptedTextConfig" componentId="encrypted-text" :componentFiles='["EncryptedText.vue"]'}

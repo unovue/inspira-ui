@@ -3,7 +3,6 @@ title: Fond singularité
 description: Un fond basé sur un shader.
 category: Background
 tags: [css, tailwind, background, shader-toy, webgl, ogl]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="SingularityBackgroundDemo.vue" config="SingularityBackgroundConfig" componentId="bg-singularity" :componentFiles='["SingularityBackground.vue"]'}

@@ -3,7 +3,6 @@ title: 抖动着色器
 description: 用于图像的实时有序抖动效果，非常适合像素艺术和复古风格。
 category: Special Effects
 tags: [tailwind, background, card, aceternity-ui]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="DitherShaderDemo.vue" config="DitherShaderConfig" componentId="dither-shader" :componentFiles='["DitherShader.vue"]'}

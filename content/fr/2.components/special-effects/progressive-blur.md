@@ -3,7 +3,6 @@ title: Flou progressif
 description: Un effet de flou d'arrière-plan en couches qui augmente progressivement l'intensité dans une direction choisie, parfait pour la profondeur, la mise au point et la séparation visuelle.
 category: Special Effects
 tags: [css, tailwind, motion-v, blur, backdrop-filter]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="ProgressiveBlurDemo.vue" config="ProgressiveBlurConfig" componentId="progressive-blur" :componentFiles='["ProgressiveBlur.vue"]'}

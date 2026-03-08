@@ -3,7 +3,6 @@ title: Dither Shader
 description: A real-time ordered dithering effect for images, perfect for pixel art and retro aesthetics.
 category: Special Effects
 tags: [tailwind, background, card, aceternity-ui]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="DitherShaderDemo.vue" config="DitherShaderConfig" componentId="dither-shader" :componentFiles='["DitherShader.vue"]'}

@@ -3,7 +3,6 @@ title: Progressive Blur
 description: A layered backdrop blur effect that gradually increases intensity in a chosen direction, perfect for depth, focus, and visual separation.
 category: Special Effects
 tags: [css, tailwind, motion-v, blur, backdrop-filter]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="ProgressiveBlurDemo.vue" config="ProgressiveBlurConfig" componentId="progressive-blur" :componentFiles='["ProgressiveBlur.vue"]'}

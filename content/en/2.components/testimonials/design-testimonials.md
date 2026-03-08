@@ -3,7 +3,6 @@ title: Design Testimonials
 description: A premium, design-forward testimonial section featuring cinematic typography, magnetic parallax, word-by-word animations, and auto-cycling navigation.
 category: Testimonials
 tags: [css, tailwind, motion-v, testimonial, animation]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="DesignTestimonialsDemo.vue" config="DesignTestimonialsConfig" componentId="design-testimonials" :componentFiles='["DesignTestimonials.vue"]'}

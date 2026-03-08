@@ -3,7 +3,6 @@ title: Animated Modal
 description: 带 3D 入场动画与背景模糊效果的弹窗组件。
 category: Miscellaneous
 tags: [css, tailwind, modal, motion, aceternity-ui]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="AnimatedModalDemo.vue" config="AnimatedModalConfig" componentId="animated-modal" :componentFiles='["AnimatedModal.vue", "AnimatedModalBody.vue", "AnimatedModalContent.vue", "AnimatedModalFooter.vue", "AnimatedModalTrigger.vue", "AnimatedModalContext.ts", "useAnimatedModal.ts", "index.ts"]' dependencies="motion-v @vueuse/core"}

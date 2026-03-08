@@ -3,7 +3,6 @@ title: 雷暴背景
 description: 受云层雷暴启发的基于着色器的背景。
 category: Background
 tags: [css, tailwind, background, shader-toy, webgl, ogl]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="ThunderstormBackgroundDemo.vue" config="ThunderstormBackgroundConfig" componentId="bg-thunderstorm" :componentFiles='["ThunderstormBackground.vue"]'}

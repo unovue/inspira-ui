@@ -3,7 +3,6 @@ title: Fond orageux
 description: Un fond basé sur un shader, inspiré d'un orage dans les nuages.
 category: Background
 tags: [css, tailwind, background, shader-toy, webgl, ogl]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="ThunderstormBackgroundDemo.vue" config="ThunderstormBackgroundConfig" componentId="bg-thunderstorm" :componentFiles='["ThunderstormBackground.vue"]'}

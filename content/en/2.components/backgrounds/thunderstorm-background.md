@@ -3,7 +3,6 @@ title: Thunderstorm Background
 description: A shader-based background inspired by thunderstorm in clouds.
 category: Background
 tags: [css, tailwind, background, shader-toy, webgl, ogl]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="ThunderstormBackgroundDemo.vue" config="ThunderstormBackgroundConfig" componentId="bg-thunderstorm" :componentFiles='["ThunderstormBackground.vue"]'}

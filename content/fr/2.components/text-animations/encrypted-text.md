@@ -3,7 +3,6 @@ title: Texte chiffré
 description: Un effet de révélation du texte qui commence par des caractères brouillés et se déchiffre progressivement en message final lorsqu'il entre dans la fenêtre d'affichage.
 category: Text Animation
 tags: [css, tailwind, motion-v, typography, animation, text]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="EncryptedTextDemo.vue" config="EncryptedTextConfig" componentId="encrypted-text" :componentFiles='["EncryptedText.vue"]'}

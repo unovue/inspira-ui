@@ -3,7 +3,6 @@ title: 渐进模糊
 description: 一种分层的背景模糊效果，会在指定方向上逐渐增强强度，适合营造景深、聚焦与视觉分隔。
 category: Special Effects
 tags: [css, tailwind, motion-v, blur, backdrop-filter]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="ProgressiveBlurDemo.vue" config="ProgressiveBlurConfig" componentId="progressive-blur" :componentFiles='["ProgressiveBlur.vue"]'}
