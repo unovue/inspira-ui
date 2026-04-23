@@ -67,7 +67,7 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  tracingBeamRef.value?.removeEventListener("scroll", updateScrollYProgress);
+  window.removeEventListener("scroll", updateScrollYProgress);
   window.removeEventListener("resize", updateScrollYProgress);
 });
 
