@@ -9,7 +9,7 @@ const links = [
   },
   {
     icon: "tabler:brand-x",
-    title: "X (Formely Twitter)",
+    title: "X (Formerly Twitter)",
     description: "Follow for updates and sneak peeks.",
     to: `https://x.com/rahulv_dev`,
     target: "_blank",
