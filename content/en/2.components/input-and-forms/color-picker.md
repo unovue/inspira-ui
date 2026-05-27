@@ -21,7 +21,7 @@ tags: [css, tailwind, input, color-picker, uplusion23]
 | `hideContrastRatio`   | `boolean`                                       | `false`     | Hide the accessibility contrast ratio section     |
 | `hideDefaultSwatches` | `boolean`                                       | `false`     | Hide the default color swatches                   |
 | `class`               | `string`                                        | `""`        | Additional CSS classes for the popover content    |
-| `open`                | `boolean`                                       | `false`     | Control the open/closed state of the color picker |
+| `open`                | `boolean`                                       | `false`     | Control the popover state with `v-model:open`     |
 
 ### ColorPicker Events
 
@@ -40,6 +40,48 @@ interface ColorPickerValue {
   rgb: RgbaColor; // RGB color object with r, g, b, a properties
   rgba: RgbaColor; // RGBA color object with r, g, b, a properties
 }
+```
+
+### Controlled Usage
+
+Use `v-model:open` when the trigger needs to reflect or manage the popover state. The picker accepts hex, HSVA, HSLA, and RGBA inputs through `value`, then emits a normalized `ColorPickerValue` object from `value-change`.
+
+```vue
+<script setup lang="ts">
+import type { ColorPickerValue } from "@/components/content/inspira/ui/color-picker";
+import { ref } from "vue";
+
+const isOpen = ref(false);
+const color = ref<ColorPickerValue>({
+  hex: "#A35fFF",
+  hsl: { h: 265.5, s: 100, l: 67, a: 1 },
+  hsla: { h: 265.5, s: 100, l: 67, a: 1 },
+  rgb: { r: 163, g: 95, b: 255, a: 1 },
+  rgba: { r: 163, g: 95, b: 255, a: 1 },
+});
+
+function setColor(newColor: ColorPickerValue) {
+  color.value = newColor;
+}
+</script>
+
+<template>
+  <ColorPicker
+    :value="color.hsl"
+    v-model:open="isOpen"
+    type="hsla"
+    :swatches="['#AEDEAE', '#FFD3B6', '#FFB6B9']"
+    @value-change="setColor"
+  >
+    <button
+      type="button"
+      aria-haspopup="dialog"
+      :aria-expanded="isOpen"
+    >
+      Pick Color
+    </button>
+  </ColorPicker>
+</template>
 ```
 
 #credits
