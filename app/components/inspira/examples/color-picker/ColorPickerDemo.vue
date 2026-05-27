@@ -9,6 +9,7 @@ const color = ref<ColorPickerValue>({
   rgb: { r: 163, g: 95, b: 255, a: 1 },
   rgba: { r: 163, g: 95, b: 255, a: 1 },
 });
+const isOpen = ref(false);
 
 function setColor(newColor: ColorPickerValue) {
   color.value = newColor;
@@ -20,11 +21,16 @@ function setColor(newColor: ColorPickerValue) {
     <div class="flex items-center justify-center">
       <ColorPicker
         :value="color.hsl"
+        v-model:open="isOpen"
         type="hsla"
         :swatches="['#AEDEAE', '#FFD3B6', '#FFB6B9', '#FFC0CB', '#FFD1DC']"
         @value-change="setColor"
       >
         <button
+          type="button"
+          aria-haspopup="dialog"
+          :aria-expanded="isOpen"
+          aria-label="Open color picker"
           class="ring-offset-background focus-visible:ring-ring border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-10 items-center justify-center gap-2 rounded-md border px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
         >
           <div
