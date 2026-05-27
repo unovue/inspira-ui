@@ -30,7 +30,7 @@ function setColor(newColor: ColorPickerValue) {
           type="button"
           aria-haspopup="dialog"
           :aria-expanded="isOpen"
-          aria-label="Open color picker"
+          :aria-label="isOpen ? 'Close color picker' : 'Open color picker'"
           class="ring-offset-background focus-visible:ring-ring border-input bg-background hover:bg-accent hover:text-accent-foreground inline-flex h-10 items-center justify-center gap-2 rounded-md border px-4 py-2 text-sm font-medium whitespace-nowrap transition-colors focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50"
         >
           <div
