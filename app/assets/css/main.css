@@ -47,7 +47,7 @@ html {
 }
 
 :root {
-  --ui-container: min(90rem, 100%);
+  --ui-container: min(100rem, 100%);
 
   --background: var(--ui-bg);
   --foreground: var(--ui-text);
@@ -85,7 +85,7 @@ html {
 }
 
 .form-field {
-  @apply bg-muted/40 flex min-h-14 items-center justify-between gap-4 rounded-lg px-4 py-2 max-sm:flex-col;
+  @apply bg-muted/50 flex min-h-14 items-center justify-between gap-4 px-4 py-2 max-sm:flex-col;
 }
 
 @utility pattern-background-l1 {

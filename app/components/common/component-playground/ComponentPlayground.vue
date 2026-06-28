@@ -1,12 +1,53 @@
 <script setup lang="ts">
 const open = ref(false);
 const refreshKey = ref(0);
+const configBody = ref<HTMLElement | null>(null);
 
 const isDesktop = useMediaQuery("(min-width: 768px)");
+const labelSegmentSeparator = /\./g;
+const labelCamelBoundary = /([a-z0-9])([A-Z])/g;
+const labelAcronymBoundary = /([A-Z])([A-Z][a-z])/g;
+const labelWordSeparator = /[_-]/g;
+const labelWhitespace = /\s+/g;
+const labelFirstCharacter = /^./;
 
 function refreshPreview() {
   refreshKey.value += 1;
 }
+
+function humanizeConfigLabel(value: string) {
+  return value
+    .replace(labelSegmentSeparator, " / ")
+    .replace(labelCamelBoundary, "$1 $2")
+    .replace(labelAcronymBoundary, "$1 $2")
+    .replace(labelWordSeparator, " ")
+    .replace(labelWhitespace, " ")
+    .trim()
+    .replace(labelFirstCharacter, (char) => char.toUpperCase());
+}
+
+function humanizeConfigLabels() {
+  const root = configBody.value;
+  if (!root) return;
+
+  root.querySelectorAll<HTMLLabelElement>(".form-field label").forEach((label) => {
+    label.dataset.rawLabel ||= label.textContent?.trim() ?? "";
+    label.textContent = humanizeConfigLabel(label.dataset.rawLabel);
+  });
+}
+
+watch(open, async (isOpen) => {
+  if (!isOpen) return;
+
+  await nextTick();
+  humanizeConfigLabels();
+});
+
+onUpdated(() => {
+  if (!open.value) return;
+
+  nextTick(humanizeConfigLabels);
+});
 </script>
 
 <template>
@@ -15,7 +56,7 @@ function refreshPreview() {
       class="bg-elevated/70 ring-default/70 relative w-full overflow-hidden rounded-[2.5rem] p-2 shadow-[0_28px_90px_-58px_rgba(15,23,42,0.62)] ring dark:bg-white/[0.035] dark:shadow-none"
     >
       <div
-        class="bg-default ring-default/70 relative min-h-[22rem] overflow-hidden rounded-[calc(2.5rem-0.5rem)] ring sm:min-h-[24rem]"
+        class="bg-default ring-default/70 relative min-h-88 overflow-hidden rounded-4xl ring sm:min-h-96"
       >
         <div
           aria-hidden="true"
@@ -38,7 +79,7 @@ function refreshPreview() {
             v-if="$slots.config"
             icon="i-lucide-sliders-horizontal"
             color="neutral"
-            variant="solid"
+            variant="subtle"
             size="sm"
             aria-label="Customize props"
             title="Customize props"
@@ -49,8 +90,8 @@ function refreshPreview() {
         </div>
 
         <div
-          :key="refreshKey"
-          class="relative flex min-h-[22rem] items-center justify-center p-6 sm:min-h-[24rem] sm:p-10"
+          :key="`stageRefreshKey${refreshKey}`"
+          class="relative flex min-h-88 items-center justify-center p-6 sm:min-h-96 sm:p-10"
         >
           <slot name="component" />
         </div>
@@ -63,34 +104,127 @@ function refreshPreview() {
       :direction="isDesktop ? 'right' : 'bottom'"
       :overlay="!isDesktop"
       :dismissible="!isDesktop"
-      :handle="false"
+      :handle="!isDesktop"
       :modal="!isDesktop"
       :inset="isDesktop"
       :ui="{
-        header: 'flex items-center justify-between border-b border-muted pb-4',
-        content: 'bg-default/95 md:min-w-112',
-        body: 'p-0',
+        content:
+          'bg-default/90 ring-default/80 shadow-[0_32px_120px_-56px_rgba(15,23,42,0.72)] backdrop-blur-lg md:w-108 md:rounded-[1.75rem]',
+        container: 'h-full gap-0 overflow-hidden p-0',
+        header: 'border-muted/70 shrink-0 border-b px-5 py-4',
+        body: 'min-h-0 flex-1 overflow-y-auto',
       }"
     >
       <template #header>
-        <div class="flex flex-col gap-1">
-          <h2 class="text-highlighted font-semibold">Customize props</h2>
-          <p class="text-muted text-sm">Adjust values for this preview.</p>
-        </div>
+        <div class="flex items-start justify-between gap-4">
+          <div class="min-w-0 pt-0.5">
+            <div class="text-muted mb-1 text-[0.65rem] font-medium tracking-[0.18em] uppercase">
+              Playground
+            </div>
+            <h2 class="text-highlighted text-base leading-tight font-semibold">Fine tune</h2>
+            <p class="text-muted mt-1 text-xs">Every change updates the preview.</p>
+          </div>
 
-        <UButton
-          color="neutral"
-          variant="ghost"
-          icon="i-lucide-x"
-          aria-label="Close customize panel"
-          @click="open = false"
-        />
+          <UButton
+            color="neutral"
+            variant="ghost"
+            icon="i-lucide-x"
+            aria-label="Close customize panel"
+            class="grid size-9 shrink-0 place-items-center rounded-full p-0 transition-transform duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.96]"
+            :ui="{ leadingIcon: 'size-4 shrink-0' }"
+            @click="open = false"
+          />
+        </div>
       </template>
       <template #body>
-        <div class="grid grid-cols-1 gap-4 overflow-y-auto p-4">
+        <div
+          ref="configBody"
+          class="config-control-stack"
+        >
           <slot name="config" />
         </div>
       </template>
     </UDrawer>
   </div>
 </template>
+
+<style scoped>
+.config-control-stack :deep(.form-field) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(7.5rem, auto);
+  align-items: center;
+  min-height: 3.75rem;
+  gap: 1rem;
+  border-bottom: 1px solid color-mix(in oklab, var(--ui-border-muted) 78%, transparent);
+  padding: 0.75rem 1.25rem;
+  transition: background-color 180ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.config-control-stack :deep(.form-field:first-child) {
+  border-top: 0;
+}
+
+.config-control-stack :deep(.form-field:last-child) {
+  border-bottom: 0;
+}
+
+.config-control-stack :deep(.form-field > div) {
+  min-width: 0;
+}
+
+.config-control-stack :deep(.form-field > div:last-child) {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+
+.config-control-stack :deep(.form-field label) {
+  color: var(--ui-text);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1.35;
+}
+
+.config-control-stack :deep(.form-field input) {
+  font-size: 0.8125rem;
+}
+
+.config-control-stack :deep(.form-field > div:last-child > .relative.inline-flex),
+.config-control-stack :deep(.form-field > div:last-child > button) {
+  max-width: min(100%, 13rem);
+}
+
+.config-control-stack :deep(.form-field > div:last-child > .relative.inline-flex) {
+  border-radius: 9999px;
+}
+
+.config-control-stack :deep(.form-field > div:last-child > .relative.inline-flex input),
+.config-control-stack :deep(.form-field > div:last-child > button) {
+  min-height: 2.25rem;
+  border-radius: 9999px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .config-control-stack :deep(.form-field:hover) {
+    background-color: color-mix(in oklab, var(--ui-bg-elevated) 42%, transparent);
+  }
+}
+
+@media (max-width: 480px) {
+  .config-control-stack :deep(.form-field) {
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .config-control-stack :deep(.form-field > div:last-child) {
+    justify-content: stretch;
+  }
+
+  .config-control-stack :deep(.form-field > div:last-child > .relative.inline-flex),
+  .config-control-stack :deep(.form-field > div:last-child > button) {
+    width: 100%;
+    max-width: none;
+  }
+}
+</style>
