@@ -96,7 +96,7 @@ const filteredComponents = computed(() => {
       class="pointer-events-none absolute -top-12 left-1/2 h-56 w-screen -translate-x-1/2 bg-radial from-[#d9c49b]/16 via-transparent to-transparent blur-3xl dark:from-[#d6b16a]/8"
     />
 
-    <div class="relative space-y-5">
+    <div class="relative space-y-8">
       <div
         class="rounded-4xl bg-[#d5dfe6] p-1.5 shadow-[0_18px_60px_-48px_rgba(15,23,42,0.5)] ring-1 ring-[#b9c7d0] dark:bg-white/[0.035] dark:shadow-none dark:ring-white/10"
       >
