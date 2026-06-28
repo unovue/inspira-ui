@@ -35,7 +35,7 @@ const modelValue = ref(tabs[0]?.value ?? "");
 
 <template>
   <div
-    class="relative mx-auto flex h-[20rem] w-full max-w-5xl flex-col items-start justify-start [perspective:1000px] md:h-[40rem]"
+    class="relative mx-auto flex h-80 w-full max-w-5xl flex-col items-start justify-start perspective-[1000px] md:h-160"
   >
     <AnimatedTabs
       v-model="modelValue"

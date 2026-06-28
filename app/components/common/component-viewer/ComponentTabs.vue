@@ -21,32 +21,48 @@ const {
   config,
 } = defineProps<Props>();
 
-const items = ref<TabsItem[]>([
-  {
-    label: "Preview",
-    icon: "tabler:eye",
-    slot: "preview",
-  },
-  {
-    label: "Code",
-    icon: "tabler:code",
-    slot: "code",
-  },
-]);
+const activeTab = ref("code");
+const activeInstallationTab = ref("cli");
+const isDemoCodeLoading = ref(false);
+const isComponentCodeLoading = ref(false);
 
-if (showInstallation) {
-  items.value.push({
-    label: "Installation",
-    icon: "si:lightning-line",
-    slot: "installation",
+const items = computed<TabsItem[]>(() => {
+  const tabs: TabsItem[] = [
+    {
+      label: "Code",
+      icon: "tabler:code",
+      slot: "code",
+      value: "code",
+    },
+  ];
+
+  if (showInstallation) {
+    tabs.push({
+      label: "Install",
+      icon: "si:lightning-line",
+      slot: "installation",
+      value: "install",
+    });
+  }
+
+  tabs.push({
+    label: "API",
+    icon: "tabler:list-details",
+    slot: "apiTab",
+    value: "api",
   });
 
-  items.value.push({
-    label: "Credits",
-    icon: "tabler:heart-handshake",
-    slot: "creditsTab",
-  });
-}
+  if (showInstallation) {
+    tabs.push({
+      label: "Credits",
+      icon: "tabler:heart-handshake",
+      slot: "creditsTab",
+      value: "credits",
+    });
+  }
+
+  return tabs;
+});
 
 const demoCode = ref<string>("");
 const componentCode = ref<string>("");
@@ -57,15 +73,21 @@ const installationItems = ref<TabsItem[]>([
     label: "CLI",
     icon: "tabler:terminal",
     slot: "cli",
+    value: "cli",
   },
   {
-    label: "Manually",
+    label: "Manual",
     icon: "tabler:notes",
     slot: "manual",
+    value: "manual",
   },
 ]);
 
 async function loadDemoCode() {
+  if (demoCode.value || isDemoCodeLoading.value) return;
+
+  isDemoCodeLoading.value = true;
+
   const codeGetter = getComponentCode({
     fileName: demoFile,
     id: componentId,
@@ -87,10 +109,14 @@ ${demoCode.value}
 ::
     `;
   }
+
+  isDemoCodeLoading.value = false;
 }
 
 async function loadComponentCodes() {
-  if (!componentFiles) return;
+  if (!componentFiles.length || componentCode.value || isComponentCodeLoading.value) return;
+
+  isComponentCodeLoading.value = true;
 
   const promises = componentFiles.map(async (fileName) => {
     const codeGetter = getComponentCode({
@@ -101,69 +127,100 @@ async function loadComponentCodes() {
 
     if (codeGetter) {
       const code = (await codeGetter()) as unknown as string;
-      componentsList.value.push({
+      return {
         fileName,
         ext: fileName.split(".").at(-1)!,
         code,
-      });
+      };
     }
   });
 
-  // Wait for all async operations to complete
-  await Promise.all(promises);
+  componentsList.value = (await Promise.all(promises)).filter((item) => !!item);
 
   componentCode.value = `
 ::code-group
 ${componentsList.value.map((item) => `\`\`\`${item.ext} [${item.fileName}]\n${item.code}\n\`\`\`\n`).join("\n")}
 ::`;
+
+  isComponentCodeLoading.value = false;
 }
 
-onMounted(() => {
-  loadDemoCode();
-  loadComponentCodes();
+watch(
+  activeTab,
+  (tab) => {
+    if (tab === "code") {
+      loadDemoCode();
+    }
+
+    if (tab === "install" && activeInstallationTab.value === "manual") {
+      loadComponentCodes();
+    }
+  },
+  { immediate: true },
+);
+
+watch(activeInstallationTab, (tab) => {
+  if (activeTab.value === "install" && tab === "manual") {
+    loadComponentCodes();
+  }
 });
 </script>
 
 <template>
+  <ClientOnly>
+    <component :is="config" />
+  </ClientOnly>
+
   <UTabs
+    v-model="activeTab"
     size="lg"
     variant="pill"
+    color="neutral"
     :items="items"
-    class="min-h-[60vh] w-full"
+    class="mt-5 w-full"
     :ui="{
-      list: 'w-fit max-sm:w-full bg-transparent gap-4 self-start overflow-auto',
-      trigger: 'w-fit min-w-fit outline outline-neutral-200 dark:outline-neutral-800',
-      content: 'py-4',
+      list: 'w-fit max-w-full gap-1 overflow-auto rounded-full bg-elevated/70 p-1 ring ring-default/70',
+      indicator: 'rounded-full',
+      trigger:
+        'h-10 min-w-fit rounded-full px-4 text-sm transition-[color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.98]',
+      content: 'pt-6 focus:outline-none',
     }"
-    :unmount-on-hide="false"
   >
-    <template #preview>
-      <ClientOnly>
-        <component :is="config" />
-      </ClientOnly>
-
-      <slot
-        name="api"
-        class="my-4"
-      />
-    </template>
-
     <template #code>
       <MDC
+        v-if="demoCode"
         :key="demoCode"
         :value="demoCode"
-        class="-mt-12"
       />
+      <div
+        v-else
+        class="text-muted bg-elevated/35 ring-default/70 flex min-h-40 items-center justify-center gap-3 rounded-3xl ring"
+      >
+        <UIcon
+          name="line-md:loading-twotone-loop"
+          class="size-5"
+        />
+        <span>Loading code</span>
+      </div>
     </template>
 
     <template
       v-if="showInstallation"
       #installation
     >
-      <div class="mb-4 text-lg italic">
-        Install component by either CLI or Manually copy-pasting.
-      </div>
-      <UTabs :items="installationItems">
+      <UTabs
+        v-model="activeInstallationTab"
+        :items="installationItems"
+        variant="link"
+        color="neutral"
+        :ui="{
+          root: 'gap-4',
+          list: 'w-fit gap-5 border-muted',
+          trigger:
+            'px-0 text-sm transition-[color,transform] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.98]',
+          content: 'pt-4',
+        }"
+      >
         <template #cli>
           <RegistryTabs :component-id="componentId" />
         </template>
@@ -171,9 +228,9 @@ onMounted(() => {
         <template #manual>
           <div
             v-if="devDependencies || dependencies"
-            class="my-4 text-base"
+            class="text-muted mb-4 text-sm"
           >
-            This component requires following dependencies to be installed.
+            Install required dependencies first.
           </div>
           <PmTabs
             v-if="devDependencies"
@@ -188,25 +245,41 @@ onMounted(() => {
 
           <slot name="instructions" />
 
-          <div class="mt-8 mb-4 text-base">
-            Copy and paste the following code in your project. Update imports according to your
-            project.
-          </div>
+          <div class="text-muted mt-8 mb-4 text-sm">Source files</div>
 
           <MDC
             v-if="componentCode"
             :key="componentCode"
             :value="componentCode"
           />
+          <div
+            v-else-if="isComponentCodeLoading"
+            class="text-muted bg-elevated/35 ring-default/70 flex min-h-40 items-center justify-center gap-3 rounded-3xl ring"
+          >
+            <UIcon
+              name="line-md:loading-twotone-loop"
+              class="size-5"
+            />
+            <span>Loading source</span>
+          </div>
         </template>
       </UTabs>
+    </template>
+
+    <template #apiTab>
+      <div class="bg-default/55 ring-default/70 rounded-3xl p-5 ring">
+        <slot
+          name="api"
+          class="my-4"
+        />
+      </div>
     </template>
 
     <template
       v-if="showInstallation"
       #creditsTab
     >
-      <UPageCard class="bg-default/15">
+      <UPageCard class="bg-default/55 ring-default/70 ring">
         <slot name="credits" />
       </UPageCard>
     </template>

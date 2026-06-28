@@ -67,7 +67,7 @@ onMounted(() => {
         <p
           class="mt-8 font-mono text-xs tracking-[0.16em] text-[#6b737d] uppercase dark:text-[#a7abb4]"
         >
-          130+ components / 4.7k+ Github Stars / Copy-Paste-Run
+          130+ components / 4.7k+ Github Stars
         </p>
       </div>
 
