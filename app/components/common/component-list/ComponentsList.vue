@@ -98,7 +98,7 @@ const filteredComponents = computed(() => {
 
     <div class="relative space-y-5">
       <div
-        class="rounded-[2rem] bg-[#d5dfe6] p-1.5 shadow-[0_18px_60px_-48px_rgba(15,23,42,0.5)] ring-1 ring-[#b9c7d0] dark:bg-white/[0.035] dark:shadow-none dark:ring-white/10"
+        class="rounded-4xl bg-[#d5dfe6] p-1.5 shadow-[0_18px_60px_-48px_rgba(15,23,42,0.5)] ring-1 ring-[#b9c7d0] dark:bg-white/[0.035] dark:shadow-none dark:ring-white/10"
       >
         <div
           class="grid gap-4 rounded-[calc(2rem-0.375rem)] bg-white p-4 ring-1 ring-[#c4d0d8] lg:grid-cols-[minmax(0,1fr)_18rem] dark:bg-[#090a0d]/90 dark:ring-white/10"
@@ -157,34 +157,34 @@ const filteredComponents = computed(() => {
               </div>
             </div>
 
-            <div class="-mx-1 overflow-x-auto px-1 pb-1">
-              <div class="flex flex-wrap gap-2 p-4">
-                <button
-                  v-for="category in categoryOptions"
-                  :key="category.id"
-                  type="button"
-                  class="group inline-flex h-9 items-center gap-2 rounded-full px-3 text-sm font-medium transition-[background-color,transform,color] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.98]"
+            <div class="px-1 pt-2 pb-4 text-4xl font-medium">Browse the components</div>
+
+            <div class="flex flex-wrap gap-2.5">
+              <button
+                v-for="category in categoryOptions"
+                :key="category.id"
+                type="button"
+                class="group inline-flex h-9 items-center gap-2 rounded-full px-3 text-sm font-medium transition-[background-color,transform,color] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.98]"
+                :class="
+                  selectedCategory === category.id
+                    ? 'bg-[#111315] text-white dark:bg-[#f5f1e8] dark:text-[#050506]'
+                    : 'bg-[#f7fafb] text-[#5d6670] ring-1 ring-[#d8e1e7] hover:text-[#111315] dark:bg-white/4.5 dark:text-[#c4c8d0] dark:ring-white/10 dark:hover:text-[#f5f1e8]'
+                "
+                :aria-pressed="selectedCategory === category.id"
+                @click="selectedCategory = category.id"
+              >
+                <span>{{ category.label }}</span>
+                <span
+                  class="rounded-full px-2 py-0.5 font-mono text-[0.65rem]"
                   :class="
                     selectedCategory === category.id
-                      ? 'bg-[#111315] text-white dark:bg-[#f5f1e8] dark:text-[#050506]'
-                      : 'bg-[#f7fafb] text-[#5d6670] ring-1 ring-[#d8e1e7] hover:text-[#111315] dark:bg-white/[0.045] dark:text-[#c4c8d0] dark:ring-white/10 dark:hover:text-[#f5f1e8]'
+                      ? 'bg-white/12 dark:bg-black/10'
+                      : 'bg-[#e6edf1] dark:bg-white/8'
                   "
-                  :aria-pressed="selectedCategory === category.id"
-                  @click="selectedCategory = category.id"
                 >
-                  <span>{{ category.label }}</span>
-                  <span
-                    class="rounded-full px-2 py-0.5 font-mono text-[0.65rem]"
-                    :class="
-                      selectedCategory === category.id
-                        ? 'bg-white/12 dark:bg-black/10'
-                        : 'bg-[#e6edf1] dark:bg-white/[0.08]'
-                    "
-                  >
-                    {{ category.count }}
-                  </span>
-                </button>
-              </div>
+                  {{ category.count }}
+                </span>
+              </button>
             </div>
           </div>
 
@@ -204,7 +204,7 @@ const filteredComponents = computed(() => {
 
       <div
         v-if="!filteredComponents.length"
-        class="rounded-[2rem] bg-[#d5dfe6] p-1.5 ring-1 ring-[#b9c7d0] dark:bg-white/[0.035] dark:ring-white/10"
+        class="rounded-4xl bg-[#d5dfe6] p-1.5 ring-1 ring-[#b9c7d0] dark:bg-white/[0.035] dark:ring-white/10"
       >
         <div
           class="grid place-items-center rounded-[calc(2rem-0.375rem)] bg-white px-6 py-14 text-center ring-1 ring-[#c4d0d8] dark:bg-[#090a0d]/90 dark:ring-white/10"
@@ -218,16 +218,16 @@ const filteredComponents = computed(() => {
 
       <div
         v-else
-        class="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3"
+        class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"
       >
         <NuxtLink
           v-for="component in filteredComponents"
           :key="component.path"
           :to="component.path"
-          class="group rounded-[1.5rem] bg-[#d5dfe6] p-1.5 ring-1 ring-[#b9c7d0] transition-[transform,background-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-0.5 active:scale-[0.99] dark:bg-white/[0.045] dark:ring-white/10"
+          class="group rounded-[1.5rem] bg-[#d5dfe6] p-1.5 ring-1 ring-[#b9c7d0] backdrop-blur-lg transition-[transform,background-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-0.5 active:scale-[0.99] dark:bg-white/4.5 dark:ring-white/10"
         >
           <article
-            class="relative flex h-[stretch] min-h-48 overflow-hidden rounded-[calc(1.5rem-1px)] bg-white p-4 ring-1 ring-[#d4dee5] transition-colors duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:bg-[#fbfcfd] dark:bg-[#101116] dark:ring-white/10 dark:group-hover:bg-[#13151b]"
+            class="relative flex h-[stretch] min-h-48 overflow-hidden rounded-[calc(1.5rem-1px)] bg-white/80 p-4 ring-1 ring-[#d4dee5] backdrop-blur-lg transition-colors duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:bg-[#fbfcfd] dark:bg-[#101116] dark:ring-white/10 dark:group-hover:bg-[#13151b]"
           >
             <div
               class="pointer-events-none absolute -top-16 -right-16 size-36 rounded-full bg-[#d9c49b]/12 opacity-0 blur-3xl transition-opacity duration-200 group-hover:opacity-100 dark:bg-[#d6b16a]/8"
@@ -236,7 +236,7 @@ const filteredComponents = computed(() => {
             <div class="relative flex w-full flex-col">
               <div class="flex items-start justify-between gap-3">
                 <span
-                  class="inline-flex items-center rounded-full bg-[#f7fafb] px-2.5 py-1 font-mono text-[0.62rem] tracking-[0.16em] text-[#947545] uppercase ring-1 ring-[#d8e1e7] dark:bg-white/[0.055] dark:text-[#d6b16a] dark:ring-white/10"
+                  class="inline-flex items-center rounded-full bg-[#f7fafb] px-2.5 py-1 font-mono text-[0.62rem] tracking-[0.16em] text-[#947545] uppercase ring-1 ring-[#d8e1e7] dark:bg-white/5.5 dark:text-[#d6b16a] dark:ring-white/10"
                 >
                   {{ component.category }}
                 </span>
@@ -246,7 +246,7 @@ const filteredComponents = computed(() => {
                   :class="
                     component.badge === 'New'
                       ? 'bg-[#111315] text-white dark:bg-[#f5f1e8] dark:text-[#050506]'
-                      : 'bg-[#d9c49b]/28 text-[#947545] dark:bg-[#d6b16a]/12 dark:text-[#d6b16a]'
+                      : 'bg-[#9ed99b]/28 text-[#45944c] dark:bg-[#6cd66a]/12 dark:text-[#6ad673]'
                   "
                 >
                   {{ component.badge }}
