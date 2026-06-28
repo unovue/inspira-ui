@@ -3,7 +3,6 @@ title: 图案背景
 description: 简单的动画图案背景，让版块更突出。
 category: Background
 tags: [css, tailwind, background, magic-ui]
-badge: "Updated"
 ---
 
 ::ComponentViewer{demoFile="PatternBackgroundDemo.vue" config="PatternBackgroundConfig" componentId="pattern-background" :componentFiles='["PatternBackground.vue", "index.ts"]' dependencies="class-variance-authority"}

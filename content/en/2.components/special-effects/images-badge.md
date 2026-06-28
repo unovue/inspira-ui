@@ -3,7 +3,6 @@ title: Images Badge
 description: A badge with images that can be hovered to reveal more images.
 category: Special Effects
 tags: [css, tailwind, aceternity-ui]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="ImagesBadgeDemo.vue" config="ImagesBadgeConfig" componentId="images-badge" :componentFiles='["ImagesBadge.vue"]'}

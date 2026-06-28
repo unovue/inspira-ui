@@ -3,7 +3,6 @@ title: Animated Tabs
 description: 带共享布局选中态胶囊与堆叠内容切换动画的 Tabs 组件。
 category: Miscellaneous
 tags: [css, tailwind, tabs, aceternity-ui, motion-v]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="AnimatedTabsDemo.vue" config="AnimatedTabsConfig" componentId="animated-tabs" :componentFiles='["AnimatedTabs.vue", "AnimatedTabsFadeInDiv.vue", "types.ts", "index.ts"]' dependencies="motion-v"}

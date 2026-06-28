@@ -3,7 +3,6 @@ title: Scales
 description: A repeating diagonal, horizontal, or vertical line pattern background effect.
 category: Special Effects
 tags: [css, tailwind, aceternity-ui]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="ScalesDemo.vue" config="ScalesConfig" componentId="scales" :componentFiles='["Scales.vue"]'}

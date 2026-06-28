@@ -3,7 +3,6 @@ title: Github 地球
 description: 可自定义弧线、点与动画的 3D 互动地球可视化，灵感来自 Github。
 category: Visualization
 tags: [css, tailwind, threejs, aceternity-ui]
-badge: Updated
 ---
 
 ::ComponentViewer{demoFile="GithubGlobeDemo.vue" config="GithubGlobeConfig" componentId="github-globe" :componentFiles='["GithubGlobe.vue"]' dependencies="three postprocessing three-globe" devDependencies="@types/three"}

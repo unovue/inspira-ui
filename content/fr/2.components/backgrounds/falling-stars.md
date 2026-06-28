@@ -3,7 +3,6 @@ title: Fond étoiles filantes
 description: Un superbe fond animé de champ d'étoiles avec des traînées lumineuses nettes.
 category: Background
 tags: [css, tailwind, background, canvas]
-badge: "Updated"
 ---
 
 ::ComponentViewer{demoFile="FallingStarsBgDemo.vue" config="FallingStarsBgConfig" componentId="bg-falling-stars" :componentFiles='["FallingStarsBg.vue"]'}

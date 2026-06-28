@@ -3,7 +3,6 @@ title: Animated Tabs
 description: A tabs component with a shared-layout active pill and a stacked content transition.
 category: Miscellaneous
 tags: [css, tailwind, tabs, aceternity-ui, motion-v]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="AnimatedTabsDemo.vue" config="AnimatedTabsConfig" componentId="animated-tabs" :componentFiles='["AnimatedTabs.vue", "AnimatedTabsFadeInDiv.vue", "types.ts", "index.ts"]' dependencies="motion-v"}

@@ -3,7 +3,6 @@ title: Fond à motifs
 description: Un fond animé simple pour faire ressortir vos sections.
 category: Background
 tags: [css, tailwind, background, magic-ui]
-badge: "Updated"
 ---
 
 ::ComponentViewer{demoFile="PatternBackgroundDemo.vue" config="PatternBackgroundConfig" componentId="pattern-background" :componentFiles='["PatternBackground.vue", "index.ts"]' dependencies="class-variance-authority"}

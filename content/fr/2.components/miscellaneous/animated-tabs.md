@@ -3,7 +3,6 @@ title: Animated Tabs
 description: Un composant d'onglets avec un indicateur actif en shared layout et une transition de contenu en pile.
 category: Miscellaneous
 tags: [css, tailwind, tabs, aceternity-ui, motion-v]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="AnimatedTabsDemo.vue" config="AnimatedTabsConfig" componentId="animated-tabs" :componentFiles='["AnimatedTabs.vue", "AnimatedTabsFadeInDiv.vue", "types.ts", "index.ts"]' dependencies="motion-v"}

@@ -3,7 +3,6 @@ title: Globe Github
 description: Une visualisation 3D interactive d'un globe avec arcs, points et options d'animation personnalisables, inspirée de Github.
 category: Visualization
 tags: [css, tailwind, threejs, aceternity-ui]
-badge: Updated
 ---
 
 ::ComponentViewer{demoFile="GithubGlobeDemo.vue" config="GithubGlobeConfig" componentId="github-globe" :componentFiles='["GithubGlobe.vue"]' dependencies="three postprocessing three-globe" devDependencies="@types/three"}
