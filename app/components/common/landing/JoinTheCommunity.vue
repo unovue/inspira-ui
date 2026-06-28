@@ -10,14 +10,14 @@ const links = [
   {
     icon: "i-simple-icons-x",
     title: "X",
-    description: "Release updates.",
+    description: "Latest release updates.",
     to: `https://x.com/rahulv_dev`,
     target: "_blank",
   },
   {
     icon: "i-simple-icons-bluesky",
     title: "Bluesky",
-    description: "Project updates.",
+    description: "Project notes and updates.",
     to: `http://bsky.app/profile/inspira-ui.com`,
     target: "_blank",
   },
@@ -46,10 +46,10 @@ const links = [
             Community
           </p>
           <h3 class="mt-3 text-2xl leading-tight font-semibold tracking-normal">
-            Community links.
+            Connect with us.
           </h3>
           <p class="mt-3 text-sm leading-6 text-[#5d6670] dark:text-[#a7abb4]">
-            Use these channels for help, release updates, issues, and contributions.
+            Follow the latest updates, ask questions, report issues, and share what you build.
           </p>
         </div>
         <UIcon

@@ -21,14 +21,13 @@
           <h2
             class="mt-5 max-w-2xl text-4xl leading-[0.96] font-semibold tracking-normal text-balance sm:text-5xl"
           >
-            Open source details in one place.
+            Built in public, backed by real people.
           </h2>
         </div>
         <p
           class="max-w-2xl text-base leading-7 text-[#5d6670] lg:justify-self-end dark:text-[#a7abb4]"
         >
-          Repository activity, sponsors, contributors, and community links are grouped here so the
-          documentation can stay focused on usage.
+          See how the project is moving, who supports it, and the people helping it grow.
         </p>
       </div>
 

@@ -22,7 +22,7 @@ onMounted(() => {
         </p>
 
         <h1
-          class="mt-8 max-w-4xl text-5xl leading-tight font-semibold tracking-tighter text-balance sm:text-6xl lg:text-7xl"
+          class="mt-8 max-w-4xl text-5xl font-semibold tracking-tighter text-balance sm:text-6xl lg:text-7xl"
         >
           Animated UI components for Vue and Nuxt.
         </h1>
@@ -67,7 +67,7 @@ onMounted(() => {
         <p
           class="mt-8 font-mono text-xs tracking-[0.16em] text-[#6b737d] uppercase dark:text-[#a7abb4]"
         >
-          120+ components / live previews / source included
+          130+ components / 4.7k+ Github Stars / Copy-Paste-Run
         </p>
       </div>
 
@@ -85,7 +85,7 @@ onMounted(() => {
             :class="
               isDarkPreview
                 ? 'border-white/10 bg-[#050506] text-[#f5f1e8] shadow-none'
-                : 'border-[#aebdc7] bg-white/[0.96] text-[#111315] shadow-[0_30px_90px_-42px_rgba(15,23,42,0.55)]'
+                : 'border-[#aebdc7] bg-white/96 text-[#111315] shadow-[0_30px_90px_-42px_rgba(15,23,42,0.55)]'
             "
           >
             <div
@@ -103,20 +103,20 @@ onMounted(() => {
               <div class="flex items-center justify-between gap-4">
                 <div>
                   <p class="hero-preview-eyebrow font-mono text-[11px] tracking-[0.2em] uppercase">
-                    Component docs
+                    Inspira UI
                   </p>
                   <p
                     class="mt-2 text-sm"
                     :class="isDarkPreview ? 'text-[#a7abb4]' : 'text-[#5d6670]'"
                   >
-                    Preview, props, API, installation, source.
+                    Motion patterns for interfaces that need more presence.
                   </p>
                 </div>
                 <p
                   class="font-mono text-[11px]"
                   :class="isDarkPreview ? 'text-[#a7abb4]' : 'text-[#5d6670]'"
                 >
-                  Vue / Nuxt
+                  Open source
                 </p>
               </div>
 
@@ -125,10 +125,10 @@ onMounted(() => {
                   class="font-mono text-xs tracking-[0.2em] uppercase"
                   :class="isDarkPreview ? 'text-[#a7abb4]' : 'text-[#5d6670]'"
                 >
-                  Component preview
+                  Design with motion
                 </p>
-                <h2 class="mt-4 text-5xl leading-[0.92] font-semibold tracking-normal sm:text-6xl">
-                  Test it before you copy it.
+                <h2 class="mt-4 text-4xl leading-[0.92] font-semibold tracking-normal sm:text-5xl">
+                  Make Vue interfaces feel crafted.
                 </h2>
               </div>
 
@@ -140,8 +140,8 @@ onMounted(() => {
                   class="max-w-sm text-sm leading-6"
                   :class="isDarkPreview ? 'text-[#a7abb4]' : 'text-[#5d6670]'"
                 >
-                  Each component page includes a live preview, API details, install steps, credits,
-                  and source code.
+                  Use animated backgrounds, cards, text effects, cursors, and interactions to make
+                  product surfaces feel more polished.
                 </p>
                 <NuxtLink
                   :to="componentPath"

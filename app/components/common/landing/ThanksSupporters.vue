@@ -13,10 +13,11 @@
             Contributors
           </p>
           <h3 class="mt-3 text-3xl leading-tight font-semibold tracking-normal">
-            Project contributors.
+            Amazing people behind Inspira UI.
           </h3>
           <p class="mt-3 max-w-2xl text-sm leading-6 text-[#5d6670] dark:text-[#a7abb4]">
-            People who have contributed code, examples, documentation, fixes, and component ideas.
+            Thanks to everyone who helped Inspira UI grow through code, docs, examples, fixes, and
+            ideas.
           </p>
         </div>
         <NuxtLink

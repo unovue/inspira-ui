@@ -21,7 +21,7 @@
             Project activity.
           </h3>
           <p class="mt-3 max-w-xl text-sm leading-6 text-[#5d6670] dark:text-[#a7abb4]">
-            Check recent contribution, issue, and pull request activity before adopting the library.
+            See recent contributions, issues, and pull requests in one quick snapshot.
           </p>
         </div>
         <UIcon
