@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
+html {
+  @apply antialiased;
+}
+
 @theme static {
   --font-sans: "Geist", sans-serif;
   --ui-primary: black;
