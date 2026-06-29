@@ -170,6 +170,17 @@ const editLink = computed(() => {
 
         <USeparator orientation="horizontal" />
 
+        <a
+          href="https://rahulv.dev"
+          target="_blank"
+        >
+          <UButton
+            block
+            variant="solid"
+            label="Hire the Creator"
+            icon="lineicons:hand-shake"
+          />
+        </a>
         <ClientOnly>
           <InspiraCarbonAds />
         </ClientOnly>
