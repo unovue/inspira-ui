@@ -4,15 +4,19 @@ import { findPageHeadline } from "@nuxt/content/utils";
 import { kebabCase } from "scule";
 import { addPrerenderPath } from "@/utils/prerender";
 
+const localeRouteRe = /^\/([a-z]{2})\/?$/;
+const trailingSlashRe = /\/$/;
+
 const route = useRoute();
 const { locale, isEnabled, t } = useDocusI18n();
 const appConfig = useAppConfig();
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
+const docsPageUi = useDocsPageUi();
 
 const isRoot = isRootPage();
 
 const isLandingPage = computed(() => {
-  return (isEnabled.value ? `/${locale.value}` : "/") === route.path.replace(/\/$/, "");
+  return (isEnabled.value ? `/${locale.value}` : "/") === route.path.replace(trailingSlashRe, "");
 });
 
 const pageType = isLandingPage.value ? "landing" : "docs";
@@ -21,7 +25,7 @@ definePageMeta({
   layout: false,
   middleware: (to) => {
     // Match /en or /en/ (with or without trailing slash)
-    const localeMatch = to.path.match(/^\/([a-z]{2})\/?$/);
+    const localeMatch = to.path.match(localeRouteRe);
     const isLanding = to.path === "/" || to.path === "//" || localeMatch !== null;
 
     setPageLayout(isLanding ? "default" : "docs");
@@ -104,9 +108,7 @@ const editLink = computed(() => {
       :title="page.title"
       :description="page.description"
       :headline="headline"
-      :ui="{
-        wrapper: 'flex-row items-center flex-wrap justify-between',
-      }"
+      :ui="docsPageUi.header"
     >
       <div
         v-if="page.tags"
@@ -116,57 +118,69 @@ const editLink = computed(() => {
           v-for="tag in page.tags"
           :key="page.path + tag"
           :label="tag"
-          variant="soft"
-          class="px-3 py-1 font-normal"
+          color="neutral"
+          variant="subtle"
+          size="sm"
+          :ui="docsPageUi.badge"
         />
       </div>
       <template #links>
         <UButton
           v-for="(link, index) in (page as DocsEnCollectionItem).links"
           :key="index"
-          size="sm"
           v-bind="link"
+          size="sm"
+          color="neutral"
+          variant="subtle"
+          :class="docsPageUi.headerLinkButton"
         />
 
         <DocsPageHeaderLinks />
       </template>
     </UPageHeader>
 
-    <UPageBody>
+    <UPageBody :class="docsPageUi.bodyClass">
       <ContentRenderer
         v-if="page"
         :value="page"
       />
 
-      <USeparator>
+      <USeparator class="my-12">
         <div
           v-if="github"
-          class="text-muted flex items-center gap-2 text-sm"
+          :class="docsPageUi.footerActions"
         >
           <UButton
-            variant="link"
             color="neutral"
+            variant="ghost"
+            size="xs"
             :to="editLink"
             target="_blank"
             icon="i-lucide-pen"
-            :ui="{ leadingIcon: 'size-4' }"
+            class="rounded-full"
+            :ui="docsPageUi.footerButton"
           >
             {{ t("docs.edit") }}
           </UButton>
-          <span>{{ t("common.or") }}</span>
+          <span class="px-1 text-muted">{{ t("common.or") }}</span>
           <UButton
-            variant="link"
             color="neutral"
+            variant="ghost"
+            size="xs"
             :to="`${github.url}/issues/new/choose`"
             target="_blank"
             icon="i-lucide-alert-circle"
-            :ui="{ leadingIcon: 'size-4' }"
+            class="rounded-full"
+            :ui="docsPageUi.footerButton"
           >
             {{ t("docs.report") }}
           </UButton>
         </div>
       </USeparator>
-      <UContentSurround :surround="surround" />
+      <UContentSurround
+        :surround="surround"
+        :ui="docsPageUi.surround"
+      />
     </UPageBody>
 
     <template

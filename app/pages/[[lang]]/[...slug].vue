@@ -12,6 +12,7 @@ const route = useRoute();
 const { locale, isEnabled, t } = useDocusI18n();
 const appConfig = useAppConfig();
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
+const docsPageUi = useDocsPageUi();
 
 const collectionName = computed(() => (isEnabled.value ? `docs_${locale.value}` : "docs"));
 
@@ -85,66 +86,76 @@ const editLink = computed(() => {
       :title="page.title"
       :description="page.description"
       :headline="headline"
-      :ui="{
-        wrapper: 'flex-row items-center flex-wrap justify-between',
-      }"
+      :ui="docsPageUi.header"
     >
       <div class="mt-4 flex flex-wrap items-center gap-2">
         <UBadge
           v-for="tag in page.tags"
           :key="page.path + tag"
           :label="tag"
-          variant="soft"
-          class="px-3 py-1 font-normal"
+          color="neutral"
+          variant="subtle"
+          size="sm"
+          :ui="docsPageUi.badge"
         />
       </div>
       <template #links>
         <UButton
           v-for="(link, index) in (page as DocsEnCollectionItem).links"
           :key="index"
-          size="sm"
           v-bind="link"
+          size="sm"
+          color="neutral"
+          variant="subtle"
+          :class="docsPageUi.headerLinkButton"
         />
 
         <DocsPageHeaderLinks />
       </template>
     </UPageHeader>
 
-    <UPageBody>
+    <UPageBody :class="docsPageUi.bodyClass">
       <ContentRenderer
         v-if="page"
         :value="page"
       />
 
-      <USeparator>
+      <USeparator class="my-12">
         <div
           v-if="github"
-          class="text-muted flex items-center gap-2 text-sm"
+          :class="docsPageUi.footerActions"
         >
           <UButton
-            variant="link"
             color="neutral"
+            variant="ghost"
+            size="xs"
             :to="editLink"
             target="_blank"
             icon="i-lucide-pen"
-            :ui="{ leadingIcon: 'size-4' }"
+            class="rounded-full"
+            :ui="docsPageUi.footerButton"
           >
             {{ t("docs.edit") }}
           </UButton>
-          <span>{{ t("common.or") }}</span>
+          <span class="text-muted px-1">{{ t("common.or") }}</span>
           <UButton
-            variant="link"
             color="neutral"
+            variant="ghost"
+            size="xs"
             :to="`${github.url}/issues/new/choose`"
             target="_blank"
             icon="i-lucide-alert-circle"
-            :ui="{ leadingIcon: 'size-4' }"
+            class="rounded-full"
+            :ui="docsPageUi.footerButton"
           >
             {{ t("docs.report") }}
           </UButton>
         </div>
       </USeparator>
-      <UContentSurround :surround="surround" />
+      <UContentSurround
+        :surround="surround"
+        :ui="docsPageUi.surround"
+      />
     </UPageBody>
 
     <template
@@ -153,8 +164,11 @@ const editLink = computed(() => {
     >
       <UContentToc
         highlight
+        color="neutral"
+        highlight-color="neutral"
         :title="appConfig.toc?.title || t('docs.toc')"
         :links="page.body?.toc?.links"
+        :ui="docsPageUi.toc"
       >
         <template #bottom>
           <DocsAsideRightBottom />
@@ -165,27 +179,7 @@ const editLink = computed(() => {
       v-else
       #right
     >
-      <div class="flex h-full w-full flex-col gap-8 max-md:items-center">
-        <DocsAsideRightBottom />
-
-        <USeparator orientation="horizontal" />
-
-        <a
-          href="https://rahulv.dev"
-          target="_blank"
-        >
-          <UButton
-            block
-            variant="solid"
-            label="Hire the Creator"
-            icon="lineicons:hand-shake"
-            size="xl"
-          />
-        </a>
-        <ClientOnly>
-          <InspiraCarbonAds />
-        </ClientOnly>
-      </div>
+      <DocsAsideRightBottom />
     </template>
   </UPage>
 </template>
