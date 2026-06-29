@@ -179,6 +179,7 @@ const editLink = computed(() => {
             variant="solid"
             label="Hire the Creator"
             icon="lineicons:hand-shake"
+            size="xl"
           />
         </a>
         <ClientOnly>
