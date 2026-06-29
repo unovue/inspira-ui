@@ -62,6 +62,82 @@ function badgePriority(badge?: string) {
   return 2;
 }
 
+function isNew(component: DocsEnCollectionItem) {
+  return component.badge === "New";
+}
+
+function isUpdated(component: DocsEnCollectionItem) {
+  return component.badge === "Updated";
+}
+
+function filterButtonClass(id: string) {
+  if (selectedCategory.value === id) {
+    return "bg-inverted text-inverted shadow-sm";
+  }
+
+  if (id === "new") {
+    return "bg-success/5 text-highlighted ring-success/10 ring hover:bg-success/10";
+  }
+
+  if (id === "updated") {
+    return "bg-info/5 text-highlighted ring-info/10 ring hover:bg-info/10";
+  }
+
+  return "bg-elevated/45 text-muted ring-default/70 hover:text-highlighted ring";
+}
+
+function filterCountClass(id: string) {
+  if (selectedCategory.value === id) {
+    return "bg-default/20";
+  }
+
+  if (id === "new") {
+    return "bg-success/10 text-highlighted";
+  }
+
+  if (id === "updated") {
+    return "bg-info/10 text-highlighted";
+  }
+
+  return "bg-default/60";
+}
+
+function cardShellClass(component: DocsEnCollectionItem) {
+  if (isNew(component)) {
+    return "bg-success/5 ring-success/10 hover:bg-success/5";
+  }
+
+  if (isUpdated(component)) {
+    return "bg-info/5 ring-info/10 hover:bg-info/5";
+  }
+
+  return "bg-elevated/45 ring-default/70";
+}
+
+function cardGlowClass(component: DocsEnCollectionItem) {
+  if (isNew(component)) {
+    return "bg-success/10 opacity-0 group-hover:opacity-60";
+  }
+
+  if (isUpdated(component)) {
+    return "bg-info/10 opacity-0 group-hover:opacity-50";
+  }
+
+  return "bg-primary/10 opacity-0 group-hover:opacity-100";
+}
+
+function badgeClass(badge?: string) {
+  if (badge === "New") {
+    return "bg-success/10 text-highlighted ring-success/15";
+  }
+
+  if (badge === "Updated") {
+    return "bg-info/10 text-highlighted ring-info/15";
+  }
+
+  return "bg-elevated/70 text-toned ring-default/70";
+}
+
 const filteredComponents = computed(() => {
   const query = search.value.trim().toLowerCase();
 
@@ -152,7 +228,9 @@ const filteredComponents = computed(() => {
               </div>
             </div>
 
-            <div class="text-highlighted px-1 pt-2 pb-4 text-4xl font-medium tracking-[-0.04em]">
+            <div
+              class="text-highlighted px-1 pb-4 text-4xl font-medium tracking-[-0.04em] max-md:pt-2"
+            >
               Browse the components
             </div>
 
@@ -162,18 +240,14 @@ const filteredComponents = computed(() => {
                 :key="category.id"
                 type="button"
                 class="group inline-flex h-9 items-center gap-2 rounded-full px-3 text-sm font-medium transition-[background-color,transform,color] duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-[0.98]"
-                :class="
-                  selectedCategory === category.id
-                    ? 'bg-inverted text-inverted'
-                    : 'bg-elevated/45 text-muted ring-default/70 hover:text-highlighted ring'
-                "
+                :class="filterButtonClass(category.id)"
                 :aria-pressed="selectedCategory === category.id"
                 @click="selectedCategory = category.id"
               >
                 <span>{{ category.label }}</span>
                 <span
                   class="rounded-full px-2 py-0.5 font-mono text-[0.65rem]"
-                  :class="selectedCategory === category.id ? 'bg-default/20' : 'bg-default/60'"
+                  :class="filterCountClass(category.id)"
                 >
                   {{ category.count }}
                 </span>
@@ -218,13 +292,15 @@ const filteredComponents = computed(() => {
           v-for="component in filteredComponents"
           :key="component.path"
           :to="component.path"
-          class="bg-elevated/45 ring-default/70 group rounded-[1.5rem] p-1.5 ring backdrop-blur-lg transition-[transform,background-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-0.5 active:scale-[0.99]"
+          class="group focus-visible:ring-primary/40 rounded-[1.5rem] p-1.5 ring backdrop-blur-lg transition-[transform,background-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:outline-none active:scale-[0.99]"
+          :class="cardShellClass(component)"
         >
           <article
-            class="bg-default/50 ring-default/70 group-hover:bg-default/90 relative flex h-[stretch] min-h-48 overflow-hidden rounded-[calc(1.5rem-1px)] p-4 ring backdrop-blur-lg transition-colors duration-200 ease-[cubic-bezier(0.23,1,0.32,1)]"
+            class="bg-default/50 ring-default/70 group-hover:bg-default/60 relative flex h-[stretch] min-h-48 overflow-hidden rounded-[calc(1.5rem-1px)] p-4 ring backdrop-blur-lg transition-colors duration-200 ease-[cubic-bezier(0.23,1,0.32,1)]"
           >
             <div
-              class="bg-primary/10 pointer-events-none absolute -top-16 -right-16 size-36 rounded-full opacity-0 blur-3xl transition-opacity duration-200 group-hover:opacity-100"
+              class="pointer-events-none absolute -top-16 -right-16 size-36 rounded-full blur-3xl transition-opacity duration-200"
+              :class="cardGlowClass(component)"
             />
 
             <div class="relative flex w-full flex-col">
@@ -237,11 +313,7 @@ const filteredComponents = computed(() => {
                 <span
                   v-if="component.badge"
                   class="rounded-full px-2.5 py-1 text-xs font-medium ring"
-                  :class="
-                    component.badge === 'New'
-                      ? 'bg-primary/10 text-highlighted ring-primary/20'
-                      : 'bg-elevated/70 text-toned ring-default/70'
-                  "
+                  :class="badgeClass(component.badge)"
                 >
                   {{ component.badge }}
                 </span>
