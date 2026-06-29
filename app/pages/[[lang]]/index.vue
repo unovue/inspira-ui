@@ -13,8 +13,6 @@ const appConfig = useAppConfig();
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
 const docsPageUi = useDocsPageUi();
 
-const isRoot = isRootPage();
-
 const isLandingPage = computed(() => {
   return (isEnabled.value ? `/${locale.value}` : "/") === route.path.replace(trailingSlashRe, "");
 });
@@ -162,7 +160,7 @@ const editLink = computed(() => {
           >
             {{ t("docs.edit") }}
           </UButton>
-          <span class="px-1 text-muted">{{ t("common.or") }}</span>
+          <span class="text-muted px-1">{{ t("common.or") }}</span>
           <UButton
             color="neutral"
             variant="ghost"
@@ -183,10 +181,7 @@ const editLink = computed(() => {
       />
     </UPageBody>
 
-    <template
-      v-if="!isRoot"
-      #right
-    >
+    <template #right>
       <DocsAsideRightBottom />
     </template>
   </UPage>

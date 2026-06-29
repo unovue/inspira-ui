@@ -10,13 +10,13 @@ const isRoot = isRootPage();
     <AppHeaderNav />
     <UContainer>
       <UPage :key="route.fullPath">
-        <template
-          v-if="!isRoot"
-          #left
-        >
-          <UPageAside>
+        <template #left>
+          <UPageAside v-if="!isRoot">
             <DocsAsideLeftTop />
             <DocsAsideLeftBody />
+          </UPageAside>
+          <UPageAside v-else>
+            <DocsAsideLeftTop />
           </UPageAside>
         </template>
         <slot />

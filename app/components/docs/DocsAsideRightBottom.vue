@@ -4,6 +4,8 @@ const appConfig = useAppConfig();
 const { t } = useDocusI18n();
 const { isEnabled, open } = useAssistant();
 
+const showAd = useMediaQuery("(min-width: 1024px)");
+
 const pageUrl = computed(() => route.path);
 const showExplainWithAi = computed(() => {
   return isEnabled.value && appConfig.assistant?.explainWithAi !== false;
@@ -104,7 +106,7 @@ const communityLinks = computed(() => {
       }"
     />
 
-    <ClientOnly>
+    <ClientOnly v-if="showAd">
       <InspiraCarbonAds
         class="bg-elevated/45 text-default ring-default/70 w-full rounded-2xl border-0 ring dark:bg-white/[0.035]"
       />

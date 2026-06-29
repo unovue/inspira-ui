@@ -14,6 +14,8 @@ const appConfig = useAppConfig();
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
 const docsPageUi = useDocsPageUi();
 
+const showAd = useMediaQuery("(max-width: 1023px)");
+
 const collectionName = computed(() => (isEnabled.value ? `docs_${locale.value}` : "docs"));
 
 const [{ data: page }, { data: surround }] = await Promise.all([
@@ -115,6 +117,9 @@ const editLink = computed(() => {
     </UPageHeader>
 
     <UPageBody :class="docsPageUi.bodyClass">
+      <ClientOnly v-if="showAd">
+        <InspiraCarbonAds />
+      </ClientOnly>
       <ContentRenderer
         v-if="page"
         :value="page"

@@ -11,6 +11,7 @@ const { locale } = useDocusI18n();
 
 const selectedCategory = ref("all");
 const search = ref("");
+const showAd = useMediaQuery("(max-width: 1023px)");
 
 const { data: collection } = await useAsyncData("component_collection", () => {
   return queryCollection(`docs_${locale.value}` as any).all() as Promise<DocsEnCollectionItem[]>;
@@ -101,7 +102,7 @@ const filteredComponents = computed(() => {
         class="rounded-4xl bg-[#d5dfe6] p-1.5 shadow-[0_18px_60px_-48px_rgba(15,23,42,0.5)] ring-1 ring-[#b9c7d0] dark:bg-white/[0.035] dark:shadow-none dark:ring-white/10"
       >
         <div
-          class="grid gap-4 rounded-[calc(2rem-0.375rem)] bg-white p-4 ring-1 ring-[#c4d0d8] lg:grid-cols-[minmax(0,1fr)_18rem] dark:bg-[#090a0d]/90 dark:ring-white/10"
+          class="grid gap-4 rounded-[calc(2rem-0.375rem)] bg-white p-8 ring-1 ring-[#c4d0d8] max-md:p-4 dark:bg-[#090a0d]/90 dark:ring-white/10"
         >
           <div class="min-w-0 space-y-4">
             <div class="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
@@ -159,7 +160,7 @@ const filteredComponents = computed(() => {
 
             <div class="px-1 pt-2 pb-4 text-4xl font-medium">Browse the components</div>
 
-            <div class="flex flex-wrap gap-2.5">
+            <div class="flex flex-wrap gap-2.5 space-y-1">
               <button
                 v-for="category in categoryOptions"
                 :key="category.id"
@@ -186,19 +187,20 @@ const filteredComponents = computed(() => {
                 </span>
               </button>
             </div>
-          </div>
 
-          <aside
-            aria-label="Sponsored"
-            class="relative flex min-h-24 items-center justify-center rounded-[1.5rem] bg-[#f7fafb] p-3 ring-1 ring-[#d8e1e7] dark:bg-white/[0.035] dark:ring-white/10"
-          >
-            <span
-              class="absolute top-3 left-3 rounded-full bg-white px-2 py-0.5 font-mono text-[0.6rem] tracking-[0.16em] text-[#947545] uppercase ring-1 ring-[#d8e1e7] dark:bg-[#111216] dark:text-[#d6b16a] dark:ring-white/10"
+            <aside
+              v-if="showAd"
+              aria-label="Sponsored"
+              class="relative flex min-h-24 items-center justify-center rounded-[1.5rem] bg-[#f7fafb] p-3 ring-1 ring-[#d8e1e7] dark:bg-white/[0.035] dark:ring-white/10"
             >
-              Sponsor
-            </span>
-            <InspiraCarbonAds class="max-w-full overflow-hidden pt-5" />
-          </aside>
+              <span
+                class="absolute top-3 left-3 rounded-full bg-white px-2 py-0.5 font-mono text-[0.6rem] tracking-[0.16em] text-[#947545] uppercase ring-1 ring-[#d8e1e7] dark:bg-[#111216] dark:text-[#d6b16a] dark:ring-white/10"
+              >
+                Sponsor
+              </span>
+              <InspiraCarbonAds class="max-w-full overflow-hidden pt-5" />
+            </aside>
+          </div>
         </div>
       </div>
 
