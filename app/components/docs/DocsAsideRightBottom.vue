@@ -75,6 +75,21 @@ const communityLinks = computed(() => {
     </div>
 
     <UButton
+      to="https://pro.inspira-ui.com"
+      target="_blank"
+      block
+      color="primary"
+      variant="subtle"
+      label="Get Inspira UI Pro"
+      icon="lineicons:plus"
+      class="rounded-2xl px-3 py-2.5"
+      :ui="{
+        leadingIcon: 'size-5',
+        label: 'text-left',
+      }"
+    />
+
+    <UButton
       to="https://rahulv.dev"
       target="_blank"
       block

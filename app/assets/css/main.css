@@ -47,7 +47,7 @@ html {
 }
 
 :root {
-  --ui-container: min(100rem, 100%);
+  --ui-container: min(130rem, 100%);
 
   --background: var(--ui-bg);
   --foreground: var(--ui-text);
