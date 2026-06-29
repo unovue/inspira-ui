@@ -68,6 +68,19 @@ const demoCode = ref<string>("");
 const componentCode = ref<string>("");
 const componentsList = ref<{ ext: string; fileName: string; code: string }[]>([]);
 
+type ComponentCodeType = "ui" | "examples" | "configs";
+
+const getClientComponentCode = import.meta.client
+  ? async (args: {
+      id: string;
+      fileName: string;
+      type: ComponentCodeType;
+    }) => {
+      const { getComponentCode } = await import("~/lib/getComponentCode.client");
+      return getComponentCode(args);
+    }
+  : async () => undefined;
+
 const installationItems = ref<TabsItem[]>([
   {
     label: "CLI",
@@ -88,7 +101,7 @@ async function loadDemoCode() {
 
   isDemoCodeLoading.value = true;
 
-  const codeGetter = getComponentCode({
+  const codeGetter = await getClientComponentCode({
     fileName: demoFile,
     id: componentId,
     type: "examples",
@@ -119,7 +132,7 @@ async function loadComponentCodes() {
   isComponentCodeLoading.value = true;
 
   const promises = componentFiles.map(async (fileName) => {
-    const codeGetter = getComponentCode({
+    const codeGetter = await getClientComponentCode({
       fileName,
       id: componentId,
       type: "ui",
