@@ -165,6 +165,36 @@ const filteredComponents = computed(() => {
       (a, b) => badgePriority(a.badge) - badgePriority(b.badge) || a.title.localeCompare(b.title),
     );
 });
+
+const componentSections = computed(() => {
+  if (selectedCategory.value !== "all") {
+    return [
+      {
+        id: selectedCategory.value,
+        label: activeCategory.value?.label ?? selectedCategory.value,
+        count: filteredComponents.value.length,
+        grouped: false,
+        items: filteredComponents.value,
+      },
+    ];
+  }
+
+  const groups = new Map<string, DocsEnCollectionItem[]>();
+
+  filteredComponents.value.forEach((component) => {
+    groups.set(component.category, [...(groups.get(component.category) ?? []), component]);
+  });
+
+  return [...groups]
+    .toSorted(([a], [b]) => a.localeCompare(b))
+    .map(([id, items]) => ({
+      id,
+      label: id,
+      count: items.length,
+      grouped: true,
+      items,
+    }));
+});
 </script>
 
 <template>
@@ -286,75 +316,107 @@ const filteredComponents = computed(() => {
 
       <div
         v-else
-        class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3"
+        class="space-y-12"
       >
-        <NuxtLink
-          v-for="component in filteredComponents"
-          :key="component.path"
-          :to="component.path"
-          class="group focus-visible:ring-primary/40 rounded-[1.5rem] p-1.5 ring backdrop-blur-lg transition-[transform,background-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:outline-none active:scale-[0.99]"
-          :class="cardShellClass(component)"
+        <section
+          v-for="section in componentSections"
+          :key="section.id"
+          class="space-y-5"
         >
-          <article
-            class="bg-default/50 ring-default/70 group-hover:bg-default/60 relative flex h-[stretch] min-h-48 overflow-hidden rounded-[calc(1.5rem-1px)] p-4 ring backdrop-blur-lg transition-colors duration-200 ease-[cubic-bezier(0.23,1,0.32,1)]"
+          <div
+            v-if="section.grouped"
+            class="flex items-center gap-4 px-1"
           >
-            <div
-              class="pointer-events-none absolute -top-16 -right-16 size-36 rounded-full blur-3xl transition-opacity duration-200"
-              :class="cardGlowClass(component)"
-            />
+            <h2
+              class="text-highlighted font-mono text-sm tracking-[0.28em] uppercase"
+            >
+              {{ section.label }}
+            </h2>
+            <span
+              class="bg-elevated/45 text-muted ring-default/70 rounded-full px-2.5 py-1 font-mono text-[0.65rem] ring"
+            >
+              {{ section.count }}
+            </span>
+            <div class="bg-default/20 h-px min-w-6 flex-1" />
+          </div>
 
-            <div class="relative flex w-full flex-col">
-              <div class="flex items-start justify-between gap-3">
-                <span
-                  class="bg-elevated/45 text-toned ring-default/70 inline-flex items-center rounded-full px-2.5 py-1 font-mono text-[0.62rem] tracking-[0.16em] uppercase ring"
-                >
-                  {{ component.category }}
-                </span>
-                <span
-                  v-if="component.badge"
-                  class="rounded-full px-2.5 py-1 text-xs font-medium ring"
-                  :class="badgeClass(component.badge)"
-                >
-                  {{ component.badge }}
-                </span>
-              </div>
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+            <NuxtLink
+              v-for="component in section.items"
+              :key="component.path"
+              :to="component.path"
+              class="group focus-visible:ring-primary/40 rounded-[1.5rem] p-1.5 ring backdrop-blur-lg transition-[transform,background-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:outline-none active:scale-[0.99]"
+              :class="cardShellClass(component)"
+            >
+              <article
+                class="bg-default/50 ring-default/70 group-hover:bg-default/60 relative flex h-[stretch] min-h-48 overflow-hidden rounded-[calc(1.5rem-1px)] p-4 ring backdrop-blur-lg transition-colors duration-200 ease-[cubic-bezier(0.23,1,0.32,1)]"
+              >
+                <div
+                  class="pointer-events-none absolute -top-16 -right-16 size-36 rounded-full blur-3xl transition-opacity duration-200"
+                  :class="cardGlowClass(component)"
+                />
 
-              <h3 class="text-highlighted mt-5 text-lg leading-6 font-semibold tracking-[-0.025em]">
-                {{ component.title }}
-              </h3>
-              <p class="text-muted mt-2 line-clamp-3 text-sm leading-6">
-                {{ component.description }}
-              </p>
+                <div class="relative flex w-full flex-col">
+                  <div class="flex items-start justify-between gap-3">
+                    <span
+                      v-if="!section.grouped"
+                      class="bg-elevated/45 text-toned ring-default/70 inline-flex items-center rounded-full px-2.5 py-1 font-mono text-[0.62rem] tracking-[0.16em] uppercase ring"
+                    >
+                      {{ component.category }}
+                    </span>
+                    <span
+                      v-else
+                      class="block min-h-7"
+                    />
+                    <span
+                      v-if="component.badge"
+                      class="rounded-full px-2.5 py-1 text-xs font-medium ring"
+                      :class="badgeClass(component.badge)"
+                    >
+                      {{ component.badge }}
+                    </span>
+                  </div>
 
-              <div class="mt-5 flex flex-wrap gap-2">
-                <span
-                  v-for="tag in component.tags?.slice(0, 3)"
-                  :key="component.path + tag"
-                  class="bg-elevated/45 text-muted ring-default/70 rounded-full px-2 py-0.5 text-xs ring"
-                >
-                  {{ tag }}
-                </span>
-                <span
-                  v-if="component.tags && component.tags.length > 3"
-                  class="bg-elevated/45 text-muted ring-default/70 rounded-full px-2 py-0.5 text-xs ring"
-                >
-                  +{{ component.tags.length - 3 }}
-                </span>
-              </div>
+                  <h3
+                    class="text-highlighted mt-5 text-lg leading-6 font-semibold tracking-[-0.025em]"
+                  >
+                    {{ component.title }}
+                  </h3>
+                  <p class="text-muted mt-2 line-clamp-3 text-sm leading-6">
+                    {{ component.description }}
+                  </p>
 
-              <div class="mt-auto flex items-center justify-end pt-6">
-                <span
-                  class="bg-elevated/70 text-highlighted ring-default/70 grid size-8 place-items-center rounded-full ring transition-transform duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-0.5"
-                >
-                  <UIcon
-                    name="tabler:arrow-up-right"
-                    class="size-4"
-                  />
-                </span>
-              </div>
-            </div>
-          </article>
-        </NuxtLink>
+                  <div class="mt-5 flex flex-wrap gap-2">
+                    <span
+                      v-for="tag in component.tags?.slice(0, 3)"
+                      :key="component.path + tag"
+                      class="bg-elevated/45 text-muted ring-default/70 rounded-full px-2 py-0.5 text-xs ring"
+                    >
+                      {{ tag }}
+                    </span>
+                    <span
+                      v-if="component.tags && component.tags.length > 3"
+                      class="bg-elevated/45 text-muted ring-default/70 rounded-full px-2 py-0.5 text-xs ring"
+                    >
+                      +{{ component.tags.length - 3 }}
+                    </span>
+                  </div>
+
+                  <div class="mt-auto flex items-center justify-end pt-6">
+                    <span
+                      class="bg-elevated/70 text-highlighted ring-default/70 grid size-8 place-items-center rounded-full ring transition-transform duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-0.5"
+                    >
+                      <UIcon
+                        name="tabler:arrow-up-right"
+                        class="size-4"
+                      />
+                    </span>
+                  </div>
+                </div>
+              </article>
+            </NuxtLink>
+          </div>
+        </section>
       </div>
     </div>
   </section>
