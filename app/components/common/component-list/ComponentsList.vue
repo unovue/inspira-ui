@@ -116,14 +116,14 @@ function cardShellClass(component: DocsEnCollectionItem) {
 
 function cardGlowClass(component: DocsEnCollectionItem) {
   if (isNew(component)) {
-    return "bg-success/10 opacity-0 group-hover:opacity-60";
+    return "bg-success/10 opacity-0 group-hover:opacity-100";
   }
 
   if (isUpdated(component)) {
-    return "bg-info/10 opacity-0 group-hover:opacity-50";
+    return "bg-info/10 opacity-0 group-hover:opacity-100";
   }
 
-  return "bg-primary/10 opacity-0 group-hover:opacity-100";
+  return "bg-primary/20 opacity-0 group-hover:opacity-100";
 }
 
 function badgeClass(badge?: string) {
@@ -174,6 +174,8 @@ const componentSections = computed(() => {
         label: activeCategory.value?.label ?? selectedCategory.value,
         count: filteredComponents.value.length,
         grouped: false,
+        newCount: filteredComponents.value.filter(isNew).length,
+        updatedCount: filteredComponents.value.filter(isUpdated).length,
         items: filteredComponents.value,
       },
     ];
@@ -192,6 +194,8 @@ const componentSections = computed(() => {
       label: id,
       count: items.length,
       grouped: true,
+      newCount: items.filter(isNew).length,
+      updatedCount: items.filter(isUpdated).length,
       items,
     }));
 });
@@ -258,10 +262,13 @@ const componentSections = computed(() => {
               </div>
             </div>
 
-            <div
-              class="text-highlighted px-1 pb-4 text-4xl font-medium tracking-[-0.04em] max-md:pt-2"
-            >
-              Browse the components
+            <div class="space-y-2 px-1 pb-4 max-md:pt-2">
+              <div class="text-highlighted text-4xl font-medium tracking-[-0.04em]">
+                Browse the components
+              </div>
+              <div class="text-muted">
+                Open a component page to preview behavior, read API details, and copy source.
+              </div>
             </div>
 
             <div class="flex flex-wrap gap-2.5 space-y-1">
@@ -316,28 +323,50 @@ const componentSections = computed(() => {
 
       <div
         v-else
-        class="space-y-12"
+        class="space-y-20"
       >
         <section
           v-for="section in componentSections"
           :key="section.id"
-          class="space-y-5"
+          class="space-y-6"
         >
           <div
             v-if="section.grouped"
-            class="flex items-center gap-4 px-1"
+            class="flex flex-col gap-3 px-1 pt-2 md:flex-row md:items-center"
           >
-            <h2
-              class="text-highlighted font-mono text-sm tracking-[0.28em] uppercase"
-            >
-              {{ section.label }}
-            </h2>
-            <span
-              class="bg-elevated/45 text-muted ring-default/70 rounded-full px-2.5 py-1 font-mono text-[0.65rem] ring"
-            >
-              {{ section.count }}
-            </span>
-            <div class="bg-default/20 h-px min-w-6 flex-1" />
+            <div class="flex min-w-0 flex-wrap items-center gap-x-3 gap-y-2">
+              <span class="bg-primary ring-primary/20 size-1.5 rounded-full ring-4" />
+              <h2
+                class="text-highlighted font-mono text-base font-medium tracking-[0.28em] uppercase"
+              >
+                {{ section.label }}
+              </h2>
+              <span
+                class="bg-elevated/45 text-muted ring-default/70 rounded-full px-2.5 py-1 font-mono text-[0.65rem] ring"
+              >
+                {{ section.count }} components
+              </span>
+            </div>
+
+            <div class="flex flex-wrap gap-2 md:order-last">
+              <span
+                v-if="section.newCount"
+                class="bg-success/10 text-highlighted ring-success/15 rounded-full px-2.5 py-1 text-xs font-medium ring"
+              >
+                {{ section.newCount }} new
+              </span>
+              <span
+                v-if="section.updatedCount"
+                class="bg-info/10 text-highlighted ring-info/15 rounded-full px-2.5 py-1 text-xs font-medium ring"
+              >
+                {{ section.updatedCount }} updated
+              </span>
+            </div>
+
+            <div class="flex items-center gap-2 md:flex-1">
+              <span class="bg-primary/50 block h-px w-10 shrink-0" />
+              <span class="bg-default/20 h-px min-w-6 flex-1" />
+            </div>
           </div>
 
           <div class="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -345,29 +374,24 @@ const componentSections = computed(() => {
               v-for="component in section.items"
               :key="component.path"
               :to="component.path"
-              class="group focus-visible:ring-primary/40 rounded-[1.5rem] p-1.5 ring backdrop-blur-lg transition-[transform,background-color] duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:outline-none active:scale-[0.99]"
+              class="group focus-visible:ring-primary/40 rounded-[1.5rem] p-1.5 ring backdrop-blur-lg transition-transform duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-0.5 focus-visible:ring-2 focus-visible:outline-none active:scale-[0.99] motion-reduce:transform-none motion-reduce:transition-none"
               :class="cardShellClass(component)"
             >
               <article
                 class="bg-default/50 ring-default/70 group-hover:bg-default/60 relative flex h-[stretch] min-h-48 overflow-hidden rounded-[calc(1.5rem-1px)] p-4 ring backdrop-blur-lg transition-colors duration-200 ease-[cubic-bezier(0.23,1,0.32,1)]"
               >
                 <div
-                  class="pointer-events-none absolute -top-16 -right-16 size-36 rounded-full blur-3xl transition-opacity duration-200"
+                  class="pointer-events-none absolute -top-20 -right-20 size-48 rounded-full blur-3xl transition-opacity duration-300 ease-[cubic-bezier(0.23,1,0.32,1)]"
                   :class="cardGlowClass(component)"
                 />
 
                 <div class="relative flex w-full flex-col">
                   <div class="flex items-start justify-between gap-3">
                     <span
-                      v-if="!section.grouped"
                       class="bg-elevated/45 text-toned ring-default/70 inline-flex items-center rounded-full px-2.5 py-1 font-mono text-[0.62rem] tracking-[0.16em] uppercase ring"
                     >
                       {{ component.category }}
                     </span>
-                    <span
-                      v-else
-                      class="block min-h-7"
-                    />
                     <span
                       v-if="component.badge"
                       class="rounded-full px-2.5 py-1 text-xs font-medium ring"
