@@ -172,7 +172,9 @@ onBeforeUnmount(() => {
         :key="group.year"
         class="relative"
       >
-        <div class="grid gap-4 pt-14 pb-3 first:pt-0 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-8">
+        <div
+          class="mt-16 mb-6 grid gap-4 pt-14 pb-3 first:pt-0 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-8"
+        >
           <div class="pl-8">
             <p class="text-highlighted text-2xl leading-none font-semibold tracking-tight">
               {{ group.year }}
