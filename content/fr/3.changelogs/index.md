@@ -1,6 +1,6 @@
 ---
 title: Journal des modifications
-description: Contient le journal de l'ajout et de la mise à jour des composants.
+description: Principaux ajouts de composants, correctifs et jalons de version d'Inspira UI.
 navigation: false
 ---
 
