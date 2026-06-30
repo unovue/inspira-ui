@@ -9,10 +9,7 @@ export interface Props {
   class?: string;
 }
 
-const props = withDefaults(defineProps<Props>(), {
-  rotateDepth: 17.5,
-  translateDepth: 20,
-});
+const { rotateDepth = 17.5, translateDepth = 20, ...props } = defineProps<Props>();
 
 const floatingCardRef = useTemplateRef<HTMLElement>("floatingCardRef");
 const cardRef = useTemplateRef<HTMLElement>("cardRef");
@@ -33,23 +30,23 @@ const glareOpacity = useSpring(glareOpacityTarget, { damping: 24, stiffness: 220
 const rotateX = useTransform(
   mouseYSpring,
   [-0.5, 0.5],
-  [`-${props.rotateDepth}deg`, `${props.rotateDepth}deg`],
+  [`-${rotateDepth}deg`, `${rotateDepth}deg`],
 );
 const rotateY = useTransform(
   mouseXSpring,
   [-0.5, 0.5],
-  [`${props.rotateDepth}deg`, `-${props.rotateDepth}deg`],
+  [`${rotateDepth}deg`, `-${rotateDepth}deg`],
 );
 
 const translateX = useTransform(
   mouseXSpring,
   [-0.5, 0.5],
-  [`-${props.translateDepth}px`, `${props.translateDepth}px`],
+  [`-${translateDepth}px`, `${translateDepth}px`],
 );
 const translateY = useTransform(
   mouseYSpring,
   [-0.5, 0.5],
-  [`${props.translateDepth}px`, `-${props.translateDepth}px`],
+  [`${translateDepth}px`, `-${translateDepth}px`],
 );
 
 const glareX = useTransform(mouseXSpring, [-0.5, 0.5], [0, 100]);

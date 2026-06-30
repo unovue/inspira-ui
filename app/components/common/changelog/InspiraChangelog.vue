@@ -240,12 +240,6 @@ onBeforeUnmount(() => {
                     />
                     {{ metaFor(entry).label }}
                   </span>
-                  <span
-                    v-if="entry.commit"
-                    class="text-dimmed font-mono text-xs tracking-[0.12em] uppercase"
-                  >
-                    {{ entry.commit }}
-                  </span>
                 </div>
 
                 <div>
