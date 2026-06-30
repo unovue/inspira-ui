@@ -169,7 +169,7 @@ onBeforeUnmount(() => {
       class="relative mx-auto max-w-5xl"
     >
       <div
-        v-for="(group, index) in changelogGroups"
+        v-for="(group, i) in changelogGroups"
         :key="group.year"
         class="relative"
       >
@@ -177,7 +177,7 @@ onBeforeUnmount(() => {
           :class="
             cn(
               'mb-6 grid gap-4 pt-14 pb-3 first:pt-0 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-8',
-              index > 0 ? 'mt-16' : '',
+              i > 0 ? 'mt-16' : '',
             )
           "
         >
@@ -197,7 +197,7 @@ onBeforeUnmount(() => {
         <article
           v-for="{ entry, index } in group.entries"
           :key="`${entry.date}-${entry.title}`"
-          :ref="(el) => setEntryRef(el, index)"
+          :ref="(el) => setEntryRef(el as any, index)"
           :data-index="index"
           class="group relative grid gap-4 py-5 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-8"
         >
