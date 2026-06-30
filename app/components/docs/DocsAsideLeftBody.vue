@@ -166,7 +166,7 @@ watch(navWithData, scrollActiveLinkIntoView, { deep: true });
             v-if="group.title"
             class="mb-1 flex items-center justify-between gap-3 px-2"
           >
-            <p class="text-toned text-md truncate font-bold uppercase">
+            <p class="text-toned truncate text-sm font-bold uppercase">
               {{ group.title }}
             </p>
           </div>
