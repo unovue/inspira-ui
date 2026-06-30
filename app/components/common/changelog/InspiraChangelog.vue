@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { InspiraChangelogEntry, InspiraChangelogType } from "~/data/inspira-changelog";
+import { cn } from "@inspira-ui/plugins";
 import { inspiraChangelog } from "~/data/inspira-changelog";
 
 const { locale, isEnabled } = useDocusI18n();
@@ -168,12 +169,17 @@ onBeforeUnmount(() => {
       class="relative mx-auto max-w-5xl"
     >
       <div
-        v-for="group in changelogGroups"
+        v-for="(group, index) in changelogGroups"
         :key="group.year"
         class="relative"
       >
         <div
-          class="mt-16 mb-6 grid gap-4 pt-14 pb-3 first:pt-0 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-8"
+          :class="
+            cn(
+              'mb-6 grid gap-4 pt-14 pb-3 first:pt-0 sm:grid-cols-[11rem_minmax(0,1fr)] sm:gap-8',
+              index > 0 ? 'mt-16' : '',
+            )
+          "
         >
           <div class="pl-8">
             <p class="text-highlighted text-2xl leading-none font-semibold tracking-tight">
