@@ -109,10 +109,10 @@ onUpdated(() => {
       :inset="isDesktop"
       :ui="{
         content:
-          'bg-default/90 ring-default/80 shadow-[0_32px_120px_-56px_rgba(15,23,42,0.72)] backdrop-blur-lg md:w-108 md:rounded-[1.75rem]',
+          'bg-default/92 ring-default/70 shadow-[0_32px_120px_-56px_rgba(15,23,42,0.72)] backdrop-blur-xl md:w-108 md:rounded-[1.75rem]',
         container: 'h-full gap-0 overflow-hidden p-0',
-        header: 'border-muted/70 shrink-0 border-b px-5 py-4',
-        body: 'min-h-0 flex-1 overflow-y-auto',
+        header: 'border-muted/60 shrink-0 border-b px-5 py-4',
+        body: 'bg-elevated/15 min-h-0 flex-1 overflow-y-auto',
       }"
     >
       <template #header>
@@ -149,23 +149,38 @@ onUpdated(() => {
 </template>
 
 <style scoped>
+.config-control-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding: 0.75rem;
+}
+
 .config-control-stack :deep(.form-field) {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(7.5rem, auto);
+  grid-template-columns: minmax(0, 1fr) minmax(8rem, auto);
   align-items: center;
-  min-height: 3.75rem;
+  min-height: 3.5rem;
   gap: 1rem;
-  border-bottom: 1px solid color-mix(in oklab, var(--ui-border-muted) 78%, transparent);
-  padding: 0.75rem 1.25rem;
-  transition: background-color 180ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 1rem;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--ui-bg-elevated) 62%, transparent),
+    color-mix(in oklab, var(--ui-bg-elevated) 36%, transparent)
+  );
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, var(--ui-border-muted) 44%, transparent),
+    0 1px 0 color-mix(in oklab, var(--ui-bg) 82%, transparent);
+  padding: 0.7rem 0.875rem;
+  transition:
+    background-color 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 160ms cubic-bezier(0.23, 1, 0.32, 1),
+    transform 160ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.config-control-stack :deep(.form-field:first-child) {
-  border-top: 0;
-}
-
-.config-control-stack :deep(.form-field:last-child) {
-  border-bottom: 0;
+.config-control-stack :deep(.form-field:has(textarea)) {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: stretch;
 }
 
 .config-control-stack :deep(.form-field > div) {
@@ -178,15 +193,20 @@ onUpdated(() => {
   margin-top: 0;
 }
 
+.config-control-stack :deep(.form-field:has(textarea) > div:last-child) {
+  justify-content: stretch;
+}
+
 .config-control-stack :deep(.form-field label) {
-  color: var(--ui-text);
-  font-size: 0.8125rem;
+  color: var(--ui-text-muted);
+  font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.35;
 }
 
-.config-control-stack :deep(.form-field input) {
+.config-control-stack :deep(.form-field input),
+.config-control-stack :deep(.form-field textarea) {
   font-size: 0.8125rem;
 }
 
@@ -200,14 +220,29 @@ onUpdated(() => {
 }
 
 .config-control-stack :deep(.form-field > div:last-child > .relative.inline-flex input),
-.config-control-stack :deep(.form-field > div:last-child > button) {
+.config-control-stack :deep(.form-field > div:last-child > button),
+.config-control-stack :deep(.form-field textarea) {
   min-height: 2.25rem;
-  border-radius: 9999px;
+  border-radius: 0.875rem;
+}
+
+.config-control-stack :deep(.form-field textarea) {
+  min-height: 6.5rem;
+  resize: vertical;
+}
+
+.config-control-stack :deep(.form-field > div:last-child > .relative.inline-flex) {
+  background-color: color-mix(in oklab, var(--ui-bg) 72%, transparent);
+  box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--ui-border-muted) 78%, transparent);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .config-control-stack :deep(.form-field:hover) {
-    background-color: color-mix(in oklab, var(--ui-bg-elevated) 42%, transparent);
+    background-color: color-mix(in oklab, var(--ui-bg-elevated) 72%, transparent);
+    box-shadow:
+      inset 0 1px 0 color-mix(in oklab, var(--ui-border) 58%, transparent),
+      0 10px 32px -28px color-mix(in oklab, var(--ui-text) 28%, transparent);
+    transform: translateY(-1px);
   }
 }
 

@@ -77,6 +77,9 @@ importers:
       cobe:
         specifier: ^0.6.5
         version: 0.6.5
+      dialkit:
+        specifier: ^1.3.0
+        version: 1.3.0(motion-v@2.3.0(@vueuse/core@14.2.1(vue@3.5.29(typescript@5.9.3)))(vue@3.5.29(typescript@5.9.3)))(motion@12.42.1)(vue@3.5.29(typescript@5.9.3))
       docus:
         specifier: latest
         version: 5.7.0(3647c033aa142c2985b8f4ce5a2adff7)
@@ -89,6 +92,9 @@ importers:
       gsap:
         specifier: ^3.14.2
         version: 3.14.2
+      motion-v:
+        specifier: ^2.3.0
+        version: 2.3.0(@vueuse/core@14.2.1(vue@3.5.29(typescript@5.9.3)))(vue@3.5.29(typescript@5.9.3))
       nuxt:
         specifier: 4.3.1
         version: 4.3.1(@parcel/watcher@2.5.6)(@types/node@25.3.5)(@vue/compiler-sfc@3.5.29)(better-sqlite3@12.6.2)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.6.2))(eslint@10.0.3(jiti@2.6.1))(ioredis@5.10.0)(magicast@0.5.2)(optionator@0.9.4)(oxlint@1.51.0)(rolldown@1.0.0-beta.53)(rollup@4.59.0)(terser@5.46.0)(tsx@4.21.0)(typescript@5.9.3)(vite@7.3.1(@types/node@25.3.5)(jiti@2.6.1)(lightningcss@1.31.1)(terser@5.46.0)(tsx@4.21.0)(yaml@2.8.2))(vue-tsc@3.2.5(typescript@5.9.3))(yaml@2.8.2)
@@ -4353,6 +4359,30 @@ packages:
   devlop@1.1.0:
     resolution: {integrity: sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA==}
 
+  dialkit@1.3.0:
+    resolution: {integrity: sha512-//tnKhG+6gWhH3h9L7RpRPQZJkRBj0qQyUu1Og1l0VI6Nn/7iKaZZDFs/hG+Jsrtvwp4hlLrrmzj8M6hkXR3EA==}
+    peerDependencies:
+      motion: '>=11.0.0'
+      motion-v: '>=2.0.0'
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+      solid-js: '>=1.6.0'
+      svelte: '>=5.8.0'
+      vue: '>=3.3.0'
+    peerDependenciesMeta:
+      motion-v:
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+      solid-js:
+        optional: true
+      svelte:
+        optional: true
+      vue:
+        optional: true
+
   diff-sequences@29.6.3:
     resolution: {integrity: sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
@@ -4990,6 +5020,20 @@ packages:
 
   framer-motion@12.35.1:
     resolution: {integrity: sha512-rL8cLrjYZNShZqKV3U0Qj6Y5WDiZXYEM5giiTLfEqsIZxtspzMDCkKmrO5po76jWfvOg04+Vk+sfBvTD0iMmLw==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
+
+  framer-motion@12.42.1:
+    resolution: {integrity: sha512-Q2rHK14w8lavWk3MiF1wihcV1sCVsSYrRSaoqJ5eChG7CUNTKxDUgoMesiUSmMBjFpBRPWGrLvzymRrm0jnwFA==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0 || ^19.0.0
@@ -5980,14 +6024,40 @@ packages:
   motion-dom@12.35.1:
     resolution: {integrity: sha512-7n6r7TtNOsH2UFSAXzTkfzOeO5616v9B178qBIjmu/WgEyJK0uqwytCEhwKBTuM/HJA40ptAw7hLFpxtPAMRZQ==}
 
+  motion-dom@12.42.1:
+    resolution: {integrity: sha512-dnBr0vtpJLvTVm+SIi8o7yh8jD57Bv7++nkkoeq85QW+QJqM+RIIoyvu5LyZ186dILUMHzkxv5sQveTxuOcOBw==}
+
   motion-utils@12.29.2:
     resolution: {integrity: sha512-G3kc34H2cX2gI63RqU+cZq+zWRRPSsNIOjpdl9TN4AQwC4sgwYPl/Q/Obf/d53nOm569T0fYK+tcoSV50BWx8A==}
+
+  motion-utils@12.39.0:
+    resolution: {integrity: sha512-8nadJAJjTtqRkmRF36FoJTrywK9nnFmnPwnSMyxaOCU7GDjN9RTMJIxx9De8ErM+vpPhMccr/6fo5WciyQLnMQ==}
 
   motion-v@1.10.3:
     resolution: {integrity: sha512-9Ewo/wwGv7FO3PqYJpllBF/Efc7tbeM1iinVrM73s0RUQrnXHwMZCaRX98u4lu0PQCrZghPPfCsQ14pWKIEbnQ==}
     peerDependencies:
       '@vueuse/core': '>=10.0.0'
       vue: '>=3.0.0'
+
+  motion-v@2.3.0:
+    resolution: {integrity: sha512-J0CCfXtICCni9RjotDUBOs57xNpYI9yyBSohEOxaRHrmjwOtlw291fhRu/mdgEdSasys96R028YDDOAtWBbRaA==}
+    peerDependencies:
+      '@vueuse/core': '>=10.0.0'
+      vue: '>=3.0.0'
+
+  motion@12.42.1:
+    resolution: {integrity: sha512-6NaaSbSKvTpHm3dcm0+NJX6UNlpgkdnva09C0+L7uDfGOd4+P1gE4aS5M8NqLGxmFGnKZGfnvhyV6wVnwvMccg==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
 
   mrmime@2.0.1:
     resolution: {integrity: sha512-Y3wQdFg2Va6etvQ5I82yUhGdsKrcYox6p7FfL1LbK2J4V01F9TGlepTIhnK24t7koZibmg82KGglhA1XK5IsLQ==}
@@ -6923,6 +6993,7 @@ packages:
   rolldown-vite@7.3.1:
     resolution: {integrity: sha512-LYzdNAjRHhF2yA4JUQm/QyARyi216N2rpJ0lJZb8E9FU2y5v6Vk+xq/U4XBOxMefpWixT5H3TslmAHm1rqIq2w==}
     engines: {node: ^20.19.0 || >=22.12.0}
+    deprecated: Use this package to migrate from Vite 7 to Vite 8. For the most recent updates, migrate to Vite 8 once you're ready.
     hasBin: true
     peerDependencies:
       '@types/node': ^20.19.0 || >=22.12.0
@@ -12462,6 +12533,13 @@ snapshots:
     dependencies:
       dequal: 2.0.3
 
+  dialkit@1.3.0(motion-v@2.3.0(@vueuse/core@14.2.1(vue@3.5.29(typescript@5.9.3)))(vue@3.5.29(typescript@5.9.3)))(motion@12.42.1)(vue@3.5.29(typescript@5.9.3)):
+    dependencies:
+      motion: 12.42.1
+    optionalDependencies:
+      motion-v: 2.3.0(@vueuse/core@14.2.1(vue@3.5.29(typescript@5.9.3)))(vue@3.5.29(typescript@5.9.3))
+      vue: 3.5.29(typescript@5.9.3)
+
   diff-sequences@29.6.3: {}
 
   diff3@0.0.3: {}
@@ -13367,6 +13445,12 @@ snapshots:
     dependencies:
       motion-dom: 12.35.1
       motion-utils: 12.29.2
+      tslib: 2.8.1
+
+  framer-motion@12.42.1:
+    dependencies:
+      motion-dom: 12.42.1
+      motion-utils: 12.39.0
       tslib: 2.8.1
 
   fresh@2.0.0: {}
@@ -14593,7 +14677,13 @@ snapshots:
     dependencies:
       motion-utils: 12.29.2
 
+  motion-dom@12.42.1:
+    dependencies:
+      motion-utils: 12.39.0
+
   motion-utils@12.29.2: {}
+
+  motion-utils@12.39.0: {}
 
   motion-v@1.10.3(@vueuse/core@14.2.1(vue@3.5.29(typescript@5.9.3)))(vue@3.5.29(typescript@5.9.3)):
     dependencies:
@@ -14606,6 +14696,24 @@ snapshots:
       - '@emotion/is-prop-valid'
       - react
       - react-dom
+
+  motion-v@2.3.0(@vueuse/core@14.2.1(vue@3.5.29(typescript@5.9.3)))(vue@3.5.29(typescript@5.9.3)):
+    dependencies:
+      '@vueuse/core': 14.2.1(vue@3.5.29(typescript@5.9.3))
+      framer-motion: 12.42.1
+      hey-listen: 1.0.8
+      motion-dom: 12.42.1
+      motion-utils: 12.39.0
+      vue: 3.5.29(typescript@5.9.3)
+    transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
+      - react
+      - react-dom
+
+  motion@12.42.1:
+    dependencies:
+      framer-motion: 12.42.1
+      tslib: 2.8.1
 
   mrmime@2.0.1: {}
 

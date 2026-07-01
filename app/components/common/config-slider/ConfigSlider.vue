@@ -21,7 +21,7 @@ const valueLabel = computed(() =>
 
 <template>
   <div
-    class="flex w-full min-w-0 items-center gap-3 sm:min-w-48"
+    class="flex w-full min-w-0 items-center gap-3 sm:min-w-52"
     :class="props.class"
   >
     <USlider
@@ -33,13 +33,13 @@ const valueLabel = computed(() =>
       :max="max"
       :step="step"
       :ui="{
-        track: 'bg-muted/70',
+        track: 'bg-muted/55',
         thumb:
-          'shadow-sm transition-transform duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-110',
+          'ring-default bg-highlighted shadow-sm transition-transform duration-150 ease-[cubic-bezier(0.23,1,0.32,1)] active:scale-110',
       }"
     />
     <span
-      class="text-highlighted bg-elevated/70 ring-default/70 min-w-12 rounded-full px-2.5 py-1 text-right text-xs font-medium tabular-nums ring"
+      class="text-highlighted bg-default/80 ring-default/70 min-w-12 rounded-full px-2.5 py-1 text-right font-mono text-xs tabular-nums ring"
     >
       {{ valueLabel }}
     </span>

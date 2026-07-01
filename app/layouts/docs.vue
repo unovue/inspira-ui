@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import "dialkit/styles.css";
+
 const route = useRoute();
 const isRoot = isRootPage();
 </script>
