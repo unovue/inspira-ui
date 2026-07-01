@@ -1,18 +1,14 @@
-<script lang="ts" setup>
-import type { Model as ConfigModel } from "@/components/common/shader-toy-config-manager/ShaderToyConfigManager.vue";
+<script setup lang="ts">
+import { useDialKit } from "dialkit/vue";
+
 import SingularityBackgroundDemo from "@/components/inspira/examples/bg-singularity/SingularityBackgroundDemo.vue";
 
-const config = ref<ConfigModel>({
-  hue: 0,
-  saturation: 1,
-  brightness: 1,
-  speed: 1,
-  mouseSensitivity: 1,
-  damping: 0,
-  noise: {
-    opacity: 0,
-    scale: 1,
-  },
+import { shaderToyControls } from "../dialkit-controls";
+import DialKitConfigPanel from "../DialKitConfigPanel.vue";
+
+const config = useDialKit("", shaderToyControls(), {
+  id: "bg-singularity",
+  persist: false,
 });
 </script>
 
@@ -22,7 +18,7 @@ const config = ref<ConfigModel>({
       <SingularityBackgroundDemo v-bind="config" />
     </template>
     <template #config>
-      <ShaderToyConfigManager v-model="config" />
+      <DialKitConfigPanel />
     </template>
   </ComponentPlayground>
 </template>

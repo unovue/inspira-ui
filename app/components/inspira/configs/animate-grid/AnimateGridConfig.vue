@@ -1,11 +1,20 @@
-<script lang="ts" setup>
-const config = ref({
-  textGlowStartColor: "",
-  perspective: 600,
-  textGlowEndColor: "",
-  rotateX: -1,
-  rotateY: -15,
-});
+<script setup lang="ts">
+import { useDialKit } from "dialkit/vue";
+
+import { range } from "../dialkit-controls";
+import DialKitConfigPanel from "../DialKitConfigPanel.vue";
+
+const config = useDialKit(
+  "",
+  {
+    textGlowStartColor: "#38ef7d80",
+    textGlowEndColor: "#38ef7d",
+    perspective: range(600, 100, 1600, 10),
+    rotateX: range(-1, -360, 360),
+    rotateY: range(-15, -360, 360),
+  },
+  { id: "animate-grid", persist: false },
+);
 </script>
 
 <template>
@@ -14,53 +23,7 @@ const config = ref({
       <AnimateGridDemo v-bind="config" />
     </template>
     <template #config>
-      <UFormField
-        label="textGlowStartColor"
-        class="form-field"
-      >
-        <ColorChooser v-model="config.textGlowStartColor" />
-      </UFormField>
-
-      <UFormField
-        label="textGlowEndColor"
-        class="form-field"
-      >
-        <ColorChooser v-model="config.textGlowEndColor" />
-      </UFormField>
-
-      <UFormField
-        label="perspective"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.perspective"
-          class="max-w-44"
-        />
-      </UFormField>
-
-      <UFormField
-        label="rotateX"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.rotateX"
-          :min="-360"
-          :max="360"
-          class="max-w-44"
-        />
-      </UFormField>
-
-      <UFormField
-        label="rotateY"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.rotateY"
-          :min="-360"
-          :max="360"
-          class="max-w-44"
-        />
-      </UFormField>
+      <DialKitConfigPanel />
     </template>
   </ComponentPlayground>
 </template>

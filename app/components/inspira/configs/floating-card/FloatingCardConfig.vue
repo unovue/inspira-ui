@@ -1,11 +1,19 @@
-<script lang="ts" setup>
-import type { Props as FloatingCardProps } from "../../ui/floating-card/FloatingCard.vue";
+<script setup lang="ts">
+import { useDialKit } from "dialkit/vue";
+
 import FloatingCard from "../../ui/floating-card/FloatingCard.vue";
 
-const config = ref<Required<Pick<FloatingCardProps, "rotateDepth" | "translateDepth">>>({
-  rotateDepth: 17.5,
-  translateDepth: 20,
-});
+import { range } from "../dialkit-controls";
+import DialKitConfigPanel from "../DialKitConfigPanel.vue";
+
+const config = useDialKit(
+  "",
+  {
+    rotateDepth: range(17.5, 0, 360, 0.5),
+    translateDepth: range(20, 0, 100),
+  },
+  { id: "floating-card", persist: false },
+);
 </script>
 
 <template>
@@ -48,31 +56,7 @@ const config = ref<Required<Pick<FloatingCardProps, "rotateDepth" | "translateDe
     </template>
 
     <template #config>
-      <UFormField
-        label="rotateDepth"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.rotateDepth"
-          class="w-full max-w-32"
-          :min="0"
-          :max="360"
-          :step="0.5"
-        />
-      </UFormField>
-
-      <UFormField
-        label="translateDepth"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.translateDepth"
-          class="w-full max-w-32"
-          :min="0"
-          :max="100"
-          :step="1"
-        />
-      </UFormField>
+      <DialKitConfigPanel />
     </template>
   </ComponentPlayground>
 </template>

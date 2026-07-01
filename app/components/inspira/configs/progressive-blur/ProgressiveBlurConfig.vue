@@ -1,11 +1,30 @@
-<script lang="ts" setup>
+<script setup lang="ts">
+import { useDialKit } from "dialkit/vue";
+
+import { range, select } from "../dialkit-controls";
+import DialKitConfigPanel from "../DialKitConfigPanel.vue";
+
 interface Props {
   direction: "top" | "right" | "left" | "bottom";
   blurLayers: number;
   blurIntensity: number;
 }
 
-const config = ref<Props>({ direction: "bottom", blurLayers: 8, blurIntensity: 6 });
+const rawConfig = useDialKit(
+  "",
+  {
+    direction: select("bottom", ["top", "right", "left", "bottom"]),
+    blurLayers: range(8, 0, 50),
+    blurIntensity: range(6, 0, 10, 0.01),
+  },
+  { id: "progressive-blur", persist: false },
+);
+
+const config = computed<Props>(() => ({
+  direction: rawConfig.value.direction as Props["direction"],
+  blurLayers: rawConfig.value.blurLayers,
+  blurIntensity: rawConfig.value.blurIntensity,
+}));
 </script>
 
 <template>
@@ -14,36 +33,7 @@ const config = ref<Props>({ direction: "bottom", blurLayers: 8, blurIntensity: 6
       <ProgressiveBlurDemo v-bind="config" />
     </template>
     <template #config>
-      <UFormField
-        label="direction"
-        class="form-field"
-      >
-        <USelect
-          v-model="config.direction"
-          :items="['top', 'right', 'left', 'bottom']"
-        />
-      </UFormField>
-      <UFormField
-        label="blurLayers"
-        class="form-field"
-      >
-        <ConfigSlider
-          v-model="config.blurLayers"
-          :min="0"
-          :max="50"
-        />
-      </UFormField>
-      <UFormField
-        label="blurIntensity"
-        class="form-field"
-      >
-        <ConfigSlider
-          v-model="config.blurIntensity"
-          :min="0"
-          :step="0.01"
-          :max="10"
-        />
-      </UFormField>
+      <DialKitConfigPanel />
     </template>
   </ComponentPlayground>
 </template>

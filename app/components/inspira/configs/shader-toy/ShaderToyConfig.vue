@@ -1,18 +1,21 @@
-<script lang="ts" setup>
-import type { Model as ConfigModel } from "@/components/common/shader-toy-config-manager/ShaderToyConfigManager.vue";
+<script setup lang="ts">
+import { useDialKit } from "dialkit/vue";
 
-const config = ref<ConfigModel>({
-  hue: 0,
-  saturation: 1,
-  brightness: 1,
-  speed: 1,
-  mouseSensitivity: 1,
-  damping: 0,
+import { select, shaderToyControls } from "../dialkit-controls";
+import DialKitConfigPanel from "../DialKitConfigPanel.vue";
+
+export interface ConfigModel {
+  hue: number;
+  saturation: number;
+  brightness: number;
+  speed: number;
+  mouseSensitivity: number;
+  damping: number;
   noise: {
-    opacity: 0,
-    scale: 1,
-  },
-});
+    opacity: number;
+    scale: number;
+  };
+}
 
 // Source Link: https://www.shadertoy.com/view/XlfGRj
 const starNest = `
@@ -291,48 +294,44 @@ const shaderExamples = {
   blackhole,
 };
 
-const preset = ref("starNest");
+const config = useDialKit(
+  "",
+  {
+    shader: select("starNest", [
+      { label: "Star Nest", value: "starNest" },
+      { label: "Vortex", value: "vortex" },
+      { label: "Black Hole", value: "blackhole" },
+    ]),
+    ...shaderToyControls(),
+  },
+  { id: "shader-toy", persist: false },
+);
 
-const selectedExample = computed(() => shaderExamples[preset.value]);
+const shaderConfig = computed<ConfigModel>(() => ({
+  hue: config.value.hue,
+  saturation: config.value.saturation,
+  brightness: config.value.brightness,
+  speed: config.value.speed,
+  mouseSensitivity: config.value.mouseSensitivity,
+  damping: config.value.damping,
+  noise: config.value.noise,
+}));
 
-function getName(key: string) {
-  const names = {
-    starNest: "Star Nest",
-    vortex: "Vortex",
-    blackhole: "Black Hole",
-  };
-
-  return names[key];
-}
-
-function getItems() {
-  return Object.keys(shaderExamples).map((key) => ({
-    label: getName(key),
-    value: key,
-  }));
-}
+const selectedExample = computed(
+  () => shaderExamples[config.value.shader as keyof typeof shaderExamples],
+);
 </script>
 
 <template>
   <ComponentPlayground>
     <template #component>
       <ShaderToyDemo
-        v-bind="config"
+        v-bind="shaderConfig"
         :shader-code="selectedExample"
       />
     </template>
     <template #config>
-      <UFormField
-        label="shader"
-        class="form-field"
-      >
-        <USelect
-          v-model="preset"
-          class="w-full"
-          :items="getItems()"
-        />
-      </UFormField>
-      <ShaderToyConfigManager v-model="config" />
+      <DialKitConfigPanel />
     </template>
   </ComponentPlayground>
 </template>

@@ -1,44 +1,29 @@
 <script setup lang="ts">
+import { useDialKit } from "dialkit/vue";
+
 import ScalesDemo from "@/components/inspira/examples/scales/ScalesDemo.vue";
 
-const config = ref<{
-  size: number;
-  orientation: "horizontal" | "vertical" | "diagonal";
-}>({
-  size: 8,
-  orientation: "diagonal",
-});
+import { range, select } from "../dialkit-controls";
+import DialKitConfigPanel from "../DialKitConfigPanel.vue";
+
+const config = useDialKit(
+  "",
+  {
+    color: "#73737333",
+    size: range(8, 1, 24),
+    orientation: select("diagonal", ["horizontal", "vertical", "diagonal"]),
+  },
+  { id: "scales", persist: false },
+);
 </script>
 
 <template>
   <ComponentPlayground>
     <template #component>
-      <ScalesDemo v-bind="config" />
+      <ScalesDemo v-bind="config as any" />
     </template>
     <template #config>
-      <UFormField
-        label="size"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.size"
-          class="max-w-44"
-        />
-      </UFormField>
-      <UFormField
-        label="orientation"
-        class="form-field"
-      >
-        <USelect
-          v-model="config.orientation"
-          :items="[
-            { label: 'Horizontal', value: 'horizontal' },
-            { label: 'Vertical', value: 'vertical' },
-            { label: 'Diagonal', value: 'diagonal' },
-          ]"
-          class="w-full max-w-44"
-        />
-      </UFormField>
+      <DialKitConfigPanel />
     </template>
   </ComponentPlayground>
 </template>

@@ -1,13 +1,31 @@
-<script lang="ts" setup>
-const config = ref({
-  text: "Introducing Inspira UI",
-  folderSize: { width: 32, height: 24 },
-  teaserImageSize: { width: 20, height: 14 },
-  hoverImageSize: { width: 48, height: 32 },
-  hoverTranslateY: -35,
-  hoverSpread: 20,
-  hoverRotation: 15,
-});
+<script setup lang="ts">
+import { useDialKit } from "dialkit/vue";
+
+import { range } from "../dialkit-controls";
+import DialKitConfigPanel from "../DialKitConfigPanel.vue";
+
+const config = useDialKit(
+  "",
+  {
+    text: "Introducing Inspira UI",
+    folderSize: {
+      width: range(32, 8, 96),
+      height: range(24, 8, 96),
+    },
+    teaserImageSize: {
+      width: range(20, 8, 96),
+      height: range(14, 8, 96),
+    },
+    hoverImageSize: {
+      width: range(48, 8, 128),
+      height: range(32, 8, 128),
+    },
+    hoverTranslateY: range(-35, -120, 120),
+    hoverSpread: range(20, 0, 80),
+    hoverRotation: range(15, -360, 360),
+  },
+  { id: "images-badge", persist: false },
+);
 </script>
 
 <template>
@@ -16,107 +34,7 @@ const config = ref({
       <ImagesBadgeDemo v-bind="config" />
     </template>
     <template #config>
-      <UFormField
-        label="text"
-        class="form-field"
-      >
-        <UInput
-          v-model="config.text"
-          class="max-w-44"
-        />
-      </UFormField>
-
-      <UFormField
-        label="folderSize.width"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.folderSize.width"
-          class="max-w-44"
-        />
-      </UFormField>
-
-      <UFormField
-        label="folderSize.height"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.folderSize.height"
-          class="max-w-44"
-        />
-      </UFormField>
-
-      <UFormField
-        label="teaserImageSize.width"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.teaserImageSize.width"
-          class="max-w-44"
-        />
-      </UFormField>
-
-      <UFormField
-        label="teaserImageSize.height"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.teaserImageSize.height"
-          class="max-w-44"
-        />
-      </UFormField>
-
-      <UFormField
-        label="hoverImageSize.width"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.hoverImageSize.width"
-          class="max-w-44"
-        />
-      </UFormField>
-
-      <UFormField
-        label="hoverImageSize.height"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.hoverImageSize.height"
-          class="max-w-44"
-        />
-      </UFormField>
-
-      <UFormField
-        label="hoverTranslateY"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.hoverTranslateY"
-          class="max-w-44"
-        />
-      </UFormField>
-
-      <UFormField
-        label="hoverSpread"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.hoverSpread"
-          class="max-w-44"
-        />
-      </UFormField>
-
-      <UFormField
-        label="hoverRotation"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.hoverRotation"
-          :min="-360"
-          :max="360"
-          class="max-w-44"
-        />
-      </UFormField>
+      <DialKitConfigPanel />
     </template>
   </ComponentPlayground>
 </template>

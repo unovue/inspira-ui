@@ -1,9 +1,17 @@
-<script lang="ts" setup>
-const text = shallowRef("I'll be Hokage someday, Dattebayo!");
-const config = ref({
-  revealDelayMs: 50,
-  text: refDebounced(text, 500),
-});
+<script setup lang="ts">
+import { useDialKit } from "dialkit/vue";
+
+import { range } from "../dialkit-controls";
+import DialKitConfigPanel from "../DialKitConfigPanel.vue";
+
+const config = useDialKit(
+  "",
+  {
+    revealDelayMs: range(50, 0, 500, 10),
+    text: "I'll be Hokage someday, Dattebayo!",
+  },
+  { id: "encrypted-text", persist: false },
+);
 </script>
 
 <template>
@@ -12,21 +20,7 @@ const config = ref({
       <EncryptedTextDemo v-bind="config" />
     </template>
     <template #config>
-      <UFormField
-        label="revealDelayMs"
-        class="form-field"
-      >
-        <UInputNumber v-model="config.revealDelayMs" />
-      </UFormField>
-      <UFormField
-        label="text"
-        class="form-field"
-      >
-        <UInput
-          v-model="text"
-          class="min-w-3xs"
-        />
-      </UFormField>
+      <DialKitConfigPanel />
     </template>
   </ComponentPlayground>
 </template>

@@ -91,7 +91,7 @@ onUpdated(() => {
 
         <div
           :key="`stageRefreshKey${refreshKey}`"
-          class="relative flex min-h-88 items-center justify-center p-6 sm:min-h-96 sm:p-10"
+          class="relative flex min-h-88 items-center justify-center p-6 sm:min-h-96 sm:p-8"
         >
           <slot name="component" />
         </div>

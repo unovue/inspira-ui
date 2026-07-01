@@ -1,8 +1,17 @@
-<script lang="ts" setup>
-const config = ref({
-  width: 450,
-  height: 600,
-});
+<script setup lang="ts">
+import { useDialKit } from "dialkit/vue";
+
+import { range } from "../dialkit-controls";
+import DialKitConfigPanel from "../DialKitConfigPanel.vue";
+
+const config = useDialKit(
+  "",
+  {
+    width: range(450, 240, 900, 10),
+    height: range(600, 320, 1000, 10),
+  },
+  { id: "carousel-3d", persist: false },
+);
 </script>
 
 <template>
@@ -11,25 +20,7 @@ const config = ref({
       <Carousel3dDemo v-bind="config" />
     </template>
     <template #config>
-      <UFormField
-        label="width"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.width"
-          class="max-w-44"
-        />
-      </UFormField>
-
-      <UFormField
-        label="height"
-        class="form-field"
-      >
-        <UInputNumber
-          v-model="config.height"
-          class="max-w-44"
-        />
-      </UFormField>
+      <DialKitConfigPanel />
     </template>
   </ComponentPlayground>
 </template>

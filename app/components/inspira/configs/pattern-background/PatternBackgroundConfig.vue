@@ -1,33 +1,38 @@
-<script lang="ts" setup>
+<script setup lang="ts">
 import type { BaseProps } from "../../ui/pattern-background";
+
+import { useDialKit } from "dialkit/vue";
 import {
   PATTERN_BACKGROUND_DIRECTION,
+  PATTERN_BACKGROUND_MASK,
   PATTERN_BACKGROUND_SPEED,
+  PATTERN_BACKGROUND_VARIANT,
 } from "../../ui/pattern-background";
 
-const config = ref<Omit<BaseProps, "class">>({
-  animate: true,
-  direction: "bottom",
-  variant: "big-dot",
-  size: "md",
-  mask: "ellipse-top",
-  speed: PATTERN_BACKGROUND_SPEED.Slow,
-});
+import { range, select } from "../dialkit-controls";
+import DialKitConfigPanel from "../DialKitConfigPanel.vue";
 
-const speedItems = [
+const controls = useDialKit(
+  "",
   {
-    label: "Default (10s)",
-    value: 10000,
+    animate: true,
+    direction: select("bottom", Object.values(PATTERN_BACKGROUND_DIRECTION)),
+    variant: select("big-dot", Object.values(PATTERN_BACKGROUND_VARIANT)),
+    size: select("md", ["xs", "sm", "md", "lg", "xl"]),
+    mask: select("ellipse-top", Object.values(PATTERN_BACKGROUND_MASK)),
+    speed: range(PATTERN_BACKGROUND_SPEED.Slow, 1000, 30000, 1000),
   },
-  {
-    label: "Slow (25s)",
-    value: 25000,
-  },
-  {
-    label: "Fast (5s)",
-    value: 5000,
-  },
-];
+  { id: "pattern-background", persist: false },
+);
+
+const config = computed<Omit<BaseProps, "class">>(() => ({
+  animate: controls.value.animate,
+  direction: controls.value.direction as NonNullable<BaseProps["direction"]>,
+  variant: controls.value.variant as NonNullable<BaseProps["variant"]>,
+  size: controls.value.size as NonNullable<BaseProps["size"]>,
+  mask: controls.value.mask as NonNullable<BaseProps["mask"]>,
+  speed: controls.value.speed as NonNullable<BaseProps["speed"]>,
+}));
 </script>
 
 <template>
@@ -37,70 +42,7 @@ const speedItems = [
     </template>
 
     <template #config>
-      <UFormField
-        label="animate"
-        class="form-field"
-      >
-        <USwitch
-          v-model="config.animate"
-          class="w-32"
-        />
-      </UFormField>
-
-      <UFormField
-        label="direction"
-        class="form-field"
-      >
-        <USelect
-          v-model="config.direction"
-          class="w-32"
-          :items="[...Object.values(PATTERN_BACKGROUND_DIRECTION)]"
-        />
-      </UFormField>
-
-      <UFormField
-        label="variant"
-        class="form-field"
-      >
-        <USelect
-          v-model="config.variant!"
-          class="w-32"
-          :items="['grid', 'dot', 'big-dot']"
-        />
-      </UFormField>
-
-      <UFormField
-        label="size"
-        class="form-field"
-      >
-        <USelect
-          v-model="config.size!"
-          class="w-32"
-          :items="['xs', 'sm', 'md', 'lg', 'xl']"
-        />
-      </UFormField>
-
-      <UFormField
-        label="mask"
-        class="form-field"
-      >
-        <USelect
-          v-model="config.mask!"
-          class="w-32"
-          :items="['ellipse', 'ellipse-top']"
-        />
-      </UFormField>
-
-      <UFormField
-        label="speed"
-        class="form-field"
-      >
-        <USelect
-          v-model="config.speed"
-          class="w-32"
-          :items="speedItems"
-        />
-      </UFormField>
+      <DialKitConfigPanel />
     </template>
   </ComponentPlayground>
 </template>
