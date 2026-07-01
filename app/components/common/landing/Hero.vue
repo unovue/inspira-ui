@@ -29,7 +29,7 @@ onMounted(() => {
 
         <p class="mt-7 max-w-xl text-lg leading-8 text-[#5d6670] dark:text-[#a7abb4]">
           Explore reusable components with live previews, props, API docs, install notes, and source
-          code. The homepage stays lightweight; detailed demos live on component pages.
+          code.
         </p>
 
         <div class="mt-9 flex flex-col gap-3 sm:flex-row">
