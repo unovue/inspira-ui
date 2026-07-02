@@ -1,7 +1,7 @@
 <template>
   <div class="grid gap-3">
     <NuxtLink
-      to="https://rahulv.dev"
+      to="https://rahulv.dev/?connect&referrer=inspira-ui"
       target="_blank"
       rel="noreferrer"
       aria-label="Hire the creator for custom Vue and Nuxt work"
@@ -28,7 +28,7 @@
               </span>
             </div>
             <div class="text-highlighted mt-1 text-sm leading-5 font-semibold tracking-[-0.02em]">
-              Need customized services?
+              Need custom solution?
             </div>
           </div>
         </div>
