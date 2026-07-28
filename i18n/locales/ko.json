@@ -18,5 +18,15 @@
     "toc": "이 페이지에서",
     "report": "문제 신고",
     "edit": "이 페이지 편집"
+  },
+
+  "toc": {
+    "title": "이 페이지에서",
+    "StarOnGitHub": "GitHub에서 Star 주기",
+    "CreateIssues": "이슈 만들기",
+    "JoinDiscord": "Discord 참여하기",
+    "Forum": "포럼",
+    "FollowOnX": "X에서 팔로우하기",
+    "FollowOnBluesky": "Bluesky에서 팔로우하기"
   }
 }
