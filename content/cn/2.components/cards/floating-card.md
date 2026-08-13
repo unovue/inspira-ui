@@ -3,7 +3,6 @@ title: Floating Card
 description: 一个带有透视、3D 倾斜和光泽跟随效果的悬停卡片组件，灵感来自 Perplexity Comet 网站。
 category: Card
 tags: [css, tailwind, card, motion, 3D, aceternity-ui]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="FloatingCardDemo.vue" config="FloatingCardConfig" componentId="floating-card" :componentFiles='["FloatingCard.vue"]'}

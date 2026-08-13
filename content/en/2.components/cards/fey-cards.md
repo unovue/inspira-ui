@@ -3,7 +3,6 @@ title: Fey Cards
 description: An animated hover card stack with layered image swapping and a cinematic heading reveal.
 category: Card
 tags: [css, tailwind, card, aceternity-ui]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="FeyCardsDemo.vue" config="FeyCardsConfig" componentId="fey-cards" :componentFiles='["FeyCards.vue"]'}

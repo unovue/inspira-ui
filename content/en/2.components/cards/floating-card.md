@@ -3,7 +3,6 @@ title: Floating Card
 description: A perspective, 3D, Tilt card as seen on Perplexity Comet's website.
 category: Card
 tags: [css, tailwind, card, motion, 3D, aceternity-ui]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="FloatingCardDemo.vue" config="FloatingCardConfig" componentId="floating-card" :componentFiles='["FloatingCard.vue"]'}

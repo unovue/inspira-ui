@@ -3,7 +3,6 @@ title: Fey Cards
 description: 一个带有分层图片切换和电影感标题揭示效果的悬停卡片堆叠动画组件。
 category: Card
 tags: [css, tailwind, card, aceternity-ui]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="FeyCardsDemo.vue" config="FeyCardsConfig" componentId="fey-cards" :componentFiles='["FeyCards.vue"]'}

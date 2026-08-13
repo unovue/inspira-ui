@@ -418,7 +418,7 @@ const componentSections = computed(() => {
                     </span>
                     <span
                       v-if="component.badge"
-                      class="rounded-none border px-2 py-1 font-mono text-[0.58rem] font-semibold tracking-[0.1em] uppercase"
+                      class="rounded-none border px-2 py-1 font-mono text-[0.58rem] font-semibold tracking-widest uppercase"
                       :class="badgeClass(component.badge)"
                     >
                       {{ component.badge }}

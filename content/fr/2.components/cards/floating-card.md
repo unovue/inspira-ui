@@ -3,7 +3,6 @@ title: Floating Card
 description: Une carte au survol avec perspective, inclinaison 3D et reflet qui suit le curseur, inspirée du site de Perplexity Comet.
 category: Card
 tags: [css, tailwind, card, motion, 3D, aceternity-ui]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="FloatingCardDemo.vue" config="FloatingCardConfig" componentId="floating-card" :componentFiles='["FloatingCard.vue"]'}

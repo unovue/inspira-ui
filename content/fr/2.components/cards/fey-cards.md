@@ -3,7 +3,6 @@ title: Fey Cards
 description: Une pile de cartes animée au survol avec changement d’images en couches et un effet de révélation cinématographique du titre.
 category: Card
 tags: [css, tailwind, card, aceternity-ui]
-badge: New
 ---
 
 ::ComponentViewer{demoFile="FeyCardsDemo.vue" config="FeyCardsConfig" componentId="fey-cards" :componentFiles='["FeyCards.vue"]'}
