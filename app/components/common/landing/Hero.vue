@@ -59,7 +59,7 @@ const collections = ["Backgrounds", "Cards", "Interactions", "Text effects", "Vi
           <p
             class="text-highlighted text-5xl leading-none font-semibold tracking-[-0.06em] tabular-nums transition-opacity duration-300 group-hover:opacity-75 motion-reduce:transition-none xl:text-6xl"
           >
-            4.7k
+            4.9k
           </p>
           <p class="text-muted mt-3 flex items-center gap-1.5 text-xs leading-5">
             <UIcon
