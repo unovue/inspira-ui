@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import Lenis from "lenis";
-import { onBeforeUnmount, onMounted, ref } from "vue";
+import { ref } from "vue";
 
 interface Props {
   stiffness?: number;
@@ -133,45 +132,19 @@ const names = [
 ];
 
 const containerRef = ref<HTMLElement | null>(null);
-const contentRef = ref<HTMLElement | null>(null);
 const springConfig = computed(() => ({
   stiffness: props.stiffness,
   damping: props.damping,
   mass: props.mass,
 }));
-
-let lenis: Lenis | null = null;
-
-onMounted(() => {
-  if (!containerRef.value) return;
-
-  lenis = new Lenis({
-    autoRaf: true,
-    wrapper: containerRef.value,
-    content: contentRef.value ?? undefined,
-    duration: 3,
-    orientation: "vertical",
-    gestureOrientation: "vertical",
-    smoothWheel: true,
-    touchMultiplier: 2,
-  });
-});
-
-onBeforeUnmount(() => {
-  lenis?.destroy();
-  lenis = null;
-});
 </script>
 
 <template>
   <div
     ref="containerRef"
-    class="relative h-88 min-h-88 w-full overflow-auto overscroll-auto bg-blue-500 p-4 font-sans text-white sm:h-96 sm:min-h-96"
+    class="relative h-full min-h-full w-full overflow-auto overscroll-auto bg-blue-500 p-4 font-sans text-white"
   >
-    <div
-      ref="contentRef"
-      class="relative flex min-h-[200vh] items-start justify-center pt-96 uppercase"
-    >
+    <div class="relative flex min-h-[200vh] items-start justify-center pt-96 uppercase">
       <p class="absolute top-4 left-4 text-xl font-bold">Scroll slowly</p>
 
       <div
