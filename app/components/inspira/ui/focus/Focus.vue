@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { Motion } from "motion-v";
+
 interface FocusProps {
   sentence?: string;
   manualMode?: boolean;

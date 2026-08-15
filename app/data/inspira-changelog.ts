@@ -21,6 +21,32 @@ export interface InspiraChangelogEntry {
 
 export const inspiraChangelog: InspiraChangelogEntry[] = [
   {
+    type: "added",
+    date: "2026-08-16",
+    title: "Parallax Float, Circular Gallery, Cube Carousel, and Screw Text added.",
+    description:
+      "New depth, radial gallery, 3D carousel, and letter animation components expand the collection with cursor-driven movement, circular layouts, draggable media navigation, and 3D text transitions.",
+    links: [
+      { label: "Parallax Float", to: "/components/miscellaneous/parallax-float" },
+      { label: "Circular Gallery", to: "/components/miscellaneous/circular-gallery" },
+      { label: "Cube Carousel", to: "/components/cards/cube-carousel" },
+      { label: "Screw Text", to: "/components/text-animations/screw-text" },
+    ],
+  },
+  {
+    type: "added",
+    date: "2026-08-15",
+    title: "Highlight Text, Scroll Swap Text, Letter Swap, and Card Stack added.",
+    description:
+      "Four motion components expanded the collection with text highlights, scroll-driven text swaps, letter animations, and layered card transitions.",
+    links: [
+      { label: "Highlight Text", to: "/components/text-animations/highlight-text" },
+      { label: "Scroll Swap Text", to: "/components/text-animations/scroll-swap-text" },
+      { label: "Letter Swap", to: "/components/text-animations/letter-swap" },
+      { label: "Card Stack", to: "/components/cards/card-stack" },
+    ],
+  },
+  {
     type: "fixed",
     date: "2026-07-03",
     title: "Production code highlighting restored.",
