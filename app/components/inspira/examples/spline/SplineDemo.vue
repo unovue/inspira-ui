@@ -19,7 +19,7 @@ const sceneUrl = "https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode";
 const heightClass = computed(() => ({
   "h-80": props.height === "sm",
   "h-96": props.height === "md",
-  "h-[34rem]": props.height === "lg",
+  "h-[36rem]": props.height === "lg",
 }));
 </script>
 

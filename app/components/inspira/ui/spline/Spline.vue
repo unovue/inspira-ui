@@ -2,7 +2,7 @@
 import type { SplineEventName } from "@splinetool/runtime";
 import { Application } from "@splinetool/runtime";
 import { useDebounceFn, useIntersectionObserver } from "@vueuse/core";
-import { computed, nextTick, onMounted, onUnmounted, ref, watch } from "vue";
+import { computed, nextTick, onMounted, onUnmounted, ref, shallowRef, watch } from "vue";
 import ParentSize from "./ParentSize.vue";
 
 const props = defineProps({
@@ -33,7 +33,7 @@ const emit = defineEmits([
 
 const canvasRef = ref<HTMLCanvasElement | null>(null);
 const isLoading = ref(false);
-const splineApp = ref<Application | null>(null);
+const splineApp = shallowRef<Application | null>(null);
 const isVisible = ref(true);
 
 let cleanup: () => void = () => {};
