@@ -3,6 +3,7 @@ title: Spline
 description: A Vue wrapper component for the Spline 3D tool, providing events and auto-resizing.
 category: Visualization
 tags: [css, tailwind, spline]
+badge: Updated
 ---
 
 ::ComponentViewer{demoFile="SplineDemo.vue" config="SplineConfig" componentId="spline" :componentFiles='["Spline.vue", "ParentSize.vue"]' dependencies="@splinetool/runtime"}

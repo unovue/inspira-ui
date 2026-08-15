@@ -3,6 +3,7 @@ title: Infinite Grid
 description: A high-performance, interactive 3D infinite grid component built with OGL as seen on phantom.land
 category: Visualization
 tags: [css, tailwind, phantom-land, ogl, webgl]
+badge: Updated
 ---
 
 ::ComponentViewer{demoFile="InfiniteGridDemo.vue" config="InfiniteGridConfig" componentId="infinite-grid" :componentFiles='["InfiniteGrid.vue", "InfiniteGridClass.ts", "DisposalManager.ts", "EventHandler.ts", "GridManager.ts", "PostProcessShader.ts", "createTexture.ts", "shaders.ts", "types.ts"]' dependencies="ogl gsap"}

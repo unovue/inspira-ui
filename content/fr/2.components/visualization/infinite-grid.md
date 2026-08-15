@@ -3,6 +3,7 @@ title: Grille infinie
 description: Une grille 3D infinie, interactive et performante, construite avec OGL comme vue sur phantom.land.
 category: Visualization
 tags: [css, tailwind, phantom-land, ogl, webgl]
+badge: Updated
 ---
 
 ::ComponentViewer{demoFile="InfiniteGridDemo.vue" config="InfiniteGridConfig" componentId="infinite-grid" :componentFiles='["InfiniteGrid.vue", "InfiniteGridClass.ts", "DisposalManager.ts", "EventHandler.ts", "GridManager.ts", "PostProcessShader.ts", "createTexture.ts", "shaders.ts", "types.ts"]' dependencies="ogl gsap"}

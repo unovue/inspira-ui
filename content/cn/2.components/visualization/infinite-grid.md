@@ -3,6 +3,7 @@ title: 无限网格
 description: 使用 OGL 构建的高性能交互式 3D 无限网格组件，效果类似 phantom.land。
 category: Visualization
 tags: [css, tailwind, phantom-land, ogl, webgl]
+badge: Updated
 ---
 
 ::ComponentViewer{demoFile="InfiniteGridDemo.vue" config="InfiniteGridConfig" componentId="infinite-grid" :componentFiles='["InfiniteGrid.vue", "InfiniteGridClass.ts", "DisposalManager.ts", "EventHandler.ts", "GridManager.ts", "PostProcessShader.ts", "createTexture.ts", "shaders.ts", "types.ts"]' dependencies="ogl gsap"}
