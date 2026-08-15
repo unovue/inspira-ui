@@ -86,8 +86,20 @@ function createCanvasContext(): { canvas: HTMLCanvasElement; ctx: CanvasRenderin
   return { canvas, ctx };
 }
 
-// Option 1: Pre-generate textures once, reuse them
-const textureCache = new Map<string, Texture>();
+// WebGL textures belong to the renderer context that created them.
+const textureCache = new WeakMap<object, Map<string, Texture>>();
+
+function getTextureCache(renderer: Renderer): Map<string, Texture> {
+  const context = renderer.gl as object;
+  let cache = textureCache.get(context);
+
+  if (!cache) {
+    cache = new Map<string, Texture>();
+    textureCache.set(context, cache);
+  }
+
+  return cache;
+}
 
 /**
  * Generates the foreground texture for a card using Canvas 2D API
@@ -123,9 +135,10 @@ export async function generateForegroundTexture(
   data: CardData,
   renderer: Renderer,
 ): Promise<Texture> {
+  const cache = getTextureCache(renderer);
   const cacheKey = `${data.title}-${data.tags?.join("-")}`;
-  if (textureCache.has(cacheKey)) {
-    return textureCache.get(cacheKey)!;
+  if (cache.has(cacheKey)) {
+    return cache.get(cacheKey)!;
   }
 
   const { canvas, ctx } = createCanvasContext();
@@ -262,7 +275,7 @@ export async function generateForegroundTexture(
     flipY: false,
   });
 
-  textureCache.set(cacheKey, texture);
+  cache.set(cacheKey, texture);
   return texture;
 }
 
