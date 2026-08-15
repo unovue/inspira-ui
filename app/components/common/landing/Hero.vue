@@ -44,7 +44,7 @@ const collections = ["Backgrounds", "Cards", "Interactions", "Text effects", "Vi
           <p
             class="text-highlighted text-5xl leading-none font-semibold tracking-[-0.06em] tabular-nums xl:text-6xl"
           >
-            130+
+            140+
           </p>
           <p class="text-muted mt-3 text-xs leading-5">Components</p>
         </div>
@@ -54,7 +54,7 @@ const collections = ["Backgrounds", "Cards", "Interactions", "Text effects", "Vi
           target="_blank"
           rel="noopener noreferrer"
           class="group border-default/70 focus-visible:ring-primary border-l pl-5 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-none"
-          aria-label="Inspira UI on GitHub, 4.7 thousand stars"
+          aria-label="Inspira UI on GitHub, 4.9 thousand stars"
         >
           <p
             class="text-highlighted text-5xl leading-none font-semibold tracking-[-0.06em] tabular-nums transition-opacity duration-300 group-hover:opacity-75 motion-reduce:transition-none xl:text-6xl"

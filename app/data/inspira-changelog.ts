@@ -23,14 +23,23 @@ export const inspiraChangelog: InspiraChangelogEntry[] = [
   {
     type: "added",
     date: "2026-08-16",
-    title: "Parallax Float, Circular Gallery, Cube Carousel, and Screw Text added.",
+    title:
+      "Parallax Float, Circular Gallery, Cube Carousel, Screw Text, Variable Text, and Variable Letter Text added.",
     description:
-      "New depth, radial gallery, 3D carousel, and letter animation components expand the collection with cursor-driven movement, circular layouts, draggable media navigation, and 3D text transitions.",
+      "New depth, radial gallery, 3D carousel, variable font, and letter animation components expand the collection with cursor-driven movement, circular layouts, draggable media navigation, and expressive text transitions.",
     links: [
       { label: "Parallax Float", to: "/components/miscellaneous/parallax-float" },
       { label: "Circular Gallery", to: "/components/miscellaneous/circular-gallery" },
       { label: "Cube Carousel", to: "/components/cards/cube-carousel" },
       { label: "Screw Text", to: "/components/text-animations/screw-text" },
+      {
+        label: "Variable Text",
+        to: "/components/text-animations/variable-text",
+      },
+      {
+        label: "Variable Letter Text",
+        to: "/components/text-animations/variable-letter-text",
+      },
     ],
   },
   {
