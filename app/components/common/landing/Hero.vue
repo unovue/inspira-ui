@@ -44,7 +44,7 @@ const collections = ["Backgrounds", "Cards", "Interactions", "Text effects", "Vi
           <p
             class="text-highlighted text-5xl leading-none font-semibold tracking-[-0.06em] tabular-nums xl:text-6xl"
           >
-            140+
+            145+
           </p>
           <p class="text-muted mt-3 text-xs leading-5">Components</p>
         </div>
