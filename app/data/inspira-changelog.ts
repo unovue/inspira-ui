@@ -22,6 +22,22 @@ export interface InspiraChangelogEntry {
 export const inspiraChangelog: InspiraChangelogEntry[] = [
   {
     type: "added",
+    date: "2026-08-17",
+    title:
+      "Breathing Text, Typewriter Text, Path Marquee, Media Text, Underline Text, and Float added.",
+    description:
+      "Six focused motion components add expressive typography, progressive text reveals, content that follows an SVG path, media-led text transitions, animated underlines, and continuous 3D floating motion.",
+    links: [
+      { label: "Breathing Text", to: "/components/text-animations/breathing-text" },
+      { label: "Typewriter Text", to: "/components/text-animations/typewriter-text" },
+      { label: "Path Marquee", to: "/components/miscellaneous/path-marquee" },
+      { label: "Media Text", to: "/components/miscellaneous/media-text" },
+      { label: "Underline Text", to: "/components/text-animations/underline-text" },
+      { label: "Float", to: "/components/miscellaneous/float" },
+    ],
+  },
+  {
+    type: "added",
     date: "2026-08-16",
     title:
       "Parallax Float, Circular Gallery, Cube Carousel, Screw Text, Variable Text, and Variable Letter Text added.",
@@ -42,6 +58,7 @@ export const inspiraChangelog: InspiraChangelogEntry[] = [
       },
     ],
   },
+
   {
     type: "added",
     date: "2026-08-15",
