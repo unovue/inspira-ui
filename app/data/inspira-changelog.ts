@@ -22,6 +22,19 @@ export interface InspiraChangelogEntry {
 export const inspiraChangelog: InspiraChangelogEntry[] = [
   {
     type: "added",
+    date: "2026-08-27",
+    title: "HTML in Canvas added.",
+    description:
+      "Apply ShaderToy-style effects to HTML with native browser rendering or a DOM snapshot fallback, including Liquid, Cloth, and Blaze presets.",
+    links: [
+      {
+        label: "HTML in Canvas",
+        to: "/components/html-in-canvas/html-in-canvas",
+      },
+    ],
+  },
+  {
+    type: "added",
     date: "2026-08-17",
     title:
       "Breathing Text, Typewriter Text, Path Marquee, Media Text, Underline Text, and Float added.",
