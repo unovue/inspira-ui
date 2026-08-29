@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue";
-import type { MouseMode } from "./InspiraShaderToy";
+import type { MouseMode, ShaderUniforms } from "./InspiraShaderToy";
 import { cn } from "@inspira-ui/plugins";
 import { computed, onMounted, onUnmounted, shallowRef, watch } from "vue";
 import { InspiraShaderToy } from "./InspiraShaderToy";
@@ -26,6 +26,7 @@ interface Props {
   autoPause?: boolean;
   interactive?: boolean;
   noise?: NoiseConfig;
+  uniforms?: ShaderUniforms;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -74,7 +75,7 @@ function updatePlayback() {
 function setShaderSource(source: string) {
   if (!shader) return;
 
-  const success = shader.setShader({ source });
+  const success = shader.setShader({ source, uniforms: props.uniforms });
 
   if (!success) {
     emit("error", "Failed to compile shader");
@@ -136,6 +137,12 @@ onUnmounted(() => {
 watch(
   () => props.shaderCode,
   (v) => setShaderSource(v),
+);
+
+watch(
+  () => props.uniforms,
+  (v) => shader?.setUniforms(v ?? {}),
+  { deep: true },
 );
 
 watch(

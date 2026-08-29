@@ -34,6 +34,7 @@ const COMPONENT_DEPENDENCIES = new Map<string, string[]>([
   ["scroll-island", ["animated-circular-progressbar"]],
   ["bg-silk", ["shader-toy"]],
   ["bg-stractium", ["shader-toy"]],
+  ["ribbon-background", ["shader-toy"]],
   ["html-ascii", ["html-in-canvas"]],
   ["html-blaze", ["html-in-canvas"]],
   ["html-chromatic", ["html-in-canvas"]],

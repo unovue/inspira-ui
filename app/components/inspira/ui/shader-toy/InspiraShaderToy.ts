@@ -2,7 +2,11 @@ import { Camera, Geometry, Mesh, Program, Renderer, Transform } from "ogl";
 
 export interface ShaderConfig {
   source: string;
+  uniforms?: ShaderUniforms;
 }
+
+export type ShaderUniformValue = number | number[] | Float32Array;
+export type ShaderUniforms = Record<string, ShaderUniformValue>;
 
 export interface MouseState {
   x: number;
@@ -51,6 +55,7 @@ export class InspiraShaderToy {
 
   private _speed: number = 1;
   private _pixelRatio: number = 1;
+  private customUniforms: ShaderUniforms = {};
 
   // Shader source
   private shaderSource: string = "";
@@ -340,6 +345,9 @@ export class InspiraShaderToy {
         vertex: this.vertexShader,
         fragment: fullFragmentShader,
         uniforms: {
+          ...Object.fromEntries(
+            Object.entries(this.customUniforms).map(([name, value]) => [name, { value }]),
+          ),
           iResolution: {
             value: this.getResolution(),
           },
@@ -444,6 +452,7 @@ export class InspiraShaderToy {
   // Public methods
   public setShader(config: ShaderConfig): boolean {
     this.shaderSource = config.source;
+    this.customUniforms = { ...config.uniforms };
     const success = this.compileProgram();
 
     // If playing, trigger a redraw
@@ -452,6 +461,26 @@ export class InspiraShaderToy {
     }
 
     return success;
+  }
+
+  public setUniforms(uniforms: ShaderUniforms): void {
+    this.customUniforms = { ...uniforms };
+
+    if (this.program) {
+      Object.entries(uniforms).forEach(([name, value]) => {
+        const uniform = this.program?.uniforms[name];
+
+        if (uniform) {
+          uniform.value = value;
+        } else if (this.program) {
+          this.program.uniforms[name] = { value };
+        }
+      });
+    }
+
+    if (!this.isPlaying && this.program && this.mesh) {
+      this.draw();
+    }
   }
 
   public setHSV(hsv: Partial<HSVControls>): void {

@@ -22,6 +22,14 @@ export interface InspiraChangelogEntry {
 export const inspiraChangelog: InspiraChangelogEntry[] = [
   {
     type: "added",
+    date: "2026-08-29",
+    title: "Ribbon Background added.",
+    description:
+      "A layered ShaderToy background with configurable ribbon colors, rotation, animation speed, and transparent rendering.",
+    links: [{ label: "Ribbon Background", to: "/components/backgrounds/ribbon-background" }],
+  },
+  {
+    type: "added",
     date: "2026-08-28",
     title: "Six HTML surface effects added.",
     description:
