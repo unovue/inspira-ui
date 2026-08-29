@@ -25,6 +25,7 @@ interface ElementImageContext extends CanvasRenderingContext2D {
 
 interface Props {
   shaderCode: string;
+  vertexShaderCode?: string;
   uniforms?: ShaderUniforms;
   frameRate?: number;
   pixelRatio?: number;
@@ -200,7 +201,23 @@ function handlePointerMove(event: PointerEvent) {
   if (!props.interactive || !rootRef.value) return;
 
   const rect = rootRef.value.getBoundingClientRect();
+  renderer?.setPointerInside(true);
   renderer?.setPointer(event.clientX - rect.left, event.clientY - rect.top, event.buttons > 0);
+}
+
+function handlePointerEnter() {
+  if (props.interactive) renderer?.setPointerInside(true);
+}
+
+function handlePointerLeave() {
+  if (!props.interactive) return;
+
+  renderer?.setPointerInside(false);
+  renderer?.releasePointer();
+}
+
+function handlePointerRelease() {
+  if (props.interactive) renderer?.releasePointer();
 }
 
 function handlePointerDown(event: PointerEvent) {
@@ -208,6 +225,10 @@ function handlePointerDown(event: PointerEvent) {
 
   const rect = rootRef.value.getBoundingClientRect();
   renderer?.setPointer(event.clientX - rect.left, event.clientY - rect.top, true);
+}
+
+function handleWheel(event: WheelEvent) {
+  renderer?.setScrollVelocity(event.deltaY);
 }
 
 function handleVisibilityChange() {
@@ -246,6 +267,7 @@ async function initializeRenderer() {
       shaderCode: props.shaderCode,
       speed: props.speed,
       uniforms: props.uniforms,
+      vertexShaderCode: props.vertexShaderCode,
     });
   } catch (error) {
     handleError(error instanceof Error ? error.message : "Unable to initialize HTML shader");
@@ -300,9 +322,8 @@ onBeforeUnmount(() => {
   sourceContext = null;
 });
 
-watch(
-  () => props.shaderCode,
-  (shaderCode) => renderer?.setShader(shaderCode),
+watch([() => props.shaderCode, () => props.vertexShaderCode], ([shaderCode, vertexShaderCode]) =>
+  renderer?.setShader(shaderCode, vertexShaderCode),
 );
 
 watch(
@@ -340,7 +361,12 @@ watch(shouldPlay, updatePlayback);
     v-bind="$attrs"
     :class="cn('relative isolate block h-full w-full overflow-hidden', props.class)"
     @pointerdown="handlePointerDown"
+    @pointerenter="handlePointerEnter"
+    @pointerleave="handlePointerLeave"
     @pointermove="handlePointerMove"
+    @pointercancel="handlePointerRelease"
+    @pointerup="handlePointerRelease"
+    @wheel.passive="handleWheel"
   >
     <canvas
       ref="sourceRef"

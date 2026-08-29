@@ -7,34 +7,37 @@ badge: New
 dependencies: []
 ---
 
-::ComponentViewer{demoFile="HtmlInCanvasDemo.vue" config="HtmlInCanvasConfig" componentId="html-in-canvas" :componentFiles='["HtmlInCanvas.vue", "HtmlInCanvasRenderer.ts", "captureElement.ts", "presets.ts", "index.ts"]'}
+::ComponentViewer{demoFile="HtmlInCanvasDemo.vue" config="HtmlInCanvasConfig" componentId="html-in-canvas" :componentFiles='["HtmlInCanvas.vue", "HtmlInCanvasRenderer.ts", "captureElement.ts", "index.ts"]'}
 
 HTML in Canvas 仍是实验性浏览器 API。浏览器不支持时，组件会捕获带样式的 DOM 快照，并通过同一个 WebGL 着色器处理。原始 DOM 仍保留交互能力和可访问性。
 
 片元着色器必须定义 `mainImage(out vec4 fragColor, in vec2 fragCoord)`。捕获的 HTML 可通过 `iChannel0` 访问。
 
-`htmlInCanvasShaders` 提供自动运行的 `liquid`、`cloth` 和 `blaze` 预设，可直接传给 `shaderCode`，也可作为自定义位移着色器的参考。
+需要精简且类型明确的效果 API 时，请使用 `HtmlLiquid`、`HtmlChromatic`、`HtmlAscii`、`HtmlCloth`、`HtmlBlaze` 或 `HtmlDrag`。这些组件统一复用本组件的渲染与降级逻辑。
+
+如果效果还需要顶点阶段逻辑，可传入 `vertexShaderCode`。它必须定义 `main()`，且不能包含 `#version` 指令。分段平面提供内置的 `vec2 position` 和 `vec2 textureCoord` 属性，两个着色器阶段可使用相同的 uniform。
 
 #api
 
 ## API
 
-| 属性           | 类型             | 默认值  | 说明                                     |
-| -------------- | ---------------- | ------- | ---------------------------------------- |
-| `shaderCode`   | `string`         | —       | 包含 `mainImage` 函数的片元着色器代码。  |
-| `uniforms`     | `ShaderUniforms` | `{}`    | 自定义数字、布尔值、向量或矩阵 uniform。 |
-| `frameRate`    | `number`         | `60`    | 最大渲染帧率。                           |
-| `pixelRatio`   | `number`         | `1`     | 渲染比例，限制在 `0.25` 到 `2` 之间。    |
-| `speed`        | `number`         | `1`     | 应用于 `iTime` 的速度倍率。              |
-| `mouseDamping` | `number`         | `0.85`  | 指针移动的平滑程度。                     |
-| `paused`       | `boolean`        | `false` | 暂停渲染循环。                           |
-| `autoPause`    | `boolean`        | `true`  | 离开视口或页面隐藏时自动暂停。           |
-| `interactive`  | `boolean`        | `true`  | 跟踪指针并更新 `iMouse`。                |
-| `class`        | `string`         | —       | 合并到根元素的额外类名。                 |
+| 属性               | 类型             | 默认值  | 说明                                       |
+| ------------------ | ---------------- | ------- | ------------------------------------------ |
+| `shaderCode`       | `string`         | —       | 包含 `mainImage` 函数的片元着色器代码。    |
+| `vertexShaderCode` | `string`         | —       | 可选的顶点着色器代码，需包含 `main` 函数。 |
+| `uniforms`         | `ShaderUniforms` | `{}`    | 自定义数字、布尔值、向量或矩阵 uniform。   |
+| `frameRate`        | `number`         | `60`    | 最大渲染帧率。                             |
+| `pixelRatio`       | `number`         | `1`     | 渲染比例，限制在 `0.25` 到 `2` 之间。      |
+| `speed`            | `number`         | `1`     | 应用于 `iTime` 的速度倍率。                |
+| `mouseDamping`     | `number`         | `0.85`  | 指针移动的平滑程度。                       |
+| `paused`           | `boolean`        | `false` | 暂停渲染循环。                             |
+| `autoPause`        | `boolean`        | `true`  | 离开视口或页面隐藏时自动暂停。             |
+| `interactive`      | `boolean`        | `true`  | 跟踪指针并更新 `iMouse`。                  |
+| `class`            | `string`         | —       | 合并到根元素的额外类名。                   |
 
 ### 着色器输入
 
-组件按照 ShaderToy 约定提供 `iResolution`、`iTime`、`iTimeDelta`、`iFrameRate`、`iFrame`、`iMouse`、`iDate`、`iHasContent`、`iChannel0` 和 `iChannelResolution`。`iPointerVelocity`、`iPointerEnergy` 和 `iPointerAge` 提供会逐渐衰减的指针冲量，适合制作移动后自然平复的效果。HTML 纹理可用时，`iHasContent` 为 `1`。
+组件按照 ShaderToy 约定提供 `iResolution`、`iTime`、`iTimeDelta`、`iFrameRate`、`iFrame`、`iMouse`、`iDate`、`iHasContent`、`iChannel0` 和 `iChannelResolution`。`iPointerVelocity`、`iPointerEnergy` 和 `iPointerAge` 提供会逐渐衰减的指针冲量，适合制作移动后自然平复的效果。指针进入或离开表面时，`iPointerInside` 会在 `0` 和 `1` 之间平滑过渡。`iScrollVelocity` 提供逐渐衰减的垂直滚轮输入，用于顶点形变。HTML 纹理可用时，`iHasContent` 为 `1`。
 
 ### 事件
 
@@ -53,7 +56,5 @@ HTML in Canvas 仍是实验性浏览器 API。浏览器不支持时，组件会�
 #credits
 
 - 基于 [WICG HTML-in-Canvas 提案](https://github.com/WICG/html-in-canvas) 构建。
-- Cloth 预设基于 [MartinRGB](https://www.shadertoy.com/view/DttSRB) 的矢量场。
-- Blaze 预设使用 [Ashima Arts](https://github.com/ashima/webgl-noise) 的 MIT 许可 Simplex Noise 实现。
 
 ::

@@ -9,6 +9,7 @@ interface Props {
   demoFile: string;
   componentFiles?: string[];
   config: string;
+  showCredits?: boolean;
 }
 
 const {
@@ -19,6 +20,7 @@ const {
   componentFiles = [],
   demoFile,
   config,
+  showCredits = false,
 } = defineProps<Props>();
 
 const activeTab = ref("code");
@@ -36,7 +38,7 @@ const items = computed<TabsItem[]>(() => {
     },
   ];
 
-  if (showInstallation) {
+  if (showInstallation && showCredits) {
     tabs.push({
       label: "Install",
       icon: "si:lightning-line",

@@ -28,7 +28,7 @@
               </span>
             </div>
             <div class="text-highlighted mt-1 text-sm leading-5 font-semibold tracking-[-0.02em]">
-              Need custom solution?
+              Hire Me
             </div>
           </div>
         </div>

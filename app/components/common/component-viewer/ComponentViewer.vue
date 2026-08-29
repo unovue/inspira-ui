@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { useSlots } from "vue";
 import ComponentTabs from "./ComponentTabs.vue";
 
 interface Props {
@@ -20,6 +21,8 @@ const {
   demoFile,
   config,
 } = defineProps<Props>();
+
+const slots = useSlots();
 </script>
 
 <template>
@@ -33,6 +36,7 @@ const {
         :component-files="componentFiles"
         :demo-file="demoFile"
         :config="config"
+        :show-credits="Boolean(slots.credits)"
       >
         <template #api>
           <slot name="api" />

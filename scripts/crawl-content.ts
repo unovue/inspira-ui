@@ -34,6 +34,12 @@ const COMPONENT_DEPENDENCIES = new Map<string, string[]>([
   ["scroll-island", ["animated-circular-progressbar"]],
   ["bg-silk", ["shader-toy"]],
   ["bg-stractium", ["shader-toy"]],
+  ["html-ascii", ["html-in-canvas"]],
+  ["html-blaze", ["html-in-canvas"]],
+  ["html-chromatic", ["html-in-canvas"]],
+  ["html-cloth", ["html-in-canvas"]],
+  ["html-drag", ["html-in-canvas"]],
+  ["html-liquid", ["html-in-canvas"]],
 ]);
 
 const REGISTRY_URL = process.env.REGISTRY_URL ?? "https://inspira-ui.com/docs/r";
@@ -107,8 +113,8 @@ async function crawlHook(rootPath: string) {
       name,
       type,
       files: [file],
-      registryDependencies: Array.from(registryDependencies),
-      dependencies: Array.from(dependencies),
+      registryDependencies: [...registryDependencies],
+      dependencies: [...dependencies],
     });
   }
 
@@ -158,8 +164,8 @@ async function buildUIRegistry(componentPath: string, componentName: string) {
     name: componentName,
     type,
     files,
-    registryDependencies: Array.from(registryDependencies),
-    dependencies: Array.from(dependencies),
+    registryDependencies: [...registryDependencies],
+    dependencies: [...dependencies],
   } satisfies RegistryItem;
 }
 

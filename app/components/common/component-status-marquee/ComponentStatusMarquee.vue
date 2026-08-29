@@ -48,7 +48,7 @@ const releaseGroups = computed(() => {
           :overlay="false"
           :repeat="4"
           pause-on-hover
-          class="min-w-0 flex-1 [--duration:14s] [--gap:--spacing(0)]"
+          class="min-w-0 flex-1 [--duration:25s] [--gap:--spacing(0)]"
           :ui="{ content: 'w-auto! justify-start motion-reduce:animate-none' }"
         >
           <div

@@ -1,34 +1,77 @@
 <script setup lang="ts">
-import type { HtmlInCanvasPreset } from "../../ui/html-in-canvas";
 import { computed } from "vue";
-import { htmlInCanvasShaders } from "../../ui/html-in-canvas";
-
-interface Props {
-  effect?: HtmlInCanvasPreset;
-  frequency?: number;
-  mouseDamping?: number;
-  scale?: number;
-  speed?: number;
-  strength?: number;
-  waveSpeed?: number;
-}
 
 const props = withDefaults(defineProps<Props>(), {
-  effect: "liquid",
   frequency: 18,
   mouseDamping: 0.9,
-  scale: 6,
-  speed: 1,
   strength: 0.03,
   waveSpeed: 3,
 });
 
-const shaderCode = computed(() => htmlInCanvasShaders[props.effect]);
+const shaderCode = `
+uniform float uStrength;
+uniform float uFrequency;
+uniform float uWaveSpeed;
+
+vec2 flowField(vec2 uv, float time) {
+  float aspect = iResolution.x / iResolution.y;
+  vec2 point = (uv - 0.5) * vec2(aspect, 1.0);
+  float frequency = max(uFrequency, 1.0);
+  float speed = max(uWaveSpeed, 0.01);
+  vec2 flow = vec2(
+    sin(point.y * frequency + time * speed),
+    cos(point.x * (frequency * 0.82) - time * (speed * 0.9))
+  );
+
+  flow += 0.35 * vec2(
+    sin((point.x + point.y) * (frequency * 0.42) - time * speed),
+    cos((point.x - point.y) * (frequency * 0.48) + time * speed)
+  );
+
+  return flow;
+}
+
+void mainImage(out vec4 fragColor, in vec2 fragCoord) {
+  vec2 uv = fragCoord / iResolution.xy;
+  vec2 flow = flowField(uv, iTime);
+  vec2 pointer = iMouse.xy / iResolution.xy;
+  vec2 delta = uv - pointer;
+  delta.x *= iResolution.x / iResolution.y;
+  float distanceToPointer = length(delta);
+  vec2 direction = normalize(delta + vec2(0.0001));
+  direction.x /= iResolution.x / iResolution.y;
+  float ripple = sin(distanceToPointer * uFrequency - iPointerAge * uWaveSpeed * 5.0);
+  float rippleFalloff = exp(-distanceToPointer * 7.0) * exp(-iPointerAge * 1.5);
+  float impulse = iPointerEnergy * rippleFalloff;
+  vec2 velocity = iPointerVelocity / max(iResolution.xy, vec2(1.0));
+  vec2 displacement = flow * uStrength * vec2(0.14, 0.11);
+  displacement += direction * ripple * impulse * uStrength;
+  displacement += velocity * impulse * 0.4;
+
+  if (iHasContent > 0.5) {
+    vec2 sampleUv = clamp(uv + displacement, vec2(0.001), vec2(0.999));
+    vec2 detailUv = clamp(uv + displacement * 1.35, vec2(0.001), vec2(0.999));
+    vec4 surface = texture(iChannel0, sampleUv);
+    vec4 detail = texture(iChannel0, detailUv);
+    fragColor = mix(surface, detail, 0.05 + 0.05 * impulse);
+    return;
+  }
+
+  float sheen = abs(flow.x + flow.y) * 0.4 + ripple * impulse;
+  float alpha = smoothstep(0.55, 1.3, sheen) * 0.045;
+  fragColor = vec4(vec3(1.0), alpha);
+}
+`;
+
+interface Props {
+  frequency?: number;
+  mouseDamping?: number;
+  strength?: number;
+  waveSpeed?: number;
+}
 
 const uniforms = computed(() => ({
   uFrequency: props.frequency,
-  uScale: props.scale,
-  uSpeed: props.speed,
   uStrength: props.strength,
   uWaveSpeed: props.waveSpeed,
 }));
@@ -39,7 +82,6 @@ const uniforms = computed(() => ({
     <HtmlInCanvas
       :shader-code="shaderCode"
       :uniforms="uniforms"
-      :interactive="props.effect === 'liquid'"
       :mouse-damping="props.mouseDamping"
       class="border border-white/15 bg-white text-zinc-950"
     >
@@ -54,7 +96,8 @@ const uniforms = computed(() => ({
         <div class="grid min-h-0 md:grid-cols-[1.15fr_0.85fr]">
           <section class="flex flex-col justify-between border-zinc-950/15 p-5 md:border-r md:p-8">
             <p class="max-w-48 text-sm leading-6 text-zinc-500">
-              Switch between liquid refraction, a moving cloth field, and rising flame heat.
+              Pass HTML through a WebGL shader while preserving the original document structure and
+              fallback behavior.
             </p>
             <h2 class="max-w-xl text-5xl leading-[0.88] font-semibold tracking-tight sm:text-7xl">
               <span class="block">HTML,</span>
@@ -97,7 +140,7 @@ const uniforms = computed(() => ({
           class="flex items-center justify-between border-t border-zinc-950/15 px-5 py-4 text-xs sm:px-8"
         >
           <span>Experimental HTML rendering</span>
-          <span class="font-mono text-zinc-500">{{ props.effect }}</span>
+          <span class="font-mono text-zinc-500">liquid</span>
         </footer>
       </article>
     </HtmlInCanvas>

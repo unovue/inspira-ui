@@ -22,10 +22,25 @@ export interface InspiraChangelogEntry {
 export const inspiraChangelog: InspiraChangelogEntry[] = [
   {
     type: "added",
+    date: "2026-08-28",
+    title: "Six HTML surface effects added.",
+    description:
+      "HTML Liquid, Chromatic, ASCII, Cloth, Blaze, and Drag provide focused APIs for the shared HTML-in-Canvas renderer.",
+    links: [
+      { label: "HTML Liquid", to: "/components/html-in-canvas/html-liquid" },
+      { label: "HTML Chromatic", to: "/components/html-in-canvas/html-chromatic" },
+      { label: "HTML ASCII", to: "/components/html-in-canvas/html-ascii" },
+      { label: "HTML Cloth", to: "/components/html-in-canvas/html-cloth" },
+      { label: "HTML Blaze", to: "/components/html-in-canvas/html-blaze" },
+      { label: "HTML Drag", to: "/components/html-in-canvas/html-drag" },
+    ],
+  },
+  {
+    type: "added",
     date: "2026-08-27",
     title: "HTML in Canvas added.",
     description:
-      "Apply ShaderToy-style effects to HTML with native browser rendering or a DOM snapshot fallback, including Liquid, Cloth, and Blaze presets.",
+      "Apply custom fragment and vertex shaders to HTML with native browser rendering or a DOM snapshot fallback.",
     links: [
       {
         label: "HTML in Canvas",
@@ -348,13 +363,6 @@ export const inspiraChangelog: InspiraChangelogEntry[] = [
       { label: "Animated Testimonials", to: "/components/miscellaneous/animated-testimonials" },
       { label: "Spline", to: "/components/visualization/spline" },
     ],
-  },
-  {
-    type: "removed",
-    date: "2025-02-19",
-    title: "Copyright-sensitive components removed.",
-    description:
-      "Components with copyright risk were removed to keep the project clean and safe to use.",
   },
   {
     type: "added",

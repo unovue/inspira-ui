@@ -13,6 +13,7 @@ const documentationLinks = computed(() => [
 const ecosystemLinks = [
   { label: "Inspira UI Pro", to: "https://pro.inspira-ui.com" },
   { label: "Akaza UI", to: "https://akaza-ui.com" },
+  { label: "Instruo", to: "https://instruo.org" },
 ];
 
 const socialLinks = computed(() =>

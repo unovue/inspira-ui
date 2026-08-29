@@ -30,6 +30,7 @@ interface RendererOptions {
   shaderCode: string;
   speed: number;
   uniforms: ShaderUniforms;
+  vertexShaderCode?: string;
 }
 
 interface ProgramResources {
@@ -49,23 +50,49 @@ const RESERVED_UNIFORMS = new Set([
   "iMouse",
   "iPointerAge",
   "iPointerEnergy",
+  "iPointerInside",
   "iPointerVelocity",
   "iResolution",
+  "iScrollVelocity",
   "iTime",
   "iTimeDelta",
 ]);
 const ARRAY_UNIFORM_SUFFIX = /\[0\]$/;
 const VERSION_DIRECTIVE = /^\s*#version\b/m;
 
-const VERTEX_SHADER = `#version 300 es
-precision highp float;
-
-layout(location = 0) in vec2 position;
-
+const DEFAULT_VERTEX_SHADER = `
 void main() {
   gl_Position = vec4(position, 0.0, 1.0);
 }
 `;
+
+function createVertexShader(source = DEFAULT_VERTEX_SHADER) {
+  return `#version 300 es
+precision highp float;
+precision highp int;
+
+layout(location = 0) in vec2 position;
+layout(location = 1) in vec2 textureCoord;
+
+uniform vec3 iResolution;
+uniform float iTime;
+uniform float iTimeDelta;
+uniform float iFrameRate;
+uniform int iFrame;
+uniform vec4 iMouse;
+uniform vec2 iPointerVelocity;
+uniform float iPointerEnergy;
+uniform float iPointerAge;
+uniform float iPointerInside;
+uniform float iScrollVelocity;
+uniform vec4 iDate;
+uniform float iHasContent;
+uniform sampler2D iChannel0;
+uniform vec3 iChannelResolution[4];
+
+${source}
+`;
+}
 
 function createFragmentShader(source: string) {
   return `#version 300 es
@@ -81,6 +108,8 @@ uniform vec4 iMouse;
 uniform vec2 iPointerVelocity;
 uniform float iPointerEnergy;
 uniform float iPointerAge;
+uniform float iPointerInside;
+uniform float iScrollVelocity;
 uniform vec4 iDate;
 uniform float iHasContent;
 uniform sampler2D iChannel0;
@@ -98,6 +127,46 @@ void main() {
 `;
 }
 
+function createSurfaceVertices(segments = 32) {
+  const vertices: number[] = [];
+
+  for (let index = 0; index < segments; index += 1) {
+    const u0 = index / segments;
+    const u1 = (index + 1) / segments;
+    const x0 = u0 * 2 - 1;
+    const x1 = u1 * 2 - 1;
+
+    vertices.push(
+      x0,
+      -1,
+      u0,
+      0,
+      x1,
+      -1,
+      u1,
+      0,
+      x0,
+      1,
+      u0,
+      1,
+      x0,
+      1,
+      u0,
+      1,
+      x1,
+      -1,
+      u1,
+      0,
+      x1,
+      1,
+      u1,
+      1,
+    );
+  }
+
+  return new Float32Array(vertices);
+}
+
 export class HtmlInCanvasRenderer {
   private readonly gl: WebGL2RenderingContext;
   private readonly contentTexture: WebGLTexture;
@@ -105,6 +174,7 @@ export class HtmlInCanvasRenderer {
   private readonly vertexArray: WebGLVertexArrayObject;
   private readonly onError: RendererOptions["onError"];
   private readonly onReady: RendererOptions["onReady"];
+  private readonly vertexCount: number;
 
   private resources: ProgramResources | undefined;
   private animationFrame = 0;
@@ -133,8 +203,12 @@ export class HtmlInCanvasRenderer {
   private clickY = 0;
   private pointerAge = 1000;
   private pointerEnergy = 0;
+  private pointerInside = 0;
+  private pointerPressed = false;
   private pointerVelocityX = 0;
   private pointerVelocityY = 0;
+  private scrollVelocity = 0;
+  private targetPointerInside = 0;
 
   constructor(
     private readonly output: HTMLCanvasElement,
@@ -172,11 +246,23 @@ export class HtmlInCanvasRenderer {
     this.vertexArray = vertexArray;
     this.contentTexture = contentTexture;
 
+    const surfaceVertices = createSurfaceVertices();
+    this.vertexCount = surfaceVertices.length / 4;
+
     gl.bindVertexArray(vertexArray);
     gl.bindBuffer(gl.ARRAY_BUFFER, positionBuffer);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, surfaceVertices, gl.STATIC_DRAW);
     gl.enableVertexAttribArray(0);
-    gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 0, 0);
+    gl.vertexAttribPointer(0, 2, gl.FLOAT, false, 4 * Float32Array.BYTES_PER_ELEMENT, 0);
+    gl.enableVertexAttribArray(1);
+    gl.vertexAttribPointer(
+      1,
+      2,
+      gl.FLOAT,
+      false,
+      4 * Float32Array.BYTES_PER_ELEMENT,
+      2 * Float32Array.BYTES_PER_ELEMENT,
+    );
     gl.bindVertexArray(null);
 
     gl.bindTexture(gl.TEXTURE_2D, contentTexture);
@@ -204,7 +290,7 @@ export class HtmlInCanvasRenderer {
     this.setSpeed(options.speed);
     this.setUniforms(options.uniforms);
 
-    if (!this.setShader(options.shaderCode)) {
+    if (!this.setShader(options.shaderCode, options.vertexShaderCode)) {
       throw new Error("Unable to compile HTML shader");
     }
   }
@@ -225,12 +311,18 @@ export class HtmlInCanvasRenderer {
     return shader;
   }
 
-  private createProgram(shaderCode: string): ProgramResources {
+  private createProgram(shaderCode: string, vertexShaderCode?: string): ProgramResources {
     if (VERSION_DIRECTIVE.test(shaderCode)) {
       throw new Error("shaderCode must contain mainImage() without a #version directive");
     }
+    if (vertexShaderCode && VERSION_DIRECTIVE.test(vertexShaderCode)) {
+      throw new Error("vertexShaderCode must contain main() without a #version directive");
+    }
 
-    const vertexShader = this.compileShader(this.gl.VERTEX_SHADER, VERTEX_SHADER);
+    const vertexShader = this.compileShader(
+      this.gl.VERTEX_SHADER,
+      createVertexShader(vertexShaderCode),
+    );
     let fragmentShader: WebGLShader;
 
     try {
@@ -295,6 +387,8 @@ export class HtmlInCanvasRenderer {
     const pointerVelocity = this.getUniformLocation("iPointerVelocity");
     const pointerEnergy = this.getUniformLocation("iPointerEnergy");
     const pointerAge = this.getUniformLocation("iPointerAge");
+    const pointerInside = this.getUniformLocation("iPointerInside");
+    const scrollVelocity = this.getUniformLocation("iScrollVelocity");
     const date = this.getUniformLocation("iDate");
     const hasContent = this.getUniformLocation("iHasContent");
     const channel = this.getUniformLocation("iChannel0");
@@ -312,6 +406,8 @@ export class HtmlInCanvasRenderer {
     }
     if (pointerEnergy) this.gl.uniform1f(pointerEnergy, this.pointerEnergy);
     if (pointerAge) this.gl.uniform1f(pointerAge, this.pointerAge);
+    if (pointerInside) this.gl.uniform1f(pointerInside, this.pointerInside);
+    if (scrollVelocity) this.gl.uniform1f(scrollVelocity, this.scrollVelocity);
     if (date) {
       const seconds =
         now.getHours() * 3600 +
@@ -425,11 +521,13 @@ export class HtmlInCanvasRenderer {
     this.pointerEnergy *= Math.exp(-delta * 2.4);
     this.pointerVelocityX *= Math.exp(-delta * 5.5);
     this.pointerVelocityY *= Math.exp(-delta * 5.5);
+    this.scrollVelocity *= Math.exp(-delta * 7.5);
     this.frame += 1;
 
     const smoothing = 1 - this.mouseDamping;
     this.pointerX += (this.targetPointerX - this.pointerX) * smoothing;
     this.pointerY += (this.targetPointerY - this.pointerY) * smoothing;
+    this.pointerInside += (this.targetPointerInside - this.pointerInside) * smoothing;
 
     if (!this.uploadContent()) return;
 
@@ -446,7 +544,7 @@ export class HtmlInCanvasRenderer {
     }
 
     this.gl.bindVertexArray(this.vertexArray);
-    this.gl.drawArrays(this.gl.TRIANGLES, 0, 3);
+    this.gl.drawArrays(this.gl.TRIANGLES, 0, this.vertexCount);
     this.gl.bindVertexArray(null);
 
     if (!this.ready && (!this.expectsContent || this.hasContent)) {
@@ -469,9 +567,9 @@ export class HtmlInCanvasRenderer {
     }
   }
 
-  setShader(shaderCode: string) {
+  setShader(shaderCode: string, vertexShaderCode?: string) {
     try {
-      const next = this.createProgram(shaderCode);
+      const next = this.createProgram(shaderCode, vertexShaderCode);
       this.deleteProgram();
       this.resources = next;
       this.ready = false;
@@ -548,11 +646,40 @@ export class HtmlInCanvasRenderer {
       this.pointerAge = 0;
     }
 
-    if (pressed) {
-      this.clickX = this.targetPointerX;
-      this.clickY = this.targetPointerY;
+    if (pressed && !this.pointerPressed) {
+      this.clickX = Math.max(1, this.targetPointerX);
+      this.clickY = Math.max(1, this.targetPointerY);
+    }
+    if (!pressed && this.pointerPressed) {
+      this.clickX = -Math.abs(this.clickX);
+      this.clickY = -Math.abs(this.clickY);
     }
 
+    this.pointerPressed = pressed;
+
+    this.requestRender();
+  }
+
+  setPointerInside(inside: boolean) {
+    this.targetPointerInside = inside ? 1 : 0;
+    this.requestRender();
+  }
+
+  setScrollVelocity(deltaY: number) {
+    const limit = Math.max(this.height, 1);
+    this.scrollVelocity = Math.max(
+      -limit,
+      Math.min(limit, this.scrollVelocity + deltaY * this.pixelRatio),
+    );
+    this.requestRender();
+  }
+
+  releasePointer() {
+    if (!this.pointerPressed) return;
+
+    this.pointerPressed = false;
+    this.clickX = -Math.abs(this.clickX);
+    this.clickY = -Math.abs(this.clickY);
     this.requestRender();
   }
 
