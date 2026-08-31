@@ -30,7 +30,7 @@ export default defineAppConfig({
         content: "min-h-0 bg-transparent",
         viewport: "divide-default/60 divide-y px-4 pb-4",
         group: "py-2",
-        label: "px-3 py-3 text-[0.68rem] font-semibold tracking-[0.16em] text-toned uppercase",
+        label: "px-3 py-3 text-[0.6875rem] font-semibold tracking-[0.12em] text-toned uppercase",
         item: "rounded-none px-3 py-3 transition-colors duration-200 before:rounded-none before:transition-colors before:duration-200 data-highlighted:not-data-disabled:before:bg-elevated/55",
         itemLeadingIcon: "size-4",
         itemLabel: "text-sm",
@@ -38,59 +38,89 @@ export default defineAppConfig({
         itemDescription: "text-xs text-muted",
       },
     },
-    prosePre: {
-      slots: {
-        root: "group relative my-6",
-        header:
-          "border-default/70 bg-default relative flex items-center gap-1.5 rounded-none border border-b-0 px-4 py-3",
-        filename: "text-default text-sm/6",
-        icon: "size-4 shrink-0",
-        copy: "absolute top-[9px] right-[9px] transition-opacity duration-150 [&_button]:rounded-none lg:opacity-0 lg:group-hover:opacity-100 motion-reduce:transition-none",
-        base: "border-default/70 bg-elevated/35 rounded-none border px-4 py-4 font-mono text-sm/6 whitespace-pre-wrap break-words overflow-x-auto focus:outline-none",
+    prose: {
+      h1: {
+        slots: {
+          base: "mb-8 text-[2rem] font-semibold leading-[1.1] tracking-[-0.025em]",
+        },
       },
-      variants: {
-        filename: {
-          true: {
-            root: "my-6 [&>pre]:my-0 [&>pre]:rounded-none",
+      h2: {
+        slots: {
+          base: "mt-12 mb-4 text-2xl font-semibold tracking-[-0.02em] [&>a>code]:font-semibold",
+          leading: "rounded-none",
+        },
+      },
+      h3: {
+        slots: {
+          base: "mt-9 mb-3 text-xl font-semibold tracking-[-0.015em] [&>a>code]:font-semibold",
+          leading: "rounded-none",
+        },
+      },
+      h4: {
+        slots: {
+          base: "mt-7 mb-2 text-[1.0625rem] font-semibold tracking-[-0.01em]",
+        },
+      },
+      p: {
+        base: "my-5 w-full max-w-none text-[0.96875rem] leading-[1.7] text-pretty",
+      },
+      li: {
+        base: "my-1.5 ps-1.5 text-[0.96875rem] leading-[1.7] [&>ul]:my-0",
+      },
+      pre: {
+        slots: {
+          root: "group relative my-6",
+          header:
+            "border-default/70 bg-default relative flex items-center gap-1.5 rounded-none border border-b-0 px-4 py-3",
+          filename: "text-default text-sm/6",
+          icon: "size-4 shrink-0",
+          copy: "absolute top-[9px] right-[9px] transition-opacity duration-150 [&_button]:rounded-none lg:opacity-0 lg:group-hover:opacity-100 motion-reduce:transition-none",
+          base: "border-default/70 bg-elevated/35 rounded-none border px-4 py-4 font-mono text-sm/6 whitespace-pre-wrap break-words overflow-x-auto focus:outline-none",
+        },
+        variants: {
+          filename: {
+            true: {
+              root: "my-6 [&>pre]:my-0 [&>pre]:rounded-none",
+            },
           },
         },
       },
-    },
-    proseCodeGroup: {
-      slots: {
-        root: "group relative my-6 *:not-first:!static *:not-first:!my-0",
-        list: "border-default/70 bg-default relative flex items-center gap-px overflow-x-auto rounded-none border border-b-0 p-1",
-        indicator:
-          "bg-elevated absolute inset-y-1 left-0 w-(--reka-tabs-indicator-size) translate-x-(--reka-tabs-indicator-position) rounded-none transition-[translate,width] duration-200 motion-reduce:transition-none",
-        trigger:
-          "text-default hover:bg-elevated/50 data-[state=active]:text-highlighted relative inline-flex items-center gap-1.5 rounded-none px-2.5 py-2 text-sm transition-colors focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 motion-reduce:transition-none",
+      codeGroup: {
+        slots: {
+          root: "group relative my-6 *:not-first:!static *:not-first:!my-0",
+          list: "border-default/70 bg-default relative flex items-center gap-px overflow-x-auto rounded-none border border-b-0 p-1",
+          indicator:
+            "bg-elevated absolute inset-y-1 left-0 w-(--reka-tabs-indicator-size) translate-x-(--reka-tabs-indicator-position) rounded-none transition-[translate,width] duration-200 motion-reduce:transition-none",
+          trigger:
+            "text-default hover:bg-elevated/50 data-[state=active]:text-highlighted relative inline-flex items-center gap-1.5 rounded-none px-2.5 py-2 text-sm transition-colors focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary focus:outline-none disabled:cursor-not-allowed disabled:opacity-75 motion-reduce:transition-none",
+        },
       },
-    },
-    proseCodeCollapse: {
-      slots: {
-        footer:
-          "bg-default/90 absolute inset-x-px bottom-px flex h-16 items-center justify-center rounded-none backdrop-blur",
-        trigger: "group rounded-none",
+      codeCollapse: {
+        slots: {
+          footer:
+            "bg-default/90 absolute inset-x-px bottom-px flex h-16 items-center justify-center rounded-none backdrop-blur",
+          trigger: "group rounded-none",
+        },
       },
-    },
-    proseTable: {
-      slots: {
-        root: "border-default/70 relative my-6 overflow-x-auto border",
-        base: "w-full rounded-none border-separate border-spacing-0",
+      table: {
+        slots: {
+          root: "border-default/70 relative my-6 overflow-x-auto border",
+          base: "w-full rounded-none border-separate border-spacing-0",
+        },
       },
-    },
-    proseCallout: {
-      slots: {
-        base: "my-6 rounded-none px-4 py-3 text-sm/6 last:mb-0",
+      callout: {
+        slots: {
+          base: "my-6 rounded-none px-4 py-3 text-sm/6 last:mb-0",
+        },
       },
-    },
-    proseCard: {
-      slots: {
-        base: "border-default bg-default relative my-6 block rounded-none border p-4 transition-colors sm:p-6",
+      card: {
+        slots: {
+          base: "border-default bg-default relative my-6 block rounded-none border p-4 transition-colors sm:p-6",
+        },
       },
-    },
-    proseBadge: {
-      base: "rounded-none",
+      badge: {
+        base: "rounded-none",
+      },
     },
     pageCard: {
       slots: {

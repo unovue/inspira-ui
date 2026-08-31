@@ -3,8 +3,7 @@ const route = useRoute();
 const appConfig = useAppConfig();
 const { t } = useDocusI18n();
 const { isEnabled, open } = useAssistant();
-
-const showAd = useMediaQuery("(min-width: 1024px)");
+const showRailAd = useMediaQuery("(min-width: 1024px)");
 
 const pageUrl = computed(() => route.path);
 const showExplainWithAi = computed(() => {
@@ -47,20 +46,21 @@ const communityLinks = computed(() => {
       />
     </div>
 
-    <div
-      v-if="communityLinks.length"
-      class="border-default/70 border-b pt-4"
-    >
+    <HireTheCreator />
+
+    <InspiraProUpsell />
+
+    <div v-if="communityLinks.length">
       <div>
-        <div class="flex items-center justify-between gap-3 px-2 pb-3">
+        <div class="flex items-center justify-between gap-3 px-2 py-3">
           <div
-            class="text-toned font-mono text-[0.62rem] font-semibold tracking-[0.18em] uppercase"
+            class="text-toned font-mono text-[0.6875rem] font-semibold tracking-[0.12em] uppercase"
           >
             Community
           </div>
         </div>
 
-        <div class="border-default/60 grid grid-cols-2 border-t">
+        <div class="border-default/60 border-t">
           <UButton
             v-for="link in communityLinks"
             :key="link.label"
@@ -68,24 +68,18 @@ const communityLinks = computed(() => {
             color="neutral"
             variant="ghost"
             size="sm"
-            class="group border-default/60 hover:bg-elevated/45 h-10 justify-start rounded-none border-e px-2 transition-colors duration-150 last:border-e-0 motion-reduce:transition-none"
+            class="group border-default/60 hover:bg-elevated/45 h-10 w-full justify-start rounded-none border-b px-2 transition-colors duration-150 last:border-b-0 motion-reduce:transition-none"
             :ui="{
               leadingIcon: 'size-4 text-muted group-hover:text-toned',
-              label: 'truncate text-left text-xs font-medium',
+              label: 'truncate text-left text-[0.8125rem] font-medium',
             }"
           />
         </div>
       </div>
     </div>
 
-    <InspiraProUpsell />
-
-    <HireTheCreator />
-
-    <ClientOnly v-if="showAd">
-      <InspiraCarbonAds
-        class="border-default/70 bg-elevated/20 text-default mt-6 w-full rounded-none border"
-      />
+    <ClientOnly v-if="showRailAd">
+      <InspiraCarbonAds class="mt-6 w-full max-w-full overflow-hidden [&_.carbon-text]:text-xs" />
     </ClientOnly>
   </div>
 </template>

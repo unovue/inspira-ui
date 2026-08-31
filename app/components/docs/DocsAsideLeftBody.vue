@@ -251,7 +251,7 @@ watch(navWithData, scrollActiveLinkIntoView, { deep: true });
             class="mb-2 flex items-center gap-3 px-2.5"
           >
             <p
-              class="text-toned truncate font-mono text-[0.65rem] font-semibold tracking-[0.2em] uppercase"
+              class="text-toned truncate font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase"
             >
               {{ group.title }}
             </p>
@@ -344,7 +344,7 @@ watch(navWithData, scrollActiveLinkIntoView, { deep: true });
               >
                 <div class="mb-2 flex items-center gap-3 px-2.5">
                   <p
-                    class="text-toned truncate font-mono text-[0.65rem] font-semibold tracking-[0.2em] uppercase"
+                    class="text-toned truncate font-mono text-[0.6875rem] font-semibold tracking-[0.14em] uppercase"
                   >
                     {{ link.title }}
                   </p>

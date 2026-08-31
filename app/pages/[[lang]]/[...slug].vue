@@ -13,8 +13,7 @@ const { locale, isEnabled, t } = useDocusI18n();
 const appConfig = useAppConfig();
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
 const docsPageUi = useDocsPageUi();
-
-const showAd = useMediaQuery("(max-width: 1023px)");
+const showInlineAd = useMediaQuery("(max-width: 1023px)");
 
 const collectionName = computed(() => (isEnabled.value ? `docs_${locale.value}` : "docs"));
 
@@ -83,91 +82,93 @@ const editLink = computed(() => {
 </script>
 
 <template>
-  <UPage v-if="page">
-    <UPageHeader
-      :title="page.title"
-      :description="page.description"
-      :headline="headline"
-      :ui="docsPageUi.header"
-    >
-      <div class="mt-4 flex flex-wrap items-center gap-2">
-        <UBadge
-          v-for="tag in page.tags"
-          :key="page.path + tag"
-          :label="tag"
-          color="neutral"
-          variant="subtle"
-          size="sm"
-          :ui="docsPageUi.badge"
-        />
-      </div>
-      <template #links>
-        <UButton
-          v-for="(link, index) in (page as DocsEnCollectionItem).links"
-          :key="index"
-          v-bind="link"
-          size="sm"
-          color="neutral"
-          variant="subtle"
-          :class="docsPageUi.headerLinkButton"
-        />
-
-        <DocsPageHeaderLinks />
-      </template>
-    </UPageHeader>
-
-    <UPageBody :class="docsPageUi.bodyClass">
-      <ContentRenderer
-        v-if="page"
-        :value="page"
-      />
-      <ClientOnly v-if="showAd">
-        <InspiraCarbonAds class="mx-auto max-w-full" />
-      </ClientOnly>
-
-      <div class="my-12 flex justify-center">
-        <div
-          v-if="github"
-          :class="docsPageUi.footerActions"
-        >
-          <UButton
+  <div
+    v-if="page"
+    :class="docsPageUi.page.root"
+  >
+    <div :class="docsPageUi.page.center">
+      <UPageHeader
+        :title="page.title"
+        :description="page.description"
+        :headline="headline"
+        :ui="docsPageUi.header"
+      >
+        <div class="mt-4 flex flex-wrap items-center gap-2">
+          <UBadge
+            v-for="tag in page.tags"
+            :key="page.path + tag"
+            :label="tag"
             color="neutral"
-            variant="ghost"
-            size="xs"
-            :to="editLink"
-            target="_blank"
-            icon="i-lucide-pen"
-            class="rounded-none"
-            :ui="docsPageUi.footerButton"
-          >
-            {{ t("docs.edit") }}
-          </UButton>
-          <span class="text-muted px-1">{{ t("common.or") }}</span>
-          <UButton
-            color="neutral"
-            variant="ghost"
-            size="xs"
-            :to="`${github.url}/issues/new/choose`"
-            target="_blank"
-            icon="i-lucide-alert-circle"
-            class="rounded-none"
-            :ui="docsPageUi.footerButton"
-          >
-            {{ t("docs.report") }}
-          </UButton>
+            variant="subtle"
+            size="sm"
+            :ui="docsPageUi.badge"
+          />
         </div>
-      </div>
-      <UContentSurround
-        :surround="surround"
-        :ui="docsPageUi.surround"
-      />
-    </UPageBody>
+        <template #links>
+          <UButton
+            v-for="(link, index) in (page as DocsEnCollectionItem).links"
+            :key="index"
+            v-bind="link"
+            size="sm"
+            color="neutral"
+            variant="subtle"
+            :class="docsPageUi.headerLinkButton"
+          />
 
-    <template
-      v-if="page?.body?.toc?.links?.length"
-      #right
-    >
+          <DocsPageHeaderLinks />
+        </template>
+      </UPageHeader>
+
+      <UPageBody :class="docsPageUi.bodyClass">
+        <ClientOnly v-if="showInlineAd">
+          <InspiraCarbonAds class="mx-auto max-w-full overflow-hidden" />
+        </ClientOnly>
+        <ContentRenderer
+          v-if="page"
+          :value="page"
+        />
+        <div class="my-12 flex justify-center">
+          <div
+            v-if="github"
+            :class="docsPageUi.footerActions"
+          >
+            <UButton
+              color="neutral"
+              variant="ghost"
+              size="xs"
+              :to="editLink"
+              target="_blank"
+              icon="i-lucide-pen"
+              class="rounded-none"
+              :ui="docsPageUi.footerButton"
+            >
+              {{ t("docs.edit") }}
+            </UButton>
+            <span class="text-muted px-1">{{ t("common.or") }}</span>
+            <UButton
+              color="neutral"
+              variant="ghost"
+              size="xs"
+              :to="`${github.url}/issues/new/choose`"
+              target="_blank"
+              icon="i-lucide-alert-circle"
+              class="rounded-none"
+              :ui="docsPageUi.footerButton"
+            >
+              {{ t("docs.report") }}
+            </UButton>
+          </div>
+        </div>
+        <UContentSurround
+          :surround="surround"
+          :ui="docsPageUi.surround"
+        />
+      </UPageBody>
+    </div>
+
+    <div :class="docsPageUi.page.right">
       <UContentToc
+        v-if="page?.body?.toc?.links?.length"
         highlight
         color="neutral"
         highlight-color="neutral"
@@ -179,12 +180,12 @@ const editLink = computed(() => {
           <DocsAsideRightBottom />
         </template>
       </UContentToc>
-    </template>
-    <template
-      v-else
-      #right
-    >
-      <DocsAsideRightBottom />
-    </template>
-  </UPage>
+      <aside
+        v-else
+        :class="docsPageUi.rightAside"
+      >
+        <DocsAsideRightBottom />
+      </aside>
+    </div>
+  </div>
 </template>

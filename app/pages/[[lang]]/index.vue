@@ -101,7 +101,10 @@ const editLink = computed(() => {
 </script>
 
 <template>
-  <UPage v-if="page && !isLandingPage">
+  <UPage
+    v-if="page && !isLandingPage"
+    :ui="docsPageUi.page"
+  >
     <UPageHeader
       :title="page.title"
       :description="page.description"

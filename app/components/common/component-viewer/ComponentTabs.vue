@@ -179,7 +179,7 @@ watch(activeInstallationTab, (tab) => {
     variant="link"
     color="neutral"
     :items="items"
-    class="mt-5 w-full"
+    class="mt-12 w-full"
     :ui="{
       list: 'border-default/70 w-fit max-w-full gap-0 overflow-x-auto border bg-elevated/20',
       indicator: 'h-px rounded-none',
@@ -193,7 +193,7 @@ watch(activeInstallationTab, (tab) => {
         v-if="demoCode"
         class="space-y-5"
       >
-        <h2 class="text-highlighted text-2xl font-semibold tracking-tight">Component Usage</h2>
+        <h2 class="text-highlighted text-xl font-semibold tracking-[-0.02em]">Component Usage</h2>
 
         <ProseCodeCollapse>
           <RuntimeCodeBlock

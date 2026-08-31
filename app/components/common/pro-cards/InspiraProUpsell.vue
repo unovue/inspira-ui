@@ -1,44 +1,29 @@
 <template>
-  <div class="py-5">
+  <div class="border-default/70 border-b">
     <NuxtLink
       to="https://pro.inspira-ui.com"
       target="_blank"
       rel="noreferrer"
       aria-label="Explore Inspira UI Pro templates and sections"
-      class="group border-info/40 bg-info/5 hover:bg-info/8 relative block overflow-hidden rounded-none border transition-colors duration-200 motion-reduce:transition-none"
+      class="group hover:bg-elevated/45 focus-visible:ring-primary flex items-center gap-3 px-2 py-4 transition-colors duration-200 focus-visible:ring-2 focus-visible:outline-none focus-visible:ring-inset motion-reduce:transition-none"
     >
-      <span class="bg-info pointer-events-none absolute inset-x-0 top-0 h-px opacity-80" />
+      <span
+        class="border-info/35 bg-info/10 text-info flex size-8 shrink-0 items-center justify-center border font-mono text-[0.5625rem] font-bold tracking-[0.1em] uppercase"
+      >
+        Pro
+      </span>
 
-      <div class="relative p-4">
-        <div class="flex items-center justify-between gap-3">
-          <div
-            class="border-info/35 bg-info/10 text-info rounded-none border px-2 py-1 font-mono text-[0.6rem] font-bold tracking-[0.16em] uppercase"
-          >
-            Pro
-          </div>
-        </div>
-
-        <div class="text-highlighted mt-4 text-lg leading-6 font-semibold tracking-[-0.03em]">
-          Get Inspira UI Pro
-        </div>
-        <p class="text-muted mt-2 text-sm leading-5">
-          Ship faster with ready-to-use Vue and Nuxt templates, sections, and page blocks.
+      <div class="min-w-0 flex-1">
+        <div class="text-highlighted text-sm font-semibold tracking-[-0.015em]">Inspira UI Pro</div>
+        <p class="text-muted mt-0.5 truncate text-xs leading-5">
+          Templates, sections, and page blocks.
         </p>
-
-        <div
-          class="bg-info mt-5 flex h-9 items-center justify-between px-3 text-sm font-semibold text-white"
-        >
-          <span>Explore Pro</span>
-          <span
-            class="flex size-6 items-center justify-center transition-transform duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none"
-          >
-            <UIcon
-              name="i-lucide-arrow-up-right"
-              class="size-3.5"
-            />
-          </span>
-        </div>
       </div>
+
+      <UIcon
+        name="i-lucide-arrow-up-right"
+        class="text-muted group-hover:text-highlighted size-3.5 shrink-0 transition-transform duration-200 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 motion-reduce:transition-none"
+      />
     </NuxtLink>
   </div>
 </template>

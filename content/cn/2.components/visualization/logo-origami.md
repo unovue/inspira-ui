@@ -19,6 +19,6 @@ tags: [css, tailwind, hover-dev]
 
 #credits
 
-- 灵感来自 [hover.dev](www.hover.dev/components/other#logo-origami) 的折纸翻转动画。
+- 灵感来自 [hover.dev](https://www.hover.dev/components/other#logo-origami) 的折纸翻转动画。
 
 ::

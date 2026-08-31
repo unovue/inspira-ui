@@ -19,6 +19,6 @@ tags: [css, tailwind, hover-dev]
 
 #credits
 
-- Inspired by origami animations and flip effects at [hover.dev](www.hover.dev/components/other#logo-origami)
+- Inspired by origami animations and flip effects at [hover.dev](https://www.hover.dev/components/other#logo-origami)
 
 ::
