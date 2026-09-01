@@ -10,7 +10,7 @@ html {
 }
 
 @theme static {
-  --font-sans: "Geist", sans-serif;
+  --font-sans: "Inter", sans-serif;
   --font-variable: "Roboto Flex", serif;
   --ui-primary: black;
 

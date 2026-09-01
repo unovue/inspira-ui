@@ -27,12 +27,23 @@ const collections = ["Backgrounds", "Cards", "Interactions", "Text effects", "Vi
         class="lg:col-span-9"
         v-bind="enter(0)"
       >
-        <h1
-          class="text-highlighted max-w-6xl text-5xl leading-[0.92] font-semibold tracking-[-0.06em] text-balance sm:text-7xl lg:text-8xl"
+        <HtmlLiquid
+          :frame-rate="45"
+          :frequency="15"
+          :mouse-damping="0.92"
+          :speed="3"
+          :strength="0.025"
+          class="h-88 sm:h-104 lg:h-88 xl:h-76 2xl:h-72"
         >
-          <div class="pb-4">Inspira UI.</div>
-          <span class="text-toned block">Animated components for Vue and Nuxt.</span>
-        </h1>
+          <div class="flex h-full items-center">
+            <h1
+              class="text-highlighted max-w-6xl text-5xl leading-[0.92] font-semibold tracking-[-0.06em] text-balance sm:text-7xl lg:text-8xl"
+            >
+              <div class="pb-4">Inspira UI.</div>
+              <span class="text-toned block">Animated components for Vue and Nuxt.</span>
+            </h1>
+          </div>
+        </HtmlLiquid>
       </Motion>
 
       <Motion

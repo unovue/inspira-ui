@@ -23,6 +23,13 @@ interface ElementImageContext extends CanvasRenderingContext2D {
   drawElementImage?: (element: Element, x: number, y: number) => void;
 }
 
+interface SelectionRect {
+  height: number;
+  left: number;
+  top: number;
+  width: number;
+}
+
 interface Props {
   shaderCode: string;
   vertexShaderCode?: string;
@@ -66,6 +73,7 @@ const rendererReady = shallowRef(false);
 const inViewport = shallowRef(true);
 const documentVisible = shallowRef(true);
 const reducedMotion = shallowRef(false);
+const selectionRects = shallowRef<SelectionRect[]>([]);
 
 let renderer: HtmlInCanvasRenderer | undefined;
 let sourceContext: ElementImageContext | null = null;
@@ -139,6 +147,7 @@ function syncSize() {
   renderer?.resize(cssWidth, cssHeight, pixelRatio);
   if (nativeSupported.value) requestPaint();
   else scheduleSnapshot();
+  if (selectionRects.value.length) requestAnimationFrame(updateSelectionOverlay);
 }
 
 function captureNativeContent() {
@@ -229,10 +238,50 @@ function handlePointerDown(event: PointerEvent) {
 
 function handleWheel(event: WheelEvent) {
   renderer?.setScrollVelocity(event.deltaY);
+  if (selectionRects.value.length) requestAnimationFrame(updateSelectionOverlay);
 }
 
 function handleVisibilityChange() {
   documentVisible.value = document.visibilityState === "visible";
+}
+
+function updateSelectionOverlay() {
+  if (nativeSupported.value || !rendererReady.value || !rootRef.value || !contentRef.value) {
+    selectionRects.value = [];
+    return;
+  }
+
+  const selection = window.getSelection();
+  if (!selection || selection.isCollapsed || selection.rangeCount === 0) {
+    selectionRects.value = [];
+    return;
+  }
+
+  const anchorInside = selection.anchorNode && contentRef.value.contains(selection.anchorNode);
+  const focusInside = selection.focusNode && contentRef.value.contains(selection.focusNode);
+  if (!anchorInside && !focusInside) {
+    selectionRects.value = [];
+    return;
+  }
+
+  const rootBounds = rootRef.value.getBoundingClientRect();
+  selectionRects.value = [...selection.getRangeAt(0).getClientRects()].flatMap((rect) => {
+    const left = Math.max(rect.left, rootBounds.left);
+    const right = Math.min(rect.right, rootBounds.right);
+    const top = Math.max(rect.top, rootBounds.top);
+    const bottom = Math.min(rect.bottom, rootBounds.bottom);
+
+    if (right <= left || bottom <= top) return [];
+
+    return [
+      {
+        height: bottom - top,
+        left: left - rootBounds.left,
+        top: top - rootBounds.top,
+        width: right - left,
+      },
+    ];
+  });
 }
 
 function handleMotionChange(event: MediaQueryListEvent | MediaQueryList) {
@@ -296,6 +345,7 @@ onMounted(async () => {
   emit("support", nativeSupported.value);
 
   document.addEventListener("visibilitychange", handleVisibilityChange);
+  document.addEventListener("selectionchange", updateSelectionOverlay);
   handleVisibilityChange();
 
   motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -307,6 +357,7 @@ onMounted(async () => {
 
 onBeforeUnmount(() => {
   document.removeEventListener("visibilitychange", handleVisibilityChange);
+  document.removeEventListener("selectionchange", updateSelectionOverlay);
   motionQuery?.removeEventListener("change", handleMotionChange);
   resizeObserver?.disconnect();
   intersectionObserver?.disconnect();
@@ -411,5 +462,23 @@ watch(shouldPlay, updatePlayback);
         )
       "
     />
+
+    <div
+      v-if="!nativeSupported && rendererReady && selectionRects.length"
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-0 z-20 overflow-hidden"
+    >
+      <span
+        v-for="(rect, index) in selectionRects"
+        :key="index"
+        class="bg-primary/35 absolute"
+        :style="{
+          height: `${rect.height}px`,
+          left: `${rect.left}px`,
+          top: `${rect.top}px`,
+          width: `${rect.width}px`,
+        }"
+      />
+    </div>
   </div>
 </template>

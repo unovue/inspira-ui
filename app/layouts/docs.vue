@@ -5,20 +5,23 @@ const route = useRoute();
 const isRoot = isRootPage();
 const docsPageUi = useDocsPageUi();
 
-const showReleaseMarquee = computed(
+const isComponentsIndex = computed(
   () => route.path.split("/").filter(Boolean).at(-1) === "components",
 );
 </script>
 
 <template>
   <UMain class="bg-default relative -mt-16 pt-16">
-    <ComponentStatusMarquee
-      v-if="showReleaseMarquee"
-      inline
-    />
     <AppHeaderNav />
     <UContainer class="relative">
+      <div
+        v-if="isComponentsIndex"
+        class="border-default/70 min-h-[calc(100dvh-var(--ui-header-height)-3rem)] border-x"
+      >
+        <slot />
+      </div>
       <UPage
+        v-else
         :key="route.fullPath"
         :ui="isRoot ? undefined : docsPageUi.shell"
       >

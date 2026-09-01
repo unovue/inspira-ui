@@ -10,6 +10,7 @@ export function useDocsPageUi() {
       center: "min-w-0 lg:col-span-1 lg:px-10 xl:px-12 2xl:px-14",
       right: "hidden lg:order-last lg:col-span-1 lg:block lg:border-s lg:border-default/70",
     },
+    catalogCenterClass: "min-w-0 lg:col-span-1",
     header: {
       root: "mx-auto w-full max-w-[64rem] border-b-0 py-10 sm:py-12",
       container: "space-y-6",
@@ -21,6 +22,7 @@ export function useDocsPageUi() {
       links: "flex flex-wrap items-center gap-px",
     },
     bodyClass: "mx-auto mt-10 w-full max-w-[64rem] space-y-14 pb-20 sm:mt-12",
+    catalogBodyClass: "mt-0 w-full max-w-none space-y-0 pb-0",
     badge: {
       base: "rounded-none border border-default/70 bg-elevated/35 px-2.5 py-1 font-mono text-[0.6875rem] font-medium tracking-[0.1em] uppercase",
     },

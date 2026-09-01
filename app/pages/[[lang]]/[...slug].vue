@@ -14,6 +14,9 @@ const appConfig = useAppConfig();
 const navigation = inject<Ref<ContentNavigationItem[]>>("navigation");
 const docsPageUi = useDocsPageUi();
 const showInlineAd = useMediaQuery("(max-width: 1023px)");
+const isComponentsIndex = computed(
+  () => route.path.split("/").filter(Boolean).at(-1) === "components",
+);
 
 const collectionName = computed(() => (isEnabled.value ? `docs_${locale.value}` : "docs"));
 
@@ -86,8 +89,9 @@ const editLink = computed(() => {
     v-if="page"
     :class="docsPageUi.page.root"
   >
-    <div :class="docsPageUi.page.center">
+    <div :class="isComponentsIndex ? docsPageUi.catalogCenterClass : docsPageUi.page.center">
       <UPageHeader
+        v-if="!isComponentsIndex"
         :title="page.title"
         :description="page.description"
         :headline="headline"
@@ -119,15 +123,18 @@ const editLink = computed(() => {
         </template>
       </UPageHeader>
 
-      <UPageBody :class="docsPageUi.bodyClass">
-        <ClientOnly v-if="showInlineAd">
+      <UPageBody :class="isComponentsIndex ? docsPageUi.catalogBodyClass : docsPageUi.bodyClass">
+        <ClientOnly v-if="showInlineAd && !isComponentsIndex">
           <InspiraCarbonAds class="mx-auto max-w-full overflow-hidden" />
         </ClientOnly>
         <ContentRenderer
           v-if="page"
           :value="page"
         />
-        <div class="my-12 flex justify-center">
+        <div
+          v-if="!isComponentsIndex"
+          class="my-12 flex justify-center"
+        >
           <div
             v-if="github"
             :class="docsPageUi.footerActions"
@@ -160,6 +167,7 @@ const editLink = computed(() => {
           </div>
         </div>
         <UContentSurround
+          v-if="!isComponentsIndex"
           :surround="surround"
           :ui="docsPageUi.surround"
         />

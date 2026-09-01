@@ -16,6 +16,9 @@ const docsPageUi = useDocsPageUi();
 const isLandingPage = computed(() => {
   return (isEnabled.value ? `/${locale.value}` : "/") === route.path.replace(trailingSlashRe, "");
 });
+const isComponentsIndex = computed(
+  () => route.path.split("/").filter(Boolean).at(-1) === "components",
+);
 
 const pageType = isLandingPage.value ? "landing" : "docs";
 
@@ -101,8 +104,24 @@ const editLink = computed(() => {
 </script>
 
 <template>
+  <div
+    v-if="page && !isLandingPage && isComponentsIndex"
+    :class="docsPageUi.page.root"
+  >
+    <div :class="docsPageUi.catalogCenterClass">
+      <UPageBody :class="docsPageUi.catalogBodyClass">
+        <ContentRenderer :value="page" />
+      </UPageBody>
+    </div>
+
+    <div :class="docsPageUi.page.right">
+      <aside :class="docsPageUi.rightAside">
+        <DocsAsideRightBottom />
+      </aside>
+    </div>
+  </div>
   <UPage
-    v-if="page && !isLandingPage"
+    v-else-if="page && !isLandingPage"
     :ui="docsPageUi.page"
   >
     <UPageHeader
