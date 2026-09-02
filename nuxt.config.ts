@@ -140,7 +140,7 @@ export default defineNuxtConfig({
     processCSSVariables: true,
     families: [
       {
-        name: "Geist",
+        name: "Inter",
         provider: "google",
         global: true,
       },
