@@ -40,6 +40,6 @@ The `FileUploadGrid` component provides the background grid pattern for the file
 #credits
 
 - Credits to [kalix127](https://github.com/kalix127) for porting this component.
-- Inspired by [AcernityUI](https://ui.aceternity.com/components/file-upload).
+- Inspired by [Aceternity UI](https://ui.aceternity.com/components/file-upload).
 
 ::
