@@ -87,6 +87,10 @@ export default defineNuxtConfig({
         code: "fr",
         name: "Français",
       },
+      {
+        code: "az",
+        name: "Azərbaycan dili",
+      },
     ],
   },
 

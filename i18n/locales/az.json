@@ -1,0 +1,32 @@
+{
+  "common": {
+    "or": "və ya",
+    "error": {
+      "title": "Səhifə tapılmadı",
+      "description": "Təəssüf ki, bu səhifə tapılmadı."
+    }
+  },
+  "docs": {
+    "copy": {
+      "page": "Səhifəni kopyala",
+      "link": "Markdown səhifəsini kopyala",
+      "view": "Markdown kimi bax",
+      "gpt": "ChatGPT-də aç",
+      "claude": "Claude-da aç"
+    },
+    "links": "İcma",
+    "toc": "Bu səhifədə",
+    "report": "Problem bildir",
+    "edit": "Bu səhifəni redaktə et"
+  },
+
+  "toc": {
+    "title": "Bu səhifədə",
+    "StarOnGitHub": "GitHub-da ulduz ver",
+    "CreateIssues": "Problem yarat",
+    "JoinDiscord": "Discord-a qoşul",
+    "Forum": "Forum",
+    "FollowOnX": "X-də izlə",
+    "FollowOnBluesky": "Bluesky-də izlə"
+  }
+}
