@@ -250,7 +250,7 @@ function startAnimation() {
     .arcEndLng((d: any) => d.endLng * 1)
     .arcColor((e: any) => e.color)
     .arcAltitude((e: any) => e.arcAlt * 1)
-    .arcStroke((_e: any) => [0.32, 0.28, 0.3][Math.round(Math.random() * 4)] || null)
+    .arcStroke((_e: any) => [0.32, 0.28, 0.3][Math.floor(Math.random() * 3)])
     .arcDashLength(defaultGlobeConfig.arcLength!)
     .arcDashInitialGap((e: any) => e.order * 1)
     .arcDashGap(15)
