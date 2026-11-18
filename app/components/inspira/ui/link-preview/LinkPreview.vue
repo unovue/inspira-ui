@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { CSSProperties } from "vue";
 import { cn } from "@inspira-ui/plugins";
+import { useElementSize, useWindowSize } from "@vueuse/core";
 import { computed, reactive, ref } from "vue";
 
 interface BaseProps {
@@ -38,6 +39,8 @@ const isVisible = ref(false);
 const isLoading = ref(true);
 const preview = ref<HTMLElement | null>(null);
 const hasPopped = ref(false);
+const { height: previewHeight } = useElementSize(preview);
+const { width: viewportWidth, height: viewportHeight } = useWindowSize();
 
 // Generate preview URL
 const previewSrc = computed(() => {
@@ -71,24 +74,21 @@ const previewStyle = computed<CSSProperties>(() => {
 
   const offset = 20;
   const previewWidth = props.width;
-  const previewHeight = props.height;
-  const viewportWidth = window.innerWidth;
 
   let x = mousePosition.x - previewWidth / 2;
-  x = Math.min(Math.max(0, x), viewportWidth - previewWidth);
+  x = Math.min(Math.max(0, x), viewportWidth.value - previewWidth);
 
-  const above = linkRect.top - previewHeight - offset;
+  const above = linkRect.top - previewHeight.value - offset;
   const below = linkRect.bottom + offset;
-  const preferredTop = above >= offset ? above : below;
-  const maxTop = window.innerHeight - previewHeight - offset;
-  const y = Math.max(offset, Math.min(preferredTop, maxTop));
+  const preferredTop = above >= 0 ? above : below;
+  const maxTop = viewportHeight.value - previewHeight.value;
+  const y = Math.max(0, Math.min(preferredTop, maxTop));
 
   return {
     position: "fixed",
     left: `${x}px`,
     top: `${y}px`,
     width: `${previewWidth}px`,
-    height: `${previewHeight}px`,
   };
 });
 
@@ -152,13 +152,13 @@ function handleImageLoad() {
         "
       >
         <div
-          class="block rounded-xl border-2 border-transparent bg-white p-1 shadow-lg dark:bg-gray-900"
+          class="flex max-h-dvh flex-col rounded-xl border-2 border-transparent bg-white p-1 shadow-lg dark:bg-gray-900"
         >
           <img
             :src="previewSrc"
             :width="width"
             :height="height"
-            class="size-full rounded-lg object-cover"
+            class="size-full min-h-0 rounded-lg object-cover"
             :style="imageStyle"
             alt="preview"
             @load="handleImageLoad"
