@@ -66,7 +66,8 @@ const mousePosition = reactive({
 
 // Calculate preview position
 const previewStyle = computed<CSSProperties>(() => {
-  if (!preview.value) return {};
+  const linkRect = preview.value?.parentElement?.getBoundingClientRect();
+  if (!linkRect) return {};
 
   const offset = 20;
   const previewWidth = props.width;
@@ -76,8 +77,11 @@ const previewStyle = computed<CSSProperties>(() => {
   let x = mousePosition.x - previewWidth / 2;
   x = Math.min(Math.max(0, x), viewportWidth - previewWidth);
 
-  const linkRect = preview.value.parentElement?.getBoundingClientRect();
-  const y = linkRect ? linkRect.top - previewHeight - offset : 0;
+  const above = linkRect.top - previewHeight - offset;
+  const below = linkRect.bottom + offset;
+  const preferredTop = above >= offset ? above : below;
+  const maxTop = window.innerHeight - previewHeight - offset;
+  const y = Math.max(offset, Math.min(preferredTop, maxTop));
 
   return {
     position: "fixed",
