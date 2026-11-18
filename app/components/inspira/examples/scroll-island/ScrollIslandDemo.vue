@@ -16,6 +16,7 @@ const props = withDefaults(defineProps<Props>(), {
       See the scroll island in action on the top of this page
     </span>
     <ScrollIsland
+      class="top-[calc(var(--ui-header-height)+1rem)]"
       :title="props.title"
       :height="props.height"
     >
