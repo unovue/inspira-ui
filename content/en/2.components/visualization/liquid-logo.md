@@ -25,6 +25,6 @@ tags: [css, tailwind, webgl, paper]
 #credits
 
 - Inspired by the Apple Fluid Motion design.
-- Ported and enhaced from [Paper Design Concept](https://github.com/paper-design/liquid-logo).
+- Ported and enhanced from [Paper Design Concept](https://github.com/paper-design/liquid-logo).
 
 ::
