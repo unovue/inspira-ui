@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { cn } from "@inspira-ui/plugins";
 import NumberFlow from "@number-flow/vue";
-import { useColorMode } from "@vueuse/core";
 import { motion, MotionConfig } from "motion-v";
 import { computed, onMounted, onUnmounted, ref, useSlots } from "vue";
 
@@ -22,7 +21,6 @@ const slots = useSlots();
 
 const scrollPercentage = ref(0);
 
-const isDark = computed(() => useColorMode().value == "dark");
 const isSlotAvailable = computed(() => !!slots.default);
 const borderRadius = computed(() => `${props.height / 2}px`);
 
@@ -78,11 +76,11 @@ onUnmounted(() => {
             :min="0"
             :max="100"
             :circle-stroke-width="10"
-            class="w-6"
+            class="w-6 [--gauge-primary:white] [--gauge-secondary:#6b728099] dark:[--gauge-primary:black] dark:[--gauge-secondary:#6b728055]"
             :show-percentage="false"
             :duration="0.3"
-            :gauge-secondary-color="isDark ? '#6b728055' : '#6b728099'"
-            :gauge-primary-color="isDark ? 'black' : 'white'"
+            gauge-secondary-color="var(--gauge-secondary)"
+            gauge-primary-color="var(--gauge-primary)"
           />
           <h1 class="grow text-center font-bold">{{ title }}</h1>
           <NumberFlow
